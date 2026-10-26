@@ -967,15 +967,20 @@ summary:focus-visible {
   }
 
   .sn-legacy-record .sn-table tbody td {
-    display: grid;
-    grid-template-columns: minmax(84px, 0.4fr) minmax(0, 1fr);
-    gap: 6px 14px;
+    display: table;
+    width: 100% !important;
     margin-top: 6px;
     line-height: 1.6;
   }
 
+  /* Table cells keep mixed text and inline links in one anonymous cell;
+     grid would blockify each node into its own row and break the sentence. */
   .sn-legacy-record .sn-table tbody td::before {
     content: attr(data-label);
+    display: table-cell;
+    width: 110px;
+    padding-right: 14px;
+    vertical-align: top;
     color: var(--sn-text-muted);
     font-family: var(--sn-font-mono);
     font-size: 0.68rem;

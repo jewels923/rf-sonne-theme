@@ -3008,6 +3008,7 @@ body.site-nav-open {
 .site-footer__brand-logo {
   display: block;
   width: auto;
+  height: auto;
   max-width: 180px;
   max-height: 54px;
 }

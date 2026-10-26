@@ -1113,6 +1113,23 @@ class P3SharedChromeTests(unittest.TestCase):
         self.assertEqual('124px', logo.get('max-width'))
         self.assertEqual('auto !important', logo.get('height'))
 
+    def test_footer_logo_keeps_intrinsic_ratio_at_its_capped_width(self):
+        main_css = (ROOT / 'main.css').read_text(encoding='utf-8')
+        logo = css_declarations_for_selector(main_css, '.site-footer__brand-logo')
+        self.assertEqual('auto', logo.get('height'))
+        self.assertEqual('180px', logo.get('max-width'))
+        self.assertEqual('54px', logo.get('max-height'))
+
+    def test_mobile_legacy_table_cells_keep_inline_content_in_one_value_cell(self):
+        self.assertRegex(
+            self.sonne_css,
+            r'\.sn-legacy-record \.sn-table tbody td \{\s*display: table;',
+        )
+        self.assertRegex(
+            self.sonne_css,
+            r'\.sn-legacy-record \.sn-table tbody td::before \{\s*content: attr\(data-label\);\s*display: table-cell;',
+        )
+
     def test_sonne_stylesheet_loads_after_main_and_widget_is_bypassed(self):
         main_version = "child_theme_asset_version('main.css')"
         sonne_version = "child_theme_asset_version('sonne.css')"
