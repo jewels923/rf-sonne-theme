@@ -1,0 +1,387 @@
+<!-- wp:html -->
+<div class="sn-base-station">
+  <style>
+    .sn-base-station { --base-station-label: .75rem; color: var(--sn-text); }
+    .sn-base-station *, .sn-base-station *::before, .sn-base-station *::after { box-sizing: border-box; }
+    .sn-base-station h2, .sn-base-station h3, .sn-base-station p, .sn-base-station ul, .sn-base-station ol, .sn-base-station pre, .sn-base-station figure { margin-top: 0; }
+    .sn-base-station h2 { margin-bottom: 18px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-base-station h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-base-station p, .sn-base-station li { line-height: 1.7; }
+    .sn-base-station a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-base-station img { display: block; max-width: 100%; height: auto; }
+    .sn-base-station .sn-base-station__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: var(--base-station-label); font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-base-station .sn-base-station__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
+
+    /* Hero: one site plate and a Tx/Rx relationship strip. */
+    .sn-base-station .sn-base-station__hero { padding-block: clamp(128px, 10vw, 158px) clamp(56px, 6vw, 84px); }
+    .sn-base-station .sn-base-station__hero::before { opacity: .5; }
+    .sn-base-station .sn-base-station__hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr); gap: clamp(36px, 5.5vw, 76px); align-items: center; }
+    .sn-base-station .sn-base-station__hero .sn-breadcrumbs { color: rgba(252, 254, 255, .56); }
+    .sn-base-station .sn-base-station__hero .sn-breadcrumbs a { color: var(--sn-accent-on-dark); }
+    .sn-base-station .sn-base-station__hero-copy > p { max-width: 64ch; margin-bottom: 0; color: rgba(252, 254, 255, .8); font-size: 1.04rem; line-height: 1.7; }
+    .sn-base-station .sn-base-station__hero-note { margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(140, 196, 255, .34); color: rgba(252, 254, 255, .72); font-size: .85rem; line-height: 1.65; }
+    .sn-base-station .sn-base-station__hero-note strong { color: var(--sn-white); }
+    .sn-base-station .sn-base-station__path-labels { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 24px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .7rem; letter-spacing: .03em; }
+    .sn-base-station .sn-base-station__path-labels span { padding: 8px 10px; border: 1px solid rgba(252, 254, 255, .24); }
+    .sn-base-station .sn-base-station__path-labels b { color: rgba(252, 254, 255, .5); font-weight: 400; }
+    .sn-base-station .sn-base-station__hero-media { margin: 0; }
+    .sn-base-station .sn-base-station__hero-media .sn-hero-plate__media { padding: clamp(14px, 2.4vw, 26px); }
+    .sn-base-station .sn-base-station__hero-media img { aspect-ratio: 1; }
+
+    /* Section rhythm and the shared record head. */
+    .sn-base-station .sn-base-station__intro { margin-bottom: clamp(28px, 3.4vw, 42px); }
+    .sn-base-station .sn-base-station__intro .sn-record-meta { font-size: var(--base-station-label); }
+
+    /* Architecture, band-plan and verification ledgers. */
+    .sn-base-station .sn-base-station__architecture { min-width: 1080px; }
+    .sn-base-station .sn-base-station__architecture tbody th { width: 18%; }
+    .sn-base-station .sn-base-station__bandplan { min-width: 1280px; }
+    .sn-base-station .sn-base-station__bandplan tbody th { width: 15%; }
+    .sn-base-station .sn-base-station__verification { min-width: 1000px; }
+    .sn-base-station .sn-base-station__ledger caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-base-station .sn-base-station__architecture-evidence { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 24px; align-items: center; margin-top: 28px; }
+    .sn-base-station .sn-base-station__architecture-evidence figure { margin-bottom: 0; }
+    .sn-base-station .sn-base-station__architecture-evidence img { width: 100%; aspect-ratio: 4 / 3; padding: 14px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-base-station .sn-base-station__architecture-evidence figcaption, .sn-base-station .sn-base-station__test-grid figcaption, .sn-base-station .sn-base-station__band-media figcaption, .sn-base-station .sn-base-station__evidence-card figcaption { margin-top: 9px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
+
+    /* Functional path and copy-ready block. */
+    .sn-base-station .sn-base-station__system { padding: 22px 24px; border-top: 1px solid var(--sn-line-strong); border-bottom: 1px solid var(--sn-line); background: var(--sn-card); }
+    .sn-base-station .sn-base-station__system h3 { margin-bottom: 14px; font-size: .98rem; }
+    .sn-base-station .sn-base-station__system p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-base-station .sn-base-station__flow { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; margin-bottom: 14px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; }
+    .sn-base-station .sn-base-station__flow span { padding: 9px 11px; border: 1px solid var(--sn-line-strong); }
+    .sn-base-station .sn-base-station__flow b { color: var(--sn-cyan-dark); font-weight: 400; }
+    .sn-base-station .sn-base-station__copy-row { margin: 28px 0 0; }
+    .sn-base-station .sn-base-station__copy-row pre { overflow-x: auto; margin: 0 0 14px; padding: 20px; border: 1px solid var(--sn-line); background: var(--sn-card); color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .76rem; line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .sn-base-station .sn-base-station__copy-row > p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .9rem; }
+
+    /* Three verification stages as a flat ledger. */
+    .sn-base-station .sn-base-station__stages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 30px; padding: 0; list-style: none; border-top: 1px solid var(--sn-line-strong); counter-reset: verification-stage; }
+    .sn-base-station .sn-base-station__stages li { padding: 18px 24px 22px 0; border-bottom: 1px solid var(--sn-line); counter-increment: verification-stage; }
+    .sn-base-station .sn-base-station__stages li + li { padding-left: 24px; border-left: 1px solid var(--sn-line); }
+    .sn-base-station .sn-base-station__stages li::before { display: block; margin-bottom: 12px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; line-height: 1.5; content: 'STAGE 0' counter(verification-stage); }
+    .sn-base-station .sn-base-station__stages h3 { margin-bottom: 8px; font-size: .96rem; }
+    .sn-base-station .sn-base-station__stages p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .84rem; line-height: 1.65; }
+    .sn-base-station .sn-base-station__stages strong { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .04em; text-transform: uppercase; }
+    .sn-base-station .sn-base-station__report-fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 24px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--sn-line); border-bottom: 1px solid var(--sn-line); }
+    .sn-base-station .sn-base-station__report-fields li { padding: 14px 20px 14px 0; color: var(--sn-text-muted); font-size: .85rem; line-height: 1.6; }
+    .sn-base-station .sn-base-station__report-fields li + li { padding-left: 20px; border-left: 1px solid var(--sn-line); }
+    .sn-base-station .sn-base-station__report-fields strong { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-base-station .sn-base-station__test-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+    .sn-base-station .sn-base-station__test-grid figure { margin-bottom: 0; }
+    .sn-base-station .sn-base-station__test-grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+
+    /* Published evidence: three indexed records on one rule. */
+    .sn-base-station .sn-base-station__evidence-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--sn-line-strong); }
+    .sn-base-station .sn-base-station__evidence-card { display: flex; flex-direction: column; padding: 22px 26px 26px 0; border-bottom: 1px solid var(--sn-line); }
+    .sn-base-station .sn-base-station__evidence-card + .sn-base-station__evidence-card { padding-left: 26px; border-left: 1px solid var(--sn-line); }
+    .sn-base-station .sn-base-station__card-tag { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .66rem; letter-spacing: .08em; line-height: 1.5; text-transform: uppercase; }
+    .sn-base-station .sn-base-station__evidence-card figure { margin-bottom: 16px; }
+    .sn-base-station .sn-base-station__evidence-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-base-station .sn-base-station__evidence-card p { color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-base-station .sn-base-station__evidence-card ul { margin: 0 0 18px; padding-left: 18px; color: var(--sn-text-muted); font-size: .84rem; line-height: 1.65; }
+    .sn-base-station .sn-base-station__evidence-card li { line-height: 1.6; }
+    .sn-base-station .sn-base-station__evidence-card .sn-base-station__actions { margin-top: auto; }
+    .sn-base-station .sn-base-station__port-map { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-height: 136px; margin-bottom: 16px; padding: 16px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; }
+    .sn-base-station .sn-base-station__port-map span { padding: 8px 10px; border: 1px solid var(--sn-line-strong); background: var(--sn-card); }
+    .sn-base-station .sn-base-station__port-map b { color: var(--sn-cyan-dark); font-weight: 400; }
+    .sn-base-station .sn-base-station__band-media { max-width: 720px; margin: 28px 0 0; }
+    .sn-base-station .sn-base-station__band-media img { width: 100%; aspect-ratio: 16 / 9; padding: 14px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); object-fit: contain; }
+
+    /* Project gates. */
+    .sn-base-station .sn-base-station__process { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--sn-line-strong); counter-reset: base-station-process; }
+    .sn-base-station .sn-base-station__process > li { padding: 18px 20px 22px 0; border-bottom: 1px solid var(--sn-line); counter-increment: base-station-process; }
+    .sn-base-station .sn-base-station__process > li + li { padding-left: 20px; border-left: 1px solid var(--sn-line); }
+    .sn-base-station .sn-base-station__process > li::before { display: block; margin-bottom: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; line-height: 1.5; content: 'GATE 0' counter(base-station-process); }
+    .sn-base-station .sn-base-station__process h3 { margin-bottom: 8px; font-size: .92rem; }
+    .sn-base-station .sn-base-station__process p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .82rem; line-height: 1.65; }
+    .sn-base-station .sn-base-station__process strong { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .66rem; letter-spacing: .04em; text-transform: uppercase; }
+
+    /* FAQ and RFQ. */
+    .sn-base-station .sn-base-station__faq { max-width: 1000px; }
+    .sn-base-station .sn-base-station__rfq { width: 100%; }
+    .sn-base-station .sn-base-station__fine-print { margin-top: 18px; font-size: .82rem; }
+
+    @media (max-width: 1100px) {
+      .sn-base-station .sn-base-station__evidence-cards { grid-template-columns: 1fr; }
+      .sn-base-station .sn-base-station__evidence-card { padding: 22px 0 24px; }
+      .sn-base-station .sn-base-station__evidence-card + .sn-base-station__evidence-card { padding-left: 0; border-left: 0; }
+      .sn-base-station .sn-base-station__evidence-card { display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 1fr); column-gap: 26px; }
+      .sn-base-station .sn-base-station__evidence-card figure, .sn-base-station .sn-base-station__evidence-card .sn-base-station__port-map { grid-row: 1 / span 5; margin-bottom: 0; }
+      .sn-base-station .sn-base-station__process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-base-station .sn-base-station__process > li + li { padding-left: 20px; }
+      .sn-base-station .sn-base-station__process > li:nth-child(odd) { padding-left: 0; border-left: 0; }
+    }
+    @media (max-width: 1024px) {
+      .sn-base-station .sn-base-station__hero-grid { grid-template-columns: 1fr; }
+      .sn-base-station .sn-base-station__hero-media { max-width: 560px; }
+    }
+    @media (max-width: 900px) {
+      .sn-base-station .sn-base-station__architecture-evidence { grid-template-columns: 1fr; }
+      .sn-base-station .sn-base-station__stages { grid-template-columns: 1fr; }
+      .sn-base-station .sn-base-station__stages li, .sn-base-station .sn-base-station__stages li + li { padding: 18px 0 20px; border-left: 0; }
+      .sn-base-station .sn-base-station__report-fields { grid-template-columns: 1fr; }
+      .sn-base-station .sn-base-station__report-fields li, .sn-base-station .sn-base-station__report-fields li + li { padding: 12px 0; border-left: 0; }
+      .sn-base-station .sn-base-station__report-fields li + li { border-top: 1px solid var(--sn-line); }
+    }
+    @media (max-width: 760px) {
+      .sn-base-station .sn-base-station__architecture, .sn-base-station .sn-base-station__bandplan, .sn-base-station .sn-base-station__verification { min-width: 0; }
+      .sn-base-station .sn-base-station__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-base-station .sn-base-station__ledger, .sn-base-station .sn-base-station__ledger tbody, .sn-base-station .sn-base-station__ledger tr, .sn-base-station .sn-base-station__ledger th, .sn-base-station .sn-base-station__ledger td { display: block; width: 100%; }
+      .sn-base-station .sn-base-station__ledger tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
+      .sn-base-station .sn-base-station__ledger tbody tr:last-child { border-bottom: 1px solid var(--sn-line-strong); }
+      .sn-base-station .sn-base-station__ledger tbody th { padding: 0 0 12px; border: 0; font-size: 1.02rem; }
+      .sn-base-station .sn-base-station__ledger tbody td { padding: 0 0 10px; border: 0; }
+      .sn-base-station .sn-base-station__ledger tbody td:last-child { padding-bottom: 0; }
+      .sn-base-station .sn-base-station__ledger tbody td::before { display: block; margin-bottom: 3px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .66rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; content: attr(data-label); }
+      .sn-base-station .sn-base-station__test-grid { grid-template-columns: 1fr; }
+      .sn-base-station .sn-base-station__evidence-card { display: flex; }
+      .sn-base-station .sn-base-station__process { grid-template-columns: 1fr; }
+      .sn-base-station .sn-base-station__process > li, .sn-base-station .sn-base-station__process > li + li, .sn-base-station .sn-base-station__process > li:nth-child(odd) { padding: 18px 0 20px; border-left: 0; }
+      .sn-base-station .sn-base-station__actions .sn-btn { width: 100%; }
+    }
+    @media (max-width: 520px) {
+      .sn-base-station .sn-base-station__faq details p { padding-right: 0; }
+    }
+    @media print {
+      .sn-base-station .sn-base-station__faq details:not([open]) > p { display: block !important; }
+      .sn-base-station .sn-base-station__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-base-station__hero" aria-labelledby="base-station-title">
+    <div class="sn-container">
+      <div class="sn-base-station__hero-grid">
+        <div class="sn-base-station__hero-copy">
+          <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">Base Station RF</li></ol></nav>
+          <span class="sn-base-station__eyebrow">4T4R / 8TR architectures · N28 / N78 band plans · Multi-band co-siting</span>
+          <h1 id="base-station-title">Base Station Filters, Duplexers &amp; Tower Mounted Amplifiers</h1>
+          <p>Evaluate base-station filters, base-station duplexers, tower mounted amplifiers (TMA) and co-siting RF units for macro-site, RRU and wireless-infrastructure projects. Match the radio architecture, Tx/Rx paths and mechanical interfaces before comparing individual parts.</p>
+          <div class="sn-base-station__path-labels" aria-label="Simplified base-station Tx and Rx path labels"><span>Radio Tx paths</span><b aria-hidden="true">→</b><span>Filter / duplexer</span><b aria-hidden="true">↔</b><span>Antenna Rx paths</span></div>
+          <div class="sn-base-station__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Base-Station RFQ</a><a class="sn-btn sn-btn--secondary" href="/request-a-quote/?topic=pim-verification">Ask About PIM Verification</a></div>
+          <p class="sn-base-station__hero-note"><strong>Architecture labels are evaluation entry points, not universal catalog ratings.</strong> Feasibility for a 4T4R, 8TR, N28, N78 or co-siting requirement depends on the complete band plan, performance targets, port map and structure.</p>
+        </div>
+        <figure class="sn-hero-plate sn-base-station__hero-media">
+          <div class="sn-hero-plate__tag"><span>Plate 01</span><span>Macro-site context</span></div>
+          <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/app-basestation-5g-site.webp" alt="5G base station site" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async"></div>
+          <figcaption>5G base-station application scene. It illustrates the deployment context, not a specific product test or customer installation.</figcaption>
+        </figure>
+      </div>
+      <div class="sn-hero-meta"><span><b>Index</b>4 component functions</span><span><b>Architectures</b>4T4R · 8TR</span><span><b>Bands</b>700 · 800/900 · N28 · N78</span><span><b>Verification</b>VNA · PIM · matrix test</span></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="base-station-architecture-title">
+    <div class="sn-container">
+      <div class="sn-base-station__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>01</b> / Component map</span><span>4 base-station functions</span></div>
+        <div class="sn-record-title"><h2 id="base-station-architecture-title">Match Each Component to Its Base-Station Function</h2><p>Start with the component's position in the radio and antenna path. The matrix keeps base-station applications distinct from generic duplexer, diplexer or multiplexer selection and identifies when another product line is the correct route.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="base-station-architecture-title">
+        <table class="sn-table sn-ledger sn-base-station__ledger sn-base-station__architecture">
+          <caption>Architecture matrix for requirement routing; exact electrical and mechanical feasibility remains project-specific.</caption>
+          <thead><tr><th scope="col">Base-station component</th><th scope="col">System position</th><th scope="col">Buyer task</th><th scope="col">Required evaluation inputs</th><th scope="col">Related product path</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Base Station Filter / BTS or RRU filter</th><td data-label="System position">Radio, RRU or antenna-side receive and transmit path, as defined by the system</td><td data-label="Buyer task">Control out-of-band interference and define required rejection without losing sight of insertion loss, power and PIM</td><td data-label="Required evaluation inputs">Passband, rejection bands, Tx/Rx path, power, PIM, port and envelope</td><td data-label="Related product path"><a href="/products/rf-microwave-filters/">RRU filtering and custom filter structures</a></td></tr>
+            <tr><th scope="row">Base Station Duplexer</th><td data-label="System position">Between radio Tx/Rx ports and a common antenna or feeder connection</td><td data-label="Buyer task">Separate Tx and Rx frequency paths while specifying the required port-to-port isolation</td><td data-label="Required evaluation inputs">Tx/Rx start and stop frequencies, channel count, isolation, loss, power, PIM and connectors</td><td data-label="Related product path"><a href="/request-a-quote/?product=base-station-duplexer">Submit a base-station Tx/Rx plan</a></td></tr>
+            <tr><th scope="row">Tower Mounted Amplifier (TMA)</th><td data-label="System position">Tower-top installation position near the antenna, subject to the proposed system architecture</td><td data-label="Buyer task">Identify the installation and project evaluation path; define the required system documentation and interfaces</td><td data-label="Required evaluation inputs">Site architecture, band plan, mounting, environmental and project-specific interface requirements</td><td data-label="Related product path"><a href="/request-a-quote/?product=tma">Request a TMA project evaluation</a></td></tr>
+            <tr><th scope="row">Co-siting RF Unit</th><td data-label="System position">Between defined radio, feeder and antenna paths at a multi-band or multi-system site</td><td data-label="Buyer task">Address victim and interferer bands, port relationships, isolation, rejection, power and PIM trade-offs</td><td data-label="Required evaluation inputs">Complete site band plan, antenna/feeder arrangement, port map, targets and cable constraints</td><td data-label="Related product path"><a href="/products/rf-combiners/">Feeder-sharing and RF combiner requirements</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-base-station__architecture-evidence">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-duplexer-v3.webp" alt="RF duplexer" width="1024" height="571" loading="lazy" decoding="async"><figcaption>RF duplexer product example only; this image does not represent the appearance of filters, TMA or every co-siting unit.</figcaption></figure>
+        <div class="sn-base-station__system">
+          <h3>Simplified functional path</h3>
+          <div class="sn-base-station__flow" aria-label="Base-station functional signal path"><span>4T4R / 8TR radio</span><b aria-hidden="true">↔</b><span>Filter / base-station duplexer</span><b aria-hidden="true">↔</b><span>Feeder and antenna</span></div>
+          <p>The diagram shows review points, not a prescribed circuit. TMA placement and co-siting connections must follow the actual system design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="base-station-bandplan-title">
+    <div class="sn-container">
+      <div class="sn-base-station__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>02</b> / Band plan</span><span>4 architecture contexts · 16 RFQ fields</span></div>
+        <div class="sn-record-title"><h2 id="base-station-bandplan-title">Select by Band Plan, Port Count and Site Architecture</h2><p>Use the following as an RFQ framework, not as a list of stocked configurations or guaranteed specifications. Published architecture evidence helps frame the discussion; final values come from the exact model documents and engineering confirmation.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="base-station-bandplan-title">
+        <table class="sn-table sn-ledger sn-base-station__ledger sn-base-station__bandplan">
+          <caption>Band-plan matrix: replace every buyer-input field with project data and identify unknowns as TBD.</caption>
+          <thead><tr><th scope="col">Band / architecture context</th><th scope="col">Target device and position</th><th scope="col">Tx/Rx, channels and port map</th><th scope="col">Electrical inputs required</th><th scope="col">Mechanical and site inputs required</th><th scope="col">Verification to agree</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">N28 lower-band project</th><td data-label="Target device and position">Base-station filter, N28 duplexer requirement or co-siting unit; identify radio/RRU/antenna position</td><td data-label="Tx/Rx, channels and port map">Buyer input: Tx/Rx start-stop frequencies, channel count, 4T4R or other radio map, every port and direction</td><td data-label="Electrical inputs required">Insertion loss, isolation/rejection, power and PIM targets with conditions; connector series and gender</td><td data-label="Mechanical and site inputs required">Envelope, mounting orientation, indoor/outdoor environment, feeder and cable bend/routing limits</td><td data-label="Verification to agree">VNA paths, applicable PIM setup, port matrix, reliability items and batch coverage</td></tr>
+            <tr><th scope="row">700 / 800 / 900 MHz · 4T4R</th><td data-label="Target device and position">Base-station duplexer or filter configuration aligned with published lower-band and 4T4R evidence scope</td><td data-label="Tx/Rx, channels and port map">Buyer input: exact Tx/Rx edges, four transmit and four receive path relationships, channel/port labels and common ports</td><td data-label="Electrical inputs required">Per-path loss, isolation/rejection, power and PIM targets; connector and test reference plane</td><td data-label="Mechanical and site inputs required">Maximum envelope, mounting direction, environmental exposure, connector access and cable constraints</td><td data-label="Verification to agree">Approved-sample baseline, VNA/PIM records, matrix sequence and production traceability</td></tr>
+            <tr><th scope="row">N78 · 3400–3600 MHz · 8TR</th><td data-label="Target device and position">Base-station filter or duplexer architecture within the published 8TR evidence scope; not a universal N78 rating</td><td data-label="Tx/Rx, channels and port map">Buyer input: exact Tx/Rx plan, eight transmit/receive path mapping, channel definitions and port/common-port relationships</td><td data-label="Electrical inputs required">Loss, isolation/rejection, power and PIM targets by path; connector type, location and mating definition</td><td data-label="Mechanical and site inputs required">Compact-integration envelope, mounting orientation, outdoor conditions, service access and cable routing</td><td data-label="Verification to agree">Multi-port matrix coverage, VNA/PIM conditions, applicable reliability plan and batch records</td></tr>
+            <tr><th scope="row">Multi-band co-siting</th><td data-label="Target device and position">Co-siting filter, base-station duplexer or feeder-sharing unit selected from the actual victim/interferer arrangement</td><td data-label="Tx/Rx, channels and port map">Buyer input: every interfering and victim Tx/Rx range, radio architecture, antenna/feeder connections and port directions</td><td data-label="Electrical inputs required">Per-band loss, isolation/rejection, power and PIM targets; all connector and common-port definitions</td><td data-label="Mechanical and site inputs required">Available site volume, mounting orientation, outdoor environment, antenna/feeder layout and cable constraints</td><td data-label="Verification to agree">Band/port-specific VNA and PIM plan, applicable matrix/reliability tests and agreed batch sampling</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-base-station__copy-row">
+        <h3>Copy-ready RFQ row</h3>
+        <pre>Application | 4T4R/8TR/other | Tx start-stop | Rx start-stop | Channel count | Port map | Insertion loss | Isolation/rejection | Power + condition | PIM + setup | Connectors | Envelope | Mounting orientation | Environment | Cable constraints | Quantity | Verification coverage</pre>
+        <p>Copy these fields into your band plan or use the <a href="/resources/rfq-guide/">RFQ guide and checklist</a>. Unknown values can remain TBD for an initial review.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="base-station-verification-title">
+    <div class="sn-container">
+      <div class="sn-base-station__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>03</b> / Verification</span><span>3 stages · 4 test capabilities</span></div>
+        <div class="sn-record-title"><h2 id="base-station-verification-title">Verify PIM, Isolation and Repeatability beyond One Sample</h2><p>A single prototype curve cannot establish production repeatability. Define the approved baseline, controlled build conditions and batch evidence together. SONNE's VNA, PIM, reliability and automated multi-port matrix capabilities are applied according to the product and agreed verification plan.</p></div>
+      </div>
+      <ol class="sn-base-station__stages">
+        <li><h3>Prototype</h3><p><strong>Review:</strong> Sample curves, port configuration, test conditions and agreed limits.<br><strong>Buyer confirmation:</strong> Prototype performance and open design items.</p></li>
+        <li><h3>Pilot production</h3><p><strong>Review:</strong> Approved-sample baseline, materials/assembly controls and initial batch records.<br><strong>Buyer confirmation:</strong> Process and test baseline.</p></li>
+        <li><h3>Controlled production</h3><p><strong>Review:</strong> Agreed batch tests, traceability and deviation handling.<br><strong>Buyer confirmation:</strong> Report scope and acceptance records.</p></li>
+      </ol>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="base-station-verification-title">
+        <table class="sn-table sn-ledger sn-base-station__ledger sn-base-station__verification">
+          <caption>Verification matrix: test items, conditions and coverage are agreed for each base-station product.</caption>
+          <thead><tr><th scope="col">Verification capability</th><th scope="col">What it can verify</th><th scope="col">Conditions to define</th><th scope="col">Batch / report output</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">VNA / S-parameters</th><td data-label="What it can verify">Applicable insertion loss, return loss, isolation and rejection paths</td><td data-label="Conditions to define">Frequency range, port map, direction, calibration and reference plane</td><td data-label="Batch / report output">Agreed curves/files, limits, results and model/serial/batch identification</td></tr>
+            <tr><th scope="row">PIM testing</th><td data-label="What it can verify">Applicable passive intermodulation requirement on the defined product and path</td><td data-label="Conditions to define">Bands, tones, power, order, port, setup and acceptance limit</td><td data-label="Batch / report output">Project-agreed PIM result records tied to product or batch and test conditions</td></tr>
+            <tr><th scope="row">Reliability testing</th><td data-label="What it can verify">Only the reliability characteristics included in the project plan</td><td data-label="Conditions to define">Applicable condition, duration, sample scope and pre/post acceptance criteria</td><td data-label="Batch / report output">Agreed reliability records; no universal coverage or result is implied</td></tr>
+            <tr><th scope="row">Automated multi-port matrix</th><td data-label="What it can verify">Configured multi-port measurements and repeatable test sequences</td><td data-label="Conditions to define">Port map, switching sequence, applicable VNA/PIM items and limits</td><td data-label="Batch / report output">Traceable matrix-test records for the agreed units or batch scope</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="sn-base-station__report-fields" aria-label="Base-station test report evidence checklist"><li><strong>Identity:</strong> model, serial number or batch</li><li><strong>Setup:</strong> test conditions and port configuration</li><li><strong>Acceptance:</strong> limits, curves, results and pass/fail determination</li></ul>
+      <div class="sn-base-station__test-grid">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-rf-testing-1.webp" alt="Technician testing an RF filter with bench instruments" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>RF bench-testing scene. The photograph is not a report for any specific base-station model.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-station.webp" alt="RF test station" width="1024" height="575" loading="lazy" decoding="async"><figcaption>RF test station. Applicable instruments, setups and records are defined by the agreed product verification plan.</figcaption></figure>
+      </div>
+      <p class="sn-note">Testing capability does not imply that every characteristic is measured on every unit. Agree coverage, sampling, conditions and report format before production. <a href="/engineering/testing-quality/">Review testing, quality and report evidence</a>.</p>
+      <div class="sn-base-station__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/?topic=pim-verification">Ask About PIM Verification</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="base-station-evidence-title">
+    <div class="sn-container">
+      <div class="sn-base-station__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>04</b> / Published evidence</span><span>3 frequency / architecture contexts</span></div>
+        <div class="sn-record-title"><h2 id="base-station-evidence-title">Review Published 700 MHz, 4T4R and 8TR Project Evidence</h2><p>These cards state only the published frequency/architecture and device context. They do not publish customer identities, deployment countries, performance curves, savings or unapproved project results. Request the evidence applicable to your own requirement.</p></div>
+      </div>
+      <div class="sn-base-station__evidence-cards">
+        <article class="sn-base-station__evidence-card">
+          <span class="sn-base-station__card-tag">Ref 01 · 700 MHz</span>
+          <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-duplexer-v3.webp" alt="RF duplexer" width="1024" height="571" loading="lazy" decoding="async"><figcaption>Duplexer representative image; not a published test curve.</figcaption></figure>
+          <h3>700 MHz Low-PIM Duplexer</h3><p>Published scope: 700 MHz, low-PIM base-station duplexer project evidence.</p><ul><li>Frequency context: 700 MHz</li><li>Device context: base-station duplexer</li><li>Evidence to request: approved curve, test conditions and structural information where applicable</li></ul>
+          <div class="sn-base-station__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/?reference=700mhz-low-pim-duplexer">Discuss a Similar 700 MHz Architecture</a></div>
+        </article>
+        <article class="sn-base-station__evidence-card">
+          <span class="sn-base-station__card-tag">Ref 02 · 800/900 MHz · 4T4R</span>
+          <div class="sn-base-station__port-map" aria-label="Conceptual 4T4R port architecture diagram"><span>4 Tx paths</span><b aria-hidden="true">↔</b><span>4T4R port mapping</span><b aria-hidden="true">↔</b><span>4 Rx paths</span></div>
+          <h3>800/900 MHz 4T4R</h3><p>Published scope: 800/900 MHz, 4T4R base-station RF project evidence. The diagram is conceptual and is not a product photograph or measured port result.</p><ul><li>Frequency context: 800/900 MHz</li><li>Architecture context: 4T4R</li><li>Evidence to request: approved curves, test conditions and mechanical information where applicable</li></ul>
+          <div class="sn-base-station__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/?reference=800-900mhz-4t4r">Discuss a Similar 4T4R Architecture</a></div>
+        </article>
+        <article class="sn-base-station__evidence-card">
+          <span class="sn-base-station__card-tag">Ref 03 · 3400–3600 MHz · 8TR</span>
+          <div class="sn-base-station__port-map" aria-label="Conceptual 8TR port architecture diagram"><span>8 transmit/receive paths</span><b aria-hidden="true">↔</b><span>8TR port matrix</span><b aria-hidden="true">↔</b><span>3400–3600 MHz band plan</span></div>
+          <h3>3400–3600 MHz 8TR</h3><p>Published scope: 3400–3600 MHz, 8TR base-station RF project evidence. No unrelated product image is substituted for the 8TR hardware.</p><ul><li>Frequency context: 3400–3600 MHz within the N78 project discussion</li><li>Architecture context: 8TR</li><li>Evidence to request: approved matrix curves, test conditions and structural information where applicable</li></ul>
+          <div class="sn-base-station__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/?reference=3400-3600mhz-8tr">Discuss a Similar 8TR Architecture</a></div>
+        </article>
+      </div>
+      <figure class="sn-base-station__band-media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-n28-multiplexer.webp" alt="N28 multiplexer" width="1024" height="571" loading="lazy" decoding="async"><figcaption>N28 multiplexer product example for application-evidence discussion. Its exact port map and model documentation must be checked; it is not presented as an 800/900 MHz or 8TR product.</figcaption></figure>
+      <p class="sn-note">A nearby frequency or channel count is a useful starting point, not proof that an existing design meets your targets. Submit your exact band plan for engineering evaluation.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="base-station-process-title">
+    <div class="sn-container">
+      <div class="sn-base-station__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>05</b> / Project gates</span><span>5 gates · RFQ to controlled production</span></div>
+        <div class="sn-record-title"><h2 id="base-station-process-title">Move from Band Plan to Prototype and Controlled Production</h2><p>Include the application, 4T4R/8TR or other architecture, Tx/Rx bands, isolation/rejection, insertion loss, power, PIM, interfaces, dimensions, environment and expected quantity. Each stage has an input, an output and a buyer confirmation point.</p></div>
+      </div>
+      <ol class="sn-base-station__process">
+        <li><h3>RFQ completeness check</h3><p><strong>Input:</strong> Band plan, port map, targets and known constraints.<br><strong>Output:</strong> Missing fields and open questions.<br><strong>Confirm:</strong> Requirement priorities.</p></li>
+        <li><h3>Engineering evaluation</h3><p><strong>Input:</strong> Architecture, electrical and mechanical trade-offs.<br><strong>Output:</strong> Evaluation path and required validations.<br><strong>Confirm:</strong> Design and test scope.</p></li>
+        <li><h3>Prototype validation</h3><p><strong>Input:</strong> Prototype and agreed acceptance conditions.<br><strong>Output:</strong> Curves, results and open-item review.<br><strong>Confirm:</strong> Sample disposition.</p></li>
+        <li><h3>Pilot baseline</h3><p><strong>Input:</strong> Approved sample, process and batch expectations.<br><strong>Output:</strong> Controlled build/test baseline and records.<br><strong>Confirm:</strong> Production acceptance plan.</p></li>
+        <li><h3>Controlled production</h3><p><strong>Input:</strong> Drawing, quantity, process and capacity assessment.<br><strong>Output:</strong> Project-agreed production and traceability records.<br><strong>Confirm:</strong> Changes and batch evidence.</p></li>
+      </ol>
+      <p class="sn-note">A complete RFQ normally receives initial engineering feedback in about 24 hours; this is not a quotation or lead-time guarantee. “As fast as about two weeks” is only a reference for suitable prototype projects, not a general promise. Production schedules are assessed by drawing, quantity, process and capacity.</p>
+      <div class="sn-base-station__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Start Base-Station Engineering Review</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare the RFQ Inputs</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="base-station-faq-title">
+    <div class="sn-container">
+      <div class="sn-base-station__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>06</b> / RFQ notes</span><span>5 questions</span></div>
+        <div class="sn-record-title"><h2 id="base-station-faq-title">Base-Station RF Questions before You Submit an RFQ</h2><p>Review the engineering principles and project-level boundaries before sending your band plan. The answers do not extend published examples into range-wide product commitments.</p></div>
+      </div>
+      <div class="sn-faq sn-base-station__faq">
+        <details open><summary>How do I choose between 4T4R and 8TR base-station RF components?</summary><p>Start with the radio architecture, number of transmit and receive paths, band plan, port mapping and mechanical envelope rather than choosing by channel count alone. Share these inputs with insertion loss, isolation, power and PIM targets. SONNE can then evaluate a suitable 4T4R or 8TR configuration against the project requirements.</p></details>
+        <details><summary>How can low PIM be maintained across production batches?</summary><p>Batch consistency requires an approved sample baseline, controlled materials and assembly, defined test conditions, and traceable production records. SONNE has <a href="/engineering/testing-quality/">PIM, VNA, reliability and automated multi-port testing capabilities.</a> The exact PIM limit, sampling or verification coverage, and report format should be agreed for each base-station product rather than assumed across the range.</p></details>
+        <details><summary>What information is needed to address co-siting interference?</summary><p>Provide the interfering and victim bands, transmit and receive frequencies, power levels, antenna or feeder arrangement, isolation targets and known site constraints. SONNE can review whether a base-station filter, duplexer or co-siting RF configuration is appropriate. Feeder-sharing and generic multi-band combining requirements are routed to the <a href="/products/rf-combiners/">dedicated combiners line</a> for evaluation.</p></details>
+        <details><summary>Can SONNE evaluate N28 and N78 base-station projects?</summary><p>Yes, <a href="/solutions/5g-base-station/">N28 and N78 project requirements</a> can be submitted for engineering evaluation, with published evidence covering lower-band designs and a 3400–3600 MHz 8TR example. Final feasibility depends on the complete Tx/Rx band plan, performance targets, power, PIM, interfaces and mechanical limits, so no single catalog specification should be assumed for every design.</p></details>
+        <details><summary>Can I request a review before my base-station specification is complete?</summary><p>Yes. Submit the known band plan, architecture, target quantities and open questions, and clearly mark missing values. A <a href="/resources/rfq-guide/">complete RFQ</a> normally receives initial engineering feedback in about 24 hours; this is not a quotation or lead-time guarantee. Prototype and production schedules are assessed separately from design complexity, quantity, process and capacity.</p></details>
+      </div>
+      <div class="sn-base-station__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Ask a Base-Station RF Engineer</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="base-station-rfq-title">
+    <div class="sn-container">
+      <div class="sn-sheet sn-base-station__rfq">
+        <div class="sn-sheet__head"><span>RFQ route · base-station RF</span><span>4T4R · 8TR · N28 · N78</span></div>
+        <div class="sn-sheet__grid">
+          <div>
+            <h2 id="base-station-rfq-title">Send Your Band Plan for a Base-Station RF Review</h2>
+            <p>Start with the known architecture and open questions. You do not need to invent missing values before requesting an initial review, and no immediate quotation or fixed delivery schedule is implied.</p>
+            <div class="sn-base-station__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Base-Station RFQ</a><a class="sn-btn sn-btn--secondary" href="/request-a-quote/?topic=pim-verification">Ask About PIM Verification</a></div>
+            <p class="sn-base-station__fine-print">A complete RFQ normally receives initial engineering feedback in about 24 hours. Final design, quotation and schedules require project-specific review.</p>
+          </div>
+          <div class="sn-sheet__panel sn-base-station__rfq-panel">
+            <h3>Useful material to submit</h3>
+            <ul><li>Band plan and 4T4R/8TR port map</li><li>Specification table with electrical and test targets</li><li>Drawing or mechanical envelope with site constraints</li></ul>
+            <p>For a PIM question, include the model or project, target limit, test conditions and quantity. The RFQ route accepts your actual project brief and attachments; this page does not simulate a form.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/base-station-rf/#product",
+        "name": "Base Station Filters, Duplexers & Tower Mounted Amplifiers",
+        "url": "https://rf-sonne.com/products/base-station-rf/",
+        "description": "Base-station filters, base-station duplexers, TMA and co-siting RF units evaluated for 4T4R, 8TR, N28, N78 and multi-band site requirements with project-defined VNA, PIM, reliability and batch verification.",
+        "category": "Base-station RF components",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/prod-duplexer-v3.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/base-station-rf/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"Base Station RF","item":"https://rf-sonne.com/products/base-station-rf/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rf-sonne.com/products/base-station-rf/#faq",
+        "mainEntity": [
+          {"@type":"Question","name":"How do I choose between 4T4R and 8TR base-station RF components?","acceptedAnswer":{"@type":"Answer","text":"Start with the radio architecture, number of transmit and receive paths, band plan, port mapping and mechanical envelope rather than choosing by channel count alone. Share these inputs with insertion loss, isolation, power and PIM targets. SONNE can then evaluate a suitable 4T4R or 8TR configuration against the project requirements."}},
+          {"@type":"Question","name":"How can low PIM be maintained across production batches?","acceptedAnswer":{"@type":"Answer","text":"Batch consistency requires an approved sample baseline, controlled materials and assembly, defined test conditions, and traceable production records. SONNE has PIM, VNA, reliability and automated multi-port testing capabilities. The exact PIM limit, sampling or verification coverage, and report format should be agreed for each base-station product rather than assumed across the range."}},
+          {"@type":"Question","name":"What information is needed to address co-siting interference?","acceptedAnswer":{"@type":"Answer","text":"Provide the interfering and victim bands, transmit and receive frequencies, power levels, antenna or feeder arrangement, isolation targets and known site constraints. SONNE can review whether a base-station filter, duplexer or co-siting RF configuration is appropriate. Feeder-sharing and generic multi-band combining requirements are routed to the dedicated combiners line for evaluation."}},
+          {"@type":"Question","name":"Can SONNE evaluate N28 and N78 base-station projects?","acceptedAnswer":{"@type":"Answer","text":"Yes, N28 and N78 project requirements can be submitted for engineering evaluation, with published evidence covering lower-band designs and a 3400–3600 MHz 8TR example. Final feasibility depends on the complete Tx/Rx band plan, performance targets, power, PIM, interfaces and mechanical limits, so no single catalog specification should be assumed for every design."}},
+          {"@type":"Question","name":"Can I request a review before my base-station specification is complete?","acceptedAnswer":{"@type":"Answer","text":"Yes. Submit the known band plan, architecture, target quantities and open questions, and clearly mark missing values. A complete RFQ normally receives initial engineering feedback in about 24 hours; this is not a quotation or lead-time guarantee. Prototype and production schedules are assessed separately from design complexity, quantity, process and capacity."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

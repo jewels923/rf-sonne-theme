@@ -1,0 +1,337 @@
+<!-- wp:html -->
+<div class="sn-sol-enclosures sn-legacy-record">
+  <style>
+    .sn-sol-enclosures { color: var(--sn-text); }
+    .sn-sol-enclosures *, .sn-sol-enclosures *::before, .sn-sol-enclosures *::after { box-sizing: border-box; }
+    .sn-sol-enclosures h2, .sn-sol-enclosures h3, .sn-sol-enclosures p, .sn-sol-enclosures ul, .sn-sol-enclosures ol, .sn-sol-enclosures dl, .sn-sol-enclosures dd, .sn-sol-enclosures figure { margin-top: 0; }
+    .sn-sol-enclosures h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-sol-enclosures h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-sol-enclosures p, .sn-sol-enclosures li, .sn-sol-enclosures dd { line-height: 1.7; }
+    .sn-sol-enclosures a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-sol-enclosures img { display: block; max-width: 100%; height: auto; }
+    .sn-sol-enclosures .sn-sol-enclosures__eyebrow { display: block; margin-bottom: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-sol-enclosures .sn-sol-enclosures__intro { max-width: 860px; margin-bottom: 38px; }
+    .sn-sol-enclosures .sn-sol-enclosures__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.03rem; }
+    .sn-sol-enclosures .sn-sol-enclosures__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-sol-enclosures .sn-sol-enclosures__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-sol-enclosures .sn-sol-enclosures__hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr); gap: clamp(34px, 6vw, 78px); align-items: center; }
+    .sn-sol-enclosures .sn-sol-enclosures__hero .sn-sol-enclosures__eyebrow { color: var(--sn-cyan); }
+    .sn-sol-enclosures .sn-sol-enclosures__hero .sn-chip { border-color: rgba(252, 254, 255, .38); color: var(--sn-cyan); }
+    .sn-sol-enclosures .sn-sol-enclosures__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-sol-enclosures .sn-sol-enclosures__hero-media { margin-bottom: 0; padding: 14px; border: 1px solid rgba(252, 254, 255, .22); }
+    .sn-sol-enclosures .sn-sol-enclosures__hero-media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: var(--sn-white); }
+    .sn-sol-enclosures .sn-sol-enclosures__hero-media figcaption { margin-top: 12px; color: rgba(252, 254, 255, .64); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-sol-enclosures .sn-sol-enclosures__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 30px; border-block: 1px solid rgba(252, 254, 255, .18); }
+    .sn-sol-enclosures .sn-sol-enclosures__fact { padding: 20px 18px 20px 0; }
+    .sn-sol-enclosures .sn-sol-enclosures__fact + .sn-sol-enclosures__fact { padding-left: 18px; border-left: 1px solid rgba(252, 254, 255, .18); }
+    .sn-sol-enclosures .sn-sol-enclosures__fact strong { display: block; margin-bottom: 4px; color: var(--sn-white); font-family: var(--sn-font-heading); font-size: 1.16rem; }
+    .sn-sol-enclosures .sn-sol-enclosures__fact span { display: block; color: rgba(252, 254, 255, .7); font-size: .78rem; line-height: 1.5; }
+    .sn-sol-enclosures .sn-sol-enclosures__boundary { margin: 16px 0 0; color: rgba(252, 254, 255, .68); font-size: .79rem; }
+    .sn-sol-enclosures .sn-sol-enclosures__split { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 54px); align-items: start; }
+    .sn-sol-enclosures .sn-sol-enclosures__split figure, .sn-sol-enclosures .sn-sol-enclosures__drawing figure { margin-bottom: 0; }
+    .sn-sol-enclosures .sn-sol-enclosures__split img, .sn-sol-enclosures .sn-sol-enclosures__drawing img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .sn-sol-enclosures .sn-sol-enclosures__drawing img { aspect-ratio: 16 / 9; }
+    .sn-sol-enclosures .sn-sol-enclosures__split figcaption, .sn-sol-enclosures .sn-sol-enclosures__drawing figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-sol-enclosures .sn-sol-enclosures__table { min-width: 920px; }
+    .sn-sol-enclosures .sn-sol-enclosures__table caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-sol-enclosures .sn-sol-enclosures__table tbody th { color: var(--sn-navy); }
+    .sn-sol-enclosures .sn-sol-enclosures__note { margin: 18px 0 0; padding: 16px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .87rem; }
+    .sn-sol-enclosures .sn-sol-enclosures__note p:last-child { margin-bottom: 0; }
+    .sn-sol-enclosures .sn-sol-enclosures__flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 28px; }
+    .sn-sol-enclosures .sn-sol-enclosures__flow-node { position: relative; padding: 22px 20px; border: var(--sn-border); border-top: 3px solid var(--sn-cyan-dark); background: var(--sn-white); }
+    .sn-sol-enclosures .sn-sol-enclosures__flow-node span { display: block; margin-bottom: 10px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .sn-sol-enclosures .sn-sol-enclosures__flow-node p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-sol-enclosures .sn-sol-enclosures__chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 26px; padding: 0; list-style: none; }
+    .sn-sol-enclosures .sn-sol-enclosures__checklist { margin: 0 0 22px; padding: 0; list-style: none; border-top: var(--sn-border); }
+    .sn-sol-enclosures .sn-sol-enclosures__checklist li { position: relative; padding: 11px 0 11px 26px; border-bottom: var(--sn-border); font-size: .88rem; color: var(--sn-text-muted); }
+    .sn-sol-enclosures .sn-sol-enclosures__checklist li::before { position: absolute; top: 12px; left: 2px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .78rem; content: '□'; }
+    .sn-sol-enclosures .sn-sol-enclosures__drawing { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(26px, 5vw, 52px); align-items: start; margin-bottom: 30px; }
+    .sn-sol-enclosures .sn-sol-enclosures__stages { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 30px; }
+    .sn-sol-enclosures .sn-sol-enclosures__stage { padding: 22px 18px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-enclosures .sn-sol-enclosures__stage span { display: block; margin-bottom: 12px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; font-weight: 700; }
+    .sn-sol-enclosures .sn-sol-enclosures__stage h3 { font-size: 1rem; }
+    .sn-sol-enclosures .sn-sol-enclosures__stage p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .82rem; }
+    .sn-sol-enclosures .sn-sol-enclosures__faq { max-width: 920px; }
+    .sn-sol-enclosures .sn-sol-enclosures__faq details { border-bottom: var(--sn-border); }
+    .sn-sol-enclosures .sn-sol-enclosures__faq summary { position: relative; min-height: 44px; padding: 22px 48px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-sol-enclosures .sn-sol-enclosures__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.28rem; content: '+'; }
+    .sn-sol-enclosures .sn-sol-enclosures__faq details[open] summary::after { content: '−'; }
+    .sn-sol-enclosures .sn-sol-enclosures__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-sol-enclosures .sn-sol-enclosures__rfq h2, .sn-sol-enclosures .sn-sol-enclosures__rfq h3 { color: var(--sn-white); }
+    .sn-sol-enclosures .sn-sol-enclosures__rfq p, .sn-sol-enclosures .sn-sol-enclosures__rfq li { color: rgba(252, 254, 255, .8); }
+    .sn-sol-enclosures .sn-sol-enclosures__rfq a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-sol-enclosures .sn-sol-enclosures__rfq-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(28px, 5vw, 58px); }
+    .sn-sol-enclosures .sn-sol-enclosures__rfq-panel { padding: clamp(22px, 4vw, 32px); border: 1px solid rgba(252, 254, 255, .2); }
+    .sn-sol-enclosures .sn-sol-enclosures__rfq-panel ul { margin: 0; padding-left: 20px; }
+    .sn-sol-enclosures .sn-sol-enclosures__fine-print { margin-top: 18px; font-size: .8rem; }
+    @media (max-width: 1100px) {
+      .sn-sol-enclosures .sn-sol-enclosures__stages { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .sn-sol-enclosures .sn-sol-enclosures__hero-grid, .sn-sol-enclosures .sn-sol-enclosures__split, .sn-sol-enclosures .sn-sol-enclosures__drawing, .sn-sol-enclosures .sn-sol-enclosures__rfq-grid { grid-template-columns: 1fr; }
+      .sn-sol-enclosures .sn-sol-enclosures__hero-media { max-width: 520px; }
+      .sn-sol-enclosures .sn-sol-enclosures__split figure { max-width: 620px; }
+    }
+    @media (max-width: 700px) {
+      .sn-sol-enclosures .sn-sol-enclosures__facts, .sn-sol-enclosures .sn-sol-enclosures__flow, .sn-sol-enclosures .sn-sol-enclosures__stages { grid-template-columns: 1fr; }
+      .sn-sol-enclosures .sn-sol-enclosures__fact, .sn-sol-enclosures .sn-sol-enclosures__fact + .sn-sol-enclosures__fact { padding: 16px 0; border-left: 0; }
+      .sn-sol-enclosures .sn-sol-enclosures__fact + .sn-sol-enclosures__fact { border-top: 1px solid rgba(252, 254, 255, .18); }
+      .sn-sol-enclosures .sn-sol-enclosures__faq details p { padding-right: 0; }
+    }
+    @media (max-width: 520px) {
+      .sn-sol-enclosures .sn-sol-enclosures__actions .sn-btn { width: 100%; }
+    }
+    @media print {
+      .sn-sol-enclosures .sn-sol-enclosures__faq details:not([open]) > p { display: block !important; }
+      .sn-sol-enclosures .sn-sol-enclosures__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-sol-enclosures__hero" aria-labelledby="enclosures-solution-title">
+    <div class="sn-container sn-sol-enclosures__hero-grid">
+      <div class="sn-sol-enclosures__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/solutions/">Solutions</a></li><li aria-current="page">Data Center Enclosures</li></ol></nav>
+        <span class="sn-sol-enclosures__eyebrow">19-inch structures · EMI housings · CNC heatsinks</span>
+        <h1 id="enclosures-solution-title">Enclosure, Shielding and Thermal Solutions for Equipment OEMs</h1>
+        <p>Custom telecom enclosures, 19-inch rack structures, RF and EMI housings and machined heatsinks for data-center and industrial equipment teams. The review starts with the equipment interface, the environment and the drawings you already have.</p>
+        <ul class="sn-sol-enclosures__chips" aria-label="Typical enclosure project inputs"><li class="sn-chip">2D / 3D drawings</li><li class="sn-chip">Heat load and airflow</li><li class="sn-chip">Application and quantity stage</li></ul>
+        <div class="sn-sol-enclosures__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send Mechanical Drawings</a><a class="sn-btn sn-btn--secondary" href="/contact/">Discuss EMI / Thermal Requirements</a></div>
+        <div class="sn-sol-enclosures__facts" aria-label="Enclosure review facts">
+          <div class="sn-sol-enclosures__fact"><strong>19-inch</strong><span>Rack, subrack and panel interfaces reviewed against the installed equipment.</span></div>
+          <div class="sn-sol-enclosures__fact"><strong>EMI + thermal</strong><span>Openings, seams and heat paths assessed as one mechanical problem.</span></div>
+          <div class="sn-sol-enclosures__fact"><strong>GD&amp;T</strong><span>Drawings turned into inspection and assembly acceptance criteria.</span></div>
+        </div>
+        <p class="sn-sol-enclosures__boundary">A capability review is not an EMC, thermal-performance or IP certification. Those results depend on the complete design and the agreed verification method.</p>
+      </div>
+      <figure class="sn-sol-enclosures__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-cabinet.webp" alt="Telecom enclosure cabinet" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Telecom enclosure cabinet. The image shows enclosure form and interfaces; internal configuration is defined by the project drawing.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="enclosures-structure-title">
+    <div class="sn-container">
+      <div class="sn-sol-enclosures__intro">
+        <h2 id="enclosures-structure-title">Match the Enclosure Structure to the Equipment Interface</h2>
+        <p>Different equipment problems call for different mechanical outputs. Use the four categories below to identify the dominant interface, then confirm the actual envelope, mounting and service access from the drawing package.</p>
+      </div>
+      <div class="sn-sol-enclosures__split">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/market-datacenter.webp" alt="Data center infrastructure" width="1024" height="1024" loading="lazy" decoding="async">
+          <figcaption>Data-center context. The photograph illustrates the operating environment, not a completed SONNE installation or customer project.</figcaption>
+        </figure>
+        <div>
+          <p><strong>Start with the installed equipment, not the box.</strong> Define the rack or mounting interface, the space reserved for cables and service access, and the direction of airflow. Those three constraints usually decide whether a rack cabinet, a standalone equipment enclosure, an RF housing or a heatsink assembly is the right starting structure.</p>
+          <p>Industrial installations add vibration, dust, wash-down or outdoor exposure questions. RF modules add connector positions, compartment walls and cover fastening. Mark every unknown as TBD so the review can separate a missing input from a design conflict.</p>
+          <a class="sn-sol-enclosures__text-link" href="/products/precision-enclosures/">Explore Precision Enclosures <span aria-hidden="true">&nbsp;→</span></a>
+        </div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="enclosures-config-caption">
+        <table class="sn-table sn-sol-enclosures__table">
+          <caption id="enclosures-config-caption">Enclosure configuration map: typical inputs, critical interfaces, review risks and project outputs.</caption>
+          <thead><tr><th scope="col">Configuration</th><th scope="col">Typical inputs</th><th scope="col">Critical interface</th><th scope="col">Main review risk</th><th scope="col">Project output</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">19-inch rack cabinet</th><td data-label="Typical inputs">Rack units, equipment depth, front and rear service access, cable route, heat load</td><td data-label="Critical interface">Mounting rails, panel cut-outs, door clearance, cable entry</td><td data-label="Main review risk">Internal space and cable bend radius conflict after the design is frozen</td><td data-label="Project output">Cabinet drawing set, interface list and assembly review record</td></tr>
+            <tr><th scope="row">Equipment enclosure</th><td data-label="Typical inputs">Equipment envelope, mounting method, environment, connector and cable positions</td><td data-label="Critical interface">Base, cover, gasket land and fastener locations</td><td data-label="Main review risk">Thin-wall distortion, joint alignment and service access</td><td data-label="Project output">Enclosure and cover drawings with inspection characteristics</td></tr>
+            <tr><th scope="row">RF / EMI housing</th><td data-label="Typical inputs">Connector locations, compartment layout, shielding objective, cover and seam design</td><td data-label="Critical interface">Mating faces, fastener pitch, openings and cable entries</td><td data-label="Main review risk">Shielding continuity lost through an opening or an untreated joint</td><td data-label="Project output">Housing review with critical faces and open verification items</td></tr>
+            <tr><th scope="row">Custom CNC heatsink</th><td data-label="Typical inputs">Heat load, allowable temperature rise, airflow direction, mounting pattern, envelope</td><td data-label="Critical interface">Thermal contact face, fin geometry and mounting holes</td><td data-label="Main review risk">Fin spacing, base flatness and airflow path defined too late</td><td data-label="Project output">Machining drawing, thermal interface assumptions and inspection plan</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-sol-enclosures__note"><strong>Configuration boundary:</strong> A category on this page is a starting point for review, not a stocked model list. Specific dimensions, materials, connector types, protection targets and finishes are confirmed from the project drawing.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="enclosures-tradeoff-title">
+    <div class="sn-container">
+      <div class="sn-sol-enclosures__intro">
+        <h2 id="enclosures-tradeoff-title">Review Shielding and Thermal Trade-Offs before Design Freeze</h2>
+        <p>Vents, seams, covers and heat paths compete for the same surfaces. Resolve the priority order before the enclosure geometry is released, otherwise a late vent or gasket change can reopen the whole layout.</p>
+      </div>
+      <div class="sn-sol-enclosures__flow" aria-label="Shielding and thermal review flow">
+        <div class="sn-sol-enclosures__flow-node"><span>Input</span><h3>Operating constraints</h3><p>Heat load in watts, allowable temperature rise or device limit, airflow direction, forbidden opening zones, shielding objective, service method and target environment.</p></div>
+        <div class="sn-sol-enclosures__flow-node"><span>Trade-off</span><h3>Three design directions</h3><p>Solid wall with a conduction path, vented wall with a defined duct, or a local shield compartment. Each changes the thermal path, seam continuity, space and machining.</p></div>
+        <div class="sn-sol-enclosures__flow-node"><span>Output</span><h3>Decision record</h3><p>Interface sketch, critical opening and joint list, thermal and shielding risks, plus the items that need measurement or project verification.</p></div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="enclosures-tradeoff-caption">
+        <table class="sn-table sn-sol-enclosures__table">
+          <caption id="enclosures-tradeoff-caption">EMI and thermal trade-off directions; no option is presented as a universal solution.</caption>
+          <thead><tr><th scope="col">Design direction</th><th scope="col">Thermal path</th><th scope="col">Shielding continuity</th><th scope="col">Space and machining</th><th scope="col">Maintenance implication</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Solid wall with conduction</th><td data-label="Thermal path">Heat moves through the base or wall into an external heatsink or cold plate</td><td data-label="Shielding continuity">Easier to keep continuous because large openings are avoided</td><td data-label="Space and machining">Needs a thermal bridge and external surface area; machining or extrusion path</td><td data-label="Maintenance implication">Internal access remains through a limited cover or end panel</td></tr>
+            <tr><th scope="row">Vented wall with defined duct</th><td data-label="Thermal path">Air enters low, crosses the heat source and exits high through a planned path</td><td data-label="Shielding continuity">Requires opening geometry, mesh or baffle review and joint treatment</td><td data-label="Space and machining">Consumes internal volume and needs filter or louver space</td><td data-label="Maintenance implication">Filters and ducts need a cleaning or replacement plan</td></tr>
+            <tr><th scope="row">Local shield compartment</th><td data-label="Thermal path">Heat from the shielded section needs a separate conduction or airflow path</td><td data-label="Shielding continuity">Limits the shielded volume and reduces the number of critical joints</td><td data-label="Space and machining">Adds partition walls, fasteners and a larger envelope</td><td data-label="Maintenance implication">Each compartment must remain reachable for assembly and service</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-sol-enclosures__note"><strong>Review output:</strong> A list of agreed priorities, unresolved conflicts and verification items. SONNE does not treat a design review as an EMC test result or a thermal-performance guarantee.</p>
+      <div class="sn-sol-enclosures__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Discuss EMI / Thermal Requirements</a><a class="sn-sol-enclosures__text-link" href="/engineering/custom-rf-design/">See how RF design reviews connect <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="enclosures-drawing-title">
+    <div class="sn-container">
+      <div class="sn-sol-enclosures__intro">
+        <h2 id="enclosures-drawing-title">Turn Drawings into an Inspection and Assembly Baseline</h2>
+        <p>A quotation needs more than an outside shape. Acceptance depends on datums, critical features, material, finish, fasteners and the assembly relationship between parts. Build those into one controlled drawing set before first article.</p>
+      </div>
+      <div class="sn-sol-enclosures__drawing">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-engineering-dfm-1.webp" alt="Engineer checking a machined part against its 3D CAD model" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>Engineer checking a machined part against its 3D CAD model. The photograph documents the review activity, not a customer drawing or measured result.</figcaption>
+        </figure>
+        <div>
+          <h3>Drawing package for a mechanical RFQ</h3>
+          <ul class="sn-sol-enclosures__checklist">
+            <li>2D PDF with datums, critical dimensions and GD&amp;T</li>
+            <li>3D model for geometry and interface checking</li>
+            <li>BOM, material and surface-finish specification</li>
+            <li>Fastener schedule and assembly relationship</li>
+            <li>Protection target, cable entry and service access</li>
+            <li>Quantity stage and target validation date</li>
+          </ul>
+          <p>If only a 3D model exists, the review can still start. The output will identify the missing acceptance information before a drawing-based quotation or first-article plan is defined.</p>
+        </div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="enclosures-fai-caption">
+        <table class="sn-table sn-sol-enclosures__table">
+          <caption id="enclosures-fai-caption">Example first-article record layout; the actual characteristics and sample size are set by the project drawing.</caption>
+          <thead><tr><th scope="col">Characteristic</th><th scope="col">Drawing version</th><th scope="col">Requirement</th><th scope="col">Measured or inspection record</th><th scope="col">Deviation status</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Rack mounting hole pattern</th><td data-label="Drawing version">Controlled 2D revision</td><td data-label="Requirement">Position and spacing per drawing</td><td data-label="Measured or inspection record">Inspection report with method and result</td><td data-label="Deviation status">Open, accepted or disposition required</td></tr>
+            <tr><th scope="row">Cover mating face</th><td data-label="Drawing version">Controlled 2D revision</td><td data-label="Requirement">Flatness and joint condition</td><td data-label="Measured or inspection record">Measurement record plus visual joint check</td><td data-label="Deviation status">Open, accepted or disposition required</td></tr>
+            <tr><th scope="row">Connector cut-out</th><td data-label="Drawing version">Controlled 2D revision</td><td data-label="Requirement">Location, size and edge condition</td><td data-label="Measured or inspection record">Dimensional check and fit check</td><td data-label="Deviation status">Open, accepted or disposition required</td></tr>
+            <tr><th scope="row">Surface finish</th><td data-label="Drawing version">Finish specification</td><td data-label="Requirement">Finish type, thickness or appearance requirement</td><td data-label="Measured or inspection record">Supplier record and incoming check</td><td data-label="Deviation status">Open, accepted or disposition required</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-sol-enclosures__note"><strong>Tolerance boundary:</strong> The published ±0.01 mm capability applies to suitable high-frequency structures above 40 GHz. It is not an ordinary cabinet tolerance and does not apply uniformly to every enclosure dimension.</p>
+      <div class="sn-sol-enclosures__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request a Drawing Review</a><a class="sn-btn sn-btn--secondary" href="/engineering/manufacturing/">Review Manufacturing Evidence</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="enclosures-protection-title">
+    <div class="sn-container">
+      <div class="sn-sol-enclosures__intro">
+        <h2 id="enclosures-protection-title">Specify Protection, Materials and Finishes by Project</h2>
+        <p>IP ratings, material grades and finishes are system properties, not labels attached to a sheet-metal shape. Write each requirement against a specific joint, opening or surface, then state how it will be checked.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="enclosures-protection-caption">
+        <table class="sn-table sn-sol-enclosures__table">
+          <caption id="enclosures-protection-caption">Protection requirement matrix: locations, risks, design requirements and the evidence to agree.</caption>
+          <thead><tr><th scope="col">Structure location</th><th scope="col">Main risk</th><th scope="col">Design requirement</th><th scope="col">Verification evidence</th><th scope="col">Project status</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Door or removable cover</th><td data-label="Main risk">Water or dust ingress at the perimeter joint</td><td data-label="Design requirement">Gasket land, compression, fastener pitch and flatness</td><td data-label="Verification evidence">Joint inspection and agreed sealing check</td><td data-label="Project status">Target level to be confirmed</td></tr>
+            <tr><th scope="row">Cable entry</th><td data-label="Main risk">Ingress and cable strain at the gland or boot</td><td data-label="Design requirement">Entry plate, gland type, bend radius and service loop</td><td data-label="Verification evidence">Assembly check and ingress verification method</td><td data-label="Project status">Entry hardware to be selected</td></tr>
+            <tr><th scope="row">Vent or louver</th><td data-label="Main risk">Water path, dust loading and reduced shielding</td><td data-label="Design requirement">Louver orientation, filter access and opening geometry</td><td data-label="Verification evidence">Visual and functional check; thermal review</td><td data-label="Project status">Airflow target to be supplied</td></tr>
+            <tr><th scope="row">Exterior finish</th><td data-label="Main risk">Corrosion, wear, contact resistance or appearance</td><td data-label="Design requirement">Substrate, pre-treatment, coating and masked areas</td><td data-label="Verification evidence">Finish record and appearance criteria</td><td data-label="Project status">Finish specification to be agreed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>IP55 and IP65 are within the enclosure capability information available for project evaluation. The achievable level still depends on the complete cabinet, seals, joints, cable entries and the agreed test method. Treat the statement as a capability direction, not as certification of every custom enclosure.</p>
+      <p class="sn-sol-enclosures__note"><strong>Compliance boundary:</strong> RoHS, REACH, salt-spray and EMC compliance are not asserted on this page. If those requirements apply, provide the standard, test condition and acceptance criteria so a project-specific feasibility review can be arranged.</p>
+      <div class="sn-sol-enclosures__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Define Your Protection Requirements</a><a class="sn-sol-enclosures__text-link" href="/resources/rfq-guide/">Check the RFQ input guide <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="enclosures-npi-title">
+    <div class="sn-container">
+      <div class="sn-sol-enclosures__intro">
+        <h2 id="enclosures-npi-title">Control the Path from Prototype to Production Changes</h2>
+        <p>An approved sample is a design milestone, not a production release. Each stage answers a different question and needs its own record, otherwise a later drawing or process change has no baseline to compare against.</p>
+      </div>
+      <div class="sn-sol-enclosures__stages" aria-label="Four enclosure NPI stages">
+        <div class="sn-sol-enclosures__stage"><span>STAGE 01</span><h3>Prototype</h3><p>Input: design version and validation target. Review: fit, assembly and agreed RF or thermal behavior. Exit: prototype results and deviations documented.</p></div>
+        <div class="sn-sol-enclosures__stage"><span>STAGE 02</span><h3>First Article</h3><p>Input: controlled drawing and BOM. Review: critical dimensions, material, finish and assembly. Exit: FAI record and deviation disposition.</p></div>
+        <div class="sn-sol-enclosures__stage"><span>STAGE 03</span><h3>Pilot</h3><p>Input: first-article disposition and proposed process. Review: repeatability, assembly, test coverage and open issues. Exit: pilot summary and production open items.</p></div>
+        <div class="sn-sol-enclosures__stage"><span>STAGE 04</span><h3>Controlled Production</h3><p>Input: approved baseline. Control: agreed production, inspection and change rules. Exit: production records retained against the baseline.</p></div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="enclosures-ecn-caption">
+        <table class="sn-table sn-sol-enclosures__table">
+          <caption id="enclosures-ecn-caption">Engineering change record fields for enclosure projects; notification and approval points are agreed per project.</caption>
+          <thead><tr><th scope="col">ECN field</th><th scope="col">What the record should establish</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Change identity and reason</th><td data-label="What the record should establish">Unique change number, date, originator and the problem or improvement driving the change.</td></tr>
+            <tr><th scope="row">Old and new revisions</th><td data-label="What the record should establish">Drawing and BOM versions before and after, with affected part numbers and assemblies.</td></tr>
+            <tr><th scope="row">Impact review</th><td data-label="What the record should establish">Effect on dimensions, fit, assembly, shielding, thermal path, finish and existing inventory or work in progress.</td></tr>
+            <tr><th scope="row">Verification requirement</th><td data-label="What the record should establish">Which characteristics need re-measurement or re-test, and which can be closed by engineering rationale.</td></tr>
+            <tr><th scope="row">Effectivity</th><td data-label="What the record should establish">Production batch or date from which the change applies, plus disposition of the previous revision.</td></tr>
+            <tr><th scope="row">Customer interface</th><td data-label="What the record should establish">Notification or approval point agreed for the project; no universal approval rule is assumed.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-sol-enclosures__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/npi/">Review the NPI Process</a><a class="sn-sol-enclosures__text-link" href="/engineering/manufacturing/">Review the manufacturing baseline <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="enclosures-faq-title">
+    <div class="sn-container">
+      <div class="sn-sol-enclosures__intro">
+        <h2 id="enclosures-faq-title">Enclosure Engineering FAQs</h2>
+        <p>Short answers to the conflicts that most often appear before a mechanical RFQ: shielding versus cooling, drawing completeness, IP scope, heatsink inputs and change control.</p>
+      </div>
+      <div class="sn-sol-enclosures__faq">
+        <details open><summary>How can EMI shielding and thermal management be balanced in one enclosure?</summary><p>Start with the heat load, airflow path, allowable openings, shielding objectives and maintenance constraints. SONNE can review conductive paths, joints, covers, vents and compartment layouts as related design choices. The appropriate balance and required verification depend on the equipment specification; neither EMI nor thermal performance should be assumed from enclosure material alone.</p></details>
+        <details><summary>Is a 3D model enough for an enclosure quotation or design review?</summary><p>A 3D model is useful for evaluating geometry, space and interfaces, but it usually does not define all acceptance requirements. Also provide available 2D drawings, materials, finishes, critical dimensions, GD&amp;T, fasteners, quantities and application conditions. If information is missing, SONNE can identify open items before defining the next review or quotation step.</p></details>
+        <details><summary>Can SONNE provide IP55 or IP65 telecom cabinets?</summary><p>IP55 and IP65 are within the enclosure capability information provided for project evaluation. The achievable rating depends on the complete cabinet design, seals, joints, cable entries and agreed verification method. Share the installation environment and target rating so the requirements can be reviewed; do not treat a capability statement as certification for every custom enclosure.</p></details>
+        <details><summary>What information is needed for a custom CNC heatsink review?</summary><p>Provide the heat source and dissipation target, available envelope, mounting interface, airflow conditions, material preference, surface requirements, critical tolerances and production stage. Include 2D and 3D files when available. These inputs allow the machining and thermal interfaces to be reviewed together; final geometry and verification requirements remain project-specific.</p></details>
+        <details><summary>How are enclosure design changes controlled after sample approval?</summary><p>Changes should be linked to the controlled drawing and BOM revision, with the reason, affected parts and review result recorded. Depending on the change, the review may cover fit, machining, finish, shielding, thermal interfaces and renewed verification. Customer notification or approval points, inventory disposition and the effective production stage should be agreed for the specific project.</p></details>
+      </div>
+      <p class="sn-sol-enclosures__note">Not sure which drawing detail matters first? Use the <a href="/resources/rfq-guide/">RFQ guide</a> to assemble the input package, or send the current files to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="enclosures-rfq-title">
+    <div class="sn-container sn-cta sn-sol-enclosures__rfq">
+      <div class="sn-sol-enclosures__rfq-grid">
+        <div>
+          <h2 id="enclosures-rfq-title">Start with Your Drawings and Equipment Constraints</h2>
+          <p>Send the mechanical package you have: 2D or 3D drawings, BOM, connector and interface details, heat load, airflow constraints and the target application. Missing fields can remain TBD while the review identifies what is needed next.</p>
+          <p>Tell us whether the immediate question is a 19-inch interface, EMI housing, thermal path, GD&amp;T or first-article plan. That determines which review route the project enters.</p>
+          <div class="sn-sol-enclosures__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send Mechanical Drawings</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare the Input Package</a></div>
+          <p class="sn-sol-enclosures__fine-print">A complete RFQ typically receives initial engineering feedback in about 24 hours. This is not a quotation, delivery date or performance commitment. Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+        </div>
+        <div class="sn-sol-enclosures__rfq-panel">
+          <h3>Minimum input list</h3>
+          <ul>
+            <li>Equipment envelope and mounting interface</li>
+            <li>2D drawing with datums and critical dimensions</li>
+            <li>3D model, BOM and material specification</li>
+            <li>Heat load, airflow direction and temperature limit</li>
+            <li>Shielding objective and allowed opening zones</li>
+            <li>Protection target, finish and service access</li>
+            <li>Project stage, quantity range and target date</li>
+          </ul>
+          <h3>Review flags to select</h3>
+          <p>19-inch interface · EMI shielding · thermal path · GD&amp;T / FAI · IP target · surface finish. These flags route the request to the relevant engineering review; they do not change the acceptance criteria by themselves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/solutions/data-center-enclosures/#webpage",
+        "name": "Enclosure, Shielding and Thermal Solutions for Equipment OEMs",
+        "url": "https://rf-sonne.com/solutions/data-center-enclosures/",
+        "description": "Custom telecom enclosures, 19-inch racks, EMI shielding and heatsinks for data-center and industrial electronics, with GD&T and engineering change control."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/solutions/data-center-enclosures/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Solutions","item":"https://rf-sonne.com/solutions/"},
+          {"@type":"ListItem","position":3,"name":"Data Center Enclosures","item":"https://rf-sonne.com/solutions/data-center-enclosures/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

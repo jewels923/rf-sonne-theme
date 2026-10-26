@@ -1,0 +1,333 @@
+<div class="sn-rfq__form-intro">
+  <p>Fields marked <span class="sn-rfq__required">Required</span> let engineering understand the project. Everything else can be added later, and uncertain values can be marked Unknown.</p>
+</div>
+
+<div class="sn-rfq__form-layout">
+  <div class="sn-rfq__fields">
+    <h2 id="rfq-basics-title">Start with Your Product Line and Project Basics</h2>
+    <p class="sn-rfq__section-note">Select the closest product line. If the project spans more than one, choose the main review area and describe the rest in the application summary.</p>
+
+    <fieldset class="sn-rfq__fieldset" aria-required="true">
+      <legend>Product line <span class="sn-rfq__required">Required</span></legend>
+      <div class="sn-rfq__choice-grid">
+        [radio product-line use_label_element "RF Filters" "Waveguide & Microwave" "Combiners & Base Station RF" "Precision Enclosures" "Other / Not Sure"]
+      </div>
+    </fieldset>
+
+    <div class="sn-rfq__grid sn-rfq__grid--two">
+      <div class="sn-rfq__field">
+        <label for="your-name">Name <span class="sn-rfq__required">Required</span></label>
+        [text* your-name id:your-name class:sn-rfq__input autocomplete:name placeholder "Full name"]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="your-email">Work email <span class="sn-rfq__required">Required</span></label>
+        [email* your-email id:your-email class:sn-rfq__input autocomplete:email placeholder "name@company.com"]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="your-company">Company <span class="sn-rfq__required">Required</span></label>
+        [text* your-company id:your-company class:sn-rfq__input autocomplete:organization placeholder "Company name"]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="your-phone">Phone / messaging number</label>
+        [tel your-phone id:your-phone class:sn-rfq__input autocomplete:tel placeholder "Include country code"]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="country">Country / region</label>
+        [text country id:country class:sn-rfq__input autocomplete:country-name placeholder "Where the project will be delivered"]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="project-stage">Project stage <span class="sn-rfq__required">Required</span></label>
+        [select* project-stage id:project-stage class:sn-rfq__input include_blank "Concept / Feasibility" "Prototype" "Qualification" "Pilot" "Mass Production" "Replacement / Upgrade"]
+      </div>
+    </div>
+
+    <div class="sn-rfq__field">
+      <label for="application">Application / requirement summary <span class="sn-rfq__required">Required</span></label>
+      [textarea* application id:application class:sn-rfq__textarea rows:6 placeholder "What the component or enclosure must do, the problem to solve, and the question you need answered first."]
+    </div>
+
+    <div class="sn-rfq__grid sn-rfq__grid--three">
+      <div class="sn-rfq__field">
+        <label for="sample-quantity">Sample quantity</label>
+        [text sample-quantity id:sample-quantity class:sn-rfq__input placeholder "e.g. 2 prototypes"]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="expected-volume">Expected volume</label>
+        [text expected-volume id:expected-volume class:sn-rfq__input placeholder "Annual or per-order estimate"]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="target-date">Target date</label>
+        [text target-date id:target-date class:sn-rfq__input placeholder "YYYY-MM-DD"]
+      </div>
+    </div>
+    <p class="sn-rfq__note">A target date is an evaluation input. It does not create a delivery commitment; timing is confirmed after engineering review.</p>
+
+    <h2 id="rfq-specs-title">Add the Specifications Engineers Need to Review</h2>
+    <p class="sn-rfq__section-note">Unknown values are acceptable. Mark a field as Unknown instead of guessing, and describe what is still open in the application summary. Missing inputs may be clarified before a formal evaluation.</p>
+
+    <div class="sn-rfq__spec-groups" data-rfq-spec-groups>
+      <fieldset class="sn-rfq__fieldset" data-rfq-product-group="RF Filters">
+        <legend>RF Filters</legend>
+        <div class="sn-rfq__grid sn-rfq__grid--two">
+          <div class="sn-rfq__field">
+            <label for="filter-frequency">Frequency range / center frequency</label>
+            [text filter-frequency id:filter-frequency class:sn-rfq__spec-value placeholder "e.g. 2.4–2.5 GHz"]
+            [checkbox filter-frequency-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="filter-bandwidth">Bandwidth</label>
+            [text filter-bandwidth id:filter-bandwidth class:sn-rfq__spec-value placeholder "e.g. 100 MHz"]
+            [checkbox filter-bandwidth-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="filter-insertion-loss">Insertion loss</label>
+            [text filter-insertion-loss id:filter-insertion-loss class:sn-rfq__spec-value placeholder "Target value and condition"]
+            [checkbox filter-insertion-loss-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="filter-return-loss">Return loss</label>
+            [text filter-return-loss id:filter-return-loss class:sn-rfq__spec-value placeholder "Target value and band"]
+            [checkbox filter-return-loss-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="filter-rejection">Rejection / isolation</label>
+            [text filter-rejection id:filter-rejection class:sn-rfq__spec-value placeholder "Stopband and required rejection"]
+            [checkbox filter-rejection-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="filter-power-pim">Power / PIM</label>
+            [text filter-power-pim id:filter-power-pim class:sn-rfq__spec-value placeholder "Average power and PIM target"]
+            [checkbox filter-power-pim-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="filter-interface">Interface / package</label>
+            [text filter-interface id:filter-interface class:sn-rfq__spec-value placeholder "Connectors, footprint or mounting"]
+            [checkbox filter-interface-unknown use_label_element "Unknown"]
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="sn-rfq__fieldset" data-rfq-product-group="Waveguide & Microwave">
+        <legend>Waveguide &amp; Microwave</legend>
+        <div class="sn-rfq__grid sn-rfq__grid--two">
+          <div class="sn-rfq__field">
+            <label for="waveguide-frequency">Frequency / band</label>
+            [text waveguide-frequency id:waveguide-frequency class:sn-rfq__spec-value placeholder "e.g. WR-28, 26.5–40 GHz"]
+            [checkbox waveguide-frequency-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="waveguide-size">Waveguide size / flange</label>
+            [text waveguide-size id:waveguide-size class:sn-rfq__spec-value placeholder "Standard or drawing reference"]
+            [checkbox waveguide-size-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="waveguide-polarization">Polarization</label>
+            [text waveguide-polarization id:waveguide-polarization class:sn-rfq__spec-value placeholder "Vertical, horizontal or dual"]
+            [checkbox waveguide-polarization-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="waveguide-ports">Ports / configuration</label>
+            [text waveguide-ports id:waveguide-ports class:sn-rfq__spec-value placeholder "Port count and layout"]
+            [checkbox waveguide-ports-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="waveguide-loss-power">Loss / power target</label>
+            [text waveguide-loss-power id:waveguide-loss-power class:sn-rfq__spec-value placeholder "Insertion loss and power handling"]
+            [checkbox waveguide-loss-power-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="waveguide-interface">Interface</label>
+            [text waveguide-interface id:waveguide-interface class:sn-rfq__spec-value placeholder "Coax transition, flange or assembly"]
+            [checkbox waveguide-interface-unknown use_label_element "Unknown"]
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="sn-rfq__fieldset" data-rfq-product-group="Combiners & Base Station RF">
+        <legend>Combiners &amp; Base Station RF</legend>
+        <div class="sn-rfq__grid sn-rfq__grid--two">
+          <div class="sn-rfq__field">
+            <label for="combiner-band-plan">Band plan</label>
+            [text combiner-band-plan id:combiner-band-plan class:sn-rfq__spec-value placeholder "Bands and channel grouping"]
+            [checkbox combiner-band-plan-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="combiner-ports">Port count</label>
+            [text combiner-ports id:combiner-ports class:sn-rfq__spec-value placeholder "e.g. 4T4R or 8T8R"]
+            [checkbox combiner-ports-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="combiner-isolation">Isolation</label>
+            [text combiner-isolation id:combiner-isolation class:sn-rfq__spec-value placeholder "Required isolation and conditions"]
+            [checkbox combiner-isolation-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="combiner-pim">PIM</label>
+            [text combiner-pim id:combiner-pim class:sn-rfq__spec-value placeholder "PIM target and test setup"]
+            [checkbox combiner-pim-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="combiner-power">Power</label>
+            [text combiner-power id:combiner-power class:sn-rfq__spec-value placeholder "Average and peak power"]
+            [checkbox combiner-power-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="combiner-interface">Interface</label>
+            [text combiner-interface id:combiner-interface class:sn-rfq__spec-value placeholder "Connector and mounting requirements"]
+            [checkbox combiner-interface-unknown use_label_element "Unknown"]
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="sn-rfq__fieldset" data-rfq-product-group="Precision Enclosures">
+        <legend>Precision Enclosures</legend>
+        <div class="sn-rfq__grid sn-rfq__grid--two">
+          <div class="sn-rfq__field">
+            <label for="enclosure-material">Material</label>
+            [text enclosure-material id:enclosure-material class:sn-rfq__spec-value placeholder "e.g. aluminium grade"]
+            [checkbox enclosure-material-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="enclosure-dimensions">External dimensions</label>
+            [text enclosure-dimensions id:enclosure-dimensions class:sn-rfq__spec-value placeholder "L × W × H and wall thickness"]
+            [checkbox enclosure-dimensions-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="enclosure-tolerances">Key tolerances / GD&amp;T</label>
+            [text enclosure-tolerances id:enclosure-tolerances class:sn-rfq__spec-value placeholder "Critical dimensions and datum"]
+            [checkbox enclosure-tolerances-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="enclosure-surface">Surface finish</label>
+            [text enclosure-surface id:enclosure-surface class:sn-rfq__spec-value placeholder "Coating, plating or finish"]
+            [checkbox enclosure-surface-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="enclosure-thermal">Thermal / shielding</label>
+            [text enclosure-thermal id:enclosure-thermal class:sn-rfq__spec-value placeholder "Heat path, sealing or EMI goals"]
+            [checkbox enclosure-thermal-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="enclosure-protection">Protection target</label>
+            [text enclosure-protection id:enclosure-protection class:sn-rfq__spec-value placeholder "e.g. IP target, if defined"]
+            [checkbox enclosure-protection-unknown use_label_element "Unknown"]
+          </div>
+          <div class="sn-rfq__field">
+            <label for="enclosure-assembly">Assembly constraints</label>
+            [text enclosure-assembly id:enclosure-assembly class:sn-rfq__spec-value placeholder "Inserts, access, mating parts"]
+            [checkbox enclosure-assembly-unknown use_label_element "Unknown"]
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="sn-rfq__fieldset" data-rfq-product-group="Other / Not Sure">
+        <legend>Other / Not Sure</legend>
+        <div class="sn-rfq__field">
+          <label for="other-specifications">Describe the requirement</label>
+          [textarea other-specifications id:other-specifications class:sn-rfq__spec-value rows:5 placeholder "List known electrical, mechanical or environmental requirements, and mark anything uncertain."]
+        </div>
+      </fieldset>
+    </div>
+
+    <h2 id="rfq-files-title">Upload Band Plans and Drawings with Clear Confidentiality Context</h2>
+    <p class="sn-rfq__section-note">Accepted file types: PDF, STEP/STP, DXF, XLSX/CSV, ZIP, PNG and JPG. The upload limit is 10 MB per file. Attach only what defines the requirement; older revisions are useful when labelled.</p>
+
+    <div class="sn-rfq__file-row">
+      <div class="sn-rfq__field">
+        <label for="file-1">Project file 1</label>
+        [file file-1 id:file-1 limit:10mb filetypes:pdf|step|stp|dxf|xlsx|csv|zip|png|jpg]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="file-1-purpose">Purpose</label>
+        [select file-1-purpose id:file-1-purpose class:sn-rfq__input include_blank "Band Plan" "RF Specification" "2D Drawing" "3D CAD" "Test Requirement" "Other"]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="file-1-revision">Revision / note</label>
+        [text file-1-revision id:file-1-revision class:sn-rfq__input placeholder "e.g. Rev B"]
+      </div>
+    </div>
+
+    <div class="sn-rfq__file-row">
+      <div class="sn-rfq__field">
+        <label for="file-2">Project file 2</label>
+        [file file-2 id:file-2 limit:10mb filetypes:pdf|step|stp|dxf|xlsx|csv|zip|png|jpg]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="file-2-purpose">Purpose</label>
+        [select file-2-purpose id:file-2-purpose class:sn-rfq__input include_blank "Band Plan" "RF Specification" "2D Drawing" "3D CAD" "Test Requirement" "Other"]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="file-2-revision">Revision / note</label>
+        [text file-2-revision id:file-2-revision class:sn-rfq__input placeholder "e.g. Rev B"]
+      </div>
+    </div>
+
+    <div class="sn-rfq__file-row">
+      <div class="sn-rfq__field">
+        <label for="file-3">Project file 3</label>
+        [file file-3 id:file-3 limit:10mb filetypes:pdf|step|stp|dxf|xlsx|csv|zip|png|jpg]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="file-3-purpose">Purpose</label>
+        [select file-3-purpose id:file-3-purpose class:sn-rfq__input include_blank "Band Plan" "RF Specification" "2D Drawing" "3D CAD" "Test Requirement" "Other"]
+      </div>
+      <div class="sn-rfq__field">
+        <label for="file-3-revision">Revision / note</label>
+        [text file-3-revision id:file-3-revision class:sn-rfq__input placeholder "e.g. Rev B"]
+      </div>
+    </div>
+
+    <div class="sn-rfq__confidentiality">
+      <p>If a file is sensitive, request a confidentiality discussion before uploading. The option does not accept or define an NDA and does not change file handling on its own.</p>
+      <p>Do not upload sensitive files until a project-specific arrangement has been confirmed by both parties. Files are linked in the review email, not attached.</p>
+      [checkbox confidentiality-discussion use_label_element "I need to discuss confidentiality before sharing sensitive material."]
+      <p class="sn-rfq__note">Selecting this option starts a conversation. Does not mean an NDA is accepted or define its scope.</p>
+      <div class="sn-rfq__field">
+        <label for="confidentiality-notes">Confidentiality notes</label>
+        [textarea confidentiality-notes id:confidentiality-notes class:sn-rfq__textarea rows:4 placeholder "What must be discussed before files are exchanged? Do not include sensitive details here."]
+      </div>
+    </div>
+
+    <h2 id="rfq-review-title">Review Your RFQ and the Next Steps before Submitting</h2>
+    <p class="sn-rfq__section-note">Check the summary, then submit the information you have. A complete RFQ typically receives initial engineering feedback in about 24 hours, but this is not a guaranteed firm quotation or delivery commitment. If details are missing, the first reply may focus on clarification.</p>
+
+    <div class="sn-rfq__process">
+      <p class="sn-rfq__process-title">What happens after submission</p>
+      <ol>
+        <li><strong>Submitted</strong><span>You receive a confirmation with the details sent.</span></li>
+        <li><strong>Completeness Check</strong><span>Engineering checks whether the inputs are enough for review.</span></li>
+        <li><strong>Engineering Review</strong><span>Known requirements and open questions are assessed.</span></li>
+        <li><strong>Clarification or Next Step</strong><span>The team replies with questions or the recommended next step.</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <aside class="sn-rfq__aside" aria-label="Live RFQ summary">
+    <div class="sn-rfq__summary" data-rfq-summary aria-live="polite">
+      <p class="sn-rfq__summary-title">Your RFQ summary</p>
+      <dl class="sn-rfq__summary-list">
+        <div><dt>Name</dt><dd data-rfq-summary-value="name">Not provided</dd></div>
+        <div><dt>Company</dt><dd data-rfq-summary-value="company">Not provided</dd></div>
+        <div><dt>Product line</dt><dd data-rfq-summary-value="product-line">Not selected</dd></div>
+        <div><dt>Application</dt><dd data-rfq-summary-value="application">Not provided</dd></div>
+        <div><dt>Project stage</dt><dd data-rfq-summary-value="project-stage">Not selected</dd></div>
+        <div><dt>Specifications</dt><dd data-rfq-summary-value="specifications">No values entered</dd></div>
+        <div><dt>Files</dt><dd data-rfq-summary-value="files">No files selected</dd></div>
+        <div><dt>Confidentiality</dt><dd data-rfq-summary-value="confidentiality">No discussion requested</dd></div>
+      </dl>
+      <a class="sn-rfq__summary-link" href="/resources/rfq-guide">Prepare your RFQ inputs</a>
+    </div>
+  </aside>
+
+  <div class="sn-rfq__fields sn-rfq__submit-block">
+    <div class="sn-rfq__consent">
+      <span class="sn-rfq__required">Required</span>
+      [checkbox* consent use_label_element "SONNE may use the information I submit to review this RFQ and contact me about this project."]
+    </div>
+
+    <div class="sn-rfq__submit-row">
+      [submit "Submit RFQ"]
+      <p>Prefer email? Send the same details to <a href="mailto:info@zhide-tec.com?subject=RFQ%20%C2%B7%20Custom%20RF%20or%20enclosure%20project">info@zhide-tec.com</a>.</p>
+    </div>
+  </div>
+</div>

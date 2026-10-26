@@ -1,0 +1,391 @@
+<!-- wp:html -->
+<div class="sn-factory sn-legacy-record">
+  <style>
+    .sn-factory { color: var(--sn-text); }
+    .sn-factory *, .sn-factory *::before, .sn-factory *::after { box-sizing: border-box; }
+    .sn-factory h2, .sn-factory h3, .sn-factory p, .sn-factory ul, .sn-factory ol, .sn-factory dl, .sn-factory dd, .sn-factory figure { margin-top: 0; }
+    .sn-factory h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-factory h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-factory p, .sn-factory li, .sn-factory dd { line-height: 1.7; }
+    .sn-factory a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-factory img { display: block; max-width: 100%; height: auto; }
+    .sn-factory .sn-factory__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-factory .sn-factory__intro { max-width: 880px; margin-bottom: 40px; }
+    .sn-factory .sn-factory__intro > p { max-width: 78ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.04rem; }
+    .sn-factory .sn-factory__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .sn-factory .sn-factory__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-factory .sn-factory__hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(380px, .92fr); gap: clamp(36px, 6vw, 72px); align-items: center; }
+    .sn-factory .sn-factory__hero .sn-factory__eyebrow { color: var(--sn-cyan); }
+    .sn-factory .sn-factory__hero h1 { max-width: 22ch; }
+    .sn-factory .sn-factory__hero-copy > p { margin-bottom: 18px; font-size: 1.04rem; }
+    .sn-factory .sn-factory__hero-media { margin-bottom: 0; }
+    .sn-factory .sn-factory__hero-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-factory figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-factory .sn-factory__hero figcaption { color: rgba(252, 254, 255, .66); }
+    .sn-factory .sn-factory__facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 32px; border-block: 1px solid rgba(252, 254, 255, .18); }
+    .sn-factory .sn-factory__fact { padding: 18px 16px 18px 0; }
+    .sn-factory .sn-factory__fact + .sn-factory__fact { padding-left: 16px; border-left: 1px solid rgba(252, 254, 255, .18); }
+    .sn-factory .sn-factory__fact strong { display: block; margin-bottom: 4px; color: var(--sn-white); font-family: var(--sn-font-heading); font-size: 1.3rem; line-height: 1.2; }
+    .sn-factory .sn-factory__fact span { display: block; color: rgba(252, 254, 255, .7); font-size: .76rem; line-height: 1.5; }
+    .sn-factory .sn-factory__boundary { margin: 16px 0 0; color: rgba(252, 254, 255, .72); font-size: .8rem; }
+    .sn-factory .sn-factory__path { scroll-margin-top: 112px; }
+    .sn-factory .sn-factory__facility { display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: clamp(28px, 5vw, 56px); align-items: start; margin-bottom: 32px; }
+    .sn-factory .sn-factory__facility figure { margin-bottom: 0; }
+    .sn-factory .sn-factory__facility img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .sn-factory .sn-factory__steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; margin: 0; padding: 0; list-style: none; counter-reset: path; }
+    .sn-factory .sn-factory__steps > li { position: relative; padding: 16px 0 16px 40px; border-bottom: var(--sn-border); counter-increment: path; }
+    .sn-factory .sn-factory__steps > li::before { position: absolute; left: 0; top: 18px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; content: '0' counter(path); }
+    .sn-factory .sn-factory__steps strong { display: block; color: var(--sn-navy); font-size: .94rem; }
+    .sn-factory .sn-factory__steps span { color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-factory .sn-factory__wide { margin-bottom: 0; }
+    .sn-factory .sn-factory__wide img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-factory .sn-factory__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 30px; }
+    .sn-factory .sn-factory__grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .sn-factory .sn-factory__grid figure { margin-bottom: 0; }
+    .sn-factory .sn-factory__grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-factory .sn-factory__grid figcaption { font-size: .7rem; }
+    .sn-factory .sn-factory__stack { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+    .sn-factory .sn-factory__stack figure { margin-bottom: 0; }
+    .sn-factory .sn-factory__stack img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-factory .sn-factory__grid-note { display: flex; flex-direction: column; justify-content: center; padding: 22px; border: 1px solid var(--sn-cyan-dark); background: var(--sn-white); }
+    .sn-factory .sn-factory__grid-note p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .85rem; }
+    .sn-factory .sn-factory__table { min-width: 980px; }
+    .sn-factory .sn-factory__table tbody th { color: var(--sn-navy); }
+    .sn-factory caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-factory .sn-factory__note { margin: 20px 0 0; padding: 18px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-factory .sn-factory__audit { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: clamp(28px, 5vw, 56px); align-items: start; margin-bottom: 30px; }
+    .sn-factory .sn-factory__audit figure { margin-bottom: 0; }
+    .sn-factory .sn-factory__audit img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-factory .sn-factory__checklist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 22px; margin: 0; padding: 0; list-style: none; counter-reset: audit; }
+    .sn-factory .sn-factory__checklist li { position: relative; min-height: 44px; padding: 12px 0 12px 34px; border-bottom: var(--sn-border); color: var(--sn-text); font-size: .88rem; counter-increment: audit; }
+    .sn-factory .sn-factory__checklist li::before { position: absolute; left: 0; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; content: counter(audit, decimal-leading-zero); }
+    .sn-factory .sn-factory__visit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; padding: 24px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-factory .sn-factory__visit h3 { margin-bottom: 14px; }
+    .sn-factory .sn-factory__visit ul { margin: 0; padding-left: 20px; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-factory .sn-factory__visit p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-factory .sn-factory__faq { max-width: 920px; }
+    .sn-factory .sn-factory__faq details { border-bottom: var(--sn-border); }
+    .sn-factory .sn-factory__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.08rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-factory .sn-factory__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-factory .sn-factory__faq details[open] summary::after { content: '−'; }
+    .sn-factory .sn-factory__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-factory .sn-factory__next { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 44px; }
+    .sn-factory .sn-factory__next-card { display: flex; flex-direction: column; padding: 26px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-factory .sn-factory__next-card p { color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-factory .sn-factory__next-card .sn-btn { align-self: flex-start; margin-top: auto; }
+    .sn-factory .sn-factory__cta { margin-top: 22px; padding: clamp(26px, 4vw, 40px); border-radius: var(--sn-radius); background: var(--sn-navy); color: var(--sn-white); }
+    .sn-factory .sn-factory__cta h3 { color: var(--sn-white); font-size: 1.35rem; }
+    .sn-factory .sn-factory__cta p { max-width: 70ch; margin-bottom: 0; color: rgba(252, 254, 255, .8); }
+    .sn-factory .sn-factory__cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-factory .sn-factory__cta .sn-factory__actions { margin-top: 22px; }
+    .sn-factory .sn-factory__fine-print { margin: 16px 0 0; font-size: .82rem; }
+    @media (max-width: 1100px) {
+      .sn-factory .sn-factory__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 1024px) {
+      .sn-factory .sn-factory__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-factory .sn-factory__fact:nth-child(3) { padding-left: 0; border-left: 0; }
+    }
+    @media (max-width: 900px) {
+      .sn-factory .sn-factory__hero-grid, .sn-factory .sn-factory__facility, .sn-factory .sn-factory__audit { grid-template-columns: 1fr; }
+      .sn-factory .sn-factory__hero-media { max-width: 720px; }
+      .sn-factory .sn-factory__grid--three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-factory .sn-factory__stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 768px) {
+      .sn-factory .sn-factory__steps, .sn-factory .sn-factory__visit, .sn-factory .sn-factory__next { grid-template-columns: 1fr; }
+      .sn-factory .sn-factory__checklist { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .sn-factory .sn-factory__facts { grid-template-columns: 1fr; }
+      .sn-factory .sn-factory__fact, .sn-factory .sn-factory__fact + .sn-factory__fact { padding: 14px 0; border-left: 0; }
+      .sn-factory .sn-factory__fact + .sn-factory__fact { border-top: 1px solid rgba(252, 254, 255, .18); }
+      .sn-factory .sn-factory__grid, .sn-factory .sn-factory__grid--three, .sn-factory .sn-factory__stack { grid-template-columns: 1fr; }
+      .sn-factory .sn-factory__actions .sn-btn { width: 100%; }
+      .sn-factory .sn-factory__faq details p { padding-right: 0; }
+    }
+    @media print {
+      .sn-factory .sn-factory__faq details:not([open]) > p { display: block !important; }
+      .sn-factory .sn-factory__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-factory__hero" aria-labelledby="factory-title">
+    <div class="sn-container sn-factory__hero-grid">
+      <div class="sn-factory__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li aria-current="page">Factory</li></ol></nav>
+        <span class="sn-factory__eyebrow">Cixi, Ningbo · Machining · Assembly · RF test</span>
+        <h1 id="factory-title">Inside SONNE's RF Manufacturing Facility</h1>
+        <p>These are photographs of the SONNE manufacturing base in Cixi, Ningbo, Zhejiang, China: the machine shop, the assembly area and the RF test benches. Use them to plan a supplier review, then confirm the project-specific records with the team.</p>
+        <p>Capacity is stated as a factory figure. It does not set a schedule for an individual order; timing follows the drawing, quantity, process route and current capacity.</p>
+        <div class="sn-factory__actions">
+          <a class="sn-btn sn-btn--primary" href="/contact/">Book a Factory Visit</a>
+          <a class="sn-btn sn-btn--secondary" href="#production-path">Review the Production Path</a>
+        </div>
+        <div class="sn-factory__facts" aria-label="Factory facts">
+          <div class="sn-factory__fact"><strong>50+</strong><span>High-precision CNC machines.</span></div>
+          <div class="sn-factory__fact"><strong>500,000+</strong><span>Annual capacity, factory level.</span></div>
+          <div class="sn-factory__fact"><strong>≈20,000 m²</strong><span>Integrated office and manufacturing building.</span></div>
+          <div class="sn-factory__fact"><strong>ISO 9001</strong><span>Quality management system.</span></div>
+        </div>
+        <p class="sn-factory__boundary">Annual capacity above 500,000 units is a factory-level capability figure, not a delivery guarantee for any single order.</p>
+      </div>
+      <figure class="sn-factory__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-machine-shop.webp" alt="Machine shop with CNC equipment and overhead crane" width="1893" height="1065" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>The CNC machine shop at the Cixi, Ningbo base. The photograph shows the working environment, not equipment labels, line output or a project result.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted sn-factory__path" id="production-path" aria-labelledby="factory-path-title">
+    <div class="sn-container">
+      <div class="sn-factory__intro">
+        <h2 id="factory-path-title">Follow the Production Path from Machining to RF Testing</h2>
+        <p>Six steps describe how a drawing becomes a tested part. Each step names the object a buyer can check during an audit, so a visit can be organized around evidence instead of a tour route.</p>
+      </div>
+      <div class="sn-factory__facility">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-building-v2-1.webp" alt="SONNE factory building" width="1024" height="683" loading="lazy" decoding="async">
+          <figcaption>The factory building in Cixi, Ningbo. Building evidence is presented separately from process capability; the photograph does not establish output or a production result.</figcaption>
+        </figure>
+        <ol class="sn-factory__steps">
+          <li><strong>Precision machining</strong><span>Drawing-defined cavities, housings and interfaces on high-precision CNC equipment.</span></li>
+          <li><strong>Surface treatment coordination</strong><span>Plating and surface requirements arranged to the drawing; specific processes and compliance documents are confirmed per project and audit.</span></li>
+          <li><strong>Assembly</strong><span>Automated equipment, fixtures and manual stations, with in-process checks at each stage.</span></li>
+          <li><strong>RF tuning</strong><span>VNA-based adjustment against the agreed response and acceptance limits.</span></li>
+          <li><strong>Testing</strong><span>Bench and automated measurements, with records linked to the tested object and conditions.</span></li>
+          <li><strong>Volume assessment</strong><span>Process route, inspection plan and capacity review before a production schedule is discussed.</span></li>
+        </ol>
+      </div>
+      <figure class="sn-factory__wide">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-workshop-wide.webp" alt="Wide view of the SONNE assembly workshop" width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption>Wide view of the assembly workshop. Accessible areas and the records shown during a review are agreed in advance.</figcaption>
+      </figure>
+      <div class="sn-factory__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/manufacturing/">Review Manufacturing Controls</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="factory-machining-title">
+    <div class="sn-container">
+      <div class="sn-factory__intro">
+        <h2 id="factory-machining-title">Verify CNC Machining for RF Cavities and Precision Parts</h2>
+        <p>Machining is where an RF design becomes a metal structure. For an SQE, the question is not how many machines exist but whether your drawing can be held, measured and recorded on the parts you receive.</p>
+      </div>
+      <div class="sn-factory__grid">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-cavity-milling.webp" alt="CNC milling of an RF filter cavity" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Cavity milling. The operation shown does not set a tolerance for every part.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-turning.webp" alt="CNC turning with coolant for RF component machining" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Turning of a rotational feature with coolant. Interfaces and bores are typically turned.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-operator.webp" alt="Operator loading parts at a CNC machining center" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>An operator loading parts. Setup and first-piece checks belong to the process record.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-machining-detail.webp" alt="Close-up of precision machining on a metal housing" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Machining detail on a metal housing. Photographs show operations, not measured values.</figcaption></figure>
+      </div>
+      <p class="sn-factory__note"><strong>Tolerance boundary:</strong> for structures above 40 GHz, mechanical tolerance can reach ±0.01 mm depending on the design and manufacturing requirements. It is a conditional capability for the features agreed in the drawing, not a uniform tolerance across every part, product or feature.</p>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="factory-machining-title">
+        <table class="sn-table sn-factory__table">
+          <caption>How machining requirements are translated into records; the exact values and methods come from your drawing.</caption>
+          <thead><tr><th scope="col">Key feature</th><th scope="col">Drawing tolerance</th><th scope="col">Machining operation</th><th scope="col">Inspection method</th><th scope="col">Project evidence</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">RF cavity depth and profile</th><td data-label="Drawing tolerance">Depth, step and surface requirement as specified</td><td data-label="Machining operation">CNC milling of cavity and steps</td><td data-label="Inspection method">Program verification and dimensional inspection</td><td data-label="Project evidence">Inspection record tied to the drawing revision</td></tr>
+            <tr><th scope="row">Flange and interface features</th><td data-label="Drawing tolerance">Flatness, hole position and bore diameter</td><td data-label="Machining operation">Milling, drilling or turning</td><td data-label="Inspection method">CMM or gauge check as agreed</td><td data-label="Project evidence">Interface record and mating check</td></tr>
+            <tr><th scope="row">Connector and pin bores</th><td data-label="Drawing tolerance">Bore size, position and surface finish</td><td data-label="Machining operation">Precision turning or milling</td><td data-label="Inspection method">Dimensional measurement</td><td data-label="Project evidence">Critical-dimension record</td></tr>
+            <tr><th scope="row">Surface and plating preparation</th><td data-label="Drawing tolerance">Finish and pre-treatment requirement</td><td data-label="Machining operation">Deburring, cleaning and surface coordination</td><td data-label="Inspection method">Visual and dimensional checks</td><td data-label="Project evidence">Surface requirement confirmation</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-factory__note">This table is a review structure, not a specification. Tolerances, sampling and inspection methods are confirmed at DFM for your part, and plating control follows the surface requirement agreed for the project.</p>
+      <div class="sn-factory__actions">
+        <a class="sn-btn sn-btn--primary" href="/engineering/manufacturing/">Explore Precision Manufacturing</a>
+        <a class="sn-factory__text-link" href="/engineering/custom-rf-design/">Review custom RF design <span aria-hidden="true">&nbsp;→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="factory-assembly-title">
+    <div class="sn-container">
+      <div class="sn-factory__intro">
+        <h2 id="factory-assembly-title">Inspect Assembly Operations and Production Controls</h2>
+        <p>Assembly photographs show equipment and stations. They do not show that every line is automated, and automation does not remove process risk. The useful question is which checks create the record behind each unit.</p>
+      </div>
+      <div class="sn-factory__grid--three sn-factory__stack">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-automated-assembly.webp" alt="Automated assembly machine for RF cavity filters" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Automated assembly machine for cavity filters.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-robotic-fastening.webp" alt="Automated fastening on an RF filter cavity plate" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Automated fastening on a cavity plate.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-manual-assembly-1.webp" alt="Manual assembly of an RF cavity filter housing" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Manual assembly of a cavity filter housing.</figcaption></figure>
+      </div>
+      <div class="sn-factory__grid--three sn-factory__stack">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-production-line.webp" alt="RF component production line with automated equipment" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>A production line with automated equipment.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-assembly-station.webp" alt="Technician working at an automated assembly station" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>A technician at an automated assembly station.</figcaption></figure>
+        <div class="sn-factory__grid-note">
+          <h3>Mixed, not uniform</h3>
+          <p>Automated and manual operations sit next to each other on the same route. A single photograph cannot describe the whole line, so the audit agenda names the stations that matter for your product.</p>
+        </div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="factory-assembly-title">
+        <table class="sn-table sn-factory__table">
+          <caption>Assembly operations, controls and the records a buyer can request for each one.</caption>
+          <thead><tr><th scope="col">Operation</th><th scope="col">Equipment action</th><th scope="col">Human check</th><th scope="col">Process output</th><th scope="col">Record available for review</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Automated assembly</th><td data-label="Equipment action">Part placement and pressing per program</td><td data-label="Human check">First-piece and in-process inspection</td><td data-label="Process output">Assembled cavity or housing</td><td data-label="Record available for review">Setup and inspection record</td></tr>
+            <tr><th scope="row">Automated fastening</th><td data-label="Equipment action">Controlled fastening sequence</td><td data-label="Human check">Fastener check and visual inspection</td><td data-label="Process output">Uniform seating on the assembly</td><td data-label="Record available for review">Fastening check record</td></tr>
+            <tr><th scope="row">Manual assembly</th><td data-label="Equipment action">Operator fitting of seals, connectors and sub-assemblies</td><td data-label="Human check">Self-check against the work instruction</td><td data-label="Process output">Sub-assembly ready for tuning</td><td data-label="Record available for review">Work instruction and check sheet</td></tr>
+            <tr><th scope="row">Line hand-off</th><td data-label="Equipment action">Transfer between stations</td><td data-label="Human check">Station sign-off before release</td><td data-label="Process output">Batch of units moving to test</td><td data-label="Record available for review">Batch or lot record</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-factory__note">After a sample is approved, the NPI path still confirms pilot output, the process baseline and any change control. Deliverables are agreed per project. Annual capacity is a factory-level figure and is not allocated to a single product or line.</p>
+      <div class="sn-factory__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/npi/">Review the NPI Path</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="factory-testing-title">
+    <div class="sn-container">
+      <div class="sn-factory__intro">
+        <h2 id="factory-testing-title">See Where RF Performance Is Tuned and Tested</h2>
+        <p>A bench photograph proves that test equipment exists. Your specification decides what is measured, on which samples, under which conditions, and which fields appear in the report.</p>
+      </div>
+      <div class="sn-factory__grid--three sn-factory__stack">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-tuning-line.webp" alt="Technicians tuning RF filters with vector network analyzers" width="1891" height="1064" loading="lazy" decoding="async"><figcaption>VNA tuning line. Screen content is not adopted as a product rating.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-rf-testing-1.webp" alt="Technician testing an RF filter with bench instruments" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Bench RF testing with instruments and fixtures.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-station.webp" alt="RF test station" width="1024" height="575" loading="lazy" decoding="async"><figcaption>An RF test station. Results apply to the tested object and conditions.</figcaption></figure>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="factory-testing-title">
+        <table class="sn-table sn-factory__table">
+          <caption>Test areas, the measurements they support and the coverage that has to be agreed per project.</caption>
+          <thead><tr><th scope="col">Test area</th><th scope="col">Measurements supported</th><th scope="col">Tested object</th><th scope="col">Report fields</th><th scope="col">Coverage to agree</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">VNA tuning and S-parameter test</th><td data-label="Measurements supported">Insertion loss, return loss, rejection and isolation</td><td data-label="Tested object">Sample or lot, per the agreed plan</td><td data-label="Report fields">Sweep range, limits, calibration reference</td><td data-label="Coverage to agree">Parameters, ports and sample count</td></tr>
+            <tr><th scope="row">PIM test</th><td data-label="Measurements supported">Passive intermodulation where specified</td><td data-label="Tested object">Selected hardware as agreed</td><td data-label="Report fields">Tones, power, order and limit</td><td data-label="Coverage to agree">Setup, condition and acceptance limit</td></tr>
+            <tr><th scope="row">Reliability test</th><td data-label="Measurements supported">Project-specified environmental or endurance checks</td><td data-label="Tested object">Sample set defined by the plan</td><td data-label="Report fields">Conditions, duration and result</td><td data-label="Coverage to agree">Test items that are actually supported</td></tr>
+            <tr><th scope="row">Matrix-switch automation</th><td data-label="Measurements supported">Multi-port and batch measurement sequences</td><td data-label="Tested object">Multi-port units or batches</td><td data-label="Report fields">Port map, sequence and result files</td><td data-label="Coverage to agree">Reporting and traceability depth</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-factory__note">No photograph or capability statement on this page means that every product and every parameter is verified 100%. Sample reports show the structure of the evidence; the values in them apply only to the tested object and its conditions.</p>
+      <div class="sn-factory__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Review Testing and Quality</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="factory-audit-title">
+    <div class="sn-container">
+      <div class="sn-factory__intro">
+        <h2 id="factory-audit-title">Prepare a Factory Visit around Your Audit Criteria</h2>
+        <p>A useful visit answers specific questions. Send the criteria first so the team can plan the route, the records and the people you need in the room.</p>
+      </div>
+      <div class="sn-factory__audit">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-engineering-dfm-1.webp" alt="Engineer checking a machined part against its 3D CAD model" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>An engineer checking a machined part against its 3D CAD model. The scene documents drawing-to-part verification, not a customer project.</figcaption>
+        </figure>
+        <ol class="sn-factory__checklist">
+          <li>Quality system documents and scope</li>
+          <li>Drawing, revision and change control</li>
+          <li>Material and supplier records</li>
+          <li>CNC setup and program control</li>
+          <li>In-process dimensional inspection</li>
+          <li>Surface and plating coordination</li>
+          <li>Assembly work instructions</li>
+          <li>Fastening and functional checks</li>
+          <li>VNA calibration and acceptance limits</li>
+          <li>PIM setup where applicable</li>
+          <li>Reliability test plan and evidence</li>
+          <li>NPI and first-article records</li>
+        </ol>
+      </div>
+      <div class="sn-factory__visit">
+        <div>
+          <h3>What to include in a visit request</h3>
+          <ul>
+            <li>Company, visitor name and work email</li>
+            <li>Product line and processes you want to see</li>
+            <li>Audit objectives and the questions to close</li>
+            <li>Preferred dates and number of visitors</li>
+            <li>Whether a video pre-review would replace part of the visit</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What the team confirms</h3>
+          <p>A preferred date is a request, not a confirmed appointment. SONNE confirms timing, scope and accessible areas, and provides current travel guidance once a visit is agreed. The manufacturing address is published on the <a href="/contact/">Contact page</a>; confirm your appointment before travelling. Drawings or quality documents you want reviewed should be listed in advance so the right people attend.</p>
+        </div>
+      </div>
+      <div class="sn-factory__actions"><a class="sn-btn sn-btn--primary" href="/contact/">Book a Factory Visit</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="factory-faq-title">
+    <div class="sn-container">
+      <div class="sn-factory__intro">
+        <h2 id="factory-faq-title">Factory Audit Questions and Next Steps</h2>
+        <p>Five questions that come up before a visit, answered with the same boundaries used throughout this page. Each answer points to the route that starts the next step.</p>
+      </div>
+      <div class="sn-factory__faq">
+        <details>
+          <summary>Can I audit the SONNE factory in person?</summary>
+          <p>You can request an in-person factory audit through <a href="/about/factory/">the Factory</a> or <a href="/contact/">Contact page.</a> Include your company, product interest, audit objectives, preferred dates and the processes you need to review. SONNE will confirm availability, timing and accessible areas for the visit. A requested date is not confirmed until the team responds with the visit arrangements.</p>
+        </details>
+        <details>
+          <summary>Can I request a remote factory review?</summary>
+          <p>You can <a href="/contact/">ask for a remote review</a> and identify the machining, assembly or testing areas relevant to your audit. The team will confirm what can be presented and whether a suitable remote session can be arranged. For a useful review, send your audit checklist in advance and separate general capability questions from evidence needed for your specific project.</p>
+        </details>
+        <details>
+          <summary>What equipment can I verify at the factory?</summary>
+          <p>The factory content covers high-precision CNC machining, automated and manual assembly, <a href="/engineering/testing-quality/">VNA tuning and RF test areas.</a> SONNE states that it has more than 50 high-precision CNC machines plus VNA, PIM, reliability and matrix automated testing capabilities. For an audit, request the equipment and records relevant to your product rather than relying only on a general equipment list.</p>
+        </details>
+        <details>
+          <summary>Does annual capacity above 500,000 units guarantee my delivery date?</summary>
+          <p>No. Annual capacity above 500,000 units is a factory-level capability figure, not a delivery guarantee for an individual order. Production timing depends on the drawings, quantities, processes, validation requirements and available capacity. <a href="/request-a-quote/">Submit the actual project details</a> so the team can assess a schedule; prototype and mass-production timing should be confirmed separately.</p>
+        </details>
+        <details>
+          <summary>Is ±0.01 mm tolerance guaranteed for every RF component?</summary>
+          <p>No. For structures above 40 GHz, mechanical tolerance can reach ±0.01 mm depending on the design and manufacturing requirements. It is not a blanket guarantee across every component or feature. Share the drawing and identify critical dimensions so <a href="/engineering/manufacturing/">engineering can assess feasibility</a> and the appropriate inspection approach for your specific part.</p>
+        </details>
+      </div>
+      <div class="sn-factory__next">
+        <article class="sn-factory__next-card">
+          <span class="sn-chip">Audit path</span>
+          <h3>Request an Audit</h3>
+          <p>Send your audit objectives, the processes to review, preferred dates and the number of visitors. The team confirms scope and accessible areas.</p>
+          <a class="sn-btn sn-btn--secondary" href="/contact/">Start the Visit Request</a>
+        </article>
+        <article class="sn-factory__next-card">
+          <span class="sn-chip">Project path</span>
+          <h3>Discuss a Production Project</h3>
+          <p>Send drawings, the quantity range and the RF or mechanical targets that matter most. Unknown values can stay open for the first review.</p>
+          <a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Discuss a Production Project</a>
+        </article>
+      </div>
+      <div class="sn-factory__cta">
+        <h3>Bring an audit checklist or a drawing set</h3>
+        <p>Either route starts the same way: a completeness check, the open questions, and a proposed next step. A complete RFQ typically receives initial engineering feedback in about 24 hours; that is not a quotation, a visit confirmation or a delivery date.</p>
+        <div class="sn-factory__actions">
+          <a class="sn-btn sn-btn--primary" href="/contact/">Discuss Your Audit Requirements</a>
+          <a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare RFQ Inputs</a>
+        </div>
+        <p class="sn-factory__fine-print">Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>. Visit dates, accessible areas and any documents shown on site are confirmed by the team in advance.</p>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://rf-sonne.com/about/factory/#aboutpage",
+        "name": "Inside SONNE's RF Manufacturing Facility",
+        "url": "https://rf-sonne.com/about/factory/",
+        "description": "Factory photographs and process detail from the SONNE manufacturing base in Cixi, Ningbo, Zhejiang, China: CNC machining, assembly, VNA tuning and RF testing areas.",
+        "about": { "@id": "https://rf-sonne.com/#organization" },
+        "isPartOf": { "@id": "https://rf-sonne.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/about/factory/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
+          {"@type": "ListItem", "position": 2, "name": "About", "item": "https://rf-sonne.com/about/"},
+          {"@type": "ListItem", "position": 3, "name": "Factory", "item": "https://rf-sonne.com/about/factory/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

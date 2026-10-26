@@ -1,0 +1,28 @@
+# Credentials and local secrets
+w.secrets.json
+*.secrets.json
+.env
+.env.*
+keyword_ideas.py
+
+# Local deployment artifacts, backups, generated previews
+bak/
+preview/
+images-ready/
+website-legacy-sunglasses/
+infility-theme-plugin/
+docs/
+docs-strategy/
+.superpowers/
+.finesse/
+.tmp-*
+images.md
+images-manifest.json
+images-upload-log.json
+
+# Python and OS noise
+__pycache__/
+*.py[cod]
+*.log
+Thumbs.db
+.DS_Store

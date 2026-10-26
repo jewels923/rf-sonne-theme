@@ -1,0 +1,322 @@
+<!-- wp:html -->
+<div class="sn-sol-5g sn-legacy-record">
+  <style>
+    .sn-sol-5g { color: var(--sn-text); }
+    .sn-sol-5g *, .sn-sol-5g *::before, .sn-sol-5g *::after { box-sizing: border-box; }
+    .sn-sol-5g h2, .sn-sol-5g h3, .sn-sol-5g p, .sn-sol-5g ul, .sn-sol-5g ol, .sn-sol-5g dl, .sn-sol-5g dd, .sn-sol-5g figure { margin-top: 0; }
+    .sn-sol-5g h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-sol-5g h3 { margin-bottom: 12px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-sol-5g p, .sn-sol-5g li, .sn-sol-5g dd { line-height: 1.7; }
+    .sn-sol-5g a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-sol-5g img { display: block; max-width: 100%; height: auto; }
+    .sn-sol-5g .sn-sol-5g__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-sol-5g .sn-sol-5g__intro { max-width: 850px; margin-bottom: 40px; }
+    .sn-sol-5g .sn-sol-5g__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.05rem; }
+    .sn-sol-5g .sn-sol-5g__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .sn-sol-5g .sn-sol-5g__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-sol-5g .sn-sol-5g__hero .sn-sol-5g__eyebrow { color: var(--sn-cyan); }
+    .sn-sol-5g .sn-sol-5g__hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr); gap: clamp(36px, 6vw, 80px); align-items: center; }
+    .sn-sol-5g .sn-sol-5g__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-sol-5g .sn-sol-5g__hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 0; padding: 0; list-style: none; }
+    .sn-sol-5g .sn-sol-5g__hero-tags li { padding: 5px 10px; border: 1px solid rgba(252, 254, 255, .32); color: rgba(252, 254, 255, .86); font-family: var(--sn-font-mono); font-size: .7rem; }
+    .sn-sol-5g .sn-sol-5g__hero-media { margin-bottom: 0; }
+    .sn-sol-5g .sn-sol-5g__hero-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .sn-sol-5g figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-sol-5g .sn-sol-5g__hero figcaption { color: rgba(252, 254, 255, .66); }
+    .sn-sol-5g .sn-sol-5g__hero-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 32px; border-block: 1px solid rgba(252, 254, 255, .18); }
+    .sn-sol-5g .sn-sol-5g__hero-stat { padding: 18px 18px 18px 0; }
+    .sn-sol-5g .sn-sol-5g__hero-stat + .sn-sol-5g__hero-stat { padding-left: 18px; border-left: 1px solid rgba(252, 254, 255, .18); }
+    .sn-sol-5g .sn-sol-5g__hero-stat strong { display: block; color: var(--sn-white); font-family: var(--sn-font-heading); font-size: 1.28rem; }
+    .sn-sol-5g .sn-sol-5g__hero-stat span { color: rgba(252, 254, 255, .7); font-size: .78rem; line-height: 1.5; }
+    .sn-sol-5g .sn-sol-5g__split { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+    .sn-sol-5g .sn-sol-5g__checklist { margin: 0; padding: 0; list-style: none; border-top: var(--sn-border); }
+    .sn-sol-5g .sn-sol-5g__checklist li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; padding: 16px 0; border-bottom: var(--sn-border); }
+    .sn-sol-5g .sn-sol-5g__checklist li span:first-child { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border: 1px solid var(--sn-cyan-dark); color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 700; }
+    .sn-sol-5g .sn-sol-5g__checklist strong { display: block; color: var(--sn-navy); font-size: .92rem; }
+    .sn-sol-5g .sn-sol-5g__checklist em { color: var(--sn-text-muted); font-size: .84rem; font-style: normal; }
+    .sn-sol-5g .sn-sol-5g__aside { padding: 24px; border: var(--sn-border); border-top: 3px solid var(--sn-cyan-dark); background: var(--sn-white); }
+    .sn-sol-5g .sn-sol-5g__aside h3 { font-size: 1rem; }
+    .sn-sol-5g .sn-sol-5g__aside p, .sn-sol-5g .sn-sol-5g__aside li { color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-sol-5g .sn-sol-5g__aside ul { margin: 0; padding-left: 18px; }
+    .sn-sol-5g caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-sol-5g .sn-sol-5g__site-table { min-width: 860px; }
+    .sn-sol-5g .sn-sol-5g__site-table th:first-child { width: 210px; }
+    .sn-sol-5g .sn-sol-5g__site-table tbody th { color: var(--sn-navy); }
+    .sn-sol-5g .sn-sol-5g__note { margin: 18px 0 0; padding: 18px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-sol-5g .sn-sol-5g__radio { margin: 0 0 30px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: stretch; gap: 0; }
+    .sn-sol-5g .sn-sol-5g__radio li { position: relative; padding: 22px 18px 20px; border: var(--sn-border); border-left: 0; background: var(--sn-white); }
+    .sn-sol-5g .sn-sol-5g__radio li:first-child { border-left: var(--sn-border); }
+    .sn-sol-5g .sn-sol-5g__radio li::after { position: absolute; top: 50%; right: -9px; z-index: 2; width: 12px; height: 12px; margin-top: -6px; border: 0; background: var(--sn-cyan-dark); clip-path: polygon(0 0, 100% 50%, 0 100%); content: ''; transform: none; }
+    .sn-sol-5g .sn-sol-5g__radio li:last-child::after { display: none; }
+    .sn-sol-5g .sn-sol-5g__radio-index { display: block; margin-bottom: 10px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 700; }
+    .sn-sol-5g .sn-sol-5g__radio strong { display: block; margin-bottom: 6px; color: var(--sn-navy); font-size: .94rem; line-height: 1.35; }
+    .sn-sol-5g .sn-sol-5g__radio span { display: block; color: var(--sn-text-muted); font-size: .8rem; line-height: 1.55; }
+    .sn-sol-5g .sn-sol-5g__radio a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 10px; font-size: .8rem; font-weight: 700; }
+    .sn-sol-5g .sn-sol-5g__diagram-side { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, .42fr); gap: 18px; margin-bottom: 24px; align-items: start; }
+    .sn-sol-5g .sn-sol-5g__diagram-side figure { margin-bottom: 0; }
+    .sn-sol-5g .sn-sol-5g__diagram-side img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .sn-sol-5g .sn-sol-5g__trade-table { min-width: 1020px; }
+    .sn-sol-5g .sn-sol-5g__trade-table th:first-child { width: 170px; }
+    .sn-sol-5g .sn-sol-5g__trade-table tbody th { color: var(--sn-navy); }
+    .sn-sol-5g .sn-sol-5g__priority { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .sn-sol-5g .sn-sol-5g__priority li { padding: 18px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-5g .sn-sol-5g__priority strong { display: block; margin-bottom: 6px; color: var(--sn-navy); font-size: .92rem; }
+    .sn-sol-5g .sn-sol-5g__priority span { color: var(--sn-text-muted); font-size: .8rem; line-height: 1.55; }
+    .sn-sol-5g .sn-sol-5g__evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 0 0 26px; }
+    .sn-sol-5g .sn-sol-5g__evidence figure { margin-bottom: 0; }
+    .sn-sol-5g .sn-sol-5g__evidence img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-sol-5g .sn-sol-5g__band-table { min-width: 880px; }
+    .sn-sol-5g .sn-sol-5g__band-table tbody th { color: var(--sn-navy); }
+    .sn-sol-5g .sn-sol-5g__pipeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 0 0 26px; padding: 0; list-style: none; counter-reset: verify; border-top: 3px solid var(--sn-navy); }
+    .sn-sol-5g .sn-sol-5g__pipeline li { padding: 22px 20px; border-right: var(--sn-border); border-bottom: var(--sn-border); background: var(--sn-white); counter-increment: verify; }
+    .sn-sol-5g .sn-sol-5g__pipeline li:first-child { border-left: var(--sn-border); }
+    .sn-sol-5g .sn-sol-5g__pipeline li::before { display: block; margin-bottom: 12px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; content: 'V' counter(verify); }
+    .sn-sol-5g .sn-sol-5g__pipeline strong { display: block; margin-bottom: 6px; color: var(--sn-navy); font-size: .92rem; }
+    .sn-sol-5g .sn-sol-5g__pipeline span { color: var(--sn-text-muted); font-size: .8rem; line-height: 1.6; }
+    .sn-sol-5g .sn-sol-5g__report { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .sn-sol-5g .sn-sol-5g__report li { padding: 12px 14px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .82rem; }
+    .sn-sol-5g .sn-sol-5g__faq { max-width: 920px; }
+    .sn-sol-5g .sn-sol-5g__faq details { border-bottom: var(--sn-border); }
+    .sn-sol-5g .sn-sol-5g__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.08rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-sol-5g .sn-sol-5g__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-sol-5g .sn-sol-5g__faq details[open] summary::after { content: '−'; }
+    .sn-sol-5g .sn-sol-5g__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-sol-5g .sn-sol-5g__cta-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); }
+    .sn-sol-5g .sn-sol-5g__cta h2, .sn-sol-5g .sn-sol-5g__cta h3 { color: var(--sn-white); }
+    .sn-sol-5g .sn-sol-5g__cta p, .sn-sol-5g .sn-sol-5g__cta li { color: rgba(252, 254, 255, .8); }
+    .sn-sol-5g .sn-sol-5g__cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-sol-5g .sn-sol-5g__fields { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(252, 254, 255, .2); }
+    .sn-sol-5g .sn-sol-5g__fields li { padding: 11px 0; border-bottom: 1px solid rgba(252, 254, 255, .2); font-size: .86rem; }
+    .sn-sol-5g .sn-sol-5g__fine-print { margin: 18px 0 0; font-size: .8rem; color: rgba(252, 254, 255, .66) !important; }
+    @media (max-width: 1100px) {
+      .sn-sol-5g .sn-sol-5g__radio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .sn-sol-5g .sn-sol-5g__radio li { border-left: var(--sn-border); border-bottom: 0; }
+      .sn-sol-5g .sn-sol-5g__priority { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .sn-sol-5g .sn-sol-5g__hero-grid, .sn-sol-5g .sn-sol-5g__split, .sn-sol-5g .sn-sol-5g__cta-grid, .sn-sol-5g .sn-sol-5g__diagram-side { grid-template-columns: 1fr; }
+      .sn-sol-5g .sn-sol-5g__hero-media { max-width: 720px; }
+      .sn-sol-5g .sn-sol-5g__radio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-sol-5g .sn-sol-5g__pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-sol-5g .sn-sol-5g__report { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 700px) {
+      .sn-sol-5g .sn-sol-5g__hero-stats { grid-template-columns: 1fr; }
+      .sn-sol-5g .sn-sol-5g__hero-stat, .sn-sol-5g .sn-sol-5g__hero-stat + .sn-sol-5g__hero-stat { padding: 14px 0; border-left: 0; }
+      .sn-sol-5g .sn-sol-5g__hero-stat + .sn-sol-5g__hero-stat { border-top: 1px solid rgba(252, 254, 255, .18); }
+      .sn-sol-5g .sn-sol-5g__radio, .sn-sol-5g .sn-sol-5g__pipeline, .sn-sol-5g .sn-sol-5g__priority, .sn-sol-5g .sn-sol-5g__evidence, .sn-sol-5g .sn-sol-5g__report { grid-template-columns: 1fr; }
+      .sn-sol-5g .sn-sol-5g__radio li::after { display: none; }
+      .sn-sol-5g .sn-sol-5g__radio li + li { border-top: 0; }
+    }
+    @media (max-width: 520px) {
+      .sn-sol-5g .sn-sol-5g__actions .sn-btn { width: 100%; }
+      .sn-sol-5g .sn-sol-5g__faq details p { padding-right: 0; }
+    }
+    @media print {
+      .sn-sol-5g .sn-sol-5g__faq details:not([open]) > p { display: block !important; }
+      .sn-sol-5g .sn-sol-5g__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-sol-5g__hero" aria-labelledby="sol-5g-title">
+    <div class="sn-container sn-sol-5g__hero-grid">
+      <div class="sn-sol-5g__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/solutions/">Solutions</a></li><li aria-current="page">5G Base Stations and RRU</li></ol></nav>
+        <span class="sn-sol-5g__eyebrow">Application · 5G macro site · RRU · Co-siting</span>
+        <h1 id="sol-5g-title">RF Components for 5G Base Stations and RRU</h1>
+        <p>Co-siting interference, low PIM and a compact radio envelope rarely resolve through one component choice. Start from your architecture and band plan so filtering, duplexing, TMA and combining positions are reviewed together.</p>
+        <ul class="sn-sol-5g__hero-tags" aria-label="Architecture scope"><li>4T4R</li><li>8TR</li><li>N28</li><li>N78</li><li>Multi-operator co-siting</li></ul>
+        <div class="sn-sol-5g__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Discuss Your Band Plan</a><a class="sn-btn sn-btn--secondary" href="#radio-path">See the Radio Path</a></div>
+        <div class="sn-sol-5g__hero-stats" aria-label="Base-station scope facts">
+          <div class="sn-sol-5g__hero-stat"><strong>DC–40 GHz</strong><span>Core production portfolio for standard products.</span></div>
+          <div class="sn-sol-5g__hero-stat"><strong>to 110 GHz</strong><span>Selected custom projects, subject to topology and validation.</span></div>
+          <div class="sn-sol-5g__hero-stat"><strong>~24 h</strong><span>Typical initial engineering feedback for a complete RFQ.</span></div>
+        </div>
+      </div>
+      <figure class="sn-sol-5g__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-basestation.webp" alt="Base station RF infrastructure" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Base-station RF infrastructure. The image shows an application environment, not a customer site or a measured RF result.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-5g-site-title">
+    <div class="sn-container">
+      <div class="sn-sol-5g__intro"><h2 id="sol-5g-site-title">Define the Site and RRU Constraints First</h2><p>Architecture and spectrum decide which component positions are even available. Capture these inputs before discussing isolation values or filter topologies.</p></div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-5g-site-caption">
+        <table class="sn-table sn-sol-5g__site-table">
+          <caption id="sol-5g-site-caption">Site and RRU constraint list: what to supply, why it matters and whether it is required for a first review.</caption>
+          <thead><tr><th scope="col">Input</th><th scope="col">Example or unit</th><th scope="col">Why it changes the RF approach</th><th scope="col">Required for review</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Radio architecture</th><td data-label="Example or unit">4T4R or 8TR, sector count</td><td data-label="Why it changes the RF approach">Sets transmit and receive paths, port count and component quantity</td><td data-label="Required for review">Yes</td></tr>
+            <tr><th scope="row">Band plan</th><td data-label="Example or unit">N28, N78 or other bands; uplink and downlink ranges</td><td data-label="Why it changes the RF approach">Defines duplex spacing, guard bands and interference combinations</td><td data-label="Required for review">Yes</td></tr>
+            <tr><th scope="row">Carrier power</th><td data-label="Example or unit">W per carrier, per port</td><td data-label="Why it changes the RF approach">Constrains filter and combiner power handling and PIM test conditions</td><td data-label="Required for review">Yes</td></tr>
+            <tr><th scope="row">Co-siting interferers</th><td data-label="Example or unit">Adjacent operator bands and antenna sharing</td><td data-label="Why it changes the RF approach">Separates blocking requirements from optimisation margin</td><td data-label="Required for review">Yes where co-sited</td></tr>
+            <tr><th scope="row">Mechanical envelope</th><td data-label="Example or unit">Mounting space, mass, port orientation</td><td data-label="Why it changes the RF approach">Limits cavity size and connector layout, which feed back into RF trade-offs</td><td data-label="Required for review">Preferred</td></tr>
+            <tr><th scope="row">PIM and interface targets</th><td data-label="Example or unit">dBc at stated tones and power; 4.3-10 or N ports</td><td data-label="Why it changes the RF approach">Determines test configuration and whether a design can be evaluated</td><td data-label="Required for review">Preferred</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-sol-5g__note"><strong>Describe blockers separately.</strong> State the bands that must be rejected and the margin you would like to improve. "High isolation" alone cannot be turned into an acceptance limit.</p>
+      <div class="sn-sol-5g__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Prepare Your Site Constraints</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="radio-path-title" id="radio-path">
+    <div class="sn-container">
+      <div class="sn-sol-5g__intro"><h2 id="radio-path-title">Map Each Component to the Radio Path</h2><p>Filtering, duplexing, tower-mounted amplification and co-siting combining sit at different points in the radio path. The diagram is a generic reference; your equipment architecture may place or omit nodes differently.</p></div>
+      <div class="sn-sol-5g__diagram-side">
+        <ol class="sn-sol-5g__radio" aria-label="Generic base-station radio path">
+          <li><span class="sn-sol-5g__radio-index">POS 01</span><strong>RRU radio port</strong><span>Transmit and receive paths leave the radio unit. Port count follows 4T4R or 8TR.</span><span>Input: band plan, power, port map</span></li>
+          <li><span class="sn-sol-5g__radio-index">POS 02</span><strong>Filter or duplexer</strong><span>Separates transmit and receive bands and rejects nearby interferers.</span><a href="/products/base-station-rf/">Base-station RF <span aria-hidden="true">→</span></a></li>
+          <li><span class="sn-sol-5g__radio-index">POS 03</span><strong>TMA position</strong><span>Where a tower-mounted amplifier is used, it sits close to the antenna to limit feeder loss.</span><a href="/products/base-station-rf/">TMA options <span aria-hidden="true">→</span></a></li>
+          <li><span class="sn-sol-5g__radio-index">POS 04</span><strong>Co-siting combiner</strong><span>Combines operators or bands onto shared feeders or antennas where the site requires it.</span><a href="/products/rf-combiners/">RF combiners <span aria-hidden="true">→</span></a></li>
+          <li><span class="sn-sol-5g__radio-index">POS 05</span><strong>Feeder and antenna</strong><span>Interface loss, connector series and antenna sharing close the path.</span><a href="/products/rf-microwave-filters/">RF filters <span aria-hidden="true">→</span></a></li>
+        </ol>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/app-basestation-5g-site.webp" alt="5G base station site" width="1024" height="1024" loading="lazy" decoding="async"><figcaption>Typical 5G site context. Not every site uses every position, and the photograph is not a topology recommendation.</figcaption></figure>
+      </div>
+      <p class="sn-sol-5g__note"><strong>Do not transplant a topology.</strong> A component position from one radio or band plan does not automatically transfer to another. Confirm the actual port mapping and interface before comparing options.</p>
+      <div class="sn-sol-5g__actions"><a class="sn-btn sn-btn--secondary" href="/products/base-station-rf/">Review Base Station Product Lines</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-5g-trade-title">
+    <div class="sn-container">
+      <div class="sn-sol-5g__intro"><h2 id="sol-5g-trade-title">Balance Rejection, Loss, Isolation, PIM and Size</h2><p>Each requirement pulls on another. Use the matrix to state which characteristics are mandatory and which are optimisation targets before asking for a topology.</p></div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-5g-trade-caption">
+        <table class="sn-table sn-sol-5g__trade-table">
+          <caption id="sol-5g-trade-caption">RF trade-off matrix: how each requirement affects the system and what evidence must share the same test configuration.</caption>
+          <thead><tr><th scope="col">Requirement</th><th scope="col">System effect</th><th scope="col">Typical conflict</th><th scope="col">Test condition to agree</th><th scope="col">Acceptance record</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Out-of-band rejection</th><td data-label="System effect">Protects the receiver from co-sited and adjacent signals</td><td data-label="Typical conflict">More rejection can raise insertion loss and cavity size</td><td data-label="Test condition to agree">Rejection band edges, measurement bandwidth</td><td data-label="Acceptance record">Curve or data linked to product revision</td></tr>
+            <tr><th scope="row">Insertion loss</th><td data-label="System effect">Directly reduces uplink sensitivity and downlink power</td><td data-label="Typical conflict">Lower loss may reduce selectivity or require a larger structure</td><td data-label="Test condition to agree">Frequency range and reference plane</td><td data-label="Acceptance record">Loss values at defined points</td></tr>
+            <tr><th scope="row">Port isolation</th><td data-label="System effect">Limits transmit leakage into receive paths</td><td data-label="Typical conflict">Higher isolation can complicate topology and increase loss</td><td data-label="Test condition to agree">Port pair, band and power during test</td><td data-label="Acceptance record">Isolation data for the specified ports</td></tr>
+            <tr><th scope="row">PIM</th><td data-label="System effect">Prevents passive intermodulation from desensitising the uplink</td><td data-label="Typical conflict">Connector choice, assembly and power affect results</td><td data-label="Test condition to agree">Tones, power, order and termination</td><td data-label="Acceptance record">PIM result with full setup description</td></tr>
+            <tr><th scope="row">Power handling</th><td data-label="System effect">Sets the safe operating range for each carrier</td><td data-label="Typical conflict">Higher power can drive larger structures or derating</td><td data-label="Test condition to agree">Carrier power, duration and environment</td><td data-label="Acceptance record">Rated condition and test basis</td></tr>
+            <tr><th scope="row">Mechanical size</th><td data-label="System effect">Must fit the RRU, pole or cabinet envelope</td><td data-label="Typical conflict">Compact size can force RF compromises</td><td data-label="Test condition to agree">Envelope, mounting and port orientation</td><td data-label="Acceptance record">Drawing with critical dimensions</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="sn-sol-5g__priority" aria-label="Priority setting guidance">
+        <li><strong>Must reject</strong><span>Bands or blockers that cause unacceptable interference. These become hard requirements.</span></li>
+        <li><strong>Must fit</strong><span>Mounting, mass and port constraints that cannot change on site.</span></li>
+        <li><strong>Target PIM</strong><span>The level to verify at agreed tones, power and connectors.</span></li>
+        <li><strong>Optimise</strong><span>Loss or margin improvements that can trade against size or cost.</span></li>
+      </ul>
+      <p class="sn-sol-5g__note"><strong>One figure is not a design.</strong> A typical curve cannot represent batch behaviour. Data sheet, measured curve and test report should refer to the same configuration.</p>
+      <div class="sn-sol-5g__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Compare Your RF Priorities</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-5g-evidence-title">
+    <div class="sn-container">
+      <div class="sn-sol-5g__intro"><h2 id="sol-5g-evidence-title">Review Band and Architecture Evidence</h2><p>Existing capability references show the kind of work SONNE has done. They do not confirm that any new band plan or port configuration is already covered.</p></div>
+      <div class="sn-sol-5g__evidence">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-n28-multiplexer.webp" alt="N28 multiplexer" width="1024" height="571" loading="lazy" decoding="async"><figcaption>N28 multiplexer product view. A product photograph is not a test report or a customer reference.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-rf-testing-1.webp" alt="Technician testing an RF filter with bench instruments" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Bench RF testing. Measured results are shared only within an authorised project scope.</figcaption></figure>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-5g-band-caption">
+        <table class="sn-table sn-sol-5g__band-table">
+          <caption id="sol-5g-band-caption">Capability references for base-station work and the project inputs still required before feasibility is confirmed.</caption>
+          <thead><tr><th scope="col">Capability reference</th><th scope="col">What it indicates</th><th scope="col">Still required for your project</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">700 MHz low-PIM duplexer</th><td data-label="What it indicates">Experience with low-band duplexing and PIM-controlled construction</td><td data-label="Still required for your project">Exact uplink and downlink ranges, power, PIM target and connector series</td></tr>
+            <tr><th scope="row">800/900 MHz 4T4R work</th><td data-label="What it indicates">Familiarity with four-transmit, four-receive port arrangements</td><td data-label="Still required for your project">Port mapping, band plan, envelope and co-siting interferers</td></tr>
+            <tr><th scope="row">3400–3600 MHz 8TR work</th><td data-label="What it indicates">Experience across an 8TR mid-band architecture</td><td data-label="Still required for your project">Sub-band edges, bandwidth, isolation and mechanical limits</td></tr>
+            <tr><th scope="row">N28-related multiplexer</th><td data-label="What it indicates">A reference product for low-band multiplexing</td><td data-label="Still required for your project">Confirmation that the exact N28 ranges and rejection needs match</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-sol-5g__note"><strong>Historical capability is a starting point.</strong> N28 and N78 projects still need the exact sub-bands, bandwidth, power, isolation and envelope confirmed. No customer name, logo or site result is published without authorisation.</p>
+      <div class="sn-sol-5g__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Check Your Band Plan</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-5g-verify-title">
+    <div class="sn-container">
+      <div class="sn-sol-5g__intro"><h2 id="sol-5g-verify-title">Plan Verification Beyond a Single Sample</h2><p>A sample that meets its targets says little about production consistency. Agree the verification plan before release so PIM and RF performance can be checked against the same baseline.</p></div>
+      <ol class="sn-sol-5g__pipeline" aria-label="Verification planning sequence">
+        <li><strong>Sample baseline</strong><span>Approve a reference sample with its test conditions, revision and measured values.</span></li>
+        <li><strong>Test definition</strong><span>Agree VNA parameters, PIM setup, limits and any reliability items.</span></li>
+        <li><strong>Coverage decision</strong><span>Choose sampling or full coverage per characteristic; automation does not imply every test on every unit.</span></li>
+        <li><strong>Record and release</strong><span>Link results to product, lot or serial and the agreed acceptance record.</span></li>
+      </ol>
+      <div class="sn-sol-5g__evidence">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-station.webp" alt="RF test station" width="1024" height="575" loading="lazy" decoding="async"><figcaption>RF test station. The fixture and instruments shown do not define the test conditions for your product.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-tuning-line.webp" alt="Technicians tuning RF filters with vector network analyzers" width="1891" height="1064" loading="lazy" decoding="async"><figcaption>VNA tuning line. Screen content is not adopted as a product rating.</figcaption></figure>
+      </div>
+      <ul class="sn-sol-5g__report" aria-label="Report fields to agree before production">
+        <li>Product and revision identifier</li><li>Test configuration and calibration reference</li><li>Frequency range and port definitions</li><li>Acceptance limits and measured values</li><li>Sample, lot or serial linkage</li><li>Deviation and disposition record</li>
+      </ul>
+      <p class="sn-sol-5g__note">VNA, PIM, reliability and matrix automation are available capabilities. They do not mean that every base-station component is 100% tested on every parameter. Confirm coverage with your SQE before ordering.</p>
+      <div class="sn-sol-5g__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Ask About PIM Verification</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-5g-faq-title">
+    <div class="sn-container">
+      <div class="sn-sol-5g__intro"><h2 id="sol-5g-faq-title">5G Base Station RF FAQs</h2><p>Co-siting, N28/N78 scope, architecture choices, repeat-production PIM and the band-plan inputs engineering needs.</p></div>
+      <div class="sn-sol-5g__faq">
+        <details open><summary>How can co-siting interference be addressed in a base station?</summary><p>Start with a complete band plan showing wanted signals, interferers, duplex spacing, power, and antenna or feeder architecture. Engineering review can then assess filtering, duplexing, or combining positions and balance rejection, isolation, insertion loss, PIM, and size. The suitable approach and acceptance limits depend on the actual site configuration.</p></details>
+        <details><summary>Can SONNE support N28 and N78 base station projects?</summary><p>N28 and N78 are within the stated base-station application scope, with existing capability references including an N28-related multiplexer and 3400–3600 MHz 8TR work. Each project still requires review of exact uplink and downlink ranges, bandwidth, rejection, power, PIM, interfaces, and mechanical limits before feasibility is confirmed.</p></details>
+        <details><summary>How should I choose between 4T4R and 8TR for an RRU project?</summary><p>That choice belongs to the radio and antenna architecture, not to a filter or duplexer alone. Define the number of transmit and receive paths, band plan, power, port mapping, and space envelope first. SONNE can then evaluate suitable RF component positions and interfaces for the selected 4T4R or 8TR architecture.</p></details>
+        <details><summary>How is low PIM evaluated for repeat production?</summary><p>Use an approved sample and an agreed production verification plan. Define PIM test conditions, power, connectors, acceptance limits, sampling or coverage, and required records before release. SONNE has PIM, VNA, reliability, and automated matrix test capabilities, but the exact production coverage must be confirmed for each component and order.</p></details>
+        <details><summary>What should a base station RF band plan include?</summary><p>Include uplink and downlink frequencies, bandwidth, duplexing method, wanted and interfering bands, power, isolation or rejection targets, PIM requirements, port count, connectors, and mechanical envelope. Add architecture drawings and expected quantity where available. Missing values can be marked TBD, but feasibility and quotation require agreed final inputs.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-5g-cta-title">
+    <div class="sn-container sn-cta sn-sol-5g__cta">
+      <div class="sn-sol-5g__cta-grid">
+        <div>
+          <h2 id="sol-5g-cta-title">Discuss Your Band Plan</h2>
+          <p>Send the architecture, band plan and the interference problem you need to control. Engineering can identify candidate component positions and the inputs still missing.</p>
+          <p>Attach a band plan, system block diagram and mechanical envelope where available. Missing values can stay TBD for the first review, but feasibility and quotation need agreed final inputs.</p>
+          <div class="sn-sol-5g__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Discuss Your Band Plan</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare RFQ Inputs</a></div>
+          <p class="sn-sol-5g__fine-print">A complete RFQ typically receives initial engineering feedback in about 24 hours. That is not a quotation, prototype date or production lead time. Email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> if you prefer to start there.</p>
+        </div>
+        <div>
+          <h3>Band-plan submission fields</h3>
+          <ul class="sn-sol-5g__fields"><li>4T4R or 8TR architecture and port count</li><li>Uplink and downlink ranges, bandwidth, duplex method</li><li>Wanted bands and co-siting interferers</li><li>Carrier power, insertion-loss, isolation and PIM targets</li><li>Connector series, mounting envelope and orientation</li><li>Quantity range, project stage and validation requirements</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/solutions/5g-base-station/#webpage",
+        "name": "RF Components for 5G Base Stations and RRU",
+        "url": "https://rf-sonne.com/solutions/5g-base-station/",
+        "description": "Filters, duplexers, TMA and combiners for 5G macro sites and RRU, with co-siting, low PIM and batch-verification guidance."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/solutions/5g-base-station/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://rf-sonne.com/solutions/"},
+          {"@type": "ListItem", "position": 3, "name": "5G Base Stations and RRU", "item": "https://rf-sonne.com/solutions/5g-base-station/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rf-sonne.com/solutions/5g-base-station/#faq",
+        "mainEntity": [
+          {"@type": "Question", "name": "How can co-siting interference be addressed in a base station?", "acceptedAnswer": {"@type": "Answer", "text": "Start with a complete band plan showing wanted signals, interferers, duplex spacing, power, and antenna or feeder architecture. Engineering review can then assess filtering, duplexing, or combining positions and balance rejection, isolation, insertion loss, PIM, and size. The suitable approach and acceptance limits depend on the actual site configuration."}},
+          {"@type": "Question", "name": "Can SONNE support N28 and N78 base station projects?", "acceptedAnswer": {"@type": "Answer", "text": "N28 and N78 are within the stated base-station application scope, with existing capability references including an N28-related multiplexer and 3400–3600 MHz 8TR work. Each project still requires review of exact uplink and downlink ranges, bandwidth, rejection, power, PIM, interfaces, and mechanical limits before feasibility is confirmed."}},
+          {"@type": "Question", "name": "How should I choose between 4T4R and 8TR for an RRU project?", "acceptedAnswer": {"@type": "Answer", "text": "That choice belongs to the radio and antenna architecture, not to a filter or duplexer alone. Define the number of transmit and receive paths, band plan, power, port mapping, and space envelope first. SONNE can then evaluate suitable RF component positions and interfaces for the selected 4T4R or 8TR architecture."}},
+          {"@type": "Question", "name": "How is low PIM evaluated for repeat production?", "acceptedAnswer": {"@type": "Answer", "text": "Use an approved sample and an agreed production verification plan. Define PIM test conditions, power, connectors, acceptance limits, sampling or coverage, and required records before release. SONNE has PIM, VNA, reliability, and automated matrix test capabilities, but the exact production coverage must be confirmed for each component and order."}},
+          {"@type": "Question", "name": "What should a base station RF band plan include?", "acceptedAnswer": {"@type": "Answer", "text": "Include uplink and downlink frequencies, bandwidth, duplexing method, wanted and interfering bands, power, isolation or rejection targets, PIM requirements, port count, connectors, and mechanical envelope. Add architecture drawings and expected quantity where available. Missing values can be marked TBD, but feasibility and quotation require agreed final inputs."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

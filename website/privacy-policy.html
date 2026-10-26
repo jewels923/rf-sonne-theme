@@ -1,0 +1,185 @@
+<!-- wp:html -->
+<div class="sn-privacy">
+  <style>
+    .sn-privacy { color: var(--sn-text); }
+    .sn-privacy *, .sn-privacy *::before, .sn-privacy *::after { box-sizing: border-box; }
+    .sn-privacy h1, .sn-privacy h2, .sn-privacy h3, .sn-privacy p, .sn-privacy ul, .sn-privacy ol, .sn-privacy li { margin-top: 0; }
+    .sn-privacy h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-privacy h3 { margin-bottom: 8px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-privacy p, .sn-privacy li { line-height: 1.75; }
+    .sn-privacy a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-privacy :focus-visible { outline: 3px solid var(--sn-cyan-dark); outline-offset: 3px; }
+    .sn-privacy .sn-privacy__hero a:focus-visible { outline-color: var(--sn-cyan); }
+    .sn-privacy .sn-privacy__eyebrow { display: block; margin-bottom: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-privacy .sn-privacy__hero .sn-privacy__eyebrow { color: var(--sn-cyan); }
+    .sn-privacy .sn-privacy__hero-copy { max-width: 880px; }
+    .sn-privacy .sn-privacy__hero-copy > p { font-size: 1.05rem; }
+    .sn-privacy .sn-privacy__hero-note { margin-top: 24px; padding: 16px 20px; border: 1px solid rgba(140, 196, 255, .35); background: rgba(252, 254, 255, .06); color: rgba(252, 254, 255, .8); font-size: .9rem; }
+    .sn-privacy .sn-privacy__body { padding-block: var(--sn-section-space); background: var(--sn-white); }
+    .sn-privacy .sn-privacy__layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+    .sn-privacy .sn-privacy__toc { position: sticky; top: 120px; padding: 22px; border: var(--sn-border); background: var(--sn-light-gray); }
+    .sn-privacy .sn-privacy__toc-title { margin-bottom: 12px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .sn-privacy .sn-privacy__toc ol { margin: 0; padding: 0; list-style: none; counter-reset: privacy-toc; }
+    .sn-privacy .sn-privacy__toc li { counter-increment: privacy-toc; }
+    .sn-privacy .sn-privacy__toc li + li { border-top: var(--sn-border); }
+    .sn-privacy .sn-privacy__toc a { display: flex; gap: 10px; align-items: baseline; min-height: 44px; padding: 10px 0; color: var(--sn-text); font-size: .86rem; font-weight: 600; line-height: 1.45; text-decoration: none; }
+    .sn-privacy .sn-privacy__toc a::before { color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; content: '0' counter(privacy-toc); }
+    .sn-privacy .sn-privacy__toc a:hover { color: var(--sn-cyan-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .sn-privacy .sn-privacy__content { min-width: 0; }
+    .sn-privacy .sn-privacy__section { padding-bottom: 36px; scroll-margin-top: 120px; }
+    .sn-privacy .sn-privacy__section + .sn-privacy__section { padding-top: 36px; border-top: var(--sn-border); }
+    .sn-privacy .sn-privacy__section p { max-width: 76ch; color: var(--sn-text-muted); }
+    .sn-privacy .sn-privacy__section p:last-child { margin-bottom: 0; }
+    .sn-privacy .sn-privacy__section ul { max-width: 76ch; margin: 0 0 18px; padding-left: 20px; color: var(--sn-text-muted); }
+    .sn-privacy .sn-privacy__section li + li { margin-top: 8px; }
+    .sn-privacy .sn-privacy__section h3:not(:first-of-type) { margin-top: 24px; }
+    .sn-privacy .sn-privacy__meta { margin: 18px 0 0; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .74rem; line-height: 1.7; }
+    .sn-privacy .sn-privacy__hero .sn-privacy__meta { color: rgba(252, 254, 255, .72); }
+    .sn-privacy .sn-privacy__contact { margin-top: 24px; padding: 24px; border: var(--sn-border); background: var(--sn-light-gray); }
+    .sn-privacy .sn-privacy__contact p { margin-bottom: 8px; }
+    .sn-privacy .sn-privacy__contact p:last-child { margin-bottom: 0; }
+    .sn-privacy .sn-privacy__contact a { font-weight: 700; }
+    @media (max-width: 1024px) {
+      .sn-privacy .sn-privacy__layout { grid-template-columns: 1fr; }
+      .sn-privacy .sn-privacy__toc { position: static; }
+      .sn-privacy .sn-privacy__toc ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+      .sn-privacy .sn-privacy__toc li + li { border-top: 0; }
+    }
+    @media (max-width: 768px) {
+      .sn-privacy .sn-privacy__toc ol { grid-template-columns: 1fr; }
+      .sn-privacy .sn-privacy__toc li + li { border-top: var(--sn-border); }
+    }
+    @media (max-width: 520px) {
+      .sn-privacy .sn-privacy__toc { padding: 18px; }
+      .sn-privacy .sn-privacy__contact { padding: 18px; }
+    }
+  </style>
+
+  <section class="sn-hero sn-privacy__hero" aria-labelledby="privacy-title">
+    <div class="sn-container sn-privacy__hero-copy">
+      <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Privacy Policy</li></ol></nav>
+      <span class="sn-privacy__eyebrow">Legal · Personal information</span>
+      <h1 id="privacy-title">Privacy Policy</h1>
+      <p>This policy explains what information the SONNE website collects, why it is collected, how it is handled and what choices you have.</p>
+      <p class="sn-privacy__hero-note">It covers this website and the contact and RFQ forms on it. It does not replace project-specific confidentiality arrangements agreed in writing for a particular engagement.</p>
+      <p class="sn-privacy__meta">Effective date: 25 October 2026</p>
+    </div>
+  </section>
+
+  <div class="sn-privacy__body">
+    <div class="sn-container sn-privacy__layout">
+      <aside class="sn-privacy__toc" aria-label="On this page">
+        <p class="sn-privacy__toc-title">On this page</p>
+        <ol>
+          <li><a href="#scope">Scope and operator</a></li>
+          <li><a href="#information">Information you provide</a></li>
+          <li><a href="#automatic">Information collected automatically</a></li>
+          <li><a href="#use-share">How information is used and shared</a></li>
+          <li><a href="#uploads">Uploaded files and confidentiality</a></li>
+          <li><a href="#cookies">Cookies and third-party links</a></li>
+          <li><a href="#retention">Retention and security</a></li>
+          <li><a href="#rights">Your rights, changes and contact</a></li>
+        </ol>
+      </aside>
+
+      <div class="sn-privacy__content">
+        <section class="sn-privacy__section" id="scope" aria-labelledby="privacy-scope-title">
+          <h2 id="privacy-scope-title">Scope and Operator</h2>
+          <p>This policy applies to the SONNE website published at rf-sonne.com and to the information you send through its forms, email addresses and download links. In this policy, SONNE refers to the operator of this website, based in Cixi, Ningbo, Zhejiang, China.</p>
+          <p>The website is intended for business and technical audiences evaluating RF and microwave components, waveguide assemblies, combiners, base-station RF products and precision enclosures. It is not directed to children, and we do not knowingly collect personal information from children.</p>
+        </section>
+
+        <section class="sn-privacy__section" id="information" aria-labelledby="privacy-information-title">
+          <h2 id="privacy-information-title">Information You Provide</h2>
+          <p>When you contact us or submit a request, you choose what to send. The forms on this site may ask for:</p>
+          <ul>
+            <li>identification and contact details, such as your name, company, work email address and telephone number;</li>
+            <li>project context, such as country, product line, application, project stage, quantities, expected volume and target date;</li>
+            <li>technical requirements, such as frequency range, band plan, interface, performance targets and enclosure dimensions;</li>
+            <li>the content of your message, including notes about confidentiality; and</li>
+            <li>files you upload, such as specifications, drawings, band plans or test requirements.</li>
+          </ul>
+          <p>You may also contact us directly by email. Please do not submit personal information about another person unless you are authorised to do so, and avoid sending sensitive personal information that is not needed for your inquiry.</p>
+        </section>
+
+        <section class="sn-privacy__section" id="automatic" aria-labelledby="privacy-automatic-title">
+          <h2 id="privacy-automatic-title">Information Collected Automatically</h2>
+          <p>Like most websites, this site is served through hosting infrastructure that may record standard request information. This can include your IP address, browser type and version, device information, the page requested, the referring address and the time of the request. These records are used to deliver the site, maintain security, diagnose faults and understand aggregate traffic levels.</p>
+          <p>The public pages of this website do not currently include advertising or behavioural analytics scripts. If this changes, this policy will be updated before those tools are introduced.</p>
+        </section>
+
+        <section class="sn-privacy__section" id="use-share" aria-labelledby="privacy-use-title">
+          <h2 id="privacy-use-title">How Information Is Used and Shared</h2>
+          <p>We use the information you provide to:</p>
+          <ul>
+            <li>respond to your question and confirm what you need;</li>
+            <li>review a technical requirement and prepare engineering feedback or a quotation;</li>
+            <li>discuss specifications, drawings, quantities and next steps with you;</li>
+            <li>maintain business records and follow up on an active project; and</li>
+            <li>protect the website, prevent misuse and comply with applicable legal obligations.</li>
+          </ul>
+          <p>Information may be seen by SONNE staff who need it for these purposes. We may also use service providers that support the website, hosting, email delivery, security or document storage. They receive only the access needed to provide those services and are expected to protect the information they handle.</p>
+          <p>We do not sell personal information. We may disclose information where required by law, to respond to a valid legal request, to protect our rights or the safety of others, or as part of a corporate transaction subject to appropriate safeguards.</p>
+          <p>SONNE is based in China. Information may be processed in China and in other countries where our service providers operate. Where applicable law requires safeguards for an international transfer, we take steps to apply them.</p>
+        </section>
+
+        <section class="sn-privacy__section" id="uploads" aria-labelledby="privacy-uploads-title">
+          <h2 id="privacy-uploads-title">Uploaded Files and Confidentiality</h2>
+          <p>Files submitted through the RFQ form are stored privately and are not published on the website. They are made available to SONNE staff who need them to review your requirement.</p>
+          <p>Choosing the confidentiality option tells us that confidentiality should be discussed before sensitive material is exchanged. It does not by itself create a confidentiality agreement. If your files are sensitive, describe the requirement first and wait until a project-specific arrangement has been confirmed by both parties before uploading detailed material.</p>
+        </section>
+
+        <section class="sn-privacy__section" id="cookies" aria-labelledby="privacy-cookies-title">
+          <h2 id="privacy-cookies-title">Cookies and Third-Party Links</h2>
+          <p>The public pages of this site do not require an account and do not set advertising cookies. If you sign in to the administration area, WordPress may set functional cookies for authentication and display preferences. These cookies support the login session and are not used for advertising.</p>
+          <p>The site may link to third-party websites, for example a map, documentation page or industry resource. Those sites operate under their own privacy policies, and we are not responsible for their content or practices. Following an external link is at your own discretion.</p>
+        </section>
+
+        <section class="sn-privacy__section" id="retention" aria-labelledby="privacy-retention-title">
+          <h2 id="privacy-retention-title">Retention and Security</h2>
+          <p>We keep inquiry and project records for as long as needed to respond, maintain the business relationship, meet legal, accounting or security requirements, and resolve disputes. When information is no longer needed for these purposes, we delete it or remove the elements that identify you.</p>
+          <p>We use reasonable technical and organisational measures to protect information against unauthorised access, loss or misuse. No website, email system or storage method is completely secure, so please avoid sending sensitive material by email unless it is necessary for your inquiry.</p>
+        </section>
+
+        <section class="sn-privacy__section" id="rights" aria-labelledby="privacy-rights-title">
+          <h2 id="privacy-rights-title">Your Rights, Changes and Contact</h2>
+          <p>Where applicable law provides these rights, you may ask to access the personal information we hold about you, correct it, delete it, restrict or object to its use, or receive a portable copy. You may also withdraw consent where processing is based on consent. These rights are not absolute, and we may need to keep certain records for legal or security reasons.</p>
+          <p>To make a request, email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> with the subject line “Privacy request” and enough detail for us to identify the relevant inquiry. We may ask you to verify your identity before acting on a request, and we will respond within a reasonable period.</p>
+          <p>We may update this policy as the website or our practices change. The effective date at the top of this page shows the current version, and material changes will be reflected here.</p>
+          <div class="sn-privacy__contact">
+            <p>Privacy questions and requests: <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a></p>
+            <p>Telephone: <a href="tel:+8657463615958">+86-0574-63615958</a></p>
+            <p>SONNE<br>No. 87, 89, 91, Sanbei Middle Road,<br>Xinze Village, Guanhaiwei Town,<br>Cixi City, Ningbo City, Zhejiang Province, China</p>
+            <p>For a project-specific question, use the <a href="/contact/">contact form</a> or read the <a href="/resources/rfq-guide/">RFQ guide</a> before submitting a request.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/privacy-policy/#webpage",
+        "name": "Privacy Policy",
+        "url": "https://rf-sonne.com/privacy-policy/",
+        "description": "How SONNE handles information submitted through this website, including contact and RFQ forms, file uploads, cookies and requests to access or delete data.",
+        "dateModified": "2026-10-25",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/privacy-policy/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://rf-sonne.com/privacy-policy/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

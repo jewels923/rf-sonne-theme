@@ -1,0 +1,59 @@
+<p>An E-band waveguide diplexer combines two millimetre-wave channels onto a shared antenna port, and its performance is decided as much by flange accuracy, split-block machining and assembly discipline as by the filter design itself.</p>
+<h2>What an E-Band Diplexer Does</h2>
+<p>E-band links commonly use the 71–76 GHz and 81–86 GHz allocations. A diplexer separates or combines these channels so that a single antenna can serve both directions or both sub-bands while keeping the transmit and receive paths isolated. The part is a passive waveguide assembly with two channel ports and one common port, and its response must hold across the full operating band, not only at the centre frequency.</p>
+<p>At these frequencies the waveguide wavelength is short, so every mechanical feature is electrically significant. A small step at a flange joint, a burr inside a channel or a plating thickness variation can change the return loss and the isolation. The E-band waveguide diplexer therefore needs to be evaluated as a manufactured assembly, not only as an electromagnetic model.</p>
+
+<h2>Start With the Band Plan and Port Definition</h2>
+<p>Define the two channel bands, the common port, the polarization and the direction of each signal path. State whether the diplexer is used for transmit and receive separation, for two sub-bands in the same radio, or for combining two outdoor units onto one antenna. The port definition determines the isolation requirement and the power handling on each path.</p>
+<p>Also state the guard band between channels and the rejection required outside each passband. A diplexer with a narrow guard band demands sharper filters and tighter manufacturing control than one with a wide separation. If the radio uses a duplex spacing inside one of the channels, include that spacing because it affects the internal filter order and the isolation target.</p>
+
+<h2>Flange and Waveguide Interface</h2>
+<p>For E-band waveguide diplexer hardware, a common interface is WR-12 waveguide with UG-387/U flanges. The flange must be flat, correctly aligned and free of damage, because a poor joint adds reflection and can create a leakage path. Specify the flange type, the number and position of the alignment holes, the screw thread and the required torque. If the mating flange is a different standard, state the adapter or transition that will be used and who supplies it.</p>
+<p>Flange orientation is also a mechanical constraint. The assembly must be accessible with a torque tool, and the waveguide runs must not place stress on the joints. In an outdoor unit, the interface may need a gasket or a sealed transition; that requirement should be part of the RFQ because it can change the mechanical design and the test fixture.</p>
+<p>Surface finish at the flange face and inside the waveguide is part of the RF interface. Scratches, oxidation and plating defects increase loss and can cause PIM or leakage. Define the acceptable finish and the inspection method rather than relying on a visual check at assembly.</p>
+
+<h2>Machining Tolerance and Split-Block Design</h2>
+<p>E-band diplexers are often machined as split blocks: two or more metal pieces are aligned, clamped and joined so that the internal waveguide channels are formed by the mating surfaces. The alignment of those surfaces, the flatness of the split and the position of the internal features determine whether the assembled part matches the model.</p>
+<p>For high-frequency hardware, machining tolerance can reach ±0.01 mm and plating thickness can be controlled to about 1 μm on qualified designs. Those numbers are not a universal specification; they describe what is achievable when the geometry, material and process are selected for the requirement. The RFQ should state the critical dimensions and the allowed deviation, not only a general tolerance block.</p>
+<p>Corner radii, iris thickness, channel depth and the transition between waveguide sections all need to be manufacturable with the selected tooling. A design that is elegant in simulation but requires an inaccessible tool path will either be expensive or will be modified late in the project. A design-for-manufacturing review before the first cut is cheaper than re-machining a split block.</p>
+
+<h2>Plating, Assembly and Cleanliness</h2>
+<p>Silver or gold plating is commonly used to control surface conductivity and corrosion. The plating must be uniform inside the waveguide, free of voids and nodules, and thick enough to be stable through assembly and environmental exposure. Plating thickness and adhesion should be inspected on critical surfaces, not only on an external coupon.</p>
+<p>Assembly introduces the joints that the model does not show. Screw torque, joint pressure, alignment pins and the order of tightening all affect the electrical result. Cleanliness matters as well: metal particles, dust or plating flakes inside a millimetre-wave channel can create a local discontinuity or a breakdown path. A defined cleaning and inspection step belongs in the process, especially for high-power or low-PIM designs.</p>
+
+<figure>
+<img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp" alt="Ortho-mode transducer" width="1024" height="571" loading="lazy" decoding="async">
+<figcaption>Representative waveguide front-end hardware. E-band assemblies depend on precision flanges, split-block alignment and controlled plating as much as on the filter response.</figcaption>
+</figure>
+
+<h2>Isolation, Return Loss and Power</h2>
+<p>Isolation between the channel ports is a primary diplexer requirement. State the minimum isolation across each passband and the conditions under which it is measured, including termination and temperature. Return loss at the common port and at each channel port must also be specified, because a diplexer that isolates well but presents a poor match can degrade the radio and the antenna system.</p>
+<p>Power handling depends on the signal, the pressure inside the waveguide and the loss at the joints. For transmit paths, state average power, peak power and waveform. For receive paths, the concern may be the leakage from the transmit channel rather than the absolute power. If the assembly will be used outdoors, include the environmental conditions and any pressurization or sealing requirement.</p>
+
+<h2>VNA Verification and Test Setup</h2>
+<p>Millimetre-wave measurements are only as good as the calibration and the fixture. A waveguide calibration kit, a stable test port and a repeatable connection procedure are essential. The test report should identify the calibration method, the reference plane, the frequency range, the number of points and the instrument settings. Without those details, a curve cannot be compared with another supplier’s data.</p>
+<p>For a diplexer, the test plan should cover transmission and reflection at every port, isolation between channel ports, and the common-port match. If PIM or high-power testing is required, it should be defined separately because the fixture and the environment are different. Temperature testing adds another variable: the mechanical assembly and the plated surfaces expand differently, so the response should be verified at the temperature extremes that the application requires.</p>
+
+<h2>RFQ Inputs for an E-Band Diplexer</h2>
+<ul>
+<li>Channel bands, guard band and common-port definition.</li>
+<li>Isolation and rejection mask for each path.</li>
+<li>Maximum insertion loss and minimum return loss at every port.</li>
+<li>Average power, peak power and waveform for each channel.</li>
+<li>Waveguide size, flange standard, orientation and mating hardware.</li>
+<li>Split-block or monolithic preference, material and plating.</li>
+<li>Operating temperature, sealing, corrosion and pressure requirements.</li>
+<li>Prototype and production quantities, test reports and traceability needs.</li>
+</ul>
+<p>An E-band waveguide diplexer review should confirm the channel plan, the flange interface, the split-block tolerances, the plating and the test method before the first parts are machined. The best time to resolve a millimetre-wave risk is on the drawing and in the RFQ, not after the assembly has been tuned.</p>
+<p>Review the <a href="/products/waveguide-components/">waveguide component product line</a> for diplexers, OMTs, OCUs and assemblies, and see <a href="/solutions/microwave-backhaul/">microwave backhaul</a> and <a href="/solutions/satellite-earth-station/">satellite earth station</a> for the application context. <a href="/engineering/manufacturing/">Manufacturing</a> explains the machining and plating controls, while <a href="/engineering/testing-quality/">testing and quality</a> covers VNA and PIM evidence. Submit the band plan and interface drawing through <a href="/request-a-quote/">Request a Quote</a> for an engineering review.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Which waveguide and flange are used at E-band?</h3>
+<p>WR-12 waveguide is common for the 71–86 GHz range, often with UG-387/U flanges. The exact interface should be confirmed against the radio, antenna and test equipment because mating standards and mechanical space vary by system.</p>
+<h3>Why is split-block machining critical for an E-band diplexer?</h3>
+<p>The internal waveguide channels are formed by mating surfaces. Flatness, alignment and joint pressure directly affect loss, return loss and isolation, so the machining and assembly process must be controlled as part of the RF design.</p>
+<h3>Can an E-band diplexer be tuned after assembly?</h3>
+<p>Some designs include limited tuning, but many millimetre-wave assemblies are fixed tuned to preserve repeatability and avoid adding lossy or unstable elements. The right approach depends on bandwidth, production volume and the acceptable adjustment range.</p>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which waveguide and flange are used at E-band?","acceptedAnswer":{"@type":"Answer","text":"WR-12 waveguide is common for the 71–86 GHz range, often with UG-387/U flanges. The exact interface should be confirmed against the radio, antenna and test equipment because mating standards and mechanical space vary by system."}},{"@type":"Question","name":"Why is split-block machining critical for an E-band diplexer?","acceptedAnswer":{"@type":"Answer","text":"The internal waveguide channels are formed by mating surfaces. Flatness, alignment and joint pressure directly affect loss, return loss and isolation, so the machining and assembly process must be controlled as part of the RF design."}},{"@type":"Question","name":"Can an E-band diplexer be tuned after assembly?","acceptedAnswer":{"@type":"Answer","text":"Some designs include limited tuning, but many millimetre-wave assemblies are fixed tuned to preserve repeatability and avoid adding lossy or unstable elements. The right approach depends on bandwidth, production volume and the acceptable adjustment range."}}]}</script>

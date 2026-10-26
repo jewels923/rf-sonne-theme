@@ -1,0 +1,28 @@
+<p class="sn-contact__form-note">Fields marked <strong>Required</strong> are enough to open a conversation. Engineering detail, quantities and drawings can follow by email.</p>
+
+<div class="sn-contact__field">
+  <label for="contact-name">Name <span class="sn-contact__required-label">Required</span></label>
+  [text* your-name id:contact-name autocomplete:name placeholder "Full name"]
+</div>
+
+<div class="sn-contact__field">
+  <label for="contact-company">Company <span class="sn-contact__required-label">Required</span></label>
+  [text* your-company id:contact-company autocomplete:organization placeholder "Company name"]
+</div>
+
+<div class="sn-contact__field">
+  <label for="contact-email">Work email <span class="sn-contact__required-label">Required</span></label>
+  [email* your-email id:contact-email autocomplete:email placeholder "name@company.com"]
+</div>
+
+<div class="sn-contact__field">
+  <label for="contact-topic">Contact topic <span class="sn-contact__required-label">Required</span></label>
+  [select* contact-topic id:contact-topic include_blank "RF and microwave" "Waveguide components" "Combiners and base-station RF" "Precision enclosures" "Factory visit" "Other / not sure"]
+</div>
+
+<div class="sn-contact__field">
+  <label for="contact-summary">Requirement summary <span class="sn-contact__required-label">Required</span></label>
+  [textarea* requirement-summary id:contact-summary rows:5 placeholder "What are you building, and what do you need? Include the frequency range or enclosure size if known."]
+</div>
+
+[submit "Send Message"]

@@ -1,0 +1,837 @@
+<!-- wp:html -->
+<div class="sn-home">
+  <style>
+    .sn-home { --home-rule: rgba(7, 17, 25, .13); --home-label: .75rem; --home-label-lh: 1.5; color: var(--sn-text); }
+    .sn-home *, .sn-home *::before, .sn-home *::after { box-sizing: border-box; }
+    .sn-home h2, .sn-home h3, .sn-home p, .sn-home ul, .sn-home ol, .sn-home dl, .sn-home dd, .sn-home figure { margin-top: 0; }
+    .sn-home h2 { margin-bottom: 18px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-home h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-home p, .sn-home li { line-height: 1.7; }
+    .sn-home a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-home img { display: block; max-width: 100%; height: auto; }
+    .sn-home .sn-home__visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+    .sn-home .sn-home__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: var(--home-label); font-weight: 700; letter-spacing: .09em; line-height: var(--home-label-lh); text-transform: uppercase; }
+    .sn-home .sn-home__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
+    .sn-home .sn-home__text-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: auto; font-weight: 700; }
+    .sn-home .sn-home__section-action { margin-top: 32px; }
+
+    /* Hero: full-bleed satellite plate with the portfolio boundary recorded underneath. */
+    .sn-home .sn-home__hero { display: flex; align-items: center; min-height: clamp(680px, 88vh, 880px); padding-block: clamp(136px, 12vw, 176px) clamp(64px, 6vw, 88px); background: linear-gradient(90deg, rgba(5, 16, 27, .96) 0%, rgba(5, 16, 27, .9) 30%, rgba(5, 16, 27, .68) 58%, rgba(5, 16, 27, .42) 100%), linear-gradient(180deg, rgba(5, 16, 27, .55) 0%, rgba(5, 16, 27, .08) 45%, rgba(5, 16, 27, .72) 100%), url("https://rf-sonne.com/wp-content/uploads/2026/10/hero-satellite-earth-station-wide.webp") 72% 45% / cover no-repeat, #05101B; }
+    .sn-home .sn-home__hero::before { opacity: .38; }
+    .sn-home .sn-home__hero-inner { display: flex; flex-direction: column; }
+    .sn-home .sn-home__hero-copy { max-width: 800px; }
+    .sn-home .sn-home__hero .sn-home__eyebrow, .sn-home .sn-home__slogan { color: var(--sn-cyan); }
+    .sn-home .sn-home__hero-copy > p:first-of-type { margin-bottom: 20px; font-size: 1.06rem; }
+    .sn-home .sn-home__slogan { max-width: 76ch; margin-bottom: 0; font-family: var(--sn-font-mono); font-size: .8rem; letter-spacing: .02em; line-height: 1.6; }
+    .sn-home .sn-home__boundary { max-width: 760px; margin-top: 26px; padding-top: 12px; border-top: 1px solid rgba(34, 197, 217, .38); }
+    .sn-home .sn-home__boundary-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 20px; color: rgba(252, 254, 255, .58); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .09em; line-height: var(--home-label-lh); text-transform: uppercase; }
+    .sn-home .sn-home__boundary p { max-width: 70ch; margin: 8px 0 0; color: rgba(252, 254, 255, .76); font-size: .88rem; line-height: 1.65; }
+    .sn-home .sn-home__boundary strong { color: var(--sn-white); }
+    .sn-home .sn-home__hero-caption { max-width: 70ch; margin: 16px 0 0; color: rgba(252, 254, 255, .58); font-family: var(--sn-font-mono); font-size: var(--home-label); line-height: 1.55; }
+    .sn-home .sn-home__hero-meta { display: flex; flex-wrap: wrap; gap: 8px 36px; margin-top: clamp(44px, 6vw, 76px); padding-top: 14px; border-top: 1px solid rgba(252, 254, 255, .16); color: rgba(252, 254, 255, .56); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .07em; line-height: var(--home-label-lh); text-transform: uppercase; }
+    .sn-home .sn-home__hero-meta b { margin-right: 6px; color: var(--sn-accent-on-dark); font-weight: 600; }
+
+    /* Shared record head: index rail on the left, title and preamble on the right. */
+    .sn-home .sn-home__record-head { display: grid; grid-template-columns: minmax(0, .32fr) minmax(0, 1fr); gap: clamp(18px, 3.4vw, 56px); padding-top: 18px; border-top: 1px solid var(--sn-line-strong); }
+    .sn-home .sn-home__record-meta { display: flex; flex-direction: column; gap: 5px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .08em; line-height: var(--home-label-lh); text-transform: uppercase; }
+    .sn-home .sn-home__record-meta b { color: var(--sn-cyan-dark); font-weight: 700; }
+    .sn-home .sn-home__record-title { max-width: 900px; }
+    .sn-home .sn-home__record-title > p { max-width: 68ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.02rem; }
+    .sn-home .sn-home__rail-label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 14px; padding-top: 14px; border-top: 1px solid var(--sn-line-strong); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .08em; line-height: var(--home-label-lh); text-transform: uppercase; }
+    .sn-home .sn-home__rail-label b { color: var(--sn-cyan-dark); font-weight: 700; }
+    .sn-home .sn-home__type { display: block; margin-bottom: 8px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .08em; line-height: var(--home-label-lh); text-transform: uppercase; }
+    .sn-home .sn-home__type b { margin-right: 6px; color: var(--sn-text-muted); font-weight: 600; }
+
+    /* Product rail: page scroll drives the horizontal track; the trace records progress. */
+    .sn-home .sn-home__core { padding-bottom: var(--sn-section-space); }
+    .sn-home .sn-home__rail { margin-top: clamp(34px, 4vw, 52px); }
+    .sn-home .sn-home__rail-stage { padding-bottom: 4px; }
+    .sn-home .sn-home__rail.is-pinned .sn-home__rail-stage { position: sticky; top: 85px; background: var(--sn-card); }
+    .sn-home .sn-home__trace { padding-top: 14px; border-top: 1px solid var(--sn-line); }
+    .sn-home .sn-home__trace-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 18px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .08em; line-height: var(--home-label-lh); text-transform: uppercase; }
+    .sn-home .sn-home__trace-svg { display: block; width: 100%; height: 36px; margin-top: 8px; overflow: visible; }
+    .sn-home .sn-home__trace-base { fill: none; stroke: var(--sn-line-strong); stroke-width: 1; vector-effect: non-scaling-stroke; }
+    .sn-home .sn-home__trace-draw { fill: none; stroke: var(--sn-accent); stroke-width: 2; vector-effect: non-scaling-stroke; }
+    .sn-home .sn-home__trace-ticks { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 2px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .06em; line-height: var(--home-label-lh); }
+    .sn-home .sn-home__trace-ticks span { padding-top: 5px; border-top: 1px solid var(--sn-line-strong); transition: color var(--sn-transition), border-color var(--sn-transition); }
+    .sn-home .sn-home__trace-ticks span:last-child { text-align: right; }
+    .sn-home .sn-home__trace-ticks span.is-active { border-color: var(--sn-cyan-dark); color: var(--sn-cyan-dark); }
+    .sn-home .sn-home__rail-viewport { overflow-x: auto; overflow-y: hidden; padding-block: 10px 2px; scrollbar-width: none; -ms-overflow-style: none; overscroll-behavior-x: contain; }
+    .sn-home .sn-home__rail-viewport::-webkit-scrollbar { display: none; }
+    .sn-home .sn-home__rail-viewport:focus-visible { outline: 3px solid var(--sn-cyan-dark); outline-offset: 3px; }
+    .sn-home .sn-home__rail-track { display: flex; width: max-content; align-items: stretch; gap: 16px; }
+    .sn-home .sn-home__plate { display: flex; width: 370px; min-width: 0; flex: 0 0 370px; flex-direction: column; border: 1px solid var(--sn-line); background: var(--sn-card); transition: border-color var(--sn-transition), transform var(--sn-transition); }
+    .sn-home .sn-home__plate:first-child { width: 460px; flex-basis: 460px; }
+    .sn-home .sn-home__plate:hover { border-color: var(--sn-cyan-dark); transform: translateY(-2px); }
+    .sn-home .sn-home__plate-figure { margin: 0; border-bottom: 1px solid var(--sn-line); }
+    .sn-home .sn-home__plate-media { display: flex; align-items: center; justify-content: center; height: clamp(140px, calc(100vh - 640px), 260px); padding: 22px; background: var(--sn-paper-muted); }
+    .sn-home .sn-home__plate-media img { width: 100%; height: 100%; object-fit: contain; }
+    .sn-home .sn-home__plate-tag { display: flex; justify-content: space-between; gap: 12px; padding: 9px 16px; border-top: 1px solid var(--sn-line); background: var(--sn-card); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .07em; line-height: var(--home-label-lh); text-transform: uppercase; }
+    .sn-home .sn-home__plate-body { display: flex; flex: 1; flex-direction: column; padding: 20px 22px 18px; }
+    .sn-home .sn-home__plate-body h3 { margin-bottom: 8px; font-size: 1.22rem; }
+    .sn-home .sn-home__plate-body > p { margin-bottom: 16px; color: var(--sn-text-muted); font-size: .9rem; line-height: 1.6; }
+    .sn-home .sn-home__plate-body > .sn-home__text-link { margin-top: auto; padding-top: 6px; }
+    .sn-home .sn-home__plate-spec { margin: 0 0 14px; border-top: 1px solid var(--sn-line); }
+    .sn-home .sn-home__plate-spec > div { display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--sn-line); }
+    .sn-home .sn-home__plate-spec dt { color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .06em; line-height: 1.5; text-transform: uppercase; }
+    .sn-home .sn-home__plate-spec dd { margin: 0; color: var(--sn-text); font-size: .8rem; line-height: 1.5; }
+    .sn-home .sn-home__rail-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--sn-line); }
+    .sn-home .sn-home__rail-count { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .1em; line-height: var(--home-label-lh); white-space: nowrap; }
+    .sn-home .sn-home__rail-bar { flex: 1 1 120px; height: 2px; overflow: hidden; background: var(--sn-line); }
+    .sn-home .sn-home__rail-bar span { display: block; width: 100%; height: 100%; background: var(--sn-accent); transform: scaleX(0); transform-origin: left center; }
+    .sn-home .sn-home__rail-hint { color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .06em; line-height: var(--home-label-lh); text-transform: uppercase; white-space: nowrap; }
+    .sn-home .sn-home__rail-foot .sn-btn { margin-left: auto; }
+
+    /* Evidence: a sticky measurement label beside the capability ledger. */
+    .sn-home .sn-home__evidence-grid { display: grid; grid-template-columns: minmax(260px, .7fr) minmax(0, 1.55fr); gap: clamp(32px, 4.5vw, 64px); align-items: start; }
+    .sn-home .sn-home__evidence-rail { position: sticky; top: 104px; }
+    .sn-home .sn-home__evidence-rail h2 { margin-top: 18px; font-size: clamp(1.9rem, 2.5vw, 2.45rem); }
+    .sn-home .sn-home__evidence-rail > p { margin-bottom: 26px; color: var(--sn-text-muted); font-size: .92rem; }
+    .sn-home .sn-home__facts { margin: 0; border-top: 1px solid var(--sn-line); }
+    .sn-home .sn-home__facts > div { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--sn-line); }
+    .sn-home .sn-home__facts dt { color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .06em; line-height: 1.5; text-transform: uppercase; }
+    .sn-home .sn-home__facts dd { margin: 0; color: var(--sn-text-muted); font-size: .8rem; line-height: 1.55; }
+    .sn-home .sn-home__facts strong { display: block; margin-bottom: 2px; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.16rem; line-height: 1.25; }
+    .sn-home .sn-home__evidence-body { min-width: 0; }
+    .sn-home .sn-home__evidence-body .sn-table th { font-size: var(--home-label); }
+    .sn-home .sn-home__evidence-plates { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 20px 0 24px; }
+    .sn-home .sn-home__evidence-plates figure { position: relative; display: flex; overflow: hidden; margin: 0; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); }
+    .sn-home .sn-home__evidence-plates figure:first-child { grid-row: span 2; }
+    .sn-home .sn-home__evidence-plates img { width: 100%; height: 100%; object-fit: cover; }
+    .sn-home .sn-home__evidence-plates figure:not(:first-child) img { height: auto; aspect-ratio: 16 / 9; }
+    .sn-home .sn-home__evidence-plates figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 9px 12px; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: var(--home-label); line-height: 1.45; }
+    .sn-home .sn-home__table-note { margin: 16px 0 0; color: var(--sn-text-muted); font-size: .85rem; }
+
+    /* Fit review: the frequency boundary reads as an instrument, not a feature card. */
+    .sn-home .sn-home__fit-grid { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(320px, .78fr); gap: clamp(32px, 5vw, 72px); align-items: start; margin-top: 40px; }
+    .sn-home .sn-home__fit-copy h3 { margin-bottom: 14px; }
+    .sn-home .sn-home__checklist { margin: 0; padding: 0; list-style: none; counter-reset: fit; }
+    .sn-home .sn-home__checklist li { position: relative; padding: 14px 0 14px 44px; border-bottom: 1px solid var(--sn-line); counter-increment: fit; }
+    .sn-home .sn-home__checklist li::before { position: absolute; top: 16px; left: 0; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .06em; line-height: 1.5; content: '0' counter(fit); }
+    .sn-home .sn-home__checklist strong { display: block; margin-bottom: 2px; color: var(--sn-navy); font-size: .9rem; line-height: 1.5; }
+    .sn-home .sn-home__checklist span { color: var(--sn-text-muted); font-size: .84rem; line-height: 1.6; }
+    .sn-home .sn-home__fit-copy .sn-home__table-note { margin-top: 18px; }
+    .sn-home .sn-home__range { padding: clamp(24px, 3vw, 36px); background: var(--sn-navy); color: var(--sn-white); }
+    .sn-home .sn-home__range-head { display: flex; justify-content: space-between; gap: 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(252, 254, 255, .2); color: rgba(252, 254, 255, .58); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .08em; line-height: var(--home-label-lh); text-transform: uppercase; }
+    .sn-home .sn-home__range h3 { margin: 18px 0 0; color: var(--sn-white); }
+    .sn-home .sn-home__range-row { margin-top: 24px; }
+    .sn-home .sn-home__range-row--custom { margin-top: 18px; }
+    .sn-home .sn-home__range-label { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 8px; color: rgba(252, 254, 255, .7); font-family: var(--sn-font-mono); font-size: var(--home-label); line-height: 1.5; }
+    .sn-home .sn-home__range-label strong { color: var(--sn-white); white-space: nowrap; }
+    .sn-home .sn-home__range-track { height: 10px; background: rgba(252, 254, 255, .14); }
+    .sn-home .sn-home__range-fill { height: 100%; background: var(--sn-cyan); }
+    .sn-home .sn-home__range-fill--core { width: 36.36%; }
+    .sn-home .sn-home__range-row--custom .sn-home__range-fill { width: 100%; background: var(--sn-white); }
+    .sn-home .sn-home__range-axis { position: relative; height: 18px; margin-top: 8px; color: rgba(252, 254, 255, .55); font-family: var(--sn-font-mono); font-size: var(--home-label); line-height: 1.5; }
+    .sn-home .sn-home__range-axis span { position: absolute; top: 0; }
+    .sn-home .sn-home__range-axis span:first-child { left: 0; }
+    .sn-home .sn-home__range-axis span:nth-child(2) { left: 36.36%; transform: translateX(-50%); }
+    .sn-home .sn-home__range-axis span:last-child { right: 0; }
+    .sn-home .sn-home__range small { display: block; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(252, 254, 255, .18); color: rgba(252, 254, 255, .68); font-size: .8rem; line-height: 1.65; }
+
+    /* NPI process: a four-column ledger that stacks into labelled records on phones. */
+    .sn-home .sn-home__process-wrap { margin-top: 36px; }
+    .sn-home .sn-home__process-table { width: 100%; border-collapse: collapse; text-align: left; }
+    .sn-home .sn-home__process-table thead th { padding: 0 24px 12px 0; border-bottom: 1px solid var(--sn-line-strong); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: var(--home-label); font-weight: 600; letter-spacing: .08em; line-height: 1.5; text-transform: uppercase; vertical-align: bottom; }
+    .sn-home .sn-home__process-table thead th:last-child { padding-right: 0; }
+    .sn-home .sn-home__process-table tbody tr { border-bottom: 1px solid var(--sn-line); }
+    .sn-home .sn-home__process-table tbody th { width: 24%; padding: 20px 24px 20px 0; vertical-align: top; }
+    .sn-home .sn-home__process-table tbody th span { display: block; margin-bottom: 6px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: var(--home-label); font-weight: 600; letter-spacing: .08em; line-height: 1.5; text-transform: uppercase; }
+    .sn-home .sn-home__process-table tbody th h3 { margin: 0; font-size: 1rem; line-height: 1.4; }
+    .sn-home .sn-home__process-table tbody td { padding: 20px 24px; color: var(--sn-text-muted); font-size: .84rem; line-height: 1.6; vertical-align: top; }
+    .sn-home .sn-home__process-table tbody td:last-child { padding-right: 0; }
+    .sn-home .sn-home__mobile-label { display: none; }
+    .sn-home .sn-home__timing { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 24px; border-top: 1px solid var(--sn-line-strong); }
+    .sn-home .sn-home__timing p { margin: 0; padding: 16px 24px 0 0; color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-home .sn-home__timing p + p { padding-right: 0; padding-left: 24px; border-left: 1px solid var(--sn-line); }
+    .sn-home .sn-home__timing strong { display: block; margin-bottom: 4px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .08em; line-height: 1.5; text-transform: uppercase; }
+
+    /* Supporting lines: one image-led entry, two indexed rows. */
+    .sn-home .sn-home__support { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr); gap: clamp(24px, 3.4vw, 44px); align-items: stretch; margin-top: 36px; }
+    .sn-home .sn-home__support-feature { display: flex; flex-direction: column; border: 1px solid var(--sn-line); background: var(--sn-card); }
+    .sn-home .sn-home__support-feature > img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-home .sn-home__support-body { padding: clamp(22px, 2.6vw, 30px); }
+    .sn-home .sn-home__support-body p, .sn-home .sn-home__support-row p { color: var(--sn-text-muted); font-size: .88rem; line-height: 1.65; }
+    .sn-home .sn-home__support-list { display: flex; flex-direction: column; border-top: 1px solid var(--sn-line-strong); }
+    .sn-home .sn-home__support-row { display: grid; flex: 1; grid-template-columns: 104px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--sn-line); }
+    .sn-home .sn-home__support-row img { width: 104px; aspect-ratio: 1; padding: 8px; object-fit: contain; background: var(--sn-paper-muted); }
+    .sn-home .sn-home__support-row h3 { font-size: 1.05rem; }
+    .sn-home .sn-home__support-row .sn-home__fine-print { margin: 10px 0 0; color: var(--sn-text-muted); font-size: .75rem; line-height: 1.55; }
+
+    /* Resources: a document index, not another card grid. */
+    .sn-home .sn-home__resource-index { margin-top: 36px; border-top: 1px solid var(--sn-line-strong); }
+    .sn-home .sn-home__resource-row { display: grid; grid-template-columns: 52px minmax(0, 1.3fr) minmax(200px, .65fr) max-content; gap: clamp(16px, 2.6vw, 32px); align-items: start; padding: 22px 0; border-bottom: 1px solid var(--sn-line); }
+    .sn-home .sn-home__resource-no { padding-top: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .08em; line-height: 1.5; }
+    .sn-home .sn-home__resource-row h3 { margin: 0; font-size: 1.06rem; }
+    .sn-home .sn-home__resource-row p { margin: 8px 0 0; color: var(--sn-text-muted); font-size: .86rem; line-height: 1.65; }
+    .sn-home .sn-home__field-preview { padding: 12px 14px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: var(--home-label); line-height: 1.75; }
+    .sn-home .sn-home__resource-action { display: flex; justify-content: flex-end; }
+    .sn-home .sn-home__resource-action .sn-home__text-link { margin-top: 0; white-space: nowrap; }
+
+    /* FAQ: sticky question header beside the accordion. */
+    .sn-home .sn-home__faq-grid { display: grid; grid-template-columns: minmax(260px, .66fr) minmax(0, 1.34fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+    .sn-home .sn-home__faq-rail { position: sticky; top: 104px; }
+    .sn-home .sn-home__faq-rail h2 { margin-top: 18px; font-size: clamp(1.9rem, 2.6vw, 2.5rem); }
+    .sn-home .sn-home__faq-rail > p { color: var(--sn-text-muted); font-size: .92rem; }
+    .sn-home .sn-home__faq-rail .sn-home__text-link { margin-top: 4px; }
+    .sn-home .sn-home__faq details { border-bottom: 1px solid var(--sn-line); }
+    .sn-home .sn-home__faq details:first-of-type { border-top: 1px solid var(--sn-line-strong); }
+    .sn-home .sn-home__faq summary { position: relative; padding: 22px 44px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.02rem; font-weight: 700; line-height: 1.45; list-style: none; cursor: pointer; }
+    .sn-home .sn-home__faq summary::-webkit-details-marker { display: none; }
+    .sn-home .sn-home__faq summary::after { position: absolute; top: 20px; right: 6px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.2rem; line-height: 1; content: '+'; }
+    .sn-home .sn-home__faq details[open] summary::after { content: '−'; }
+    .sn-home .sn-home__faq details p { max-width: 78ch; padding: 0 40px 20px 0; color: var(--sn-text-muted); font-size: .88rem; line-height: 1.7; }
+
+    /* RFQ: a flat request sheet, not a promotional panel. */
+    .sn-home .sn-home__rfq { padding: clamp(28px, 4vw, 52px); border: 1px solid rgba(34, 197, 217, .25); background: var(--sn-ink-deep); }
+    .sn-home .sn-home__rfq-sheet-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding-bottom: 16px; border-bottom: 1px solid rgba(252, 254, 255, .22); color: rgba(252, 254, 255, .58); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .09em; line-height: var(--home-label-lh); text-transform: uppercase; }
+    .sn-home .sn-home__rfq-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 64px); margin-top: 30px; }
+    .sn-home .sn-home__rfq h2, .sn-home .sn-home__rfq h3 { color: var(--sn-white); }
+    .sn-home .sn-home__rfq p, .sn-home .sn-home__rfq li { color: rgba(252, 254, 255, .78); }
+    .sn-home .sn-home__rfq ol { margin: 18px 0 0; padding: 0; list-style: none; counter-reset: rfqsteps; }
+    .sn-home .sn-home__rfq ol li { position: relative; padding: 12px 0 12px 34px; border-bottom: 1px solid rgba(252, 254, 255, .14); counter-increment: rfqsteps; font-size: .88rem; }
+    .sn-home .sn-home__rfq ol li::before { position: absolute; top: 12px; left: 0; color: var(--sn-tech); font-family: var(--sn-font-mono); font-size: var(--home-label); line-height: 1.6; content: '0' counter(rfqsteps); }
+    .sn-home .sn-home__rfq-panel { padding: clamp(24px, 3vw, 34px); border: 1px solid rgba(252, 254, 255, .2); background: rgba(252, 254, 255, .03); }
+    .sn-home .sn-home__rfq-panel h3 { margin-bottom: 16px; }
+    .sn-home .sn-home__rfq-panel ul { margin: 0 0 18px; padding: 0; list-style: none; columns: 2; column-gap: 26px; counter-reset: rfqfields; }
+    .sn-home .sn-home__rfq-panel li { position: relative; padding: 8px 0 8px 30px; border-bottom: 1px solid rgba(252, 254, 255, .12); counter-increment: rfqfields; break-inside: avoid; font-size: .84rem; line-height: 1.55; }
+    .sn-home .sn-home__rfq-panel li::before { position: absolute; top: 8px; left: 0; color: var(--sn-tech); font-family: var(--sn-font-mono); font-size: .75rem; line-height: 1.6; content: '0' counter(rfqfields); }
+    .sn-home .sn-home__rfq-panel p { margin-bottom: 12px; font-size: .86rem; line-height: 1.65; }
+    .sn-home .sn-home__rfq-panel p:last-child { margin-bottom: 0; }
+    .sn-home .sn-home__rfq a:not(.sn-btn) { color: var(--sn-tech); }
+
+    @media (max-width: 1023px) {
+      .sn-home .sn-home__rail-viewport { margin-inline: calc(-1 * var(--sn-gutter)); padding-inline: var(--sn-gutter); scroll-padding-inline: var(--sn-gutter); scroll-snap-type: x mandatory; }
+      .sn-home .sn-home__plate { width: min(78vw, 360px); flex-basis: min(78vw, 360px); scroll-snap-align: start; }
+      .sn-home .sn-home__plate:first-child { width: min(84vw, 400px); flex-basis: min(84vw, 400px); }
+      .sn-home .sn-home__rail-foot .sn-btn { margin-left: 0; }
+    }
+    @media (max-width: 900px) {
+      .sn-home .sn-home__hero { min-height: 0; padding-block: 132px 64px; background: linear-gradient(180deg, rgba(5, 16, 27, .94) 0%, rgba(5, 16, 27, .84) 55%, rgba(5, 16, 27, .96) 100%), url("https://rf-sonne.com/wp-content/uploads/2026/10/hero-satellite-earth-station-wide.webp") 64% 38% / cover no-repeat, #05101B; }
+      .sn-home .sn-home__hero::before { opacity: .22; }
+      .sn-home .sn-home__record-head { grid-template-columns: 1fr; gap: 12px; }
+      .sn-home .sn-home__record-meta { flex-direction: row; flex-wrap: wrap; gap: 4px 18px; }
+      .sn-home .sn-home__evidence-grid { grid-template-columns: 1fr; gap: 36px; }
+      .sn-home .sn-home__evidence-rail, .sn-home .sn-home__faq-rail { position: static; }
+      .sn-home .sn-home__evidence-plates { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .sn-home .sn-home__evidence-plates figure:first-child { grid-row: auto; }
+      .sn-home .sn-home__evidence-plates figure img { height: auto; aspect-ratio: 16 / 10; }
+      .sn-home .sn-home__fit-grid { grid-template-columns: 1fr; }
+      .sn-home .sn-home__range { order: -1; }
+      .sn-home .sn-home__support { grid-template-columns: 1fr; }
+      .sn-home .sn-home__support-row { flex: none; }
+      .sn-home .sn-home__faq-grid { grid-template-columns: 1fr; gap: 28px; }
+      .sn-home .sn-home__resource-row { grid-template-columns: 40px minmax(0, 1fr) minmax(0, 1fr); gap: 16px 24px; }
+      .sn-home .sn-home__resource-no { grid-row: 1 / span 2; }
+      .sn-home .sn-home__resource-copy { grid-column: 2 / 3; }
+      .sn-home .sn-home__field-preview { grid-column: 3 / 4; grid-row: 1 / 3; align-self: start; }
+      .sn-home .sn-home__resource-action { grid-column: 2 / 4; justify-content: flex-start; }
+      .sn-home .sn-home__rfq-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .sn-home .sn-home__process-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-home .sn-home__process-table, .sn-home .sn-home__process-table tbody, .sn-home .sn-home__process-table tr, .sn-home .sn-home__process-table th, .sn-home .sn-home__process-table td { display: block; width: 100%; }
+      .sn-home .sn-home__process-table tbody tr { padding: 20px 0; }
+      .sn-home .sn-home__process-table tbody th { width: auto; padding: 0 0 14px; }
+      .sn-home .sn-home__process-table tbody td { padding: 0 0 12px; }
+      .sn-home .sn-home__process-table tbody td:last-child { padding-bottom: 0; }
+      .sn-home .sn-home__mobile-label { display: block; margin-bottom: 3px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: var(--home-label); letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; }
+      .sn-home .sn-home__evidence-body .sn-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-home .sn-home__evidence-body .sn-table, .sn-home .sn-home__evidence-body .sn-table tbody, .sn-home .sn-home__evidence-body .sn-table tr, .sn-home .sn-home__evidence-body .sn-table th, .sn-home .sn-home__evidence-body .sn-table td { display: block; width: 100%; box-sizing: border-box; }
+      .sn-home .sn-home__evidence-body .sn-table tbody tr { padding: 18px; border-bottom: 1px solid var(--sn-line); }
+      .sn-home .sn-home__evidence-body .sn-table tbody tr:last-child { border-bottom: 0; }
+      .sn-home .sn-home__evidence-body .sn-table tbody th { padding: 0 0 10px; border: 0; background: transparent; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1rem; font-weight: 600; }
+      .sn-home .sn-home__evidence-body .sn-table tbody td { padding: 0 0 10px; border: 0; font-size: .85rem; }
+      .sn-home .sn-home__evidence-body .sn-table tbody td:last-child { padding-bottom: 0; }
+      .sn-home .sn-home__timing { grid-template-columns: 1fr; }
+      .sn-home .sn-home__timing p { padding: 14px 0 0; }
+      .sn-home .sn-home__timing p + p { margin-top: 12px; padding-left: 0; border-top: 1px solid var(--sn-line); border-left: 0; }
+      .sn-home .sn-home__resource-row { grid-template-columns: 32px minmax(0, 1fr); gap: 12px 16px; }
+      .sn-home .sn-home__resource-no { grid-row: auto; }
+      .sn-home .sn-home__resource-copy, .sn-home .sn-home__field-preview, .sn-home .sn-home__resource-action { grid-column: 2 / 3; grid-row: auto; }
+      .sn-home .sn-home__rfq-panel ul { columns: 1; }
+      .sn-home .sn-home__hero-meta { gap: 8px 20px; }
+    }
+    @media (max-width: 768px) {
+      .sn-home .sn-home__hero .sn-home__eyebrow { margin-bottom: 12px; }
+      .sn-home .sn-home__hero-copy > p:first-of-type { font-size: 1rem; line-height: 1.65; }
+      .sn-home .sn-home__hero .sn-home__actions { margin-top: 20px; }
+    }
+    @media (max-width: 560px) {
+      .sn-home .sn-home__rail-foot .sn-btn, .sn-home .sn-home__actions .sn-btn { width: 100%; }
+      .sn-home .sn-home__rail-foot { align-items: flex-start; }
+      .sn-home .sn-home__rail-bar { flex-basis: 100%; order: 3; }
+      .sn-home .sn-home__rail-hint { white-space: normal; }
+      .sn-home .sn-home__trace-head span:last-child { margin-left: auto; }
+      .sn-home .sn-home__support-row { grid-template-columns: 80px minmax(0, 1fr); gap: 14px; }
+      .sn-home .sn-home__support-row img { width: 80px; }
+      .sn-home .sn-home__range-label { flex-wrap: wrap; gap: 4px 12px; }
+      .sn-home .sn-home__rfq-sheet-head { flex-direction: column; gap: 4px; }
+      .sn-home .sn-home__boundary-head { flex-direction: column; gap: 2px; }
+    }
+    @media (max-width: 480px) {
+      .sn-home .sn-home__plate-spec > div { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 8px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sn-home .sn-home__plate:hover { transform: none; }
+    }
+  </style>
+
+  <section class="sn-hero sn-home__hero" aria-labelledby="home-title">
+    <div class="sn-container sn-home__hero-inner">
+      <div class="sn-home__hero-copy">
+        <span class="sn-home__eyebrow">RF engineering &amp; precision manufacturing · Cixi, Ningbo</span>
+        <h1 id="home-title">Custom RF &amp; Microwave Components, Engineered for Repeatable Production</h1>
+        <p>SONNE engineers and manufactures RF, microwave and precision mechanical components. Founded in 2015 with ISO 9001, we connect custom evaluation, prototyping and production at our Cixi, Ningbo base.</p>
+        <p class="sn-home__slogan">Engineered for RF Performance. Built for Repeatable Production.</p>
+        <div class="sn-home__actions">
+          <a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request a Quote</a>
+          <a class="sn-btn sn-btn--secondary" href="/contact/">Talk to an RF Engineer</a>
+        </div>
+        <div class="sn-home__boundary">
+          <div class="sn-home__boundary-head"><span>Portfolio boundary</span><span>Core / Custom</span></div>
+          <p>Core production portfolio: <strong>DC–40 GHz</strong>. Selected custom microwave and waveguide projects can reach <strong>up to 110 GHz</strong>, depending on topology, mechanical requirements and validation.</p>
+        </div>
+        <p class="sn-home__hero-caption">Representative satellite earth-station RF environment. SONNE supplies waveguide, diplexer and filter assemblies for Ku/Ka-band earth-station and backhaul projects.</p>
+      </div>
+      <div class="sn-home__hero-meta">
+        <span><b>Est.</b> 2015</span>
+        <span><b>QMS</b> ISO 9001</span>
+        <span><b>Base</b> Cixi · Ningbo · CN</span>
+        <span><b>Focus</b> RF / microwave / precision</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-home__core" aria-labelledby="home-core-title">
+    <div class="sn-container">
+      <div class="sn-home__record-head">
+        <div class="sn-home__record-meta"><span><b>01</b> / Product lines</span><span>5 entries · select by function</span></div>
+        <div class="sn-home__record-title">
+          <h2 id="home-core-title">Explore Five Core RF and Precision Product Lines</h2>
+          <p>Start with the function or mechanical problem you need to solve. Each line supports a focused selection path and a custom engineering review when a standard option does not fit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sn-home__rail" data-rail>
+      <div class="sn-home__rail-stage" data-rail-stage>
+        <div class="sn-container sn-home__rail-inner">
+          <div class="sn-home__trace">
+            <div class="sn-home__trace-head"><span>Index trace</span><span>Plate 01–05</span><span>Not a measurement</span></div>
+            <svg class="sn-home__trace-svg" viewBox="0 0 1000 36" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <defs>
+                <clipPath id="sn-home-trace-clip" clipPathUnits="userSpaceOnUse">
+                  <rect data-trace-clip x="0" y="0" width="0" height="36"/>
+                </clipPath>
+              </defs>
+              <path class="sn-home__trace-base" d="M0 26 H92 V18 H184 V26 H276 V14 H368 V26 H460 V10 H552 V26 H644 V16 H736 V26 H828 V12 H920 V26 H1000" pathLength="1"/>
+              <path class="sn-home__trace-draw" data-trace-progress clip-path="url(#sn-home-trace-clip)" d="M0 26 H92 V18 H184 V26 H276 V14 H368 V26 H460 V10 H552 V26 H644 V16 H736 V26 H828 V12 H920 V26 H1000"/>
+            </svg>
+            <div class="sn-home__trace-ticks" aria-hidden="true">
+              <span class="is-active" data-trace-tick>01</span>
+              <span data-trace-tick>02</span>
+              <span data-trace-tick>03</span>
+              <span data-trace-tick>04</span>
+              <span data-trace-tick>05</span>
+            </div>
+          </div>
+          <div class="sn-home__rail-viewport" data-rail-viewport tabindex="0" role="region" aria-label="Five product line plates">
+            <div class="sn-home__rail-track" data-rail-track>
+              <article class="sn-home__plate">
+                <figure class="sn-home__plate-figure">
+                  <div class="sn-home__plate-media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="lazy" decoding="async"></div>
+                  <figcaption class="sn-home__plate-tag"><span>Plate 01</span><span>RF / filters</span></figcaption>
+                </figure>
+                <div class="sn-home__plate-body">
+                  <h3>RF &amp; Microwave Filters</h3>
+                  <p>Define the passband and the signals that must be rejected.</p>
+                  <dl class="sn-home__plate-spec">
+                    <div><dt>Review</dt><dd>Frequency, bandwidth and rejection</dd></div>
+                    <div><dt>Structures</dt><dd>Cavity, waveguide and custom structures</dd></div>
+                  </dl>
+                  <a class="sn-home__text-link" href="/products/rf-microwave-filters/">Explore filters <span aria-hidden="true">&nbsp;→</span></a>
+                </div>
+              </article>
+              <article class="sn-home__plate">
+                <figure class="sn-home__plate-figure">
+                  <div class="sn-home__plate-media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave.webp" alt="Microwave and RF components" width="1024" height="1024" loading="lazy" decoding="async"></div>
+                  <figcaption class="sn-home__plate-tag"><span>Plate 02</span><span>Waveguide</span></figcaption>
+                </figure>
+                <div class="sn-home__plate-body">
+                  <h3>Waveguide &amp; Microwave</h3>
+                  <p>Connect high-frequency performance to a defined mechanical interface.</p>
+                  <dl class="sn-home__plate-spec">
+                    <div><dt>Interface</dt><dd>Frequency band and waveguide flange</dd></div>
+                    <div><dt>Configuration</dt><dd>Polarization, OMT, OCU and assemblies</dd></div>
+                  </dl>
+                  <a class="sn-home__text-link" href="/products/waveguide-components/">Explore waveguide <span aria-hidden="true">&nbsp;→</span></a>
+                </div>
+              </article>
+              <article class="sn-home__plate">
+                <figure class="sn-home__plate-figure">
+                  <div class="sn-home__plate-media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-combiner-v2.webp" alt="RF combiner" width="1024" height="571" loading="lazy" decoding="async"></div>
+                  <figcaption class="sn-home__plate-tag"><span>Plate 03</span><span>Combiners</span></figcaption>
+                </figure>
+                <div class="sn-home__plate-body">
+                  <h3>Combiners &amp; Duplexers</h3>
+                  <p>Combine or separate frequency paths without losing the port logic.</p>
+                  <dl class="sn-home__plate-spec">
+                    <div><dt>Band plan</dt><dd>Band plan and port relationships</dd></div>
+                    <div><dt>Targets</dt><dd>Isolation, power and PIM targets</dd></div>
+                  </dl>
+                  <a class="sn-home__text-link" href="/products/rf-combiners/">Explore combiners <span aria-hidden="true">&nbsp;→</span></a>
+                </div>
+              </article>
+              <article class="sn-home__plate">
+                <figure class="sn-home__plate-figure">
+                  <div class="sn-home__plate-media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-basestation.webp" alt="Base station RF infrastructure" width="1024" height="1024" loading="lazy" decoding="async"></div>
+                  <figcaption class="sn-home__plate-tag"><span>Plate 04</span><span>Base station</span></figcaption>
+                </figure>
+                <div class="sn-home__plate-body">
+                  <h3>Base Station RF</h3>
+                  <p>Evaluate passive RF hardware in its actual base-station context.</p>
+                  <dl class="sn-home__plate-spec">
+                    <div><dt>Context</dt><dd>4T4R/8TR and N28/N78 project contexts</dd></div>
+                    <div><dt>Scope</dt><dd>Filters, combiners and RRU-related needs</dd></div>
+                  </dl>
+                  <a class="sn-home__text-link" href="/products/base-station-rf/">Explore base station RF <span aria-hidden="true">&nbsp;→</span></a>
+                </div>
+              </article>
+              <article class="sn-home__plate">
+                <figure class="sn-home__plate-figure">
+                  <div class="sn-home__plate-media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-cabinet.webp" alt="Telecom enclosure cabinet" width="1024" height="1024" loading="lazy" decoding="async"></div>
+                  <figcaption class="sn-home__plate-tag"><span>Plate 05</span><span>Enclosures</span></figcaption>
+                </figure>
+                <div class="sn-home__plate-body">
+                  <h3>Precision Enclosures</h3>
+                  <p>Turn equipment, thermal and interface constraints into a buildable housing.</p>
+                  <dl class="sn-home__plate-spec">
+                    <div><dt>Drawings</dt><dd>2D/3D drawings and GD&amp;T</dd></div>
+                    <div><dt>Requirements</dt><dd>Thermal, shielding and assembly needs</dd></div>
+                  </dl>
+                  <a class="sn-home__text-link" href="/products/precision-enclosures/">Explore enclosures <span aria-hidden="true">&nbsp;→</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="sn-home__rail-foot">
+            <span class="sn-home__rail-count" data-rail-count aria-hidden="true">01 / 05</span>
+            <div class="sn-home__rail-bar" aria-hidden="true"><span data-rail-bar></span></div>
+            <span class="sn-home__rail-hint">Scroll or swipe to traverse</span>
+            <a class="sn-btn sn-btn--secondary" href="/products/">Explore Product Lines</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="home-evidence-title">
+    <div class="sn-container sn-home__evidence-grid">
+      <div class="sn-home__evidence-rail">
+        <div class="sn-home__rail-label"><span><b>02</b> / Manufacturing evidence</span><span>4 capabilities</span></div>
+        <h2 id="home-evidence-title">Verify the Manufacturing and Test Capabilities behind Your RFQ</h2>
+        <p>Supplier review should connect equipment to an engineering output. Use these facts and images as a starting point, then define product-specific acceptance criteria and records in the project test plan.</p>
+        <dl class="sn-home__facts">
+          <div><dt>QMS</dt><dd><strong>ISO 9001</strong>Quality management system at the Cixi, Ningbo manufacturing base.</dd></div>
+          <div><dt>CNC</dt><dd><strong>50+</strong>High-precision CNC machines supporting precision structure realization.</dd></div>
+          <div><dt>Capacity</dt><dd><strong>500,000+</strong>Annual production capacity; each project is assessed by process, quantity and capacity.</dd></div>
+          <div><dt>Floor area</dt><dd><strong>≈20,000 m²</strong>Integrated office and manufacturing building, based on the public 2025 update.</dd></div>
+        </dl>
+      </div>
+      <div class="sn-home__evidence-body">
+        <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="home-evidence-title">
+          <table class="sn-table">
+            <thead><tr><th scope="col">Capability</th><th scope="col">What it supports</th><th scope="col">What to agree in your project</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Precision CNC machining</th><td><span class="sn-home__mobile-label">What it supports</span>Cavities, housings, interfaces and other drawing-defined structures</td><td><span class="sn-home__mobile-label">What to agree in your project</span>Critical dimensions, GD&amp;T, material, surface requirements and inspection records</td></tr>
+              <tr><th scope="row">VNA testing</th><td><span class="sn-home__mobile-label">What it supports</span>S-parameter verification and RF tuning workflows</td><td><span class="sn-home__mobile-label">What to agree in your project</span>Frequency range, ports, calibration or reference plane, limits and output files</td></tr>
+              <tr><th scope="row">PIM &amp; reliability testing</th><td><span class="sn-home__mobile-label">What it supports</span>Project-specific performance and environmental verification</td><td><span class="sn-home__mobile-label">What to agree in your project</span>Test setup, conditions, acceptance limits and applicable product scope</td></tr>
+              <tr><th scope="row">Matrix-switch automation</th><td><span class="sn-home__mobile-label">What it supports</span>Multi-port and batch RF test workflows</td><td><span class="sn-home__mobile-label">What to agree in your project</span>Applicable measurements, reporting and traceability, not a universal 100% test promise</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sn-home__evidence-plates">
+          <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-tuning-line.webp" alt="Technicians tuning RF filters with vector network analyzers" width="1891" height="1064" loading="lazy" decoding="async"><figcaption>VNA tuning line: technicians adjusting and checking RF filters.</figcaption></figure>
+          <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-cavity-milling.webp" alt="CNC milling of an RF filter cavity" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>CNC cavity milling: machining the drawing-defined RF structure.</figcaption></figure>
+          <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-rig.webp" alt="RF test rig" width="1024" height="576" loading="lazy" decoding="async"><figcaption>RF test rig: verification is configured to the product and agreed test plan.</figcaption></figure>
+        </div>
+        <div class="sn-home__actions">
+          <a class="sn-btn sn-btn--primary" href="/engineering/testing-quality/">Review Engineering &amp; Quality</a>
+          <a class="sn-btn sn-btn--secondary" href="/engineering/manufacturing/">Review Manufacturing</a>
+          <a class="sn-home__text-link" href="/about/factory/">Inspect the factory evidence <span aria-hidden="true">&nbsp;→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="home-fit-title">
+    <div class="sn-container">
+      <div class="sn-home__record-head">
+        <div class="sn-home__record-meta"><span><b>03</b> / Fit review</span><span>5 inputs · boundary first</span></div>
+        <div class="sn-home__record-title">
+          <h2 id="home-fit-title">Match Frequency, Topology and Validation before You Specify a Part</h2>
+          <p>Frequency alone does not establish feasibility. Use the portfolio boundary to screen the project, then submit the electrical and mechanical conditions that determine the actual design and verification path.</p>
+        </div>
+      </div>
+      <div class="sn-home__fit-grid">
+        <div class="sn-home__fit-copy">
+          <h3>Five inputs for a first fit review</h3>
+          <ol class="sn-home__checklist">
+            <li><strong>Frequency &amp; bandwidth</strong><span>Passband, Tx/Rx bands and rejection points as applicable.</span></li>
+            <li><strong>Topology or function</strong><span>What the component must do within the system.</span></li>
+            <li><strong>Power, PIM &amp; isolation</strong><span>Include limits and test conditions where relevant.</span></li>
+            <li><strong>Mechanical envelope</strong><span>Interfaces, connectors or flanges, dimensions and assembly.</span></li>
+            <li><strong>Quantity &amp; validation</strong><span>Project stage, expected volume and required records.</span></li>
+          </ol>
+          <p class="sn-home__table-note">Outside the stated boundary? You can still submit the requirement for assessment; submission does not imply that every request can be manufactured or reverse-engineered. Browse by <a href="/products/">product function</a> or start from an <a href="/solutions/">application</a> if the device name is unclear.</p>
+          <div class="sn-home__section-action"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Check Your Project Fit</a></div>
+        </div>
+        <div class="sn-home__range" aria-label="Frequency capability boundary">
+          <div class="sn-home__range-head"><span>Portfolio boundary</span><span>GHz</span></div>
+          <h3>Two distinct portfolio ranges</h3>
+          <div class="sn-home__range-row">
+            <div class="sn-home__range-label"><span>Core production portfolio</span><strong>DC–40 GHz</strong></div>
+            <div class="sn-home__range-track" aria-hidden="true"><div class="sn-home__range-fill sn-home__range-fill--core"></div></div>
+          </div>
+          <div class="sn-home__range-row sn-home__range-row--custom">
+            <div class="sn-home__range-label"><span>Selected custom microwave / waveguide projects</span><strong>Up to 110 GHz</strong></div>
+            <div class="sn-home__range-track" aria-hidden="true"><div class="sn-home__range-fill"></div></div>
+          </div>
+          <div class="sn-home__range-axis" aria-hidden="true"><span>DC</span><span>40 GHz</span><span>110 GHz</span></div>
+          <small>The 110 GHz endpoint requires project-specific evaluation and depends on topology, mechanical requirements and validation. It is not a universal range for every product or model.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="home-process-title">
+    <div class="sn-container">
+      <div class="sn-home__record-head">
+        <div class="sn-home__record-meta"><span><b>04</b> / NPI sequence</span><span>4 phases · 3 gates each</span></div>
+        <div class="sn-home__record-title">
+          <h2 id="home-process-title">Move from Prototype to Pilot Run to Repeatable Production</h2>
+          <p>Each stage has a buyer input, a SONNE output and a confirmation gate. The purpose is to carry agreed requirements forward rather than treating a successful sample as automatic proof of production readiness.</p>
+        </div>
+      </div>
+      <div class="sn-home__process-wrap">
+        <table class="sn-home__process-table">
+          <caption class="sn-home__visually-hidden">Four-stage path from prototype to repeatable production, with buyer input, SONNE output and confirmation gate for each phase.</caption>
+          <thead>
+            <tr><th scope="col">Phase</th><th scope="col">Buyer input</th><th scope="col">SONNE output</th><th scope="col">Confirmation gate</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span>Phase 01</span><h3>RFQ &amp; Engineering Review</h3></th>
+              <td><span class="sn-home__mobile-label">Buyer input</span>Specification, band plan, drawings, application and quantity.</td>
+              <td><span class="sn-home__mobile-label">SONNE output</span>Feasibility questions and proposed evaluation path.</td>
+              <td><span class="sn-home__mobile-label">Confirmation gate</span>Requirements and open items identified.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span>Phase 02</span><h3>Prototype Verification</h3></th>
+              <td><span class="sn-home__mobile-label">Buyer input</span>Critical targets, test conditions and acceptance priorities.</td>
+              <td><span class="sn-home__mobile-label">SONNE output</span>Prototype samples and agreed test data.</td>
+              <td><span class="sn-home__mobile-label">Confirmation gate</span>Design and performance review against defined requirements.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span>Phase 03</span><h3>Pilot Run Baseline</h3></th>
+              <td><span class="sn-home__mobile-label">Buyer input</span>Production expectations, reporting and acceptance criteria.</td>
+              <td><span class="sn-home__mobile-label">SONNE output</span>Pilot output and process or test baseline confirmation.</td>
+              <td><span class="sn-home__mobile-label">Confirmation gate</span>Controlled requirements agreed before production.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span>Phase 04</span><h3>Mass Production</h3></th>
+              <td><span class="sn-home__mobile-label">Buyer input</span>Order requirements and any controlled changes.</td>
+              <td><span class="sn-home__mobile-label">SONNE output</span>Batch inspection and project-agreed records.</td>
+              <td><span class="sn-home__mobile-label">Confirmation gate</span>Verification against the documented project requirements.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-home__timing">
+        <p><strong>Initial response:</strong>A complete RFQ typically receives initial engineering feedback in about 24 hours. This is not a guaranteed quotation or delivery commitment.</p>
+        <p><strong>Timing reference:</strong>The fastest prototype reference is about two weeks, not a general lead-time promise. Production timing is assessed from drawings, quantity, process and capacity.</p>
+      </div>
+      <div class="sn-home__actions"><a class="sn-btn sn-btn--primary" href="/engineering/npi/">Plan Your NPI Path</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare RFQ Inputs</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="home-support-title">
+    <div class="sn-container">
+      <div class="sn-home__record-head">
+        <div class="sn-home__record-meta"><span><b>05</b> / Supporting lines</span><span>3 entries · BOM completion</span></div>
+        <div class="sn-home__record-title">
+          <h2 id="home-support-title">Complete the BOM with Supporting RF, FTTX and Accessory Lines</h2>
+          <p>These secondary entries support indoor coverage, fiber distribution and system completion. They sit alongside, not within, the five dominant core product lines.</p>
+        </div>
+      </div>
+      <div class="sn-home__support">
+        <article class="sn-home__support-feature">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-ibs.webp" alt="In-building wireless coverage" width="1024" height="1024" loading="lazy" decoding="async">
+          <div class="sn-home__support-body">
+            <span class="sn-home__type"><b>01</b> Supporting line</span>
+            <h3>IBS / DAS Components</h3>
+            <p>Low-PIM splitters and couplers, plus POI-related requirements for in-building coverage systems.</p>
+            <a class="sn-home__text-link" href="/products/ibs-das-components/">View IBS / DAS <span aria-hidden="true">&nbsp;→</span></a>
+          </div>
+        </article>
+        <div class="sn-home__support-list">
+          <article class="sn-home__support-row">
+            <img src="https://rf-sonne.com/wp-content/uploads/2026/10/market-ftth.webp" alt="FTTH fiber access network" width="1024" height="1024" loading="lazy" decoding="async">
+            <div>
+              <span class="sn-home__type"><b>02</b> Supporting line</span>
+              <h3>FTTX Fiber Distribution</h3>
+              <p>Fiber distribution and outdoor connection structures for FTTX routing and installation requirements.</p>
+              <a class="sn-home__text-link" href="/products/fttx-fiber-distribution/">View FTTX <span aria-hidden="true">&nbsp;→</span></a>
+            </div>
+          </article>
+          <article class="sn-home__support-row">
+            <img src="https://rf-sonne.com/wp-content/uploads/2026/10/cable-assembly-se-ca01-sma-008-01.webp" alt="SONNE high frequency cable assembly SE-CA01-SMA-008-01" width="720" height="720" loading="lazy" decoding="async">
+            <div>
+              <span class="sn-home__type">Project accessories</span>
+              <h3>RF Accessories</h3>
+              <p>Cable assemblies, attenuators, loads and related items that help complete a defined system BOM.</p>
+              <a class="sn-home__text-link" href="/products/rf-accessories/">View RF accessories <span aria-hidden="true">&nbsp;→</span></a>
+              <p class="sn-home__fine-print">Image shows one cable assembly example, not the complete accessory range.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <p class="sn-home__table-note">Project-specific accessory requirements are reviewed individually; no blanket stock or complete-BOM commitment is implied. Use one <a href="/request-a-quote/">RFQ</a> to identify all relevant lines.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="home-resources-title">
+    <div class="sn-container">
+      <div class="sn-home__record-head">
+        <div class="sn-home__record-meta"><span><b>06</b> / Engineering resources</span><span>3 references · RFQ prep</span></div>
+        <div class="sn-home__record-title">
+          <h2 id="home-resources-title">Use Engineering Guides to Prepare a Better RFQ</h2>
+          <p>Turn an early requirement into a reviewable engineering input. These resources help your team align on fields, structural trade-offs and terminology before contacting a supplier.</p>
+        </div>
+      </div>
+      <div class="sn-home__resource-index">
+        <article class="sn-home__resource-row">
+          <span class="sn-home__resource-no">01</span>
+          <div class="sn-home__resource-copy">
+            <span class="sn-home__type">Checklist</span>
+            <h3>RFQ Parameter Checklist</h3>
+            <p>Separate must-have electrical targets from mechanical constraints and open items. A useful band plan identifies every port, frequency range and signal direction.</p>
+          </div>
+          <div class="sn-home__field-preview">Function / Band &amp; bandwidth<br>Power / PIM / Isolation<br>Interface / Envelope / Quantity</div>
+          <div class="sn-home__resource-action"><a class="sn-home__text-link" href="/resources/rfq-guide/">Read the RFQ Guide <span aria-hidden="true">&nbsp;→</span></a></div>
+        </article>
+        <article class="sn-home__resource-row">
+          <span class="sn-home__resource-no">02</span>
+          <div class="sn-home__resource-copy">
+            <span class="sn-home__type">Selection table</span>
+            <h3>Filter Structure Selection</h3>
+            <p>Compare cavity and waveguide approaches by frequency, loss, rejection, power, size and interface. Evaluate rejection and insertion loss together rather than optimizing one isolated number.</p>
+          </div>
+          <div class="sn-home__field-preview">Structure ↔ Frequency<br>Rejection ↔ Insertion loss<br>Power ↔ Envelope ↔ Tuning</div>
+          <div class="sn-home__resource-action"><a class="sn-home__text-link" href="/resources/insights/">Explore selection insights <span aria-hidden="true">&nbsp;→</span></a></div>
+        </article>
+        <article class="sn-home__resource-row">
+          <span class="sn-home__resource-no">03</span>
+          <div class="sn-home__resource-copy">
+            <span class="sn-home__type">Terminology</span>
+            <h3>Duplexer vs Diplexer</h3>
+            <p>Clarify whether the system shares a common antenna for Tx/Rx or separates different frequency paths. Port definitions and signal directions prevent a device name from hiding the real requirement.</p>
+          </div>
+          <div class="sn-home__field-preview">Duplexer: Tx/Rx common-port context<br>Diplexer: frequency-path separation<br>Always define ports + bands</div>
+          <div class="sn-home__resource-action"><a class="sn-home__text-link" href="/resources/insights/">Clarify RF terminology <span aria-hidden="true">&nbsp;→</span></a></div>
+        </article>
+      </div>
+      <div class="sn-home__section-action"><a class="sn-btn sn-btn--secondary" href="/resources/">Browse All Engineering Resources</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="home-faq-title">
+    <div class="sn-container sn-home__faq-grid">
+      <div class="sn-home__faq-rail">
+        <div class="sn-home__rail-label"><span><b>07</b> / FAQ</span><span>5 answers</span></div>
+        <h2 id="home-faq-title">Frequently Asked Questions about Custom RF Manufacturing</h2>
+        <p>Direct answers for the first supplier-screening decision. Product-specific limits and acceptance criteria still require an engineering review.</p>
+        <a class="sn-home__text-link" href="/contact/">Ask about your project <span aria-hidden="true">&nbsp;→</span></a>
+      </div>
+      <div class="sn-home__faq">
+        <details open><summary>What frequency range can SONNE manufacture?</summary><p>SONNE's core production portfolio covers DC to 40 GHz. Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology, mechanical requirements and validation. Send your band plan and performance targets so engineering can confirm feasibility for the specific design rather than treating 110 GHz as a universal product limit.</p></details>
+        <details><summary>Can SONNE support custom designs and prototypes?</summary><p>Yes. SONNE supports custom RF evaluation and prototype development across its listed product lines. You can start with a specification, band plan, drawing or application description. Engineering reviews the requirements before defining prototype and validation steps. The fastest prototype reference is about two weeks, but actual timing depends on design, process and project confirmation.</p></details>
+        <details><summary>How does SONNE approach repeatability in mass production?</summary><p>SONNE links precision machining, assembly and project-specific RF verification through prototype, pilot and production stages. VNA, PIM, reliability and matrix-switch automated testing capabilities are available according to the product and agreed test plan. Buyers should define critical parameters, reporting and acceptance criteria during RFQ so batch verification is based on explicit requirements.</p></details>
+        <details><summary>Is SONNE a manufacturer or a trading company?</summary><p>SONNE ELECTRONICS was founded in 2015 and operates a manufacturing base in Cixi, Ningbo, with ISO 9001, more than 50 high-precision CNC machines and RF assembly and testing capabilities. Factory, machining and test evidence is available on the engineering and factory pages for buyers conducting supplier reviews.</p></details>
+        <details><summary>What should I include in an initial RFQ?</summary><p>Include the product function, frequency range and bandwidth, key RF targets, power or PIM needs where relevant, connectors or flanges, mechanical envelope, operating environment and expected quantity. Attach drawings, a band plan or an existing specification if available. Incomplete information can start a discussion, while a complete RFQ typically receives initial engineering feedback in about 24 hours.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="home-rfq-title">
+    <div class="sn-container">
+      <div class="sn-cta sn-home__rfq">
+        <div class="sn-home__rfq-sheet-head"><span>Request sheet / RFQ-01</span><span>Fields 06</span><span>Response ≈ 24 h</span></div>
+        <div class="sn-home__rfq-grid">
+          <div>
+            <h2 id="home-rfq-title">Start with Your Specification, Drawing or Application</h2>
+            <p>You do not need a finished part number to begin. Submit what you know, identify unknowns and give engineering enough context to determine the next review step.</p>
+            <ol><li>Choose one or more product lines.</li><li>Describe the application, frequency and expected quantity.</li><li>Attach a specification, band plan or 2D/3D drawing if available.</li></ol>
+            <div class="sn-home__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request a Quote</a><a class="sn-btn sn-btn--secondary" href="/contact/">Talk to an RF Engineer</a></div>
+          </div>
+          <div class="sn-home__rfq-panel">
+            <h3>What the RFQ route lets you provide</h3>
+            <ul><li>Name, company and email</li><li>Product line selection</li><li>Frequency or application</li><li>Expected quantity</li><li>Requirement notes</li><li>Supporting attachments</li></ul>
+            <p>Useful attachments include an existing specification, band plan and 2D/3D mechanical drawings. An application description is enough to start when those documents are not yet complete.</p>
+            <p>A complete RFQ typically receives initial engineering feedback in about 24 hours; this is not a quotation or delivery guarantee.</p>
+            <p>Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var rail = document.querySelector('[data-rail]');
+      if (!rail) return;
+      var stage = rail.querySelector('[data-rail-stage]');
+      var viewport = rail.querySelector('[data-rail-viewport]');
+      var track = rail.querySelector('[data-rail-track]');
+      var trace = rail.querySelector('[data-trace-progress]');
+      var traceClip = rail.querySelector('[data-trace-clip]');
+      var ticks = rail.querySelectorAll('[data-trace-tick]');
+      var count = rail.querySelector('[data-rail-count]');
+      var bar = rail.querySelector('[data-rail-bar]');
+      var wide = window.matchMedia('(min-width: 1024px)');
+      var tall = window.matchMedia('(min-height: 800px)');
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var max = 0;
+      var pinned = false;
+      var frame = 0;
+      var resizeTimer = 0;
+
+      function pad(value) {
+        return (value < 10 ? '0' : '') + value;
+      }
+
+      function setProgress(progress) {
+        progress = Math.max(0, Math.min(1, progress));
+        if (trace) {
+          if (traceClip) traceClip.setAttribute('width', String(progress * 1000));
+        }
+        if (bar) bar.style.transform = 'scaleX(' + progress + ')';
+        var index = Math.round(progress * (ticks.length - 1));
+        for (var i = 0; i < ticks.length; i++) {
+          ticks[i].classList.toggle('is-active', i === index);
+        }
+        if (count) count.textContent = pad(index + 1) + ' / ' + pad(ticks.length);
+      }
+
+      function unpin() {
+        pinned = false;
+        rail.classList.remove('is-pinned');
+        rail.style.height = '';
+        max = 0;
+        setProgress(0);
+      }
+
+      function measure() {
+        if (!wide.matches || !tall.matches || reduced.matches) {
+          unpin();
+          return;
+        }
+        rail.classList.add('is-pinned');
+        rail.style.height = 'auto';
+        max = Math.max(0, track.scrollWidth - viewport.clientWidth);
+        if (max < 24) {
+          unpin();
+          return;
+        }
+        pinned = true;
+        var stickyTop = parseFloat(window.getComputedStyle(stage).top) || 85;
+        rail.style.height = (stage.offsetHeight + max) + 'px';
+        update(stickyTop);
+      }
+
+      function update(stickyTop) {
+        if (!pinned) return;
+        var top = typeof stickyTop === 'number' ? stickyTop : (parseFloat(window.getComputedStyle(stage).top) || 85);
+        var progress = (top - rail.getBoundingClientRect().top) / max;
+        progress = Math.max(0, Math.min(1, progress));
+        viewport.scrollLeft = progress * max;
+        setProgress(progress);
+      }
+
+      function onScroll() {
+        if (pinned) {
+          if (frame) return;
+          frame = window.requestAnimationFrame(function () {
+            frame = 0;
+            update();
+          });
+          return;
+        }
+        var mobileMax = viewport.scrollWidth - viewport.clientWidth;
+        setProgress(mobileMax > 0 ? viewport.scrollLeft / mobileMax : 0);
+      }
+
+      viewport.addEventListener('scroll', function () {
+        if (!pinned) onScroll();
+      }, { passive: true });
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', function () {
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(measure, 150);
+      });
+      wide.addEventListener('change', measure);
+      tall.addEventListener('change', measure);
+      reduced.addEventListener('change', measure);
+      window.addEventListener('load', measure);
+      if (document.fonts) {
+        if (document.fonts.ready) document.fonts.ready.then(measure);
+      }
+      measure();
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://rf-sonne.com/#organization",
+        "name": "SONNE ELECTRONICS",
+        "alternateName": "SONNE",
+        "url": "https://rf-sonne.com/",
+        "logo": "https://rf-sonne.com/wp-content/uploads/2026/10/logo-sonne-white.png",
+        "foundingDate": "2015",
+        "email": "info@zhide-tec.com",
+        "telephone": "+86-0574-63615958",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "No. 87, 89, 91, Sanbei Middle Road, Xinze Village, Guanhaiwei Town",
+          "addressLocality": "Cixi City, Ningbo City",
+          "addressRegion": "Zhejiang Province",
+          "addressCountry": "CN"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://rf-sonne.com/#website",
+        "url": "https://rf-sonne.com/",
+        "name": "SONNE ELECTRONICS",
+        "publisher": { "@id": "https://rf-sonne.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rf-sonne.com/#faq",
+        "mainEntity": [
+          {"@type":"Question","name":"What frequency range can SONNE manufacture?","acceptedAnswer":{"@type":"Answer","text":"SONNE's core production portfolio covers DC to 40 GHz. Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology, mechanical requirements and validation. Send your band plan and performance targets so engineering can confirm feasibility for the specific design rather than treating 110 GHz as a universal product limit."}},
+          {"@type":"Question","name":"Can SONNE support custom designs and prototypes?","acceptedAnswer":{"@type":"Answer","text":"Yes. SONNE supports custom RF evaluation and prototype development across its listed product lines. You can start with a specification, band plan, drawing or application description. Engineering reviews the requirements before defining prototype and validation steps. The fastest prototype reference is about two weeks, but actual timing depends on design, process and project confirmation."}},
+          {"@type":"Question","name":"How does SONNE approach repeatability in mass production?","acceptedAnswer":{"@type":"Answer","text":"SONNE links precision machining, assembly and project-specific RF verification through prototype, pilot and production stages. VNA, PIM, reliability and matrix-switch automated testing capabilities are available according to the product and agreed test plan. Buyers should define critical parameters, reporting and acceptance criteria during RFQ so batch verification is based on explicit requirements."}},
+          {"@type":"Question","name":"Is SONNE a manufacturer or a trading company?","acceptedAnswer":{"@type":"Answer","text":"SONNE ELECTRONICS was founded in 2015 and operates a manufacturing base in Cixi, Ningbo, with ISO 9001, more than 50 high-precision CNC machines and RF assembly and testing capabilities. Factory, machining and test evidence is available on the engineering and factory pages for buyers conducting supplier reviews."}},
+          {"@type":"Question","name":"What should I include in an initial RFQ?","acceptedAnswer":{"@type":"Answer","text":"Include the product function, frequency range and bandwidth, key RF targets, power or PIM needs where relevant, connectors or flanges, mechanical envelope, operating environment and expected quantity. Attach drawings, a band plan or an existing specification if available. Incomplete information can start a discussion, while a complete RFQ typically receives initial engineering feedback in about 24 hours."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

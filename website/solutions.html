@@ -1,0 +1,323 @@
+<!-- wp:html -->
+<div class="sn-solutions sn-legacy-record">
+  <style>
+    .sn-solutions { color: var(--sn-text); }
+    .sn-solutions #application-paths { scroll-margin-top: 96px; }
+    .sn-solutions *, .sn-solutions *::before, .sn-solutions *::after { box-sizing: border-box; }
+    .sn-solutions h2, .sn-solutions h3, .sn-solutions p, .sn-solutions ul, .sn-solutions ol, .sn-solutions dl, .sn-solutions dd, .sn-solutions figure { margin-top: 0; }
+    .sn-solutions h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-solutions h3 { margin-bottom: 12px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-solutions p, .sn-solutions li, .sn-solutions dd { line-height: 1.7; }
+    .sn-solutions a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-solutions img { display: block; max-width: 100%; height: auto; }
+    .sn-solutions .sn-solutions__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-solutions .sn-solutions__intro { max-width: 860px; margin-bottom: 40px; }
+    .sn-solutions .sn-solutions__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.05rem; }
+    .sn-solutions .sn-solutions__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .sn-solutions .sn-solutions__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-solutions .sn-solutions__hero .sn-solutions__eyebrow { color: var(--sn-cyan); }
+    .sn-solutions .sn-solutions__hero-grid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(340px, .94fr); gap: clamp(36px, 6vw, 80px); align-items: center; }
+    .sn-solutions .sn-solutions__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-solutions .sn-solutions__hero-paths { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 26px 0 0; padding: 0; list-style: none; }
+    .sn-solutions .sn-solutions__hero-paths li { color: rgba(252, 254, 255, .78); font-family: var(--sn-font-mono); font-size: .72rem; }
+    .sn-solutions .sn-solutions__hero-media { margin-bottom: 0; }
+    .sn-solutions .sn-solutions__hero-media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .sn-solutions figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-solutions .sn-solutions__hero figcaption { color: rgba(252, 254, 255, .66); }
+    .sn-solutions .sn-solutions__hero-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 34px; border-block: 1px solid rgba(252, 254, 255, .18); }
+    .sn-solutions .sn-solutions__hero-fact { padding: 20px 20px 20px 0; }
+    .sn-solutions .sn-solutions__hero-fact + .sn-solutions__hero-fact { padding-left: 20px; border-left: 1px solid rgba(252, 254, 255, .18); }
+    .sn-solutions .sn-solutions__hero-fact strong { display: block; margin-bottom: 4px; color: var(--sn-white); font-family: var(--sn-font-heading); font-size: 1.3rem; }
+    .sn-solutions .sn-solutions__hero-fact span { display: block; color: rgba(252, 254, 255, .7); font-size: .78rem; line-height: 1.5; }
+    .sn-solutions .sn-solutions__boundary { margin: 16px 0 0; color: rgba(252, 254, 255, .68); font-size: .8rem; }
+    .sn-solutions .sn-solutions__constraints { min-width: 880px; }
+    .sn-solutions .sn-solutions__constraints th:first-child { width: 210px; }
+    .sn-solutions .sn-solutions__constraints tbody th { color: var(--sn-navy); }
+    .sn-solutions caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-solutions .sn-solutions__note { margin: 18px 0 0; padding: 18px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-solutions .sn-solutions__paths { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .sn-solutions .sn-solutions__path { display: flex; min-width: 0; flex-direction: column; border: var(--sn-border); background: var(--sn-white); }
+    .sn-solutions .sn-solutions__path img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+    .sn-solutions .sn-solutions__path-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
+    .sn-solutions .sn-solutions__path-number { display: block; margin-bottom: 8px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; font-weight: 700; letter-spacing: .06em; }
+    .sn-solutions .sn-solutions__path h3 { margin-bottom: 8px; font-size: 1.22rem; }
+    .sn-solutions .sn-solutions__path p { margin-bottom: 16px; color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-solutions .sn-solutions__path dl { margin: 0 0 18px; }
+    .sn-solutions .sn-solutions__path dt { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .67rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .sn-solutions .sn-solutions__path dd { margin: 3px 0 0; color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-solutions .sn-solutions__path .sn-solutions__text-link { margin-top: auto; }
+    .sn-solutions .sn-solutions__cross { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 0; margin-top: 18px; border: var(--sn-border); background: var(--sn-navy); color: var(--sn-white); }
+    .sn-solutions .sn-solutions__cross img { width: 100%; height: 100%; min-height: 220px; object-fit: cover; }
+    .sn-solutions .sn-solutions__cross-body { padding: clamp(22px, 4vw, 34px); }
+    .sn-solutions .sn-solutions__cross h3 { color: var(--sn-white); }
+    .sn-solutions .sn-solutions__cross p { margin-bottom: 0; color: rgba(252, 254, 255, .78); font-size: .9rem; }
+    .sn-solutions .sn-solutions__cross a { color: var(--sn-cyan); }
+    .sn-solutions .sn-solutions__cross-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 6px; }
+    .sn-solutions .sn-solutions__cross-links a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-solutions .sn-solutions__routes { min-width: 1040px; }
+    .sn-solutions .sn-solutions__routes th:first-child { width: 190px; }
+    .sn-solutions .sn-solutions__routes tbody th { color: var(--sn-navy); }
+    .sn-solutions .sn-solutions__evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 26px; }
+    .sn-solutions .sn-solutions__evidence figure { margin-bottom: 0; }
+    .sn-solutions .sn-solutions__evidence img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-solutions .sn-solutions__capabilities { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 24px; padding: 0; border: var(--sn-border); background: var(--sn-white); list-style: none; }
+    .sn-solutions .sn-solutions__capabilities li { padding: 20px; }
+    .sn-solutions .sn-solutions__capabilities li + li { border-left: var(--sn-border); }
+    .sn-solutions .sn-solutions__capabilities strong { display: block; margin-bottom: 6px; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.02rem; }
+    .sn-solutions .sn-solutions__capabilities span { color: var(--sn-text-muted); font-size: .8rem; line-height: 1.55; }
+    .sn-solutions .sn-solutions__process { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: step; border-top: 3px solid var(--sn-navy); }
+    .sn-solutions .sn-solutions__process li { position: relative; padding: 26px 20px 22px; border-right: var(--sn-border); background: var(--sn-white); counter-increment: step; }
+    .sn-solutions .sn-solutions__process li:first-child { border-left: var(--sn-border); }
+    .sn-solutions .sn-solutions__process li::before { display: block; margin-bottom: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .74rem; font-weight: 700; content: '0' counter(step); }
+    .sn-solutions .sn-solutions__process strong { display: block; margin-bottom: 8px; color: var(--sn-navy); font-size: .95rem; }
+    .sn-solutions .sn-solutions__process span { display: block; color: var(--sn-text-muted); font-size: .8rem; line-height: 1.6; }
+    .sn-solutions .sn-solutions__process span + span { margin-top: 8px; }
+    .sn-solutions .sn-solutions__process-label { color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .66rem; font-weight: 700; text-transform: uppercase; }
+    .sn-solutions .sn-solutions__faq { max-width: 920px; }
+    .sn-solutions .sn-solutions__faq details { border-bottom: var(--sn-border); }
+    .sn-solutions .sn-solutions__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.08rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-solutions .sn-solutions__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-solutions .sn-solutions__faq details[open] summary::after { content: '−'; }
+    .sn-solutions .sn-solutions__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-solutions .sn-solutions__cta-grid { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: clamp(28px, 5vw, 64px); }
+    .sn-solutions .sn-solutions__cta h2, .sn-solutions .sn-solutions__cta h3 { color: var(--sn-white); }
+    .sn-solutions .sn-solutions__cta p, .sn-solutions .sn-solutions__cta li { color: rgba(252, 254, 255, .8); }
+    .sn-solutions .sn-solutions__cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-solutions .sn-solutions__benefits { margin: 0; padding: 0; list-style: none; counter-reset: benefit; }
+    .sn-solutions .sn-solutions__benefits li { padding: 14px 0 14px 42px; border-top: 1px solid rgba(252, 254, 255, .16); counter-increment: benefit; position: relative; }
+    .sn-solutions .sn-solutions__benefits li::before { position: absolute; left: 0; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .72rem; content: '0' counter(benefit); }
+    .sn-solutions .sn-solutions__benefits strong { display: block; color: var(--sn-white); font-size: .95rem; }
+    .sn-solutions .sn-solutions__benefits span { color: rgba(252, 254, 255, .72); font-size: .84rem; }
+    .sn-solutions .sn-solutions__panel { padding: clamp(24px, 4vw, 34px); border: 1px solid rgba(252, 254, 255, .22); }
+    .sn-solutions .sn-solutions__panel h3 { margin-bottom: 14px; }
+    .sn-solutions .sn-solutions__panel ul { margin: 0 0 18px; padding-left: 20px; }
+    .sn-solutions .sn-solutions__panel li { font-size: .88rem; }
+    .sn-solutions .sn-solutions__fine-print { margin: 18px 0 0; font-size: .8rem; color: rgba(252, 254, 255, .66); }
+    @media (max-width: 1100px) {
+      .sn-solutions .sn-solutions__paths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-solutions .sn-solutions__process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-solutions .sn-solutions__process li { border-bottom: var(--sn-border); }
+    }
+    @media (max-width: 900px) {
+      .sn-solutions .sn-solutions__hero-grid, .sn-solutions .sn-solutions__cross, .sn-solutions .sn-solutions__cta-grid { grid-template-columns: 1fr; }
+      .sn-solutions .sn-solutions__hero-media { max-width: 720px; }
+      .sn-solutions .sn-solutions__capabilities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-solutions .sn-solutions__capabilities li:nth-child(3) { border-left: 0; }
+      .sn-solutions .sn-solutions__capabilities li:nth-child(n+3) { border-top: var(--sn-border); }
+    }
+    @media (max-width: 700px) {
+      .sn-solutions .sn-solutions__hero-facts { grid-template-columns: 1fr; }
+      .sn-solutions .sn-solutions__hero-fact, .sn-solutions .sn-solutions__hero-fact + .sn-solutions__hero-fact { padding: 16px 0; border-left: 0; }
+      .sn-solutions .sn-solutions__hero-fact + .sn-solutions__hero-fact { border-top: 1px solid rgba(252, 254, 255, .18); }
+      .sn-solutions .sn-solutions__paths, .sn-solutions .sn-solutions__evidence, .sn-solutions .sn-solutions__process, .sn-solutions .sn-solutions__capabilities { grid-template-columns: 1fr; }
+      .sn-solutions .sn-solutions__process li { border-left: var(--sn-border); }
+      .sn-solutions .sn-solutions__capabilities li + li { border-top: var(--sn-border); border-left: 0; }
+      .sn-solutions .sn-solutions__cross img { min-height: 200px; }
+    }
+    @media (max-width: 520px) {
+      .sn-solutions .sn-solutions__actions .sn-btn { width: 100%; }
+      .sn-solutions .sn-solutions__faq details p { padding-right: 0; }
+    }
+    @media print {
+      .sn-solutions .sn-solutions__faq details:not([open]) > p { display: block !important; }
+      .sn-solutions .sn-solutions__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-solutions__hero" aria-labelledby="solutions-title">
+    <div class="sn-container sn-solutions__hero-grid">
+      <div class="sn-solutions__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Solutions</li></ol></nav>
+        <span class="sn-solutions__eyebrow">Application routes · 5G · Backhaul · Satellite · DAS/IBS · FTTX</span>
+        <h1 id="solutions-title">Application-Driven RF and Enclosure Solutions</h1>
+        <p>Begin with the network you are deploying, not a part number. Each application path starts from site, band-plan and interface constraints, then routes you to the RF, waveguide, passive, fiber-distribution or enclosure product lines that fit the system position.</p>
+        <p>This entry point covers 5G base stations and RRU, microwave backhaul, satellite earth stations, DAS and in-building coverage, and FTTX fiber distribution.</p>
+        <ul class="sn-solutions__hero-paths" aria-label="Application paths"><li>5G &amp; RRU</li><li>Microwave backhaul</li><li>Earth station</li><li>DAS &amp; IBS</li><li>FTTX</li></ul>
+        <div class="sn-solutions__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Describe Your Application</a><a class="sn-btn sn-btn--secondary" href="#application-paths">Browse Application Paths</a></div>
+        <div class="sn-solutions__hero-facts" aria-label="Application scope facts">
+          <div class="sn-solutions__hero-fact"><strong>5 paths</strong><span>Application-specific entry points, not generic catalogue pages.</span></div>
+          <div class="sn-solutions__hero-fact"><strong>DC–40 GHz</strong><span>Core production portfolio for standard products.</span></div>
+          <div class="sn-solutions__hero-fact"><strong>to 110 GHz</strong><span>Selected custom projects, depending on topology and validation.</span></div>
+        </div>
+        <p class="sn-solutions__boundary">The 110 GHz figure is not a blanket coverage claim. Feasibility is reviewed per topology, interface and verification scope.</p>
+      </div>
+      <figure class="sn-solutions__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/app-basestation-5g-site.webp" alt="5G base station site" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>A 5G site is one of five application starting points. The photograph illustrates the deployment environment, not a delivered project or measured result.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="solutions-constraints-title">
+    <div class="sn-container">
+      <div class="sn-solutions__intro"><h2 id="solutions-constraints-title">Start with Your Deployment Constraints</h2><p>You do not need component names to open an application review. Record what the site, spectrum and mechanics already demand; engineering can translate those inputs into candidate product lines.</p></div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="solutions-constraints-caption">
+        <table class="sn-table sn-solutions__constraints">
+          <caption id="solutions-constraints-caption">Constraint capture sheet: record known values, units and TBD items before asking for a product recommendation.</caption>
+          <thead><tr><th scope="col">Constraint</th><th scope="col">What to record</th><th scope="col">Example</th><th scope="col">Why it changes the route</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Application and stage</th><td data-label="What to record">Network type plus whether you are scoping, prototyping or preparing production</td><td data-label="Example">Macro RRU, band-plan study</td><td data-label="Why it changes the route">Sets the review depth and the evidence you need next</td></tr>
+            <tr><th scope="row">Site environment</th><td data-label="What to record">Indoor, outdoor, rooftop, pole, cabinet or equipment room</td><td data-label="Example">Outdoor rooftop with limited mounting space</td><td data-label="Why it changes the route">Drives enclosure, sealing and material questions</td></tr>
+            <tr><th scope="row">Operating band</th><td data-label="What to record">Uplink and downlink ranges, bandwidth, duplex spacing, interferers</td><td data-label="Example">N28 or N78 study, co-sited bands listed</td><td data-label="Why it changes the route">Decides filter, duplexer or combiner topology</td></tr>
+            <tr><th scope="row">System position</th><td data-label="What to record">Where the part sits: radio port, combining shelf, feeder, distribution branch</td><td data-label="Example">Between RRU port and antenna feeder</td><td data-label="Why it changes the route">Maps the constraint to a product line instead of a guess</td></tr>
+            <tr><th scope="row">Interface and envelope</th><td data-label="What to record">Connector or waveguide size, flange, port count, mounting space</td><td data-label="Example">4.3-10 ports, 2U envelope</td><td data-label="Why it changes the route">Rules options in or out before RF detail is reviewed</td></tr>
+            <tr><th scope="row">Validation priority</th><td data-label="What to record">Which characteristic must be proven: rejection, PIM, return loss, IP target, capacity</td><td data-label="Example">Low PIM at defined power and connectors</td><td data-label="Why it changes the route">Defines the test evidence to discuss with engineering</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-solutions__note"><strong>TBD is acceptable.</strong> Mark unknown fields rather than guessing. Band, quantity and validation priority have the largest effect on how complete the first engineering response can be.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="application-paths-title" id="application-paths">
+    <div class="sn-container">
+      <div class="sn-solutions__intro"><h2 id="application-paths-title">Choose an Application Path</h2><p>Each path opens a deployment brief, a system-position map and a trade-off framework. Pick the closest match; a project that spans RF and mechanical scope can use more than one.</p></div>
+      <div class="sn-solutions__paths">
+        <article class="sn-solutions__path">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-basestation.webp" alt="Base station RF infrastructure" width="1024" height="1024" loading="lazy" decoding="async">
+          <div class="sn-solutions__path-body"><span class="sn-solutions__path-number">PATH 01 · 5G / RRU</span><h3>5G Base Stations and RRU</h3><p>Macro-site and RRU integration where co-siting interference, low PIM and a compact radio envelope compete for space.</p><dl><dt>Typical constraints</dt><dd>4T4R or 8TR port mapping; N28/N78 co-sited band plan</dd><dt>Open input</dt><dd>Blocking bands versus optimisation margin</dd></dl><a class="sn-solutions__text-link" href="/solutions/5g-base-station/">View system position and trade-offs <span aria-hidden="true">&nbsp;→</span></a></div>
+        </article>
+        <article class="sn-solutions__path">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave.webp" alt="Microwave and RF components" width="1024" height="1024" loading="lazy" decoding="async">
+          <div class="sn-solutions__path-body"><span class="sn-solutions__path-number">PATH 02 · BACKHAUL</span><h3>Microwave Backhaul</h3><p>Point-to-point links where E-band loss, transmit-receive isolation and outdoor assembly must be reviewed together.</p><dl><dt>Typical constraints</dt><dd>71–86 GHz transmit and receive sub-bands; waveguide flange and interface</dd><dt>Open input</dt><dd>Outdoor sealing and environmental-test expectations</dd></dl><a class="sn-solutions__text-link" href="/solutions/microwave-backhaul/">View system position and trade-offs <span aria-hidden="true">&nbsp;→</span></a></div>
+        </article>
+        <article class="sn-solutions__path">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/satellite-693224-1280.webp" alt="satellite 693224 1280" width="1280" height="852" loading="lazy" decoding="async">
+          <div class="sn-solutions__path-body"><span class="sn-solutions__path-number">PATH 03 · EARTH STATION</span><h3>Satellite Earth Stations</h3><p>Ku/Ka feed chains where polarization separation, port isolation and flange details decide whether the link integrates cleanly.</p><dl><dt>Typical constraints</dt><dd>OMT port and polarization definition; waveguide size and flange</dd><dt>Open input</dt><dd>Which polarization metrics need VNA evidence</dd></dl><a class="sn-solutions__text-link" href="/solutions/satellite-earth-station/">View system position and trade-offs <span aria-hidden="true">&nbsp;→</span></a></div>
+        </article>
+        <article class="sn-solutions__path">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-ibs.webp" alt="In-building wireless coverage" width="1024" height="1024" loading="lazy" decoding="async">
+          <div class="sn-solutions__path-body"><span class="sn-solutions__path-number">PATH 04 · DAS / IBS</span><h3>DAS and In-Building Coverage</h3><p>Multi-operator indoor systems where the POI, splitter and coupler BOM has to hold together across floors and connectors.</p><dl><dt>Typical constraints</dt><dd>698–3800 MHz band mix; low PIM at defined power and connectors</dd><dt>Open input</dt><dd>Floor-by-floor split counts and antenna positions</dd></dl><a class="sn-solutions__text-link" href="/solutions/das-ibs/">View system position and trade-offs <span aria-hidden="true">&nbsp;→</span></a></div>
+        </article>
+        <article class="sn-solutions__path">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/market-ftth.webp" alt="FTTH fiber access network" width="1024" height="1024" loading="lazy" decoding="async">
+          <div class="sn-solutions__path-body"><span class="sn-solutions__path-number">PATH 05 · FTTX</span><h3>FTTX Fiber Distribution</h3><p>Outdoor FTTH distribution, optical cabinets and splice protection, selected by installation function rather than appearance.</p><dl><dt>Typical constraints</dt><dd>Distribution versus splice function; cable entries and IP target</dd><dt>Open input</dt><dd>Mounting method, capacity and OEM marking</dd></dl><a class="sn-solutions__text-link" href="/solutions/fttx/">View system position and trade-offs <span aria-hidden="true">&nbsp;→</span></a></div>
+        </article>
+      </div>
+      <div class="sn-solutions__cross">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/market-datacenter.webp" alt="Data center infrastructure" width="1024" height="1024" loading="lazy" decoding="async">
+        <div class="sn-solutions__cross-body">
+          <h3>Cross-application and enclosure projects</h3>
+          <p>Some deployments combine RF distribution with precision mechanical scope, such as equipment-room cabinets or data-center enclosures. Describe both in one enquiry so the RF and enclosure reviews share the same interface, revision and quantity assumptions. The separate <a href="/solutions/data-center-enclosures/">data-center enclosure application</a> covers that path, and the <a href="/products/precision-enclosures/">precision-enclosure product line</a> lists the structural options.</p>
+          <div class="sn-solutions__cross-links"><a href="/products/">Review all product lines <span aria-hidden="true">&nbsp;→</span></a><a href="/solutions/data-center-enclosures/">Open the enclosure path <span aria-hidden="true">&nbsp;→</span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="solutions-routing-title">
+    <div class="sn-container">
+      <div class="sn-solutions__intro"><h2 id="solutions-routing-title">Match System Interfaces to Product Lines</h2><p>Use the system position to narrow the product line. The routing table is a screening tool, not a substitute for a project specification; detailed model pages are a later-stage reference.</p></div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="solutions-routing-caption">
+        <table class="sn-table sn-solutions__routes">
+          <caption id="solutions-routing-caption">Application routing matrix: system position, dominant constraint, candidate product line, required input and next page.</caption>
+          <thead><tr><th scope="col">System position</th><th scope="col">Primary constraint</th><th scope="col">Candidate product line</th><th scope="col">Must-have input</th><th scope="col">Next step</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">RRU port and co-siting combining</th><td data-label="Primary constraint">Rejection versus insertion loss, isolation and low PIM</td><td data-label="Candidate product line"><a href="/products/base-station-rf/">Base-station RF</a> and <a href="/products/rf-combiners/">RF combiners</a></td><td data-label="Must-have input">Band plan, duplex spacing, power, port count</td><td data-label="Next step"><a href="/solutions/5g-base-station/">5G and RRU path</a></td></tr>
+            <tr><th scope="row">E-band ODU and antenna coupling</th><td data-label="Primary constraint">Transmit-receive isolation and waveguide loss</td><td data-label="Candidate product line"><a href="/products/waveguide-components/">Waveguide components</a> and <a href="/products/rf-microwave-filters/">RF filters</a></td><td data-label="Must-have input">Tx/Rx sub-bands, flange, polarization, envelope</td><td data-label="Next step"><a href="/solutions/microwave-backhaul/">Backhaul path</a></td></tr>
+            <tr><th scope="row">Earth-station feed and OMT</th><td data-label="Primary constraint">Polarization separation, port isolation and flange fit</td><td data-label="Candidate product line"><a href="/products/waveguide-components/">Waveguide components</a></td><td data-label="Must-have input">Port definition, polarization, waveguide size, datum</td><td data-label="Next step"><a href="/solutions/satellite-earth-station/">Earth-station path</a></td></tr>
+            <tr><th scope="row">DAS point of interface and floor branches</th><td data-label="Primary constraint">Multi-operator combining and distributed PIM budget</td><td data-label="Candidate product line"><a href="/products/ibs-das-components/">IBS/DAS components</a>, <a href="/products/rf-accessories/">RF accessories</a></td><td data-label="Must-have input">Operator bands, split counts, connector series</td><td data-label="Next step"><a href="/solutions/das-ibs/">DAS and IBS path</a></td></tr>
+            <tr><th scope="row">FTTX distribution and splice points</th><td data-label="Primary constraint">Capacity, cable entry and environmental protection</td><td data-label="Candidate product line"><a href="/products/fttx-fiber-distribution/">FTTX fiber distribution</a></td><td data-label="Must-have input">Installation location, function, entry count, IP target</td><td data-label="Next step"><a href="/solutions/fttx/">FTTX path</a></td></tr>
+            <tr><th scope="row">Equipment room and cabinet structure</th><td data-label="Primary constraint">Thermal, access, mounting and surface requirements</td><td data-label="Candidate product line"><a href="/products/precision-enclosures/">Precision enclosures</a></td><td data-label="Must-have input">2D/3D drawing, material, finish, quantity stage</td><td data-label="Next step"><a href="/solutions/data-center-enclosures/">Enclosure path</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-solutions__note"><strong>Routing is not selection.</strong> A candidate product line still needs model-level confirmation of band, interface and acceptance criteria. Detailed product pages are added in a later phase; use the product-category pages and an RFQ for now.</p>
+      <div class="sn-solutions__actions"><a class="sn-btn sn-btn--secondary" href="/products/">Review Product Lines</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="solutions-evidence-title">
+    <div class="sn-container">
+      <div class="sn-solutions__intro"><h2 id="solutions-evidence-title">Check Engineering Evidence Before the RFQ</h2><p>Manufacturing and test capabilities tell you what can be examined. They do not mean every product receives every test by default. Ask for the evidence that matches the characteristic you need to control.</p></div>
+      <div class="sn-solutions__evidence">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-cavity-milling.webp" alt="CNC milling of an RF filter cavity" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>CNC milling of an RF filter cavity. The operation supports a manufacturing review; it does not establish a uniform tolerance for every part.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-rf-testing-1.webp" alt="Technician testing an RF filter with bench instruments" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Bench RF testing. Test scope, conditions and sample coverage are agreed for the product and project.</figcaption></figure>
+      </div>
+      <ul class="sn-solutions__capabilities" aria-label="Capability evidence and what to request">
+        <li><strong>CNC machining</strong><span>Shows drawing-defined structures can be reviewed for critical geometry and assembly fit.</span></li>
+        <li><strong>VNA and PIM</strong><span>Supports measurement of agreed RF characteristics under defined conditions.</span></li>
+        <li><strong>Reliability testing</strong><span>Supports project-specified environmental or duration checks where applicable.</span></li>
+        <li><strong>Matrix automation</strong><span>Supports multi-port or batch records; it does not imply 100% coverage of every parameter.</span></li>
+      </ul>
+      <p>Above 40 GHz, mechanical tolerance can reach <strong>±0.01 mm</strong>; above 60 GHz, plating-thickness control can reach <strong>1 μm</strong>. Both statements depend on structure and are confirmed during drawing review.</p>
+      <div class="sn-solutions__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Review Testing and Manufacturing</a><a class="sn-solutions__text-link" href="/engineering/manufacturing/">Inspect manufacturing controls <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="solutions-review-title">
+    <div class="sn-container">
+      <div class="sn-solutions__intro"><h2 id="solutions-review-title">Prepare an Application Review</h2><p>A useful application review converts a deployment description into a routed product line, a missing-input list and a proposed validation scope. It is an engineering step, not an automatic quotation.</p></div>
+      <ol class="sn-solutions__process" aria-label="Five-step application review process">
+        <li><strong>Constraint capture</strong><span class="sn-solutions__process-label">Input</span><span>Application, site, band plan, system position, interface and envelope.</span><span class="sn-solutions__process-label">Output</span><span>Constraint sheet with TBD items marked.</span></li>
+        <li><strong>System-position check</strong><span class="sn-solutions__process-label">Input</span><span>Block diagram or description of the radio, combining or distribution path.</span><span class="sn-solutions__process-label">Output</span><span>Confirmed functional position and neighbouring interfaces.</span></li>
+        <li><strong>Product-line routing</strong><span class="sn-solutions__process-label">Input</span><span>Constraint sheet plus candidate line from the routing matrix.</span><span class="sn-solutions__process-label">Output</span><span>One or more candidate lines with open model questions.</span></li>
+        <li><strong>Missing-input list</strong><span class="sn-solutions__process-label">Input</span><span>Draft specification, drawings or link sketch.</span><span class="sn-solutions__process-label">Output</span><span>Items that block feasibility, quotation or validation planning.</span></li>
+        <li><strong>Project engineering review</strong><span class="sn-solutions__process-label">Input</span><span>Complete RFQ with agreed revisions.</span><span class="sn-solutions__process-label">Output</span><span>Initial engineering feedback and proposed next step.</span></li>
+      </ol>
+      <p class="sn-solutions__note"><strong>Materials worth attaching:</strong> band plan, link or coverage sketch, interface drawing, mechanical drawing, target quantity and validation requirements. A complete RFQ typically receives initial engineering feedback in about 24 hours. That feedback is not a quotation, sample schedule or production delivery date.</p>
+      <div class="sn-solutions__actions"><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Read the RFQ Guide</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="solutions-faq-title">
+    <div class="sn-container">
+      <div class="sn-solutions__intro"><h2 id="solutions-faq-title">Application Selection FAQs</h2><p>Direct answers on routing, submitting an incomplete application and what happens after engineering review.</p></div>
+      <div class="sn-solutions__faq">
+        <details open><summary>How do I know which SONNE product line fits my application?</summary><p>Start with the system location and constraint, not a part name. Identify the band plan, interface, mechanical envelope, and the issue you need to control, such as isolation, PIM, polarization, or outdoor protection. The application routing table then points to candidate product lines for project-specific engineering review.</p></details>
+        <details><summary>Can I submit an application before I have final part numbers?</summary><p>Yes. An application review can begin with your deployment scenario, frequency range, system interface, estimated quantity, and known constraints. Mark unresolved items as TBD. SONNE can identify missing inputs and candidate product lines, while final specifications and acceptance criteria must be confirmed before quotation or production decisions.</p></details>
+        <details><summary>Does SONNE offer one standard solution for every network?</summary><p>No. Applications may share component families, but frequency plans, interfaces, power, PIM, mechanical limits, and verification requirements differ. SONNE uses standard product capabilities where appropriate and evaluates custom requirements by topology and validation needs. Final suitability is established against the project specification rather than a universal solution claim.</p></details>
+        <details><summary>Which application areas are covered on this solutions hub?</summary><p>The hub covers 5G base stations and RRU, microwave backhaul, satellite earth stations, DAS and in-building coverage, FTTX fiber distribution, and equipment enclosures. Each path starts with deployment constraints and then links to relevant RF, waveguide, combiner, passive, fiber-distribution, or precision-enclosure product lines.</p></details>
+        <details><summary>What happens after I describe my application?</summary><p>The engineering team reviews the application, system position, available specifications, and requested validation. You may receive questions, a candidate product-line route, or a list of missing inputs. A complete RFQ typically receives initial engineering feedback within about 24 hours; this is not a guaranteed quotation, sample lead time, or production delivery date.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="solutions-cta-title">
+    <div class="sn-container sn-cta sn-solutions__cta">
+      <div class="sn-solutions__cta-grid">
+        <div>
+          <h2 id="solutions-cta-title">Describe Your Application</h2>
+          <p>Send the deployment description you already have. The first response routes your project to a product line, lists the missing inputs and suggests the next engineering step.</p>
+          <ul class="sn-solutions__benefits">
+            <li><strong>Application routing</strong><span>A candidate product line based on system position, not a guessed part number.</span></li>
+            <li><strong>Missing-input list</strong><span>What engineering still needs before feasibility or quotation can be discussed.</span></li>
+            <li><strong>Validation starting point</strong><span>Which characteristics should be measured and under what conditions.</span></li>
+          </ul>
+          <div class="sn-solutions__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Describe Your Application</a><a class="sn-btn sn-btn--secondary" href="/solutions/5g-base-station/">Start with 5G and RRU</a></div>
+          <p class="sn-solutions__fine-print">Initial engineering feedback for a complete RFQ is typically about 24 hours. It is not a price, sample lead time or delivery commitment. Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+        </div>
+        <div class="sn-solutions__panel">
+          <h3>Useful first message</h3>
+          <ul><li>Application and project stage</li><li>System position and neighbouring interfaces</li><li>Band plan or frequency ranges</li><li>Site environment and mechanical envelope</li><li>Known constraints and TBD items</li><li>Target quantity range and validation priorities</li></ul>
+          <h3>Attachments that speed review</h3>
+          <p>Block diagram, band plan, 2D/3D drawing, interface definition or a coverage sketch. Submit current revisions and flag any uncertain ones; a perfect package is not required to start.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://rf-sonne.com/solutions/#collection",
+        "name": "Application-Driven RF and Enclosure Solutions",
+        "url": "https://rf-sonne.com/solutions/",
+        "description": "Application routes for 5G base stations, microwave backhaul, satellite earth stations, DAS/IBS, FTTX and equipment enclosures, with a system-to-product routing matrix."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/solutions/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://rf-sonne.com/solutions/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

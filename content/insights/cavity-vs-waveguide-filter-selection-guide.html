@@ -1,0 +1,70 @@
+<p>The cavity vs waveguide filter decision starts with the same frequency-selection problem, but the two topologies use different loss mechanisms, power limits and manufacturing constraints, so the right choice depends on where the filter sits in the system rather than on a single performance number.</p>
+
+<h2>Two Topologies, Two Loss Mechanisms</h2>
+<p>A cavity filter uses resonant structures machined into a metal housing, with coupling between resonators set by the mechanical layout. Energy is stored in the cavity fields and coupled through irises, probes or loops. The design is compact at lower frequencies and can be tuned after assembly, which makes it a practical choice for base-station, RRU and multi-band front-end products.</p>
+<p>A waveguide filter uses a section of waveguide with resonant cavities or corrugations. At high frequencies the waveguide itself has low loss, and the filter can handle high power because the fields are distributed in a larger metal structure. The trade-off is size: a waveguide filter for a low-frequency band can be physically large, while the same topology at E-band becomes compact enough for an outdoor radio.</p>
+
+<h2>Cavity vs Waveguide Filter Comparison at a Glance</h2>
+<table>
+<thead>
+<tr><th>Selection factor</th><th>Cavity filter</th><th>Waveguide filter</th></tr>
+</thead>
+<tbody>
+<tr><td>Typical role</td><td>Base-station, RRU, compact front ends</td><td>Backhaul, satellite, radar, high-frequency links</td></tr>
+<tr><td>Insertion loss</td><td>Moderate; depends on resonator count and tuning</td><td>Low at high frequency; depends on length and surface quality</td></tr>
+<tr><td>Rejection</td><td>Good with multiple resonators; layout constrained by size</td><td>Strong in a compact high-frequency package</td></tr>
+<tr><td>Power handling</td><td>Limited by tuning elements, contacts and connectors</td><td>High when the waveguide and flange are sized correctly</td></tr>
+<tr><td>Size and mass</td><td>Compact at lower bands</td><td>Large at lower bands; compact at E-band and above</td></tr>
+<tr><td>Manufacturing route</td><td>CNC housing, assembly, tuning, test</td><td>Precision machining, split-block assembly, plating, test</td></tr>
+<tr><td>Tuning</td><td>Tunable after assembly; useful for prototypes</td><td>Often fixed by machining; tuning is limited or avoided</td></tr>
+<tr><td>Best fit</td><td>Flexible electrical requirements and volume production</td><td>High frequency, low loss, high power and stable repeatability</td></tr>
+</tbody>
+</table>
+
+<h2>Frequency and Bandwidth Come First</h2>
+<p>Start with the passband and the fractional bandwidth. A narrowband filter with a high rejection requirement tends to need more resonators, which increases insertion loss and manufacturing sensitivity. A wideband requirement can be difficult for a cavity design because the coupling values and the physical layout become harder to realize, while a waveguide structure may handle the bandwidth more naturally at high frequency.</p>
+<p>The operating frequency also changes the practical size. Below a few gigahertz, a cavity filter usually fits the available radio envelope and a waveguide filter may be too large. At E-band and above, the waveguide wavelength is small enough that a precision machined filter can be both compact and low loss. The frequency range is therefore not a marketing detail; it is the first constraint that decides which topology deserves detailed evaluation.</p>
+
+<h2>Insertion Loss and Rejection Trade-Offs</h2>
+<p>Insertion loss is set by the number of resonators, the quality factor of the structure, the surface condition and the interface losses. A higher-order filter can improve rejection, but each additional resonator adds loss and narrows the manufacturing window. The right question is not “what is the lowest loss” but “what loss can the system budget tolerate while still meeting the rejection mask”.</p>
+<p>Rejection should be evaluated at specific frequency offsets. A filter with excellent rejection far from the passband may have inadequate rejection at the first adjacent channel, and vice versa. For a receive path, the critical case is often the transmitter band or the image frequency; for a transmit path, it may be the harmonic or the receive band. State the rejection mask and the measurement range so the topology comparison uses the same criteria.</p>
+<p>Return loss also belongs in the comparison. A filter that meets its amplitude response but presents a poor match can degrade the performance of the amplifier or antenna behind it. Cavity and waveguide designs have different matching behavior over bandwidth, so the interface should be evaluated together with the filter response.</p>
+
+<h2>Power Handling and PIM</h2>
+<p>Waveguide filters generally handle more power because the fields are distributed across a larger metal surface and there are fewer lossy joints in the main path. Cavity filters can also handle significant power, but the tuning screws, internal contacts, connector interfaces and plating quality become limiting factors. The waveform matters: a continuous carrier, a pulsed signal and a multi-carrier signal impose different stresses.</p>
+<p>For low-PIM applications, the entire current path matters. Connector torque, plating, joint pressure, material choice and cleanliness can dominate the result. A cavity design with many tuning elements has more interfaces to control, while a waveguide design with a split block has fewer but highly critical seams. Neither topology is automatically low PIM; both require a defined assembly and test process. PIM should be specified with carrier frequencies, power per carrier and intermodulation order so the result can be compared.</p>
+
+<figure>
+<img src="https://rf-sonne.com/wp-content/uploads/2026/10/straight-waveguide.webp" alt="Straight waveguide section" width="720" height="720" loading="lazy" decoding="async">
+<figcaption>Representative waveguide hardware. Filter assemblies depend on the same flange accuracy, surface finish and machining discipline as the waveguide run around them.</figcaption>
+</figure>
+
+<h2>Size, Weight and Integration</h2>
+<p>Mechanical fit often decides the topology before the electrical comparison is complete. A cavity filter can be integrated into a radio housing with a compact footprint, but it needs access for tuning and may require a specific mounting orientation. A waveguide filter needs straight runs, flange access and enough space for the assembly and test fixtures. At E-band, the waveguide filter may be smaller than the cavity alternative, but the flange and split-block tolerances become more demanding.</p>
+<p>Include the available envelope, mounting points, connector or flange orientation and service access in the evaluation. A design that meets the electrical target but cannot be assembled or tuned in the intended enclosure is not a valid selection.</p>
+
+<h2>Tuning, Repeatability and Volume</h2>
+<p>A tunable cavity filter is useful during development because the response can be adjusted after assembly. For mass production, the same tuning step must be controlled and verified so that unit-to-unit variation stays inside the specification. A tuning-free design can remove that step, but it shifts the burden to machining accuracy, material consistency and assembly control.</p>
+<p>Waveguide filters are often designed as fixed tuned parts. That suits repeatable production when the machining and plating processes are stable, but it leaves less room for correcting a design error after the parts are made. The prototype and first-article stages should therefore include a measured comparison against the simulation and a clear plan for any required adjustment.</p>
+
+<h2>Cavity vs Waveguide Filter Selection Checklist</h2>
+<ul>
+<li>State the passband, bandwidth and rejection mask before comparing topologies.</li>
+<li>Check whether the available envelope favors a compact cavity or a low-loss waveguide structure.</li>
+<li>Confirm the power waveform, average power and peak power.</li>
+<li>Define PIM order, carrier power and measurement frequencies if low PIM is required.</li>
+<li>Decide whether post-assembly tuning is acceptable or a tuning-free design is preferred.</li>
+<li>Review the connector or flange interface and the available test equipment.</li>
+<li>Plan the prototype, first article and production test flow before selecting the final design.</li>
+</ul>
+<p>A cavity vs waveguide filter evaluation should end with a measurable comparison: measured loss, rejection at the specified offsets, power margin and a manufacturing route that can be repeated. For a deeper comparison, review the <a href="/products/rf-microwave-filters/">RF and microwave filter product line</a> and the <a href="/products/waveguide-components/">waveguide component product line</a>. The <a href="/engineering/testing-quality/">testing and quality</a> page explains how VNA, PIM and reliability evidence are handled, and <a href="/engineering/custom-rf-design/">custom RF design</a> describes the evaluation path from specification to validated hardware. When the requirements are ready, submit them through <a href="/request-a-quote/">Request a Quote</a> for an engineering review.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Is a waveguide filter always lower loss than a cavity filter?</h3>
+<p>Not always. At high frequency a waveguide structure can have very low loss, but the result depends on length, surface finish, resonator count and interfaces. At lower frequency a cavity filter may be the more practical low-loss choice because the waveguide version would be large.</p>
+<h3>Which topology is better for low PIM?</h3>
+<p>Neither is automatically better. PIM depends on the current path, plating, joint pressure, connector torque and cleanliness. The assembly process and the specified test conditions matter more than the topology name.</p>
+<h3>Can a cavity filter be used at E-band?</h3>
+<p>It can be considered, but the dimensions become very small and the machining tolerances become critical. A waveguide or split-block design is often the more practical route at E-band, depending on bandwidth, power and test requirements.</p>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a waveguide filter always lower loss than a cavity filter?","acceptedAnswer":{"@type":"Answer","text":"Not always. At high frequency a waveguide structure can have very low loss, but the result depends on length, surface finish, resonator count and interfaces. At lower frequency a cavity filter may be the more practical low-loss choice because the waveguide version would be large."}},{"@type":"Question","name":"Which topology is better for low PIM?","acceptedAnswer":{"@type":"Answer","text":"Neither is automatically better. PIM depends on the current path, plating, joint pressure, connector torque and cleanliness. The assembly process and the specified test conditions matter more than the topology name."}},{"@type":"Question","name":"Can a cavity filter be used at E-band?","acceptedAnswer":{"@type":"Answer","text":"It can be considered, but the dimensions become very small and the machining tolerances become critical. A waveguide or split-block design is often the more practical route at E-band, depending on bandwidth, power and test requirements."}}]}</script>

@@ -1,0 +1,370 @@
+<!-- wp:html -->
+<div class="sn-ibs-das sn-legacy-record">
+  <style>
+    .sn-ibs-das { color: var(--sn-text); }
+    .sn-ibs-das *, .sn-ibs-das *::before, .sn-ibs-das *::after { box-sizing: border-box; }
+    .sn-ibs-das h2, .sn-ibs-das h3, .sn-ibs-das p, .sn-ibs-das ul, .sn-ibs-das ol, .sn-ibs-das figure { margin-top: 0; }
+    .sn-ibs-das h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-ibs-das h3 { margin-bottom: 12px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-ibs-das p, .sn-ibs-das li { line-height: 1.7; }
+    .sn-ibs-das a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-ibs-das img { display: block; max-width: 100%; height: auto; }
+    .sn-ibs-das [id] { scroll-margin-top: 96px; }
+    .sn-ibs-das caption { padding: 14px 16px; border-bottom: var(--sn-border); color: var(--sn-text-muted); font-size: .82rem; line-height: 1.55; text-align: left; }
+    .sn-ibs-das figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .71rem; line-height: 1.55; }
+    .sn-ibs-das .sn-ibs-das__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-ibs-das .sn-ibs-das__intro { max-width: 880px; margin-bottom: 34px; }
+    .sn-ibs-das .sn-ibs-das__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.03rem; }
+    .sn-ibs-das .sn-ibs-das__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-ibs-das .sn-ibs-das__hero-grid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(320px, .94fr); gap: clamp(34px, 6vw, 72px); align-items: center; }
+    .sn-ibs-das .sn-ibs-das__hero .sn-ibs-das__eyebrow { color: var(--sn-cyan); }
+    .sn-ibs-das .sn-ibs-das__hero-copy > p { max-width: 62ch; margin-bottom: 18px; font-size: 1.04rem; }
+    .sn-ibs-das .sn-ibs-das__entry { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 22px 0 4px; }
+    .sn-ibs-das .sn-ibs-das__entry a { display: block; min-height: 44px; padding: 13px 14px; border: 1px solid rgba(252, 254, 255, .24); color: var(--sn-white); font-size: .82rem; line-height: 1.5; text-decoration: none; }
+    .sn-ibs-das .sn-ibs-das__entry a:hover { border-color: var(--sn-cyan); }
+    .sn-ibs-das .sn-ibs-das__entry strong { display: block; margin-bottom: 3px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .7rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-ibs-das .sn-ibs-das__hero-note { margin: 16px 0 0; padding: 14px; border: 1px solid rgba(140, 196, 255, .32); border-radius: var(--sn-radius); background: rgba(252, 254, 255, .06); color: rgba(252, 254, 255, .8); font-size: .85rem; }
+    .sn-ibs-das .sn-ibs-das__hero-media { display: grid; gap: 12px; margin: 0; }
+    .sn-ibs-das .sn-ibs-das__hero-media figure { margin-bottom: 0; }
+    .sn-ibs-das .sn-ibs-das__hero-media img { width: 100%; }
+    .sn-ibs-das .sn-ibs-das__hero-media figure:first-child img { aspect-ratio: 16 / 10; object-fit: cover; }
+    .sn-ibs-das .sn-ibs-das__hero-media figure:last-child img { aspect-ratio: 16 / 9; padding: 16px; background: var(--sn-white); object-fit: contain; }
+    .sn-ibs-das .sn-ibs-das__hero-media figcaption { color: rgba(252, 254, 255, .68); }
+    .sn-ibs-das .sn-ibs-das__bom-table { min-width: 1080px; }
+    .sn-ibs-das .sn-ibs-das__bom-table tbody th { width: 210px; color: var(--sn-navy); }
+    .sn-ibs-das .sn-ibs-das__bom-table td:last-child { color: var(--sn-text-muted); }
+    .sn-ibs-das .sn-ibs-das__product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-ibs-das .sn-ibs-das__product-grid figure { margin-bottom: 0; }
+    .sn-ibs-das .sn-ibs-das__product-grid img { width: 100%; aspect-ratio: 1 / 1; padding: 16px; border: var(--sn-border); background: var(--sn-white); object-fit: contain; }
+    .sn-ibs-das .sn-ibs-das__note { margin: 18px 0 0; padding: 16px 18px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-ibs-das .sn-ibs-das__note p:last-child { margin-bottom: 0; }
+    .sn-ibs-das .sn-ibs-das__check-table { min-width: 940px; }
+    .sn-ibs-das .sn-ibs-das__check-table tbody th { width: 230px; color: var(--sn-navy); }
+    .sn-ibs-das .sn-ibs-das__range-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-ibs-das .sn-ibs-das__range { padding: 24px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-ibs-das .sn-ibs-das__range b { display: block; margin-bottom: 10px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: 1.35rem; line-height: 1.3; }
+    .sn-ibs-das .sn-ibs-das__range p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-ibs-das .sn-ibs-das__flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 26px; padding: 16px; border: var(--sn-border); background: var(--sn-white); color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.5; }
+    .sn-ibs-das .sn-ibs-das__flow span { padding: 8px 10px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); }
+    .sn-ibs-das .sn-ibs-das__flow b { color: var(--sn-cyan-dark); }
+    .sn-ibs-das .sn-ibs-das__map-table { min-width: 1040px; }
+    .sn-ibs-das .sn-ibs-das__map-table tbody th { color: var(--sn-navy); }
+    .sn-ibs-das .sn-ibs-das__map-table td:last-child a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-ibs-das .sn-ibs-das__mapping-media { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 18px; margin-top: 26px; }
+    .sn-ibs-das .sn-ibs-das__mapping-media figure { margin-bottom: 0; }
+    .sn-ibs-das .sn-ibs-das__mapping-media img { width: 100%; aspect-ratio: 4 / 3; border: var(--sn-border); background: var(--sn-white); }
+    .sn-ibs-das .sn-ibs-das__mapping-media figure:first-child img { object-fit: cover; }
+    .sn-ibs-das .sn-ibs-das__mapping-media figure:last-child img { padding: 18px; object-fit: contain; }
+    .sn-ibs-das .sn-ibs-das__evidence-table { min-width: 980px; }
+    .sn-ibs-das .sn-ibs-das__evidence-table tbody th { width: 220px; color: var(--sn-navy); }
+    .sn-ibs-das .sn-ibs-das__process { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 28px 0; padding: 0; list-style: none; counter-reset: ibs-gate; }
+    .sn-ibs-das .sn-ibs-das__process li { margin-left: -1px; padding: 22px; border: var(--sn-border); background: var(--sn-white); counter-increment: ibs-gate; }
+    .sn-ibs-das .sn-ibs-das__process li:first-child { margin-left: 0; }
+    .sn-ibs-das .sn-ibs-das__process li::before { display: block; margin-bottom: 12px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; content: 'STEP 0' counter(ibs-gate); }
+    .sn-ibs-das .sn-ibs-das__process h3 { font-size: 1rem; }
+    .sn-ibs-das .sn-ibs-das__process p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .85rem; }
+    .sn-ibs-das .sn-ibs-das__evidence { margin: 26px 0 0; }
+    .sn-ibs-das .sn-ibs-das__evidence img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-ibs-das .sn-ibs-das__template-table { min-width: 1120px; }
+    .sn-ibs-das .sn-ibs-das__template-table tbody th { color: var(--sn-navy); }
+    .sn-ibs-das .sn-ibs-das__split-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
+    .sn-ibs-das .sn-ibs-das__split { padding: 24px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-ibs-das .sn-ibs-das__split h3 { font-family: var(--sn-font-mono); font-size: .82rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-ibs-das .sn-ibs-das__split p:last-child { margin-bottom: 0; }
+    .sn-ibs-das .sn-ibs-das__split p { color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-ibs-das .sn-ibs-das__faq { max-width: 940px; }
+    .sn-ibs-das .sn-ibs-das__faq details { border-bottom: var(--sn-border); }
+    .sn-ibs-das .sn-ibs-das__faq summary { position: relative; min-height: 44px; padding: 22px 46px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-ibs-das .sn-ibs-das__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-ibs-das .sn-ibs-das__faq details[open] summary::after { content: '−'; }
+    .sn-ibs-das .sn-ibs-das__faq details p { max-width: 78ch; padding-right: 36px; color: var(--sn-text-muted); }
+    .sn-ibs-das .sn-ibs-das__cta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); }
+    .sn-ibs-das .sn-cta h2 { color: var(--sn-white); }
+    .sn-ibs-das .sn-cta p, .sn-ibs-das .sn-cta li { color: rgba(252, 254, 255, .78); }
+    .sn-ibs-das .sn-cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-ibs-das .sn-ibs-das__cta-card { padding: 26px; border: 1px solid rgba(252, 254, 255, .22); }
+    .sn-ibs-das .sn-cta .sn-ibs-das__split { border-color: rgba(252, 254, 255, .22); background: transparent; }
+    .sn-ibs-das .sn-cta .sn-ibs-das__split h3 { color: var(--sn-white); }
+    .sn-ibs-das .sn-ibs-das__cta-card .sn-btn { margin-top: 8px; }
+    .sn-ibs-das .sn-ibs-das__fine { margin: 18px 0 0; font-size: .82rem; }
+    @media (max-width: 1100px) {
+      .sn-ibs-das .sn-ibs-das__product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-ibs-das .sn-ibs-das__process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-ibs-das .sn-ibs-das__process li { margin: -1px 0 0 -1px; }
+    }
+    @media (max-width: 900px) {
+      .sn-ibs-das .sn-ibs-das__hero-grid, .sn-ibs-das .sn-ibs-das__cta { grid-template-columns: 1fr; }
+      .sn-ibs-das .sn-ibs-das__hero-media { max-width: 640px; }
+      .sn-ibs-das .sn-ibs-das__range-grid { grid-template-columns: 1fr; }
+      .sn-ibs-das .sn-ibs-das__mapping-media { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .sn-ibs-das .sn-ibs-das__process { grid-template-columns: 1fr; }
+      .sn-ibs-das .sn-ibs-das__process li { margin: -1px 0 0; }
+      .sn-ibs-das .sn-ibs-das__split-grid { grid-template-columns: 1fr; }
+      .sn-ibs-das .sn-ibs-das__product-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .sn-ibs-das .sn-ibs-das__entry { grid-template-columns: 1fr; }
+      .sn-ibs-das .sn-ibs-das__actions .sn-btn { width: 100%; }
+    }
+  </style>
+
+  <section class="sn-hero sn-ibs-das__hero" aria-labelledby="ibs-title">
+    <div class="sn-container sn-ibs-das__hero-grid">
+      <div class="sn-ibs-das__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">IBS / DAS Components</li></ol></nav>
+        <span class="sn-ibs-das__eyebrow">Secondary Solutions · DAS / IBS project BOM completion</span>
+        <h1 id="ibs-title">Low PIM Passive Components for In-Building DAS</h1>
+        <p>Assemble an in-building DAS passive bill of materials from POI, low PIM splitters, directional couplers and 3 dB hybrid couplers. The line addresses 698–3800 MHz wideband requirements, and PIM performance to ≤-160 dBc is available on specific models, confirmed item by item on the datasheet rather than assumed across the range.</p>
+        <div class="sn-ibs-das__entry" aria-label="Four passive component entries">
+          <a href="#bom-matrix"><strong>POI</strong>Multi-operator project input and port plan</a>
+          <a href="#bom-matrix"><strong>Low PIM splitters</strong>2, 3 or 4-way indoor DAS division</a>
+          <a href="#bom-matrix"><strong>Directional couplers</strong>Coupling value, directivity and through path</a>
+          <a href="#bom-matrix"><strong>3 dB hybrid couplers</strong>Defined phase relationship between ports</a>
+        </div>
+        <div class="sn-ibs-das__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Bulk Order Inquiry</a><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Request Datasheet Pack</a></div>
+        <p class="sn-ibs-das__hero-note"><strong>Supporting product line.</strong> This page serves DAS and IBS project supply and bulk orders; it does not take priority over the five core product lines or define generic combiner selection.</p>
+      </div>
+      <div class="sn-ibs-das__hero-media">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-ibs.webp" alt="In-building wireless coverage" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>In-building coverage illustration. It represents the application area and does not correspond to a specific project.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-hybrid.webp" alt="Hybrid coupler" width="1024" height="571" loading="lazy" decoding="async">
+          <figcaption>Hybrid coupler product visual used as a category example, not a specification sheet.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="bom-matrix" aria-labelledby="ibs-bom-title">
+    <div class="sn-container">
+      <div class="sn-ibs-das__intro">
+        <h2 id="ibs-bom-title">Specify Low PIM Splitters, Couplers and POI by Function</h2>
+        <p>Start from the function each item performs in the coverage path, then fill the electrical columns from the selected datasheet. The table accepts buyer inputs; a field stays open until the model behind it is confirmed.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="ibs-bom-caption">
+        <table class="sn-table sn-ibs-das__bom-table">
+          <caption id="ibs-bom-caption">DAS passive BOM matrix by function. Values describe what to confirm, not a product-wide rating.</caption>
+          <thead><tr><th scope="col">Function</th><th scope="col">Ways / coupling</th><th scope="col">Frequency scope</th><th scope="col">PIM</th><th scope="col">Power</th><th scope="col">Connectors</th><th scope="col">Quantity &amp; document status</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Low PIM splitter (indoor DAS)</th><td data-label="Ways / coupling">2, 3 or 4-way models; confirm the split the design needs</td><td data-label="Frequency scope">698–3800 MHz is the line-level wideband scope; check the actual model band</td><td data-label="PIM">Model-level value; request PIM evidence with its test conditions</td><td data-label="Power">Confirm per model and per port</td><td data-label="Connectors">N female, 4.3-10 female or other options by model</td><td data-label="Quantity &amp; document status">Quantity, datasheet revision and required test records to confirm</td></tr>
+            <tr><th scope="row">Directional coupler</th><td data-label="Ways / coupling">Coupling value in dB, plus through and coupled port roles</td><td data-label="Frequency scope">Confirm the model band against the project band plan</td><td data-label="PIM">Model-level value; directivity and PIM are recorded separately</td><td data-label="Power">Confirm for the through path and the coupled port</td><td data-label="Connectors">Interface and gender per model</td><td data-label="Quantity &amp; document status">Quantity and coupling values per line to confirm</td></tr>
+            <tr><th scope="row">3 dB hybrid coupler</th><td data-label="Ways / coupling">3 dB split with a defined phase relationship; amplitude and phase balance from the datasheet</td><td data-label="Frequency scope">Confirm the model band; hybrid balance can vary across it</td><td data-label="PIM">Model-level value with the conditions used for measurement</td><td data-label="Power">Confirm per port and termination condition</td><td data-label="Connectors">Interface and gender per model</td><td data-label="Quantity &amp; document status">Quantity plus phase/amplitude data request to confirm</td></tr>
+            <tr><th scope="row">POI (multi-operator input)</th><td data-label="Ways / coupling">Port and band plan defined by the project; no universal port count is claimed</td><td data-label="Frequency scope">Bands taken from the project band plan</td><td data-label="PIM">Agreed per design and per test specification</td><td data-label="Power">Confirm per port and per signal path</td><td data-label="Connectors">Per project interface schedule</td><td data-label="Quantity &amp; document status">Band plan, quantity and acceptance criteria to confirm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-ibs-das__product-grid">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/power-splitter-2-way-4-3-10-female.webp" alt="2-way power splitter with 4.3-10 female connectors" width="720" height="720" loading="lazy" decoding="async"><figcaption>2-way power splitter with 4.3-10 female connectors. Way count, band and PIM remain model-specific.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/directional-coupler-4-3-10-female.webp" alt="directional coupler with 4.3-10 female connectors" width="720" height="720" loading="lazy" decoding="async"><figcaption>Directional coupler with 4.3-10 female connectors. Coupling value and directivity must match the selected model.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/hybrid-coupler-se-hc-22-0727-nf.webp" alt="SONNE hybrid coupler SE-HC-22-0727-NF" width="720" height="720" loading="lazy" decoding="async"><figcaption>SE-HC-22-0727-NF hybrid coupler. Phase and amplitude balance are read from its datasheet, not from the photo.</figcaption></figure>
+      </div>
+      <p class="sn-ibs-das__note">No dedicated POI photo is assigned to this page, so the POI row stays a functional table entry. Splitter rows are limited to indoor DAS use; generic duplexer, multiplexer, multi-band combining and RF power divider definitions belong to the <a href="/products/rf-combiners/">RF combiners page</a>. <a href="/resources/datasheets/">Request the datasheet pack</a> for the series you are shortlisting.</p>
+      <div class="sn-ibs-das__actions"><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Request Datasheet Pack</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="electrical-check" aria-labelledby="ibs-electrical-title">
+    <div class="sn-container">
+      <div class="sn-ibs-das__intro">
+        <h2 id="ibs-electrical-title">Check Frequency, PIM, Power and Connectors per Model</h2>
+        <p>A model check is faster when every parameter carries its own evidence. Record the value, the condition it was measured under and the datasheet revision; mark anything unresolved as to confirm instead of estimating it.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="ibs-check-caption">
+        <table class="sn-table sn-ibs-das__check-table">
+          <caption id="ibs-check-caption">Model-level electrical checklist for one DAS passive item.</caption>
+          <thead><tr><th scope="col">Parameter</th><th scope="col">What to record</th><th scope="col">Evidence or condition</th><th scope="col">Status to keep in the BOM</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Operating band</th><td data-label="What to record">The model band and any sub-band limits</td><td data-label="Evidence or condition">Datasheet frequency table</td><td data-label="Status to keep in the BOM">Confirmed on datasheet, or to confirm</td></tr>
+            <tr><th scope="row">Insertion / distribution loss</th><td data-label="What to record">Loss for the path actually used</td><td data-label="Evidence or condition">Band, port pair and reference plane</td><td data-label="Status to keep in the BOM">Confirmed on datasheet, or to confirm</td></tr>
+            <tr><th scope="row">Coupling value</th><td data-label="What to record">Coupling in dB for couplers, not for splitters</td><td data-label="Evidence or condition">Model table plus tolerance</td><td data-label="Status to keep in the BOM">Buyer input until the model is fixed</td></tr>
+            <tr><th scope="row">Isolation / directivity</th><td data-label="What to record">The port pair and band each value applies to</td><td data-label="Evidence or condition">Datasheet, with the measurement definition</td><td data-label="Status to keep in the BOM">Confirmed on datasheet, or to confirm</td></tr>
+            <tr><th scope="row">VSWR / return loss</th><td data-label="What to record">The ports covered by the stated value</td><td data-label="Evidence or condition">Band and reference plane</td><td data-label="Status to keep in the BOM">Confirmed on datasheet, or to confirm</td></tr>
+            <tr><th scope="row">Power handling</th><td data-label="What to record">The type of power and the port it applies to</td><td data-label="Evidence or condition">CW, average or peak condition as stated</td><td data-label="Status to keep in the BOM">Buyer input plus model confirmation</td></tr>
+            <tr><th scope="row">PIM</th><td data-label="What to record">Required limit and the order measured</td><td data-label="Evidence or condition">Tones, power, setup and acceptance criteria</td><td data-label="Status to keep in the BOM">Project requirement, then model evidence</td></tr>
+            <tr><th scope="row">Connectors</th><td data-label="What to record">Series, gender and interface count</td><td data-label="Evidence or condition">Outline drawing</td><td data-label="Status to keep in the BOM">Confirmed on drawing, or to confirm</td></tr>
+            <tr><th scope="row">Dimensions &amp; mounting</th><td data-label="What to record">Envelope, mounting pattern and access space</td><td data-label="Evidence or condition">Outline drawing with tolerances</td><td data-label="Status to keep in the BOM">Confirmed on drawing, or to confirm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-ibs-das__range-grid">
+        <div class="sn-ibs-das__range"><b>698–3800 MHz</b><p>Wideband scope at line level. This does not mean every model covers the whole range; confirm the model band and any sub-band limits before release.</p></div>
+        <div class="sn-ibs-das__range"><b>≤-160 dBc</b><p>PIM capability for specific models only. Keep the test tones, power, order and setup together with the datasheet revision in the project file.</p></div>
+        <div class="sn-ibs-das__range"><b>SE-PS · SE-DC · SE-HC</b><p>Datasheet requests are organized by these series. Three-level model detail pages are a later catalog phase; until then, request documents for the exact model.</p></div>
+      </div>
+      <div class="sn-ibs-das__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Check My DAS Specification</a><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Request Datasheet Pack</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="das-mapping" aria-labelledby="ibs-mapping-title">
+    <div class="sn-container">
+      <div class="sn-ibs-das__intro">
+        <h2 id="ibs-mapping-title">Map Passive Components to the In-Building Coverage Path</h2>
+        <p>Convert a coverage diagram into a BOM by walking the signal path once. Each node below lists the values that decide the passive part and the accessory that completes it. The sequence shows functional position only and makes no claim about coverage performance.</p>
+      </div>
+      <div class="sn-ibs-das__flow" aria-label="Simplified in-building DAS signal path">
+        <span>Signal source</span><b aria-hidden="true">→</b><span>POI</span><b aria-hidden="true">→</b><span>Trunk run</span><b aria-hidden="true">→</b><span>Splitter / coupler</span><b aria-hidden="true">→</b><span>Distribution node</span><b aria-hidden="true">→</b><span>Indoor antenna</span>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="ibs-map-caption">
+        <table class="sn-table sn-ibs-das__map-table">
+          <caption id="ibs-map-caption">From coverage diagram to BOM: node, passive function, values to confirm and the route that completes it.</caption>
+          <thead><tr><th scope="col">Node</th><th scope="col">Passive function</th><th scope="col">Values to confirm</th><th scope="col">Completion route</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Signal source / head-end</th><td data-label="Passive function">Defines the bands and input levels that enter the passive network</td><td data-label="Values to confirm">Bands, source levels, port count and POI band plan</td><td data-label="Completion route"><a href="/request-a-quote/">Submit the band plan</a></td></tr>
+            <tr><th scope="row">POI</th><td data-label="Passive function">Multi-operator input point for the project</td><td data-label="Values to confirm">Operator bands, port roles, isolation, power and PIM targets</td><td data-label="Completion route"><a href="/products/rf-combiners/">RF combiners page</a></td></tr>
+            <tr><th scope="row">Trunk run</th><td data-label="Passive function">Carries the combined signal to the distribution layer</td><td data-label="Values to confirm">Cable loss, connector schedule and power at each end</td><td data-label="Completion route"><a href="/products/rf-accessories/">RF cable assemblies</a></td></tr>
+            <tr><th scope="row">Splitter</th><td data-label="Passive function">Divides the trunk signal into branch paths</td><td data-label="Values to confirm">Ways, band, split loss, power, connector and quantity</td><td data-label="Completion route"><a href="#bom-matrix">BOM matrix above</a></td></tr>
+            <tr><th scope="row">Coupler / tap</th><td data-label="Passive function">Taps a defined portion of the signal to one branch</td><td data-label="Values to confirm">Coupling value, directivity, through loss and connector</td><td data-label="Completion route"><a href="#bom-matrix">BOM matrix above</a></td></tr>
+            <tr><th scope="row">Distribution node / antenna end</th><td data-label="Passive function">Delivers the signal to the indoor antenna or terminates an unused port</td><td data-label="Values to confirm">Antenna band and connector; load power and interface for unused ports</td><td data-label="Completion route"><a href="/products/rf-accessories/">RF accessories</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-ibs-das__mapping-media">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-ibs.webp" alt="In-building wireless coverage" width="1024" height="1024" loading="lazy" decoding="async"><figcaption>In-building coverage setting. Scene imagery only; no operator count or coverage result is implied.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/indoor-antenna-se-dpa-0640-v6801-nf.webp" alt="SONNE indoor antenna SE-DPA-0640-V6801-NF" width="720" height="720" loading="lazy" decoding="async"><figcaption>Distribution-node accessory from the RF accessories line: indoor antenna SE-DPA-0640-V6801-NF. Band, gain and connector remain model-specific.</figcaption></figure>
+      </div>
+      <p class="sn-ibs-das__note">Indoor antennas, loads and cable assemblies are ordered through <a href="/products/rf-accessories/">RF accessories</a>, keeping them subordinate to the passive BOM. Multi-operator scope and deployment questions sit with the <a href="/solutions/das-ibs/">DAS / IBS solution guide</a>; feeder sharing and combiner selection stay on the <a href="/products/rf-combiners/">combiners page</a>.</p>
+      <div class="sn-ibs-das__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Map My Project BOM</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="batch-evidence" aria-labelledby="ibs-evidence-title">
+    <div class="sn-container">
+      <div class="sn-ibs-das__intro">
+        <h2 id="ibs-evidence-title">Align Datasheets, Batch Checks and Traceability before Ordering</h2>
+        <p>Before a batch is released, agree which documents identify the model, which limits the batch was checked against and how a deviation is handled. Test coverage is agreed per model and per order; it is not a blanket statement for the whole line.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="ibs-evidence-caption">
+        <table class="sn-table sn-ibs-das__evidence-table">
+          <caption id="ibs-evidence-caption">Document package for a DAS passive batch, and the point at which each item is agreed.</caption>
+          <thead><tr><th scope="col">Evidence item</th><th scope="col">Contents</th><th scope="col">Agreed at</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Datasheet package</th><td data-label="Contents">Electrical table, key curves, outline drawing and connector schedule</td><td data-label="Agreed at">RFQ review, before the model is fixed</td></tr>
+            <tr><th scope="row">Interface drawing</th><td data-label="Contents">Port map, marking, mounting pattern and access clearance</td><td data-label="Agreed at">Order confirmation</td></tr>
+            <tr><th scope="row">Batch / serial traceability</th><td data-label="Contents">Batch identifier and the link between units and their test records</td><td data-label="Agreed at">Order review</td></tr>
+            <tr><th scope="row">Test records</th><td data-label="Contents">PIM, VNA S-parameters and, where agreed, matrix-switch multi-port runs</td><td data-label="Agreed at">Before batch release</td></tr>
+            <tr><th scope="row">Deviation handling</th><td data-label="Contents">How an out-of-limit result is defined, notified and dispositioned</td><td data-label="Agreed at">Before production starts</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ol class="sn-ibs-das__process">
+        <li><h3>Approved model &amp; version</h3><p>The datasheet revision and drawing revision are fixed before production.</p></li>
+        <li><h3>Agreed test limits</h3><p>PIM, VNA and any multi-port sequence are written into the order.</p></li>
+        <li><h3>Batch records</h3><p>Units are linked to their batch identifier and measured results.</p></li>
+        <li><h3>Deviation disposition</h3><p>Any out-of-limit unit is reviewed and dispositioned, not shipped silently.</p></li>
+      </ol>
+      <figure class="sn-ibs-das__evidence">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-station.webp" alt="RF test station" width="1024" height="575" loading="lazy" decoding="async">
+        <figcaption>RF test station at the SONNE manufacturing base. The photo shows a test environment; it is not evidence for a specific SE model.</figcaption>
+      </figure>
+      <p class="sn-ibs-das__note">PIM, VNA and multi-port matrix automation can be applied to suitable projects; the test items and coverage are agreed per model and per order. <a href="/engineering/testing-quality/">Review testing and quality</a> before a supplier audit, then request the batch evidence through the RFQ.</p>
+      <div class="sn-ibs-das__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Batch Evidence Requirements</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="bulk-rfq" aria-labelledby="ibs-bulk-title">
+    <div class="sn-container">
+      <div class="sn-ibs-das__intro">
+        <h2 id="ibs-bulk-title">Submit One DAS BOM for Model and Quantity Review</h2>
+        <p>One BOM is easier to review than a list of part numbers spread across emails. Use the columns below so engineering can confirm model, quantity and documents in a single pass.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="ibs-template-caption">
+        <table class="sn-table sn-ibs-das__template-table">
+          <caption id="ibs-template-caption">DAS passive BOM template. Example values are input placeholders, not product specifications.</caption>
+          <thead><tr><th scope="col">BOM column</th><th scope="col">What to enter</th><th scope="col">Example (placeholder)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Series / model</th><td data-label="What to enter">SE-PS, SE-DC, SE-HC, POI, or TBD</td><td data-label="Example (placeholder)">SE-PS (to confirm)</td></tr>
+            <tr><th scope="row">Function</th><td data-label="What to enter">Splitter, directional coupler, hybrid coupler or POI</td><td data-label="Example (placeholder)">2-way splitter</td></tr>
+            <tr><th scope="row">Frequency</th><td data-label="What to enter">Model band, or the project band plan</td><td data-label="Example (placeholder)">698–3800 MHz requirement</td></tr>
+            <tr><th scope="row">PIM</th><td data-label="What to enter">Target and the test conditions to apply</td><td data-label="Example (placeholder)">≤-160 dBc target, conditions TBD</td></tr>
+            <tr><th scope="row">Power</th><td data-label="What to enter">Level and type per port</td><td data-label="Example (placeholder)">Buyer input</td></tr>
+            <tr><th scope="row">Connector</th><td data-label="What to enter">Series, gender and count</td><td data-label="Example (placeholder)">4.3-10 female</td></tr>
+            <tr><th scope="row">Quantity</th><td data-label="What to enter">Units per line item</td><td data-label="Example (placeholder)">Buyer input</td></tr>
+            <tr><th scope="row">Target date</th><td data-label="What to enter">Project stage or required-on-site date</td><td data-label="Example (placeholder)">Buyer input</td></tr>
+            <tr><th scope="row">Documents</th><td data-label="What to enter">Datasheet, drawing, test record or traceability request</td><td data-label="Example (placeholder)">Datasheet + PIM record</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-ibs-das__split-grid">
+        <div class="sn-ibs-das__split"><h3>MOQ boundary</h3><p>The published MOQ 50+ applies to this IBS/DAS line only. Model, quantity and order conditions still require confirmation, and the figure is not carried over to filters, waveguide, combiners, base-station RF or enclosures.</p></div>
+        <div class="sn-ibs-das__split"><h3>Timing and feedback</h3><p>Production timing follows model, quantity, process and capacity. A complete RFQ typically receives initial engineering feedback in about 24 hours; that is neither a quotation nor a delivery confirmation.</p></div>
+      </div>
+      <div class="sn-ibs-das__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Bulk Order Inquiry</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare the RFQ</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="ibs-faq" aria-labelledby="ibs-faq-title">
+    <div class="sn-container">
+      <div class="sn-ibs-das__intro">
+        <h2 id="ibs-faq-title">IBS and DAS Passive Component Questions</h2>
+        <p>Five recurring questions about a complete BOM, model-level PIM, the line MOQ, 3 dB hybrid use and the boundary between this page and the RF combiners page.</p>
+      </div>
+      <div class="sn-ibs-das__faq">
+        <details open><summary>Can SONNE support a complete DAS passive-component BOM?</summary><p>Yes. Submit one BOM covering POI requirements, low PIM splitters, directional couplers and hybrid couplers, with model or function, frequency, power, PIM, connectors and quantities. Indoor antennas, loads and cable assemblies can be added through the RF accessories page. Each item is checked against its applicable datasheet rather than treated as one uniform specification.</p></details>
+        <details><summary>Does every DAS component meet PIM of -160 dBc or better?</summary><p>No. The published value of up to ≤-160 dBc applies only to specific models, not automatically to the entire IBS/DAS range. Check the selected model's datasheet, test conditions and required power level. For project approval, request the applicable PIM evidence and agree on verification coverage before ordering.</p></details>
+        <details><summary>What is the MOQ for IBS and DAS passive components?</summary><p>The source specification for this IBS/DAS line states MOQ 50+, and that limitation must not be applied to SONNE's other product lines. Confirm the exact model, quantity and order conditions with your BOM. Availability and production timing are reviewed per model and order rather than presented as a universal stock or delivery policy.</p></details>
+        <details><summary>Where is a 3 dB hybrid coupler used in an in-building DAS?</summary><p>A 3 dB hybrid coupler can split or combine signals while providing a defined phase relationship between ports, depending on the circuit and system design. In an in-building DAS, selection should consider frequency range, power, PIM, isolation, amplitude and phase balance, and connectors. Confirm these values on the specific model datasheet.</p></details>
+        <details><summary>Should I use this page or the RF combiners page for my requirement?</summary><p>Use this page for in-building DAS BOMs centered on low PIM splitters, directional or hybrid couplers and POI requirements. Use the <a href="/products/rf-combiners/">RF combiners page</a> for generic duplexers, diplexers, multiplexers, multi-band combiners or RF power dividers. If the system includes both, submit the band plan and BOM so each requirement can be routed correctly.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="ibs-cta" aria-labelledby="ibs-cta-title">
+    <div class="sn-container sn-cta sn-ibs-das__cta">
+      <div>
+        <h2 id="ibs-cta-title">Send Your DAS BOM or Request the Matching Datasheets</h2>
+        <p>Two entry points share one review queue: a complete BOM for model and quantity assessment, or a datasheet pack request for the series you are shortlisting. Either one can start before the model list is final.</p>
+        <p>PIM, band and power are confirmed per model. MOQ 50+ applies to this line only and requires order confirmation. Start with the <a href="/resources/rfq-guide/">RFQ guide</a> if the BOM structure is still open.</p>
+        <p class="sn-ibs-das__fine">Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>. A complete RFQ typically receives initial engineering feedback in about 24 hours.</p>
+      </div>
+      <div class="sn-ibs-das__cta-card">
+        <div class="sn-ibs-das__split-grid">
+          <div class="sn-ibs-das__split"><h3>Already have a BOM</h3><p>Upload XLSX, CSV or PDF with quantities and the target project stage. Output: model and quantity review.</p><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Bulk Order Inquiry</a></div>
+          <div class="sn-ibs-das__split"><h3>Need documents first</h3><p>Ask for SE-PS, SE-DC, SE-HC or POI datasheets. Output: the matching document set.</p><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Request Datasheet Pack</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/ibs-das-components/#product",
+        "name": "Low PIM Passive Components for In-Building DAS",
+        "url": "https://rf-sonne.com/products/ibs-das-components/",
+        "description": "POI, low PIM splitters, directional couplers and 3 dB hybrid couplers for in-building DAS and IBS projects, with 698-3800 MHz wideband requirements and model-level PIM up to ≤-160 dBc.",
+        "category": "IBS and DAS passive components",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/card-ibs.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/ibs-das-components/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"IBS / DAS Components","item":"https://rf-sonne.com/products/ibs-das-components/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rf-sonne.com/products/ibs-das-components/#faq",
+        "mainEntity": [
+          {"@type":"Question","name":"Can SONNE support a complete DAS passive-component BOM?","acceptedAnswer":{"@type":"Answer","text":"Yes. Submit one BOM covering POI requirements, low PIM splitters, directional couplers and hybrid couplers, with model or function, frequency, power, PIM, connectors and quantities. Indoor antennas, loads and cable assemblies can be added through the RF accessories page. Each item is checked against its applicable datasheet rather than treated as one uniform specification."}},
+          {"@type":"Question","name":"Does every DAS component meet PIM of -160 dBc or better?","acceptedAnswer":{"@type":"Answer","text":"No. The published value of up to ≤-160 dBc applies only to specific models, not automatically to the entire IBS/DAS range. Check the selected model's datasheet, test conditions and required power level. For project approval, request the applicable PIM evidence and agree on verification coverage before ordering."}},
+          {"@type":"Question","name":"What is the MOQ for IBS and DAS passive components?","acceptedAnswer":{"@type":"Answer","text":"The source specification for this IBS/DAS line states MOQ 50+, and that limitation must not be applied to SONNE's other product lines. Confirm the exact model, quantity and order conditions with your BOM. Availability and production timing are reviewed per model and order rather than presented as a universal stock or delivery policy."}},
+          {"@type":"Question","name":"Where is a 3 dB hybrid coupler used in an in-building DAS?","acceptedAnswer":{"@type":"Answer","text":"A 3 dB hybrid coupler can split or combine signals while providing a defined phase relationship between ports, depending on the circuit and system design. In an in-building DAS, selection should consider frequency range, power, PIM, isolation, amplitude and phase balance, and connectors. Confirm these values on the specific model datasheet."}},
+          {"@type":"Question","name":"Should I use this page or the RF combiners page for my requirement?","acceptedAnswer":{"@type":"Answer","text":"Use this page for in-building DAS BOMs centered on low PIM splitters, directional or hybrid couplers and POI requirements. Use the RF combiners page for generic duplexers, diplexers, multiplexers, multi-band combiners or RF power dividers. If the system includes both, submit the band plan and BOM so each requirement can be routed correctly."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

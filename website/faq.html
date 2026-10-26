@@ -1,0 +1,323 @@
+<!-- wp:html -->
+<div class="sn-faq-hub sn-legacy-record">
+  <style>
+    .sn-faq-hub { color: var(--sn-text); }
+    .sn-faq-hub *, .sn-faq-hub *::before, .sn-faq-hub *::after { box-sizing: border-box; }
+    .sn-faq-hub h2, .sn-faq-hub h3, .sn-faq-hub p, .sn-faq-hub ul, .sn-faq-hub ol, .sn-faq-hub dl, .sn-faq-hub dd, .sn-faq-hub figure { margin-top: 0; }
+    .sn-faq-hub h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-faq-hub h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-faq-hub p, .sn-faq-hub li, .sn-faq-hub dd { line-height: 1.7; }
+    .sn-faq-hub a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-faq-hub img { display: block; max-width: 100%; height: auto; }
+    .sn-faq-hub figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-faq-hub .sn-faq-hub__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-faq-hub .sn-faq-hub__hero .sn-faq-hub__eyebrow { color: var(--sn-cyan); }
+    .sn-faq-hub .sn-faq-hub__hero-grid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(340px, .94fr); gap: clamp(34px, 5vw, 72px); align-items: center; }
+    .sn-faq-hub .sn-faq-hub__hero-copy > p { margin-bottom: 18px; font-size: 1.03rem; }
+    .sn-faq-hub .sn-faq-hub__topics { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; padding: 0; list-style: none; }
+    .sn-faq-hub .sn-faq-hub__topics li { padding: 6px 11px; border: 1px solid rgba(252, 254, 255, .28); color: rgba(252, 254, 255, .86); font-family: var(--sn-font-mono); font-size: .69rem; line-height: 1.5; }
+    .sn-faq-hub .sn-faq-hub__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-faq-hub .sn-faq-hub__hero-media { margin-bottom: 0; }
+    .sn-faq-hub .sn-faq-hub__hero-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-faq-hub .sn-faq-hub__hero figcaption { color: rgba(252, 254, 255, .62); }
+    .sn-faq-hub .sn-faq-hub__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 30px; border-block: 1px solid rgba(252, 254, 255, .18); }
+    .sn-faq-hub .sn-faq-hub__fact { padding: 18px 18px 18px 0; }
+    .sn-faq-hub .sn-faq-hub__fact + .sn-faq-hub__fact { padding-left: 18px; border-left: 1px solid rgba(252, 254, 255, .18); }
+    .sn-faq-hub .sn-faq-hub__fact strong { display: block; margin-bottom: 5px; color: var(--sn-white); font-family: var(--sn-font-heading); font-size: 1.25rem; }
+    .sn-faq-hub .sn-faq-hub__fact span { display: block; color: rgba(252, 254, 255, .7); font-size: .78rem; line-height: 1.5; }
+    .sn-faq-hub .sn-faq-hub__boundary { margin: 16px 0 0; color: rgba(252, 254, 255, .68); font-size: .8rem; }
+    .sn-faq-hub .sn-faq-hub__intro { max-width: 860px; margin-bottom: 36px; }
+    .sn-faq-hub .sn-faq-hub__intro > p { margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.02rem; }
+    .sn-faq-hub caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .8rem; text-align: left; }
+    .sn-faq-hub .sn-faq-hub__capability { min-width: 960px; }
+    .sn-faq-hub .sn-faq-hub__capability tbody th { color: var(--sn-navy); }
+    .sn-faq-hub .sn-faq-hub__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 30px; }
+    .sn-faq-hub .sn-faq-hub__card { padding: 24px; border: var(--sn-border); border-top: 3px solid var(--sn-cyan-dark); background: var(--sn-white); }
+    .sn-faq-hub .sn-faq-hub__card p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-faq-hub .sn-faq-hub__note { margin: 18px 0 0; padding: 16px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-faq-hub .sn-faq-hub__note p { margin-bottom: 0; }
+    .sn-faq-hub .sn-faq-hub__more { margin: 10px 0 0; }
+    .sn-faq-hub .sn-faq-hub__text-link { display: inline-flex; min-height: 44px; align-items: center; font-weight: 700; }
+    .sn-faq-hub .sn-faq-hub__links { display: flex; flex-wrap: wrap; gap: 4px 24px; margin-top: 6px; }
+    .sn-faq-hub .sn-faq-hub__timeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin: 0 0 28px; padding: 0; list-style: none; }
+    .sn-faq-hub .sn-faq-hub__step { display: flex; min-width: 0; flex-direction: column; padding: 20px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-faq-hub .sn-faq-hub__step-index { display: block; margin-bottom: 20px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; }
+    .sn-faq-hub .sn-faq-hub__step h3 { font-size: 1rem; }
+    .sn-faq-hub .sn-faq-hub__step p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-faq-hub .sn-faq-hub__split { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(28px, 4vw, 52px); align-items: center; }
+    .sn-faq-hub .sn-faq-hub__split figure { margin-bottom: 0; }
+    .sn-faq-hub .sn-faq-hub__split img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-faq-hub .sn-faq-hub__prose h3:not(:first-child) { margin-top: 22px; }
+    .sn-faq-hub .sn-faq-hub__prose p { color: var(--sn-text-muted); }
+    .sn-faq-hub .sn-faq-hub__prose p:last-child { margin-bottom: 0; }
+    .sn-faq-hub .sn-faq-hub__evidence { min-width: 940px; margin-top: 32px; }
+    .sn-faq-hub .sn-faq-hub__evidence tbody th { color: var(--sn-navy); }
+    .sn-faq-hub .sn-faq-hub__confidentiality { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: clamp(28px, 4vw, 52px); align-items: start; }
+    .sn-faq-hub .sn-faq-hub__confidentiality h3:not(:first-child) { margin-top: 24px; }
+    .sn-faq-hub .sn-faq-hub__confidentiality ul { margin: 0 0 18px; padding-left: 20px; }
+    .sn-faq-hub .sn-faq-hub__confidentiality li { margin-bottom: 8px; color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-faq-hub .sn-faq-hub__confidentiality p { color: var(--sn-text-muted); }
+    .sn-faq-hub .sn-faq-hub__faq details { border-bottom: var(--sn-border); }
+    .sn-faq-hub .sn-faq-hub__faq summary { position: relative; min-height: 44px; padding: 22px 48px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.04rem; font-weight: 700; line-height: 1.45; list-style: none; cursor: pointer; }
+    .sn-faq-hub .sn-faq-hub__faq summary::-webkit-details-marker { display: none; }
+    .sn-faq-hub .sn-faq-hub__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-faq-hub .sn-faq-hub__faq details[open] summary::after { content: '−'; }
+    .sn-faq-hub .sn-faq-hub__faq details p { max-width: 76ch; padding-right: 32px; color: var(--sn-text-muted); font-size: .92rem; }
+    .sn-faq-hub .sn-faq-hub__faq details a { font-weight: 700; }
+    .sn-faq-hub .sn-faq-hub__final h2, .sn-faq-hub .sn-faq-hub__final h3 { color: var(--sn-white); }
+    .sn-faq-hub .sn-faq-hub__final p, .sn-faq-hub .sn-faq-hub__final li { color: rgba(252, 254, 255, .8); }
+    .sn-faq-hub .sn-faq-hub__final .sn-faq-hub__eyebrow { color: var(--sn-cyan); }
+    .sn-faq-hub .sn-faq-hub__cta-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+    .sn-faq-hub .sn-faq-hub__panel { padding: 24px; border: 1px solid rgba(252, 254, 255, .2); }
+    .sn-faq-hub .sn-faq-hub__panel ul { margin: 0; padding-left: 18px; }
+    .sn-faq-hub .sn-faq-hub__panel li { font-size: .88rem; }
+    .sn-faq-hub .sn-faq-hub__final a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-faq-hub .sn-faq-hub__fine-print { margin-top: 18px; font-size: .82rem; }
+    @media (max-width: 1100px) {
+      .sn-faq-hub .sn-faq-hub__timeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 1020px) {
+      .sn-faq-hub .sn-faq-hub__hero-grid, .sn-faq-hub .sn-faq-hub__cta-grid { grid-template-columns: 1fr; }
+      .sn-faq-hub .sn-faq-hub__hero-media { max-width: 760px; }
+    }
+    @media (max-width: 900px) {
+      .sn-faq-hub .sn-faq-hub__split, .sn-faq-hub .sn-faq-hub__confidentiality { grid-template-columns: 1fr; }
+      .sn-faq-hub .sn-faq-hub__split figure { max-width: 720px; }
+      .sn-faq-hub .sn-faq-hub__cards { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .sn-faq-hub .sn-faq-hub__facts, .sn-faq-hub .sn-faq-hub__timeline { grid-template-columns: 1fr; }
+      .sn-faq-hub .sn-faq-hub__fact, .sn-faq-hub .sn-faq-hub__fact + .sn-faq-hub__fact { padding: 16px 0; border-left: 0; }
+      .sn-faq-hub .sn-faq-hub__fact + .sn-faq-hub__fact { border-top: 1px solid rgba(252, 254, 255, .18); }
+    }
+    @media (max-width: 560px) {
+      .sn-faq-hub .sn-faq-hub__actions .sn-btn { width: 100%; }
+      .sn-faq-hub .sn-faq-hub__faq details p { padding-right: 0; }
+      .sn-faq-hub .sn-faq-hub__card { padding: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sn-faq-hub *, .sn-faq-hub *::before, .sn-faq-hub *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+    @media print {
+      .sn-faq-hub .sn-faq-hub__faq details:not([open]) > p { display: block !important; }
+      .sn-faq-hub .sn-faq-hub__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-faq-hub__hero" aria-labelledby="faq-hub-title">
+    <div class="sn-container sn-faq-hub__hero-grid">
+      <div class="sn-faq-hub__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/resources">Resources</a></li><li aria-current="page">FAQ</li></ol></nav>
+        <span class="sn-faq-hub__eyebrow">Capability · Verification · Commercial · Confidentiality · After-sales</span>
+        <h1 id="faq-hub-title">Frequently Asked Questions about Custom RF Manufacturing</h1>
+        <p>These answers cover the questions that decide whether a custom RF project can move forward: frequency range, order quantity, prototype and production timing, test evidence, confidentiality and after-sales handling.</p>
+        <p>Where an answer depends on the product or project, the page states the condition and the route to confirm it instead of presenting a company-wide policy.</p>
+        <ul class="sn-faq-hub__topics" aria-label="FAQ topics"><li>Frequency and customization</li><li>Prototype and lead time</li><li>Quality evidence</li><li>Commercial boundaries</li><li>NDA and drawings</li><li>After-sales</li></ul>
+        <div class="sn-faq-hub__actions"><a class="sn-btn sn-btn--primary" href="/contact/">Ask an Engineer</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare an RFQ</a></div>
+        <div class="sn-faq-hub__facts" aria-label="Published capability facts">
+          <div class="sn-faq-hub__fact"><strong>DC–40 GHz</strong><span>Core production range for the standard product portfolio.</span></div>
+          <div class="sn-faq-hub__fact"><strong>Up to 110 GHz</strong><span>Selected custom microwave or waveguide projects, subject to review.</span></div>
+          <div class="sn-faq-hub__fact"><strong>~24 h</strong><span>Initial engineering feedback after a complete RFQ.</span></div>
+        </div>
+        <p class="sn-faq-hub__boundary">The 110 GHz figure depends on topology and verification and is not a universal range. About 24 hours is not a quotation or delivery commitment.</p>
+      </div>
+      <figure class="sn-faq-hub__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-tuning-line.webp" alt="Technicians tuning RF filters with vector network analyzers" width="1891" height="1064" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>VNA tuning line at SONNE. Screen content in a factory photo is not a product rating or a project test result.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="faq-capability-title">
+    <div class="sn-container">
+      <div class="sn-faq-hub__intro">
+        <h2 id="faq-capability-title">Capability and Project-Specific Commercial Answers</h2>
+        <p>Technical scope and commercial conditions are confirmed at different levels. Use the published statement to screen a project, then confirm the model, process and evidence before relying on it.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="faq-capability-caption">
+        <table class="sn-table sn-faq-hub__capability">
+          <caption id="faq-capability-caption">Published capability statements and the conditions that limit how they apply.</caption>
+          <thead><tr><th scope="col">Product area</th><th scope="col">Published scope</th><th scope="col">Conditions to confirm</th><th scope="col">Where to review</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><a href="/products/rf-microwave-filters">RF filters and passive components</a></th><td data-label="Published scope">Core production from DC to 40 GHz</td><td data-label="Conditions to confirm">Band, power, mechanical envelope and test conditions</td><td data-label="Where to review">Product line and project RFQ</td></tr>
+            <tr><th scope="row"><a href="/products/waveguide-components">Selected custom microwave and waveguide</a></th><td data-label="Published scope">Feasibility up to 110 GHz for selected projects</td><td data-label="Conditions to confirm">Topology, interface, mechanical requirements and validation</td><td data-label="Where to review">Engineering review of the specific design</td></tr>
+            <tr><th scope="row"><a href="/products/ibs-das-components">IBS/DAS product line</a></th><td data-label="Published scope">Published quantity of 50+ where specified for this line</td><td data-label="Conditions to confirm">Model, customization, process route and project quantity</td><td data-label="Where to review">Product line and project confirmation</td></tr>
+            <tr><th scope="row"><a href="/products/precision-enclosures">Precision enclosures</a></th><td data-label="Published scope">Ingress protection stated only for the specific cabinet product</td><td data-label="Conditions to confirm">Model, sealing design and supporting test evidence</td><td data-label="Where to review">Product specification and drawing review</td></tr>
+            <tr><th scope="row"><a href="/products/rf-accessories">Connector and accessory products</a></th><td data-label="Published scope">Environmental ratings stated only where applicable to that product</td><td data-label="Conditions to confirm">Interface, mating condition and test conditions</td><td data-label="Where to review">Product line and test evidence</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-faq-hub__cards">
+        <article class="sn-faq-hub__card"><h3>Order quantity is not one number</h3><p>Minimum order quantity is confirmed against the product family, customization, process route and project quantity. A quantity published for one line does not extend to every SONNE product.</p></article>
+        <article class="sn-faq-hub__card"><h3>Commercial terms follow the RFQ</h3><p>Payment terms, production timing and other commercial conditions are reviewed during quotation for the specific project. This page does not publish a company-wide commercial policy.</p></article>
+        <article class="sn-faq-hub__card"><h3>Compliance documentation stays specific</h3><p>RoHS, REACH, salt-spray and EMC documentation is addressed per product and project where required. Ask for the applicable documents for the model under review rather than assuming a blanket statement.</p></article>
+      </div>
+      <p class="sn-faq-hub__note"><strong>Screen, then confirm:</strong> the table helps you decide whether a review is worth starting. It does not replace the model-level specification, drawing revision or test evidence reviewed in the project.</p>
+      <p class="sn-faq-hub__more"><a class="sn-faq-hub__text-link" href="/products">Compare the product lines before you submit <span aria-hidden="true">&nbsp;→</span></a></p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="faq-timing-title">
+    <div class="sn-container">
+      <div class="sn-faq-hub__intro">
+        <h2 id="faq-timing-title">Prototype, Quote and Lead-Time Boundaries</h2>
+        <p>Response time, quotation, prototype and production timing are separate decisions. Treating them as one promise is the most common source of misunderstanding.</p>
+      </div>
+      <ol class="sn-faq-hub__timeline" aria-label="Project response and timing stages">
+        <li class="sn-faq-hub__step"><span class="sn-faq-hub__step-index">01</span><h3>Complete RFQ</h3><p>Product line, band plan or drawing, targets, quantity and verification needs are submitted.</p></li>
+        <li class="sn-faq-hub__step"><span class="sn-faq-hub__step-index">02</span><h3>Initial feedback</h3><p>About 24 hours after a complete RFQ; feasibility questions and missing inputs are identified.</p></li>
+        <li class="sn-faq-hub__step"><span class="sn-faq-hub__step-index">03</span><h3>Clarification</h3><p>Open parameters, revision status, test scope and commercial inputs are resolved with engineering.</p></li>
+        <li class="sn-faq-hub__step"><span class="sn-faq-hub__step-index">04</span><h3>Quotation</h3><p>Price and commercial terms are reviewed only after the technical and quantity baseline is clear.</p></li>
+        <li class="sn-faq-hub__step"><span class="sn-faq-hub__step-index">05</span><h3>Prototype and production</h3><p>Prototype feasibility and production timing are assessed per project from the confirmed inputs.</p></li>
+      </ol>
+      <div class="sn-faq-hub__cards">
+        <article class="sn-faq-hub__card"><h3>Prototype reference</h3><p>Approximately two weeks is a reference for suitable prototype projects only. It is not a general prototype or production commitment, and suitability is confirmed during engineering review.</p></article>
+        <article class="sn-faq-hub__card"><h3>Production timing</h3><p>Production lead time is assessed from drawings, quantities, process route, verification requirements and available capacity. Annual capacity is not a delivery date.</p></article>
+        <article class="sn-faq-hub__card"><h3>Quotation input</h3><p>Submit the known technical baseline and quantity range. A quotation follows clarification rather than the initial engineering response.</p></article>
+      </div>
+      <p class="sn-faq-hub__note"><strong>Plan the review, not a date:</strong> the 24-hour and two-week statements describe different review stages. Neither one books production capacity or confirms a shipment date.</p>
+      <p><a class="sn-faq-hub__text-link" href="/request-a-quote/">Submit project requirements for timing assessment <span aria-hidden="true">&nbsp;→</span></a></p>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="faq-evidence-title">
+    <div class="sn-container">
+      <div class="sn-faq-hub__intro">
+        <h2 id="faq-evidence-title">Quality and Verification Evidence</h2>
+        <p>Test capability becomes useful evidence only when the method, conditions, sample or batch and acceptance decision are recorded together.</p>
+      </div>
+      <div class="sn-faq-hub__split">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-rig.webp" alt="RF test rig" width="1024" height="576" loading="lazy" decoding="async">
+          <figcaption>RF test rig. The equipment supports a project test plan; it does not by itself establish a product result.</figcaption>
+        </figure>
+        <div class="sn-faq-hub__prose">
+          <h3>What the evidence should connect</h3>
+          <p>A report is reviewable when it links the product or part number, revision, test conditions, measured values and the acceptance decision. A curve without that context is difficult to use in a design review.</p>
+          <h3>Where 100% verification applies</h3>
+          <p>A 100% verification statement is meaningful only for the specific product and critical parameter agreed in the project. It does not extend to every product or every test in the portfolio.</p>
+          <h3>How to request evidence</h3>
+          <p>Name the parameters that matter for your design, the sample or batch scope, and the report fields your quality team needs. Engineering can then confirm the verification route and the documents available for the project.</p>
+        </div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="faq-evidence-caption">
+        <table class="sn-table sn-faq-hub__evidence">
+          <caption id="faq-evidence-caption">Test methods, the conditions they need and the evidence they can support.</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">What it can show</th><th scope="col">Conditions to record</th><th scope="col">Project evidence</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><a href="/engineering/testing-quality">VNA / S-parameters</a></th><td data-label="What it can show">Insertion loss, return loss, rejection and isolation across a band</td><td data-label="Conditions to record">Frequency range, ports, calibration and reference conditions</td><td data-label="Project evidence">Curves or data linked to product, revision and acceptance decision</td></tr>
+            <tr><th scope="row"><a href="/engineering/testing-quality">PIM</a></th><td data-label="What it can show">Passive intermodulation behavior under a defined two-tone setup</td><td data-label="Conditions to record">Band, tones, power, order and port definition</td><td data-label="Project evidence">Result with configuration and sample or lot linkage</td></tr>
+            <tr><th scope="row"><a href="/engineering/testing-quality">Reliability</a></th><td data-label="What it can show">Performance after a specified environmental or duration test</td><td data-label="Conditions to record">Test item, duration, samples and acceptance criteria</td><td data-label="Project evidence">Condition record and before/after comparison where required</td></tr>
+            <tr><th scope="row"><a href="/engineering/testing-quality">Matrix automation</a></th><td data-label="What it can show">Multi-port or batch measurement with repeatable sequencing</td><td data-label="Conditions to record">Port map, sequence, measurements and reporting rules</td><td data-label="Project evidence">Batch record linked to product, ports and test steps</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-faq-hub__note"><strong>Evidence boundary:</strong> automation and testing capacity do not imply that every unit receives every test. The verification plan defines coverage for the specific product and order.</p>
+      <div class="sn-faq-hub__links"><a class="sn-faq-hub__text-link" href="/engineering/testing-quality">Review testing and quality methods <span aria-hidden="true">&nbsp;→</span></a><a class="sn-faq-hub__text-link" href="/engineering/manufacturing">Review manufacturing controls <span aria-hidden="true">&nbsp;→</span></a><a class="sn-faq-hub__text-link" href="/engineering/npi">Review NPI evidence <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="faq-confidentiality-title">
+    <div class="sn-container">
+      <div class="sn-faq-hub__intro">
+        <h2 id="faq-confidentiality-title">Confidentiality and Custom RF Manufacturing FAQs</h2>
+        <p>NDA scope, drawing handling, compliance documents and after-sales routes depend on the specific project. The five answers below state the condition and the next confirmation step.</p>
+      </div>
+      <div class="sn-faq-hub__confidentiality">
+        <div>
+          <h3>Before sensitive drawings are exchanged</h3>
+          <p>Start with a non-confidential overview where practical. Then agree the disclosure route, the recipients, the permitted use and the handling requirements for the files in writing.</p>
+          <ul>
+            <li>Name the document types and revisions to be shared.</li>
+            <li>Identify who may receive and review each file.</li>
+            <li>Confirm whether an NDA is required for this project.</li>
+            <li>Agree how controlled files are transmitted and retained.</li>
+          </ul>
+          <h3>Quality issues and after-sales</h3>
+          <p>Report the order, lot or serial identification, measured evidence and operating conditions. That lets engineering review the issue and agree containment or corrective action. Warranty and RMA scope, timing and remedies are defined by the project agreement rather than assumed from this page.</p>
+          <h3>Documents that are not asserted here</h3>
+          <p>RoHS, REACH, salt-spray and EMC documentation is confirmed per product and project where required. This page does not claim that every product carries every document.</p>
+        </div>
+        <div class="sn-faq-hub__faq">
+          <details>
+            <summary>What frequency range can SONNE support?</summary>
+            <p>Core production covers DC to 40 GHz. Selected custom microwave and waveguide projects can reach 110 GHz, depending on topology and verification. This is not a universal range for every product. Submit frequency bands, interfaces, mechanical constraints and required test evidence for <a href="/request-a-quote/">project-specific engineering review.</a></p>
+          </details>
+          <details>
+            <summary>What is the MOQ for custom RF components?</summary>
+            <p>There is no universal MOQ across product lines. MOQ depends on the product family, customization, process route and project quantity. The public MOQ 50+ statement applies only where specified for the IBS/DAS line, not all SONNE products. Submit drawings or specifications and quantities for <a href="/request-a-quote/">project confirmation.</a></p>
+          </details>
+          <details>
+            <summary>How quickly can I receive feedback, a quote and delivery?</summary>
+            <p>A complete RFQ can usually receive initial engineering feedback in about 24 hours. This is not a quotation or delivery guarantee. Prototypes in approximately two weeks are only a reference where applicable. Production timing is assessed from drawings, quantities, processes, verification requirements and <a href="/engineering/manufacturing">available capacity.</a></p>
+          </details>
+          <details>
+            <summary>Can custom drawings be protected by an NDA?</summary>
+            <p>Confidentiality scope and NDA terms must be agreed for the specific project. Begin with a non-confidential overview where practical, then share controlled drawings through the agreed route. Do not assume unrestricted disclosure or a blanket NDA. Define recipients, permitted use and handling requirements <a href="/contact/">before exchanging sensitive design files.</a></p>
+          </details>
+          <details>
+            <summary>How are quality problems and after-sales issues handled?</summary>
+            <p>Report the order, lot or serial identification, measured evidence and operating conditions so engineering can review the issue and agree containment or corrective action. Applicable VNA, PIM or reliability evidence should support the analysis. Warranty and RMA scope, timing and remedies must be defined per project agreement, not <a href="/contact/">assumed as a blanket policy.</a></p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-faq-hub__final" aria-labelledby="faq-contact-title">
+    <div class="sn-container sn-cta">
+      <div class="sn-faq-hub__cta-grid">
+        <div>
+          <h2 id="faq-contact-title">Get a Project-Specific Engineering Answer</h2>
+          <p>When a question depends on the product, drawings or quantity, send the project context rather than a request for a general policy. Engineering can answer against the actual specification.</p>
+          <p>Email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> or use the review route that matches your stage.</p>
+          <div class="sn-faq-hub__actions"><a class="sn-btn sn-btn--primary" href="/contact/">Ask an Engineer</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare an RFQ</a></div>
+          <p class="sn-faq-hub__fine-print">A complete RFQ typically receives initial engineering feedback in about 24 hours. Quotation, prototype and production timing are confirmed separately.</p>
+        </div>
+        <div class="sn-faq-hub__panel">
+          <h3>What to include</h3>
+          <ul>
+            <li>Product family and application</li>
+            <li>Frequency bands or current drawings</li>
+            <li>Target quantity and project stage</li>
+            <li>Critical performance or verification requirements</li>
+            <li>Confidentiality needs and disclosure route</li>
+            <li>The specific question you need answered</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "@id": "https://rf-sonne.com/resources/faq/#faq",
+        "name": "Frequently Asked Questions about Custom RF Manufacturing",
+        "url": "https://rf-sonne.com/resources/faq/",
+        "description": "Project-specific answers on frequency range, MOQ, feedback and lead time, NDA protection for drawings, and quality or after-sales handling.",
+        "mainEntity": [
+          {"@type":"Question","name":"What frequency range can SONNE support?","acceptedAnswer":{"@type":"Answer","text":"Core production covers DC to 40 GHz. Selected custom microwave and waveguide projects can reach 110 GHz, depending on topology and verification. This is not a universal range for every product. Submit frequency bands, interfaces, mechanical constraints and required test evidence for project-specific engineering review."}},
+          {"@type":"Question","name":"What is the MOQ for custom RF components?","acceptedAnswer":{"@type":"Answer","text":"There is no universal MOQ across product lines. MOQ depends on the product family, customization, process route and project quantity. The public MOQ 50+ statement applies only where specified for the IBS/DAS line, not all SONNE products. Submit drawings or specifications and quantities for project confirmation."}},
+          {"@type":"Question","name":"How quickly can I receive feedback, a quote and delivery?","acceptedAnswer":{"@type":"Answer","text":"A complete RFQ can usually receive initial engineering feedback in about 24 hours. This is not a quotation or delivery guarantee. Prototypes in approximately two weeks are only a reference where applicable. Production timing is assessed from drawings, quantities, processes, verification requirements and available capacity."}},
+          {"@type":"Question","name":"Can custom drawings be protected by an NDA?","acceptedAnswer":{"@type":"Answer","text":"Confidentiality scope and NDA terms must be agreed for the specific project. Begin with a non-confidential overview where practical, then share controlled drawings through the agreed route. Do not assume unrestricted disclosure or a blanket NDA. Define recipients, permitted use and handling requirements before exchanging sensitive design files."}},
+          {"@type":"Question","name":"How are quality problems and after-sales issues handled?","acceptedAnswer":{"@type":"Answer","text":"Report the order, lot or serial identification, measured evidence and operating conditions so engineering can review the issue and agree containment or corrective action. Applicable VNA, PIM or reliability evidence should support the analysis. Warranty and RMA scope, timing and remedies must be defined per project agreement, not assumed as a blanket policy."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/resources/faq/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Resources","item":"https://rf-sonne.com/resources/"},
+          {"@type":"ListItem","position":3,"name":"FAQ","item":"https://rf-sonne.com/resources/faq/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

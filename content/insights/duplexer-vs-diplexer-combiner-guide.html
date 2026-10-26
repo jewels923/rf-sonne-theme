@@ -1,0 +1,71 @@
+<p>The duplexer vs diplexer decision is often treated as a naming question, but the architecture that fits a project depends on whether the ports carry different directions, different bands, or both, and that distinction changes the isolation, power and PIM requirements.</p>
+
+<h2>Definitions That Survive a Procurement Review</h2>
+<p>A duplexer separates the transmit and receive paths of a radio so that both can share one antenna or feeder. The two channel ports carry signals in opposite directions, and the common port connects to the antenna. The key requirement is usually duplex spacing: the frequency separation between the transmit and receive bands. The duplexer must pass each band with low loss while rejecting the other band strongly enough to protect the receiver and keep the transmitter energy out of the receive path.</p>
+<p>A diplexer separates or combines two different frequency bands, regardless of direction. It may combine two transmit bands, two receive bands, or a transmit band and a receive band into a common port. Its job is band-based routing: each channel port passes its own band and rejects the other. A multiplexer extends the same idea to three or more bands.</p>
+<p>In practice the physical hardware can look similar, and some products are described with both terms. The useful distinction is functional. Ask which ports carry which signal, what must be isolated from what, and whether the requirement is direction-based or band-based.</p>
+
+<h2>Duplexer Architecture</h2>
+<p>A duplexer normally contains two filter paths that meet at a common junction. The transmit filter must handle the transmit power and keep the transmit band clean; the receive filter must protect the receiver from the transmit signal and from nearby blockers. The common junction and the antenna interface are critical because any mismatch there affects both paths.</p>
+<p>Cavity duplexers are common in base-station and RRU products where the bands are relatively low and the mechanical envelope is tight. Waveguide duplexers are used at higher frequencies and in applications where low loss and high power handling matter. In both cases, the duplex spacing sets the difficulty: a narrow spacing requires sharper filters, more resonators and tighter manufacturing control.</p>
+<p>The transmit path also drives the PIM requirement. Two or more carriers in the transmit signal can mix at a nonlinear junction and produce intermodulation products that fall into the receive band. The duplexer must therefore be designed and assembled with a controlled current path, clean interfaces and a defined test condition.</p>
+
+<h2>Diplexer Architecture</h2>
+<p>A diplexer uses two band-selective paths that meet at a common port. Unlike a duplexer, the two paths may carry the same direction. A typical use is a dual-band antenna that must serve two radios or two sub-bands without a second feeder. The diplexer isolates the bands from each other and presents a controlled match at the common port.</p>
+<p>Because the requirement is band separation, the guard band between the two passbands is the critical parameter. A wide guard band allows simpler filters and a more compact layout. A narrow guard band demands higher-order filtering and tighter control of the manufacturing tolerances. If the two bands are close and the power is high, the diplexer can be as demanding as a duplexer even though the signal directions are the same.</p>
+
+<h2>Duplexer vs Diplexer Comparison at a Glance</h2>
+<table>
+<thead>
+<tr><th>Requirement</th><th>Duplexer</th><th>Diplexer</th></tr>
+</thead>
+<tbody>
+<tr><td>Primary function</td><td>Separate transmit and receive paths</td><td>Separate or combine different bands</td></tr>
+<tr><td>Port signals</td><td>Tx, Rx and common antenna</td><td>Band A, band B and common port</td></tr>
+<tr><td>Critical spacing</td><td>Duplex spacing between Tx and Rx</td><td>Guard band between the two bands</td></tr>
+<tr><td>Isolation target</td><td>Tx leakage into Rx; Rx protection</td><td>Band-to-band isolation</td></tr>
+<tr><td>Power concern</td><td>Transmit path and common junction</td><td>Depends on which bands carry power</td></tr>
+<tr><td>PIM concern</td><td>High when multiple Tx carriers share the path</td><td>High when a high-power band is combined</td></tr>
+<tr><td>Typical use</td><td>Base stations, RRUs, repeaters</td><td>Dual-band antennas, multi-band front ends</td></tr>
+</tbody>
+</table>
+
+<h2>Isolation, Insertion Loss and Return Loss</h2>
+<p>Isolation is not a single number that can be applied to every port. For a duplexer, the most important isolation path is usually from the transmit port to the receive port, measured across the receive band. For a diplexer, isolation is measured between the two channel ports across each band. In both cases, state the termination, the frequency range and the temperature condition.</p>
+<p>Insertion loss must be specified for each path separately. A duplexer may have a higher-loss transmit path because it needs more rejection, while the receive path is optimized for loss. A diplexer may have asymmetric losses if one band requires a sharper filter. A single “typical insertion loss” figure can hide the path that matters most.</p>
+<p>Return loss at the common port is equally important. The common port sees the antenna or feeder, and a poor match there can degrade both paths. Specify the return loss across the full operating band rather than at the centre frequency alone.</p>
+
+<h2>Power and PIM Conditions</h2>
+<p>For a duplexer, state the transmit power waveform, the average and peak power, and the expected load mismatch. The receive path may carry little power, but it must survive the transmit leakage that the duplexer itself does not absorb. For a diplexer, state which bands carry high power and whether both bands can transmit at the same time.</p>
+<p>PIM should be specified with two carrier frequencies, the power per carrier, the intermodulation order and the measurement frequency. A result measured at low power or with a single carrier does not predict performance in a multi-carrier system. The materials, plating, connector torque and joint design all contribute, so the PIM requirement should be tied to the actual configuration.</p>
+
+<figure>
+<img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-tri-band-combiner.webp" alt="Tri-band RF combiner" width="1024" height="571" loading="lazy" decoding="async">
+<figcaption>Representative multi-band combiner hardware. A diplexer is the two-band case; adding bands increases the interaction between filters and the importance of the common-port match.</figcaption>
+</figure>
+
+<h2>Port Layout and Mechanical Integration</h2>
+<p>The port arrangement often decides which architecture is practical. A duplexer needs a transmit port, a receive port and a common port, and the connector or flange orientation must suit the radio and the antenna feeder. A diplexer needs two band ports and a common port, and the two band ports may need to face different equipment. If the available envelope cannot accommodate the required port directions, a different package or a short jumper may be needed.</p>
+<p>Mounting, service access and cable routing belong in the RFQ. A combiner that meets the electrical specification but cannot be installed or serviced is a schedule risk. Include the mounting plane, the torque access, the maximum mass and any keep-out zones in the mechanical input.</p>
+
+<h2>Duplexer vs Diplexer Selection Checklist</h2>
+<ul>
+<li>Identify whether the requirement is direction-based (duplexer) or band-based (diplexer).</li>
+<li>State the duplex spacing or guard band and the rejection mask.</li>
+<li>Specify isolation, insertion loss and return loss per path and per port.</li>
+<li>Define the power waveform for each band and the load condition.</li>
+<li>State the PIM order, carrier power and measurement frequencies.</li>
+<li>Confirm the connector or flange layout and the available envelope.</li>
+<li>Agree the test report, traceability and first-article requirements before production.</li>
+</ul>
+<p>The duplexer vs diplexer choice should be confirmed with the port map, the isolation paths and the test conditions, not with the product name alone. Review the <a href="/products/rf-combiners/">RF combiner and duplexer product line</a> and the <a href="/products/base-station-rf/">base-station RF product line</a> for the relevant architectures. The <a href="/solutions/5g-base-station/">5G base-station solution</a> shows how these parts fit the radio and antenna path, and <a href="/engineering/testing-quality/">testing and quality</a> explains the VNA and PIM evidence. Submit the band plan and port definition through <a href="/request-a-quote/">Request a Quote</a> for an engineering review.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Is a duplexer a type of diplexer?</h3>
+<p>The hardware can be similar, but the functions differ. A duplexer separates transmit and receive directions, while a diplexer separates different frequency bands. Some products combine both functions, so the port definition and isolation requirements should always be stated explicitly.</p>
+<h3>Which isolation value should I specify?</h3>
+<p>Specify the isolation between the ports that actually interact, across the relevant frequency range and under defined terminations and temperature. For a duplexer, the transmit-to-receive path is usually the critical one; for a diplexer, it is the band-to-band path.</p>
+<h3>Can a diplexer be used for low PIM applications?</h3>
+<p>Yes, when the design, materials, plating and assembly are controlled for the specified test conditions. Low PIM is a property of the complete current path, not a label that can be applied to a topology without qualification.</p>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a duplexer a type of diplexer?","acceptedAnswer":{"@type":"Answer","text":"The hardware can be similar, but the functions differ. A duplexer separates transmit and receive directions, while a diplexer separates different frequency bands. Some products combine both functions, so the port definition and isolation requirements should always be stated explicitly."}},{"@type":"Question","name":"Which isolation value should I specify?","acceptedAnswer":{"@type":"Answer","text":"Specify the isolation between the ports that actually interact, across the relevant frequency range and under defined terminations and temperature. For a duplexer, the transmit-to-receive path is usually the critical one; for a diplexer, it is the band-to-band path."}},{"@type":"Question","name":"Can a diplexer be used for low PIM applications?","acceptedAnswer":{"@type":"Answer","text":"Yes, when the design, materials, plating and assembly are controlled for the specified test conditions. Low PIM is a property of the complete current path, not a label that can be applied to a topology without qualification."}}]}</script>

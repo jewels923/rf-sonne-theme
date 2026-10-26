@@ -1,0 +1,367 @@
+<!-- wp:html -->
+<div class="sn-engineering">
+  <style>
+    .sn-engineering { color: var(--sn-text); }
+    .sn-engineering *, .sn-engineering *::before, .sn-engineering *::after { box-sizing: border-box; }
+    .sn-engineering h2, .sn-engineering h3, .sn-engineering p, .sn-engineering ul, .sn-engineering ol, .sn-engineering dl, .sn-engineering dd, .sn-engineering figure { margin-top: 0; }
+    .sn-engineering h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-engineering h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-engineering p, .sn-engineering li, .sn-engineering dd { line-height: 1.7; }
+    .sn-engineering a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-engineering img { display: block; max-width: 100%; height: auto; }
+
+    /* Hero: one engineering record plate and a readout band. */
+    .sn-engineering .sn-engineering__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-engineering .sn-engineering__intro { margin-bottom: clamp(28px, 3.4vw, 42px); }
+    .sn-engineering .sn-engineering__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
+    .sn-engineering .sn-engineering__text-link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 700; }
+    .sn-engineering .sn-engineering__hero { padding-block: clamp(128px, 10vw, 158px) clamp(56px, 6vw, 84px); }
+    .sn-engineering .sn-engineering__hero::before { opacity: .5; }
+    .sn-engineering .sn-engineering__hero-grid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(340px, .94fr); gap: clamp(36px, 5.5vw, 76px); align-items: center; }
+    .sn-engineering .sn-engineering__hero .sn-breadcrumbs { color: rgba(252, 254, 255, .56); }
+    .sn-engineering .sn-engineering__hero .sn-breadcrumbs a { color: var(--sn-accent-on-dark); }
+    .sn-engineering .sn-engineering__hero-copy > p { max-width: 64ch; margin-bottom: 0; color: rgba(252, 254, 255, .8); font-size: 1.04rem; }
+    .sn-engineering .sn-engineering__path { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 22px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .7rem; letter-spacing: .03em; }
+    .sn-engineering .sn-engineering__path span { padding: 7px 10px; border: 1px solid rgba(252, 254, 255, .24); color: rgba(252, 254, 255, .86); }
+    .sn-engineering .sn-engineering__path b { color: rgba(252, 254, 255, .5); font-weight: 400; }
+    .sn-engineering .sn-engineering__hero-media { margin: 0; }
+    .sn-engineering .sn-engineering__hero-media .sn-hero-plate__media { padding: 0; }
+    .sn-engineering .sn-engineering__hero-media img { aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-engineering figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-engineering .sn-engineering__hero-media figcaption { margin: 0; padding: 10px 14px; border-top: 1px solid rgba(252, 254, 255, .16); color: rgba(252, 254, 255, .6); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-engineering .sn-engineering__readout { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(40px, 5vw, 64px); border-top: 1px solid rgba(252, 254, 255, .18); border-bottom: 1px solid rgba(252, 254, 255, .18); }
+    .sn-engineering .sn-engineering__readout-cell { padding: 18px 24px 20px 0; }
+    .sn-engineering .sn-engineering__readout-cell + .sn-engineering__readout-cell { padding-left: 24px; border-left: 1px solid rgba(252, 254, 255, .18); }
+    .sn-engineering .sn-engineering__readout-label { display: block; margin-bottom: 6px; color: rgba(252, 254, 255, .56); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; line-height: 1.5; text-transform: uppercase; }
+    .sn-engineering .sn-engineering__readout-cell strong { display: block; margin-bottom: 4px; color: var(--sn-white); font-family: var(--sn-font-heading); font-size: 1.5rem; line-height: 1.15; }
+    .sn-engineering .sn-engineering__readout-detail { display: block; color: rgba(252, 254, 255, .7); font-size: .8rem; line-height: 1.55; }
+    .sn-engineering .sn-engineering__boundary { max-width: 88ch; margin: 14px 0 0; color: rgba(252, 254, 255, .62); font-size: .8rem; line-height: 1.65; }
+
+    /* Four workstreams as one flat ledger. */
+    .sn-engineering .sn-engineering__workstreams { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--sn-line-strong); }
+    .sn-engineering .sn-engineering__workstream { display: flex; min-width: 0; flex-direction: column; padding: 18px 22px 22px 0; border-bottom: 1px solid var(--sn-line); }
+    .sn-engineering .sn-engineering__workstream + .sn-engineering__workstream { padding-left: 22px; border-left: 1px solid var(--sn-line); }
+    .sn-engineering .sn-engineering__workstream-number { display: block; margin-bottom: 18px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; font-weight: 700; letter-spacing: .08em; line-height: 1.5; }
+    .sn-engineering .sn-engineering__workstream dl { margin-bottom: 16px; }
+    .sn-engineering .sn-engineering__workstream dt { margin-top: 14px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 700; letter-spacing: .05em; line-height: 1.6; text-transform: uppercase; }
+    .sn-engineering .sn-engineering__workstream dd { margin: 4px 0 0; color: var(--sn-text-muted); font-size: .84rem; line-height: 1.65; }
+    .sn-engineering .sn-engineering__workstream .sn-engineering__text-link { margin-top: auto; }
+    .sn-engineering .sn-engineering__record-note { max-width: 78ch; margin: 18px 0 0; color: var(--sn-text-muted); font-size: .85rem; line-height: 1.65; }
+
+    /* Stage gates, capability and verification ledgers. */
+    .sn-engineering .sn-engineering__ledger caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-engineering .sn-engineering__gates { min-width: 1080px; }
+    .sn-engineering .sn-engineering__gates tbody th { width: 190px; }
+    .sn-engineering .sn-engineering__capability-table { min-width: 980px; }
+    .sn-engineering .sn-engineering__test-table { min-width: 1000px; }
+    .sn-engineering .sn-engineering__capability-grid { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+    .sn-engineering .sn-engineering__capability-grid figure { margin-bottom: 0; }
+    .sn-engineering .sn-engineering__capability-grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-engineering .sn-engineering__statement { max-width: 62ch; margin-bottom: 20px; color: var(--sn-text); font-size: 1.08rem; line-height: 1.7; }
+    .sn-engineering .sn-engineering__statement strong { color: var(--sn-navy); }
+    .sn-engineering .sn-engineering__envelope { margin: 0 0 8px; border-top: 1px solid var(--sn-line-strong); }
+    .sn-engineering .sn-engineering__envelope > div { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 18px; padding: 13px 0; border-bottom: 1px solid var(--sn-line); }
+    .sn-engineering .sn-engineering__envelope dt { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 600; letter-spacing: .06em; line-height: 1.6; text-transform: uppercase; }
+    .sn-engineering .sn-engineering__envelope dd { margin: 0; color: var(--sn-text-muted); font-size: .85rem; line-height: 1.65; }
+    .sn-engineering .sn-engineering__note { max-width: 80ch; margin: 16px 0 0; color: var(--sn-text-muted); font-size: .85rem; line-height: 1.65; }
+
+    /* Evidence index and method table. */
+    .sn-engineering .sn-engineering__evidence-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 56px); margin-bottom: 32px; align-items: start; }
+    .sn-engineering .sn-engineering__evidence-layout figure { margin-bottom: 0; }
+    .sn-engineering .sn-engineering__evidence-layout img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-engineering .sn-engineering__evidence-index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; margin: 0; padding: 0; border-top: 1px solid var(--sn-line-strong); list-style: none; counter-reset: evidence; }
+    .sn-engineering .sn-engineering__evidence-index li { position: relative; padding: 14px 0 14px 38px; border-bottom: 1px solid var(--sn-line); counter-increment: evidence; }
+    .sn-engineering .sn-engineering__evidence-index li::before { position: absolute; top: 16px; left: 0; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; content: '0' counter(evidence); }
+    .sn-engineering .sn-engineering__evidence-index strong { display: block; color: var(--sn-navy); font-size: .9rem; line-height: 1.5; }
+    .sn-engineering .sn-engineering__evidence-index span { color: var(--sn-text-muted); font-size: .8rem; line-height: 1.6; }
+    .sn-engineering .sn-engineering__test-table a { color: var(--sn-cyan-dark); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Supplier review records and factory evidence. */
+    .sn-engineering .sn-engineering__review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; margin-bottom: 32px; }
+    .sn-engineering .sn-engineering__review-card { padding: 16px 0 18px; border-top: 1px solid var(--sn-line-strong); }
+    .sn-engineering .sn-engineering__review-index { display: block; margin-bottom: 12px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; letter-spacing: .08em; line-height: 1.5; }
+    .sn-engineering .sn-engineering__review-card p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .86rem; line-height: 1.65; }
+    .sn-engineering .sn-engineering__factory-lead { margin-bottom: 0; }
+    .sn-engineering .sn-engineering__factory-lead img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-engineering .sn-engineering__factory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
+    .sn-engineering .sn-engineering__factory-grid figure { margin-bottom: 0; }
+    .sn-engineering .sn-engineering__factory-grid a { display: block; }
+    .sn-engineering .sn-engineering__factory-grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+
+    /* FAQ and RFQ sheet. */
+    .sn-engineering .sn-engineering__faq { max-width: 1000px; }
+    .sn-engineering .sn-engineering__rfq { width: 100%; }
+    .sn-engineering .sn-engineering__rfq-panel ul { margin-bottom: 22px; padding-left: 20px; }
+    .sn-engineering .sn-engineering__rfq-panel h3:not(:first-child) { margin-top: 22px; }
+    .sn-engineering .sn-engineering__fine-print { margin-top: 18px; color: rgba(252, 254, 255, .66); font-size: .82rem; }
+    .sn-engineering .sn-engineering__fine-print a { white-space: nowrap; }
+
+    @media (max-width: 1100px) {
+      .sn-engineering .sn-engineering__workstreams { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-engineering .sn-engineering__workstream + .sn-engineering__workstream { padding-left: 0; border-left: 0; }
+      .sn-engineering .sn-engineering__workstream:nth-child(even) { padding-left: 22px; border-left: 1px solid var(--sn-line); }
+      .sn-engineering .sn-engineering__review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 1024px) {
+      .sn-engineering .sn-engineering__hero-grid { grid-template-columns: 1fr; }
+      .sn-engineering .sn-engineering__hero-media { max-width: 660px; }
+    }
+    @media (max-width: 900px) {
+      .sn-engineering .sn-engineering__capability-grid, .sn-engineering .sn-engineering__evidence-layout { grid-template-columns: 1fr; }
+      .sn-engineering .sn-engineering__evidence-layout figure { max-width: 720px; }
+    }
+    @media (max-width: 760px) {
+      .sn-engineering .sn-engineering__gates, .sn-engineering .sn-engineering__capability-table, .sn-engineering .sn-engineering__test-table { min-width: 0; }
+      .sn-engineering .sn-engineering__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-engineering .sn-engineering__ledger, .sn-engineering .sn-engineering__ledger tbody, .sn-engineering .sn-engineering__ledger tr, .sn-engineering .sn-engineering__ledger th, .sn-engineering .sn-engineering__ledger td { display: block; width: 100%; }
+      .sn-engineering .sn-engineering__ledger tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
+      .sn-engineering .sn-engineering__ledger tbody tr:last-child { border-bottom: 1px solid var(--sn-line-strong); }
+      .sn-engineering .sn-engineering__ledger tbody th { padding: 0 0 12px; border: 0; font-size: 1.02rem; }
+      .sn-engineering .sn-engineering__ledger tbody td { padding: 0 0 10px; border: 0; }
+      .sn-engineering .sn-engineering__ledger tbody td:last-child { padding-bottom: 0; }
+      .sn-engineering .sn-engineering__ledger tbody td::before { display: block; margin-bottom: 3px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .66rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; content: attr(data-label); }
+      .sn-engineering .sn-engineering__workstreams { grid-template-columns: 1fr; }
+      .sn-engineering .sn-engineering__workstream, .sn-engineering .sn-engineering__workstream + .sn-engineering__workstream, .sn-engineering .sn-engineering__workstream:nth-child(even) { padding: 16px 0 18px; border-left: 0; }
+      .sn-engineering .sn-engineering__review-grid, .sn-engineering .sn-engineering__factory-grid { grid-template-columns: 1fr; }
+      .sn-engineering .sn-engineering__evidence-index { grid-template-columns: 1fr; }
+      .sn-engineering .sn-engineering__actions .sn-btn { width: 100%; }
+    }
+    @media (max-width: 700px) {
+      .sn-engineering .sn-engineering__readout { grid-template-columns: 1fr; }
+      .sn-engineering .sn-engineering__readout-cell { padding: 16px 0; }
+      .sn-engineering .sn-engineering__readout-cell + .sn-engineering__readout-cell { padding-left: 0; border-top: 1px solid rgba(252, 254, 255, .18); border-left: 0; }
+      .sn-engineering .sn-engineering__envelope > div { grid-template-columns: 1fr; gap: 4px; }
+      .sn-engineering .sn-engineering__faq details > p { padding-right: 0; }
+    }
+    @media (max-width: 520px) {
+      .sn-engineering .sn-engineering__path { font-size: .66rem; }
+      .sn-engineering .sn-engineering__readout-cell strong { font-size: 1.35rem; }
+    }
+    @media print {
+      .sn-engineering .sn-engineering__faq details:not([open]) > p { display: block !important; }
+      .sn-engineering .sn-engineering__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-engineering__hero" aria-labelledby="engineering-title">
+    <div class="sn-container">
+      <div class="sn-engineering__hero-grid">
+        <div class="sn-engineering__hero-copy">
+          <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Engineering &amp; Quality</li></ol></nav>
+          <span class="sn-engineering__eyebrow">Custom RF design · NPI · Testing &amp; quality · Manufacturing</span>
+          <h1 id="engineering-title">Engineering and Manufacturing behind Repeatable RF Production</h1>
+          <p>Requirements and drawings move through design and manufacturing review, prototype validation and a pilot baseline before controlled production. Each workstream contributes to the same project record.</p>
+          <div class="sn-engineering__path" aria-label="Engineering record path"><span>Design</span><b aria-hidden="true">→</b><span>NPI</span><b aria-hidden="true">→</b><span>Verification</span><b aria-hidden="true">→</b><span>Production</span></div>
+          <div class="sn-engineering__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Start Engineering Review</a><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Request Sample Test Report</a></div>
+        </div>
+        <figure class="sn-hero-plate sn-engineering__hero-media">
+          <div class="sn-hero-plate__tag"><span>Plate 01</span><span>Engineering record</span></div>
+          <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-engineering-cad.webp" alt="Engineer reviewing a 2D engineering drawing" width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async"></div>
+          <figcaption>Engineering drawing review at SONNE. The image documents the work environment, not a customer project or measured result.</figcaption>
+        </figure>
+      </div>
+      <div class="sn-engineering__readout" aria-label="Engineering and manufacturing facts">
+        <div class="sn-engineering__readout-cell"><span class="sn-engineering__readout-label">Quality system</span><strong>ISO 9001</strong><span class="sn-engineering__readout-detail">Quality management system; not a product-performance certification.</span></div>
+        <div class="sn-engineering__readout-cell"><span class="sn-engineering__readout-label">Machining base</span><strong>50+</strong><span class="sn-engineering__readout-detail">High-precision CNC machines supporting drawing-defined structures.</span></div>
+        <div class="sn-engineering__readout-cell"><span class="sn-engineering__readout-label">Annual capacity</span><strong>500,000+</strong><span class="sn-engineering__readout-detail">Annual production capacity for manufacturing assessment.</span></div>
+      </div>
+      <p class="sn-engineering__boundary">Annual capacity is not a lead-time commitment. Project timing depends on drawings, quantity, process route, verification requirements and current capacity.</p>
+      <div class="sn-hero-meta"><span><b>Index</b>4 workstreams</span><span><b>Gates</b>G0–G4</span><span><b>Scope</b>DC–40 GHz · selected 110 GHz</span><span><b>Records</b>Revision-linked evidence</span></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="engineering-workstreams-title">
+    <div class="sn-container">
+      <div class="sn-engineering__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>01</b> / Capability workstreams</span><span>4 functions · one record</span></div>
+        <div class="sn-record-title"><h2 id="engineering-workstreams-title">Four Engineering Workstreams, One Project Record</h2><p>Start with the immediate technical question, then carry its inputs, decisions and evidence into the next stage. The detailed scope and supplied records are agreed for each project.</p></div>
+      </div>
+      <div class="sn-engineering__workstreams">
+        <article class="sn-engineering__workstream"><span class="sn-engineering__workstream-number">01 / DESIGN</span><h3>Custom RF Design</h3><dl><dt>Inputs</dt><dd>Frequency bands, S-parameter targets, power/PIM, envelope and interfaces.</dd><dt>Review points</dt><dd>Topology, requirement priorities and mechanical or manufacturing constraints.</dd><dt>Evidence outputs</dt><dd>Open-item list, proposed approach and verification requirements.</dd></dl><a class="sn-engineering__text-link" href="/engineering/custom-rf-design/">Review custom RF design <span aria-hidden="true">→</span></a></article>
+        <article class="sn-engineering__workstream"><span class="sn-engineering__workstream-number">02 / NPI</span><h3>NPI</h3><dl><dt>Inputs</dt><dd>Controlled drawings, sample results and the target production stage.</dd><dt>Review points</dt><dd>First article, pilot run, process baseline and unresolved deviations.</dd><dt>Evidence outputs</dt><dd>Stage records, deviation dispositions and linked change information.</dd></dl><a class="sn-engineering__text-link" href="/engineering/npi/">Review the NPI path <span aria-hidden="true">→</span></a></article>
+        <article class="sn-engineering__workstream"><span class="sn-engineering__workstream-number">03 / VERIFY</span><h3>Testing &amp; Quality</h3><dl><dt>Inputs</dt><dd>Product characteristics, test conditions and required sample coverage.</dd><dt>Review points</dt><dd>Methods, acceptance limits, report fields and traceability.</dd><dt>Evidence outputs</dt><dd>Project-agreed curves, data, decisions and linked records.</dd></dl><a class="sn-engineering__text-link" href="/engineering/testing-quality/">Review testing and quality <span aria-hidden="true">→</span></a></article>
+        <article class="sn-engineering__workstream"><span class="sn-engineering__workstream-number">04 / BUILD</span><h3>Manufacturing</h3><dl><dt>Inputs</dt><dd>Materials, GD&amp;T, structure, surfaces and critical interfaces.</dd><dt>Review points</dt><dd>Machinability, critical processes, assembly and inspection needs.</dd><dt>Evidence outputs</dt><dd>Manufacturing review and project-confirmed inspection records.</dd></dl><a class="sn-engineering__text-link" href="/engineering/manufacturing/">Review precision manufacturing <span aria-hidden="true">→</span></a></article>
+      </div>
+      <p class="sn-engineering__record-note"><strong>Shared record:</strong> Use the same project identifier and drawing or specification revision across design comments, sample data, pilot decisions and engineering changes.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="engineering-gates-title">
+    <div class="sn-container">
+      <div class="sn-engineering__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>02</b> / Project gates</span><span>5 gates · G0–G4</span></div>
+        <div class="sn-record-title"><h2 id="engineering-gates-title">Review the Project at Defined Stage Gates</h2><p>A gate records what is known, what remains open and which evidence supports the next decision. Passing a prototype review does not automatically release production.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="engineering-gates-title">
+        <table class="sn-table sn-ledger sn-engineering__ledger sn-engineering__gates">
+          <caption>G0–G4 review map; exact participants, records and exit criteria are confirmed in the project plan.</caption>
+          <thead><tr><th scope="col">Gate</th><th scope="col">Buyer inputs</th><th scope="col">Review point</th><th scope="col">Exit evidence and condition</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">G0 · Requirement Review</th><td data-label="Buyer inputs">Specification, drawings, application environment and quantity stage</td><td data-label="Review point">Critical targets, assumptions, missing information and acceptance priorities</td><td data-label="Exit evidence and condition">Open-item and assumption list; critical requirements identified before design freeze</td></tr>
+            <tr><th scope="row">G1 · Design / DFM Review</th><td data-label="Buyer inputs">Agreed requirement baseline and available 2D/3D information</td><td data-label="Review point">RF topology, tolerances, materials, machining, assembly and test feasibility</td><td data-label="Exit evidence and condition">Design/DFM review record with risks and items requiring validation</td></tr>
+            <tr><th scope="row">G2 · Prototype Validation</th><td data-label="Buyer inputs">Prototype acceptance targets, conditions and priorities</td><td data-label="Review point">Measured results compared item by item with the approved targets</td><td data-label="Exit evidence and condition">Sample data, deviations and dispositions; no automatic production release</td></tr>
+            <tr><th scope="row">G3 · FAI / Pilot</th><td data-label="Buyer inputs">Controlled drawing/BOM, first-article requirements and pilot objectives</td><td data-label="Review point">First article, pilot findings, inspection baseline and open issues</td><td data-label="Exit evidence and condition">FAI or critical-dimension records and pilot summary with disposition status</td></tr>
+            <tr><th scope="row">G4 · Production Release</th><td data-label="Buyer inputs">Required approvals, production controls and change interfaces</td><td data-label="Review point">Drawing/BOM, process, inspection, traceability and unresolved-item status</td><td data-label="Exit evidence and condition">Project production baseline after the agreed exit conditions are satisfied</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-engineering__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/npi/">Map Your Project Stage</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="engineering-capability-title">
+    <div class="sn-container">
+      <div class="sn-engineering__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>03</b> / Manufacturing envelope</span><span>Frequency · tolerance · plating</span></div>
+        <div class="sn-record-title"><h2 id="engineering-capability-title">Use Quantified Capability Facts with Their Limits</h2><p>Figures are useful screening inputs only when their scope is visible. Confirm the applicable product, structure, characteristic and verification evidence during engineering review.</p></div>
+      </div>
+      <div class="sn-engineering__capability-grid">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-cavity-milling.webp" alt="CNC milling of an RF filter cavity" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>CNC milling of an RF filter cavity. The operation shown does not establish a uniform tolerance for every part.</figcaption></figure>
+        <div>
+          <p class="sn-engineering__statement">Core production for the standard product portfolio is <strong>DC–40 GHz</strong>. Selected custom microwave and waveguide projects can reach <strong>up to 110 GHz</strong>, depending on topology and validation.</p>
+          <dl class="sn-engineering__envelope">
+            <div><dt>Portfolio fit</dt><dd>Exact product, band, targets and test conditions are confirmed at G0 rather than inferred from a headline range.</dd></div>
+            <div><dt>Mechanical limits</dt><dd>Critical geometry and surface controls are reviewed against the drawing, structure and inspection method.</dd></div>
+            <div><dt>Capacity use</dt><dd>Drawing, quantity, process route and current load determine the production plan; annual capacity is a screening input.</dd></div>
+          </dl>
+          <a class="sn-engineering__text-link" href="/engineering/manufacturing/">Review precision manufacturing <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="engineering-capability-title">
+        <table class="sn-table sn-ledger sn-engineering__ledger sn-engineering__capability-table">
+          <caption>Capability boundaries and the project evidence needed to apply them.</caption>
+          <thead><tr><th scope="col">Capability statement</th><th scope="col">Applicable scope</th><th scope="col">What it supports</th><th scope="col">Project confirmation</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">DC–40 GHz</th><td data-label="Applicable scope">Core standard-product production portfolio</td><td data-label="What it supports">Initial frequency-fit screening</td><td data-label="Project confirmation">Exact product, band, targets and test conditions</td></tr>
+            <tr><th scope="row">Selected custom up to 110 GHz</th><td data-label="Applicable scope">Selected microwave and waveguide projects</td><td data-label="What it supports">High-frequency feasibility review</td><td data-label="Project confirmation">Topology, interface, mechanical requirements and validation</td></tr>
+            <tr><th scope="row">Above 40 GHz: can reach ±0.01 mm</th><td data-label="Applicable scope">Conditional mechanical-tolerance capability, depending on structure</td><td data-label="What it supports">Review of critical high-frequency geometry</td><td data-label="Project confirmation">Drawing characteristic, datum, structure and inspection method; not a universal tolerance</td></tr>
+            <tr><th scope="row">Above 60 GHz: can reach 1 μm</th><td data-label="Applicable scope">Conditional plating-thickness control, depending on structure and project requirements</td><td data-label="What it supports">Review of applicable surface requirements</td><td data-label="Project confirmation">Surface specification, structure and agreed verification; not a universal plating guarantee</td></tr>
+            <tr><th scope="row">50+ high-precision CNC; 500,000+ annual capacity</th><td data-label="Applicable scope">Manufacturing resource and capacity screening</td><td data-label="What it supports">Equipment and production-planning discussion</td><td data-label="Project confirmation">Drawing, quantity, process route, verification and current capacity; no lead-time inference</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-engineering__note"><strong>Boundary:</strong> The ±0.01 mm and 1 μm statements apply only as conditional, structure-dependent capabilities in the frequency contexts stated above. They do not describe every dimension, product or RF performance result.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="engineering-evidence-title">
+    <div class="sn-container">
+      <div class="sn-engineering__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>04</b> / Verification evidence</span><span>6 index entries · 4 methods</span></div>
+        <div class="sn-record-title"><h2 id="engineering-evidence-title">Connect Each Claim to a Project Evidence Record</h2><p>Use an evidence index to connect requirements, revisions, measurements and decisions. Actual deliverables, sample coverage and traceability depth are agreed for the product and project.</p></div>
+      </div>
+      <div class="sn-engineering__evidence-layout">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-station.webp" alt="RF test station" width="1024" height="575" loading="lazy" decoding="async"><figcaption>RF test station. A workstation image supports the factory review; it is not a substitute for a contextual test report.</figcaption></figure>
+        <ol class="sn-engineering__evidence-index" aria-label="Project evidence index">
+          <li><strong>Requirement and drawing index</strong><span>Project ID, revision, targets and open assumptions.</span></li>
+          <li><strong>Design review record</strong><span>Comments, risks, decisions and validation needs.</span></li>
+          <li><strong>Prototype test data</strong><span>Product identity, conditions, results and deviations.</span></li>
+          <li><strong>FAI / critical dimensions</strong><span>Requirements, measurements and disposition status.</span></li>
+          <li><strong>Pilot summary</strong><span>Process and test baseline plus unresolved findings.</span></li>
+          <li><strong>Engineering change record</strong><span>Revision, impact, verification and effectivity.</span></li>
+        </ol>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="engineering-evidence-title">
+        <table class="sn-table sn-ledger sn-engineering__ledger sn-engineering__test-table">
+          <caption>Verification methods and evidence fields; no single image or curve replaces the complete project record.</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">Review inputs</th><th scope="col">Project-agreed evidence output</th><th scope="col">Coverage boundary</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><a href="/engineering/testing-quality/">VNA / S-parameters</a></th><td data-label="Review inputs">Frequency range, ports, parameters, limits, settings and applicable calibration/reference conditions</td><td data-label="Project-agreed evidence output">Curves or data linked to product, revision, test conditions and acceptance decision</td><td data-label="Coverage boundary">Parameters and samples defined by the verification plan</td></tr>
+            <tr><th scope="row"><a href="/engineering/testing-quality/">PIM</a></th><td data-label="Review inputs">Band, tones, power, order, ports, setup and limit where applicable</td><td data-label="Project-agreed evidence output">Results with the corresponding configuration and sample or lot linkage</td><td data-label="Coverage boundary">A value is meaningful only with its product and test conditions</td></tr>
+            <tr><th scope="row"><a href="/engineering/testing-quality/">Reliability</a></th><td data-label="Review inputs">Specified test item, environment or duration, samples and acceptance criteria</td><td data-label="Project-agreed evidence output">Condition record, required before/after comparison and disposition</td><td data-label="Coverage boundary">Only project-defined and supported tests are included</td></tr>
+            <tr><th scope="row"><a href="/engineering/testing-quality/">Matrix-switch automation</a></th><td data-label="Review inputs">Port map, sequence, applicable measurements and reporting requirements</td><td data-label="Project-agreed evidence output">Multi-port or batch records linked to product, ports and test steps</td><td data-label="Coverage boundary">Automation does not imply every test or 100% coverage</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-engineering__note"><strong>Evidence review:</strong> Buyer SQE and project engineering should confirm the report sample, critical parameters, coverage and traceability fields before defining production verification. Any 100% verification statement must be limited to the specific product and measurement agreed.</p>
+      <div class="sn-engineering__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Sample Test Report</a><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Define Your Test Requirements</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="engineering-supplier-title">
+    <div class="sn-container">
+      <div class="sn-engineering__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>05</b> / Supplier review</span><span>6 review areas · factory evidence</span></div>
+        <div class="sn-record-title"><h2 id="engineering-supplier-title">Prepare a Focused Supplier and Factory Review</h2><p>Build the agenda around project-relevant records and physical work areas. ISO 9001 is presented as a quality-system fact; product evidence still needs separate review.</p></div>
+      </div>
+      <div class="sn-engineering__review-grid">
+        <article class="sn-engineering__review-card"><span class="sn-engineering__review-index">01 / QUALITY</span><h3>Quality system</h3><p>Ask how controlled requirements, responsibilities and applicable quality records relate to the project.</p></article>
+        <article class="sn-engineering__review-card"><span class="sn-engineering__review-index">02 / DESIGN</span><h3>Design control</h3><p>Review requirement revisions, design/DFM comments, open risks and verification decisions.</p></article>
+        <article class="sn-engineering__review-card"><span class="sn-engineering__review-index">03 / SUPPLY</span><h3>Purchasing &amp; production</h3><p>Check relevant material, process, supplier and production-control records for the selected scope.</p></article>
+        <article class="sn-engineering__review-card"><span class="sn-engineering__review-index">04 / INSPECT</span><h3>Inspection &amp; testing</h3><p>Connect methods, conditions, limits, equipment or method information and acceptance records.</p></article>
+        <article class="sn-engineering__review-card"><span class="sn-engineering__review-index">05 / TRACE</span><h3>Traceability</h3><p>Follow applicable product, lot or serial, revision, test and deviation links.</p></article>
+        <article class="sn-engineering__review-card"><span class="sn-engineering__review-index">06 / CHANGE</span><h3>Change control</h3><p>Review ECN reason, impact, required verification, disposition and production effectivity.</p></article>
+      </div>
+      <figure class="sn-engineering__factory-lead"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-workshop-wide.webp" alt="Wide view of the SONNE assembly workshop" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Wide view of the SONNE assembly workshop. Accessible areas, timing, confidentiality and required documents are agreed in advance for a project-specific review.</figcaption></figure>
+      <div class="sn-engineering__factory-grid">
+        <figure><a href="/about/factory/" aria-label="View the SONNE factory building and factory evidence"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-building-v2-1.webp" alt="SONNE factory building" width="1024" height="683" loading="lazy" decoding="async"></a><figcaption>Factory building. Open the factory page for the facility evidence.</figcaption></figure>
+        <figure><a href="/about/factory/" aria-label="View the VNA tuning line and factory evidence"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-tuning-line.webp" alt="Technicians tuning RF filters with vector network analyzers" width="1891" height="1064" loading="lazy" decoding="async"></a><figcaption>VNA tuning line. Screen content is not adopted as a product rating or project result.</figcaption></figure>
+      </div>
+      <p class="sn-engineering__record-note"><strong>Review output:</strong> Record each finding, responsible role, required evidence and closure status. Visit scope and documentation are confirmed in advance; no uniform audit duration, corrective-action deadline or confidentiality policy is assumed.</p>
+      <div class="sn-engineering__actions"><a class="sn-btn sn-btn--secondary" href="/about/factory/">Inspect the Factory Evidence</a><a class="sn-engineering__text-link" href="/contact/">Plan a Supplier Review <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="engineering-faq-title">
+    <div class="sn-container">
+      <div class="sn-engineering__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>06</b> / Review notes</span><span>5 questions</span></div>
+        <div class="sn-record-title"><h2 id="engineering-faq-title">Engineering and Quality Review FAQs</h2><p>Direct answers about audits, test capabilities, review inputs, expected outputs and the difference between capacity and timing.</p></div>
+      </div>
+      <div class="sn-faq sn-engineering__faq">
+        <details open><summary>Can buyers audit SONNE's factory and quality processes?</summary><p>Factory audit and visit requests can be reviewed around a specific project. The agenda may cover relevant machining, assembly, testing, traceability and change-control records. Timing, accessible areas, confidentiality and required documentation should be agreed in advance rather than assumed. Contact SONNE with your audit scope so the <a href="/about/factory/">appropriate review path can be confirmed.</a></p></details>
+        <details><summary>What RF testing capabilities are available?</summary><p>SONNE's stated capabilities include VNA, PIM, reliability and multi-port matrix automated testing. The applicable measurements, conditions, sample coverage and report content depend on the product and agreed specification. Buyers should identify critical RF parameters and acceptance criteria during engineering review so the <a href="/engineering/testing-quality/">verification plan and evidence requirements can be defined.</a></p></details>
+        <details><summary>What inputs are needed to start an engineering review?</summary><p>Provide the application, project stage and the information already available: frequency or band plan, RF targets, power or PIM needs, mechanical envelope, connectors, drawings, environment and quantity range. Unknown items can be marked as open. SONNE can then identify missing inputs, review feasibility questions and recommend the <a href="/engineering/custom-rf-design/">next design, prototype or testing step.</a></p></details>
+        <details><summary>What should an engineering review deliver before prototyping?</summary><p>A useful review should leave a controlled record of known requirements, open questions, assumptions, major mechanical or RF risks and the proposed verification scope. Depending on the project, it may also include drawing or DFM comments and a prototype input baseline. It should not be presented as a performance guarantee <a href="/engineering/npi/">before hardware has been tested.</a></p></details>
+        <details><summary>Does annual capacity guarantee a production lead time?</summary><p>No. SONNE states annual capacity above 500,000 units and more than 50 high-precision CNC machines, but those figures do not determine a specific delivery date. Production timing must be evaluated from the drawing, quantity, process route, verification requirements and current capacity. Prototype and mass-production schedules should therefore be <a href="/engineering/manufacturing/">confirmed separately for each project.</a></p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="engineering-rfq-title">
+    <div class="sn-container">
+      <div class="sn-sheet sn-engineering__rfq">
+        <div class="sn-sheet__head"><span>RFQ route · engineering review</span><span>G0 · TBD accepted</span></div>
+        <div class="sn-sheet__grid">
+          <div>
+            <h2 id="engineering-rfq-title">Bring Your Specification, Drawings or Open Questions</h2>
+            <p>Start G0 with the material you already have. Select the relevant workstream (RF Design, NPI, Testing &amp; Quality or Manufacturing) and describe the application, project stage and current blocker.</p>
+            <p>Unknown fields can remain TBD. The first review step is a completeness check, key questions and a recommended next gate, not a performance or delivery commitment.</p>
+            <div class="sn-engineering__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Start Engineering Review</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare RFQ Inputs</a></div>
+            <p class="sn-engineering__fine-print">A complete RFQ typically receives initial engineering feedback in about 24 hours. This is not a completed design, quotation or delivery guarantee. Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+          </div>
+          <div class="sn-sheet__panel sn-engineering__rfq-panel">
+            <h3>G0 input checklist</h3>
+            <ul><li>Application and relevant engineering workstream</li><li>Project stage and quantity range</li><li>Frequency, band plan or structural scope</li><li>Critical RF targets and test conditions</li><li>Mechanical envelope, interfaces and environment</li><li>Current blocker, assumptions and open questions</li></ul>
+            <h3>Useful existing attachments</h3>
+            <p>Specification, band plan, 2D/3D drawings, current test data or an issue list. Submit available versions and identify uncertain revisions rather than waiting for a perfect package.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://rf-sonne.com/engineering/#collection",
+        "name": "Engineering and Manufacturing behind Repeatable RF Production",
+        "url": "https://rf-sonne.com/engineering/",
+        "description": "Custom RF design, NPI, testing and quality, and precision manufacturing organized around project stage gates and evidence records."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/engineering/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Engineering & Quality","item":"https://rf-sonne.com/engineering/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

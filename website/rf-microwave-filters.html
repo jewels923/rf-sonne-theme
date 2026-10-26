@@ -1,0 +1,380 @@
+<!-- wp:html -->
+<div class="sn-filters">
+  <style>
+    .sn-filters { --filters-label: .75rem; color: var(--sn-text); }
+    .sn-filters *, .sn-filters *::before, .sn-filters *::after { box-sizing: border-box; }
+    .sn-filters h2, .sn-filters h3, .sn-filters p, .sn-filters ul, .sn-filters ol, .sn-filters figure { margin-top: 0; }
+    .sn-filters h2 { margin-bottom: 18px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-filters h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-filters p, .sn-filters li { line-height: 1.7; }
+    .sn-filters a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-filters img { display: block; max-width: 100%; height: auto; }
+    .sn-filters .sn-filters__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: var(--filters-label); font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-filters .sn-filters__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
+
+    /* Hero: one product plate plus its cavity detail, recorded on an index strip. */
+    .sn-filters .sn-filters__hero { padding-block: clamp(128px, 10vw, 158px) clamp(56px, 6vw, 84px); }
+    .sn-filters .sn-filters__hero::before { opacity: .5; }
+    .sn-filters .sn-filters__hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr); gap: clamp(36px, 5.5vw, 76px); align-items: center; }
+    .sn-filters .sn-filters__hero .sn-breadcrumbs { color: rgba(252, 254, 255, .56); }
+    .sn-filters .sn-filters__hero .sn-breadcrumbs a { color: var(--sn-accent-on-dark); }
+    .sn-filters .sn-filters__hero-copy > p { max-width: 64ch; margin-bottom: 0; color: rgba(252, 254, 255, .8); font-size: 1.04rem; line-height: 1.7; }
+    .sn-filters .sn-filters__hero-note { margin-top: 26px; padding-top: 14px; border-top: 1px solid rgba(34, 197, 217, .32); color: rgba(252, 254, 255, .72); font-size: .86rem; line-height: 1.65; }
+    .sn-filters .sn-filters__hero-note strong { color: var(--sn-white); }
+    .sn-filters .sn-filters__hero-media { display: grid; grid-template-columns: minmax(0, 1fr) 132px; gap: 14px; align-items: end; }
+    .sn-filters .sn-filters__hero-media .sn-hero-plate { margin: 0; }
+    .sn-filters .sn-filters__hero-main .sn-hero-plate__media { padding: clamp(14px, 2.4vw, 26px); }
+    .sn-filters .sn-filters__hero-media .sn-hero-plate img { aspect-ratio: 16 / 10; }
+    .sn-filters .sn-filters__hero-part .sn-hero-plate__media { padding: 10px; }
+    .sn-filters .sn-filters__hero-part .sn-hero-plate img { aspect-ratio: 1; }
+    .sn-filters .sn-filters__hero-part .sn-hero-plate__tag { padding: 8px 10px; font-size: .6rem; letter-spacing: .05em; }
+    .sn-filters .sn-filters__hero-part .sn-hero-plate__tag span:last-child { display: none; }
+    .sn-filters .sn-filters__hero-part figcaption { padding: 8px 10px; font-size: .6rem; }
+
+    /* Section rhythm and the shared record head. */
+    .sn-filters .sn-filters__intro { margin-bottom: clamp(28px, 3.4vw, 42px); }
+    .sn-filters .sn-filters__intro .sn-record-meta { font-size: var(--filters-label); }
+
+    /* Structure ledger. */
+    .sn-filters .sn-filters__matrix { min-width: 1040px; }
+    .sn-filters .sn-filters__matrix thead th:first-child { width: 22%; }
+    .sn-filters .sn-filters__product { display: flex; gap: 14px; align-items: center; }
+    .sn-filters .sn-filters__product img { width: 82px; height: 64px; flex: 0 0 82px; padding: 4px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-filters .sn-filters__product span { color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: .95rem; font-weight: 700; line-height: 1.35; }
+    .sn-filters .sn-filters__table-links a { display: flex; align-items: center; width: max-content; max-width: 100%; min-height: 44px; font-weight: 700; }
+
+    /* Approach, specification and verification ledgers. */
+    .sn-filters .sn-filters__selection { min-width: 940px; }
+    .sn-filters .sn-filters__selection tbody th { width: 22%; }
+    .sn-filters .sn-filters__spec { min-width: 900px; }
+    .sn-filters .sn-filters__spec tbody th { width: 22%; }
+    .sn-filters .sn-filters__test { min-width: 900px; }
+    .sn-filters .sn-filters__test tbody th { width: 20%; }
+    .sn-filters .sn-filters__ledger caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+
+    /* Flat check ledger under the manufacturing evidence. */
+    .sn-filters .sn-filters__evidence-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(240px, .55fr); gap: 18px; margin-bottom: 28px; }
+    .sn-filters .sn-filters__evidence-grid figure { margin-bottom: 0; }
+    .sn-filters .sn-filters__evidence-grid img { width: 100%; height: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-filters .sn-filters__evidence-grid .sn-filters__part img { aspect-ratio: 1; object-fit: contain; background: var(--sn-paper-muted); }
+    .sn-filters .sn-filters__evidence-grid figcaption, .sn-filters .sn-filters__test-grid figcaption { margin-top: 9px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
+    .sn-filters .sn-filters__checkpoints { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--sn-line-strong); counter-reset: filter-checkpoint; }
+    .sn-filters .sn-filters__checkpoint { padding: 18px 22px 20px 0; border-bottom: 1px solid var(--sn-line); counter-increment: filter-checkpoint; }
+    .sn-filters .sn-filters__checkpoint + .sn-filters__checkpoint { padding-left: 22px; border-left: 1px solid var(--sn-line); }
+    .sn-filters .sn-filters__checkpoint::before { display: block; margin-bottom: 12px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; line-height: 1.5; content: 'CHECK 0' counter(filter-checkpoint); }
+    .sn-filters .sn-filters__checkpoint h3 { margin-bottom: 7px; font-size: .98rem; }
+    .sn-filters .sn-filters__checkpoint p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .84rem; line-height: 1.65; }
+
+    /* Three follow-up checks and the test evidence pair. */
+    .sn-filters .sn-filters__questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: clamp(28px, 3vw, 36px) 0 0; padding: 0; list-style: none; border-top: 1px solid var(--sn-line-strong); counter-reset: filter-question; }
+    .sn-filters .sn-filters__questions li { padding: 18px 24px 20px 0; border-bottom: 1px solid var(--sn-line); color: var(--sn-text-muted); font-size: .86rem; line-height: 1.65; counter-increment: filter-question; }
+    .sn-filters .sn-filters__questions li + li { padding-left: 24px; border-left: 1px solid var(--sn-line); }
+    .sn-filters .sn-filters__questions li::before { display: block; margin-bottom: 10px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; line-height: 1.5; content: 'CHECK 0' counter(filter-question); }
+    .sn-filters .sn-filters__questions strong { color: var(--sn-navy); font-family: var(--sn-font-heading); }
+    .sn-filters .sn-filters__test-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+    .sn-filters .sn-filters__test-grid figure { margin-bottom: 0; }
+    .sn-filters .sn-filters__test-grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+
+    /* Project gates as one flat production ledger. */
+    .sn-filters .sn-filters__process { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--sn-line-strong); counter-reset: filter-process; }
+    .sn-filters .sn-filters__process > li { padding: 18px 20px 22px 0; border-bottom: 1px solid var(--sn-line); counter-increment: filter-process; }
+    .sn-filters .sn-filters__process > li + li { padding-left: 20px; border-left: 1px solid var(--sn-line); }
+    .sn-filters .sn-filters__process > li::before { display: block; margin-bottom: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; line-height: 1.5; content: 'GATE 0' counter(filter-process); }
+    .sn-filters .sn-filters__process h3 { margin-bottom: 8px; font-size: .96rem; }
+    .sn-filters .sn-filters__process p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .82rem; line-height: 1.65; }
+    .sn-filters .sn-filters__process strong { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .04em; text-transform: uppercase; }
+
+    /* FAQ and RFQ share the interior record grammar. */
+    .sn-filters .sn-filters__faq { max-width: 1000px; }
+    .sn-filters .sn-filters__rfq { width: 100%; }
+    .sn-filters .sn-filters__fine-print { margin-top: 18px; font-size: .82rem; }
+
+    @media (max-width: 1080px) {
+      .sn-filters .sn-filters__process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-filters .sn-filters__process > li + li { padding-left: 0; border-left: 0; }
+      .sn-filters .sn-filters__process > li:nth-child(even) { padding-left: 22px; border-left: 1px solid var(--sn-line); }
+    }
+    @media (max-width: 1024px) {
+      .sn-filters .sn-filters__hero-grid { grid-template-columns: 1fr; }
+      .sn-filters .sn-filters__hero-media { max-width: 620px; }
+    }
+    @media (max-width: 900px) {
+      .sn-filters .sn-filters__checkpoints { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-filters .sn-filters__checkpoint:nth-child(odd) { padding-left: 0; border-left: 0; }
+    }
+    @media (max-width: 760px) {
+      .sn-filters .sn-filters__hero-part .sn-hero-plate__tag span:last-child { display: inline; }
+      .sn-filters .sn-filters__matrix, .sn-filters .sn-filters__selection, .sn-filters .sn-filters__spec, .sn-filters .sn-filters__test { min-width: 0; }
+      .sn-filters .sn-filters__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-filters .sn-filters__ledger, .sn-filters .sn-filters__ledger tbody, .sn-filters .sn-filters__ledger tr, .sn-filters .sn-filters__ledger th, .sn-filters .sn-filters__ledger td { display: block; width: 100%; }
+      .sn-filters .sn-filters__ledger tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
+      .sn-filters .sn-filters__ledger tbody tr:last-child { border-bottom: 1px solid var(--sn-line-strong); }
+      .sn-filters .sn-filters__ledger tbody th { padding: 0 0 12px; border: 0; font-size: 1.02rem; }
+      .sn-filters .sn-filters__ledger tbody td { padding: 0 0 10px; border: 0; }
+      .sn-filters .sn-filters__ledger tbody td:last-child { padding-bottom: 0; }
+      .sn-filters .sn-filters__ledger tbody td::before { display: block; margin-bottom: 3px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .66rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; content: attr(data-label); }
+      .sn-filters .sn-filters__product img { width: 66px; height: 52px; flex-basis: 66px; }
+      .sn-filters .sn-filters__table-links a { width: 100%; }
+      .sn-filters .sn-filters__questions { grid-template-columns: 1fr; }
+      .sn-filters .sn-filters__questions li, .sn-filters .sn-filters__questions li + li { padding: 18px 0 20px; border-left: 0; }
+      .sn-filters .sn-filters__checkpoints { grid-template-columns: 1fr; }
+      .sn-filters .sn-filters__checkpoint, .sn-filters .sn-filters__checkpoint + .sn-filters__checkpoint { padding: 18px 0 20px; border-left: 0; }
+      .sn-filters .sn-filters__evidence-grid, .sn-filters .sn-filters__test-grid { grid-template-columns: 1fr; }
+      .sn-filters .sn-filters__evidence-grid .sn-filters__part { max-width: 260px; }
+      .sn-filters .sn-filters__process { grid-template-columns: 1fr; }
+      .sn-filters .sn-filters__process > li, .sn-filters .sn-filters__process > li + li, .sn-filters .sn-filters__process > li:nth-child(even) { padding: 18px 0 20px; border-left: 0; }
+      .sn-filters .sn-filters__rfq-panel ul { columns: 1; }
+      .sn-filters .sn-filters__actions .sn-btn { width: 100%; }
+    }
+    @media (max-width: 560px) {
+      .sn-filters .sn-filters__hero-media { grid-template-columns: 1fr; }
+      .sn-filters .sn-filters__hero-part { max-width: 190px; }
+    }
+  </style>
+
+  <section class="sn-hero sn-filters__hero" aria-labelledby="filters-title">
+    <div class="sn-container">
+      <div class="sn-filters__hero-grid">
+        <div class="sn-filters__hero-copy">
+          <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">RF &amp; Microwave Filters</li></ol></nav>
+          <span class="sn-filters__eyebrow">Cavity · Bandpass · Waveguide · E-band · RRU · Custom assemblies</span>
+          <h1 id="filters-title">Cavity Filters and Custom RF/Microwave Filter Assemblies</h1>
+          <p>Select by structure, response and application, then define the electrical and mechanical conditions together. Low PIM, high rejection and VNA verification are evaluation dimensions, not uniform values claimed for every model.</p>
+          <div class="sn-filters__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Custom Filter Design</a><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Download Datasheet</a></div>
+          <p class="sn-filters__hero-note"><strong>Core production range: DC–40 GHz.</strong> Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology and validation. This is not a universal limit for every filter.</p>
+        </div>
+        <div class="sn-filters__hero-media">
+          <figure class="sn-hero-plate sn-filters__hero-main">
+            <div class="sn-hero-plate__tag"><span>Plate 01</span><span>Bandpass family</span></div>
+            <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="eager" fetchpriority="high" decoding="async"></div>
+            <figcaption>Bandpass filter product visual; no specific frequency-band model is implied.</figcaption>
+          </figure>
+          <figure class="sn-hero-plate sn-filters__hero-part">
+            <div class="sn-hero-plate__tag"><span>Detail</span><span>Cavity</span></div>
+            <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/part-cavity-silver.webp" alt="Silver plated RF filter cavity" width="1024" height="1024" loading="eager" decoding="async"></div>
+            <figcaption>Filter cavity structure.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="sn-hero-meta"><span><b>Index</b>5 filter forms</span><span><b>Core range</b>DC–40 GHz</span><span><b>Custom scope</b>Up to 110 GHz</span><span><b>Verification</b>VNA · PIM · matrix test</span></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="filters-matrix-title">
+    <div class="sn-container">
+      <div class="sn-filters__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>01</b> / Structure matrix</span><span>5 forms · one review path</span></div>
+        <div class="sn-record-title"><h2 id="filters-matrix-title">Compare Filter Types by Structure and Application</h2><p>Bandpass is a response requirement, not a separate structural category. Start with the physical or production approach, then add the response, RRU or E-band application context and exact targets.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="filters-matrix-title">
+        <table class="sn-table sn-ledger sn-filters__ledger sn-filters__matrix">
+          <caption>Structure-led navigation; model-level parameter pages remain a later catalog phase.</caption>
+          <thead><tr><th scope="col">Structure / form</th><th scope="col">Selection question</th><th scope="col">First inputs</th><th scope="col">Applications to evaluate</th><th scope="col">Next path</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><div class="sn-filters__product"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="lazy" decoding="async"><span>Cavity filter</span></div></th><td data-label="Selection question">Does a resonant cavity approach fit the loss, rejection, power and envelope targets?</td><td data-label="First inputs">Passband, rejection, power, PIM, connectors and volume</td><td data-label="Applications to evaluate">Bandpass requirements; high-power or low-PIM projects; RRU context</td><td class="sn-filters__table-links" data-label="Next path"><a href="/resources/datasheets/">View parameters</a><a href="/request-a-quote/">Submit custom</a></td></tr>
+            <tr><th scope="row"><div class="sn-filters__product"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-ceramic-filter-v2.webp" alt="Ceramic RF filter" width="1024" height="571" loading="lazy" decoding="async"><span>Ceramic filter</span></div></th><td data-label="Selection question">Is a ceramic form appropriate for the frequency, size and performance requirement?</td><td data-label="First inputs">Frequency, bandwidth, loss, rejection and mechanical interface</td><td data-label="Applications to evaluate">Compact RF filtering requirements, subject to design review</td><td class="sn-filters__table-links" data-label="Next path"><a href="/resources/datasheets/">View parameters</a><a href="/request-a-quote/">Submit custom</a></td></tr>
+            <tr><th scope="row"><div class="sn-filters__product"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-tunable-filter-clean.webp" alt="Tunable RF filter" width="1920" height="1071" loading="lazy" decoding="async"><span>Tunable filter</span></div></th><td data-label="Selection question">Does the system require an adjustable response, and how will adjustment be controlled?</td><td data-label="First inputs">Tuning range, response targets, adjustment method and test conditions</td><td data-label="Applications to evaluate">Applications requiring an evaluated tuning function</td><td class="sn-filters__table-links" data-label="Next path"><a href="/resources/datasheets/">View parameters</a><a href="/request-a-quote/">Submit custom</a></td></tr>
+            <tr><th scope="row"><div class="sn-filters__product"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/straight-waveguide.webp" alt="straight waveguide" width="720" height="720" loading="lazy" decoding="async"><span>Waveguide filter</span></div></th><td data-label="Selection question">Do the frequency, waveguide interface and mechanical constraints call for a waveguide structure?</td><td data-label="First inputs">Passband, rejection, power, waveguide size, flange and envelope</td><td data-label="Applications to evaluate">E-band and other high-frequency custom projects</td><td class="sn-filters__table-links" data-label="Next path"><a href="/resources/datasheets/">View parameters</a><a href="/request-a-quote/">Submit custom</a></td></tr>
+            <tr><th scope="row"><div class="sn-filters__product"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/part-cavity-silver.webp" alt="Silver plated RF filter cavity" width="1024" height="1024" loading="lazy" decoding="async"><span>Custom filter assembly</span></div></th><td data-label="Selection question">Must filtering be integrated with a custom mechanical or multi-part assembly?</td><td data-label="First inputs">System function, RF targets, drawings, interfaces and validation plan</td><td data-label="Applications to evaluate">Custom RF/microwave assemblies and application-specific integration</td><td class="sn-filters__table-links" data-label="Next path"><a href="/resources/datasheets/">View parameters</a><a href="/request-a-quote/">Submit custom</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-note">Images identify product forms, not unsupported insertion-loss, rejection or power ratings. Available documents and custom feasibility are confirmed against the exact model or project.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="filters-selection-title">
+    <div class="sn-container">
+      <div class="sn-filters__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>02</b> / Selection ledger</span><span>3 approaches · 9 review dimensions</span></div>
+        <div class="sn-record-title"><h2 id="filters-selection-title">Choose between Cavity, Waveguide and Tuning-Free Filter Approaches</h2><p>Cavity and waveguide describe structural paths. Tuning-free is a manufacturing and adjustment objective. These labels are not three mutually exclusive product branches.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="filters-selection-title">
+        <table class="sn-table sn-ledger sn-filters__ledger sn-filters__selection">
+          <thead><tr><th scope="col">Selection dimension</th><th scope="col">Cavity structure</th><th scope="col">Waveguide structure</th><th scope="col">Tuning-free objective</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Operating frequency</th><td data-label="Cavity structure">Define the exact passband and rejection bands.</td><td data-label="Waveguide structure">Confirm band, waveguide interface and high-frequency feasibility.</td><td data-label="Tuning-free objective">Confirm the frequency range over which adjustment must be avoided.</td></tr>
+            <tr><th scope="row">Insertion-loss target</th><td data-label="Cavity structure">Evaluate with resonator, coupling and response requirements.</td><td data-label="Waveguide structure">Evaluate with waveguide structure, finish and reference plane.</td><td data-label="Tuning-free objective">Include variation across the agreed production condition.</td></tr>
+            <tr><th scope="row">Out-of-band rejection</th><td data-label="Cavity structure">Specify frequencies and minimum rejection together.</td><td data-label="Waveguide structure">Include spurious or out-of-band conditions relevant to the system.</td><td data-label="Tuning-free objective">Define allowable variation without manual adjustment.</td></tr>
+            <tr><th scope="row">Power</th><td data-label="Cavity structure">State power level, type and operating conditions.</td><td data-label="Waveguide structure">Include interface, environment and power-test conditions.</td><td data-label="Tuning-free objective">Verify the objective under the agreed power condition.</td></tr>
+            <tr><th scope="row">PIM</th><td data-label="Cavity structure">Provide PIM limit and complete test setup where applicable.</td><td data-label="Waveguide structure">Define PIM need explicitly rather than assuming it from structure.</td><td data-label="Tuning-free objective">State whether PIM is part of the production verification plan.</td></tr>
+            <tr><th scope="row">Mechanical envelope</th><td data-label="Cavity structure">Review cavity, cover, tuning and connector packaging.</td><td data-label="Waveguide structure">Review waveguide route, flange, orientation and assembly space.</td><td data-label="Tuning-free objective">Include allowed mechanical features and adjustment access.</td></tr>
+            <tr><th scope="row">Interface / flange</th><td data-label="Cavity structure">Define connectors, locations and mating constraints.</td><td data-label="Waveguide structure">Define waveguide size, flange type and reference plane.</td><td data-label="Tuning-free objective">Freeze the interfaces used for acceptance.</td></tr>
+            <tr><th scope="row">Adjustment method</th><td data-label="Cavity structure">Identify whether tuning elements are permitted.</td><td data-label="Waveguide structure">Define any adjustable features and production constraints.</td><td data-label="Tuning-free objective">Establish the design and process controls intended to remove manual tuning.</td></tr>
+            <tr><th scope="row">Validation conditions</th><td data-label="Cavity structure">Agree S-parameters, PIM and acceptance limits as applicable.</td><td data-label="Waveguide structure">Add calibration, reference-plane and high-frequency conditions.</td><td data-label="Tuning-free objective">Agree sample, pilot and batch evidence for the tuning-free objective.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ol class="sn-filters__questions"><li><strong>What frequency and power constraints apply?</strong><br>Include power type and test conditions, not only a “high power” label.</li><li><strong>What volume and interface limits apply?</strong><br>Attach an envelope, connector or flange drawing when available.</li><li><strong>Can production include manual adjustment?</strong><br>State the expected tuning approach and required batch evidence.</li></ol>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="filters-spec-title">
+    <div class="sn-container">
+      <div class="sn-filters__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>03</b> / Specification</span><span>11 input fields</span></div>
+        <div class="sn-record-title"><h2 id="filters-spec-title">Specify Insertion Loss, Rejection, Power and PIM Together</h2><p>A center frequency is not a manufacturable specification. Every critical value needs a band, reference and test condition so engineering can evaluate trade-offs instead of comparing isolated numbers.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="filters-spec-title">
+        <table class="sn-table sn-ledger sn-filters__ledger sn-filters__spec">
+          <caption>Copy these fields into your specification or attach an existing datasheet through the RFQ route.</caption>
+          <thead><tr><th scope="col">Input field</th><th scope="col">What to define</th><th scope="col">Test condition / reference to preserve</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Passband</th><td data-label="What to define">Required operating frequency range</td><td data-label="Test condition / reference">Measurement reference plane and operating condition</td></tr>
+            <tr><th scope="row">Bandwidth</th><td data-label="What to define">Passband and any relevant channel bandwidth</td><td data-label="Test condition / reference">Band edges and definition used</td></tr>
+            <tr><th scope="row">Insertion loss</th><td data-label="What to define">Target or maximum across the defined passband</td><td data-label="Test condition / reference">Frequency range, temperature and reference plane as applicable</td></tr>
+            <tr><th scope="row">Return loss</th><td data-label="What to define">Required value and applicable ports</td><td data-label="Test condition / reference">Port configuration and frequency range</td></tr>
+            <tr><th scope="row">Rejection bands</th><td data-label="What to define">Each stopband or discrete rejection point</td><td data-label="Test condition / reference">Exact frequency interval or point</td></tr>
+            <tr><th scope="row">Minimum rejection</th><td data-label="What to define">Required minimum for each rejection band</td><td data-label="Test condition / reference">Measurement bandwidth or condition when relevant</td></tr>
+            <tr><th scope="row">Power</th><td data-label="What to define">Level and power type</td><td data-label="Test condition / reference">CW, average, peak or other condition; duty cycle and environment</td></tr>
+            <tr><th scope="row">PIM</th><td data-label="What to define">Required limit where applicable</td><td data-label="Test condition / reference">Test tones, power, order, port, setup and acceptance method</td></tr>
+            <tr><th scope="row">Connectors / flanges</th><td data-label="What to define">Type, quantity, position and mating constraints</td><td data-label="Test condition / reference">Interface drawing and test reference plane</td></tr>
+            <tr><th scope="row">Envelope</th><td data-label="What to define">Maximum dimensions, mounting and adjustment access</td><td data-label="Test condition / reference">2D/3D drawing and critical datums</td></tr>
+            <tr><th scope="row">Environment</th><td data-label="What to define">Operating and installation conditions</td><td data-label="Test condition / reference">Temperature, outdoor or other project-defined conditions</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-note"><strong>Trade-off:</strong> A narrower transition band, lower insertion loss, higher power and a smaller envelope can constrain one another. Feasibility comes from the complete design and validation plan. Use the <a href="/resources/rfq-guide/">RFQ guide</a> to prepare the checklist or upload an existing datasheet.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="filters-manufacturing-title">
+    <div class="sn-container">
+      <div class="sn-filters__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>04</b> / Manufacturing</span><span>4 process checkpoints</span></div>
+        <div class="sn-record-title"><h2 id="filters-manufacturing-title">Control the Machining and Plating Details behind High-Frequency Filters</h2><p>High-frequency review connects the cavity, cover, tuning features and surface requirements to drawing and process controls. No unverified performance-improvement percentage is inferred from machining or plating.</p></div>
+      </div>
+      <div class="sn-filters__evidence-grid">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-cavity-milling.webp" alt="CNC milling of an RF filter cavity" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>RF cavity CNC milling: a real machining operation, not a performance curve.</figcaption></figure>
+        <figure class="sn-filters__part"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/part-cover-raw.webp" alt="Machined cavity cover before surface treatment" width="1024" height="1024" loading="lazy" decoding="async"><figcaption>Machined cavity cover before surface treatment; this is not a plating micrograph.</figcaption></figure>
+      </div>
+      <div class="sn-filters__checkpoints">
+        <article class="sn-filters__checkpoint"><h3>Cavity</h3><p>Review critical geometry, datums and drawing-defined features against the RF structure.</p></article>
+        <article class="sn-filters__checkpoint"><h3>Cover</h3><p>Define mating, fastening and surface requirements as part of the mechanical review.</p></article>
+        <article class="sn-filters__checkpoint"><h3>Tuning structure</h3><p>Identify adjustment features, access and the intended production method.</p></article>
+        <article class="sn-filters__checkpoint"><h3>Surface treatment</h3><p>Specify material and plating requirements; confirm applicable controls by structure.</p></article>
+      </div>
+      <p class="sn-note"><strong>Conditional disclosed capabilities:</strong> Above 40 GHz, mechanical tolerance can reach ±0.01 mm, depending on structure. Above 60 GHz, plating-thickness control can reach 1 μm, depending on structure and project requirements. Neither statement is a uniform guarantee for all filters. <a href="/engineering/manufacturing/">Review precision manufacturing</a>.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="filters-verification-title">
+    <div class="sn-container">
+      <div class="sn-filters__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>05</b> / Verification</span><span>3 record types</span></div>
+        <div class="sn-record-title"><h2 id="filters-verification-title">Verify Filter Performance with VNA, PIM and Automated Testing</h2><p>The source capability for this filter line includes 100% VNA/PIM verification. The exact products, measured parameters, conditions and acceptance limits are confirmed in the project plan; this does not mean every RF or reliability characteristic is tested on every product.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="filters-verification-title">
+        <table class="sn-table sn-ledger sn-filters__ledger sn-filters__test">
+          <thead><tr><th scope="col">Verification item</th><th scope="col">Buyer-defined limits</th><th scope="col">Output record</th><th scope="col">Traceability fields</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">VNA / S-parameters</th><td data-label="Buyer-defined limits">Passband, insertion loss, return loss and rejection as applicable</td><td data-label="Output record">Agreed S-parameter results, plots or files</td><td data-label="Traceability fields">Product, serial or batch, ports, frequency range, calibration and reference plane</td></tr>
+            <tr><th scope="row">PIM</th><td data-label="Buyer-defined limits">PIM limit and acceptance criteria where applicable</td><td data-label="Output record">Project-agreed PIM result record</td><td data-label="Traceability fields">Product or batch, port, bands, tones, power, order and test setup</td></tr>
+            <tr><th scope="row">Matrix-switch automated testing</th><td data-label="Buyer-defined limits">Applicable multi-port measurements and limits</td><td data-label="Output record">Configured multi-port or batch test records</td><td data-label="Traceability fields">Product, port map, test sequence and applicable report identifiers</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-note">Matrix switching supports multi-port and batch test workflows. It is not a claim that all reliability items or all possible measurements are covered. <a href="/engineering/testing-quality/">Review testing and quality</a> or <a href="/resources/datasheets/">request product documents and available sample evidence</a>.</p>
+      <div class="sn-filters__test-grid">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-tuning-line.webp" alt="Technicians tuning RF filters with vector network analyzers" width="1891" height="1064" loading="lazy" decoding="async"><figcaption>VNA tuning line: technicians adjust and check RF filters. Screen values are not adopted as product ratings.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-rig.webp" alt="RF test rig" width="1024" height="576" loading="lazy" decoding="async"><figcaption>RF test rig: the applicable setup and records are defined by the agreed project plan.</figcaption></figure>
+      </div>
+      <div class="sn-filters__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Filter Test Evidence</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="filters-process-title">
+    <div class="sn-container">
+      <div class="sn-filters__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>06</b> / Project gates</span><span>RFQ to validated production</span></div>
+        <div class="sn-record-title"><h2 id="filters-process-title">Move a Custom Filter from RFQ to Validated Production</h2><p>Each gate carries forward explicit inputs and confirmation outputs. A prototype result becomes a production baseline only after the agreed pilot and verification review.</p></div>
+      </div>
+      <ol class="sn-filters__process">
+        <li><h3>Specification check</h3><p><strong>Input:</strong> RF targets, mechanical limits and quantity.<br><strong>Output:</strong> Missing fields and priorities identified.</p></li>
+        <li><h3>Structure &amp; feasibility</h3><p><strong>Input:</strong> Topology, interfaces and production expectations.<br><strong>Output:</strong> Evaluation path and open design questions.</p></li>
+        <li><h3>Prototype validation</h3><p><strong>Input:</strong> Acceptance targets and test conditions.<br><strong>Output:</strong> Prototype and agreed verification data.</p></li>
+        <li><h3>Pilot baseline</h3><p><strong>Input:</strong> Batch expectations and records.<br><strong>Output:</strong> Process and test baseline for confirmation.</p></li>
+        <li><h3>Production</h3><p><strong>Input:</strong> Controlled requirements and changes.<br><strong>Output:</strong> Project-agreed production and inspection records.</p></li>
+      </ol>
+      <p class="sn-note">A complete RFQ typically receives initial engineering feedback in about 24 hours; that is not design approval, a formal quotation or a delivery commitment. The fastest prototype reference is about two weeks only as a prototype reference. Actual prototype and production timing depends on topology, drawings, quantity, process and capacity.</p>
+      <p class="sn-note">For RRU-related base-station requirements, continue to <a href="/products/base-station-rf/">Base Station RF</a>. For E-band backhaul requirements, review the <a href="/solutions/microwave-backhaul/">Microwave Backhaul application path</a>. For other waveguide hardware, use <a href="/products/waveguide-components/">Waveguide Components</a>.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="filters-faq-title">
+    <div class="sn-container">
+      <div class="sn-filters__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>07</b> / Selection notes</span><span>5 questions</span></div>
+        <div class="sn-record-title"><h2 id="filters-faq-title">Custom Filter Selection and Manufacturing FAQs</h2><p>Direct answers for structure selection, high-frequency feasibility, project timing, low-PIM inputs and technical documents.</p></div>
+      </div>
+      <div class="sn-faq sn-filters__faq">
+        <details open><summary>How do I choose between cavity, waveguide and tuning-free filters?</summary><p>Start with frequency, insertion loss, rejection, power, PIM, size and interface requirements. Cavity and waveguide describe different structural approaches, while tuning-free describes a manufacturing and adjustment objective rather than a mutually exclusive filter type. Engineering should compare the complete specification and production expectations before recommending an approach.</p></details>
+        <details><summary>Can SONNE make E-band filters above 40 GHz?</summary><p>Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology and validation, so E-band requirements can be submitted for evaluation. This is not a universal limit for every filter design. Provide the exact passband, rejection, power, waveguide interface and mechanical requirements for a feasibility review.</p></details>
+        <details><summary>How long do filter prototypes and mass production take?</summary><p>The fastest prototype reference is about two weeks, but it is not a general lead-time promise. Actual prototype and production timing depends on topology, drawings, quantity, process and capacity. A complete RFQ typically receives initial engineering feedback in about 24 hours; formal quotation and delivery schedules require project-specific confirmation.</p></details>
+        <details><summary>What is needed to evaluate a high-power, low-PIM filter?</summary><p>Provide the frequency bands, insertion loss and rejection targets, power level and power type, PIM limit and test conditions, return loss, connectors, mechanical envelope and operating environment. Also state expected quantity and verification requirements. High power and low PIM must be assessed with the complete design and test setup, not as standalone promotional labels.</p></details>
+        <details><summary>Can I request filter datasheets and S-parameter files?</summary><p>You can request available datasheets, drawings and S-parameter files for the relevant filter model or custom project. Document availability and the level of detail depend on the product and project, so identify the model, frequency band and required file type. Controlled documents or project-specific information should be discussed during the engineering review.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="filters-rfq-title">
+    <div class="sn-container">
+      <div class="sn-sheet sn-filters__rfq">
+        <div class="sn-sheet__head"><span>RFQ route · filter specification</span><span>Known values and TBD fields accepted</span></div>
+        <div class="sn-sheet__grid">
+          <div>
+            <h2 id="filters-rfq-title">Send Your Filter Specification for Engineering Review</h2>
+            <p>Submit known values and mark unknown fields TBD. Explain the application and which targets have priority rather than inventing a number to complete the RFQ.</p>
+            <p>Useful attachments include a datasheet, 2D/3D drawing, band plan and test requirements. Specific documents are confirmed by model and project.</p>
+            <div class="sn-filters__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Custom Filter Design</a><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Download Datasheet</a></div>
+            <p class="sn-filters__fine-print">A complete RFQ typically receives initial engineering feedback in about 24 hours. Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+          </div>
+          <div class="sn-sheet__panel sn-filters__rfq-panel">
+            <h3>Filter RFQ fields</h3>
+            <ul><li>Filter type or application</li><li>Passband and bandwidth</li><li>Insertion and return loss</li><li>Rejection bands and limits</li><li>Power level and type</li><li>PIM limit and conditions</li><li>Connector or flange</li><li>Mechanical envelope</li><li>Operating environment</li><li>Expected quantity</li><li>Validation requirements</li><li>Supporting attachments</li></ul>
+            <p>The RFQ route accepts the project brief and attachments; no model selection is forced before engineering review.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/rf-microwave-filters/#product",
+        "name": "Cavity Filters and Custom RF/Microwave Filter Assemblies",
+        "url": "https://rf-sonne.com/products/rf-microwave-filters/",
+        "description": "Custom cavity, bandpass, waveguide, E-band and RRU filters from DC to 40 GHz, with selected custom microwave and waveguide projects evaluated up to 110 GHz depending on topology and validation.",
+        "category": "RF and microwave filters",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/rf-microwave-filters/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"RF & Microwave Filters","item":"https://rf-sonne.com/products/rf-microwave-filters/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rf-sonne.com/products/rf-microwave-filters/#faq",
+        "mainEntity": [
+          {"@type":"Question","name":"How do I choose between cavity, waveguide and tuning-free filters?","acceptedAnswer":{"@type":"Answer","text":"Start with frequency, insertion loss, rejection, power, PIM, size and interface requirements. Cavity and waveguide describe different structural approaches, while tuning-free describes a manufacturing and adjustment objective rather than a mutually exclusive filter type. Engineering should compare the complete specification and production expectations before recommending an approach."}},
+          {"@type":"Question","name":"Can SONNE make E-band filters above 40 GHz?","acceptedAnswer":{"@type":"Answer","text":"Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology and validation, so E-band requirements can be submitted for evaluation. This is not a universal limit for every filter design. Provide the exact passband, rejection, power, waveguide interface and mechanical requirements for a feasibility review."}},
+          {"@type":"Question","name":"How long do filter prototypes and mass production take?","acceptedAnswer":{"@type":"Answer","text":"The fastest prototype reference is about two weeks, but it is not a general lead-time promise. Actual prototype and production timing depends on topology, drawings, quantity, process and capacity. A complete RFQ typically receives initial engineering feedback in about 24 hours; formal quotation and delivery schedules require project-specific confirmation."}},
+          {"@type":"Question","name":"What is needed to evaluate a high-power, low-PIM filter?","acceptedAnswer":{"@type":"Answer","text":"Provide the frequency bands, insertion loss and rejection targets, power level and power type, PIM limit and test conditions, return loss, connectors, mechanical envelope and operating environment. Also state expected quantity and verification requirements. High power and low PIM must be assessed with the complete design and test setup, not as standalone promotional labels."}},
+          {"@type":"Question","name":"Can I request filter datasheets and S-parameter files?","acceptedAnswer":{"@type":"Answer","text":"You can request available datasheets, drawings and S-parameter files for the relevant filter model or custom project. Document availability and the level of detail depend on the product and project, so identify the model, frequency band and required file type. Controlled documents or project-specific information should be discussed during the engineering review."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

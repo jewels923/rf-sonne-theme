@@ -1,0 +1,357 @@
+<!-- wp:html -->
+<div class="sn-manufacturing sn-legacy-record">
+  <style>
+    .sn-manufacturing { color: var(--sn-text); }
+    .sn-manufacturing *, .sn-manufacturing *::before, .sn-manufacturing *::after { box-sizing: border-box; }
+    .sn-manufacturing h2, .sn-manufacturing h3, .sn-manufacturing p, .sn-manufacturing ul, .sn-manufacturing ol, .sn-manufacturing dl, .sn-manufacturing dt, .sn-manufacturing dd, .sn-manufacturing figure { margin-top: 0; }
+    .sn-manufacturing h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-manufacturing h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-manufacturing p, .sn-manufacturing li, .sn-manufacturing dd { line-height: 1.7; }
+    .sn-manufacturing a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-manufacturing img { display: block; max-width: 100%; height: auto; }
+    .sn-manufacturing .sn-manufacturing__eyebrow { display: block; margin-bottom: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-manufacturing .sn-manufacturing__intro { max-width: 860px; margin-bottom: 38px; }
+    .sn-manufacturing .sn-manufacturing__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.03rem; }
+    .sn-manufacturing .sn-manufacturing__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-manufacturing .sn-manufacturing__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-manufacturing .sn-manufacturing__hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 1fr); gap: clamp(34px, 6vw, 76px); align-items: center; }
+    .sn-manufacturing .sn-manufacturing__hero .sn-manufacturing__eyebrow { color: var(--sn-cyan); }
+    .sn-manufacturing .sn-manufacturing__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-manufacturing .sn-manufacturing__hero-media { margin-bottom: 0; }
+    .sn-manufacturing .sn-manufacturing__hero-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid rgba(252, 254, 255, .2); }
+    .sn-manufacturing .sn-manufacturing__hero-media figcaption { margin-top: 12px; color: rgba(252, 254, 255, .64); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-manufacturing .sn-manufacturing__hero-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 28px; border-block: 1px solid rgba(252, 254, 255, .18); }
+    .sn-manufacturing .sn-manufacturing__hero-fact { padding: 18px 16px 18px 0; }
+    .sn-manufacturing .sn-manufacturing__hero-fact + .sn-manufacturing__hero-fact { padding-left: 16px; border-left: 1px solid rgba(252, 254, 255, .18); }
+    .sn-manufacturing .sn-manufacturing__hero-fact strong { display: block; margin-bottom: 4px; color: var(--sn-white); font-family: var(--sn-font-heading); font-size: 1.16rem; }
+    .sn-manufacturing .sn-manufacturing__hero-fact span { display: block; color: rgba(252, 254, 255, .68); font-size: .76rem; line-height: 1.5; }
+    .sn-manufacturing .sn-manufacturing__hero-note { margin: 16px 0 0; color: rgba(252, 254, 255, .68); font-size: .79rem; }
+    .sn-manufacturing .sn-manufacturing__table { min-width: 1000px; }
+    .sn-manufacturing .sn-manufacturing__table caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-manufacturing .sn-manufacturing__table tbody th { color: var(--sn-navy); }
+    .sn-manufacturing .sn-manufacturing__note { margin: 18px 0 0; padding: 16px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .87rem; }
+    .sn-manufacturing .sn-manufacturing__map-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(26px, 4vw, 46px); align-items: start; margin-top: 28px; }
+    .sn-manufacturing .sn-manufacturing__map-detail figure { margin-bottom: 0; }
+    .sn-manufacturing .sn-manufacturing__map-detail img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-manufacturing .sn-manufacturing__map-detail figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-manufacturing .sn-manufacturing__process { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--sn-mid-gray); }
+    .sn-manufacturing .sn-manufacturing__process li { position: relative; padding: 0 0 20px 24px; }
+    .sn-manufacturing .sn-manufacturing__process li:last-child { padding-bottom: 0; }
+    .sn-manufacturing .sn-manufacturing__process li::before { position: absolute; top: 5px; left: -6px; width: 10px; height: 10px; border: 2px solid var(--sn-cyan-dark); border-radius: 50%; background: var(--sn-white); content: ''; }
+    .sn-manufacturing .sn-manufacturing__process strong { display: block; margin-bottom: 3px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .78rem; }
+    .sn-manufacturing .sn-manufacturing__process span { color: var(--sn-text-muted); font-size: .84rem; line-height: 1.55; }
+    .sn-manufacturing .sn-manufacturing__evidence-layout { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: clamp(28px, 5vw, 54px); align-items: start; }
+    .sn-manufacturing .sn-manufacturing__evidence-layout figure { margin-bottom: 0; }
+    .sn-manufacturing .sn-manufacturing__evidence-layout img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .sn-manufacturing .sn-manufacturing__evidence-layout figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-manufacturing .sn-manufacturing__record-list { margin: 0 0 18px; padding: 0; border-top: var(--sn-border); list-style: none; }
+    .sn-manufacturing .sn-manufacturing__record-list li { position: relative; padding: 10px 0 10px 24px; border-bottom: var(--sn-border); color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-manufacturing .sn-manufacturing__record-list li::before { position: absolute; top: 11px; left: 2px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .78rem; content: '□'; }
+    .sn-manufacturing .sn-manufacturing__gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 28px; }
+    .sn-manufacturing .sn-manufacturing__gallery-card { display: flex; min-width: 0; flex-direction: column; border: var(--sn-border); background: var(--sn-white); }
+    .sn-manufacturing .sn-manufacturing__gallery-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-manufacturing .sn-manufacturing__gallery-body { padding: 20px; }
+    .sn-manufacturing .sn-manufacturing__gallery-body span { display: block; margin-bottom: 8px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-manufacturing .sn-manufacturing__gallery-body h3 { font-size: 1rem; }
+    .sn-manufacturing .sn-manufacturing__gallery-body p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .82rem; }
+    .sn-manufacturing .sn-manufacturing__audit-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 54px); align-items: start; }
+    .sn-manufacturing .sn-manufacturing__audit-layout figure { margin-bottom: 0; }
+    .sn-manufacturing .sn-manufacturing__audit-layout img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-manufacturing .sn-manufacturing__audit-layout figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-manufacturing .sn-manufacturing__checklists { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .sn-manufacturing .sn-manufacturing__check-group { padding: 18px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-manufacturing .sn-manufacturing__check-group h3 { font-size: .98rem; }
+    .sn-manufacturing .sn-manufacturing__check-group ul { margin: 0; padding: 0; list-style: none; }
+    .sn-manufacturing .sn-manufacturing__check-group li { position: relative; padding: 7px 0 7px 22px; color: var(--sn-text-muted); font-size: .8rem; line-height: 1.55; }
+    .sn-manufacturing .sn-manufacturing__check-group li::before { position: absolute; top: 8px; left: 0; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .74rem; content: '□'; }
+    .sn-manufacturing .sn-manufacturing__faq { max-width: 920px; }
+    .sn-manufacturing .sn-manufacturing__faq details { border-bottom: var(--sn-border); }
+    .sn-manufacturing .sn-manufacturing__faq summary { position: relative; min-height: 44px; padding: 22px 48px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-manufacturing .sn-manufacturing__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.28rem; content: '+' ; }
+    .sn-manufacturing .sn-manufacturing__faq details[open] summary::after { content: '−'; }
+    .sn-manufacturing .sn-manufacturing__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-manufacturing .sn-manufacturing__rfq h2, .sn-manufacturing .sn-manufacturing__rfq h3 { color: var(--sn-white); }
+    .sn-manufacturing .sn-manufacturing__rfq p, .sn-manufacturing .sn-manufacturing__rfq li { color: rgba(252, 254, 255, .8); }
+    .sn-manufacturing .sn-manufacturing__rfq a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-manufacturing .sn-manufacturing__rfq-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 58px); }
+    .sn-manufacturing .sn-manufacturing__rfq-panel { padding: clamp(22px, 4vw, 32px); border: 1px solid rgba(252, 254, 255, .2); }
+    .sn-manufacturing .sn-manufacturing__rfq-panel ul { margin: 0; padding-left: 20px; }
+    .sn-manufacturing .sn-manufacturing__fine-print { margin-top: 18px; font-size: .8rem; }
+    @media (max-width: 1000px) {
+      .sn-manufacturing .sn-manufacturing__gallery { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 900px) {
+      .sn-manufacturing .sn-manufacturing__hero-grid, .sn-manufacturing .sn-manufacturing__map-detail, .sn-manufacturing .sn-manufacturing__evidence-layout, .sn-manufacturing .sn-manufacturing__audit-layout, .sn-manufacturing .sn-manufacturing__rfq-grid { grid-template-columns: 1fr; }
+      .sn-manufacturing .sn-manufacturing__hero-media { max-width: 700px; }
+      .sn-manufacturing .sn-manufacturing__evidence-layout figure { max-width: 560px; }
+    }
+    @media (max-width: 700px) {
+      .sn-manufacturing .sn-manufacturing__hero-facts, .sn-manufacturing .sn-manufacturing__gallery, .sn-manufacturing .sn-manufacturing__checklists { grid-template-columns: 1fr; }
+      .sn-manufacturing .sn-manufacturing__hero-fact, .sn-manufacturing .sn-manufacturing__hero-fact + .sn-manufacturing__hero-fact { padding: 14px 0; border-left: 0; }
+      .sn-manufacturing .sn-manufacturing__hero-fact + .sn-manufacturing__hero-fact { border-top: 1px solid rgba(252, 254, 255, .18); }
+      .sn-manufacturing .sn-manufacturing__faq details p { padding-right: 0; }
+    }
+    @media (max-width: 520px) {
+      .sn-manufacturing .sn-manufacturing__actions .sn-btn { width: 100%; }
+    }
+    @media print {
+      .sn-manufacturing .sn-manufacturing__faq details:not([open]) > p { display: block !important; }
+      .sn-manufacturing .sn-manufacturing__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-manufacturing__hero" aria-labelledby="manufacturing-title">
+    <div class="sn-container sn-manufacturing__hero-grid">
+      <div class="sn-manufacturing__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/engineering/">Engineering &amp; Quality</a></li><li aria-current="page">Manufacturing</li></ol></nav>
+        <span class="sn-manufacturing__eyebrow">CNC machining · Plating · Assembly · RF verification</span>
+        <h1 id="manufacturing-title">Precision Manufacturing for High-Frequency RF Hardware</h1>
+        <p>CNC machining, surface finishing, assembly and RF verification for high-frequency components and precision structures. The manufacturing review connects drawing features to process choices and measurable inspection evidence.</p>
+        <div class="sn-manufacturing__hero-facts" aria-label="Manufacturing facts">
+          <div class="sn-manufacturing__hero-fact"><strong>50+</strong><span>High-precision CNC machines for drawing-defined RF and enclosure work.</span></div>
+          <div class="sn-manufacturing__hero-fact"><strong>~20,000 m²</strong><span>Publicly stated office and manufacturing building area.</span></div>
+          <div class="sn-manufacturing__hero-fact"><strong>500,000+</strong><span>Annual capacity reference, not a delivery promise.</span></div>
+        </div>
+        <p class="sn-manufacturing__hero-note">Above 40 GHz, suitable structures can reach ±0.01 mm mechanical tolerance. Above 60 GHz, suitable structures can reach 1 μm plating-thickness control. Both depend on geometry, datum scheme and inspection method.</p>
+        <div class="sn-manufacturing__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Book a Factory Audit</a><a class="sn-btn sn-btn--secondary" href="/contact/">Discuss Audit Scope</a></div>
+      </div>
+      <figure class="sn-manufacturing__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-cavity-milling.webp" alt="CNC milling of an RF filter cavity" width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>CNC milling of an RF filter cavity. The operation shown supports a capability review; it does not set a uniform tolerance for every part.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="manufacturing-map-title">
+    <div class="sn-container">
+      <div class="sn-manufacturing__intro">
+        <h2 id="manufacturing-map-title">Manufacturing Capability and Process Map</h2>
+        <p>Each manufacturing step should be traceable from the drawing characteristic it satisfies to the record it produces. Use the map to identify the process route, not to assume that a machine count equals capability.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="manufacturing-map-caption">
+        <table class="sn-table sn-manufacturing__table">
+          <caption id="manufacturing-map-caption">Manufacturing capability map: inputs, processes, key controls and the record each route should produce.</caption>
+          <thead><tr><th scope="col">Route</th><th scope="col">Typical input</th><th scope="col">Process</th><th scope="col">Key control</th><th scope="col">Output record</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">CNC milling</th><td data-label="Typical input">Cavity, cover, housing or heatsink drawing</td><td data-label="Process">Multi-axis milling, drilling and profiling</td><td data-label="Key control">Datum consistency, wall thickness, critical dimensions and surface condition</td><td data-label="Output record">Machining record, dimensional inspection and revision link</td></tr>
+            <tr><th scope="row">CNC turning</th><td data-label="Typical input">Connector body, flange or rotationally symmetric part</td><td data-label="Process">Turning, boring, threading and parting</td><td data-label="Key control">Concentricity, thread form, face squareness and finish</td><td data-label="Output record">Dimensional record tied to the lot and drawing revision</td></tr>
+            <tr><th scope="row">Sheet metal</th><td data-label="Typical input">Cabinet, bracket, panel or enclosure drawing</td><td data-label="Process">Laser cutting, forming, bending and hardware insertion</td><td data-label="Key control">Flat pattern, bend allowance, hole position and assembly fit</td><td data-label="Output record">First-article and assembly check records</td></tr>
+            <tr><th scope="row">Surface finishing</th><td data-label="Typical input">Material, masked areas and finish specification</td><td data-label="Process">Pre-treatment, plating or coating</td><td data-label="Key control">Functional surface, thickness target and appearance criteria</td><td data-label="Output record">Finish record and applicable thickness verification</td></tr>
+            <tr><th scope="row">Assembly and test</th><td data-label="Typical input">Parts, fasteners, tuning and test requirements</td><td data-label="Process">Assembly, fastening, tuning and RF verification</td><td data-label="Key control">Build revision, fastener control, test setup and acceptance limit</td><td data-label="Output record">Build record, test data and lot or serial traceability</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-manufacturing__map-detail">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-operator.webp" alt="Operator loading parts at a CNC machining center" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>Operator loading parts at a CNC machining center. Equipment and people are shown as process context, not as proof of a specific tolerance.</figcaption>
+        </figure>
+        <div>
+          <h3>From drawing review to RF evidence</h3>
+          <ol class="sn-manufacturing__process" aria-label="Drawing to delivery process">
+            <li><strong>Drawing review</strong><span>Confirm material, datums, critical characteristics and finish.</span></li>
+            <li><strong>Process route</strong><span>Select machining, forming, finishing and inspection steps.</span></li>
+            <li><strong>Build and measure</strong><span>Record critical dimensions and visible process findings.</span></li>
+            <li><strong>Assemble and verify</strong><span>Connect the build to applicable RF test evidence.</span></li>
+          </ol>
+        </div>
+      </div>
+      <p class="sn-manufacturing__note"><strong>Product links:</strong> Compare the route with <a href="/products/waveguide-components/">waveguide components</a> and <a href="/products/precision-enclosures/">precision enclosures</a>. Specific equipment models, material grades and process limits are confirmed from the drawing.</p>
+      <div class="sn-manufacturing__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Review Manufacturing Inputs</a><a class="sn-manufacturing__text-link" href="/products/precision-enclosures/">See enclosure manufacturing context <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="manufacturing-tolerance-title">
+    <div class="sn-container">
+      <div class="sn-manufacturing__intro">
+        <h2 id="manufacturing-tolerance-title">Tolerance, Plating and Surface-Control Evidence</h2>
+        <p>A tolerance statement becomes useful only when the drawing characteristic, applicable structure, measurement method and record are defined together. The figures below are conditional capabilities, not blanket guarantees.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="manufacturing-tolerance-caption">
+        <table class="sn-table sn-manufacturing__table">
+          <caption id="manufacturing-tolerance-caption">Feature, condition, method and record for high-frequency tolerance and plating review.</caption>
+          <thead><tr><th scope="col">Feature and condition</th><th scope="col">Capability statement</th><th scope="col">Measurement method</th><th scope="col">Record expected</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Critical cavity dimension above 40 GHz</th><td data-label="Capability statement">Can reach ±0.01 mm for suitable structures</td><td data-label="Measurement method">Drawing-defined dimensional inspection with an agreed datum scheme</td><td data-label="Record expected">Measured value, method, revision and disposition</td></tr>
+            <tr><th scope="row">Plating thickness above 60 GHz</th><td data-label="Capability statement">Can reach 1 μm control for suitable designs</td><td data-label="Measurement method">Agreed thickness measurement on the specified functional surface</td><td data-label="Record expected">Surface requirement, result and acceptance status</td></tr>
+            <tr><th scope="row">Mating face and flange</th><td data-label="Capability statement">Flatness and alignment reviewed against the interface requirement</td><td data-label="Measurement method">Surface or assembly check using the project method</td><td data-label="Record expected">Inspection record and fit result</td></tr>
+            <tr><th scope="row">Exterior or appearance surface</th><td data-label="Capability statement">Finish defined by material, pre-treatment and coating specification</td><td data-label="Measurement method">Visual and finish record against agreed criteria</td><td data-label="Record expected">Finish record and any approved deviation</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-manufacturing__evidence-layout">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/tech-precision-machining.webp" alt="Precision CNC machining of high frequency parts" width="1024" height="1024" loading="lazy" decoding="async">
+          <figcaption>Precision CNC machining of high-frequency parts. The process supports the capability discussion; the final requirement belongs on the controlled drawing.</figcaption>
+        </figure>
+        <div>
+          <h3>Reading a tolerance or plating record</h3>
+          <ul class="sn-manufacturing__record-list">
+            <li>Which drawing characteristic and revision the value belongs to</li>
+            <li>Which datum scheme and measurement location were used</li>
+            <li>Which method or instrument produced the result</li>
+            <li>Whether the value is a capability statement or an inspection result</li>
+            <li>What deviation, if any, was accepted and by whom</li>
+          </ul>
+          <p>Measurement records are redacted for review; customer drawings and names are not published. Where a result depends on a specific instrument, fixture or sample location, that condition is stated with the value rather than separated from it.</p>
+          <p>The connection to RF evidence is defined separately: geometry and plating records support the hardware definition, while <a href="/engineering/testing-quality/">VNA, PIM or reliability results</a> provide performance evidence for the agreed test plan.</p>
+        </div>
+      </div>
+      <p class="sn-manufacturing__note"><strong>Conditional capability:</strong> ±0.01 mm and 1 μm are not universal figures. They apply only to suitable structures, within the stated frequency contexts, and require a drawing requirement plus an agreed verification method.</p>
+      <div class="sn-manufacturing__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Review Verification Evidence</a><a class="sn-manufacturing__text-link" href="/engineering/testing-quality/">See test report fields <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="manufacturing-assembly-title">
+    <div class="sn-container">
+      <div class="sn-manufacturing__intro">
+        <h2 id="manufacturing-assembly-title">Assembly, Tuning and RF Verification</h2>
+        <p>Machined parts become an RF assembly through incoming checks, controlled fastening, tuning and test. Each step should leave a record that points back to the build revision and forward to the acceptance decision.</p>
+      </div>
+      <div class="sn-manufacturing__gallery">
+        <article class="sn-manufacturing__gallery-card">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-assembly-detail.webp" alt="RF filter assembly detail" width="1024" height="576" loading="lazy" decoding="async">
+          <div class="sn-manufacturing__gallery-body"><span>Step 01 · Incoming and assembly</span><h3>Part condition and build</h3><p>Check received parts against the revision, then assemble with the specified fasteners, torque or fixture requirements. Record any fit or surface finding before closing the unit.</p></div>
+        </article>
+        <article class="sn-manufacturing__gallery-card">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-automated-assembly.webp" alt="Automated assembly machine for RF cavity filters" width="1920" height="1080" loading="lazy" decoding="async">
+          <div class="sn-manufacturing__gallery-body"><span>Step 02 · Fastening and tuning</span><h3>Repeatable settings</h3><p>Use the applicable fastening and tuning method, retaining the settings that belong in the process baseline. Automation supports consistency; it does not replace the inspection plan.</p></div>
+        </article>
+        <article class="sn-manufacturing__gallery-card">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-tuning-line.webp" alt="Technicians tuning RF filters with vector network analyzers" width="1891" height="1064" loading="lazy" decoding="async">
+          <div class="sn-manufacturing__gallery-body"><span>Step 03 · RF verification</span><h3>Measured evidence</h3><p>VNA, PIM, reliability or matrix testing is selected by product and specification. The result is recorded with conditions and limits; coverage is defined by the project plan.</p></div>
+        </article>
+      </div>
+      <p>Applicable testing is not presented as 100% coverage for every product. The released control plan defines which characteristics are measured, at which stage and on which samples. See the <a href="/engineering/testing-quality/">testing and quality page</a> for report fields and traceability, and the <a href="/engineering/npi/">NPI path</a> for first-article and change-control records.</p>
+      <div class="sn-manufacturing__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Inspect Test Evidence</a><a class="sn-btn sn-btn--secondary" href="/engineering/npi/">Review the NPI Baseline</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="manufacturing-audit-title">
+    <div class="sn-container">
+      <div class="sn-manufacturing__intro">
+        <h2 id="manufacturing-audit-title">A Practical RF Manufacturing Audit Checklist</h2>
+        <p>Use the checklist to prepare questions and evidence requests before a visit. Machine count alone does not establish capability; the review should connect equipment, process, inspection and traceability to the product under consideration.</p>
+      </div>
+      <div class="sn-manufacturing__audit-layout">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-workshop-wide.webp" alt="Wide view of the SONNE assembly workshop" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>Wide view of the assembly workshop. Accessible areas, timing and document sharing are agreed in advance for a project-specific audit.</figcaption>
+        </figure>
+        <div class="sn-manufacturing__checklists">
+          <div class="sn-manufacturing__check-group">
+            <h3>Equipment</h3>
+            <ul>
+              <li>CNC type, axis configuration and working range</li>
+              <li>Equipment list relevant to the part family</li>
+              <li>Calibration or status information where applicable</li>
+              <li>Capacity assumption stated, not inferred from count</li>
+            </ul>
+          </div>
+          <div class="sn-manufacturing__check-group">
+            <h3>Process</h3>
+            <ul>
+              <li>Drawing-to-process flow and revision control</li>
+              <li>Critical machining and assembly steps</li>
+              <li>Surface-finish and masking boundaries</li>
+              <li>Fixture, fastener and handling controls</li>
+            </ul>
+          </div>
+          <div class="sn-manufacturing__check-group">
+            <h3>Inspection</h3>
+            <ul>
+              <li>First-article and critical-dimension records</li>
+              <li>Measurement method and equipment information</li>
+              <li>Finish or plating verification records</li>
+              <li>Deviation and nonconformance disposition</li>
+            </ul>
+          </div>
+          <div class="sn-manufacturing__check-group">
+            <h3>Traceability</h3>
+            <ul>
+              <li>Product, lot or serial linkage where applicable</li>
+              <li>Drawing and BOM revision on the build record</li>
+              <li>Test record and acceptance decision</li>
+              <li>ECN and re-verification trail</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="sn-manufacturing__note"><strong>Audit boundary:</strong> No audit conclusion, fixed agenda, duration or on-site date is promised on this page. Scope, evidence access and confidentiality arrangements are confirmed for the project. Explore <a href="/about/factory/">the factory page</a> for facility context.</p>
+      <div class="sn-manufacturing__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Prepare an Audit Checklist</a><a class="sn-manufacturing__text-link" href="/about/factory/">Review factory evidence <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="manufacturing-faq-title">
+    <div class="sn-container">
+      <div class="sn-manufacturing__intro">
+        <h2 id="manufacturing-faq-title">Manufacturing Capability FAQs</h2>
+        <p>Direct answers on tolerance, plating control, the machining-to-test link, capacity and the evidence to request before an audit.</p>
+      </div>
+      <div class="sn-manufacturing__faq">
+        <details open><summary>What machining tolerance can SONNE achieve for high-frequency parts?</summary><p>For suitable structures above 40 GHz, mechanical tolerances can reach ±0.01 mm. This is not a blanket tolerance for every dimension or product. Engineering must review the geometry, material, datum scheme and inspection method, then define measurable drawing requirements and supporting evidence.</p></details>
+        <details><summary>How is plating thickness controlled for RF components?</summary><p>For suitable designs above 60 GHz, plating-thickness control can reach 1 μm, depending on structure and verification. Buyers should specify functional surfaces and acceptance criteria, then agree how thickness and related performance will be recorded. The figure is not a universal guarantee for every coating or component.</p></details>
+        <details><summary>How are machining, assembly and RF testing connected?</summary><p>Machining and surface records should connect to drawing revisions and critical characteristics; assembly and testing should connect to the corresponding build or lot. Applicable VNA, PIM, reliability or matrix-switch tests then provide performance evidence. Exact inspections and coverage are agreed by product and project, not assumed universally.</p></details>
+        <details><summary>Does 500,000+ annual capacity guarantee my production lead time?</summary><p>No. The 500,000+ figure is public annual capacity, not a delivery guarantee for any part. Production lead time must be assessed from drawings, quantity, process route, verification requirements and available capacity. Approximately two weeks is only a reference for applicable prototypes, not a general prototype or production promise.</p></details>
+        <details><summary>What evidence should I request before a factory audit?</summary><p>Request a relevant equipment list, drawing-to-process flow, inspection and calibration records, sample test reports, and lot or serial traceability where applicable. Sensitive customer information should be redacted. Audit scope, evidence access and any on-site agenda should be agreed for the project rather than inferred from machine count alone.</p></details>
+      </div>
+      <p class="sn-manufacturing__note">More detail on measurement and reporting is available under <a href="/engineering/testing-quality/">testing and quality</a>; production stage records are described under <a href="/engineering/npi/">NPI</a>.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="manufacturing-rfq-title">
+    <div class="sn-container sn-cta sn-manufacturing__rfq">
+      <h2 id="manufacturing-rfq-title">Plan Your RF Manufacturing Audit</h2>
+      <p>Turn the capability questions into an agenda: the product, the drawing revision, the critical dimensions and surfaces, the verification evidence you want to see, and whether the review is remote or on site.</p>
+      <div class="sn-manufacturing__rfq-grid">
+        <div class="sn-manufacturing__rfq-panel">
+          <h3>Audit objective</h3>
+          <ul>
+            <li>Product type and drawing revision</li>
+            <li>Critical dimensions and surface requirements</li>
+            <li>RF, mechanical or traceability evidence needed</li>
+            <li>Current project stage and decision to support</li>
+            <li>Preferred review scope and timing window</li>
+          </ul>
+        </div>
+        <div class="sn-manufacturing__rfq-panel">
+          <h3>Documents to prepare</h3>
+          <ul>
+            <li>Drawing, BOM and key characteristic list</li>
+            <li>Material and finish specification</li>
+            <li>Inspection or FAI requirements</li>
+            <li>Test plan and acceptance limits</li>
+            <li>Open questions for the audit agenda</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sn-manufacturing__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Book a Factory Audit</a><a class="sn-btn sn-btn--secondary" href="/contact/">Discuss Remote or On-Site Review</a></div>
+      <p class="sn-manufacturing__fine-print">Audit scope, date and record access are confirmed for the project. No audit outcome or production date is promised by a request. Email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> or use the <a href="/resources/rfq-guide/">RFQ guide</a> to assemble the package.</p>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/engineering/manufacturing/#webpage",
+        "name": "Precision Manufacturing for High-Frequency RF Hardware",
+        "url": "https://rf-sonne.com/engineering/manufacturing/",
+        "description": "50+ high-precision CNC, controlled plating and surface engineering for RF and enclosure production, with 40 GHz+ tolerance and 60 GHz+ plating-thickness control."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/engineering/manufacturing/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Engineering & Quality","item":"https://rf-sonne.com/engineering/"},
+          {"@type":"ListItem","position":3,"name":"Manufacturing","item":"https://rf-sonne.com/engineering/manufacturing/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

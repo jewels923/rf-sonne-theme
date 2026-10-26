@@ -1,0 +1,336 @@
+<!-- wp:html -->
+<div class="sn-custom-rf sn-legacy-record">
+  <style>
+    .sn-custom-rf { color: var(--sn-text); }
+    .sn-custom-rf *, .sn-custom-rf *::before, .sn-custom-rf *::after { box-sizing: border-box; }
+    .sn-custom-rf h2, .sn-custom-rf h3, .sn-custom-rf p, .sn-custom-rf ul, .sn-custom-rf ol, .sn-custom-rf dl, .sn-custom-rf dt, .sn-custom-rf dd, .sn-custom-rf figure { margin-top: 0; }
+    .sn-custom-rf h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-custom-rf h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-custom-rf p, .sn-custom-rf li, .sn-custom-rf dd { line-height: 1.7; }
+    .sn-custom-rf a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-custom-rf img { display: block; max-width: 100%; height: auto; }
+    .sn-custom-rf .sn-custom-rf__eyebrow { display: block; margin-bottom: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-custom-rf .sn-custom-rf__intro { max-width: 860px; margin-bottom: 38px; }
+    .sn-custom-rf .sn-custom-rf__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.03rem; }
+    .sn-custom-rf .sn-custom-rf__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-custom-rf .sn-custom-rf__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-custom-rf .sn-custom-rf__hero-grid { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(340px, .96fr); gap: clamp(34px, 6vw, 76px); align-items: center; }
+    .sn-custom-rf .sn-custom-rf__hero .sn-custom-rf__eyebrow { color: var(--sn-cyan); }
+    .sn-custom-rf .sn-custom-rf__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-custom-rf .sn-custom-rf__hero-media { margin-bottom: 0; }
+    .sn-custom-rf .sn-custom-rf__hero-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid rgba(252, 254, 255, .2); }
+    .sn-custom-rf .sn-custom-rf__hero-media figcaption { margin-top: 12px; color: rgba(252, 254, 255, .64); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-custom-rf .sn-custom-rf__path { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+    .sn-custom-rf .sn-custom-rf__path li { color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .72rem; }
+    .sn-custom-rf .sn-custom-rf__path li + li::before { margin-right: 10px; color: rgba(252, 254, 255, .4); content: '→'; }
+    .sn-custom-rf .sn-custom-rf__hero-note { margin: 22px 0 0; padding: 14px 16px; border: 1px solid rgba(140, 196, 255, .32); border-radius: var(--sn-radius); background: rgba(252, 254, 255, .06); color: rgba(252, 254, 255, .74); font-size: .84rem; }
+    .sn-custom-rf .sn-custom-rf__table { min-width: 960px; }
+    .sn-custom-rf .sn-custom-rf__table caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-custom-rf .sn-custom-rf__table tbody th { color: var(--sn-navy); }
+    .sn-custom-rf .sn-custom-rf__note { margin: 18px 0 0; padding: 16px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .87rem; }
+    .sn-custom-rf .sn-custom-rf__io { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, .82fr); gap: 14px; margin-bottom: 26px; }
+    .sn-custom-rf .sn-custom-rf__io-panel { padding: 24px 22px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-custom-rf .sn-custom-rf__io-panel > span { display: block; margin-bottom: 12px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .sn-custom-rf .sn-custom-rf__io-panel ul { margin: 0; padding-left: 18px; color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-custom-rf .sn-custom-rf__io-panel li { margin-bottom: 7px; }
+    .sn-custom-rf .sn-custom-rf__io-panel li:last-child { margin-bottom: 0; }
+    .sn-custom-rf .sn-custom-rf__io-panel--output { border-top: 3px solid var(--sn-cyan-dark); background: var(--sn-light-gray); }
+    .sn-custom-rf .sn-custom-rf__gate-layout { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: clamp(28px, 5vw, 54px); align-items: start; }
+    .sn-custom-rf .sn-custom-rf__gate-layout figure { margin-bottom: 0; }
+    .sn-custom-rf .sn-custom-rf__gate-layout img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-custom-rf .sn-custom-rf__gate-layout figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-custom-rf .sn-custom-rf__rail { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--sn-mid-gray); }
+    .sn-custom-rf .sn-custom-rf__rail li { position: relative; padding: 0 0 24px 24px; }
+    .sn-custom-rf .sn-custom-rf__rail li:last-child { padding-bottom: 0; }
+    .sn-custom-rf .sn-custom-rf__rail li::before { position: absolute; top: 5px; left: -5px; width: 9px; height: 9px; border: 2px solid var(--sn-cyan-dark); border-radius: 50%; background: var(--sn-white); content: ''; }
+    .sn-custom-rf .sn-custom-rf__rail strong { display: block; margin-bottom: 4px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .78rem; letter-spacing: .03em; }
+    .sn-custom-rf .sn-custom-rf__rail p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-custom-rf .sn-custom-rf__loop { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; counter-reset: loop; }
+    .sn-custom-rf .sn-custom-rf__loop li { padding: 18px; border: var(--sn-border); background: var(--sn-white); counter-increment: loop; }
+    .sn-custom-rf .sn-custom-rf__loop li::before { display: block; margin-bottom: 10px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; content: '0' counter(loop); }
+    .sn-custom-rf .sn-custom-rf__loop strong { display: block; margin-bottom: 4px; color: var(--sn-navy); font-size: .9rem; }
+    .sn-custom-rf .sn-custom-rf__loop span { color: var(--sn-text-muted); font-size: .8rem; line-height: 1.55; }
+    .sn-custom-rf .sn-custom-rf__wide-figure { margin-bottom: 0; }
+    .sn-custom-rf .sn-custom-rf__wide-figure img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
+    .sn-custom-rf .sn-custom-rf__wide-figure figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-custom-rf .sn-custom-rf__boundary-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(28px, 5vw, 54px); align-items: start; }
+    .sn-custom-rf .sn-custom-rf__boundary-layout figure { margin-bottom: 0; }
+    .sn-custom-rf .sn-custom-rf__boundary-layout img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-custom-rf .sn-custom-rf__boundary-layout figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-custom-rf .sn-custom-rf__boundary-list { margin: 0 0 18px; padding: 0; border-top: var(--sn-border); list-style: none; }
+    .sn-custom-rf .sn-custom-rf__boundary-list li { position: relative; padding: 10px 0 10px 24px; border-bottom: var(--sn-border); color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-custom-rf .sn-custom-rf__boundary-list li::before { position: absolute; top: 11px; left: 2px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .78rem; content: '□'; }
+    .sn-custom-rf .sn-custom-rf__faq { max-width: 920px; }
+    .sn-custom-rf .sn-custom-rf__faq details { border-bottom: var(--sn-border); }
+    .sn-custom-rf .sn-custom-rf__faq summary { position: relative; min-height: 44px; padding: 22px 48px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-custom-rf .sn-custom-rf__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.28rem; content: '+'; }
+    .sn-custom-rf .sn-custom-rf__faq details[open] summary::after { content: '−'; }
+    .sn-custom-rf .sn-custom-rf__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-custom-rf .sn-custom-rf__rfq h2, .sn-custom-rf .sn-custom-rf__rfq h3 { color: var(--sn-white); }
+    .sn-custom-rf .sn-custom-rf__rfq p, .sn-custom-rf .sn-custom-rf__rfq li { color: rgba(252, 254, 255, .8); }
+    .sn-custom-rf .sn-custom-rf__rfq a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-custom-rf .sn-custom-rf__rfq-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 58px); }
+    .sn-custom-rf .sn-custom-rf__rfq-panel { padding: clamp(22px, 4vw, 32px); border: 1px solid rgba(252, 254, 255, .2); }
+    .sn-custom-rf .sn-custom-rf__rfq-panel ul { margin: 0; padding-left: 20px; }
+    .sn-custom-rf .sn-custom-rf__fine-print { margin-top: 18px; font-size: .8rem; }
+    @media (max-width: 1000px) {
+      .sn-custom-rf .sn-custom-rf__io { grid-template-columns: 1fr 1fr; }
+      .sn-custom-rf .sn-custom-rf__io-panel--output { grid-column: 1 / -1; }
+    }
+    @media (max-width: 900px) {
+      .sn-custom-rf .sn-custom-rf__hero-grid, .sn-custom-rf .sn-custom-rf__gate-layout, .sn-custom-rf .sn-custom-rf__boundary-layout, .sn-custom-rf .sn-custom-rf__rfq-grid { grid-template-columns: 1fr; }
+      .sn-custom-rf .sn-custom-rf__hero-media { max-width: 700px; }
+      .sn-custom-rf .sn-custom-rf__gate-layout figure { max-width: 700px; }
+    }
+    @media (max-width: 700px) {
+      .sn-custom-rf .sn-custom-rf__io, .sn-custom-rf .sn-custom-rf__loop { grid-template-columns: 1fr; }
+      .sn-custom-rf .sn-custom-rf__faq details p { padding-right: 0; }
+    }
+    @media (max-width: 520px) {
+      .sn-custom-rf .sn-custom-rf__actions .sn-btn { width: 100%; }
+    }
+    @media print {
+      .sn-custom-rf .sn-custom-rf__faq details:not([open]) > p { display: block !important; }
+      .sn-custom-rf .sn-custom-rf__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-custom-rf__hero" aria-labelledby="custom-rf-title">
+    <div class="sn-container sn-custom-rf__hero-grid">
+      <div class="sn-custom-rf__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/engineering/">Engineering &amp; Quality</a></li><li aria-current="page">Custom RF Design</li></ol></nav>
+        <span class="sn-custom-rf__eyebrow">Specification review · design / DFM · prototype validation</span>
+        <h1 id="custom-rf-title">Custom RF Design from Specification to Validated Hardware</h1>
+        <p>Engineering evaluation and custom design support for filter, waveguide and combiner projects. The work starts with the performance targets and physical constraints, then moves through design review, prototype build and measured validation.</p>
+        <ul class="sn-custom-rf__path" aria-label="Custom RF design path"><li>Specification</li><li>Design review</li><li>Hardware</li><li>Test</li></ul>
+        <p class="sn-custom-rf__hero-note">Three valid starting points: a complete specification, partial targets with application constraints, or existing hardware and data with a defined problem.</p>
+        <div class="sn-custom-rf__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Start Engineering Review</a><a class="sn-btn sn-btn--secondary" href="/contact/">Send Your RF Specification</a></div>
+      </div>
+      <figure class="sn-custom-rf__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>A machined RF bandpass filter. Frequency, loss and rejection values are defined by the project specification and measured hardware, not inferred from the product photograph.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="custom-rf-entry-title">
+    <div class="sn-container">
+      <div class="sn-custom-rf__intro">
+        <h2 id="custom-rf-entry-title">Choose the Right Starting Point for Engineering Evaluation</h2>
+        <p>Projects rarely arrive with a perfect package. Locate the material you have now, then use G0 to confirm priorities, acceptance targets and constraints that cannot change.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="custom-rf-entry-caption">
+        <table class="sn-table sn-custom-rf__table">
+          <caption id="custom-rf-entry-caption">Three engineering entry points, their typical blockers and the review record produced at G0.</caption>
+          <thead><tr><th scope="col">Entry point</th><th scope="col">Current material</th><th scope="col">Typical blocker</th><th scope="col">SONNE review action</th><th scope="col">Output and next gate</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Specification-only</th><td data-label="Current material">Application, band plan, preliminary RF targets</td><td data-label="Typical blocker">Targets are not yet ranked or tied to test conditions</td><td data-label="SONNE review action">Check specification completeness, expose assumptions and separate fixed requirements from preferences</td><td data-label="Output and next gate">Requirement and open-item list; G0 baseline before topology work</td></tr>
+            <tr><th scope="row">Drawing-based</th><td data-label="Current material">2D/3D geometry, materials, connector or flange definition</td><td data-label="Typical blocker">Drawing defines shape but not all RF acceptance criteria</td><td data-label="SONNE review action">Review RF and mechanical interfaces together; run DFM checks on critical features</td><td data-label="Output and next gate">Interface and DFM comments; decide whether design changes are in scope</td></tr>
+            <tr><th scope="row">Existing hardware</th><td data-label="Current material">Sample description, measured curves, test conditions, known issue</td><td data-label="Typical blocker">Comparison is difficult because conditions or revisions differ</td><td data-label="SONNE review action">Build a difference list and identify which measurements must be repeated on a comparable setup</td><td data-label="Output and next gate">Deviation and retest proposal; G1 review only after the baseline is agreed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-custom-rf__note"><strong>G0 rule:</strong> The buyer confirms priorities, acceptance targets and non-negotiable constraints before detailed design work begins. A drawing-based request is not automatically a redesign request.</p>
+      <div class="sn-custom-rf__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Identify Your Review Starting Point</a><a class="sn-custom-rf__text-link" href="/products/rf-microwave-filters/">Review RF filter capabilities <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="custom-rf-io-title">
+    <div class="sn-container">
+      <div class="sn-custom-rf__intro">
+        <h2 id="custom-rf-io-title">Define the RF Evaluation Inputs and Outputs</h2>
+        <p>An evaluation is only as useful as its input table. Record electrical targets, mechanical limits and project context with units and test conditions, then agree what the review will return.</p>
+      </div>
+      <div class="sn-custom-rf__io">
+        <div class="sn-custom-rf__io-panel">
+          <span>RF inputs</span>
+          <ul>
+            <li>Center frequency, start and stop frequencies</li>
+            <li>Bandwidth and channel plan</li>
+            <li>Ports, impedance and connector or flange type</li>
+            <li>Insertion loss, return loss, rejection and isolation targets</li>
+            <li>Power handling and PIM where applicable</li>
+            <li>Test conditions and calibration assumptions</li>
+          </ul>
+        </div>
+        <div class="sn-custom-rf__io-panel">
+          <span>Mechanical and project inputs</span>
+          <ul>
+            <li>Envelope, mounting orientation and available volume</li>
+            <li>Material, surface finish and plating requirements</li>
+            <li>Operating environment and interface constraints</li>
+            <li>Available 2D/3D data and reference drawings</li>
+            <li>Quantity stage and target validation milestone</li>
+            <li>Known deviations or issues in existing hardware</li>
+          </ul>
+        </div>
+        <div class="sn-custom-rf__io-panel sn-custom-rf__io-panel--output">
+          <span>Review outputs</span>
+          <ul>
+            <li>Confirmed requirements and TBD items</li>
+            <li>Documented assumptions and priority order</li>
+            <li>Topology or structure comments</li>
+            <li>Manufacturing and DFM risks</li>
+            <li>Proposed prototype scope</li>
+            <li>Verification matrix and next gate</li>
+          </ul>
+        </div>
+      </div>
+      <p>The output is a review record, not a promise that every open item closes in one pass. Unknown fields stay visible so the buyer can decide whether to supply data, accept an assumption or change the target. A standard input template is available through the <a href="/resources/rfq-guide/">RFQ guide</a>.</p>
+      <div class="sn-custom-rf__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send Your RF Specification</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Use the RFQ Input Guide</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="custom-rf-gates-title">
+    <div class="sn-container">
+      <div class="sn-custom-rf__intro">
+        <h2 id="custom-rf-gates-title">Move from Design Analysis to Hardware through Review Gates</h2>
+        <p>Each gate has a defined question and a record. Analysis can guide the next build, but it is never presented as measured hardware performance.</p>
+      </div>
+      <div class="sn-custom-rf__gate-layout">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/tech-cat-tuning.webp" alt="Computer-aided tuning of RF filters" width="1024" height="575" loading="lazy" decoding="async">
+          <figcaption>Computer-aided tuning of RF filters. The workstation supports the tuning process; screen content is not a product rating or a customer result.</figcaption>
+        </figure>
+        <ol class="sn-custom-rf__rail">
+          <li><strong>G1 · Design Review</strong><p>Check the requirement baseline, model boundaries, critical structural assumptions and target trade-offs. Output the assumptions that still need validation and the design review record.</p></li>
+          <li><strong>G1b · DFM Review</strong><p>Review critical dimensions, machining reach, mating faces, connectors or flanges, tolerances and finish against one revision. Output manufacturability and risk comments.</p></li>
+          <li><strong>G2 · Prototype Build</strong><p>Freeze the drawing, BOM and test requirements used for the sample, then record actual deviations. The fastest reference of about two weeks applies only to suitable prototypes; timing follows structure, process and verification.</p></li>
+          <li><strong>G2 · Validation Review</strong><p>Compare targets with applicable VNA or PIM measurements under agreed conditions. Unmet items enter root-cause discussion and the next review instead of being declared passed.</p></li>
+        </ol>
+      </div>
+      <p class="sn-custom-rf__note"><strong>Gate discipline:</strong> A design comment, a simulated curve and a measured sample are three different evidence types. Each record identifies which one it contains so the buyer's team can see what remains open.</p>
+      <div class="sn-custom-rf__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/npi/">Review the Design-to-Production Path</a><a class="sn-custom-rf__text-link" href="/engineering/testing-quality/">See how validation is reported <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="custom-rf-loop-title">
+    <div class="sn-container">
+      <div class="sn-custom-rf__intro">
+        <h2 id="custom-rf-loop-title">Close the Loop between RF Results and Physical Design</h2>
+        <p>When measured results miss a target, the useful next step is a structured comparison, not another blind build. Connect the delta to a physical hypothesis, revise one controlled variable and retest on a comparable setup.</p>
+      </div>
+      <figure class="sn-custom-rf__wide-figure">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-tuning-line.webp" alt="Technicians tuning RF filters with vector network analyzers" width="1891" height="1064" loading="lazy" decoding="async">
+        <figcaption>VNA tuning line. Measurements are read with the product, revision and test conditions attached; the photograph is not a performance claim.</figcaption>
+      </figure>
+      <ol class="sn-custom-rf__loop" aria-label="Design to measurement feedback loop">
+        <li><strong>Record the result</strong><span>Parameter, target, test conditions, sample result and the difference.</span></li>
+        <li><strong>Link a hypothesis</strong><span>Cavity dimension, joint, connector, flange, tolerance or plating as a possible contributor.</span></li>
+        <li><strong>Revise one version</strong><span>Change the drawing or model with a reason and a new revision identifier.</span></li>
+        <li><strong>Retest and compare</strong><span>Repeat on a comparable setup and retain before/after data for review.</span></li>
+      </ol>
+      <p class="sn-custom-rf__note"><strong>Causality boundary:</strong> A correlation between a measured shift and a physical feature is a review hypothesis until the data supports it. SONNE does not state a root cause without measurement evidence.</p>
+      <div class="sn-custom-rf__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Discuss a Prototype Validation Loop</a><a class="sn-custom-rf__text-link" href="/engineering/testing-quality/">Review test evidence fields <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="custom-rf-boundary-title">
+    <div class="sn-container">
+      <div class="sn-custom-rf__intro">
+        <h2 id="custom-rf-boundary-title">Check Frequency and Manufacturing Feasibility by Design</h2>
+        <p>Frequency is a screening input, not a feasibility decision. Above the core range, feasibility depends on topology, interface, mechanical structure and whether the agreed test method can verify the result.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="custom-rf-frequency-caption">
+        <table class="sn-table sn-custom-rf__table">
+          <caption id="custom-rf-frequency-caption">Conditional frequency and manufacturing capabilities; each row requires project review.</caption>
+          <thead><tr><th scope="col">Capability statement</th><th scope="col">Applicable condition</th><th scope="col">What it can support</th><th scope="col">What it does not establish</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">DC–40 GHz</th><td data-label="Applicable condition">Core standard-product production portfolio</td><td data-label="What it can support">Initial frequency-fit screening for standard products</td><td data-label="What it does not establish">Performance of a custom topology without review</td></tr>
+            <tr><th scope="row">Selected projects up to 110 GHz</th><td data-label="Applicable condition">Selected custom microwave and waveguide projects, depending on topology and verification</td><td data-label="What it can support">High-frequency feasibility discussion</td><td data-label="What it does not establish">A blanket upper-frequency capability for every design</td></tr>
+            <tr><th scope="row">Above 40 GHz: can reach ±0.01 mm</th><td data-label="Applicable condition">Suitable structures, with defined datum and inspection method</td><td data-label="What it can support">Review of critical high-frequency geometry</td><td data-label="What it does not establish">Every dimension, assembly or RF result</td></tr>
+            <tr><th scope="row">Above 60 GHz: can reach 1 μm</th><td data-label="Applicable condition">Suitable structures and agreed plating verification</td><td data-label="What it can support">Review of functional surface requirements</td><td data-label="What it does not establish">A universal coating guarantee or a measured RF outcome</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-custom-rf__boundary-layout">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-cavity-milling.webp" alt="CNC milling of an RF filter cavity" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>CNC milling of an RF filter cavity. The operation supports the capability review; it does not establish a tolerance for every part.</figcaption>
+        </figure>
+        <div>
+          <h3>Five high-frequency checkpoints</h3>
+          <ul class="sn-custom-rf__boundary-list">
+            <li>Topology and band plan</li>
+            <li>Flange or connector interface</li>
+            <li>Critical tolerances and datum scheme</li>
+            <li>Surface and plating requirements</li>
+            <li>Test feasibility and measurement conditions</li>
+          </ul>
+          <p>Any item that cannot be confirmed stays on the risk list rather than becoming an assumed capability. The review can continue with a TBD, but the open point remains visible through the prototype gate.</p>
+        </div>
+      </div>
+      <div class="sn-custom-rf__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Check Your High-Frequency Constraints</a><a class="sn-custom-rf__text-link" href="/products/waveguide-components/">Review waveguide components <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="custom-rf-faq-title">
+    <div class="sn-container">
+      <div class="sn-custom-rf__intro">
+        <h2 id="custom-rf-faq-title">Custom RF Design Evaluation FAQs</h2>
+        <p>What to send, how far the frequency range extends, what a review returns, and how initial feedback differs from a formal quotation or delivery commitment.</p>
+      </div>
+      <div class="sn-custom-rf__faq">
+        <details open><summary>What parameters are needed for a custom RF design evaluation?</summary><p>Provide the frequency range or band plan, bandwidth, ports and impedance, insertion loss, return loss, rejection or isolation targets, power and PIM where applicable. Add connector or flange details, mechanical envelope, environment, drawings and project stage. Include test conditions with critical targets; unknown items can be listed as open for review.</p></details>
+        <details><summary>Can SONNE participate in design evaluation instead of only machining to drawing?</summary><p>Yes, engineering evaluation is part of the stated custom RF design capability for filter, waveguide and combiner projects. The review can connect RF requirements with mechanical and manufacturing constraints, identify open questions and define prototype verification. The exact scope depends on the supplied information and agreed project objectives, and remains subject to hardware validation.</p></details>
+        <details><summary>What frequency range can a custom RF project cover?</summary><p>SONNE's standard product portfolio is centered on production from DC to 40 GHz. Selected custom microwave and waveguide projects can reach 110 GHz, depending on topology and verification. Frequency alone is not enough to confirm feasibility; the design review must also consider interfaces, performance targets, mechanical structure, manufacturing constraints and the applicable test method.</p></details>
+        <details><summary>What outputs should I expect from an RF engineering review?</summary><p>Expected review outputs can include a requirement and open-item list, documented assumptions, RF and mechanical risks, design or DFM comments, and a proposed prototype verification matrix. The agreed output set should be confirmed for the project. Simulation or design analysis should be identified separately from measured hardware evidence, so your team can see what remains to be validated.</p></details>
+        <details><summary>How quickly can SONNE provide initial engineering feedback?</summary><p>A complete RFQ can typically receive initial engineering feedback in about 24 hours. This refers to an initial response, such as identifying missing inputs or suggesting the next review step; it is not a guaranteed quotation, completed design or delivery commitment. Prototype and production timing must be assessed from the design, process, quantity and verification scope.</p></details>
+      </div>
+      <p class="sn-custom-rf__note">Need a structured input list before contacting engineering? Open the <a href="/resources/rfq-guide/">RFQ guide and checklists</a>.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="custom-rf-rfq-title">
+    <div class="sn-container sn-cta sn-custom-rf__rfq">
+      <div class="sn-custom-rf__rfq-grid">
+        <div>
+          <h2 id="custom-rf-rfq-title">Start an RF Evaluation with the Inputs You Have</h2>
+          <p>Share the product type, application, frequency range, key RF targets, mechanical envelope, project stage and the problem you most need to solve. Partial data is acceptable when the open fields are clearly marked.</p>
+          <p>Attachments can include a specification, band plan, 2D/3D drawing, reference curve or test report. The first response identifies missing inputs and proposes the next review gate; it does not commit to a design outcome.</p>
+          <div class="sn-custom-rf__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Start Engineering Review</a><a class="sn-btn sn-btn--secondary" href="/engineering/npi/">Plan the Prototype Stage</a></div>
+          <p class="sn-custom-rf__fine-print">A complete RFQ typically receives initial engineering feedback in about 24 hours. Prototype timing is assessed separately and is not guaranteed by that response. Email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> for project material.</p>
+        </div>
+        <div class="sn-custom-rf__rfq-panel">
+          <h3>Input checklist</h3>
+          <ul>
+            <li>Product type: filter, waveguide, combiner or other</li>
+            <li>Application and operating environment</li>
+            <li>Frequency range or band plan</li>
+            <li>Critical RF targets with units and conditions</li>
+            <li>Power, PIM or isolation requirements where applicable</li>
+            <li>Mechanical envelope, connector or flange</li>
+            <li>Project stage, quantity range and current blocker</li>
+          </ul>
+          <h3>Useful attachments</h3>
+          <p>Specification, band plan, 2D/3D drawings, reference curves and current test data. Mark uncertain revisions rather than withholding the only available version.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/engineering/custom-rf-design/#webpage",
+        "name": "Custom RF Design from Specification to Validated Hardware",
+        "url": "https://rf-sonne.com/engineering/custom-rf-design/",
+        "description": "SONNE supports custom RF design and engineering evaluation for filters, waveguide and combiner projects, linking simulation, precision machining and VNA/PIM verification."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/engineering/custom-rf-design/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Engineering & Quality","item":"https://rf-sonne.com/engineering/"},
+          {"@type":"ListItem","position":3,"name":"Custom RF Design","item":"https://rf-sonne.com/engineering/custom-rf-design/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

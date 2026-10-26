@@ -1,0 +1,101 @@
+# design-model.yaml — SONNE locked visual system
+# RF/telecom industry register: navy steel, signal blue, instrumentation cyan,
+# ice-white engineering surfaces. Copper remains a material colour in photography.
+
+meta:
+  name: sonne
+  site: rf-sonne.com
+  industry: RF / microwave hardware manufacturing
+  register: brand
+  persona: Instrumented Precision
+  design_read: "RF hardware · navy + signal blue + cyan on ice white · SPECTACLE=6 · DENSITY=6"
+  approved: 2026-10-26
+
+dials:
+  soul: 7
+  spectacle: 6
+  density: 6
+
+color:
+  ink: "#0A1B2A"           # header, footer, hero base, headings
+  ink_deep: "#05101B"      # deepest chrome
+  ink_soft: "#0F2B40"      # hero light-field end
+  paper: "#F6F9FB"         # page background (never #fff)
+  paper_muted: "#EAF1F5"   # alternating section band, table head
+  card: "#FCFEFF"          # raised surfaces
+  line: "#D2DEE7"          # hairline borders
+  text: "#0E1A22"          # body copy (17.4:1 on card)
+  text_muted: "#54646F"    # secondary copy (6.05:1 on card)
+  accent: "#0B5CD5"        # filled buttons (white text = 5.92:1)
+  accent_dark: "#0846A6"   # blue text on light (8.52:1)
+  accent_on_dark: "#8CC4FF" # blue text on navy (9.52:1)
+  tech: "#22C5D9"          # instrumentation marks on dark only
+  tech_bright: "#6FE7F0"   # cyan highlights on dark
+  tech_ink: "#0B4AA8"      # technical labels and links on light (7.76:1)
+  tech_ghost: "rgba(11,92,213,0.06)"
+  on_accent: "#FCFEFF"
+  strategy: committed
+  rules:
+    - "Never #fff or #000 anywhere, including print styles."
+    - "Signal blue owns actions and links; cyan is decoration on dark surfaces only, never small text on white."
+    - "Copper appears only inside product/facility photography, not as a UI colour."
+    - "No legacy gold, volt, violet or warm-paper leftovers."
+
+type:
+  display: "Archivo"
+  display_weights: [600, 700, 800]
+  body: "IBM Plex Sans"
+  body_weights: [400, 500, 600]
+  mono: "IBM Plex Mono"
+  mono_weights: [400, 500]
+  scale_ratio: 1.3
+  h1:
+    size: "clamp(2.5rem, 4.7vw, 4rem)"
+    leading: 1
+    tracking: "-0.045em"
+    weight: 800
+  h2:
+    size: "clamp(2.05rem, 3.8vw, 3.15rem)"
+    leading: 1.08
+    tracking: "-0.035em"
+    weight: 800
+  h3:
+    size: "1.14rem"
+    leading: 1.4
+    tracking: "-0.01em"
+    weight: 700
+  body_size: "1rem"
+  body_leading: 1.7
+  rules:
+    - "One H2 scale site-wide; page-local overrides are removed."
+    - "Mono is for labels, specs, table heads, chips and nav wayfinding only."
+    - "Eyebrow cap: 1 per page (hero badge only)."
+    - "Container 1320px; section rhythm 72–120px."
+
+substrate:
+  grain_opacity: 0.06
+  grain_base_freq: 0.8
+  grid:
+    size: "88px"
+    line: "rgba(34,197,217,0.09)"
+    mask: "radial 120% 100% at 76% 0%"
+  vignette: false
+  radius: 3px
+  border: "1px solid #D2DEE7"
+  shadow: "0 18px 44px rgba(5, 16, 27, 0.08)"
+  motion_easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+  hero:
+    background: "cyan and signal-blue light fields over linear navy #05101B → #0A1B2A → #0F2B40"
+    treatment: "instrument grid fading from signal corner, 0.06 grain, blue CTA, brightened photography"
+    media_filter: "saturate(1.04) contrast(1.03) brightness(1.05)"
+
+structure:
+  sections: [hero, proof, capabilities, detail, cta, footer]
+  layout_families: [dark-hero, split, banded-grid, spec-table, quote-band]
+  nav: "uppercase 0.76rem tracked sans, transparent chrome over hero, solid ink-deep on scroll"
+  notes: "Note panels use a full 1px border; no side-stripe accents. Strong text inherits its surface colour."
+
+overrides:
+  home: "hero carries a bandpass-filter product macro; frequency note sits under the CTAs"
+  product_pages: "spec table immediately after capability list"
+  legal_pages: "single column, 68ch measure, no hero imagery"

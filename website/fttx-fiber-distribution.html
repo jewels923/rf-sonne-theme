@@ -1,0 +1,360 @@
+<!-- wp:html -->
+<div class="sn-fttx-products sn-legacy-record">
+  <style>
+    .sn-fttx-products { color: var(--sn-text); }
+    .sn-fttx-products *, .sn-fttx-products *::before, .sn-fttx-products *::after { box-sizing: border-box; }
+    .sn-fttx-products h2, .sn-fttx-products h3, .sn-fttx-products p, .sn-fttx-products ul, .sn-fttx-products ol, .sn-fttx-products figure { margin-top: 0; }
+    .sn-fttx-products h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-fttx-products h3 { margin-bottom: 12px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-fttx-products p, .sn-fttx-products li { line-height: 1.7; }
+    .sn-fttx-products a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-fttx-products img { display: block; max-width: 100%; height: auto; }
+    .sn-fttx-products [id] { scroll-margin-top: 96px; }
+    .sn-fttx-products caption { padding: 14px 16px; border-bottom: var(--sn-border); color: var(--sn-text-muted); font-size: .82rem; line-height: 1.55; text-align: left; }
+    .sn-fttx-products figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .71rem; line-height: 1.55; }
+    .sn-fttx-products .sn-fttx-products__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-fttx-products .sn-fttx-products__intro { max-width: 880px; margin-bottom: 34px; }
+    .sn-fttx-products .sn-fttx-products__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.03rem; }
+    .sn-fttx-products .sn-fttx-products__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-fttx-products .sn-fttx-products__hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr); gap: clamp(34px, 6vw, 72px); align-items: center; }
+    .sn-fttx-products .sn-fttx-products__hero .sn-fttx-products__eyebrow { color: var(--sn-cyan); }
+    .sn-fttx-products .sn-fttx-products__hero-copy > p { max-width: 64ch; margin-bottom: 18px; font-size: 1.04rem; }
+    .sn-fttx-products .sn-fttx-products__entry { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 22px 0 4px; }
+    .sn-fttx-products .sn-fttx-products__entry a { display: block; min-height: 44px; padding: 13px 14px; border: 1px solid rgba(252, 254, 255, .24); color: var(--sn-white); font-size: .8rem; line-height: 1.5; text-decoration: none; }
+    .sn-fttx-products .sn-fttx-products__entry a:hover { border-color: var(--sn-cyan); }
+    .sn-fttx-products .sn-fttx-products__entry strong { display: block; margin-bottom: 3px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-fttx-products .sn-fttx-products__hero-note { margin: 16px 0 0; padding: 14px; border: 1px solid rgba(140, 196, 255, .32); border-radius: var(--sn-radius); background: rgba(252, 254, 255, .06); color: rgba(252, 254, 255, .8); font-size: .85rem; }
+    .sn-fttx-products .sn-fttx-products__hero-media { margin: 0; }
+    .sn-fttx-products .sn-fttx-products__shot { position: relative; }
+    .sn-fttx-products .sn-fttx-products__hero-media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .sn-fttx-products .sn-fttx-products__hero-tags { position: absolute; right: 16px; bottom: 16px; left: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .sn-fttx-products .sn-fttx-products__hero-tags span { padding: 8px 10px; border: 1px solid rgba(252, 254, 255, .32); background: rgba(6, 19, 31, .84); color: var(--sn-white); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.4; }
+    .sn-fttx-products .sn-fttx-products__hero-media figcaption { color: rgba(252, 254, 255, .68); }
+    .sn-fttx-products .sn-fttx-products__selection-table { min-width: 1100px; }
+    .sn-fttx-products .sn-fttx-products__selection-table tbody th { width: 220px; color: var(--sn-navy); }
+    .sn-fttx-products .sn-fttx-products__figure { margin: 26px 0 0; }
+    .sn-fttx-products .sn-fttx-products__figure img { width: 100%; aspect-ratio: 16 / 9; border: var(--sn-border); background: var(--sn-white); object-fit: contain; }
+    .sn-fttx-products .sn-fttx-products__note { margin: 18px 0 0; padding: 16px 18px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-fttx-products .sn-fttx-products__note p:last-child { margin-bottom: 0; }
+    .sn-fttx-products .sn-fttx-products__ip-table { min-width: 1000px; }
+    .sn-fttx-products .sn-fttx-products__ip-table tbody th { width: 230px; color: var(--sn-navy); }
+    .sn-fttx-products .sn-fttx-products__env-table { min-width: 860px; }
+    .sn-fttx-products .sn-fttx-products__chain { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 26px 0; padding: 16px; border: var(--sn-border); background: var(--sn-white); color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.5; }
+    .sn-fttx-products .sn-fttx-products__chain span { padding: 8px 10px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); }
+    .sn-fttx-products .sn-fttx-products__chain b { color: var(--sn-cyan-dark); }
+    .sn-fttx-products .sn-fttx-products__field-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-fttx-products .sn-fttx-products__field { padding: 22px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-fttx-products .sn-fttx-products__field b { display: block; margin-bottom: 8px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; }
+    .sn-fttx-products .sn-fttx-products__field p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-fttx-products .sn-fttx-products__confirm-table { min-width: 920px; margin-top: 26px; }
+    .sn-fttx-products .sn-fttx-products__confirm-table tbody th { color: var(--sn-navy); }
+    .sn-fttx-products .sn-fttx-products__process { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 28px 0; padding: 0; list-style: none; counter-reset: fttx-gate; }
+    .sn-fttx-products .sn-fttx-products__process li { margin-left: -1px; padding: 22px; border: var(--sn-border); background: var(--sn-white); counter-increment: fttx-gate; }
+    .sn-fttx-products .sn-fttx-products__process li:first-child { margin-left: 0; }
+    .sn-fttx-products .sn-fttx-products__process li::before { display: block; margin-bottom: 12px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; content: 'STEP 0' counter(fttx-gate); }
+    .sn-fttx-products .sn-fttx-products__process h3 { font-size: 1rem; }
+    .sn-fttx-products .sn-fttx-products__process p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .85rem; }
+    .sn-fttx-products .sn-fttx-products__rfq-table { min-width: 900px; }
+    .sn-fttx-products .sn-fttx-products__rfq-table tbody th { color: var(--sn-navy); }
+    .sn-fttx-products .sn-fttx-products__attach { margin-top: 24px; padding: 24px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-fttx-products .sn-fttx-products__attach ul { margin-bottom: 0; padding-left: 20px; }
+    .sn-fttx-products .sn-fttx-products__attach li { color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-fttx-products .sn-fttx-products__faq { max-width: 940px; }
+    .sn-fttx-products .sn-fttx-products__faq details { border-bottom: var(--sn-border); }
+    .sn-fttx-products .sn-fttx-products__faq summary { position: relative; min-height: 44px; padding: 22px 46px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-fttx-products .sn-fttx-products__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-fttx-products .sn-fttx-products__faq details[open] summary::after { content: '−'; }
+    .sn-fttx-products .sn-fttx-products__faq details p { max-width: 78ch; padding-right: 36px; color: var(--sn-text-muted); }
+    .sn-fttx-products .sn-fttx-products__cta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); }
+    .sn-fttx-products .sn-cta h2 { color: var(--sn-white); }
+    .sn-fttx-products .sn-cta p, .sn-fttx-products .sn-cta li { color: rgba(252, 254, 255, .78); }
+    .sn-fttx-products .sn-cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-fttx-products .sn-fttx-products__cta-card { padding: 26px; border: 1px solid rgba(252, 254, 255, .22); }
+    .sn-fttx-products .sn-fttx-products__cta-card .sn-fttx-products__field-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0; }
+    .sn-fttx-products .sn-cta .sn-fttx-products__field { border-color: rgba(252, 254, 255, .22); background: transparent; }
+    .sn-fttx-products .sn-cta .sn-fttx-products__field b { color: var(--sn-cyan); }
+    .sn-fttx-products .sn-fttx-products__cta-card h3 { color: var(--sn-white); }
+    .sn-fttx-products .sn-fttx-products__cta-card .sn-btn { margin-top: 8px; }
+    .sn-fttx-products .sn-fttx-products__fine { margin: 18px 0 0; font-size: .82rem; }
+    @media (max-width: 1100px) {
+      .sn-fttx-products .sn-fttx-products__entry { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-fttx-products .sn-fttx-products__field-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-fttx-products .sn-fttx-products__process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-fttx-products .sn-fttx-products__process li { margin: -1px 0 0 -1px; }
+    }
+    @media (max-width: 900px) {
+      .sn-fttx-products .sn-fttx-products__hero-grid, .sn-fttx-products .sn-fttx-products__cta { grid-template-columns: 1fr; }
+      .sn-fttx-products .sn-fttx-products__hero-media { max-width: 620px; }
+    }
+    @media (max-width: 700px) {
+      .sn-fttx-products .sn-fttx-products__process { grid-template-columns: 1fr; }
+      .sn-fttx-products .sn-fttx-products__process li { margin: -1px 0 0; }
+      .sn-fttx-products .sn-fttx-products__field-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .sn-fttx-products .sn-fttx-products__entry { grid-template-columns: 1fr; }
+      .sn-fttx-products .sn-fttx-products__actions .sn-btn { width: 100%; }
+      .sn-fttx-products .sn-fttx-products__hero-tags { right: 8px; bottom: 8px; left: 8px; }
+    }
+  </style>
+
+  <section class="sn-hero sn-fttx-products__hero" aria-labelledby="fttx-title">
+    <div class="sn-container sn-fttx-products__hero-grid">
+      <div class="sn-fttx-products__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">FTTX Fiber Distribution</li></ol></nav>
+        <span class="sn-fttx-products__eyebrow">Supporting product line · FTTH project supply</span>
+        <h1 id="fttx-title">FTTX Fiber Distribution Boxes &amp; Optical Enclosures</h1>
+        <p>Source fiber distribution boxes, optical distribution cabinets and splice closures for FTTH projects. Protection is confirmed per product category: IP68 is a published capability for splice-closure products, not a blanket rating for every box or cabinet.</p>
+        <div class="sn-fttx-products__entry" aria-label="Three FTTX product categories">
+          <a href="#product-selection"><strong>Distribution boxes</strong>FTTH splitting and termination enclosures</a>
+          <a href="#product-selection"><strong>Optical distribution cabinets</strong>Larger distribution enclosures for a site</a>
+          <a href="#product-selection"><strong>Splice closures</strong>Outdoor cable jointing and protection</a>
+        </div>
+        <div class="sn-fttx-products__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request FTTX Quote</a><a class="sn-btn sn-btn--secondary" href="/contact/">Ask for IP Test Evidence</a></div>
+        <p class="sn-fttx-products__hero-note"><strong>Supporting product line.</strong> Outdoor protection, custom enclosure structure and OEM branding are the focus. Active optical equipment and full network design are outside this page.</p>
+      </div>
+      <figure class="sn-fttx-products__hero-media">
+        <div class="sn-fttx-products__shot">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/market-ftth.webp" alt="FTTH fiber access network" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async">
+          <div class="sn-fttx-products__hero-tags" aria-hidden="true"><span>Distribution boxes</span><span>Optical distribution cabinets</span><span>Splice closures</span></div>
+        </div>
+        <figcaption>FTTH access network illustration with the three product categories. It does not show a specific SONNE model or project.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" id="product-selection" aria-labelledby="fttx-selection-title">
+    <div class="sn-container">
+      <div class="sn-fttx-products__intro">
+        <h2 id="fttx-selection-title">Choose by Distribution, Cabinet and Splice-Closure Function</h2>
+        <p>The three categories are often confused because the names overlap. Separate them by where the enclosure sits in the outside plant, what it does to the fiber and how it is installed, then collect the documents that category needs.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="fttx-selection-caption">
+        <table class="sn-table sn-fttx-products__selection-table">
+          <caption id="fttx-selection-caption">Deployment position and input requirements for the three FTTX product categories.</caption>
+          <thead><tr><th scope="col">Product category</th><th scope="col">Deployment position</th><th scope="col">Main function</th><th scope="col">Installation</th><th scope="col">Environment inputs</th><th scope="col">Drawings / documents to request</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Fiber distribution box</th><td data-label="Deployment position">Between the feeder network and subscriber drop cables</td><td data-label="Main function">FTTH splitting, termination and port management</td><td data-label="Installation">Wall, pole or cabinet mounting as agreed</td><td data-label="Environment inputs">Indoor or outdoor position, rain and dust exposure, cable entries</td><td data-label="Drawings / documents to request">Outline drawing, port and capacity layout, mounting drawing</td></tr>
+            <tr><th scope="row">Optical distribution cabinet</th><td data-label="Deployment position">Street or site-level distribution point serving several boxes or buildings</td><td data-label="Main function">Larger distribution enclosure for cross-connection and cable management</td><td data-label="Installation">Pad, plinth or pole mounting as agreed</td><td data-label="Environment inputs">Outdoor exposure, access for maintenance, cable routing</td><td data-label="Drawings / documents to request">Cabinet drawing, internal layout, door and lock schedule</td></tr>
+            <tr><th scope="row">Splice closure</th><td data-label="Deployment position">Underground, aerial or duct cable joints</td><td data-label="Main function">Cable jointing and splice protection</td><td data-label="Installation">Direct burial, manhole, duct or aerial as agreed</td><td data-label="Environment inputs">Water and dust exposure, cable diameter and entry count</td><td data-label="Drawings / documents to request">Closure drawing, splice tray layout, cable entry range</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="sn-fttx-products__figure">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-cabinet.webp" alt="Telecom enclosure cabinet" width="1024" height="1024" loading="lazy" decoding="async">
+        <figcaption>Telecom enclosure cabinet from the precision-enclosure range, shown as an enclosure-form reference only. It is not a specific FTTX distribution box or cabinet model and defines no capacity or IP rating.</figcaption>
+      </figure>
+      <p class="sn-fttx-products__note">Capacity, port count and internal layout are set by the project drawings. This page publishes no standard capacity figure, and the three-level model detail pages are a later catalog phase. <a href="/products/precision-enclosures/">Precision enclosures</a> covers the structural manufacturing context.</p>
+      <div class="sn-fttx-products__actions"><a class="sn-btn sn-btn--primary" href="/contact/">Identify My FTTX Product Type</a><a class="sn-btn sn-btn--secondary" href="/solutions/fttx/">Review FTTX deployment</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="outdoor-protection" aria-labelledby="fttx-ip-title">
+    <div class="sn-container">
+      <div class="sn-fttx-products__intro">
+        <h2 id="fttx-ip-title">Match IP Requirements to the Exact Enclosure and Closure</h2>
+        <p>An IP target belongs to a specific structure, cable-entry arrangement and installation. State the environment first, then request evidence for the configuration you are buying rather than for the category in general.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="fttx-ip-caption">
+        <table class="sn-table sn-fttx-products__ip-table">
+          <caption id="fttx-ip-caption">Protection statements by category and the evidence each one requires.</caption>
+          <thead><tr><th scope="col">Product category</th><th scope="col">Published protection statement</th><th scope="col">Evidence to request</th><th scope="col">Scope limit</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Splice closure</th><td data-label="Published protection statement">IP68 is a published capability for splice-closure products</td><td data-label="Evidence to request">Test report or declaration for the closure model, splice tray and cable-entry set</td><td data-label="Scope limit">Applies to the tested configuration, not to every FTTX product</td></tr>
+            <tr><th scope="row">Fiber distribution box</th><td data-label="Published protection statement">Rating confirmed against the exact enclosure design</td><td data-label="Evidence to request">Evidence for the box model, door or cover seal and cable entries</td><td data-label="Scope limit">No category-wide rating is stated here</td></tr>
+            <tr><th scope="row">Optical distribution cabinet</th><td data-label="Published protection statement">Rating confirmed against the exact cabinet design</td><td data-label="Evidence to request">Evidence for the cabinet structure, door seal, ventilation and cable entries</td><td data-label="Scope limit">No category-wide rating is stated here</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-fttx-products__chain" aria-label="IP evidence chain">
+        <span>Product category</span><b aria-hidden="true">→</b><span>Structure &amp; cable entries</span><b aria-hidden="true">→</b><span>Target IP rating</span><b aria-hidden="true">→</b><span>Applicable evidence file</span>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="fttx-env-caption">
+        <table class="sn-table sn-fttx-products__env-table">
+          <caption id="fttx-env-caption">Environment inputs that change the protection answer.</caption>
+          <thead><tr><th scope="col">Input</th><th scope="col">Why it changes the answer</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Indoor or outdoor</th><td data-label="Why it changes the answer">Drives the sealing, drainage and material expectations for the enclosure</td></tr>
+            <tr><th scope="row">Mounting method</th><td data-label="Why it changes the answer">Wall, pole, pad or direct burial changes the mechanical and water-exposure case</td></tr>
+            <tr><th scope="row">Rain and dust exposure</th><td data-label="Why it changes the answer">Determines the target IP level and which entries need sealing</td></tr>
+            <tr><th scope="row">Cable entries</th><td data-label="Why it changes the answer">Entry count, diameter range and gland type decide whether a tested configuration still applies</td></tr>
+            <tr><th scope="row">Maintenance access</th><td data-label="Why it changes the answer">Door opening frequency and service access affect the seal and lock arrangement</td></tr>
+            <tr><th scope="row">Target IP rating</th><td data-label="Why it changes the answer">The requirement to test the proposed structure against, stated in the RFQ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-fttx-products__note">Salt spray, UV exposure, RoHS and REACH statements are not asserted on this page. Submit them as separate project questions with the installation environment, and the applicable evidence will be confirmed for the exact structure. <a href="/engineering/testing-quality/">See how testing evidence is handled</a>.</p>
+      <div class="sn-fttx-products__actions"><a class="sn-btn sn-btn--primary" href="/contact/">Ask for IP Test Evidence</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="materials-finish" aria-labelledby="fttx-materials-title">
+    <div class="sn-container">
+      <div class="sn-fttx-products__intro">
+        <h2 id="fttx-materials-title">Specify Outdoor Materials, Coating and Installation Conditions</h2>
+        <p>Material and finish choices belong in the RFQ, not in a generic catalog claim. Describe the installation and the appearance requirement, then let engineering confirm which structure, material and coating route applies.</p>
+      </div>
+      <div class="sn-fttx-products__field-grid">
+        <div class="sn-fttx-products__field"><b>Material preference</b><p>State the preferred material family or the constraint behind it; the final grade is confirmed with the structure.</p></div>
+        <div class="sn-fttx-products__field"><b>Color and coating</b><p>Give the target color and coating expectation, including whether the surface is visible to end users.</p></div>
+        <div class="sn-fttx-products__field"><b>Installation environment</b><p>Indoor, outdoor, underground or coastal exposure, plus the maintenance access expected.</p></div>
+        <div class="sn-fttx-products__field"><b>Dimensions</b><p>Available space, envelope limits and the mounting surface the enclosure will sit on.</p></div>
+        <div class="sn-fttx-products__field"><b>Cable entries</b><p>Entry count, cable diameter range, entry direction and whether glands are supplied.</p></div>
+        <div class="sn-fttx-products__field"><b>Appearance requirements</b><p>Branding area, label position and any restriction on visible fasteners or seams.</p></div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="fttx-confirm-caption">
+        <table class="sn-table sn-fttx-products__confirm-table">
+          <caption id="fttx-confirm-caption">Confirmation checklist that separates structure, surface and installation items.</caption>
+          <thead><tr><th scope="col">Check area</th><th scope="col">What to confirm</th><th scope="col">Output for the project file</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Structural protection</th><td data-label="What to confirm">Enclosure form, wall thickness logic, door or cover seal</td><td data-label="Output for the project file">Approved structure drawing or open item list</td></tr>
+            <tr><th scope="row">Seams and entries</th><td data-label="What to confirm">Joint design, gasket route and cable-entry sealing method</td><td data-label="Output for the project file">Entry schedule with sealing detail</td></tr>
+            <tr><th scope="row">Surface treatment</th><td data-label="What to confirm">Coating or finish route, color and coverage area</td><td data-label="Output for the project file">Finish specification to confirm</td></tr>
+            <tr><th scope="row">Installation accessories</th><td data-label="What to confirm">Brackets, pole clamps, pad fixings and lock type</td><td data-label="Output for the project file">Accessory list per mounting method</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-fttx-products__note">No resin grade, metal grade, coating thickness or corrosion duration is published on this page. Those values are confirmed for the exact enclosure. Structural or special-process questions can be routed through <a href="/products/precision-enclosures/">precision enclosures</a> and <a href="/engineering/manufacturing/">manufacturing engineering</a>.</p>
+      <div class="sn-fttx-products__actions"><a class="sn-btn sn-btn--primary" href="/contact/">Review Outdoor Requirements</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="oem-customization" aria-labelledby="fttx-oem-title">
+    <div class="sn-container">
+      <div class="sn-fttx-products__intro">
+        <h2 id="fttx-oem-title">Define Custom FTTX Enclosures and OEM Branding</h2>
+        <p>Custom enclosure and OEM branding requests are reviewed against a complete requirement package. Dimensions, mounting interfaces, internal layout and marking artwork all affect feasibility, so send them together.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="fttx-oem-caption">
+        <table class="sn-table sn-fttx-products__rfq-table">
+          <caption id="fttx-oem-caption">Customization inputs for an OEM FTTX enclosure request.</caption>
+          <thead><tr><th scope="col">Input</th><th scope="col">What to provide</th><th scope="col">Why it matters</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Enclosure dimensions</th><td data-label="What to provide">External envelope and any fixed internal dimensions</td><td data-label="Why it matters">Sets the structure and the sheet or molding route</td></tr>
+            <tr><th scope="row">Mounting interface</th><td data-label="What to provide">Wall, pole, pad or rack interface and fixing points</td><td data-label="Why it matters">Determines brackets and load paths</td></tr>
+            <tr><th scope="row">Internal layout</th><td data-label="What to provide">Splice tray, splitter or termination arrangement</td><td data-label="Why it matters">Drives the internal volume and access</td></tr>
+            <tr><th scope="row">Cable entry</th><td data-label="What to provide">Count, diameter range, direction and sealing expectation</td><td data-label="Why it matters">Links the structure to the protection requirement</td></tr>
+            <tr><th scope="row">Marking and artwork</th><td data-label="What to provide">Logo file, position, color and label content</td><td data-label="Why it matters">Needed for branding review and approval</td></tr>
+            <tr><th scope="row">Estimated quantity</th><td data-label="What to provide">Prototype, pilot and volume quantities by stage</td><td data-label="Why it matters">Feeds the production route assessment</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ol class="sn-fttx-products__process">
+        <li><h3>Requirement sheet</h3><p>Dimensions, mounting, internal layout, entries, quantity and artwork are collected.</p></li>
+        <li><h3>Structure and document review</h3><p>Engineering checks the enclosure concept against the stated environment and process.</p></li>
+        <li><h3>Sample or drawing approval</h3><p>Where applicable, the agreed drawing or sample is approved before volume work.</p></li>
+        <li><h3>Production assessment</h3><p>Timing is assessed from quantity, process and available capacity.</p></li>
+      </ol>
+      <figure class="sn-fttx-products__figure">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-engineering-cad.webp" alt="Engineer reviewing a 2D engineering drawing" width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption>2D drawing review at the Cixi, Ningbo engineering base. The scene shows an engineering review step, not a dedicated FTTX production line.</figcaption>
+      </figure>
+      <p class="sn-fttx-products__note">OEM branding support covers the request; the marking method, position, color and artwork approval are confirmed per project. A complete RFQ typically receives initial engineering feedback in about 24 hours. No uniform sample, MOQ or volume lead time is promised here.</p>
+      <div class="sn-fttx-products__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit OEM Enclosure Requirements</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="project-inquiry" aria-labelledby="fttx-inquiry-title">
+    <div class="sn-container">
+      <div class="sn-fttx-products__intro">
+        <h2 id="fttx-inquiry-title">Prepare an FTTX Project Quote without Over-Specifying</h2>
+        <p>Send what the project already knows and mark the rest as to confirm. Guessing a rating or capacity in the inquiry creates a mismatch later, so an explicit open field is more useful than a filled-in assumption.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="fttx-inquiry-caption">
+        <table class="sn-table sn-fttx-products__rfq-table">
+          <caption id="fttx-inquiry-caption">Project inquiry fields for an FTTX quote.</caption>
+          <thead><tr><th scope="col">Field</th><th scope="col">What to send</th><th scope="col">If unknown</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Product category</th><td data-label="What to send">Distribution box, optical distribution cabinet or splice closure</td><td data-label="If unknown">Describe the installation instead</td></tr>
+            <tr><th scope="row">Quantity</th><td data-label="What to send">Units per category and per project phase</td><td data-label="If unknown">Give the expected range</td></tr>
+            <tr><th scope="row">Target IP rating</th><td data-label="What to send">The protection level the site requires</td><td data-label="If unknown">Mark as to confirm</td></tr>
+            <tr><th scope="row">Size / capacity need</th><td data-label="What to send">Available space and port or splice count target</td><td data-label="If unknown">Send a site photo or sketch</td></tr>
+            <tr><th scope="row">Installation environment</th><td data-label="What to send">Indoor or outdoor, mounting method, exposure</td><td data-label="If unknown">Describe the site conditions</td></tr>
+            <tr><th scope="row">Material / finish</th><td data-label="What to send">Material preference, color and coating expectation</td><td data-label="If unknown">Leave to engineering review</td></tr>
+            <tr><th scope="row">OEM marking</th><td data-label="What to send">Logo file, label content and position</td><td data-label="If unknown">Mark as later phase</td></tr>
+            <tr><th scope="row">Target date</th><td data-label="What to send">Required-on-site date or project stage</td><td data-label="If unknown">Give the project milestone</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-fttx-products__attach">
+        <h3>Attachments that shorten the review</h3>
+        <ul><li>Site photographs showing the mounting surface and access</li><li>Outline or installation drawing, including cable-entry positions</li><li>Project BOM with quantities by category</li><li>Logo or artwork file and the required label content</li><li>Any test or evidence requirement already agreed with the end user</li></ul>
+      </div>
+      <p class="sn-fttx-products__note">Production timing is assessed from structure, quantity, material, process and capacity; no fixed delivery date is published. <a href="/solutions/fttx/">Review the FTTX deployment scenarios</a> and use the <a href="/resources/rfq-guide/">RFQ guide</a> for the general document checklist.</p>
+      <div class="sn-fttx-products__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request FTTX Quote</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="fttx-faq" aria-labelledby="fttx-faq-title">
+    <div class="sn-container">
+      <div class="sn-fttx-products__intro">
+        <h2 id="fttx-faq-title">FTTX Distribution and Closure Questions</h2>
+        <p>Five questions that come up before an FTTX quote: the IP boundary, OEM branding, outdoor finish, custom size and the evidence needed for a specific configuration.</p>
+      </div>
+      <div class="sn-fttx-products__faq">
+        <details open><summary>What IP rating can SONNE FTTX products achieve?</summary><p>IP68 is a published capability for splice-closure products, not a blanket rating for every FTTX box or cabinet. Other ratings must be confirmed against the exact enclosure design, cable entries and use conditions. Identify the product type and target rating in your RFQ, then request the applicable test evidence for that configuration.</p></details>
+        <details><summary>Can FTTX enclosures be customized with OEM branding?</summary><p>Yes, custom enclosures and OEM branding are supported for FTTX projects. Submit dimensions, installation interfaces, internal layout needs, cable entries, quantities and logo artwork. Branding method, color, placement and production requirements are confirmed per project, along with any drawing or sample approval needed before volume production.</p></details>
+        <details><summary>How are outdoor corrosion and finish requirements handled?</summary><p>Specify the installation environment, material preference, coating or color requirement, exposure conditions and expected maintenance constraints. SONNE has outdoor material and coating capabilities, but no universal corrosion duration, salt-spray rating or environmental compliance should be assumed. The applicable finish and any required evidence are confirmed for the exact project.</p></details>
+        <details><summary>Can I request a custom FTTX box size or mounting arrangement?</summary><p>Yes, custom enclosure requirements can be reviewed. Provide the available space, mounting method, cable-entry locations, internal distribution or splicing needs, target protection level and estimated quantity. Feasibility and production timing depend on the final structure, materials, process and capacity, so they are assessed after the requirement package is complete.</p></details>
+        <details><summary>What should I include when requesting IP test evidence?</summary><p>Identify the exact product category, model or drawing, target IP rating, cable-entry configuration and intended outdoor installation. Ask for evidence applicable to that configuration rather than a generic certificate. If the design is customized, confirm whether existing evidence remains applicable or whether additional project-specific verification is required.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="fttx-cta" aria-labelledby="fttx-cta-title">
+    <div class="sn-container sn-cta sn-fttx-products__cta">
+      <div>
+        <h2 id="fttx-cta-title">Send Your FTTX Requirements or Request the Applicable IP Evidence</h2>
+        <p>The primary path accepts a project BOM, drawings, quantities and outdoor conditions, and returns a project-level product and delivery assessment. The secondary path collects only the product category, target IP and structure information needed to match existing test documents.</p>
+        <p>Start with three inputs if the package is incomplete: product category, quantity and installation environment. <a href="/resources/rfq-guide/">The RFQ guide</a> explains what else helps.</p>
+        <p class="sn-fttx-products__fine">Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>. A complete RFQ typically receives initial engineering feedback in about 24 hours.</p>
+      </div>
+      <div class="sn-fttx-products__cta-card">
+        <div class="sn-fttx-products__field-grid">
+          <div class="sn-fttx-products__field"><b>Already have a BOM</b><p>Project BOM, drawings and quantities for a project-level assessment.</p><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request FTTX Quote</a></div>
+          <div class="sn-fttx-products__field"><b>Need IP evidence</b><p>Category, target rating and cable-entry information for document matching.</p><a class="sn-btn sn-btn--secondary" href="/contact/">Ask for IP Test Evidence</a></div>
+        </div>
+        <p class="sn-fttx-products__fine">IP68 applies to splice-closure products; other categories are confirmed against the exact structure.</p>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/fttx-fiber-distribution/#product",
+        "name": "FTTX Fiber Distribution Boxes & Optical Enclosures",
+        "url": "https://rf-sonne.com/products/fttx-fiber-distribution/",
+        "description": "Fiber distribution boxes, optical distribution cabinets and splice closures for FTTH projects, with IP68 published for splice-closure products, outdoor material and coating review, and custom enclosure and OEM branding support.",
+        "category": "FTTX fiber distribution enclosures",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/market-ftth.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/fttx-fiber-distribution/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"FTTX Fiber Distribution","item":"https://rf-sonne.com/products/fttx-fiber-distribution/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rf-sonne.com/products/fttx-fiber-distribution/#faq",
+        "mainEntity": [
+          {"@type":"Question","name":"What IP rating can SONNE FTTX products achieve?","acceptedAnswer":{"@type":"Answer","text":"IP68 is a published capability for splice-closure products, not a blanket rating for every FTTX box or cabinet. Other ratings must be confirmed against the exact enclosure design, cable entries and use conditions. Identify the product type and target rating in your RFQ, then request the applicable test evidence for that configuration."}},
+          {"@type":"Question","name":"Can FTTX enclosures be customized with OEM branding?","acceptedAnswer":{"@type":"Answer","text":"Yes, custom enclosures and OEM branding are supported for FTTX projects. Submit dimensions, installation interfaces, internal layout needs, cable entries, quantities and logo artwork. Branding method, color, placement and production requirements are confirmed per project, along with any drawing or sample approval needed before volume production."}},
+          {"@type":"Question","name":"How are outdoor corrosion and finish requirements handled?","acceptedAnswer":{"@type":"Answer","text":"Specify the installation environment, material preference, coating or color requirement, exposure conditions and expected maintenance constraints. SONNE has outdoor material and coating capabilities, but no universal corrosion duration, salt-spray rating or environmental compliance should be assumed. The applicable finish and any required evidence are confirmed for the exact project."}},
+          {"@type":"Question","name":"Can I request a custom FTTX box size or mounting arrangement?","acceptedAnswer":{"@type":"Answer","text":"Yes, custom enclosure requirements can be reviewed. Provide the available space, mounting method, cable-entry locations, internal distribution or splicing needs, target protection level and estimated quantity. Feasibility and production timing depend on the final structure, materials, process and capacity, so they are assessed after the requirement package is complete."}},
+          {"@type":"Question","name":"What should I include when requesting IP test evidence?","acceptedAnswer":{"@type":"Answer","text":"Identify the exact product category, model or drawing, target IP rating, cable-entry configuration and intended outdoor installation. Ask for evidence applicable to that configuration rather than a generic certificate. If the design is customized, confirm whether existing evidence remains applicable or whether additional project-specific verification is required."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

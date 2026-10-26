@@ -1,0 +1,350 @@
+<!-- wp:html -->
+<div class="sn-datasheets sn-legacy-record">
+  <style>
+    .sn-datasheets { color: var(--sn-text); }
+    .sn-datasheets *, .sn-datasheets *::before, .sn-datasheets *::after { box-sizing: border-box; }
+    .sn-datasheets h2, .sn-datasheets h3, .sn-datasheets p, .sn-datasheets ul, .sn-datasheets ol, .sn-datasheets dl, .sn-datasheets dd, .sn-datasheets figure { margin-top: 0; }
+    .sn-datasheets h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-datasheets h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-datasheets p, .sn-datasheets li, .sn-datasheets dd { line-height: 1.7; }
+    .sn-datasheets a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-datasheets img { display: block; max-width: 100%; height: auto; }
+    .sn-datasheets figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-datasheets .sn-datasheets__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-datasheets .sn-datasheets__hero .sn-datasheets__eyebrow { color: var(--sn-cyan); }
+    .sn-datasheets .sn-datasheets__hero-grid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(340px, .94fr); gap: clamp(34px, 5vw, 72px); align-items: center; }
+    .sn-datasheets .sn-datasheets__hero-copy > p { margin-bottom: 18px; font-size: 1.03rem; }
+    .sn-datasheets .sn-datasheets__lookup { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0 0 22px; padding: 0; list-style: none; }
+    .sn-datasheets .sn-datasheets__lookup li { padding: 12px 14px; border: 1px solid rgba(252, 254, 255, .24); background: rgba(252, 254, 255, .04); }
+    .sn-datasheets .sn-datasheets__lookup span { display: block; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .62rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .sn-datasheets .sn-datasheets__lookup strong { display: block; margin-top: 4px; color: rgba(252, 254, 255, .9); font-size: .84rem; line-height: 1.45; }
+    .sn-datasheets .sn-datasheets__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-datasheets .sn-datasheets__hero-note { margin: 22px 0 0; color: rgba(252, 254, 255, .72); font-size: .84rem; line-height: 1.6; }
+    .sn-datasheets .sn-datasheets__hero-media { margin-bottom: 0; }
+    .sn-datasheets .sn-datasheets__hero-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-datasheets .sn-datasheets__hero figcaption { color: rgba(252, 254, 255, .62); }
+    .sn-datasheets .sn-datasheets__intro { max-width: 860px; margin-bottom: 36px; }
+    .sn-datasheets .sn-datasheets__intro > p { margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.02rem; }
+    .sn-datasheets .sn-datasheets__section-target { scroll-margin-top: 112px; }
+    .sn-datasheets caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .8rem; text-align: left; }
+    .sn-datasheets .sn-datasheets__finder { min-width: 980px; }
+    .sn-datasheets .sn-datasheets__finder tbody th { color: var(--sn-navy); }
+    .sn-datasheets .sn-datasheets__types { min-width: 940px; margin-top: 32px; }
+    .sn-datasheets .sn-datasheets__types tbody th { color: var(--sn-navy); }
+    .sn-datasheets .sn-datasheets__chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+    .sn-datasheets .sn-datasheets__chips li { padding: 6px 11px; border: 1px solid var(--sn-mid-gray); background: var(--sn-white); color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.5; }
+    .sn-datasheets .sn-datasheets__note { margin: 18px 0 0; padding: 16px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-datasheets .sn-datasheets__note p { margin-bottom: 0; }
+    .sn-datasheets .sn-datasheets__split { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 4vw, 52px); align-items: center; }
+    .sn-datasheets .sn-datasheets__split figure { margin-bottom: 0; }
+    .sn-datasheets .sn-datasheets__split img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-datasheets .sn-datasheets__prose h3:not(:first-child) { margin-top: 22px; }
+    .sn-datasheets .sn-datasheets__prose p { color: var(--sn-text-muted); }
+    .sn-datasheets .sn-datasheets__prose p:last-child { margin-bottom: 0; }
+    .sn-datasheets .sn-datasheets__steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0 0 32px; padding: 0; list-style: none; }
+    .sn-datasheets .sn-datasheets__step { padding: 24px; border: var(--sn-border); border-top: 3px solid var(--sn-cyan-dark); background: var(--sn-white); }
+    .sn-datasheets .sn-datasheets__step-index { display: block; margin-bottom: 18px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; }
+    .sn-datasheets .sn-datasheets__step p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-datasheets .sn-datasheets__request-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .95fr); gap: clamp(26px, 4vw, 48px); align-items: start; }
+    .sn-datasheets .sn-datasheets__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; border: var(--sn-border); background: var(--sn-white); }
+    .sn-datasheets .sn-datasheets__field { padding: 14px 16px; border-bottom: var(--sn-border); }
+    .sn-datasheets .sn-datasheets__field:nth-child(odd) { border-right: var(--sn-border); }
+    .sn-datasheets .sn-datasheets__field dt { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .64rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .sn-datasheets .sn-datasheets__field dd { margin: 4px 0 0; color: var(--sn-text-muted); font-size: .84rem; line-height: 1.55; }
+    .sn-datasheets .sn-datasheets__request-copy p { color: var(--sn-text-muted); }
+    .sn-datasheets .sn-datasheets__request-copy h3:not(:first-child) { margin-top: 22px; }
+    .sn-datasheets .sn-datasheets__verification { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(26px, 4vw, 48px); align-items: start; margin-bottom: 28px; }
+    .sn-datasheets .sn-datasheets__checklist { margin: 0; padding: 0; list-style: none; counter-reset: check; }
+    .sn-datasheets .sn-datasheets__checklist li { position: relative; padding: 14px 0 14px 40px; border-bottom: var(--sn-border); counter-increment: check; }
+    .sn-datasheets .sn-datasheets__checklist li::before { position: absolute; left: 0; top: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; content: '0' counter(check); }
+    .sn-datasheets .sn-datasheets__checklist strong { display: block; color: var(--sn-navy); font-size: .92rem; }
+    .sn-datasheets .sn-datasheets__checklist span { color: var(--sn-text-muted); font-size: .82rem; line-height: 1.55; }
+    .sn-datasheets .sn-datasheets__doc { border: var(--sn-border); background: var(--sn-white); box-shadow: var(--sn-shadow); }
+    .sn-datasheets .sn-datasheets__doc-head { padding: 14px 18px; background: var(--sn-navy); color: var(--sn-white); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; }
+    .sn-datasheets .sn-datasheets__doc dl { margin: 0; }
+    .sn-datasheets .sn-datasheets__doc-row { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 10px; padding: 12px 18px; border-bottom: var(--sn-border); }
+    .sn-datasheets .sn-datasheets__doc-row:last-child { border-bottom: 0; }
+    .sn-datasheets .sn-datasheets__doc-row dt { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .66rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .sn-datasheets .sn-datasheets__doc-row dd { margin: 0; color: var(--sn-text-muted); font-size: .82rem; }
+    .sn-datasheets .sn-datasheets__faq { max-width: 920px; }
+    .sn-datasheets .sn-datasheets__faq details { border-bottom: var(--sn-border); }
+    .sn-datasheets .sn-datasheets__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; list-style: none; cursor: pointer; }
+    .sn-datasheets .sn-datasheets__faq summary::-webkit-details-marker { display: none; }
+    .sn-datasheets .sn-datasheets__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-datasheets .sn-datasheets__faq details[open] summary::after { content: '−'; }
+    .sn-datasheets .sn-datasheets__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-datasheets .sn-datasheets__faq details a { font-weight: 700; }
+    .sn-datasheets .sn-datasheets__final h2, .sn-datasheets .sn-datasheets__final h3 { color: var(--sn-white); }
+    .sn-datasheets .sn-datasheets__final p, .sn-datasheets .sn-datasheets__final li { color: rgba(252, 254, 255, .8); }
+    .sn-datasheets .sn-datasheets__final .sn-datasheets__eyebrow { color: var(--sn-cyan); }
+    .sn-datasheets .sn-datasheets__cta-grid { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(320px, .98fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+    .sn-datasheets .sn-datasheets__paths { display: grid; gap: 14px; }
+    .sn-datasheets .sn-datasheets__path { padding: 22px; border: 1px solid rgba(252, 254, 255, .22); }
+    .sn-datasheets .sn-datasheets__path h3 { margin-bottom: 6px; font-size: 1rem; }
+    .sn-datasheets .sn-datasheets__path p { margin-bottom: 12px; font-size: .86rem; }
+    .sn-datasheets .sn-datasheets__final a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-datasheets .sn-datasheets__fine-print { margin-top: 18px; font-size: .82rem; }
+    .sn-datasheets .sn-datasheets__text-link { display: inline-flex; min-height: 44px; align-items: center; font-weight: 700; }
+    @media (max-width: 1020px) {
+      .sn-datasheets .sn-datasheets__hero-grid, .sn-datasheets .sn-datasheets__cta-grid { grid-template-columns: 1fr; }
+      .sn-datasheets .sn-datasheets__hero-media { max-width: 760px; }
+    }
+    @media (max-width: 900px) {
+      .sn-datasheets .sn-datasheets__split, .sn-datasheets .sn-datasheets__request-grid, .sn-datasheets .sn-datasheets__verification { grid-template-columns: 1fr; }
+      .sn-datasheets .sn-datasheets__split figure { max-width: 720px; }
+      .sn-datasheets .sn-datasheets__steps { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .sn-datasheets .sn-datasheets__lookup { grid-template-columns: 1fr; }
+      .sn-datasheets .sn-datasheets__actions .sn-btn { width: 100%; }
+      .sn-datasheets .sn-datasheets__fields { grid-template-columns: 1fr; }
+      .sn-datasheets .sn-datasheets__field:nth-child(odd) { border-right: 0; }
+      .sn-datasheets .sn-datasheets__doc-row { grid-template-columns: 1fr; gap: 3px; }
+      .sn-datasheets .sn-datasheets__faq details p { padding-right: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sn-datasheets *, .sn-datasheets *::before, .sn-datasheets *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+    @media print {
+      .sn-datasheets .sn-datasheets__faq details:not([open]) > p { display: block !important; }
+      .sn-datasheets .sn-datasheets__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-datasheets__hero" aria-labelledby="datasheets-title">
+    <div class="sn-container sn-datasheets__hero-grid">
+      <div class="sn-datasheets__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/resources">Resources</a></li><li aria-current="page">Datasheets</li></ol></nav>
+        <span class="sn-datasheets__eyebrow">Datasheets · Curves · 2D/3D drawings · S-parameters · Test reports</span>
+        <h1 id="datasheets-title">RF Datasheets and Engineering Documents</h1>
+        <p>Use this page to find the document that answers your design question, not the one that only describes a product family. Datasheets, performance curves, mechanical drawings, S-parameter files and sample test reports are confirmed against the model and revision before they are sent.</p>
+        <ul class="sn-datasheets__lookup" aria-label="Document lookup fields">
+          <li><span>Product line</span><strong>Filters, waveguide, combiners, enclosures</strong></li>
+          <li><span>Model</span><strong>Part number or the closest application</strong></li>
+          <li><span>Document type</span><strong>Datasheet, drawing, S-parameter, report</strong></li>
+        </ul>
+        <p class="sn-datasheets__hero-note">This page does not host a public file library. A request is checked against the specific model and revision, and the reply confirms which document can be shared for your project.</p>
+        <div class="sn-datasheets__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Engineering Documents</a><a class="sn-btn sn-btn--secondary" href="#document-finder">Browse the Document Finder</a></div>
+      </div>
+      <figure class="sn-datasheets__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-rf-testing-1.webp" alt="Technician testing an RF filter with bench instruments" width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Bench testing at SONNE. A photograph shows the work environment, not the measured result of a specific document.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section sn-datasheets__section-target" id="document-finder" aria-labelledby="datasheets-finder-title">
+    <div class="sn-container">
+      <div class="sn-datasheets__intro">
+        <h2 id="datasheets-finder-title">Find Datasheets by Product Line and Document Type</h2>
+        <p>Start with the product line, then name the model or part number and the document type in your request. The matrix shows what a document set usually covers; the exact files are confirmed for the model you are reviewing.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="datasheets-finder-caption">
+        <table class="sn-table sn-datasheets__finder">
+          <caption id="datasheets-finder-caption">Document set by product line. No file is offered as a direct download from this page; availability is confirmed per model and revision.</caption>
+          <thead><tr><th scope="col">Product line</th><th scope="col">Typical document set</th><th scope="col">Frequency or specification summary</th><th scope="col">Availability</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><a href="/products/rf-microwave-filters">RF filters</a></th><td data-label="Typical document set">Datasheet, performance curves, S-parameter file</td><td data-label="Frequency or specification summary">Core production DC–40 GHz; selected custom projects to 110 GHz</td><td data-label="Availability">Request by model</td></tr>
+            <tr><th scope="row"><a href="/products/waveguide-components">Waveguide and microwave</a></th><td data-label="Typical document set">Datasheet, 2D drawing, flange and interface data</td><td data-label="Frequency or specification summary">Waveguide size, flange type, polarization and band</td><td data-label="Availability">Request by model</td></tr>
+            <tr><th scope="row"><a href="/products/rf-combiners">Combiners and duplexers</a></th><td data-label="Typical document set">Datasheet, curves, 2D or 3D drawing</td><td data-label="Frequency or specification summary">Ports, isolation, insertion loss and power per port</td><td data-label="Availability">Request by model</td></tr>
+            <tr><th scope="row"><a href="/products/rf-combiners">Multiplexers and band plans</a></th><td data-label="Typical document set">Datasheet, band-plan layout, mechanical drawing</td><td data-label="Frequency or specification summary">Band allocation, port layout and combining path</td><td data-label="Availability">Request by model</td></tr>
+            <tr><th scope="row"><a href="/products/base-station-rf">Base station RF and IBS/DAS</a></th><td data-label="Typical document set">Datasheet, curves, sample test report</td><td data-label="Frequency or specification summary">Line-specific scope, power and PIM conditions</td><td data-label="Availability">Request by model</td></tr>
+            <tr><th scope="row"><a href="/products/precision-enclosures">Precision enclosures</a></th><td data-label="Typical document set">2D drawing, 3D CAD, material and finish data</td><td data-label="Frequency or specification summary">GD&amp;T, sealing surface, coating and mounting</td><td data-label="Availability">Request by model</td></tr>
+            <tr><th scope="row"><a href="/products/rf-accessories">RF accessories</a></th><td data-label="Typical document set">Datasheet, drawing where applicable</td><td data-label="Frequency or specification summary">Interface type, mechanical data and test conditions</td><td data-label="Availability">Request by model</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-datasheets__note"><strong>Document types:</strong> datasheet, performance curves, 2D drawing, 3D CAD, S-parameter file and sample test report. Name the type you need so the request is matched to the correct file rather than a general product page.</p>
+      <ul class="sn-datasheets__chips" aria-label="Document types available by request"><li>Datasheet</li><li>Performance curves</li><li>2D drawing</li><li>3D CAD</li><li>S-parameter file</li><li>Sample test report</li></ul>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="datasheets-types-title">
+    <div class="sn-container">
+      <div class="sn-datasheets__intro">
+        <h2 id="datasheets-types-title">Choose the Right Datasheet, Drawing or Test Report</h2>
+        <p>Each document type answers a different engineering question. Requesting the wrong one usually leads to another exchange before a design review can proceed.</p>
+      </div>
+      <div class="sn-datasheets__split">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="lazy" decoding="async">
+          <figcaption>RF bandpass filter. Product imagery identifies the category; the applicable document set is confirmed by model.</figcaption>
+        </figure>
+        <div class="sn-datasheets__prose">
+          <h3>Rated limits versus measured behavior</h3>
+          <p>A datasheet states the rated electrical and mechanical limits for a model. Curves show how the part behaves across the band under stated conditions. Use both when a design margin depends on more than a single worst-case number.</p>
+          <h3>Drawings answer fit, not performance</h3>
+          <p>A 2D drawing checks dimensions, tolerances and interfaces. A 3D CAD model checks the envelope, mounting and keep-out space in your assembly. Neither one replaces the RF data set.</p>
+          <h3>Sample reports explain the evidence format</h3>
+          <p>A sample test report shows the report structure and the fields a test can provide. It is not the measured result for your own parts, and it should not be used as a performance reference for a different model.</p>
+        </div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="datasheets-types-caption">
+        <table class="sn-table sn-datasheets__types">
+          <caption id="datasheets-types-caption">Document type, the question it answers and the inputs needed for a useful request.</caption>
+          <thead><tr><th scope="col">Document type</th><th scope="col">Engineering question</th><th scope="col">Fields to check</th><th scope="col">What to include in the request</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Datasheet</th><td data-label="Engineering question">What are the rated limits for this model?</td><td data-label="Fields to check">Band, loss, isolation, power, connectors and dimensions</td><td data-label="What to include in the request">Model or part number and the target band</td></tr>
+            <tr><th scope="row">Performance curves</th><td data-label="Engineering question">How does the part behave across the band?</td><td data-label="Fields to check">Band edges, measurement conditions and reference plane</td><td data-label="What to include in the request">Model, parameters of interest and required band</td></tr>
+            <tr><th scope="row">2D drawing</th><td data-label="Engineering question">Will it fit and mate with the assembly?</td><td data-label="Fields to check">Dimensions, tolerances, mounting holes and interfaces</td><td data-label="What to include in the request">Model and the drawing format you can accept</td></tr>
+            <tr><th scope="row">3D CAD</th><td data-label="Engineering question">Does it fit the mechanical envelope?</td><td data-label="Fields to check">Envelope, keep-out space, mounting and connector access</td><td data-label="What to include in the request">Model, CAD format and the assembly context</td></tr>
+            <tr><th scope="row">S-parameter file</th><td data-label="Engineering question">Can I simulate matching and system response?</td><td data-label="Fields to check">Ports, reference plane, frequency range and file format</td><td data-label="What to include in the request">Model, port definitions and the frequency range</td></tr>
+            <tr><th scope="row">Sample test report</th><td data-label="Engineering question">What does the test evidence look like?</td><td data-label="Fields to check">Report fields, test conditions and sample context</td><td data-label="What to include in the request">Model, report type and the parameter you need to see</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="datasheets-request-title">
+    <div class="sn-container">
+      <div class="sn-datasheets__intro">
+        <h2 id="datasheets-request-title">Request S-Parameter Files and Controlled Drawings</h2>
+        <p>If a document is not published for direct use, describe the model and the design purpose. Engineering checks what exists for that revision before sharing a controlled file.</p>
+      </div>
+      <ol class="sn-datasheets__steps" aria-label="Document request process">
+        <li class="sn-datasheets__step"><span class="sn-datasheets__step-index">STEP 01</span><h3>Identify the model</h3><p>Give the product line, model or part number, and the application if the model is not yet fixed.</p></li>
+        <li class="sn-datasheets__step"><span class="sn-datasheets__step-index">STEP 02</span><h3>Confirm use and version</h3><p>State the document type, target band, format and the design review it supports so the correct revision can be checked.</p></li>
+        <li class="sn-datasheets__step"><span class="sn-datasheets__step-index">STEP 03</span><h3>Engineering reply</h3><p>The team confirms availability and the applicable revision, then replies through the agreed channel.</p></li>
+      </ol>
+      <div class="sn-datasheets__request-grid">
+        <div class="sn-datasheets__request-copy">
+          <h3>What a request should contain</h3>
+          <p>Work contact details and project context let engineering match the file to the right model and use. Unknown fields can be marked to be confirmed; they do not block the request.</p>
+          <h3>Confidentiality before upload</h3>
+          <p>Select the confidentiality discussion option if the request involves sensitive drawings or system information. That starts a project-specific conversation; it does not accept an NDA or define its scope automatically.</p>
+          <h3>When the document does not exist</h3>
+          <p>Some custom parts have no standard datasheet. In that case the request moves into an engineering review, where the drawing, specification or application description becomes the basis for the document set.</p>
+          <p><a class="sn-datasheets__text-link" href="/resources/rfq-guide/">Prepare the project inputs <span aria-hidden="true">&nbsp;→</span></a></p>
+        </div>
+        <div>
+          <h3>Request field preview</h3>
+          <dl class="sn-datasheets__fields">
+            <div class="sn-datasheets__field"><dt>Name</dt><dd>Your contact name</dd></div>
+            <div class="sn-datasheets__field"><dt>Company</dt><dd>Organization and role</dd></div>
+            <div class="sn-datasheets__field"><dt>Work email</dt><dd>Reply channel</dd></div>
+            <div class="sn-datasheets__field"><dt>Product line</dt><dd>Filter, waveguide, combiner, enclosure</dd></div>
+            <div class="sn-datasheets__field"><dt>Model or part number</dt><dd>Or the closest application</dd></div>
+            <div class="sn-datasheets__field"><dt>Document type</dt><dd>Datasheet, drawing, S-parameter, report</dd></div>
+            <div class="sn-datasheets__field"><dt>Target band</dt><dd>Frequency range for the document</dd></div>
+            <div class="sn-datasheets__field"><dt>Project use</dt><dd>Design review, simulation or qualification</dd></div>
+            <div class="sn-datasheets__field"><dt>Format</dt><dd>2D PDF, 3D STEP or IGES, Touchstone</dd></div>
+            <div class="sn-datasheets__field"><dt>Confidentiality</dt><dd>Discussion requested: yes or no</dd></div>
+          </dl>
+          <div class="sn-datasheets__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Documents</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="datasheets-revision-title">
+    <div class="sn-container">
+      <div class="sn-datasheets__intro">
+        <h2 id="datasheets-revision-title">Check Document Revision and Test Context Before Use</h2>
+        <p>A file is only useful for a design review when the model, revision, date, band and test conditions match the part you are evaluating. Check all five before a value enters your design.</p>
+      </div>
+      <div class="sn-datasheets__verification">
+        <ol class="sn-datasheets__checklist" aria-label="Document verification checklist">
+          <li><strong>Model or part number</strong><span>Confirm the document names the exact model, not only the product family.</span></li>
+          <li><strong>Document revision</strong><span>Match the revision to the file you were sent and to the project record.</span></li>
+          <li><strong>Date</strong><span>Check the issue or revision date; do not assume the newest file without a version reference.</span></li>
+          <li><strong>Frequency range and ports</strong><span>Confirm the band, port names and reference plane used in the data.</span></li>
+          <li><strong>Test or measurement conditions</strong><span>Read the setup, calibration and sample context before comparing values.</span></li>
+        </ol>
+        <div class="sn-datasheets__doc">
+          <div class="sn-datasheets__doc-head">Document header · five fields to verify</div>
+          <dl>
+            <div class="sn-datasheets__doc-row"><dt>Model</dt><dd>Part number on the drawing or datasheet</dd></div>
+            <div class="sn-datasheets__doc-row"><dt>Revision</dt><dd>Revision letter or number, not the file name alone</dd></div>
+            <div class="sn-datasheets__doc-row"><dt>Date</dt><dd>Issue or revision date</dd></div>
+            <div class="sn-datasheets__doc-row"><dt>Frequency range</dt><dd>Band and port definitions used for the data</dd></div>
+            <div class="sn-datasheets__doc-row"><dt>Test conditions</dt><dd>Setup, calibration and sample scope</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="sn-datasheets__note"><strong>Sample versus project evidence:</strong> a sample report demonstrates fields and reading, not your own result. A project report must relate to the actual sample or production batch and the agreed test scope. When the revision cannot be confirmed, treat the document as unverified rather than current.</p>
+      <p><a class="sn-datasheets__text-link" href="/engineering/testing-quality/">Read how VNA, PIM, reliability and matrix testing are handled <span aria-hidden="true">&nbsp;→</span></a></p>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="datasheets-faq-title">
+    <div class="sn-container">
+      <div class="sn-datasheets__intro">
+        <h2 id="datasheets-faq-title">Datasheet and Drawing Request FAQs</h2>
+        <p>What can be requested, what the files prove and how confidentiality is handled for a specific project.</p>
+      </div>
+      <div class="sn-datasheets__faq">
+        <details>
+          <summary>Can I request S-parameter files for a SONNE component?</summary>
+          <p>Yes. Submit the product line, model or part number, required frequency range and port details through the document request form. SONNE will check whether a suitable file is available for that specific component and confirm the next step. Availability and any confidentiality requirements are reviewed per project rather than <a href="/contact/">assumed for every product.</a></p>
+        </details>
+        <details>
+          <summary>Can I request 2D and 3D drawings for a custom part?</summary>
+          <p>You can request 2D drawings or 3D CAD for a custom part by identifying the product, drawing format and intended design use. Include the mechanical envelope, connector or interface requirements and any known revision. The engineering team will first confirm the applicable document version and whether the requested file can be <a href="/contact/">shared for your project.</a></p>
+        </details>
+        <details>
+          <summary>Are sample test reports the results for my own parts?</summary>
+          <p>No. A sample test report shows the document structure and the kind of evidence a test can provide; it is not evidence for your own parts. Results for a project must relate to the actual sample or production batch and the agreed test scope. Ask for the relevant report context <a href="/engineering/testing-quality/">before using any values in a design review.</a></p>
+        </details>
+        <details>
+          <summary>What if I do not know the exact model number?</summary>
+          <p>You can still start with the product line, application, frequency range and the document you need. Add connector, mechanical or performance requirements when known, and mark uncertain fields as unknown. SONNE can use that information to identify whether a relevant standard document exists or whether your requirement needs <a href="/request-a-quote/">a custom engineering review.</a></p>
+        </details>
+        <details>
+          <summary>Do drawing requests require an NDA?</summary>
+          <p>Confidentiality requirements depend on the document and project. Select the confidentiality discussion option in the request form and describe what you intend to share or receive before uploading sensitive material. SONNE will confirm the appropriate arrangement for that specific request; the website does not imply a universal NDA scope or automatic acceptance <a href="/contact/">for every drawing exchange.</a></p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-datasheets__final" aria-labelledby="datasheets-final-title">
+    <div class="sn-container sn-cta">
+      <div class="sn-datasheets__cta-grid">
+        <div>
+          <h2 id="datasheets-final-title">Tell Us Which Document Your Project Needs</h2>
+          <p>You do not need a complete RFQ to ask for a document. Send the product line, model or application, the document type and how you intend to use it. If the model is unknown, describe the application and the frequency range instead.</p>
+          <p>Email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> if you prefer to start the request outside the form.</p>
+          <p class="sn-datasheets__fine-print">A document request is checked against the model and revision. Not every custom file can be shared, and availability is confirmed for the specific project.</p>
+        </div>
+        <div class="sn-datasheets__paths">
+          <div class="sn-datasheets__path">
+            <h3>Request a specific document</h3>
+            <p>Send the model, document type and design purpose. Use this path when the part is already identified.</p>
+            <a class="sn-btn sn-btn--secondary" href="/contact/">Request a Document</a>
+          </div>
+          <div class="sn-datasheets__path">
+            <h3>Start a full RFQ</h3>
+            <p>Include the document need with the specification so engineering can review the file and the requirement together.</p>
+            <a class="sn-btn sn-btn--primary" href="/request-a-quote/">Start an RFQ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/resources/datasheets/#webpage",
+        "name": "RF Datasheets and Engineering Documents",
+        "url": "https://rf-sonne.com/resources/datasheets/",
+        "description": "Find datasheets by product line and document type, request S-parameter files, 2D or 3D drawings and sample test reports, and verify document revisions before a design review."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/resources/datasheets/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Resources","item":"https://rf-sonne.com/resources/"},
+          {"@type":"ListItem","position":3,"name":"Datasheets","item":"https://rf-sonne.com/resources/datasheets/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

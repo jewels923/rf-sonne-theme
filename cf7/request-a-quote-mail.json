@@ -1,0 +1,41 @@
+{
+  "mail": {
+    "subject": "RFQ · [product-line] · [your-company]",
+    "sender": "SONNE RFQ <wordpress@rf-sonne.com>",
+    "body": "<h2>New RFQ submission</h2><p>A request for quote was submitted through rf-sonne.com. Reply directly to the sender using Reply-To.</p><h3>Contact</h3><p>Name: [your-name]<br>Work email: [your-email]<br>Company: [your-company]<br>Phone: [your-phone]<br>Country / region: [country]</p><h3>Project basics</h3><p>Product line: [product-line]<br>Project stage: [project-stage]<br>Sample quantity: [sample-quantity]<br>Expected volume: [expected-volume]<br>Target date: [target-date]</p><p>Application / requirement summary:<br>[application]</p><h3>Specifications</h3><h4>RF Filters</h4><p>Frequency: [filter-frequency]<br>Frequency unknown: [filter-frequency-unknown]<br>Bandwidth: [filter-bandwidth]<br>Bandwidth unknown: [filter-bandwidth-unknown]<br>Insertion loss: [filter-insertion-loss]<br>Insertion loss unknown: [filter-insertion-loss-unknown]<br>Return loss: [filter-return-loss]<br>Return loss unknown: [filter-return-loss-unknown]<br>Rejection / isolation: [filter-rejection]<br>Rejection unknown: [filter-rejection-unknown]<br>Power / PIM: [filter-power-pim]<br>Power / PIM unknown: [filter-power-pim-unknown]<br>Interface / package: [filter-interface]<br>Interface unknown: [filter-interface-unknown]</p><h4>Waveguide &amp; Microwave</h4><p>Frequency / band: [waveguide-frequency]<br>Frequency unknown: [waveguide-frequency-unknown]<br>Size / flange: [waveguide-size]<br>Size unknown: [waveguide-size-unknown]<br>Polarization: [waveguide-polarization]<br>Polarization unknown: [waveguide-polarization-unknown]<br>Ports / configuration: [waveguide-ports]<br>Ports unknown: [waveguide-ports-unknown]<br>Loss / power: [waveguide-loss-power]<br>Loss / power unknown: [waveguide-loss-power-unknown]<br>Interface: [waveguide-interface]<br>Interface unknown: [waveguide-interface-unknown]</p><h4>Combiners &amp; Base Station RF</h4><p>Band plan: [combiner-band-plan]<br>Band plan unknown: [combiner-band-plan-unknown]<br>Port count: [combiner-ports]<br>Port count unknown: [combiner-ports-unknown]<br>Isolation: [combiner-isolation]<br>Isolation unknown: [combiner-isolation-unknown]<br>PIM: [combiner-pim]<br>PIM unknown: [combiner-pim-unknown]<br>Power: [combiner-power]<br>Power unknown: [combiner-power-unknown]<br>Interface: [combiner-interface]<br>Interface unknown: [combiner-interface-unknown]</p><h4>Precision Enclosures</h4><p>Material: [enclosure-material]<br>Material unknown: [enclosure-material-unknown]<br>Dimensions: [enclosure-dimensions]<br>Dimensions unknown: [enclosure-dimensions-unknown]<br>Tolerances / GD&amp;T: [enclosure-tolerances]<br>Tolerances unknown: [enclosure-tolerances-unknown]<br>Surface finish: [enclosure-surface]<br>Surface unknown: [enclosure-surface-unknown]<br>Thermal / shielding: [enclosure-thermal]<br>Thermal unknown: [enclosure-thermal-unknown]<br>Protection target: [enclosure-protection]<br>Protection unknown: [enclosure-protection-unknown]<br>Assembly constraints: [enclosure-assembly]<br>Assembly unknown: [enclosure-assembly-unknown]</p><h4>Other / Not Sure</h4><p>[other-specifications]</p><h3>Files</h3><p>File 1: [file-1]<br>Purpose: [file-1-purpose]<br>Revision / note: [file-1-revision]</p><p>File 2: [file-2]<br>Purpose: [file-2-purpose]<br>Revision / note: [file-2-revision]</p><p>File 3: [file-3]<br>Purpose: [file-3-purpose]<br>Revision / note: [file-3-revision]</p><p>Files are linked in this email, not attached. The upload limit is 10 MB per file.</p><h3>Confidentiality</h3><p>Discussion requested before sensitive material: [confidentiality-discussion]<br>Notes: [confidentiality-notes]</p><p>This request does not accept or define an NDA. Confirm any project-specific arrangement with the sender before exchanging sensitive files.</p><h3>Consent</h3><p>[consent]</p>",
+    "recipient": "info@zhide-tec.com",
+    "additional_headers": "Reply-To: [your-email]",
+    "attachments": "",
+    "use_html": true,
+    "exclude_blank": true
+  },
+  "mail_2": {
+    "active": true,
+    "subject": "RFQ copy · [product-line] · [your-company]",
+    "sender": "SONNE RFQ <wordpress@rf-sonne.com>",
+    "body": "<h2>RFQ copy</h2><p>Name: [your-name]<br>Company: [your-company]<br>Work email: [your-email]<br>Product line: [product-line]</p><p>File 1: [file-1]</p><p>Full details were sent to the SONNE RFQ inbox.</p>",
+    "recipient": "jason@riwick.com",
+    "additional_headers": "Reply-To: [your-email]",
+    "attachments": "",
+    "use_html": true,
+    "exclude_blank": true
+  },
+  "messages": {
+    "mail_sent_ok": "Thank you. Your RFQ has been received. A complete submission typically receives initial engineering feedback in about 24 hours. This is not a formal quotation or delivery commitment.",
+    "mail_sent_ng": "The RFQ could not be sent. Please try again, or email info@zhide-tec.com with the same details.",
+    "validation_error": "One or more fields need attention. Please review the highlighted fields and submit again.",
+    "spam": "The submission was flagged as spam. Please try again, or email info@zhide-tec.com.",
+    "accept_terms": "Please confirm that SONNE may use the submitted information to review this RFQ.",
+    "invalid_required": "Please complete this required field.",
+    "invalid_too_long": "This field is too long.",
+    "invalid_too_short": "This field is too short.",
+    "invalid_date": "Please enter the date as YYYY-MM-DD.",
+    "invalid_email": "Please enter a valid work email address.",
+    "invalid_url": "Please enter a valid URL.",
+    "invalid_tel": "Please enter a valid telephone number.",
+    "upload_failed": "The file could not be uploaded. Please try again.",
+    "upload_file_type_invalid": "This file type is not accepted. Use PDF, STEP/STP, DXF, XLSX/CSV, ZIP, PNG or JPG.",
+    "upload_file_too_large": "This file is larger than 10 MB. Please compress it or send a smaller revision.",
+    "upload_failed_php_error": "The upload failed on the server. Please try again or email info@zhide-tec.com."
+  }
+}

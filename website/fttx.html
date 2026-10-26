@@ -1,0 +1,344 @@
+<!-- wp:html -->
+<div class="sn-sol-fttx sn-legacy-record">
+  <style>
+    .sn-sol-fttx { color: var(--sn-text); }
+    .sn-sol-fttx *, .sn-sol-fttx *::before, .sn-sol-fttx *::after { box-sizing: border-box; }
+    .sn-sol-fttx h2, .sn-sol-fttx h3, .sn-sol-fttx p, .sn-sol-fttx ul, .sn-sol-fttx ol, .sn-sol-fttx dl, .sn-sol-fttx dd, .sn-sol-fttx figure { margin-top: 0; }
+    .sn-sol-fttx h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-sol-fttx h3 { margin-bottom: 12px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-sol-fttx p, .sn-sol-fttx li, .sn-sol-fttx dd { line-height: 1.7; }
+    .sn-sol-fttx a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-sol-fttx img { display: block; max-width: 100%; height: auto; }
+    .sn-sol-fttx .sn-sol-fttx__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-sol-fttx .sn-sol-fttx__intro { max-width: 880px; margin-bottom: 40px; }
+    .sn-sol-fttx .sn-sol-fttx__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.05rem; }
+    .sn-sol-fttx .sn-sol-fttx__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .sn-sol-fttx .sn-sol-fttx__hero .sn-sol-fttx__eyebrow { color: var(--sn-cyan); }
+    .sn-sol-fttx .sn-sol-fttx__hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); gap: clamp(36px, 6vw, 84px); align-items: center; }
+    .sn-sol-fttx .sn-sol-fttx__hero-copy > p { max-width: 62ch; margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-sol-fttx .sn-sol-fttx__hero-notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 30px; border-top: 1px solid rgba(252, 254, 255, .2); }
+    .sn-sol-fttx .sn-sol-fttx__hero-notes div { padding: 18px 22px 0 0; }
+    .sn-sol-fttx .sn-sol-fttx__hero-notes div + div { padding-left: 22px; border-left: 1px solid rgba(252, 254, 255, .2); }
+    .sn-sol-fttx .sn-sol-fttx__hero-notes strong { display: block; margin-bottom: 4px; color: var(--sn-white); font-family: var(--sn-font-heading); font-size: 1.02rem; }
+    .sn-sol-fttx .sn-sol-fttx__hero-notes span { display: block; color: rgba(252, 254, 255, .72); font-size: .78rem; line-height: 1.5; }
+    .sn-sol-fttx .sn-sol-fttx__hero-media { margin-bottom: 0; }
+    .sn-sol-fttx .sn-sol-fttx__hero-media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .sn-sol-fttx .sn-sol-fttx__hero figcaption { color: rgba(252, 254, 255, .66); }
+    .sn-sol-fttx figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-sol-fttx .sn-sol-fttx__boundary { margin: 16px 0 0; color: rgba(252, 254, 255, .68); font-size: .8rem; }
+    .sn-sol-fttx caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-sol-fttx .sn-sol-fttx__inputs { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(250px, .45fr); gap: 26px; align-items: start; }
+    .sn-sol-fttx .sn-sol-fttx__constraints { min-width: 700px; }
+    .sn-sol-fttx .sn-sol-fttx__constraints th:first-child { width: 130px; }
+    .sn-sol-fttx .sn-sol-fttx__constraints tbody th { color: var(--sn-navy); }
+    .sn-sol-fttx .sn-sol-fttx__entry-card { padding: 24px; border: var(--sn-border); border-top: 3px solid var(--sn-cyan-dark); background: var(--sn-white); }
+    .sn-sol-fttx .sn-sol-fttx__entry-card h3 { font-size: 1.02rem; }
+    .sn-sol-fttx .sn-sol-fttx__entry-card dl { margin: 0; }
+    .sn-sol-fttx .sn-sol-fttx__entry-card dt { margin-top: 12px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .sn-sol-fttx .sn-sol-fttx__entry-card dd { margin: 2px 0 0; color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-sol-fttx .sn-sol-fttx__note { margin: 20px 0 0; padding: 18px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-sol-fttx .sn-sol-fttx__mapping { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 28px; align-items: start; }
+    .sn-sol-fttx .sn-sol-fttx__function-table { min-width: 760px; }
+    .sn-sol-fttx .sn-sol-fttx__function-table tbody th { color: var(--sn-navy); }
+    .sn-sol-fttx .sn-sol-fttx__cabinet { margin-bottom: 0; padding: 14px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-fttx .sn-sol-fttx__cabinet img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: var(--sn-light-gray); }
+    .sn-sol-fttx .sn-sol-fttx__cabinet figcaption { margin-top: 10px; }
+    .sn-sol-fttx .sn-sol-fttx__matrix { min-width: 1180px; }
+    .sn-sol-fttx .sn-sol-fttx__matrix th:first-child { width: 150px; }
+    .sn-sol-fttx .sn-sol-fttx__matrix thead th { vertical-align: bottom; }
+    .sn-sol-fttx .sn-sol-fttx__matrix tbody th { color: var(--sn-navy); }
+    .sn-sol-fttx .sn-sol-fttx__views { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
+    .sn-sol-fttx .sn-sol-fttx__views div { padding: 22px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-fttx .sn-sol-fttx__views h3 { font-size: .98rem; }
+    .sn-sol-fttx .sn-sol-fttx__views ul { margin: 0; padding-left: 18px; }
+    .sn-sol-fttx .sn-sol-fttx__views li { color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-sol-fttx .sn-sol-fttx__evidence { min-width: 1080px; }
+    .sn-sol-fttx .sn-sol-fttx__evidence tbody th { color: var(--sn-navy); }
+    .sn-sol-fttx .sn-sol-fttx__evidence td { font-size: .86rem; }
+    .sn-sol-fttx .sn-sol-fttx__flow { margin: 0 0 32px; padding: 0; list-style: none; counter-reset: fttx-step; }
+    .sn-sol-fttx .sn-sol-fttx__flow li { position: relative; margin-left: 24px; padding: 0 0 28px 62px; border-left: 1px solid var(--sn-mid-gray); counter-increment: fttx-step; }
+    .sn-sol-fttx .sn-sol-fttx__flow li:last-child { padding-bottom: 0; border-left-color: transparent; }
+    .sn-sol-fttx .sn-sol-fttx__flow li::before { position: absolute; top: 0; left: -24px; display: grid; width: 48px; height: 48px; place-items: center; border-radius: 50%; background: var(--sn-navy); color: var(--sn-white); font-family: var(--sn-font-mono); font-size: .78rem; font-weight: 700; content: counter(fttx-step, decimal-leading-zero); }
+    .sn-sol-fttx .sn-sol-fttx__flow h3 { margin: 10px 0 6px; font-size: 1.02rem; }
+    .sn-sol-fttx .sn-sol-fttx__flow p { margin-bottom: 0; max-width: 70ch; color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-sol-fttx .sn-sol-fttx__shopfloor { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 26px; }
+    .sn-sol-fttx .sn-sol-fttx__shopfloor figure { margin-bottom: 0; }
+    .sn-sol-fttx .sn-sol-fttx__shopfloor img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-sol-fttx .sn-sol-fttx__oem { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .sn-sol-fttx .sn-sol-fttx__oem div { padding: 22px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-fttx .sn-sol-fttx__oem h3 { font-size: 1rem; }
+    .sn-sol-fttx .sn-sol-fttx__oem ul { margin: 0; padding-left: 18px; }
+    .sn-sol-fttx .sn-sol-fttx__oem li { color: var(--sn-text-muted); font-size: .85rem; }
+    .sn-sol-fttx .sn-sol-fttx__faq { max-width: 920px; }
+    .sn-sol-fttx .sn-sol-fttx__faq details { border-bottom: var(--sn-border); }
+    .sn-sol-fttx .sn-sol-fttx__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.08rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-sol-fttx .sn-sol-fttx__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-sol-fttx .sn-sol-fttx__faq details[open] summary::after { content: '−'; }
+    .sn-sol-fttx .sn-sol-fttx__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-sol-fttx .sn-sol-fttx__cta-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); }
+    .sn-sol-fttx .sn-sol-fttx__cta h2, .sn-sol-fttx .sn-sol-fttx__cta h3 { color: var(--sn-white); }
+    .sn-sol-fttx .sn-sol-fttx__cta p, .sn-sol-fttx .sn-sol-fttx__cta li { color: rgba(252, 254, 255, .8); }
+    .sn-sol-fttx .sn-sol-fttx__cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-sol-fttx .sn-sol-fttx__panel { padding: clamp(24px, 4vw, 34px); border: 1px solid rgba(252, 254, 255, .22); }
+    .sn-sol-fttx .sn-sol-fttx__panel ul { margin: 0 0 18px; padding-left: 18px; }
+    .sn-sol-fttx .sn-sol-fttx__panel li { font-size: .85rem; }
+    .sn-sol-fttx .sn-sol-fttx__panel p:last-child { margin-bottom: 0; }
+    .sn-sol-fttx .sn-sol-fttx__fine-print { margin: 18px 0 0; color: rgba(252, 254, 255, .66) !important; font-size: .8rem; }
+    @media (max-width: 1080px) {
+      .sn-sol-fttx .sn-sol-fttx__inputs, .sn-sol-fttx .sn-sol-fttx__mapping { grid-template-columns: 1fr; }
+      .sn-sol-fttx .sn-sol-fttx__entry-card { max-width: 520px; }
+      .sn-sol-fttx .sn-sol-fttx__cabinet { max-width: 340px; }
+      .sn-sol-fttx .sn-sol-fttx__views { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .sn-sol-fttx .sn-sol-fttx__hero-grid, .sn-sol-fttx .sn-sol-fttx__cta-grid, .sn-sol-fttx .sn-sol-fttx__shopfloor { grid-template-columns: 1fr; }
+      .sn-sol-fttx .sn-sol-fttx__hero-media { max-width: 620px; }
+    }
+    @media (max-width: 640px) {
+      .sn-sol-fttx .sn-sol-fttx__hero-notes, .sn-sol-fttx .sn-sol-fttx__views, .sn-sol-fttx .sn-sol-fttx__oem { grid-template-columns: 1fr; }
+      .sn-sol-fttx .sn-sol-fttx__hero-notes div, .sn-sol-fttx .sn-sol-fttx__hero-notes div + div { padding: 12px 0; border-left: 0; }
+      .sn-sol-fttx .sn-sol-fttx__hero-notes div + div { border-top: 1px solid rgba(252, 254, 255, .2); }
+      .sn-sol-fttx .sn-sol-fttx__actions .sn-btn { width: 100%; }
+      .sn-sol-fttx .sn-sol-fttx__faq details p { padding-right: 0; }
+    }
+    @media print {
+      .sn-sol-fttx .sn-sol-fttx__faq details:not([open]) > p { display: block !important; }
+      .sn-sol-fttx .sn-sol-fttx__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-sol-fttx__hero" aria-labelledby="sol-fttx-title">
+    <div class="sn-container sn-sol-fttx__hero-grid">
+      <div class="sn-sol-fttx__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/solutions/">Solutions</a></li><li aria-current="page">FTTX Fiber Distribution</li></ol></nav>
+        <span class="sn-sol-fttx__eyebrow">Application · Outdoor FTTH · Distribution · Splicing</span>
+        <h1 id="sol-fttx-title">Fiber Distribution and Closure Solutions for FTTX</h1>
+        <p>An FTTX network is decided at the enclosure: where the cable arrives, how many fibres are managed and who has to open it later. Start with the deployment environment and the function, then confirm capacity, cable entries and protection evidence for the exact model.</p>
+        <div class="sn-sol-fttx__hero-notes" aria-label="FTTX scope at a glance">
+          <div><strong>Function before form</strong><span>Distribution, cross-connection and splicing are different enclosure jobs.</span></div>
+          <div><strong>IP evidence per model</strong><span>IP68 is published for splice closures, not for the whole FTTX range.</span></div>
+        </div>
+        <div class="sn-sol-fttx__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request FTTX Project Quote</a><a class="sn-btn sn-btn--secondary" href="#function-map">Match Function to Enclosure</a></div>
+        <p class="sn-sol-fttx__boundary">Custom dimensions, materials and OEM branding are evaluated from project drawings and confirmed per model. They are not standard options on every enclosure.</p>
+      </div>
+      <figure class="sn-sol-fttx__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/market-ftth.webp" alt="FTTH fiber access network" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>FTTH access environment. The image illustrates the deployment context, not a specific enclosure model.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-fttx-inputs-title">
+    <div class="sn-container">
+      <div class="sn-sol-fttx__intro"><h2 id="sol-fttx-inputs-title">Define the Deployment and Cable-Entry Constraints</h2><p>The same box shape can serve a wall in a basement or a pole in a wet street. Record the site, the cable arrival and the working space before discussing dimensions, because each one changes the structure that has to be quoted.</p></div>
+      <div class="sn-sol-fttx__inputs">
+        <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-fttx-inputs-caption">
+          <table class="sn-table sn-sol-fttx__constraints">
+            <caption id="sol-fttx-inputs-caption">Deployment constraint sheet: fill each site input before an enclosure type or size is proposed.</caption>
+            <thead><tr><th scope="col">Site input</th><th scope="col">Example entry</th><th scope="col">What it changes</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Exposure</th><td data-label="Example entry">Indoor, outdoor wall, pole or handhole</td><td data-label="What it changes">Sealing concept, material and coating review</td></tr>
+              <tr><th scope="row">Mounting</th><td data-label="Example entry">Wall bracket, pole clamp, rack or pedestal</td><td data-label="What it changes">Bracket interface, door swing and service height</td></tr>
+              <tr><th scope="row">Function</th><td data-label="Example entry">Distribution, cross-connection or splicing</td><td data-label="What it changes">Internal trays, adapters or splice organisers</td></tr>
+              <tr><th scope="row">Capacity</th><td data-label="Example entry">Ports, adapters or splice trays required now and later</td><td data-label="What it changes">Internal layout and overall envelope</td></tr>
+              <tr><th scope="row">Cable entries</th><td data-label="Example entry">Cable type, diameter, entry count and direction</td><td data-label="What it changes">Entry plate, grommets and sealing method</td></tr>
+              <tr><th scope="row">Working space</th><td data-label="Example entry">Door opening angle, bend radius, technician clearance</td><td data-label="What it changes">Depth, hinge side and internal access</td></tr>
+              <tr><th scope="row">Envelope</th><td data-label="Example entry">Height × width × depth limit at the site</td><td data-label="What it changes">Feasible layout and mounting position</td></tr>
+              <tr><th scope="row">Environment spec</th><td data-label="Example entry">IP target, material or coating named by the project</td><td data-label="What it changes">Evidence to request and acceptance items</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="sn-sol-fttx__entry-card" aria-labelledby="sol-fttx-entry-title">
+          <h3 id="sol-fttx-entry-title">Cable-entry record</h3>
+          <dl>
+            <dt>Cable type</dt><dd>Feeder, distribution or drop cable</dd>
+            <dt>Entry count</dt><dd>Used plus spare entries</dd>
+            <dt>Sealing</dt><dd>Grommet, gel or mechanical seal</dd>
+            <dt>Direction</dt><dd>Bottom, side or rear entry</dd>
+            <dt>Bend radius</dt><dd>Minimum route inside the box</dd>
+            <dt>Service loop</dt><dd>Slack length to store</dd>
+          </dl>
+        </aside>
+      </div>
+      <p class="sn-sol-fttx__note"><strong>Not every environmental grade is claimed.</strong> Salt-spray performance and other corrosion requirements are confirmed against the project specification and the proposed structure. They are not assumed from a generic outdoor description.</p>
+      <div class="sn-sol-fttx__actions"><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare Your Deployment Checklist</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-fttx-map-title" id="function-map">
+    <div class="sn-container">
+      <div class="sn-sol-fttx__intro"><h2 id="sol-fttx-map-title">Match the Enclosure to the FTTX Function</h2><p>Distribution, cross-connection and splicing protect different parts of the fibre path. Choose by the job the enclosure performs, not by the shape of a cabinet photo.</p></div>
+      <div class="sn-sol-fttx__mapping">
+        <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-fttx-map-caption">
+          <table class="sn-table sn-sol-fttx__function-table">
+            <caption id="sol-fttx-map-caption">Function-to-enclosure comparison for FTTX projects. Specific models remain a later selection step.</caption>
+            <thead><tr><th scope="col">Function</th><th scope="col">Typical location</th><th scope="col">Capacity and entries to confirm</th><th scope="col">Mechanical focus</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Distribution</th><td data-label="Typical location">Outdoor wall, pole or building entry</td><td data-label="Capacity and entries to confirm">Splitter ports, drop-cable entries, spare capacity for later subscribers</td><td data-label="Mechanical focus">Splitter mounting, entry sealing, door access and drop routing; see <a href="/products/fttx-fiber-distribution/">FTTX fiber distribution</a></td></tr>
+              <tr><th scope="row">Cross-connection</th><td data-label="Typical location">Street cabinet, rack or equipment room</td><td data-label="Capacity and entries to confirm">Adapter panels, patch-cord volume, feeder and distribution ports</td><td data-label="Mechanical focus">Patch management, labelling, cable slack and front access; see <a href="/products/fttx-fiber-distribution/">optical distribution options</a></td></tr>
+              <tr><th scope="row">Splicing</th><td data-label="Typical location">Inline, handhole or aerial span</td><td data-label="Capacity and entries to confirm">Splice tray count, fibre count per tray, incoming and outgoing cables</td><td data-label="Mechanical focus">Sealing interfaces, tray stacking, re-entry and strain relief; IP68 applies to closure products where published</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="sn-sol-fttx__cabinet">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-cabinet.webp" alt="Telecom enclosure cabinet" width="1024" height="1024" loading="lazy" decoding="async">
+          <figcaption>Cabinet-type enclosure shown as a form-factor reference only. It is not a specific FTTX model or a statement of rating.</figcaption>
+        </figure>
+      </div>
+      <p class="sn-sol-fttx__note"><strong>One shape does not define the function.</strong> A cabinet outline can host cross-connection or distribution hardware, and a small closure may carry more trays than expected. Mechanical customisation beyond the standard range is reviewed through <a href="/products/precision-enclosures/">precision enclosures</a>.</p>
+      <div class="sn-sol-fttx__actions"><a class="sn-btn sn-btn--secondary" href="/products/fttx-fiber-distribution/">Review FTTX Product Options</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-fttx-trade-title">
+    <div class="sn-container">
+      <div class="sn-sol-fttx__intro"><h2 id="sol-fttx-trade-title">Balance Capacity, Access, Protection and Footprint</h2><p>Capacity is never free. More ports, more entries or a larger splice count usually change the box size, the sealing interfaces and the room a technician needs. Use one matrix to keep those effects visible.</p></div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-fttx-trade-caption">
+        <table class="sn-table sn-sol-fttx__matrix">
+          <caption id="sol-fttx-trade-caption">Seven-column selection matrix. The rows describe how a requirement moves the design, not fixed product values.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Requirement</th>
+              <th scope="col">Capacity</th>
+              <th scope="col">Cable entries</th>
+              <th scope="col">Maintenance access</th>
+              <th scope="col">Installation envelope</th>
+              <th scope="col">IP target</th>
+              <th scope="col">Material / coating</th>
+              <th scope="col">Customisation impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">What the project fixes</th><td data-label="Capacity">Ports, adapters or trays now and at final build</td><td data-label="Cable entries">Number, size and direction of cables</td><td data-label="Maintenance access">Frequency of re-entry and who opens it</td><td data-label="Installation envelope">Space on wall, pole, rack or pad</td><td data-label="IP target">Rating required by the site or operator</td><td data-label="Material / coating">Material and finish named in the spec</td><td data-label="Customisation impact">OEM marking and packaging needs</td></tr>
+            <tr><th scope="row">What increases with it</th><td data-label="Capacity">Internal area and tray or panel count</td><td data-label="Cable entries">Entry plate area and sealing points</td><td data-label="Maintenance access">Door size, hinge side and slack storage</td><td data-label="Installation envelope">Depth, weight and bracket strength</td><td data-label="IP target">Seal design and interface control</td><td data-label="Material / coating">Coating process and surface preparation</td><td data-label="Customisation impact">Drawing review and version control</td></tr>
+            <tr><th scope="row">What to agree before quoting</th><td data-label="Capacity">Final capacity per enclosure, not per network</td><td data-label="Cable entries">Entry configuration per model</td><td data-label="Maintenance access">Service clearance at the installed position</td><td data-label="Installation envelope">Envelope limit and mounting interface</td><td data-label="IP target">Evidence required for the exact model</td><td data-label="Material / coating">Material certificate or test need</td><td data-label="Customisation impact">Custom scope, files and approval step</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-sol-fttx__views">
+        <div>
+          <h3>Space view</h3>
+          <ul><li>Overall envelope against the site limit</li><li>Door swing and technician standing room</li><li>Bracket or pad interface and weight</li></ul>
+        </div>
+        <div>
+          <h3>Entry view</h3>
+          <ul><li>Cable direction and bend radius at entry</li><li>Sealing method and spare entries</li><li>Strain relief inside the enclosure</li></ul>
+        </div>
+        <div>
+          <h3>Access view</h3>
+          <ul><li>Reach to trays, adapters and splitters</li><li>Slack storage without crossing fibres</li><li>Re-closing and re-sealing steps</li></ul>
+        </div>
+      </div>
+      <p class="sn-sol-fttx__note"><strong>Quotation variables, not a price list.</strong> Enclosure size, entry configuration, material and coating, internal hardware, OEM work and quantity affect the quotation. No standard price, MOQ, payment term or delivery schedule is published from this page.</p>
+      <div class="sn-sol-fttx__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Compare Your Enclosure Requirements</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-fttx-evidence-title">
+    <div class="sn-container">
+      <div class="sn-sol-fttx__intro"><h2 id="sol-fttx-evidence-title">Verify IP Rating and Outdoor Materials by Model</h2><p>An IP statement belongs to a model, a sealing configuration and a test basis. Build the evidence line next to the model number, and keep every unconfirmed item visible as an open point.</p></div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-fttx-evidence-caption">
+        <table class="sn-table sn-sol-fttx__evidence">
+          <caption id="sol-fttx-evidence-caption">Model-level IP and material audit: request evidence for the exact model and configuration being supplied.</caption>
+          <thead><tr><th scope="col">Enclosure type</th><th scope="col">IP target</th><th scope="col">Published capability</th><th scope="col">Evidence to request</th><th scope="col">Material / coating</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Splice closure</th><td data-label="IP target">Per project spec</td><td data-label="Published capability">IP68 where published for the closure model</td><td data-label="Evidence to request">Model data, sealing configuration, test basis</td><td data-label="Material / coating">Confirm grade and finish per drawing</td><td data-label="Status">Confirm per model</td></tr>
+            <tr><th scope="row">Distribution box</th><td data-label="IP target">Per site exposure</td><td data-label="Published capability">Not blanket IP68; confirm the model</td><td data-label="Evidence to request">Rating statement for the exact configuration</td><td data-label="Material / coating">Confirm coating and entry sealing</td><td data-label="Status">Open until quoted</td></tr>
+            <tr><th scope="row">Cross-connection cabinet</th><td data-label="IP target">Per operator spec</td><td data-label="Published capability">Not blanket IP68; confirm the model</td><td data-label="Evidence to request">Rating statement, door and entry sealing</td><td data-label="Material / coating">Confirm material and surface treatment</td><td data-label="Status">Open until quoted</td></tr>
+            <tr><th scope="row">Custom enclosure</th><td data-label="IP target">Target set by project</td><td data-label="Published capability">Defined during engineering review</td><td data-label="Evidence to request">Agreed test and acceptance items</td><td data-label="Material / coating">Named in the project specification</td><td data-label="Status">TBD by drawing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-sol-fttx__note"><strong>IP68 stops at the closure line.</strong> It is a published capability for splice-closure products. It is not a rating for every distribution box, optical cabinet or enclosure, and it does not transfer to another model or entry configuration.</p>
+      <p>Salt-spray, RoHS, REACH and EMC are not asserted here. Where a project requires them, the applicable standard, test evidence and acceptance criteria are confirmed for the proposed design rather than assumed from the product family.</p>
+      <div class="sn-sol-fttx__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Ask for Model-Specific IP Evidence</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-fttx-oem-title">
+    <div class="sn-container">
+      <div class="sn-sol-fttx__intro"><h2 id="sol-fttx-oem-title">Move from Custom Drawings to an Agreed Project Baseline</h2><p>A custom FTTX enclosure is a sequence of agreements, not a single request. Each step closes one source of variation before the next one opens.</p></div>
+      <ol class="sn-sol-fttx__flow">
+        <li><h3>Deployment checklist</h3><p>Site, function, capacity, cable entries, mounting and envelope are recorded. Unknown items stay marked TBD.</p></li>
+        <li><h3>2D / 3D drawing review</h3><p>Interfaces, door or cover geometry, internal hardware and installation clearance are checked against the drawing set.</p></li>
+        <li><h3>Material, coating and sealing confirmation</h3><p>The proposed material, surface treatment and sealing method are matched to the project specification.</p></li>
+        <li><h3>Sample and acceptance baseline</h3><p>Sample scope and acceptance items are agreed and written down. A prototype reference of about two weeks applies only where the case suits it.</p></li>
+        <li><h3>Quantity and delivery assessment</h3><p>Volume, tooling, process and capacity are reviewed before a project schedule is proposed.</p></li>
+      </ol>
+      <div class="sn-sol-fttx__shopfloor">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-engineering-cad.webp" alt="Engineer reviewing a 2D engineering drawing" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Drawing review. Enclosure geometry and interfaces are checked before any custom baseline is agreed.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-engineering-dfm-1.webp" alt="Engineer checking a machined part against its 3D CAD model" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Part-to-model check. Mechanical details are compared with the CAD definition during review.</figcaption></figure>
+      </div>
+      <div class="sn-sol-fttx__oem">
+        <div>
+          <h3>OEM inputs to submit</h3>
+          <ul><li>Logo or marking files in the required format</li><li>Placement position and size on the enclosure</li><li>Colour and surface requirements</li><li>Packaging and labelling needs</li><li>Version number and approval reference</li></ul>
+        </div>
+        <div>
+          <h3>Change control</h3>
+          <ul><li>Any change to size, entries or hardware returns to the drawing set</li><li>Acceptance items are re-checked against the new baseline</li><li>OEM files are versioned before production release</li><li>Quantity and schedule are re-assessed after the change</li></ul>
+        </div>
+      </div>
+      <p class="sn-sol-fttx__note"><strong>Two weeks is a prototype reference, not an FTTX lead time.</strong> It applies only to suitable prototype cases. Production and project delivery are assessed from drawings, quantity, process and capacity.</p>
+      <div class="sn-sol-fttx__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/npi/">Discuss Custom FTTX Requirements</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-fttx-faq-title">
+    <div class="sn-container">
+      <div class="sn-sol-fttx__intro"><h2 id="sol-fttx-faq-title">FTTX Distribution and Closure FAQs</h2><p>IP selection, custom dimensions, the real scope of IP68, OEM branding and outdoor material review.</p></div>
+      <div class="sn-sol-fttx__faq">
+        <details open><summary>How should I choose an IP rating for an FTTX enclosure?</summary><p>Start with the actual installation exposure, sealing interfaces, cable entries, maintenance method, and the operator or project specification. Select the enclosure and closure by function, then request model-specific evidence for the required rating. Do not choose by enclosure appearance alone or assume that one published IP rating covers every FTTX product.</p></details>
+        <details><summary>Can FTTX distribution boxes be made to custom dimensions?</summary><p>Custom enclosure requirements can be evaluated from the deployment specification and drawings. Provide the required capacity, cable entries, mounting method, maintenance access, mechanical envelope, IP target, materials or coating, quantity, and OEM requirements. Final dimensions and feasibility must be agreed through engineering review rather than inferred from a standard product photograph.</p></details>
+        <details><summary>Are all SONNE FTTX boxes and closures IP68?</summary><p>No. IP68 is a published capability for splice-closure products, not a blanket rating for every FTTX distribution box, optical cabinet, or enclosure. Check the exact model, structure, cable-entry configuration, and required test evidence for your project. Other enclosure ratings and compliance requirements must be confirmed individually.</p></details>
+        <details><summary>Are custom dimensions and OEM branding available for FTTX projects?</summary><p>Custom enclosure and OEM branding options are part of the stated FTTX capability. Submit dimension drawings, branding files, placement, color or surface requirements, packaging needs, and quantities for review. The available customization, acceptance baseline, MOQ, pricing, and delivery schedule must be confirmed for the specific project before release.</p></details>
+        <details><summary>How are outdoor corrosion and material requirements evaluated?</summary><p>Provide the installation environment, material or coating specification, expected exposure, and any required test standard. SONNE can review outdoor materials, spraying, enclosure geometry, and sealing requirements for the proposed design. Salt-spray performance or other environmental compliance must not be assumed; applicable evidence and acceptance criteria need project-specific confirmation.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-fttx-cta-title">
+    <div class="sn-container sn-cta sn-sol-fttx__cta">
+      <div class="sn-sol-fttx__cta-grid">
+        <div>
+          <h2 id="sol-fttx-cta-title">Request an FTTX Project Quote</h2>
+          <p>Send the deployment list rather than a single part number. The first review checks the function, cable entries and IP target against the enclosure type before dimensions are discussed.</p>
+          <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. Quote, sample and production timing are assessed from drawings, quantity, process and capacity.</p>
+          <div class="sn-sol-fttx__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request FTTX Project Quote</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare RFQ Inputs</a></div>
+          <p class="sn-sol-fttx__fine-print">Email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> with drawings or the deployment list if you prefer to start by email.</p>
+        </div>
+        <div class="sn-sol-fttx__panel">
+          <h3>RFQ fields</h3>
+          <ul><li>Deployment scenario and project stage</li><li>Enclosure function and quantity</li><li>Capacity, cable entries and mounting</li><li>Dimensions and site envelope</li><li>IP target, material and coating</li><li>OEM marking and packaging needs</li></ul>
+          <h3>What can be attached</h3>
+          <p>Dimension drawings, site interface sketches and the relevant project specification. Mark unknown values as TBD so engineering can clarify them instead of guessing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/solutions/fttx/#webpage",
+        "name": "Fiber Distribution and Closure Solutions for FTTX",
+        "url": "https://rf-sonne.com/solutions/fttx/",
+        "description": "FTTX distribution boxes, optical cabinets and IP68 splice closures for outdoor FTTH networks, with custom enclosure and OEM options."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/solutions/fttx/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://rf-sonne.com/solutions/"},
+          {"@type": "ListItem", "position": 3, "name": "FTTX Fiber Distribution", "item": "https://rf-sonne.com/solutions/fttx/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

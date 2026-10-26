@@ -1,0 +1,332 @@
+<!-- wp:html -->
+<div class="sn-accessories sn-legacy-record">
+  <style>
+    .sn-accessories { color: var(--sn-text); }
+    .sn-accessories *, .sn-accessories *::before, .sn-accessories *::after { box-sizing: border-box; }
+    .sn-accessories h2, .sn-accessories h3, .sn-accessories p, .sn-accessories ul, .sn-accessories ol, .sn-accessories figure { margin-top: 0; }
+    .sn-accessories h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-accessories h3 { margin-bottom: 12px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-accessories p, .sn-accessories li { line-height: 1.7; }
+    .sn-accessories a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-accessories img { display: block; max-width: 100%; height: auto; }
+    .sn-accessories [id] { scroll-margin-top: 96px; }
+    .sn-accessories caption { padding: 14px 16px; border-bottom: var(--sn-border); color: var(--sn-text-muted); font-size: .82rem; line-height: 1.55; text-align: left; }
+    .sn-accessories figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .71rem; line-height: 1.55; }
+    .sn-accessories .sn-accessories__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-accessories .sn-accessories__intro { max-width: 880px; margin-bottom: 34px; }
+    .sn-accessories .sn-accessories__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.03rem; }
+    .sn-accessories .sn-accessories__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-accessories .sn-accessories__hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr); gap: clamp(34px, 6vw, 72px); align-items: center; }
+    .sn-accessories .sn-accessories__hero .sn-accessories__eyebrow { color: var(--sn-cyan); }
+    .sn-accessories .sn-accessories__hero-copy > p { max-width: 64ch; margin-bottom: 18px; font-size: 1.04rem; }
+    .sn-accessories .sn-accessories__cats { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 4px; }
+    .sn-accessories .sn-accessories__cats a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 12px; border: 1px solid rgba(252, 254, 255, .28); color: var(--sn-white); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.4; text-decoration: none; }
+    .sn-accessories .sn-accessories__cats a:hover { border-color: var(--sn-cyan); color: var(--sn-cyan); }
+    .sn-accessories .sn-accessories__hero-note { margin: 16px 0 0; padding: 14px; border: 1px solid rgba(140, 196, 255, .32); border-radius: var(--sn-radius); background: rgba(252, 254, 255, .06); color: rgba(252, 254, 255, .8); font-size: .85rem; }
+    .sn-accessories .sn-accessories__hero-media { margin: 0; }
+    .sn-accessories .sn-accessories__triptych { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .sn-accessories .sn-accessories__triptych img { width: 100%; aspect-ratio: 1 / 1; padding: 8px; border: 1px solid rgba(252, 254, 255, .2); background: var(--sn-white); object-fit: contain; }
+    .sn-accessories .sn-accessories__hero-media figcaption { margin-top: 12px; color: rgba(252, 254, 255, .68); }
+    .sn-accessories .sn-accessories__matrix-table { min-width: 1180px; }
+    .sn-accessories .sn-accessories__matrix-table tbody th { width: 190px; color: var(--sn-navy); }
+    .sn-accessories .sn-accessories__matrix-table td { font-size: .85rem; }
+    .sn-accessories .sn-accessories__note { margin: 18px 0 0; padding: 16px 18px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-accessories .sn-accessories__note p:last-child { margin-bottom: 0; }
+    .sn-accessories .sn-accessories__check-table { min-width: 940px; }
+    .sn-accessories .sn-accessories__check-table tbody th { width: 230px; color: var(--sn-navy); }
+    .sn-accessories .sn-accessories__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-accessories .sn-accessories__pair figure { margin-bottom: 0; }
+    .sn-accessories .sn-accessories__pair img { width: 100%; aspect-ratio: 1 / 1; padding: 16px; border: var(--sn-border); background: var(--sn-white); object-fit: contain; }
+    .sn-accessories .sn-accessories__pair figcaption { padding: 4px 2px 0; }
+    .sn-accessories .sn-accessories__point-table { min-width: 1000px; }
+    .sn-accessories .sn-accessories__point-table tbody th { color: var(--sn-navy); }
+    .sn-accessories .sn-accessories__point-table td:last-child a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-accessories .sn-accessories__diagram { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 26px; padding: 16px; border: var(--sn-border); background: var(--sn-white); color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.5; }
+    .sn-accessories .sn-accessories__diagram span { padding: 8px 10px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); }
+    .sn-accessories .sn-accessories__diagram b { color: var(--sn-cyan-dark); }
+    .sn-accessories .sn-accessories__matching { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 24px; align-items: start; margin-top: 26px; }
+    .sn-accessories .sn-accessories__matching figure { margin: 0; }
+    .sn-accessories .sn-accessories__matching img { width: 100%; aspect-ratio: 1 / 1; padding: 18px; border: var(--sn-border); background: var(--sn-white); object-fit: contain; }
+    .sn-accessories .sn-accessories__matching p { color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-accessories .sn-accessories__catalog-table { min-width: 860px; }
+    .sn-accessories .sn-accessories__catalog-table tbody th { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .78rem; }
+    .sn-accessories .sn-accessories__catalog-figure { margin: 26px 0 0; }
+    .sn-accessories .sn-accessories__catalog-figure img { width: 100%; aspect-ratio: 16 / 7; padding: 18px; border: var(--sn-border); background: var(--sn-white); object-fit: contain; }
+    .sn-accessories .sn-accessories__order-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-accessories .sn-accessories__order { padding: 24px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-accessories .sn-accessories__order h3 { font-family: var(--sn-font-mono); font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-accessories .sn-accessories__order ul { margin-bottom: 0; padding-left: 20px; }
+    .sn-accessories .sn-accessories__order li { color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-accessories .sn-accessories__order p { color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-accessories .sn-accessories__order p:last-child { margin-bottom: 0; }
+    .sn-accessories .sn-accessories__faq { max-width: 940px; }
+    .sn-accessories .sn-accessories__faq details { border-bottom: var(--sn-border); }
+    .sn-accessories .sn-accessories__faq summary { position: relative; min-height: 44px; padding: 22px 46px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-accessories .sn-accessories__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-accessories .sn-accessories__faq details[open] summary::after { content: '−'; }
+    .sn-accessories .sn-accessories__faq details p { max-width: 78ch; padding-right: 36px; color: var(--sn-text-muted); }
+    .sn-accessories .sn-accessories__cta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); }
+    .sn-accessories .sn-cta h2 { color: var(--sn-white); }
+    .sn-accessories .sn-cta p, .sn-accessories .sn-cta li { color: rgba(252, 254, 255, .78); }
+    .sn-accessories .sn-cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-accessories .sn-accessories__cta-card { padding: 26px; border: 1px solid rgba(252, 254, 255, .22); }
+    .sn-accessories .sn-cta .sn-accessories__order { border-color: rgba(252, 254, 255, .22); background: transparent; }
+    .sn-accessories .sn-accessories__cta-card h3 { color: var(--sn-white); }
+    .sn-accessories .sn-accessories__cta-card .sn-btn { margin-top: 8px; }
+    .sn-accessories .sn-accessories__fine { margin: 18px 0 0; font-size: .82rem; }
+    @media (max-width: 1100px) {
+      .sn-accessories .sn-accessories__order-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .sn-accessories .sn-accessories__hero-grid, .sn-accessories .sn-accessories__cta { grid-template-columns: 1fr; }
+      .sn-accessories .sn-accessories__hero-media { max-width: 640px; }
+      .sn-accessories .sn-accessories__matching { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .sn-accessories .sn-accessories__pair { grid-template-columns: 1fr; }
+      .sn-accessories .sn-accessories__triptych { grid-template-columns: 1fr; }
+      .sn-accessories .sn-accessories__triptych img { aspect-ratio: 16 / 9; }
+    }
+    @media (max-width: 520px) {
+      .sn-accessories .sn-accessories__actions .sn-btn { width: 100%; }
+    }
+  </style>
+
+  <section class="sn-hero sn-accessories__hero" aria-labelledby="acc-title">
+    <div class="sn-container sn-accessories__hero-grid">
+      <div class="sn-accessories__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">RF Accessories</li></ol></nav>
+        <span class="sn-accessories__eyebrow">Accessories &amp; project completion · Not a main navigation line</span>
+        <h1 id="acc-title">RF Accessories for DAS, Test and System Integration</h1>
+        <p>Complete a selected DAS or RF system with attenuators and termination loads, DC blocks, isolators, cable assemblies, indoor DAS antennas and SMA terminators. Each item is checked by model, band, connector, power and quantity; no universal compatibility or stock position is implied.</p>
+        <div class="sn-accessories__cats" aria-label="Seven accessory categories">
+          <a href="#parameter-matrix">Attenuators</a>
+          <a href="#parameter-matrix">Termination loads</a>
+          <a href="#parameter-matrix">DC blocks</a>
+          <a href="#parameter-matrix">Isolators</a>
+          <a href="#parameter-matrix">RF cable assemblies</a>
+          <a href="#parameter-matrix">Indoor DAS antennas</a>
+          <a href="#parameter-matrix">SMA terminators</a>
+        </div>
+        <div class="sn-accessories__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Ask for Accessory Pricing</a><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Request Full Catalog</a></div>
+        <p class="sn-accessories__hero-note"><strong>Project-completion range.</strong> These seven categories sit outside the seven main product lines and are not part of the main navigation. Use them to finish a BOM, not to replace a main-component selection.</p>
+      </div>
+      <figure class="sn-accessories__hero-media">
+        <div class="sn-accessories__triptych">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/cable-assembly-se-ca01-sma-008-01.webp" alt="SONNE high frequency cable assembly SE-CA01-SMA-008-01" width="720" height="720" loading="eager" fetchpriority="high" decoding="async">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/termination-load-se-tl-050-0727-nf.webp" alt="SONNE termination load SE-TL-050-0727-NF" width="720" height="720" loading="lazy" decoding="async">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/indoor-antenna-se-oca-0640-v2501-nf.webp" alt="SONNE indoor antenna SE-OCA-0640-V2501-NF" width="720" height="720" loading="lazy" decoding="async">
+        </div>
+        <figcaption>Three of the seven categories: cable assembly SE-CA01-SMA-008-01, termination load SE-TL-050-0727-NF and indoor antenna SE-OCA-0640-V2501-NF. Representative items only, not the full range.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" id="parameter-matrix" aria-labelledby="acc-matrix-title">
+    <div class="sn-container">
+      <div class="sn-accessories__intro">
+        <h2 id="acc-matrix-title">Compare Seven Accessory Categories by the Parameters That Matter</h2>
+        <p>Each category carries one parameter that decides whether it fits the system. Frequency, impedance, connector and power then confirm the match. The matrix defines what to check; the values come from the selected model datasheet.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="acc-matrix-caption">
+        <table class="sn-table sn-accessories__matrix-table">
+          <caption id="acc-matrix-caption">Seven-category accessory matrix: use, electrical envelope, decisive parameter, interface and document status.</caption>
+          <thead><tr><th scope="col">Category</th><th scope="col">Typical use</th><th scope="col">Frequency</th><th scope="col">Impedance</th><th scope="col">Power</th><th scope="col">Key parameter</th><th scope="col">Connector / polarity</th><th scope="col">PIM (where applicable)</th><th scope="col">Quantity &amp; datasheet</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Attenuator</th><td data-label="Typical use">Reduce signal level in a test path or a live branch</td><td data-label="Frequency">Confirm the model band</td><td data-label="Impedance">Confirm on datasheet</td><td data-label="Power">Confirm the rating and derating</td><td data-label="Key parameter">Attenuation value in dB and its tolerance</td><td data-label="Connector / polarity">Series and gender</td><td data-label="PIM (where applicable)">Only where the model publishes it</td><td data-label="Quantity &amp; datasheet">Quantity and datasheet revision to confirm</td></tr>
+            <tr><th scope="row">Termination load</th><td data-label="Typical use">Terminate an unused port or absorb test power</td><td data-label="Frequency">Confirm the model band</td><td data-label="Impedance">Confirm on datasheet</td><td data-label="Power">Confirm average or peak rating</td><td data-label="Key parameter">Power rating with VSWR and thermal condition</td><td data-label="Connector / polarity">Series and gender</td><td data-label="PIM (where applicable)">Low PIM only for matching models</td><td data-label="Quantity &amp; datasheet">Quantity and datasheet revision to confirm</td></tr>
+            <tr><th scope="row">DC block</th><td data-label="Typical use">Block DC while passing the RF path</td><td data-label="Frequency">Confirm the passband</td><td data-label="Impedance">Confirm on datasheet</td><td data-label="Power">Confirm the rating</td><td data-label="Key parameter">Frequency range and DC blocking position</td><td data-label="Connector / polarity">Series and gender</td><td data-label="PIM (where applicable)">Only where the model publishes it</td><td data-label="Quantity &amp; datasheet">Quantity and datasheet revision to confirm</td></tr>
+            <tr><th scope="row">Isolator</th><td data-label="Typical use">Allow one signal direction and absorb the reverse path</td><td data-label="Frequency">Confirm the model band</td><td data-label="Impedance">Confirm on datasheet</td><td data-label="Power">Confirm forward and reverse conditions</td><td data-label="Key parameter">Direction, isolation and insertion loss</td><td data-label="Connector / polarity">Series and gender</td><td data-label="PIM (where applicable)">Only where the model publishes it</td><td data-label="Quantity &amp; datasheet">Quantity and datasheet revision to confirm</td></tr>
+            <tr><th scope="row">RF cable assembly</th><td data-label="Typical use">Connect main components, test ports or antennas</td><td data-label="Frequency">Confirm the assembly band</td><td data-label="Impedance">Confirm on datasheet</td><td data-label="Power">Confirm the connector and cable rating</td><td data-label="Key parameter">Cable type, length and both end connectors</td><td data-label="Connector / polarity">Series and gender at each end</td><td data-label="PIM (where applicable)">Only where the assembly publishes it</td><td data-label="Quantity &amp; datasheet">Length, quantity and drawing to confirm</td></tr>
+            <tr><th scope="row">Indoor DAS antenna</th><td data-label="Typical use">Radiate the distributed signal at the coverage node</td><td data-label="Frequency">698–3800 MHz is an RFQ filter, not a range for every model</td><td data-label="Impedance">Confirm on datasheet</td><td data-label="Power">Confirm the input rating</td><td data-label="Key parameter">Band, gain, polarization and mounting</td><td data-label="Connector / polarity">Series and gender</td><td data-label="PIM (where applicable)">Only where the model publishes it</td><td data-label="Quantity &amp; datasheet">Quantity, mounting kit and datasheet to confirm</td></tr>
+            <tr><th scope="row">SMA terminator</th><td data-label="Typical use">Close an unused SMA port or protect a test connection</td><td data-label="Frequency">Confirm the model band</td><td data-label="Impedance">Confirm on datasheet</td><td data-label="Power">Confirm the rating</td><td data-label="Key parameter">Power, frequency and gender</td><td data-label="Connector / polarity">SMA male or female</td><td data-label="PIM (where applicable)">Only where the model publishes it</td><td data-label="Quantity &amp; datasheet">Quantity and datasheet revision to confirm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-accessories__note">The inherited source set contains 89 SKU parameter records across these categories. They define the scope to check before release, not values to publish here: every figure is verified against the model datasheet, and blank fields are left blank rather than estimated. <a href="/resources/datasheets/">Request the full catalog</a> for a model list.</p>
+      <div class="sn-accessories__actions"><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Request Full Catalog</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="replacement-check" aria-labelledby="acc-replacement-title">
+    <div class="sn-container">
+      <div class="sn-accessories__intro">
+        <h2 id="acc-replacement-title">Check the Original Model before Requesting a Replacement</h2>
+        <p>A replacement starts with the part already installed. Connector type and power rating are two fields, not a compatibility decision; the original model and its datasheet carry the rest.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="acc-replacement-caption">
+        <table class="sn-table sn-accessories__check-table">
+          <caption id="acc-replacement-caption">Original-part checklist for an accessory replacement request.</caption>
+          <thead><tr><th scope="col">Check</th><th scope="col">What to capture</th><th scope="col">Applies to</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Original model</th><td data-label="What to capture">Full model code from the label, plus any revision suffix</td><td data-label="Applies to">All seven categories</td></tr>
+            <tr><th scope="row">Nameplate photograph</th><td data-label="What to capture">A clear photo of the label and the connector face</td><td data-label="Applies to">All seven categories</td></tr>
+            <tr><th scope="row">Datasheet</th><td data-label="What to capture">The datasheet or test sheet that belongs to the installed part</td><td data-label="Applies to">All seven categories</td></tr>
+            <tr><th scope="row">Frequency range</th><td data-label="What to capture">Band used in service, not only the widest published range</td><td data-label="Applies to">All seven categories</td></tr>
+            <tr><th scope="row">Impedance</th><td data-label="What to capture">The system impedance the part must match</td><td data-label="Applies to">All seven categories</td></tr>
+            <tr><th scope="row">Power rating</th><td data-label="What to capture">Operating power and any peak or duty-cycle condition</td><td data-label="Applies to">Attenuator, load, isolator, terminator</td></tr>
+            <tr><th scope="row">Connector gender / polarity</th><td data-label="What to capture">Series, gender and orientation at each interface</td><td data-label="Applies to">All seven categories</td></tr>
+            <tr><th scope="row">Attenuation or coupling value</th><td data-label="What to capture">The value in use, not a nearby catalog step</td><td data-label="Applies to">Attenuator, coupler-related items</td></tr>
+            <tr><th scope="row">PIM requirement</th><td data-label="What to capture">Required limit and the test conditions behind it</td><td data-label="Applies to">Loads, antennas and other low PIM items</td></tr>
+            <tr><th scope="row">Cable length and polarity</th><td data-label="What to capture">Length, routing constraint and end-to-end orientation</td><td data-label="Applies to">RF cable assemblies</td></tr>
+            <tr><th scope="row">Antenna band and mounting</th><td data-label="What to capture">Band, gain, polarization and fixing method</td><td data-label="Applies to">Indoor DAS antennas</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-accessories__pair">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/termination-load-se-at-050-0030-n.webp" alt="SONNE termination load SE-AT-050-0030-N" width="720" height="720" loading="lazy" decoding="async"><figcaption>Termination load SE-AT-050-0030-N: capture its model code, not just the housing shape.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/termination-load-se-tl-050-0727-nf.webp" alt="SONNE termination load SE-TL-050-0727-NF" width="720" height="720" loading="lazy" decoding="async"><figcaption>Termination load SE-TL-050-0727-NF. A similar body does not prove that the two loads are interchangeable.</figcaption></figure>
+      </div>
+      <p class="sn-accessories__note">Visual similarity and connector matching alone cannot confirm compatibility, and SONNE does not claim reverse replacement across the product range. Where the original specification cannot be confirmed, keep the original rating in the request and submit it for engineering assessment.</p>
+      <div class="sn-accessories__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Check an Accessory Replacement</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="system-matching" aria-labelledby="acc-matching-title">
+    <div class="sn-container">
+      <div class="sn-accessories__intro">
+        <h2 id="acc-matching-title">Complete the DAS and RF System BOM by Connection Point</h2>
+        <p>Read the system as a set of connection points, then attach the accessory each point needs. Recording the interface and quantity per point is what prevents a missing load, cable or terminator at commissioning.</p>
+      </div>
+      <div class="sn-accessories__diagram" aria-label="Accessory connection points in a DAS path">
+        <span>Main component output</span><b aria-hidden="true">→</b><span>Test port</span><b aria-hidden="true">→</b><span>Unused port</span><b aria-hidden="true">→</b><span>Distribution node</span><b aria-hidden="true">→</b><span>Antenna end</span>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="acc-points-caption">
+        <table class="sn-table sn-accessories__point-table">
+          <caption id="acc-points-caption">Accessory needs by connection point, with the values to confirm and the owning product page.</caption>
+          <thead><tr><th scope="col">Connection point</th><th scope="col">Accessory need</th><th scope="col">Values to confirm</th><th scope="col">Related route</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Main component output</th><td data-label="Accessory need">Cable assembly to the next stage</td><td data-label="Values to confirm">Connector series and gender at both ends, length, band and power</td><td data-label="Related route"><a href="/products/rf-combiners/">RF combiners</a></td></tr>
+            <tr><th scope="row">Test port</th><td data-label="Accessory need">Attenuator, DC block or test cable</td><td data-label="Values to confirm">Attenuation value, DC blocking need, connector and power</td><td data-label="Related route"><a href="/request-a-quote/">Request a match</a></td></tr>
+            <tr><th scope="row">Unused port</th><td data-label="Accessory need">Termination load or SMA terminator</td><td data-label="Values to confirm">Power rating, band, VSWR, gender and PIM requirement</td><td data-label="Related route"><a href="/products/ibs-das-components/">IBS / DAS components</a></td></tr>
+            <tr><th scope="row">Distribution node</th><td data-label="Accessory need">Indoor DAS antenna and its cable</td><td data-label="Values to confirm">Band, gain, polarization, mounting and connector</td><td data-label="Related route"><a href="/solutions/das-ibs/">DAS / IBS solution</a></td></tr>
+            <tr><th scope="row">Antenna end</th><td data-label="Accessory need">Jumper or adapter with the right polarity</td><td data-label="Values to confirm">Series, gender, orientation and length</td><td data-label="Related route"><a href="/request-a-quote/">Specify the jumper</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-accessories__matching">
+        <div>
+          <p>Splitters and couplers remain the main items of the passive BOM and are specified on the IBS/DAS page; generic duplexers, multiplexers and multi-band combining stay on the combiners page. Accessories complete those items instead of replacing them.</p>
+          <p>Keep one interface column per connection point in the same spreadsheet. The accessory line then inherits the connector, band and quantity from the main item it serves, which removes most commissioning surprises.</p>
+          <p><a href="/products/ibs-das-components/">Open the IBS / DAS passive BOM matrix</a> · <a href="/products/rf-combiners/">Open the RF combiners page</a></p>
+        </div>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/indoor-antenna-se-dpa-0640-v6801-nf.webp" alt="SONNE indoor antenna SE-DPA-0640-V6801-NF" width="720" height="720" loading="lazy" decoding="async"><figcaption>Indoor antenna SE-DPA-0640-V6801-NF as a distribution-node example. Band, gain and mounting are confirmed per model.</figcaption></figure>
+      </div>
+      <p class="sn-accessories__note">Low PIM termination loads and 698–3800 MHz indoor antennas are described only where the selected model supports the requirement. A shared BOM does not create a universal kit, and no system gain or coverage result is claimed here.</p>
+      <div class="sn-accessories__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Complete My System BOM</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="catalog-evidence" aria-labelledby="acc-catalog-title">
+    <div class="sn-container">
+      <div class="sn-accessories__intro">
+        <h2 id="acc-catalog-title">Request Model-Level Datasheets instead of Generic Accessory Claims</h2>
+        <p>A catalog entry is useful only when it points to a document. Filter by category and model, then request the datasheet, drawing or test record that applies to the exact part number.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="acc-catalog-caption">
+        <table class="sn-table sn-accessories__catalog-table">
+          <caption id="acc-catalog-caption">Example model-level entries from the accessory catalog. Parameters are held in the datasheet, not in this table.</caption>
+          <thead><tr><th scope="col">Model</th><th scope="col">Category</th><th scope="col">Confirm on datasheet</th><th scope="col">Datasheet status</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">SE-CA01-SMA-008-01</th><td data-label="Category">RF cable assembly</td><td data-label="Confirm on datasheet">Length, connector gender, band and insertion loss</td><td data-label="Datasheet status">Request from the datasheet pack</td></tr>
+            <tr><th scope="row">SE-CA03-SMA-026-01</th><td data-label="Category">RF cable assembly</td><td data-label="Confirm on datasheet">Length, connector gender, band and insertion loss</td><td data-label="Datasheet status">Request from the datasheet pack</td></tr>
+            <tr><th scope="row">SE-TL-050-0727-NF</th><td data-label="Category">Termination load</td><td data-label="Confirm on datasheet">Power rating, VSWR, band and PIM requirement</td><td data-label="Datasheet status">Request from the datasheet pack</td></tr>
+            <tr><th scope="row">SE-AT-050-0030-N</th><td data-label="Category">Termination load</td><td data-label="Confirm on datasheet">Power rating, VSWR, band and PIM requirement</td><td data-label="Datasheet status">Request from the datasheet pack</td></tr>
+            <tr><th scope="row">SE-OCA-0640-V2501-NF</th><td data-label="Category">Indoor DAS antenna</td><td data-label="Confirm on datasheet">Band, gain, polarization and mounting</td><td data-label="Datasheet status">Request from the datasheet pack</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="sn-accessories__catalog-figure">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/cable-assembly-se-ca03-sma-026-01.webp" alt="SONNE high frequency cable assembly SE-CA03-SMA-026-01" width="720" height="720" loading="lazy" decoding="async">
+        <figcaption>Cable assembly SE-CA03-SMA-026-01 as a catalog-card example. The model code identifies the assembly; its performance is defined by the datasheet.</figcaption>
+      </figure>
+      <p class="sn-accessories__note">For low PIM, 698–3800 MHz or a custom cable assembly, quote only the datasheet and confirmation that belong to the matching model. Accessories are produced in the same factory as the main components, which supports interface matching within one project; it is not a claim that every accessory is tested to the same extent.</p>
+      <div class="sn-accessories__actions"><a class="sn-btn sn-btn--primary" href="/resources/datasheets/">Request Full Catalog</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Read the RFQ guide</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="order-review" aria-labelledby="acc-order-title">
+    <div class="sn-container">
+      <div class="sn-accessories__intro">
+        <h2 id="acc-order-title">Submit Models and Quantities for an Order-Specific Review</h2>
+        <p>Accessory pricing follows the model and the order, not the page. Send the model list with quantities and the ship-with request so the commercial review starts from the same data as the engineering review.</p>
+      </div>
+      <div class="sn-accessories__order-grid">
+        <div class="sn-accessories__order">
+          <h3>Known at inquiry</h3>
+          <ul><li>Category and model code, or a clear function description</li><li>Quantity per line item</li><li>Target date or project stage</li><li>Whether the item should ship with a main-component order</li><li>Documents needed for approval</li><li>Replacement requests: original model and datasheet</li></ul>
+        </div>
+        <div class="sn-accessories__order">
+          <h3>Confirmed by order review</h3>
+          <p>Price, MOQ, stock position and delivery timing are confirmed per model and per order. This page does not publish a cross-product-line policy for any of them.</p>
+          <p>Consolidated shipment with main components is checked against the order, models, quantities and production schedule. A common dispatch date is confirmed at that point, not assumed from the BOM.</p>
+          <p>A complete RFQ typically receives initial engineering feedback in about 24 hours; that response is not an instant price or stock answer.</p>
+        </div>
+      </div>
+      <div class="sn-accessories__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Ask for Accessory Pricing</a><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Request Full Catalog</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="acc-faq" aria-labelledby="acc-faq-title">
+    <div class="sn-container">
+      <div class="sn-accessories__intro">
+        <h2 id="acc-faq-title">RF Accessory Questions for Replacement and Project Orders</h2>
+        <p>Five questions asked before an accessory order: combined shipment, stock and MOQ, load replacement, custom cable assemblies and indoor antenna band coverage.</p>
+      </div>
+      <div class="sn-accessories__faq">
+        <details open><summary>Can RF accessories be shipped together with the main components?</summary><p>Include the accessories and main components in the same project BOM and identify which items should ship together. SONNE supports same-factory project matching, but consolidated shipment must be confirmed for the specific order, models, quantities and production schedule. Do not assume a common delivery date before order review.</p></details>
+        <details><summary>Are RF accessories in stock, and what is the MOQ?</summary><p>Stock and MOQ depend on the exact accessory model and order. SONNE does not publish one cross-product-line stock or MOQ policy for this accessories page. Send the model, quantity and required date for an order-specific review. Pricing and production or delivery timing are confirmed separately from the initial engineering response.</p></details>
+        <details><summary>Can I replace a termination load using only the connector and power rating?</summary><p>No. Connector type and power rating alone are not enough to confirm a replacement. Also check the original model, frequency range, impedance, VSWR, connector gender, mechanical limits and PIM requirement where applicable. Provide the datasheet or clear nameplate photographs so the proposed load can be reviewed against the original specification.</p></details>
+        <details><summary>What is needed for a custom RF cable assembly inquiry?</summary><p>Provide the cable type or performance target, frequency range, length, connector series and gender at both ends, orientation, quantity and installation constraints. Include electrical or environmental requirements when applicable. SONNE can review the assembly against these inputs; feasibility, pricing and delivery are confirmed for the exact configuration rather than inferred from a similar photograph.</p></details>
+        <details><summary>Do all indoor DAS antennas cover 698–3800 MHz?</summary><p>No frequency range should be applied to every indoor antenna without checking its model datasheet. Use the required 698–3800 MHz range as an RFQ filter, then confirm gain, VSWR, polarization, power, connector and mounting requirements for the selected antenna. The appropriate model depends on the complete DAS design and installation conditions.</p></details>
+      </div>
+      <div class="sn-accessories__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Ask an Accessory Specialist</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="acc-cta" aria-labelledby="acc-cta-title">
+    <div class="sn-container sn-cta sn-accessories__cta">
+      <div>
+        <h2 id="acc-cta-title">Send Your Accessory List for Pricing and Model Review</h2>
+        <p>The primary path takes a BOM upload, model list, quantities and target date for an order-specific review. The secondary path takes the categories and target application for a full catalog and datasheet set.</p>
+        <p>Replacement requests move faster with the original model and datasheet attached. Combined shipment with main components is confirmed inside the order, not assumed from the BOM.</p>
+        <p class="sn-accessories__fine">Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>. A complete RFQ typically receives initial engineering feedback in about 24 hours.</p>
+      </div>
+      <div class="sn-accessories__cta-card">
+        <div class="sn-accessories__order-grid">
+          <div class="sn-accessories__order"><h3>Need pricing</h3><p>Models, quantities, target date and documents required. Output: order-specific commercial and engineering review.</p><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Ask for Accessory Pricing</a></div>
+          <div class="sn-accessories__order"><h3>Need the catalog</h3><p>Selected categories and the target application. Output: catalog entries and matching datasheets.</p><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Request Full Catalog</a></div>
+        </div>
+        <p class="sn-accessories__fine">Pricing, MOQ, stock and delivery are confirmed per model and order. No universal stock or compatibility claim is made.</p>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/rf-accessories/#product",
+        "name": "RF Accessories for DAS, Test and System Integration",
+        "url": "https://rf-sonne.com/products/rf-accessories/",
+        "description": "Attenuators, termination loads, DC blocks, isolators, RF cable assemblies, indoor DAS antennas and SMA terminators for DAS, test and system integration, specified and priced by model and order.",
+        "category": "RF accessories",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/cable-assembly-se-ca01-sma-008-01.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/rf-accessories/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"RF Accessories","item":"https://rf-sonne.com/products/rf-accessories/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

@@ -1,0 +1,318 @@
+<!-- wp:html -->
+<div class="sn-sol-backhaul sn-legacy-record">
+  <style>
+    .sn-sol-backhaul { color: var(--sn-text); }
+    .sn-sol-backhaul *, .sn-sol-backhaul *::before, .sn-sol-backhaul *::after { box-sizing: border-box; }
+    .sn-sol-backhaul h2, .sn-sol-backhaul h3, .sn-sol-backhaul p, .sn-sol-backhaul ul, .sn-sol-backhaul ol, .sn-sol-backhaul dl, .sn-sol-backhaul dd, .sn-sol-backhaul figure { margin-top: 0; }
+    .sn-sol-backhaul h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-sol-backhaul h3 { margin-bottom: 12px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-sol-backhaul p, .sn-sol-backhaul li, .sn-sol-backhaul dd { line-height: 1.7; }
+    .sn-sol-backhaul a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-sol-backhaul img { display: block; max-width: 100%; height: auto; }
+    .sn-sol-backhaul .sn-sol-backhaul__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-sol-backhaul .sn-sol-backhaul__intro { max-width: 860px; margin-bottom: 40px; }
+    .sn-sol-backhaul .sn-sol-backhaul__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.05rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .sn-sol-backhaul .sn-sol-backhaul__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-sol-backhaul .sn-sol-backhaul__hero .sn-sol-backhaul__eyebrow { color: var(--sn-cyan); }
+    .sn-sol-backhaul .sn-sol-backhaul__hero-grid { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(350px, .98fr); gap: clamp(36px, 6vw, 80px); align-items: center; }
+    .sn-sol-backhaul .sn-sol-backhaul__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__hero-band { display: flex; flex-wrap: wrap; gap: 0; margin: 26px 0 0; padding: 0; list-style: none; border-block: 1px solid rgba(252, 254, 255, .2); }
+    .sn-sol-backhaul .sn-sol-backhaul__hero-band li { flex: 1 1 120px; padding: 14px 14px 14px 0; }
+    .sn-sol-backhaul .sn-sol-backhaul__hero-band li + li { padding-left: 14px; border-left: 1px solid rgba(252, 254, 255, .2); }
+    .sn-sol-backhaul .sn-sol-backhaul__hero-band strong { display: block; color: var(--sn-white); font-family: var(--sn-font-mono); font-size: .78rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__hero-band span { color: rgba(252, 254, 255, .7); font-size: .76rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__hero-media { margin-bottom: 0; }
+    .sn-sol-backhaul .sn-sol-backhaul__hero-media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .sn-sol-backhaul figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-sol-backhaul .sn-sol-backhaul__hero figcaption { color: rgba(252, 254, 255, .66); }
+    .sn-sol-backhaul .sn-sol-backhaul__boundary { margin: 16px 0 0; color: rgba(252, 254, 255, .68); font-size: .8rem; }
+    .sn-sol-backhaul caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-sol-backhaul .sn-sol-backhaul__constraints { min-width: 920px; }
+    .sn-sol-backhaul .sn-sol-backhaul__constraints th:first-child { width: 180px; }
+    .sn-sol-backhaul .sn-sol-backhaul__constraints tbody th { color: var(--sn-navy); }
+    .sn-sol-backhaul .sn-sol-backhaul__note { margin: 18px 0 0; padding: 18px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__chain { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 24px; padding: 0; list-style: none; counter-reset: link; }
+    .sn-sol-backhaul .sn-sol-backhaul__chain li { position: relative; padding: 20px 20px 24px; border: var(--sn-border); border-left: 0; background: var(--sn-white); counter-increment: link; }
+    .sn-sol-backhaul .sn-sol-backhaul__chain li:first-child { border-left: var(--sn-border); }
+    .sn-sol-backhaul .sn-sol-backhaul__chain li::before { display: block; margin-bottom: 10px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 700; content: 'L0' counter(link); }
+    .sn-sol-backhaul .sn-sol-backhaul__chain li::after { position: absolute; right: -7px; bottom: -7px; z-index: 2; width: 10px; height: 10px; border: 0; background: var(--sn-navy); clip-path: polygon(0 0, 100% 50%, 0 100%); content: ''; transform: none; }
+    .sn-sol-backhaul .sn-sol-backhaul__chain li:last-child::after { display: none; }
+    .sn-sol-backhaul .sn-sol-backhaul__chain strong { display: block; margin-bottom: 6px; color: var(--sn-navy); font-size: .95rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__chain span { display: block; color: var(--sn-text-muted); font-size: .8rem; line-height: 1.55; }
+    .sn-sol-backhaul .sn-sol-backhaul__chain a { display: inline-flex; align-items: center; min-height: 44px; font-size: .8rem; font-weight: 700; }
+    .sn-sol-backhaul .sn-sol-backhaul__products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 24px; }
+    .sn-sol-backhaul .sn-sol-backhaul__products figure { margin-bottom: 0; padding: 18px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-backhaul .sn-sol-backhaul__products img { width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: var(--sn-light-gray); }
+    .sn-sol-backhaul .sn-sol-backhaul__trade { min-width: 1020px; }
+    .sn-sol-backhaul .sn-sol-backhaul__trade th:first-child { width: 180px; }
+    .sn-sol-backhaul .sn-sol-backhaul__trade tbody th { color: var(--sn-navy); }
+    .sn-sol-backhaul .sn-sol-backhaul__bands { display: grid; grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr); gap: 0; max-width: 720px; margin: 0 0 24px; border: var(--sn-border); }
+    .sn-sol-backhaul .sn-sol-backhaul__band { padding: 20px; background: var(--sn-white); }
+    .sn-sol-backhaul .sn-sol-backhaul__band strong { display: block; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; }
+    .sn-sol-backhaul .sn-sol-backhaul__band span { color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__guard { display: flex; align-items: center; justify-content: center; border-inline: var(--sn-border); background: var(--sn-light-gray); color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .6rem; letter-spacing: .05em; text-align: center; writing-mode: vertical-rl; transform: rotate(180deg); }
+    .sn-sol-backhaul .sn-sol-backhaul__manufacturing { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 18px; margin-bottom: 26px; }
+    .sn-sol-backhaul .sn-sol-backhaul__manufacturing figure { margin-bottom: 0; }
+    .sn-sol-backhaul .sn-sol-backhaul__manufacturing img { width: 100%; height: 100%; object-fit: cover; }
+    .sn-sol-backhaul .sn-sol-backhaul__manufacturing-main img { aspect-ratio: 16 / 9; }
+    .sn-sol-backhaul .sn-sol-backhaul__manufacturing-side { display: grid; gap: 18px; }
+    .sn-sol-backhaul .sn-sol-backhaul__manufacturing-side figure { display: flex; flex-direction: column; }
+    .sn-sol-backhaul .sn-sol-backhaul__manufacturing-side img { flex: 1; aspect-ratio: 16 / 10; }
+    .sn-sol-backhaul .sn-sol-backhaul__controls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 24px; padding: 0; list-style: none; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-backhaul .sn-sol-backhaul__controls li { padding: 20px; }
+    .sn-sol-backhaul .sn-sol-backhaul__controls li + li { border-left: var(--sn-border); }
+    .sn-sol-backhaul .sn-sol-backhaul__controls strong { display: block; margin-bottom: 6px; color: var(--sn-navy); font-size: .9rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__controls span { color: var(--sn-text-muted); font-size: .8rem; line-height: 1.55; }
+    .sn-sol-backhaul .sn-sol-backhaul__gates { margin: 0 0 26px; padding: 0; list-style: none; counter-reset: gate; }
+    .sn-sol-backhaul .sn-sol-backhaul__gates li { position: relative; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 6px 24px; padding: 20px 0 20px 86px; border-top: var(--sn-border); counter-increment: gate; }
+    .sn-sol-backhaul .sn-sol-backhaul__gates li:last-child { border-bottom: var(--sn-border); }
+    .sn-sol-backhaul .sn-sol-backhaul__gates li::before { position: absolute; left: 0; top: 22px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; content: 'GATE 0' counter(gate); }
+    .sn-sol-backhaul .sn-sol-backhaul__gates strong { display: block; margin-bottom: 4px; color: var(--sn-navy); font-size: .92rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__gates span { display: block; color: var(--sn-text-muted); font-size: .82rem; line-height: 1.6; }
+    .sn-sol-backhaul .sn-sol-backhaul__gates span + span { margin-top: 6px; }
+    .sn-sol-backhaul .sn-sol-backhaul__outdoor { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; margin-top: 24px; }
+    .sn-sol-backhaul .sn-sol-backhaul__outdoor div { padding: 22px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-backhaul .sn-sol-backhaul__outdoor h3 { font-size: 1rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__outdoor ul { margin: 0; padding-left: 18px; }
+    .sn-sol-backhaul .sn-sol-backhaul__outdoor li { color: var(--sn-text-muted); font-size: .85rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__faq { max-width: 920px; }
+    .sn-sol-backhaul .sn-sol-backhaul__faq details { border-bottom: var(--sn-border); }
+    .sn-sol-backhaul .sn-sol-backhaul__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.08rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-sol-backhaul .sn-sol-backhaul__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-sol-backhaul .sn-sol-backhaul__faq details[open] summary::after { content: '−'; }
+    .sn-sol-backhaul .sn-sol-backhaul__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-sol-backhaul .sn-sol-backhaul__cta-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(28px, 5vw, 64px); }
+    .sn-sol-backhaul .sn-sol-backhaul__cta h2, .sn-sol-backhaul .sn-sol-backhaul__cta h3 { color: var(--sn-white); }
+    .sn-sol-backhaul .sn-sol-backhaul__cta p, .sn-sol-backhaul .sn-sol-backhaul__cta li { color: rgba(252, 254, 255, .8); }
+    .sn-sol-backhaul .sn-sol-backhaul__cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-sol-backhaul .sn-sol-backhaul__groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; margin: 0; }
+    .sn-sol-backhaul .sn-sol-backhaul__groups h3 { margin: 0 0 6px; padding-top: 14px; border-top: 1px solid rgba(252, 254, 255, .25); font-size: .92rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__groups ul { margin: 0 0 16px; padding-left: 18px; }
+    .sn-sol-backhaul .sn-sol-backhaul__groups li { font-size: .84rem; }
+    .sn-sol-backhaul .sn-sol-backhaul__fine-print { margin: 18px 0 0; font-size: .8rem; color: rgba(252, 254, 255, .66) !important; }
+    @media (max-width: 1100px) {
+      .sn-sol-backhaul .sn-sol-backhaul__chain { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-sol-backhaul .sn-sol-backhaul__chain li { border-left: var(--sn-border); }
+      .sn-sol-backhaul .sn-sol-backhaul__controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-sol-backhaul .sn-sol-backhaul__controls li:nth-child(3) { border-left: 0; }
+      .sn-sol-backhaul .sn-sol-backhaul__controls li:nth-child(n+3) { border-top: var(--sn-border); }
+    }
+    @media (max-width: 900px) {
+      .sn-sol-backhaul .sn-sol-backhaul__hero-grid, .sn-sol-backhaul .sn-sol-backhaul__manufacturing, .sn-sol-backhaul .sn-sol-backhaul__outdoor, .sn-sol-backhaul .sn-sol-backhaul__cta-grid { grid-template-columns: 1fr; }
+      .sn-sol-backhaul .sn-sol-backhaul__hero-media { max-width: 720px; }
+      .sn-sol-backhaul .sn-sol-backhaul__gates li { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .sn-sol-backhaul .sn-sol-backhaul__hero-band { display: grid; grid-template-columns: 1fr; }
+      .sn-sol-backhaul .sn-sol-backhaul__hero-band li, .sn-sol-backhaul .sn-sol-backhaul__hero-band li + li { padding: 12px 0; border-left: 0; }
+      .sn-sol-backhaul .sn-sol-backhaul__hero-band li + li { border-top: 1px solid rgba(252, 254, 255, .2); }
+      .sn-sol-backhaul .sn-sol-backhaul__chain, .sn-sol-backhaul .sn-sol-backhaul__products, .sn-sol-backhaul .sn-sol-backhaul__controls, .sn-sol-backhaul .sn-sol-backhaul__groups { grid-template-columns: 1fr; }
+      .sn-sol-backhaul .sn-sol-backhaul__chain li::after { display: none; }
+      .sn-sol-backhaul .sn-sol-backhaul__controls li + li { border-top: var(--sn-border); border-left: 0; }
+      .sn-sol-backhaul .sn-sol-backhaul__bands { grid-template-columns: 1fr; }
+      .sn-sol-backhaul .sn-sol-backhaul__guard { padding: 8px; border-block: var(--sn-border); border-inline: 0; writing-mode: horizontal-tb; transform: none; }
+    }
+    @media (max-width: 520px) {
+      .sn-sol-backhaul .sn-sol-backhaul__actions .sn-btn { width: 100%; }
+      .sn-sol-backhaul .sn-sol-backhaul__faq details p { padding-right: 0; }
+      .sn-sol-backhaul .sn-sol-backhaul__gates li { grid-template-columns: 1fr; gap: 6px; }
+      .sn-sol-backhaul .sn-sol-backhaul__gates li span:last-child { grid-column: auto; }
+    }
+    @media print {
+      .sn-sol-backhaul .sn-sol-backhaul__faq details:not([open]) > p { display: block !important; }
+      .sn-sol-backhaul .sn-sol-backhaul__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-sol-backhaul__hero" aria-labelledby="sol-backhaul-title">
+    <div class="sn-container sn-sol-backhaul__hero-grid">
+      <div class="sn-sol-backhaul__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/solutions/">Solutions</a></li><li aria-current="page">Microwave Backhaul</li></ol></nav>
+        <span class="sn-sol-backhaul__eyebrow">Application · Point-to-point · E-band · OCU</span>
+        <h1 id="sol-backhaul-title">Waveguide and Filter Components for Microwave Backhaul</h1>
+        <p>An E-band link is limited by more than one number. Insertion loss, transmit-receive isolation, machined geometry and outdoor assembly all act on the same link, so they should be reviewed as one hardware problem.</p>
+        <ul class="sn-sol-backhaul__hero-band" aria-label="Backhaul application bands"><li><strong>71–86 GHz</strong><span>E-band application scope</span></li><li><strong>6–80 GHz</strong><span>OCU customisation reference</span></li><li><strong>to 110 GHz</strong><span>Selected custom projects</span></li></ul>
+        <div class="sn-sol-backhaul__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send Link Requirements</a><a class="sn-btn sn-btn--secondary" href="#link-map">View the Link Map</a></div>
+        <p class="sn-sol-backhaul__boundary">The 110 GHz figure applies to selected custom microwave and waveguide projects and depends on topology and validation.</p>
+      </div>
+      <figure class="sn-sol-backhaul__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave.webp" alt="Microwave and RF components" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Microwave and waveguide hardware context. The image is not a deployed link or a measured backhaul result.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-backhaul-inputs-title">
+    <div class="sn-container">
+      <div class="sn-sol-backhaul__intro"><h2 id="sol-backhaul-inputs-title">Define Link Budget and Interface Constraints</h2><p>High-frequency components cannot be quoted from a band name alone. The electrical, mechanical and environmental inputs below decide which topology can even be evaluated.</p></div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-backhaul-inputs-caption">
+        <table class="sn-table sn-sol-backhaul__constraints">
+          <caption id="sol-backhaul-inputs-caption">Backhaul RFQ constraint sheet grouped by electrical, mechanical, environmental and validation inputs.</caption>
+          <thead><tr><th scope="col">Group</th><th scope="col">Input</th><th scope="col">Units or options</th><th scope="col">Why engineering needs it</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Electrical</th><td data-label="Input">Transmit and receive frequency ranges</td><td data-label="Units or options">GHz, sub-bands</td><td data-label="Why engineering needs it">Defines diplexer split and filter topology</td></tr>
+            <tr><th scope="row">Electrical</th><td data-label="Input">Channel bandwidth and duplex spacing</td><td data-label="Units or options">MHz</td><td data-label="Why engineering needs it">Sets guard band and isolation requirements</td></tr>
+            <tr><th scope="row">Electrical</th><td data-label="Input">Power, insertion loss, isolation, return loss</td><td data-label="Units or options">dB, W</td><td data-label="Why engineering needs it">Constrains cavity design and interface choices</td></tr>
+            <tr><th scope="row">Mechanical</th><td data-label="Input">Waveguide size and flange</td><td data-label="Units or options">WR size, flange standard or drawing</td><td data-label="Why engineering needs it">Determines mating interface and machining plan</td></tr>
+            <tr><th scope="row">Mechanical</th><td data-label="Input">Polarization and port orientation</td><td data-label="Units or options">Vertical, horizontal, drawing angle</td><td data-label="Why engineering needs it">Affects assembly fit and waveguide routing</td></tr>
+            <tr><th scope="row">Mechanical</th><td data-label="Input">ODU or antenna interface envelope</td><td data-label="Units or options">mm, 2D/3D drawing</td><td data-label="Why engineering needs it">Sets available space for the combining or filter unit</td></tr>
+            <tr><th scope="row">Environmental</th><td data-label="Input">Outdoor installation and sealing expectations</td><td data-label="Units or options">Location, mating surfaces, test requirement</td><td data-label="Why engineering needs it">Feeds the sealing, material and plating review</td></tr>
+            <tr><th scope="row">Validation</th><td data-label="Input">Required measurements and acceptance limits</td><td data-label="Units or options">VNA parameters, sample coverage</td><td data-label="Why engineering needs it">Defines the evidence package before release</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-sol-backhaul__note"><strong>Unconfirmed standards stay open.</strong> Do not tick IP, salt-spray or EMC requirements by default. Name the standard and test condition, or mark it TBD for engineering clarification.</p>
+      <div class="sn-sol-backhaul__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Prepare Your Link Inputs</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-backhaul-map-title" id="link-map">
+    <div class="sn-container">
+      <div class="sn-sol-backhaul__intro"><h2 id="sol-backhaul-map-title">Map Components Across the Backhaul Link</h2><p>Each node solves a different part of the link. The sequence below is a reference; an ODU may integrate several functions, and the actual topology follows the equipment design.</p></div>
+      <ol class="sn-sol-backhaul__chain" aria-label="Generic point-to-point backhaul link map">
+        <li><strong>ODU transmitter and receiver</strong><span>Generates and receives the modulated signal at the outdoor unit.</span><span>Input: band, power, modulation</span></li>
+        <li><strong>OCU or diplexer</strong><span>Separates or combines transmit and receive paths at the antenna interface.</span><a href="/products/waveguide-components/">Waveguide components <span aria-hidden="true">→</span></a></li>
+        <li><strong>Filter position</strong><span>Rejects out-of-band energy before it reaches the antenna or receiver.</span><a href="/products/rf-microwave-filters/">RF filters <span aria-hidden="true">→</span></a></li>
+        <li><strong>Waveguide run and antenna</strong><span>Carries the signal through straight, curved or twisted sections to the antenna port.</span><a href="/products/waveguide-components/">Waveguide runs <span aria-hidden="true">→</span></a></li>
+      </ol>
+      <div class="sn-sol-backhaul__products">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-ocu-combiner-v2.webp" alt="Outdoor combining unit" width="1024" height="571" loading="lazy" decoding="async"><figcaption>Outdoor combining unit. The OCU reference covers custom work from 6–80 GHz; each band and structure is reviewed separately.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/straight-waveguide.webp" alt="straight waveguide" width="720" height="720" loading="lazy" decoding="async"><figcaption>Straight waveguide section. A product view does not define the electrical result of a complete waveguide run.</figcaption></figure>
+      </div>
+      <p class="sn-sol-backhaul__note"><strong>OCU scope:</strong> outdoor combining units are customised across 6–80 GHz. Operating band, power handling, port arrangement and outdoor structure are confirmed at project level; the range alone is not a specification.</p>
+      <div class="sn-sol-backhaul__actions"><a class="sn-btn sn-btn--secondary" href="/products/waveguide-components/">Review Waveguide and Filter Options</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-backhaul-trade-title">
+    <div class="sn-container">
+      <div class="sn-sol-backhaul__intro"><h2 id="sol-backhaul-trade-title">Balance Loss, Rejection, Isolation and Integration</h2><p>Stricter isolation or rejection is not free. It can change the topology, the insertion loss and the mechanical envelope, so the trade must be reviewed against the full band plan.</p></div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-backhaul-trade-caption">
+        <table class="sn-table sn-sol-backhaul__trade">
+          <caption id="sol-backhaul-trade-caption">Weighting matrix for E-band link requirements, including the system impact and the input needed for review.</caption>
+          <thead><tr><th scope="col">Requirement</th><th scope="col">Link impact</th><th scope="col">Possible conflict</th><th scope="col">Verification method</th><th scope="col">RFQ input</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Insertion loss</th><td data-label="Link impact">Reduces available link margin</td><td data-label="Possible conflict">Lower loss can reduce selectivity</td><td data-label="Verification method">VNA S-parameters over the band</td><td data-label="RFQ input">Target loss and reference plane</td></tr>
+            <tr><th scope="row">Transmit-receive isolation</th><td data-label="Link impact">Protects the receiver from the local transmitter</td><td data-label="Possible conflict">Higher isolation can add loss and size</td><td data-label="Verification method">Port-pair measurement at defined power</td><td data-label="RFQ input">Sub-bands and isolation target</td></tr>
+            <tr><th scope="row">Out-of-band rejection</th><td data-label="Link impact">Limits interference entering the link</td><td data-label="Possible conflict">Wider rejection may require more sections</td><td data-label="Verification method">VNA sweep with stated bandwidth</td><td data-label="RFQ input">Rejection bands and limits</td></tr>
+            <tr><th scope="row">Return loss</th><td data-label="Link impact">Affects matching through the chain</td><td data-label="Possible conflict">Compact interfaces can degrade match</td><td data-label="Verification method">VNA at each port</td><td data-label="RFQ input">Port definition and limit</td></tr>
+            <tr><th scope="row">Power handling</th><td data-label="Link impact">Sets the safe transmit level</td><td data-label="Possible conflict">Higher power may need a larger structure</td><td data-label="Verification method">Rated condition plus agreed test</td><td data-label="RFQ input">Carrier power and duty</td></tr>
+            <tr><th scope="row">Integration envelope</th><td data-label="Link impact">Must mate with ODU and antenna</td><td data-label="Possible conflict">Smaller size can force RF compromise</td><td data-label="Verification method">Drawing review and fit check</td><td data-label="RFQ input">Flange, orientation and 3D model</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-sol-backhaul__bands" aria-label="Diplexer band definition concept">
+        <div class="sn-sol-backhaul__band"><strong>Transmit sub-band</strong><span>Lower and upper edge, bandwidth, power and port.</span></div>
+        <div class="sn-sol-backhaul__guard">GUARD</div>
+        <div class="sn-sol-backhaul__band"><strong>Receive sub-band</strong><span>Lower and upper edge, bandwidth, isolation and port.</span></div>
+      </div>
+      <p class="sn-sol-backhaul__note">For a 71–86 GHz diplexer, the Tx and Rx sub-bands, guard band and port definitions are required. The E-band range as a whole is not a substitute for a channel plan.</p>
+      <div class="sn-sol-backhaul__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Compare Link Trade-offs</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-backhaul-mfg-title">
+    <div class="sn-container">
+      <div class="sn-sol-backhaul__intro"><h2 id="sol-backhaul-mfg-title">Control Machining, Plating and Waveguide Interfaces</h2><p>At E-band, small geometry and surface changes matter. The review therefore connects drawing characteristics, machining process, plating control and VNA evidence instead of treating them as separate promises.</p></div>
+      <div class="sn-sol-backhaul__manufacturing">
+        <figure class="sn-sol-backhaul__manufacturing-main"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cnc-cavity-milling.webp" alt="CNC milling of an RF filter cavity" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>CNC milling of an RF filter cavity. The process supports drawing-defined geometry; it does not set one tolerance for every feature.</figcaption></figure>
+        <div class="sn-sol-backhaul__manufacturing-side">
+          <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-machining-detail.webp" alt="Close-up of precision machining on a metal housing" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Precision machining detail. Surface finish and critical dimensions are reviewed per drawing.</figcaption></figure>
+          <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/tech-precision-machining.webp" alt="Precision CNC machining of high frequency parts" width="1024" height="1024" loading="lazy" decoding="async"><figcaption>High-frequency part machining. The image documents capability, not a measured RF outcome.</figcaption></figure>
+        </div>
+      </div>
+      <ul class="sn-sol-backhaul__controls" aria-label="Manufacturing review points">
+        <li><strong>Cavity geometry</strong><span>Critical dimensions, datums and internal surfaces reviewed against the drawing.</span></li>
+        <li><strong>Flange interface</strong><span>Hole pattern, sealing face and mating orientation checked before machining.</span></li>
+        <li><strong>Plating control</strong><span>Surface specification and thickness control discussed for the actual structure.</span></li>
+        <li><strong>Assembly</strong><span>Fastening, alignment and interface torque considered in the process review.</span></li>
+      </ul>
+      <p>Above 40 GHz, mechanical tolerance can reach <strong>±0.01 mm</strong>; above 60 GHz, plating-thickness control can reach <strong>1 μm</strong>. Both are conditional capabilities that depend on structure and drawing review, not universal guarantees.</p>
+      <div class="sn-sol-backhaul__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/manufacturing/">Review Precision Manufacturing</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-backhaul-outdoor-title">
+    <div class="sn-container">
+      <div class="sn-sol-backhaul__intro"><h2 id="sol-backhaul-outdoor-title">Specify Outdoor Integration and Validation Separately</h2><p>Weather protection, tuning-free design and project scheduling are three different questions. Keeping them separate prevents one from being read as a promise for the others.</p></div>
+      <ol class="sn-sol-backhaul__gates" aria-label="Outdoor integration validation gates">
+        <li><strong>Structure review</strong><span>Input: mating surfaces, sealing method, materials, fasteners and drainage path.</span><span>Output: a list of design items to confirm and any required environmental test conditions.</span></li>
+        <li><strong>Prototype and fit</strong><span>Input: machined parts, assembly sequence, interface drawings and sample targets.</span><span>Output: fit findings, assembly notes and open deviations before electrical validation.</span></li>
+        <li><strong>VNA and agreed environment tests</strong><span>Input: port list, frequency ranges, limits and any environmental test requirement.</span><span>Output: measurements and condition records tied to the sample revision.</span></li>
+        <li><strong>Acceptance baseline</strong><span>Input: agreed limits, coverage, report format and traceability fields.</span><span>Output: the baseline used for production release, not a blanket approval for every variant.</span></li>
+      </ol>
+      <div class="sn-sol-backhaul__outdoor">
+        <div>
+          <h3>Outdoor input list</h3>
+          <ul><li>Installation location and exposure</li><li>Mating surfaces and sealing method</li><li>Housing material and plating</li><li>Fastener and drainage requirements</li><li>Required environmental test standard</li></ul>
+        </div>
+        <div>
+          <h3>Tuning-free, defined</h3>
+          <p>SONNE uses tuning-free to describe a design and manufacturing path that reduces manual adjustment through controlled geometry and processes. It does not mean that every structure needs no tuning, and it does not remove VNA verification.</p>
+          <p>Tuning and delivery timing are evaluated from design maturity, structure, quantity and validation scope. The fastest approximately two-week reference applies only to prototyping in suitable cases.</p>
+        </div>
+      </div>
+      <p class="sn-sol-backhaul__note"><strong>Environmental claims:</strong> IP, salt-spray, EMC or other compliance statements are confirmed for the specific design and test condition. They are not assumed from a product photograph or a general outdoor description.</p>
+      <div class="sn-sol-backhaul__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Define Your Validation Scope</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-backhaul-faq-title">
+    <div class="sn-container">
+      <div class="sn-sol-backhaul__intro"><h2 id="sol-backhaul-faq-title">Microwave Backhaul FAQs</h2><p>Tuning time, outdoor protection, 71–86 GHz diplexers, required inputs and what tuning-free does and does not mean.</p></div>
+      <div class="sn-sol-backhaul__faq">
+        <details open><summary>How long does E-band filter or diplexer tuning take?</summary><p>There is no responsible universal tuning-time figure. Timing depends on design maturity, topology, machining results, frequency range, and validation scope. A tuning-free design path may reduce manual adjustment, but it does not remove electrical verification. SONNE should review the drawings and acceptance requirements before confirming a project schedule.</p></details>
+        <details><summary>How is outdoor protection handled for a microwave OCU?</summary><p>Outdoor protection is defined around the actual assembly: mating interfaces, sealing method, materials or plating, fasteners, drainage where relevant, and the required environmental test conditions. Provide the installation and specification requirements for review. IP, salt-spray, EMC, or other compliance claims must be confirmed for the specific design rather than assumed.</p></details>
+        <details><summary>Can SONNE evaluate a 71–86 GHz waveguide diplexer?</summary><p>Yes, E-band 71–86 GHz is part of the stated backhaul application scope. Feasibility still depends on the exact transmit and receive sub-bands, guard band, insertion loss, isolation, return loss, power, flange, and mechanical envelope. Selected custom microwave and waveguide projects can reach 110 GHz, subject to topology and validation.</p></details>
+        <details><summary>What inputs are needed for a backhaul diplexer evaluation?</summary><p>Provide transmit and receive frequency ranges, bandwidth, guard band, rejection and isolation targets, insertion loss, return loss, power, waveguide size, flange, port orientation, mechanical limits, and environmental requirements. Include system and interface drawings where available. Unknown items can be marked TBD for engineering clarification before final feasibility review.</p></details>
+        <details><summary>Does tuning-free mean that no RF testing is required?</summary><p>No. Tuning-free refers to a design and manufacturing approach intended to reduce manual adjustment through controlled geometry and processes. It does not eliminate the need to verify the agreed electrical characteristics or production consistency. The applicable VNA measurements, acceptance limits, and test coverage should be defined for each design and order.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-backhaul-cta-title">
+    <div class="sn-container sn-cta sn-sol-backhaul__cta">
+      <div class="sn-sol-backhaul__cta-grid">
+        <div>
+          <h2 id="sol-backhaul-cta-title">Send Your Link Requirements</h2>
+          <p>Provide the link type, sub-bands and mechanical interface. Engineering can then confirm which OCU, diplexer or waveguide position is worth evaluating and what evidence the link needs.</p>
+          <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. Quotation, prototyping and production timing are assessed separately from that feedback.</p>
+          <div class="sn-sol-backhaul__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send Link Requirements</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare RFQ Inputs</a></div>
+          <p class="sn-sol-backhaul__fine-print">Email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> if a written summary is easier than a form.</p>
+        </div>
+        <div class="sn-sol-backhaul__groups">
+          <div><h3>Electrical</h3><ul><li>Tx and Rx sub-bands, bandwidth</li><li>Power, loss, isolation, return loss</li><li>Guard band and port definition</li></ul></div>
+          <div><h3>Mechanical</h3><ul><li>Waveguide size and flange</li><li>Polarization and orientation</li><li>ODU and antenna envelope</li></ul></div>
+          <div><h3>Outdoor</h3><ul><li>Installation exposure</li><li>Sealing and materials</li><li>Required environmental test</li></ul></div>
+          <div><h3>Delivery</h3><ul><li>Project stage and quantity</li><li>Validation and reporting needs</li><li>Required drawing revisions</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/solutions/microwave-backhaul/#webpage",
+        "name": "Waveguide and Filter Components for Microwave Backhaul",
+        "url": "https://rf-sonne.com/solutions/microwave-backhaul/",
+        "description": "E-band waveguide diplexers, OCU and tuning-free filters for point-to-point microwave backhaul, with precision machining and plating controls."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/solutions/microwave-backhaul/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://rf-sonne.com/solutions/"},
+          {"@type": "ListItem", "position": 3, "name": "Microwave Backhaul", "item": "https://rf-sonne.com/solutions/microwave-backhaul/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

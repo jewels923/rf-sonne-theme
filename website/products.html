@@ -1,0 +1,321 @@
+<!-- wp:html -->
+<div class="sn-products">
+  <style>
+    .sn-products { --products-label: .75rem; color: var(--sn-text); }
+    .sn-products *, .sn-products *::before, .sn-products *::after { box-sizing: border-box; }
+    .sn-products h2, .sn-products h3, .sn-products p, .sn-products ul, .sn-products ol, .sn-products figure { margin-top: 0; }
+    .sn-products h2 { margin-bottom: 18px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-products h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-products p, .sn-products li { line-height: 1.7; }
+    .sn-products a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-products img { display: block; max-width: 100%; height: auto; }
+    .sn-products .sn-products__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: var(--products-label); font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-products .sn-products__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
+
+    /* Hero: a portfolio index plate, not a second homepage. */
+    .sn-products .sn-products__hero { padding-block: clamp(128px, 10vw, 158px) clamp(56px, 6vw, 84px); }
+    .sn-products .sn-products__hero::before { opacity: .5; }
+    .sn-products .sn-products__hero-grid { display: grid; grid-template-columns: minmax(0, 1.16fr) minmax(300px, .84fr); gap: clamp(36px, 5.5vw, 76px); align-items: center; }
+    .sn-products .sn-products__hero .sn-breadcrumbs { color: rgba(252, 254, 255, .56); }
+    .sn-products .sn-products__hero .sn-breadcrumbs a { color: var(--sn-accent-on-dark); }
+    .sn-products .sn-products__hero-copy > p { max-width: 62ch; margin-bottom: 0; color: rgba(252, 254, 255, .8); font-size: 1.04rem; line-height: 1.7; }
+    .sn-products .sn-products__hero-media { width: 100%; }
+    .sn-products .sn-products__choice-tips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 700px; margin-top: 34px; border-top: 1px solid rgba(252, 254, 255, .18); }
+    .sn-products .sn-products__choice-tips a { display: block; padding: 14px 22px 0 0; border-right: 1px solid rgba(252, 254, 255, .14); color: rgba(252, 254, 255, .72); font-size: .82rem; line-height: 1.55; text-decoration: none; }
+    .sn-products .sn-products__choice-tips a:last-child { padding-right: 0; padding-left: 22px; border-right: 0; }
+    .sn-products .sn-products__choice-tips a:hover, .sn-products .sn-products__choice-tips a:focus-visible { color: var(--sn-white); }
+    .sn-products .sn-products__tip-no { display: block; margin-bottom: 5px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .09em; }
+    .sn-products .sn-products__choice-tips strong { display: block; margin-bottom: 2px; color: var(--sn-white); font-family: var(--sn-font-heading); font-size: .9rem; line-height: 1.4; }
+
+    /* Section rhythm and the shared record head. */
+    .sn-products .sn-products__record { margin-bottom: clamp(28px, 3.4vw, 42px); }
+    .sn-products .sn-products__record .sn-record-meta { font-size: var(--products-label); }
+    .sn-products .sn-products__record .sn-record-title > p { font-size: 1rem; }
+
+    /* Core ledger: five lines of equal priority. */
+    .sn-products .sn-products__core-table { min-width: 1000px; }
+    .sn-products .sn-products__core-table thead th:first-child { width: 25%; }
+    .sn-products .sn-products__line-name { display: flex; gap: 14px; align-items: center; }
+    .sn-products .sn-products__line-name img { width: 82px; height: 82px; flex: 0 0 82px; padding: 5px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-products .sn-products__line-name span { display: block; }
+    .sn-products .sn-products__line-name b { display: block; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: .98rem; line-height: 1.35; }
+    .sn-products .sn-products__line-name small { display: block; margin-top: 5px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .66rem; letter-spacing: .07em; }
+    .sn-products .sn-products__route { display: inline-flex; padding: 3px 8px; border: 1px solid var(--sn-line-strong); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .67rem; line-height: 1.5; white-space: nowrap; }
+    .sn-products .sn-products__table-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; white-space: nowrap; }
+
+    /* Supporting lines: three indexed plates. */
+    .sn-products .sn-products__support-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .sn-products .sn-products__support-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--sn-line); background: var(--sn-card); transition: border-color var(--sn-transition), transform var(--sn-transition); }
+    .sn-products .sn-products__support-card:hover { border-color: var(--sn-cyan-dark); transform: translateY(-2px); }
+    .sn-products .sn-products__support-card > img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+    .sn-products .sn-products__support-card:nth-child(3) > img { padding: 22px; object-fit: contain; background: var(--sn-paper-muted); }
+    .sn-products .sn-products__support-tag { display: flex; justify-content: space-between; gap: 10px; padding: 9px 16px; border-top: 1px solid var(--sn-line); border-bottom: 1px solid var(--sn-line); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .7rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; }
+    .sn-products .sn-products__support-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
+    .sn-products .sn-products__support-body .sn-chip { align-self: flex-start; margin-bottom: 14px; }
+    .sn-products .sn-products__support-body p { margin-bottom: 14px; color: var(--sn-text-muted); font-size: .9rem; line-height: 1.65; }
+    .sn-products .sn-products__support-body .sn-products__table-link { margin-top: auto; padding-top: 4px; }
+    .sn-products .sn-products__fine-print { margin: 10px 0 0; color: var(--sn-text-muted); font-size: .74rem; line-height: 1.55; }
+
+    /* Application ledger. */
+    .sn-products .sn-products__application-table { min-width: 900px; }
+    .sn-products .sn-products__application-table td:last-child a { display: block; margin-bottom: 7px; }
+    .sn-products .sn-products__application-table td:last-child a:last-child { margin-bottom: 0; }
+
+    /* Two route sheets. */
+    .sn-products .sn-products__route-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .sn-products .sn-products__route-card { display: flex; flex-direction: column; padding: clamp(24px, 3.4vw, 38px); border: 1px solid var(--sn-line); background: var(--sn-card); }
+    .sn-products .sn-products__route-card--custom { border-top: 3px solid var(--sn-cyan-dark); }
+    .sn-products .sn-products__route-card .sn-chip { align-self: flex-start; margin-bottom: 18px; }
+    .sn-products .sn-products__route-card p, .sn-products .sn-products__route-card li { color: var(--sn-text-muted); }
+    .sn-products .sn-products__route-card ul { margin: 0; padding-left: 20px; }
+    .sn-products .sn-products__route-card li { margin-bottom: 6px; font-size: .9rem; }
+    .sn-products .sn-products__route-card > .sn-products__actions { margin-top: 22px; }
+    .sn-products .sn-products__decision { margin: 22px 0; padding: 18px; border-left: 3px solid var(--sn-cyan-dark); background: var(--sn-paper-muted); color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .75rem; line-height: 1.9; }
+
+    /* Capability: image plate beside a portfolio fact ledger. */
+    .sn-products .sn-products__capability-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr); gap: clamp(30px, 5vw, 60px); align-items: start; }
+    .sn-products .sn-products__capability-grid figure { margin-bottom: 0; }
+    .sn-products .sn-products__capability-grid figure img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+    .sn-products .sn-products__capability-grid figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-products .sn-products__facts { width: 100%; border-collapse: collapse; }
+    .sn-products .sn-products__facts th, .sn-products .sn-products__facts td { padding: 13px 0; border-bottom: 1px solid var(--sn-line); text-align: left; vertical-align: top; line-height: 1.55; }
+    .sn-products .sn-products__facts tr:first-child th, .sn-products .sn-products__facts tr:first-child td { border-top: 1px solid var(--sn-line-strong); }
+    .sn-products .sn-products__facts th { width: 40%; padding-right: 20px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-products .sn-products__facts td { color: var(--sn-text-muted); font-size: .86rem; }
+
+    /* FAQ and RFQ use the shared record grammar. */
+    .sn-products .sn-products__faq { max-width: 1000px; }
+    .sn-products .sn-products__rfq { width: 100%; }
+
+    @media (max-width: 1024px) {
+      .sn-products .sn-products__hero-grid,
+      .sn-products .sn-products__capability-grid { grid-template-columns: 1fr; }
+      .sn-products .sn-products__hero-media { max-width: 560px; }
+      .sn-products .sn-products__route-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .sn-products .sn-products__support-grid { grid-template-columns: 1fr; }
+      .sn-products .sn-products__support-card { display: grid; grid-template-columns: 240px minmax(0, 1fr); }
+      .sn-products .sn-products__support-card > img { height: 100%; aspect-ratio: auto; }
+      .sn-products .sn-products__support-tag { grid-column: 1 / -1; }
+    }
+    @media (max-width: 760px) {
+      .sn-products .sn-products__choice-tips { grid-template-columns: 1fr; }
+      .sn-products .sn-products__choice-tips a { padding: 14px 0 12px; border-right: 0; border-bottom: 1px solid rgba(252, 254, 255, .14); }
+      .sn-products .sn-products__choice-tips a:last-child { padding-left: 0; border-bottom: 0; }
+
+      .sn-products .sn-products__core-table,
+      .sn-products .sn-products__application-table { min-width: 0; }
+      .sn-products .sn-products__core-table thead,
+      .sn-products .sn-products__application-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-products .sn-products__core-table, .sn-products .sn-products__core-table tbody, .sn-products .sn-products__core-table tr, .sn-products .sn-products__core-table th, .sn-products .sn-products__core-table td,
+      .sn-products .sn-products__application-table, .sn-products .sn-products__application-table tbody, .sn-products .sn-products__application-table tr, .sn-products .sn-products__application-table th, .sn-products .sn-products__application-table td { display: block; width: 100%; }
+      .sn-products .sn-products__core-table tbody tr,
+      .sn-products .sn-products__application-table tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
+      .sn-products .sn-products__core-table tbody tr:last-child,
+      .sn-products .sn-products__application-table tbody tr:last-child { border-bottom: 1px solid var(--sn-line-strong); }
+      .sn-products .sn-products__core-table tbody th,
+      .sn-products .sn-products__application-table tbody th { padding: 0 0 12px; border: 0; font-size: 1.04rem; }
+      .sn-products .sn-products__core-table tbody td,
+      .sn-products .sn-products__application-table tbody td { padding: 0 0 10px; border: 0; }
+      .sn-products .sn-products__core-table tbody td:last-child,
+      .sn-products .sn-products__application-table tbody td:last-child { padding-bottom: 0; }
+      .sn-products .sn-products__core-table tbody td::before,
+      .sn-products .sn-products__application-table tbody td::before { display: block; margin-bottom: 3px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; content: attr(data-label); }
+      .sn-products .sn-products__line-name img { width: 66px; height: 66px; flex-basis: 66px; }
+      .sn-products .sn-products__route { white-space: normal; }
+
+      .sn-products .sn-products__support-card { display: block; }
+      .sn-products .sn-products__support-card > img { height: auto; aspect-ratio: 16 / 10; }
+      .sn-products .sn-products__support-tag { border-top: 0; }
+      .sn-products .sn-products__actions .sn-btn { width: 100%; }
+    }
+    @media (max-width: 560px) {
+      .sn-products .sn-products__line-name img { display: none; }
+      .sn-products .sn-products__decision { font-size: .7rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sn-products .sn-products__support-card:hover { transform: none; }
+    }
+  </style>
+
+  <section class="sn-hero sn-products__hero" aria-labelledby="products-title">
+    <div class="sn-container">
+      <div class="sn-products__hero-grid">
+        <div class="sn-products__hero-copy">
+          <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Products</li></ol></nav>
+          <span class="sn-products__eyebrow">Product index · five core lines + three supporting routes</span>
+          <h1 id="products-title">RF, Microwave and Precision Enclosure Product Lines</h1>
+          <p>Navigate five core RF and precision product lines, with IBS/DAS and FTTX as supporting lines and RF accessories for project completion. Start with a standard selection or submit a custom requirement for engineering assessment.</p>
+          <div class="sn-products__actions"><a class="sn-btn sn-btn--primary" href="#core-lines">Find Your Product Line</a><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Request a Quote</a></div>
+          <div class="sn-products__choice-tips"><a href="#core-lines"><span class="sn-products__tip-no">A / Device route</span><strong>Know the device name?</strong>Compare functions and first selection inputs by product line.</a><a href="#applications"><span class="sn-products__tip-no">B / Application route</span><strong>Know only the application?</strong>Reverse-map the system problem to possible product lines.</a></div>
+        </div>
+        <figure class="sn-hero-plate sn-products__hero-media">
+          <div class="sn-hero-plate__tag"><span>Plate 01</span><span>Portfolio grouping</span></div>
+          <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave.webp" alt="Microwave and RF components" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async"></div>
+          <figcaption>RF and microwave product grouping visual. It illustrates the portfolio and does not define a specific model or its parameters.</figcaption>
+        </figure>
+      </div>
+      <div class="sn-hero-meta"><span><b>Index</b>5 core · 3 support</span><span><b>Core scope</b>DC–40 GHz</span><span><b>Custom scope</b>Up to 110 GHz</span><span><b>RFQ</b>One reviewable submission</span></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="core-lines" aria-labelledby="products-core-title">
+    <div class="sn-container">
+      <div class="sn-products__record sn-record-head">
+        <div class="sn-record-meta"><span><b>01</b> / Product lines</span><span>5 entries · equal priority</span></div>
+        <div class="sn-record-title"><h2 id="products-core-title">Choose from Five Core Product Lines</h2><p>Use this master ledger to identify the right engineering category. The five core lines have equal priority; model-level detail pages are a later catalog phase, so current routes lead to category guidance and RFQ review.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="products-core-title">
+        <table class="sn-ledger sn-products__core-table">
+          <thead><tr><th scope="col">Product line</th><th scope="col">Problem it addresses</th><th scope="col">First selection inputs</th><th scope="col">Standard / custom path</th><th scope="col">Details</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><div class="sn-products__line-name"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="lazy" decoding="async"><span><b>RF &amp; Microwave Filters</b><small>Core line 01</small></span></div></th><td data-label="Problem it addresses">Pass required frequencies while suppressing unwanted signals.</td><td data-label="First selection inputs">Frequency, bandwidth, rejection; then loss, power and interface.</td><td data-label="Standard / custom path"><span class="sn-products__route">SKU parameters or custom structure</span></td><td data-label="Details"><a class="sn-products__table-link" href="/products/rf-microwave-filters/">View filters →</a></td></tr>
+            <tr><th scope="row"><div class="sn-products__line-name"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/straight-waveguide.webp" alt="straight waveguide" width="720" height="720" loading="lazy" decoding="async"><span><b>Waveguide &amp; Microwave</b><small>Core line 02</small></span></div></th><td data-label="Problem it addresses">Transmit, combine or polarize high-frequency signals through defined interfaces.</td><td data-label="First selection inputs">Frequency band, waveguide and flange, polarization and port function.</td><td data-label="Standard / custom path"><span class="sn-products__route">Assembly selection or custom design</span></td><td data-label="Details"><a class="sn-products__table-link" href="/products/waveguide-components/">View waveguide →</a></td></tr>
+            <tr><th scope="row"><div class="sn-products__line-name"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-combiner-v2.webp" alt="RF combiner" width="1024" height="571" loading="lazy" decoding="async"><span><b>Combiners &amp; Duplexers</b><small>Core line 03</small></span></div></th><td data-label="Problem it addresses">Combine or separate frequency paths across a defined port network.</td><td data-label="First selection inputs">Band plan, ports and signal direction, isolation, power and PIM.</td><td data-label="Standard / custom path"><span class="sn-products__route">Standard function or custom band plan</span></td><td data-label="Details"><a class="sn-products__table-link" href="/products/rf-combiners/">View combiners →</a></td></tr>
+            <tr><th scope="row"><div class="sn-products__line-name"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-basestation.webp" alt="Base station RF infrastructure" width="1024" height="1024" loading="lazy" decoding="async"><span><b>Base Station RF</b><small>Core line 04</small></span></div></th><td data-label="Problem it addresses">Integrate passive RF hardware into base-station radio and antenna systems.</td><td data-label="First selection inputs">4T4R/8TR context, N28/N78 or other band plan, interfaces and PIM.</td><td data-label="Standard / custom path"><span class="sn-products__route">Base-station selection or custom integration</span></td><td data-label="Details"><a class="sn-products__table-link" href="/products/base-station-rf/">View base station RF →</a></td></tr>
+            <tr><th scope="row"><div class="sn-products__line-name"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-cabinet.webp" alt="Telecom enclosure cabinet" width="1024" height="1024" loading="lazy" decoding="async"><span><b>Precision Enclosures</b><small>Core line 05</small></span></div></th><td data-label="Problem it addresses">Protect and integrate equipment within mechanical, thermal and shielding constraints.</td><td data-label="First selection inputs">2D/3D drawings, GD&amp;T, thermal, shielding and assembly needs.</td><td data-label="Standard / custom path"><span class="sn-products__route">Configured enclosure or drawing-based OEM/ODM</span></td><td data-label="Details"><a class="sn-products__table-link" href="/products/precision-enclosures/">View enclosures →</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-note sn-products__note">A category match is not yet a confirmed model selection. Specific parameters, documentation and custom feasibility are verified against the exact requirement.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="products-support-title">
+    <div class="sn-container">
+      <div class="sn-products__record sn-record-head">
+        <div class="sn-record-meta"><span><b>02</b> / Supporting routes</span><span>3 secondary entries</span></div>
+        <div class="sn-record-title"><h2 id="products-support-title">Find Supporting IBS/DAS, FTTX and RF Accessories</h2><p>Use these secondary routes when the requirement belongs to indoor coverage, fiber distribution or system completion. They remain visually and structurally separate from the five core lines.</p></div>
+      </div>
+      <div class="sn-products__support-grid">
+        <article class="sn-products__support-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-ibs.webp" alt="In-building wireless coverage" width="1024" height="1024" loading="lazy" decoding="async"><div class="sn-products__support-tag"><span>Support 01</span><span>IBS / DAS</span></div><div class="sn-products__support-body"><span class="sn-chip">Supporting product line</span><h3>IBS / DAS Components</h3><p>Low-PIM splitters and couplers, plus POI requirements for indoor coverage and distributed antenna systems.</p><a class="sn-products__table-link" href="/products/ibs-das-components/">Browse IBS / DAS →</a></div></article>
+        <article class="sn-products__support-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/market-ftth.webp" alt="FTTH fiber access network" width="1024" height="1024" loading="lazy" decoding="async"><div class="sn-products__support-tag"><span>Support 02</span><span>FTTX</span></div><div class="sn-products__support-body"><span class="sn-chip">Supporting product line</span><h3>FTTX Fiber Distribution</h3><p>Fiber distribution boxes, optical distribution enclosures and splice closures for FTTX installations.</p><a class="sn-products__table-link" href="/products/fttx-fiber-distribution/">Browse FTTX →</a></div></article>
+        <article class="sn-products__support-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/directional-coupler-4-3-10-female.webp" alt="directional coupler with 4.3-10 female connectors" width="720" height="720" loading="lazy" decoding="async"><div class="sn-products__support-tag"><span>Support 03</span><span>RF accessories</span></div><div class="sn-products__support-body"><span class="sn-chip">Project-completion entry</span><h3>RF Accessories</h3><p>Attenuators, loads, cable assemblies and related items used to complete a defined RF requirement.</p><a class="sn-products__table-link" href="/products/rf-accessories/">Browse RF accessories →</a><p class="sn-products__fine-print">Image: directional coupler example only; it does not represent the full accessory range or imply stock.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="applications" aria-labelledby="products-applications-title">
+    <div class="sn-container">
+      <div class="sn-products__record sn-record-head">
+        <div class="sn-record-meta"><span><b>03</b> / Applications</span><span>6 system entries</span></div>
+        <div class="sn-record-title"><h2 id="products-applications-title">Find Products by Application</h2><p>If the system is clearer than the component name, start with the application. These are candidate routes for evaluation, not automatic product selections.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="products-applications-title">
+        <table class="sn-ledger sn-products__application-table">
+          <thead><tr><th scope="col">Application</th><th scope="col">System question</th><th scope="col">Possible product lines</th><th scope="col">Next step</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">5G base station</th><td data-label="System question">How do radio architecture, bands and PIM constraints connect?</td><td data-label="Possible product lines">Base Station RF; Filters; Combiners</td><td data-label="Next step"><a href="/solutions/5g-base-station/">Open application guide</a><a href="/products/base-station-rf/">Open product line</a></td></tr>
+            <tr><th scope="row">Microwave backhaul</th><td data-label="System question">Which Tx/Rx bands, outdoor interfaces and waveguide functions are required?</td><td data-label="Possible product lines">Waveguide &amp; Microwave; Filters</td><td data-label="Next step"><a href="/solutions/microwave-backhaul/">Open application guide</a><a href="/products/waveguide-components/">Open product line</a></td></tr>
+            <tr><th scope="row">Satellite earth station</th><td data-label="System question">How are polarization, flange and Ku/Ka-band interfaces defined?</td><td data-label="Possible product lines">Waveguide &amp; Microwave</td><td data-label="Next step"><a href="/solutions/satellite-earth-station/">Open application guide</a><a href="/products/waveguide-components/">Open product line</a></td></tr>
+            <tr><th scope="row">DAS / IBS</th><td data-label="System question">Where are low-PIM splitting, coupling and POI functions needed indoors?</td><td data-label="Possible product lines">IBS / DAS Components</td><td data-label="Next step"><a href="/solutions/das-ibs/">Open application guide</a><a href="/products/ibs-das-components/">Open product line</a></td></tr>
+            <tr><th scope="row">FTTX</th><td data-label="System question">Which fiber distribution, connection and outdoor closure structures are needed?</td><td data-label="Possible product lines">FTTX Fiber Distribution</td><td data-label="Next step"><a href="/solutions/fttx/">Open application guide</a><a href="/products/fttx-fiber-distribution/">Open product line</a></td></tr>
+            <tr><th scope="row">Data-center enclosures</th><td data-label="System question">What envelope, thermal, shielding and integration constraints apply?</td><td data-label="Possible product lines">Precision Enclosures</td><td data-label="Next step"><a href="/solutions/data-center-enclosures/">Open application guide</a><a href="/products/precision-enclosures/">Open product line</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-note sn-products__note">For a cross-line requirement, select every relevant category in the <a href="/request-a-quote/">RFQ</a> and upload one BOM or system requirement. Manufacturability is assessed item by item. <a href="/solutions/">Explore all solutions by application</a>.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="products-routes-title">
+    <div class="sn-container">
+      <div class="sn-products__record sn-record-head">
+        <div class="sn-record-meta"><span><b>04</b> / Selection routes</span><span>2 starting points</span></div>
+        <div class="sn-record-title"><h2 id="products-routes-title">Choose a Standard Selection or Custom Evaluation Route</h2><p>Both paths can begin before every detail is final. The difference is the starting evidence: a defined model and its parameters, or a target specification and system constraints.</p></div>
+      </div>
+      <div class="sn-products__route-grid">
+        <article class="sn-products__route-card"><span class="sn-chip">Route A · Standard selection</span><h3>Start with a model and available parameters</h3><p>Use the inherited set of 89 SKU parameter records as a catalog-building foundation. Parameters and document status must be checked item by item before release; this does not imply that every item is in stock.</p><div class="sn-products__decision">Known model? → Check parameters<br>Key targets satisfied? → Confirm documents<br>Open mismatch? → Move to custom review</div><ul><li>Identify the model and product line.</li><li>Compare critical parameters and interfaces.</li><li>State quantity and target project stage.</li></ul><div class="sn-products__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Request Model Review</a></div></article>
+        <article class="sn-products__route-card sn-products__route-card--custom"><span class="sn-chip">Route B · Custom evaluation</span><h3>Start with a specification, band plan or drawing</h3><p>Submit the requirement when frequency, structure or interfaces do not match an available selection. A custom request enters feasibility review; it is not automatically a confirmed manufacturable design.</p><div class="sn-products__decision">New band or structure? → Define function<br>Mechanical changes? → Attach drawings<br>Unknown fields? → Mark TBD, do not guess</div><ul><li>Frequency, performance and interface targets.</li><li>Mechanical envelope and operating environment.</li><li>Expected quantity and validation needs.</li></ul><div class="sn-products__actions"><a class="sn-btn sn-btn--primary" href="/engineering/custom-rf-design/">Start a Custom Evaluation</a><a class="sn-products__table-link" href="/request-a-quote/">Submit custom RFQ →</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="products-capability-title">
+    <div class="sn-container">
+      <div class="sn-products__record sn-record-head">
+        <div class="sn-record-meta"><span><b>05</b> / Manufacturing scope</span><span>6 portfolio facts</span></div>
+        <div class="sn-record-title"><h2 id="products-capability-title">Check the Manufacturing Scope behind the Product Portfolio</h2><p>Portfolio-level facts help screen a manufacturing partner. Exact product specifications, test conditions and acceptance limits remain with the relevant category and project engineering plan.</p></div>
+      </div>
+      <div class="sn-products__capability-grid">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-production-line.webp" alt="RF component production line with automated equipment" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>RF component production line at SONNE's Cixi, Ningbo manufacturing base.</figcaption></figure>
+        <div>
+          <table class="sn-products__facts"><tbody>
+            <tr><th scope="row">Core frequency scope</th><td>DC–40 GHz across the core production portfolio.</td></tr>
+            <tr><th scope="row">Selected custom scope</th><td>Up to 110 GHz for selected custom microwave and waveguide designs, depending on topology and validation.</td></tr>
+            <tr><th scope="row">Precision machining</th><td>More than 50 high-precision CNC machines.</td></tr>
+            <tr><th scope="row">RF verification</th><td>VNA, PIM and reliability testing capabilities, configured by product and project plan.</td></tr>
+            <tr><th scope="row">Automated testing</th><td>Multi-port matrix-switch automation; no portfolio-wide uniform coverage claim.</td></tr>
+            <tr><th scope="row">Manufacturing identity</th><td>ISO 9001; manufacturing base in Cixi, Ningbo.</td></tr>
+          </tbody></table>
+          <div class="sn-products__actions"><a class="sn-btn sn-btn--primary" href="/engineering/">Review Engineering Capabilities</a><a class="sn-products__table-link" href="/about/factory/">Verify the factory →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="products-faq-title">
+    <div class="sn-container">
+      <div class="sn-products__record sn-record-head">
+        <div class="sn-record-meta"><span><b>06</b> / Selection notes</span><span>5 questions</span></div>
+        <div class="sn-record-title"><h2 id="products-faq-title">Product Line Selection FAQs</h2><p>Navigation-level answers for supply scope, customization and RFQ routing. Detailed electrical requirements belong in the relevant product and engineering review.</p></div>
+      </div>
+      <div class="sn-faq sn-products__faq">
+        <details open><summary>Which SONNE product lines are core product lines?</summary><p>The five core lines are RF and microwave filters, waveguide and microwave components, combiners and duplexers, base-station RF, and precision enclosures. IBS/DAS and FTTX are supporting product lines, while RF accessories provide additional project-completion items. This hierarchy helps buyers reach the main engineering categories before browsing supplementary products.</p></details>
+        <details><summary>Can SONNE manufacture non-standard RF components?</summary><p>SONNE supports custom evaluation across its listed RF, microwave, waveguide, combiner and enclosure product lines. Feasibility depends on the requested frequency, topology, performance, mechanical interface and validation requirements. Submit a specification, band plan or drawing for engineering review; a non-standard request is not automatically treated as a confirmed manufacturable design.</p></details>
+        <details><summary>How do I choose the right product line?</summary><p>Start with the function you need: filtering, waveguide transmission or polarization, band combining or separation, base-station RF integration, or equipment enclosure. If you know only the application, use the application navigator. For a project spanning several lines, select all relevant categories in the RFQ and upload one BOM or system requirement.</p></details>
+        <details><summary>What frequency range does the product portfolio cover?</summary><p>The core production portfolio covers DC to 40 GHz. Selected custom microwave and waveguide designs can reach up to 110 GHz, subject to topology and validation. This does not mean every product line or model covers the full range. Check the relevant category and submit your exact frequency band for confirmation.</p></details>
+        <details><summary>Can I request a quote before selecting a specific model?</summary><p>Yes. You can submit an application, target specification, band plan, drawing or BOM without choosing a model. Identify the product line if known and include expected quantities and key constraints. Engineering can then determine the appropriate review path. A complete RFQ typically receives initial engineering feedback in about 24 hours, not a guaranteed quotation or delivery date.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="products-rfq-title">
+    <div class="sn-container">
+      <div class="sn-sheet sn-products__rfq">
+        <div class="sn-sheet__head"><span>RFQ route · product index</span><span>One line or a multi-line BOM</span></div>
+        <div class="sn-sheet__grid">
+          <div>
+            <h2 id="products-rfq-title">Send One RFQ for One Line or a Multi-Line BOM</h2>
+            <p>Take the selected categories and project inputs into one RFQ instead of repeating common contact information for each line. The RFQ route supports standard model requests and custom project submissions.</p>
+            <p>Not ready to submit? <a href="#core-lines">Return to Find Your Product Line</a> and compare the core navigation again.</p>
+            <div class="sn-products__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request a Quote</a></div>
+          </div>
+          <div class="sn-sheet__panel">
+            <h3>Build one reviewable submission</h3>
+            <ul><li>Any of the five core lines</li><li>IBS/DAS or FTTX supporting lines</li><li>RF accessories</li><li>Model, specification or custom route</li><li>Expected quantity and target stage</li><li>Notes, BOM and supporting attachments</li></ul>
+            <p>For a multi-line project, upload one BOM spreadsheet or system requirement and identify the relevant product categories. Engineering assesses each item and its feasibility separately.</p>
+            <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. Quotations and delivery timing require project-specific evaluation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://rf-sonne.com/products/#collection",
+        "url": "https://rf-sonne.com/products/",
+        "name": "RF, Microwave and Precision Enclosure Product Lines",
+        "description": "Explore SONNE product lines: RF and microwave filters, waveguide components, combiners and duplexers, base-station RF, precision enclosures, plus IBS/DAS and FTTX.",
+        "isPartOf": { "@id": "https://rf-sonne.com/#website" },
+        "breadcrumb": { "@id": "https://rf-sonne.com/products/#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

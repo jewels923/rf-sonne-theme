@@ -1,0 +1,59 @@
+<p>An RF test report is evidence that a specific piece of hardware met a defined limit under a defined measurement setup, and it should be read with the same care as the specification it is meant to prove.</p>
+
+<h2>A Test Report Is Evidence, Not a Brochure</h2>
+<p>A report that shows a smooth curve and a green “PASS” stamp is not enough. The reader needs to know what was measured, how it was measured, which unit was measured and what limit applied. Without that context, two reports cannot be compared, and a purchasing decision may rest on a curve that belongs to a different configuration or a different test condition.</p>
+<p>The first check is whether the report matches the part number, revision and configuration in the purchase order. A report for a connectorized prototype does not automatically apply to a sealed production unit, and a report measured with a different flange or cable interface may not represent the delivered hardware.</p>
+
+<h2>Identify the Device Under Test</h2>
+<p>Look for the part number, serial number or lot code, the hardware revision and the date of test. If the report covers a sample from a production lot, the sample identity and the sampling basis should be stated. If it covers a first article, the drawing revision and the approved configuration should be referenced.</p>
+<p>The configuration details matter: connector types, flange standards, cable lengths, adapters and any test fixture. A measurement that includes a long cable or an adapter is still valid, but the reference plane must be clear. Otherwise the insertion loss may include test hardware rather than the device alone.</p>
+
+<h2>Read the VNA Setup and Calibration</h2>
+<p>For S-parameter measurements, the report should identify the instrument, the calibration method, the calibration kit, the reference plane, the frequency range, the number of points and the intermediate frequency bandwidth. Averaging and smoothing should also be disclosed because they can make a noisy response look cleaner than it is.</p>
+<p>Calibration is the foundation of the measurement. A coaxial calibration may use short-open-load-through, while a waveguide measurement may use through-reflect-line. The method should suit the interface and the frequency range. If the report does not state the calibration method or the reference plane, the reader cannot tell whether a flange or connector effect has been removed.</p>
+<p>Measurement uncertainty is another useful indicator. A limit that sits inside the uncertainty band of the test setup is difficult to judge. A mature report states the uncertainty or at least the repeatability of the measurement so the reader knows how much margin the result represents.</p>
+
+<h2>Interpret the S-Parameters and Limits</h2>
+<p>Insertion loss is usually read from the transmission coefficient across the passband. Check whether the reported value is a maximum, a minimum or a typical, and whether it includes the test fixture. Return loss is read from the reflection coefficient; confirm whether the report shows return loss in decibels or VSWR, because the two are related but not interchangeable.</p>
+<p>Rejection and isolation should be read against the frequency mask, not only at a single point. A curve that meets the limit at the centre of the stopband may fail at the band edge. Look for the worst-case value inside each specified range and compare it with the limit that applies to that range.</p>
+<p>Also check the frequency range and the number of points. A narrow measurement range can miss a spurious response, and a coarse frequency grid can miss a narrow resonance. The report should cover the range that the specification defines, with enough resolution to support the acceptance decision.</p>
+
+<figure>
+<img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-tuning-line.webp" alt="Technicians tuning RF filters with vector network analyzers" width="1891" height="1064" loading="lazy" decoding="async">
+<figcaption>VNA-based alignment and verification. The test report should identify the setup, calibration and reference plane behind the curves, not only the final pass or fail result.</figcaption>
+</figure>
+
+<h2>Understand the PIM Test Conditions</h2>
+<p>Passive intermodulation results are meaningless without the test conditions. The report should state the two carrier frequencies, the power per carrier, the intermodulation order, the measurement frequency and the test equipment. It should also state how the device was terminated and whether the test was performed in a controlled environment.</p>
+<p>A PIM value measured at low power cannot be extrapolated to a high-power site condition. The third-order product is the most common reported metric, but fifth-order and seventh-order products may matter in some systems. If the specification calls for a particular order and power, confirm that the report uses the same basis.</p>
+<p>PIM is sensitive to connector torque, cable movement, contamination and nearby metal. A report should identify the test configuration and any handling precautions. If the result is close to the limit, the repeatability of the setup becomes part of the evidence.</p>
+
+<h2>Review Reliability and Environmental Data Separately</h2>
+<p>VNA and PIM data describe RF performance at the time of test. Reliability and environmental tests answer a different question: whether the performance survives temperature cycling, humidity, corrosion, vibration or other exposures. Read those results against the applicable test standard and the duration or number of cycles.</p>
+<p>Check whether the RF performance was measured before and after the exposure, and whether the acceptance criteria are the same. A report that shows only a visual inspection after an environmental test does not demonstrate RF stability. A report that shows a full S-parameter comparison before and after is more useful, provided the test conditions and sample identity are clear.</p>
+
+<h2>Traceability and Acceptance</h2>
+<p>Traceability connects the report to the hardware. Look for a serial or lot number, the test date, the operator or station identifier and the instrument calibration status. If the report is issued for a production lot, the sampling plan and the treatment of nonconforming units should be defined.</p>
+<p>The acceptance section should state the specification, the measured result and the pass or fail decision for each parameter. A report that lists only measured values without limits leaves the reader to reconstruct the acceptance criteria. A report that lists only pass or fail without data cannot show how much margin exists.</p>
+
+<h2>Red Flags in an RF Test Report</h2>
+<ul>
+<li>No part number, revision or serial or lot identity.</li>
+<li>No calibration method, reference plane or instrument status.</li>
+<li>Limits that are not connected to a specification or drawing.</li>
+<li>Curves that are smoothed without disclosure.</li>
+<li>PIM results without carrier power, frequencies or intermodulation order.</li>
+<li>Environmental results without before-and-after RF measurements.</li>
+<li>Pass or fail statements with no measured data behind them.</li>
+</ul>
+<p>For a wider view of how SONNE handles VNA, PIM, reliability and matrix-switch testing, see <a href="/engineering/testing-quality/">testing and quality</a>. The <a href="/engineering/manufacturing/">manufacturing</a> page covers process control, and the <a href="/products/rf-microwave-filters/">RF and microwave filter product line</a> shows the product context. If a project needs a specific report format or data package, state it in the <a href="/resources/rfq-guide/">RFQ</a> and submit the requirement through <a href="/request-a-quote/">Request a Quote</a>.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>What should an RF test report include at minimum?</h3>
+<p>Device identity, configuration, test date, instrument and calibration details, frequency range, measurement setup, acceptance limits, measured results and a clear pass or fail decision. PIM and environmental results need their own test conditions.</p>
+<h3>Can I compare reports from two suppliers directly?</h3>
+<p>Only when the test setup, reference plane, calibration, limits and device configuration are equivalent. A lower loss figure may come from a different fixture or a shorter cable rather than a better filter.</p>
+<h3>Does a passing report guarantee field performance?</h3>
+<p>No. It shows that a defined sample met defined limits under defined conditions. Field performance also depends on installation, mating hardware, environment and the system around the filter.</p>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What should an RF test report include at minimum?","acceptedAnswer":{"@type":"Answer","text":"Device identity, configuration, test date, instrument and calibration details, frequency range, measurement setup, acceptance limits, measured results and a clear pass or fail decision. PIM and environmental results need their own test conditions."}},{"@type":"Question","name":"Can I compare reports from two suppliers directly?","acceptedAnswer":{"@type":"Answer","text":"Only when the test setup, reference plane, calibration, limits and device configuration are equivalent. A lower loss figure may come from a different fixture or a shorter cable rather than a better filter."}},{"@type":"Question","name":"Does a passing report guarantee field performance?","acceptedAnswer":{"@type":"Answer","text":"No. It shows that a defined sample met defined limits under defined conditions. Field performance also depends on installation, mating hardware, environment and the system around the filter."}}]}</script>

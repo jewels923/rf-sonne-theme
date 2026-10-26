@@ -1,0 +1,402 @@
+<!-- wp:html -->
+<div class="sn-rfq-guide sn-legacy-record">
+  <style>
+    .sn-rfq-guide { color: var(--sn-text); }
+    .sn-rfq-guide *, .sn-rfq-guide *::before, .sn-rfq-guide *::after { box-sizing: border-box; }
+    .sn-rfq-guide h2, .sn-rfq-guide h3, .sn-rfq-guide p, .sn-rfq-guide ul, .sn-rfq-guide ol, .sn-rfq-guide dl, .sn-rfq-guide dd, .sn-rfq-guide figure, .sn-rfq-guide pre { margin-top: 0; }
+    .sn-rfq-guide h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-rfq-guide h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-rfq-guide p, .sn-rfq-guide li, .sn-rfq-guide dd { line-height: 1.7; }
+    .sn-rfq-guide a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-rfq-guide img { display: block; max-width: 100%; height: auto; }
+    .sn-rfq-guide figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-rfq-guide .sn-rfq-guide__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-rfq-guide .sn-rfq-guide__hero .sn-rfq-guide__eyebrow { color: var(--sn-cyan); }
+    .sn-rfq-guide .sn-rfq-guide__hero-grid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(340px, .94fr); gap: clamp(34px, 5vw, 72px); align-items: center; }
+    .sn-rfq-guide .sn-rfq-guide__hero-copy > p { margin-bottom: 18px; font-size: 1.03rem; }
+    .sn-rfq-guide .sn-rfq-guide__fields { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; padding: 0; list-style: none; }
+    .sn-rfq-guide .sn-rfq-guide__fields li { padding: 6px 11px; border: 1px solid rgba(252, 254, 255, .28); color: rgba(252, 254, 255, .86); font-family: var(--sn-font-mono); font-size: .69rem; line-height: 1.5; }
+    .sn-rfq-guide .sn-rfq-guide__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-rfq-guide .sn-rfq-guide__hero-note { margin: 22px 0 0; color: rgba(252, 254, 255, .72); font-size: .84rem; line-height: 1.6; }
+    .sn-rfq-guide .sn-rfq-guide__hero-media { margin-bottom: 0; }
+    .sn-rfq-guide .sn-rfq-guide__hero-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-rfq-guide .sn-rfq-guide__hero figcaption { color: rgba(252, 254, 255, .62); }
+    .sn-rfq-guide .sn-rfq-guide__intro { max-width: 860px; margin-bottom: 36px; }
+    .sn-rfq-guide .sn-rfq-guide__intro > p { margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.02rem; }
+    .sn-rfq-guide .sn-rfq-guide__split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .9fr); gap: clamp(26px, 4vw, 48px); align-items: center; margin-bottom: 34px; }
+    .sn-rfq-guide .sn-rfq-guide__split figure { margin-bottom: 0; }
+    .sn-rfq-guide .sn-rfq-guide__split img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-rfq-guide .sn-rfq-guide__prose ul { margin: 0 0 18px; padding-left: 20px; }
+    .sn-rfq-guide .sn-rfq-guide__prose li { margin-bottom: 8px; color: var(--sn-text-muted); }
+    .sn-rfq-guide .sn-rfq-guide__prose li strong { color: var(--sn-navy); }
+    .sn-rfq-guide .sn-rfq-guide__prose p:last-child { margin-bottom: 0; }
+    .sn-rfq-guide caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .8rem; text-align: left; }
+    .sn-rfq-guide .sn-rfq-guide__spec-table { min-width: 960px; }
+    .sn-rfq-guide .sn-rfq-guide__spec-table tbody th { color: var(--sn-navy); }
+    .sn-rfq-guide .sn-rfq-guide__matrix { min-width: 940px; }
+    .sn-rfq-guide .sn-rfq-guide__matrix tbody th { color: var(--sn-navy); }
+    .sn-rfq-guide .sn-rfq-guide__bandplan { min-width: 900px; }
+    .sn-rfq-guide .sn-table-wrap + .sn-table-wrap { margin-top: 26px; }
+    .sn-rfq-guide .sn-rfq-guide__verify { min-width: 940px; }
+    .sn-rfq-guide .sn-rfq-guide__verify tbody th { color: var(--sn-navy); }
+    .sn-rfq-guide .sn-rfq-guide__note { margin: 18px 0 0; padding: 16px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-rfq-guide .sn-rfq-guide__note p { margin-bottom: 0; }
+    .sn-rfq-guide .sn-rfq-guide__links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 22px; }
+    .sn-rfq-guide .sn-rfq-guide__text-link { display: inline-flex; min-height: 44px; align-items: center; font-weight: 700; }
+    .sn-rfq-guide .sn-rfq-guide__templates { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 20px; align-items: start; }
+    .sn-rfq-guide .sn-rfq-guide__template { min-width: 0; padding: 20px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-rfq-guide .sn-rfq-guide__template h3 { margin-bottom: 14px; }
+    .sn-rfq-guide .sn-rfq-guide__template p { margin: 14px 0 0; color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-rfq-guide .sn-rfq-guide__template pre { margin-bottom: 0; padding: 20px; overflow-x: auto; border: 1px solid rgba(140, 196, 255, .35); background: var(--sn-navy-deep); color: rgba(252, 254, 255, .88); font-family: var(--sn-font-mono); font-size: .74rem; line-height: 1.7; white-space: pre; tab-size: 2; }
+    .sn-rfq-guide .sn-rfq-guide__template-stack { display: grid; gap: 20px; }
+    .sn-rfq-guide .sn-rfq-guide__faq { max-width: 920px; }
+    .sn-rfq-guide .sn-rfq-guide__faq details { border-bottom: var(--sn-border); }
+    .sn-rfq-guide .sn-rfq-guide__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; list-style: none; cursor: pointer; }
+    .sn-rfq-guide .sn-rfq-guide__faq summary::-webkit-details-marker { display: none; }
+    .sn-rfq-guide .sn-rfq-guide__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-rfq-guide .sn-rfq-guide__faq details[open] summary::after { content: '−'; }
+    .sn-rfq-guide .sn-rfq-guide__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-rfq-guide .sn-rfq-guide__faq details a { font-weight: 700; }
+    .sn-rfq-guide .sn-rfq-guide__final h2, .sn-rfq-guide .sn-rfq-guide__final h3 { color: var(--sn-white); }
+    .sn-rfq-guide .sn-rfq-guide__final p, .sn-rfq-guide .sn-rfq-guide__final li { color: rgba(252, 254, 255, .8); }
+    .sn-rfq-guide .sn-rfq-guide__final .sn-rfq-guide__eyebrow { color: var(--sn-cyan); }
+    .sn-rfq-guide .sn-rfq-guide__cta-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+    .sn-rfq-guide .sn-rfq-guide__nodes { display: grid; gap: 0; border-top: 1px solid rgba(252, 254, 255, .22); }
+    .sn-rfq-guide .sn-rfq-guide__node { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 10px; padding: 18px 0; border-bottom: 1px solid rgba(252, 254, 255, .22); }
+    .sn-rfq-guide .sn-rfq-guide__node-index { color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.8; }
+    .sn-rfq-guide .sn-rfq-guide__node h3 { margin-bottom: 4px; font-size: 1rem; }
+    .sn-rfq-guide .sn-rfq-guide__node p { margin-bottom: 0; font-size: .84rem; }
+    .sn-rfq-guide .sn-rfq-guide__final a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-rfq-guide .sn-rfq-guide__fine-print { margin-top: 18px; font-size: .82rem; }
+    .sn-rfq-guide .sn-rfq-guide__section-target { scroll-margin-top: 112px; }
+    @media (max-width: 1020px) {
+      .sn-rfq-guide .sn-rfq-guide__hero-grid, .sn-rfq-guide .sn-rfq-guide__cta-grid { grid-template-columns: 1fr; }
+      .sn-rfq-guide .sn-rfq-guide__hero-media { max-width: 760px; }
+    }
+    @media (max-width: 900px) {
+      .sn-rfq-guide .sn-rfq-guide__split, .sn-rfq-guide .sn-rfq-guide__templates { grid-template-columns: minmax(0, 1fr); }
+      .sn-rfq-guide .sn-rfq-guide__split figure { max-width: 720px; order: -1; }
+    }
+    @media (max-width: 560px) {
+      .sn-rfq-guide .sn-rfq-guide__actions .sn-btn { width: 100%; }
+      .sn-rfq-guide .sn-rfq-guide__template { padding: 16px; }
+      .sn-rfq-guide .sn-rfq-guide__template pre { padding: 16px; font-size: .7rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+      .sn-rfq-guide .sn-rfq-guide__faq details p { padding-right: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sn-rfq-guide *, .sn-rfq-guide *::before, .sn-rfq-guide *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+    @media print {
+      .sn-rfq-guide .sn-rfq-guide__faq details:not([open]) > p { display: block !important; }
+      .sn-rfq-guide .sn-rfq-guide__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-rfq-guide__hero" aria-labelledby="rfq-guide-title">
+    <div class="sn-container sn-rfq-guide__hero-grid">
+      <div class="sn-rfq-guide__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/resources">Resources</a></li><li aria-current="page">RFQ Guide</li></ol></nav>
+        <span class="sn-rfq-guide__eyebrow">RFQ checklist · Band plans · Verification inputs</span>
+        <h1 id="rfq-guide-title">How to Prepare an RFQ Engineers Can Quote Directly</h1>
+        <p>An actionable quotation starts with a specification an engineer can review. This checklist organizes the frequency, performance, interface, mechanical, environmental, quantity and verification fields that belong in a custom RF, waveguide or enclosure RFQ.</p>
+        <ul class="sn-rfq-guide__fields" aria-label="Core RFQ fields"><li>Frequency and bandwidth</li><li>Insertion loss</li><li>Rejection and isolation</li><li>Power</li><li>PIM</li><li>Connectors</li><li>Mechanical envelope</li><li>Environment</li><li>Quantity</li><li>Verification</li></ul>
+        <p class="sn-rfq-guide__hero-note">A complete RFQ typically receives initial engineering feedback in about 24 hours. That feedback is not a formal quotation, a prototype commitment or a production lead-time promise.</p>
+        <div class="sn-rfq-guide__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit Complete RFQ</a><a class="sn-btn sn-btn--secondary" href="#rfq-template">Open the Copyable Checklist</a></div>
+      </div>
+      <figure class="sn-rfq-guide__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-engineering-cad.webp" alt="Engineer reviewing a 2D engineering drawing" width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Drawing review at SONNE. The image documents the review environment, not a quotation, test result or customer project.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="rfq-spec-title">
+    <div class="sn-container">
+      <div class="sn-rfq-guide__intro">
+        <h2 id="rfq-spec-title">RF Specification Checklist</h2>
+        <p>Every value should carry a unit, a test condition and a note on whether it is mandatory or a target. A model number or a single frequency rarely defines a custom part.</p>
+      </div>
+      <div class="sn-rfq-guide__split">
+        <div class="sn-rfq-guide__prose">
+          <h3>Units, conditions and priority</h3>
+          <p>Insertion loss without band edges or a return-loss reference cannot be compared between suppliers. State whether each limit applies across the full band, at a single frequency or at a temperature extreme, and group the fields by priority.</p>
+          <ul>
+            <li><strong>Required:</strong> values the design cannot be reviewed without.</li>
+            <li><strong>Target:</strong> desirable performance used to compare options.</li>
+            <li><strong>TBD:</strong> not yet known, so engineering can flag the missing input instead of guessing.</li>
+          </ul>
+          <h3>PIM and rejection need their own context</h3>
+          <p>For PIM, give the order, tone spacing, power per carrier and port definition. For out-of-band rejection, give the frequency range and attenuation target for each band that must be blocked. Low-PIM and rejection fields are only meaningful with those conditions attached.</p>
+        </div>
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/tech-cat-tuning.webp" alt="Computer-aided tuning of RF filters" width="1024" height="575" loading="lazy" decoding="async">
+          <figcaption>Computer-aided tuning of RF filters. Tuning practice is shown to explain parameter context, not to publish a product rating.</figcaption>
+        </figure>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="rfq-spec-caption">
+        <table class="sn-table sn-rfq-guide__spec-table">
+          <caption id="rfq-spec-caption">RF specification fields to complete in the RFQ; target values remain project-specific.</caption>
+          <thead><tr><th scope="col">Parameter</th><th scope="col">Target value</th><th scope="col">Unit</th><th scope="col">Test condition</th><th scope="col">Required or goal</th><th scope="col">Notes</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Passband / frequency range</th><td data-label="Target value">TBD</td><td data-label="Unit">MHz or GHz</td><td data-label="Test condition">Band edge definition</td><td data-label="Required or goal">Required</td><td data-label="Notes">List guard bands and adjacent bands</td></tr>
+            <tr><th scope="row">Bandwidth</th><td data-label="Target value">TBD</td><td data-label="Unit">MHz or %</td><td data-label="Test condition">At stated return loss</td><td data-label="Required or goal">Required</td><td data-label="Notes">Note edge steepness or group delay</td></tr>
+            <tr><th scope="row">Insertion loss</th><td data-label="Target value">TBD</td><td data-label="Unit">dB</td><td data-label="Test condition">Over the full band</td><td data-label="Required or goal">Required</td><td data-label="Notes">State maximum or typical</td></tr>
+            <tr><th scope="row">Return loss / VSWR</th><td data-label="Target value">TBD</td><td data-label="Unit">dB or ratio</td><td data-label="Test condition">Reference impedance</td><td data-label="Required or goal">Required</td><td data-label="Notes">Per port where they differ</td></tr>
+            <tr><th scope="row">Out-of-band rejection</th><td data-label="Target value">TBD</td><td data-label="Unit">dB</td><td data-label="Test condition">Per stopband range</td><td data-label="Required or goal">Required</td><td data-label="Notes">One row per blocked band</td></tr>
+            <tr><th scope="row">Port isolation</th><td data-label="Target value">TBD</td><td data-label="Unit">dB</td><td data-label="Test condition">Defined port pair</td><td data-label="Required or goal">Required for multi-port parts</td><td data-label="Notes">State worst-case port</td></tr>
+            <tr><th scope="row">Power handling</th><td data-label="Target value">TBD</td><td data-label="Unit">W or dBm</td><td data-label="Test condition">CW or peak, duration</td><td data-label="Required or goal">Required</td><td data-label="Notes">Give power per port</td></tr>
+            <tr><th scope="row">PIM</th><td data-label="Target value">TBD</td><td data-label="Unit">dBc</td><td data-label="Test condition">Order, tones, power</td><td data-label="Required or goal">Where applicable</td><td data-label="Notes">Two-carrier test conditions</td></tr>
+            <tr><th scope="row">Impedance</th><td data-label="Target value">TBD</td><td data-label="Unit">ohm</td><td data-label="Test condition">Reference plane</td><td data-label="Required or goal">Required</td><td data-label="Notes">Usually 50 ohm; confirm if not</td></tr>
+            <tr><th scope="row">Connectors and interfaces</th><td data-label="Target value">TBD</td><td data-label="Unit">Type</td><td data-label="Test condition">Mating interface</td><td data-label="Required or goal">Required</td><td data-label="Notes">Flange, sex, torque or adapter</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-rfq-guide__note"><strong>Before you submit:</strong> check that each unit and test condition is present. Compare topology options on the <a href="/products/rf-microwave-filters">RF filter product line</a> or the <a href="/products/rf-combiners">combiner and duplexer product line</a> before fixing mandatory targets. Background on topology and band planning is collected in <a href="/resources/insights/">engineering insights</a>.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="rfq-bandplan-title">
+    <div class="sn-container">
+      <div class="sn-rfq-guide__intro">
+        <h2 id="rfq-bandplan-title">Band Plan, Waveguide and Mechanical Inputs</h2>
+        <p>Combiners, waveguide assemblies and machined enclosures need different fields. Use the input package that matches the product so the first review does not stall on missing data.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="rfq-input-caption">
+        <table class="sn-table sn-rfq-guide__matrix">
+          <caption id="rfq-input-caption">Input package by product type; attachments are listed with their purpose and revision.</caption>
+          <thead><tr><th scope="col">Input package</th><th scope="col">Fields to provide</th><th scope="col">Typical attachments</th><th scope="col">Verification focus</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><a href="/products/rf-combiners">Band plan for combiners and duplexers</a></th><td data-label="Fields to provide">Ports, Tx/Rx or band, path, isolation, insertion loss and power per port</td><td data-label="Typical attachments">Current band plan, system diagram, existing combiner drawing</td><td data-label="Verification focus">Channel-to-channel isolation, power per port, combined loss budget</td></tr>
+            <tr><th scope="row"><a href="/products/waveguide-components">Waveguide and microwave</a></th><td data-label="Fields to provide">Waveguide size, flange, polarization, material, surface, mechanical envelope and target band</td><td data-label="Typical attachments">2D drawing, flange standard, interface photo or mating part</td><td data-label="Verification focus">Flange alignment, polarization, surface finish and assembly</td></tr>
+            <tr><th scope="row"><a href="/products/precision-enclosures">Precision enclosure</a></th><td data-label="Fields to provide">2D/3D drawing, GD&amp;T, critical dimensions, material, finish, heat or shielding and environment</td><td data-label="Typical attachments">STEP or IGES model, PDF drawing, finish specification</td><td data-label="Verification focus">Critical dimensions, sealing surfaces, coating and assembly</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="rfq-bandplan-caption">
+        <table class="sn-table sn-rfq-guide__bandplan">
+          <caption id="rfq-bandplan-caption">Band-plan row layout. Copy the columns and fill in your own values; this table contains no product ratings.</caption>
+          <thead><tr><th scope="col">Port</th><th scope="col">Frequency range</th><th scope="col">Tx / Rx or band</th><th scope="col">Path or function</th><th scope="col">Isolation target</th><th scope="col">Insertion loss target</th><th scope="col">Power per port</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Common port</th><td data-label="Frequency range">All operating bands</td><td data-label="Tx / Rx or band">Tx and Rx combined</td><td data-label="Path or function">Common path to antenna</td><td data-label="Isolation target">Highest isolation requirement</td><td data-label="Insertion loss target">Combined loss budget</td><td data-label="Power per port">Total forward power</td></tr>
+            <tr><th scope="row">High band</th><td data-label="Frequency range">TBD</td><td data-label="Tx / Rx or band">TBD</td><td data-label="Path or function">Filtered path</td><td data-label="Isolation target">Against low band</td><td data-label="Insertion loss target">Per path</td><td data-label="Power per port">TBD</td></tr>
+            <tr><th scope="row">Low band</th><td data-label="Frequency range">TBD</td><td data-label="Tx / Rx or band">TBD</td><td data-label="Path or function">Filtered path</td><td data-label="Isolation target">Against high band</td><td data-label="Insertion loss target">Per path</td><td data-label="Power per port">TBD</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-rfq-guide__note"><strong>High-frequency projects:</strong> core production covers DC–40 GHz, and selected custom microwave or waveguide projects can reach 110 GHz depending on topology and verification. For a waveguide project, include the interface and target band so the applicable review route can be confirmed.</p>
+      <div class="sn-rfq-guide__links">
+        <a class="sn-rfq-guide__text-link" href="/products/rf-combiners">Prepare a band plan <span aria-hidden="true">&nbsp;→</span></a>
+        <a class="sn-rfq-guide__text-link" href="/products/waveguide-components">Review waveguide interfaces <span aria-hidden="true">&nbsp;→</span></a>
+        <a class="sn-rfq-guide__text-link" href="/products/precision-enclosures">Review enclosure drawing inputs <span aria-hidden="true">&nbsp;→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="rfq-verification-title">
+    <div class="sn-container">
+      <div class="sn-rfq-guide__intro">
+        <h2 id="rfq-verification-title">Quantity, Verification and Change-Control Inputs</h2>
+        <p>Test scope and quantity belong in the first RFQ. Adding them after a quotation usually reopens the technical and commercial review.</p>
+      </div>
+      <div class="sn-rfq-guide__split">
+        <div class="sn-rfq-guide__prose">
+          <h3>Quantity and project stage</h3>
+          <p>State whether the request is for a prototype, a pilot run or mass production, and give the target quantity and expected annual demand. That lets engineering separate the sample build from the production assessment.</p>
+          <h3>Tests, limits and reporting</h3>
+          <p>Name the critical parameters, the acceptance limits, the sample coverage and the required report format. VNA, PIM, reliability and matrix testing are defined against the product and its parameters; a 100% verification requirement should name the product and measurement it applies to.</p>
+          <h3>Change control</h3>
+          <p>Record the drawing or specification revision with the RFQ. If a requirement changes during review, note what changed, why and which test evidence must be repeated so the production baseline stays traceable.</p>
+        </div>
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-rig.webp" alt="RF test rig" width="1024" height="576" loading="lazy" decoding="async">
+          <figcaption>RF test rig. Test conditions, sample scope and report fields are agreed per project and recorded with the results.</figcaption>
+        </figure>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="rfq-verify-caption">
+        <table class="sn-table sn-rfq-guide__verify">
+          <caption id="rfq-verify-caption">Verification inputs that prevent a scope reopening after quotation.</caption>
+          <thead><tr><th scope="col">RFQ input</th><th scope="col">Why engineering needs it</th><th scope="col">What to state</th><th scope="col">Evidence it connects to</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Stage and quantity</th><td data-label="Why engineering needs it">Separates sample build from production planning</td><td data-label="What to state">Prototype, pilot or production; target and annual quantity</td><td data-label="Evidence it connects to">Sample records, pilot summary and production baseline</td></tr>
+            <tr><th scope="row">Critical tests</th><td data-label="Why engineering needs it">Defines which measurements prove the requirement</td><td data-label="What to state">VNA, PIM, reliability or matrix test and the parameter list</td><td data-label="Evidence it connects to"><a href="/engineering/testing-quality">Test method and data package</a></td></tr>
+            <tr><th scope="row">Acceptance limits</th><td data-label="Why engineering needs it">Makes pass or fail reviewable rather than subjective</td><td data-label="What to state">Limit, unit, band and test condition for each parameter</td><td data-label="Evidence it connects to">Measured results with the acceptance decision</td></tr>
+            <tr><th scope="row">Sample or batch scope</th><td data-label="Why engineering needs it">Prevents a single sample being read as lot evidence</td><td data-label="What to state">Sample size, lot or serial identification and coverage</td><td data-label="Evidence it connects to">Records linked to the actual sample or batch</td></tr>
+            <tr><th scope="row">Report format</th><td data-label="Why engineering needs it">Matches the document your design review can accept</td><td data-label="What to state">Fields, curves, units and whether raw data is needed</td><td data-label="Evidence it connects to">Project-agreed report or data set</td></tr>
+            <tr><th scope="row">Traceability and change</th><td data-label="Why engineering needs it">Connects revision, test evidence and production effectivity</td><td data-label="What to state">Drawing revision, project ID, change and re-test needs</td><td data-label="Evidence it connects to"><a href="/engineering/npi">NPI and change-control records</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-rfq-guide__note"><strong>Timing boundary:</strong> production lead time is assessed from drawings, quantity, process route, verification and current capacity. A prototype reference of approximately two weeks applies only where a project is suitable and is not a general delivery promise.</p>
+      <div class="sn-rfq-guide__links">
+        <a class="sn-rfq-guide__text-link" href="/engineering/testing-quality">Define verification requirements <span aria-hidden="true">&nbsp;→</span></a>
+        <a class="sn-rfq-guide__text-link" href="/engineering/npi">Review the NPI path <span aria-hidden="true">&nbsp;→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted sn-rfq-guide__section-target" id="rfq-template" aria-labelledby="rfq-template-title">
+    <div class="sn-container">
+      <div class="sn-rfq-guide__intro">
+        <h2 id="rfq-template-title">Copyable RFQ and Band-Plan Template</h2>
+        <p>Select the text below and paste it into your RFQ or email. No download is required, and no personal details are collected to open the template.</p>
+      </div>
+      <div class="sn-rfq-guide__templates">
+        <div class="sn-rfq-guide__template">
+          <h3>RFQ template</h3>
+<pre>PROJECT
+  Project name / ID:
+  Application:
+  Project stage: concept / prototype / qualification / pilot / production
+  Target quantity: sample ___ / annual ___
+  Required date and reason:
+
+FREQUENCY
+  Passband start / stop:
+  Center frequency:
+  Bandwidth:
+  Guard bands or adjacent bands:
+
+RF PERFORMANCE
+  Insertion loss (max):
+  Return loss / VSWR:
+  Out-of-band rejection:
+  Port isolation:
+  Power handling (CW / peak):
+  PIM (order, tones, power) if applicable:
+  Impedance:
+  Connectors:
+
+MECHANICAL AND ENVIRONMENT
+  Envelope (L x W x H):
+  Mounting and interfaces:
+  Material and finish:
+  Operating temperature:
+  Ingress or environmental requirement:
+
+VERIFICATION
+  Critical parameters:
+  Test conditions:
+  Acceptance limits:
+  Report format:
+  Sample or batch traceability:
+
+ATTACHMENTS
+  Drawing / revision:
+  Band plan / revision:
+  Existing test data:
+  Confidentiality request: yes / no
+
+Unknown values: write TBD. Do not estimate a value you have not verified.</pre>
+          <p>Name attachments consistently, for example ProjectID_PartNumber_DocumentType_Revision, so engineering can match each file to the correct revision.</p>
+        </div>
+        <div class="sn-rfq-guide__template-stack">
+          <div class="sn-rfq-guide__template">
+            <h3>Band-plan template</h3>
+<pre>PORT | FREQUENCY | TX / RX OR BAND | PATH | ISOLATION | LOSS | POWER
+P1   |           |                 |      |           |      |
+P2   |           |                 |      |           |      |
+P3   |           |                 |      |           |      |
+
+Notes:
+- Define port names and connector types.
+- State whether each row is transmit, receive or combined.
+- Record power per port, not only total power.
+- Attach the current band-plan revision.</pre>
+          </div>
+          <div class="sn-rfq-guide__template">
+            <h3>Mechanical addendum</h3>
+            <p>For enclosure and waveguide work, add the drawing revision, critical dimensions, GD&amp;T callouts, material, surface finish, sealing or shielding requirement and the interfaces that must align with mating parts. Mark every value that is not yet fixed as TBD.</p>
+            <p>Confidential drawings can be discussed before exchange. Start with a non-confidential summary and agree the disclosure route for the specific project.</p>
+          </div>
+        </div>
+      </div>
+      <p class="sn-rfq-guide__note"><strong>Next step:</strong> paste the completed template into the <a href="/request-a-quote/">RFQ form</a> and attach the current specification or drawing revision. Missing fields can stay open; engineering will list the gaps that matter for the review.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="rfq-faq-title">
+    <div class="sn-container">
+      <div class="sn-rfq-guide__intro">
+        <h2 id="rfq-faq-title">RFQ Submission and Preparation FAQs</h2>
+        <p>How completeness, response time, lead time and confidentiality are handled before a quotation is issued.</p>
+      </div>
+      <div class="sn-rfq-guide__faq">
+        <details>
+          <summary>What information is required for a custom RF filter RFQ?</summary>
+          <p>Provide frequency range and bandwidth, insertion loss, return loss, rejection or isolation, power, PIM where applicable, impedance, connectors, mechanical envelope, environment, quantity and verification needs. Mark unknown items as TBD so engineering can identify gaps instead of treating a model number as a complete specification.</p>
+        </details>
+        <details>
+          <summary>Can SONNE evaluate a project before every parameter is final?</summary>
+          <p>Yes. Submit the known frequency range, target performance, mechanical constraints and open questions. Engineering can identify missing inputs and discuss feasibility before the specification is final. Initial engineering feedback is distinct from a formal quote, and prototype or production timing still depends on <a href="/engineering/npi">the agreed scope and requirements.</a></p>
+        </details>
+        <details>
+          <summary>Does a 24-hour response include a quotation and lead time?</summary>
+          <p>No. Approximately 24 hours refers to initial engineering feedback after a complete RFQ. It may clarify feasibility, missing inputs or next steps. Quotation and delivery timing require further review of drawings, quantities, processes, verification and capacity, so they are not guaranteed by <a href="/request-a-quote/">the initial-response statement.</a></p>
+        </details>
+        <details>
+          <summary>How are prototype and production lead times estimated?</summary>
+          <p>The approximately two-week figure is only a reference for applicable prototype projects, not a general promise. Production lead time depends on drawings, quantities, process route, verification requirements and available capacity. Confirm timing after engineering and commercial review rather than deriving it from annual capacity or <a href="/engineering/manufacturing">a prototype example.</a></p>
+        </details>
+        <details>
+          <summary>Can drawings be reviewed under an NDA?</summary>
+          <p>Confidentiality scope and NDA terms must be agreed for the specific project. Start with a non-confidential overview where practical, then exchange controlled drawings through the agreed route. Do not assume a blanket NDA, disclosure scope or unrestricted file distribution before the parties <a href="/contact/">confirm the applicable terms.</a></p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-rfq-guide__final" aria-labelledby="rfq-submit-title">
+    <div class="sn-container sn-cta">
+      <div class="sn-rfq-guide__cta-grid">
+        <div>
+          <h2 id="rfq-submit-title">Submit Your RF Specification for Review</h2>
+          <p>Send the product type, project stage, frequency and performance targets, mechanical or environmental constraints, quantity and verification needs. Attach the current drawing or band-plan revision if one exists.</p>
+          <p>Initial engineering feedback applies to a complete RFQ and is separate from quotation and production lead-time assessment. Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+          <div class="sn-rfq-guide__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit Complete RFQ</a><a class="sn-btn sn-btn--secondary" href="/contact/">Discuss a Sensitive Project</a></div>
+          <p class="sn-rfq-guide__fine-print">Selecting a confidentiality discussion does not accept an NDA or define its scope. Terms are agreed for the specific project.</p>
+        </div>
+        <div class="sn-rfq-guide__nodes" aria-label="Response stages">
+          <div class="sn-rfq-guide__node"><span class="sn-rfq-guide__node-index">01</span><div><h3>Initial feedback</h3><p>About 24 hours after a complete RFQ; identifies gaps and the next engineering step.</p></div></div>
+          <div class="sn-rfq-guide__node"><span class="sn-rfq-guide__node-index">02</span><div><h3>Quotation review</h3><p>Follows clarification of drawings, quantities, processes, verification and commercial terms.</p></div></div>
+          <div class="sn-rfq-guide__node"><span class="sn-rfq-guide__node-index">03</span><div><h3>Production timing</h3><p>Assessed per project from the confirmed baseline and current capacity; not derived from annual capacity.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/resources/rfq-guide/#webpage",
+        "name": "How to Prepare an RFQ Engineers Can Quote Directly",
+        "url": "https://rf-sonne.com/resources/rfq-guide/",
+        "description": "A practical RFQ checklist for custom RF filters, waveguide, combiners and precision enclosures, with a copyable template and submission guidance."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rf-sonne.com/resources/rfq-guide/#faq",
+        "mainEntity": [
+          {"@type":"Question","name":"What information is required for a custom RF filter RFQ?","acceptedAnswer":{"@type":"Answer","text":"Provide frequency range and bandwidth, insertion loss, return loss, rejection or isolation, power, PIM where applicable, impedance, connectors, mechanical envelope, environment, quantity and verification needs. Mark unknown items as TBD so engineering can identify gaps instead of treating a model number as a complete specification."}},
+          {"@type":"Question","name":"Can SONNE evaluate a project before every parameter is final?","acceptedAnswer":{"@type":"Answer","text":"Yes. Submit the known frequency range, target performance, mechanical constraints and open questions. Engineering can identify missing inputs and discuss feasibility before the specification is final. Initial engineering feedback is distinct from a formal quote, and prototype or production timing still depends on the agreed scope and requirements."}},
+          {"@type":"Question","name":"Does a 24-hour response include a quotation and lead time?","acceptedAnswer":{"@type":"Answer","text":"No. Approximately 24 hours refers to initial engineering feedback after a complete RFQ. It may clarify feasibility, missing inputs or next steps. Quotation and delivery timing require further review of drawings, quantities, processes, verification and capacity, so they are not guaranteed by the initial-response statement."}},
+          {"@type":"Question","name":"How are prototype and production lead times estimated?","acceptedAnswer":{"@type":"Answer","text":"The approximately two-week figure is only a reference for applicable prototype projects, not a general promise. Production lead time depends on drawings, quantities, process route, verification requirements and available capacity. Confirm timing after engineering and commercial review rather than deriving it from annual capacity or a prototype example."}},
+          {"@type":"Question","name":"Can drawings be reviewed under an NDA?","acceptedAnswer":{"@type":"Answer","text":"Confidentiality scope and NDA terms must be agreed for the specific project. Start with a non-confidential overview where practical, then exchange controlled drawings through the agreed route. Do not assume a blanket NDA, disclosure scope or unrestricted file distribution before the parties confirm the applicable terms."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/resources/rfq-guide/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Resources","item":"https://rf-sonne.com/resources/"},
+          {"@type":"ListItem","position":3,"name":"RFQ Guide","item":"https://rf-sonne.com/resources/rfq-guide/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

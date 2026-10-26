@@ -1,0 +1,347 @@
+<!-- wp:html -->
+<div class="sn-rfq">
+  <style>
+    /* Hero input overview is designed on a 1440 x 520 reference grid. */
+    .sn-rfq { color: var(--sn-text); }
+    .sn-rfq *, .sn-rfq *::before, .sn-rfq *::after { box-sizing: border-box; }
+    .sn-rfq h2, .sn-rfq h3, .sn-rfq p, .sn-rfq ul, .sn-rfq ol, .sn-rfq dl, .sn-rfq dd { margin-top: 0; }
+    .sn-rfq h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-rfq h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-rfq p, .sn-rfq li, .sn-rfq dd { line-height: 1.7; }
+    .sn-rfq a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-rfq [hidden] { display: none !important; }
+    .sn-rfq :focus-visible { outline: 3px solid var(--sn-cyan-dark); outline-offset: 2px; }
+    .sn-rfq .sn-rfq__hero h1:focus-visible, .sn-rfq .sn-rfq__hero a:focus-visible { outline-color: var(--sn-cyan); }
+    .sn-rfq .sn-rfq__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-rfq .sn-rfq__hero .sn-rfq__eyebrow { color: var(--sn-cyan); }
+    .sn-rfq .sn-rfq__hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+    .sn-rfq .sn-rfq__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-rfq .sn-rfq__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-rfq .sn-rfq__hero-note { margin: 24px 0 0; color: rgba(252, 254, 255, .74); font-size: .84rem; }
+    .sn-rfq .sn-rfq__hero-note a { color: var(--sn-cyan); white-space: nowrap; }
+    .sn-rfq .sn-rfq__overview { padding: 24px; border: 1px solid rgba(252, 254, 255, .2); background: rgba(252, 254, 255, .04); }
+    .sn-rfq .sn-rfq__overview-title { margin-bottom: 16px; color: var(--sn-white); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .sn-rfq .sn-rfq__overview ol { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: none; }
+    .sn-rfq .sn-rfq__overview li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 10px; padding: 13px 0; border-top: 1px solid rgba(252, 254, 255, .14); }
+    .sn-rfq .sn-rfq__overview li:last-child { border-bottom: 1px solid rgba(252, 254, 255, .14); }
+    .sn-rfq .sn-rfq__overview-index { color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.6; }
+    .sn-rfq .sn-rfq__overview strong { display: block; color: var(--sn-white); font-size: .9rem; }
+    .sn-rfq .sn-rfq__overview span:not(.sn-rfq__overview-index) { display: block; color: rgba(252, 254, 255, .68); font-size: .78rem; line-height: 1.5; }
+    .sn-rfq .sn-rfq__form-section { scroll-margin-top: 112px; }
+    .sn-rfq .wpcf7, .sn-rfq .wpcf7 form { margin: 0; }
+    .sn-rfq .wpcf7-response-output.wpcf7-mail-sent-ok { display: none; }
+    .sn-rfq .sn-rfq__form-intro { max-width: 860px; margin-bottom: 32px; }
+    .sn-rfq .sn-rfq__form-intro p { margin-bottom: 0; color: var(--sn-text-muted); }
+    .sn-rfq .sn-rfq__form-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; grid-template-areas: "main summary" "submit summary"; gap: clamp(28px, 4vw, 48px); row-gap: 0; align-items: start; }
+    .sn-rfq .sn-rfq__fields { min-width: 0; }
+    .sn-rfq .sn-rfq__form-layout > .sn-rfq__fields:not(.sn-rfq__submit-block) { grid-area: main; }
+    .sn-rfq .sn-rfq__submit-block { grid-area: submit; }
+    .sn-rfq .sn-rfq__fields > h2 { padding-top: 8px; }
+    .sn-rfq .sn-rfq__fields > h2:not(:first-child) { margin-top: 52px; padding-top: 40px; border-top: var(--sn-border); }
+    .sn-rfq .sn-rfq__section-note { max-width: 76ch; margin-bottom: 26px; color: var(--sn-text-muted); font-size: .92rem; }
+    .sn-rfq .sn-rfq__note { margin: 14px 0 0; padding: 14px 16px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-rfq .sn-rfq__fieldset { min-width: 0; margin: 0 0 24px; padding: 0; border: 0; }
+    .sn-rfq .sn-rfq__fieldset legend { margin-bottom: 12px; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.02rem; font-weight: 700; }
+    .sn-rfq .sn-rfq__spec-groups .sn-rfq__fieldset { margin-bottom: 18px; padding: 22px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-rfq .sn-rfq__spec-groups .sn-rfq__fieldset legend { padding: 0 6px; }
+    .sn-rfq .sn-rfq__choice-grid .wpcf7-radio, .sn-rfq .sn-rfq__choice-grid .wpcf7-checkbox { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; }
+    .sn-rfq .sn-rfq__choice-grid .wpcf7-list-item { display: block; margin: 0; }
+    .sn-rfq .sn-rfq__choice-grid .wpcf7-list-item label { display: flex; gap: 9px; align-items: flex-start; cursor: pointer; }
+    .sn-rfq .sn-rfq__grid { display: grid; gap: 18px; }
+    .sn-rfq .sn-rfq__grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sn-rfq .sn-rfq__grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .sn-rfq .sn-rfq__field { min-width: 0; margin-bottom: 18px; }
+    .sn-rfq .sn-rfq__grid > .sn-rfq__field { margin-bottom: 0; }
+    .sn-rfq .sn-rfq__field > label, .sn-rfq .sn-rfq__confidentiality > label { display: block; margin-bottom: 7px; color: var(--sn-navy); font-size: .86rem; font-weight: 700; line-height: 1.45; }
+    .sn-rfq .sn-rfq__required { display: inline-block; margin-left: 3px; padding: 1px 5px; border: 1px solid var(--sn-mid-gray); color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .62rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; vertical-align: 1px; }
+    .sn-rfq .sn-rfq__input, .sn-rfq .sn-rfq__textarea, .sn-rfq .sn-rfq__fields select, .sn-rfq .sn-rfq__fields input[type="file"] { width: 100%; min-height: 48px; padding: 11px 13px; border: 1px solid var(--sn-mid-gray); border-radius: var(--sn-radius); background: var(--sn-white); color: var(--sn-text); font-family: var(--sn-font-body); font-size: .92rem; line-height: 1.4; }
+    .sn-rfq .sn-rfq__textarea { min-height: 120px; resize: vertical; }
+    .sn-rfq .sn-rfq__fields input[type="file"] { padding: 9px 11px; }
+    .sn-rfq .sn-rfq__fields input[type="file"]::file-selector-button { min-height: 34px; margin-right: 10px; padding: 6px 12px; border: 0; border-radius: var(--sn-radius); background: var(--sn-navy); color: var(--sn-white); font-family: var(--sn-font-body); font-weight: 700; cursor: pointer; }
+    .sn-rfq .sn-rfq__fields label.sn-rfq__choice, .sn-rfq .sn-rfq__fields .wpcf7-list-item { display: flex; gap: 9px; align-items: flex-start; min-height: 24px; margin: 0; color: var(--sn-text); font-size: .88rem; line-height: 1.5; }
+    .sn-rfq .sn-rfq__fields .wpcf7-list-item { margin-left: 0; }
+    .sn-rfq .sn-rfq__fields .wpcf7-list-item-label { cursor: pointer; }
+    .sn-rfq .sn-rfq__fields .wpcf7-list-item > label { display: flex; align-items: flex-start; gap: 9px; min-height: 24px; cursor: pointer; }
+    .sn-rfq .sn-rfq__fields input[type="radio"], .sn-rfq .sn-rfq__fields input[type="checkbox"] { flex: 0 0 auto; width: 18px; height: 18px; min-height: 18px; margin-top: 2px; accent-color: var(--sn-cyan-dark); }
+    .sn-rfq .sn-rfq__field input[type="checkbox"] + .wpcf7-list-item-label, .sn-rfq .sn-rfq__confidentiality input[type="checkbox"] + .wpcf7-list-item-label { color: var(--sn-text-muted); font-size: .8rem; }
+    .sn-rfq .sn-rfq__confidentiality { margin: 28px 0 0; padding: 22px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); }
+    .sn-rfq .sn-rfq__confidentiality p { max-width: 76ch; color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-rfq .sn-rfq__confidentiality .sn-rfq__note { max-width: none; background: var(--sn-white); }
+    .sn-rfq .sn-rfq__confidentiality .sn-rfq__note + .sn-rfq__field { margin-top: 18px; }
+    .sn-rfq .sn-rfq__file-row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, .8fr); gap: 16px; margin-bottom: 18px; padding-bottom: 18px; border-bottom: var(--sn-border); }
+    .sn-rfq .sn-rfq__file-row .sn-rfq__field { margin-bottom: 0; }
+    .sn-rfq .sn-rfq__aside { grid-area: summary; align-self: stretch; }
+    .sn-rfq .sn-rfq__summary { position: sticky; top: 104px; padding: 22px; border: 1px solid var(--sn-mid-gray); border-top: 3px solid var(--sn-cyan-dark); background: var(--sn-white); box-shadow: var(--sn-shadow); }
+    .sn-rfq .sn-rfq__summary-title { margin-bottom: 12px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+    .sn-rfq .sn-rfq__summary-list { margin: 0; }
+    .sn-rfq .sn-rfq__summary-list > div { padding: 8px 0; border-top: 1px solid var(--sn-mid-gray); }
+    .sn-rfq .sn-rfq__summary-list dt { color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .65rem; letter-spacing: .04em; text-transform: uppercase; }
+    .sn-rfq .sn-rfq__summary-list dd { margin: 2px 0 0; color: var(--sn-navy); font-size: .84rem; overflow-wrap: anywhere; }
+    .sn-rfq .sn-rfq__summary-link { display: flex; width: 100%; min-height: 44px; align-items: center; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--sn-mid-gray); font-weight: 700; }
+    .sn-rfq .sn-rfq__process { margin-top: 28px; padding: 22px; border: var(--sn-border); background: var(--sn-light-gray); }
+    .sn-rfq .sn-rfq__process-title { margin-bottom: 12px; color: var(--sn-navy); font-weight: 700; }
+    .sn-rfq .sn-rfq__process ol { margin: 0; padding: 0; list-style: none; counter-reset: process; }
+    .sn-rfq .sn-rfq__process li { position: relative; padding: 12px 0 12px 42px; border-top: 1px solid var(--sn-mid-gray); counter-increment: process; }
+    .sn-rfq .sn-rfq__process li::before { position: absolute; left: 0; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; content: '0' counter(process); }
+    .sn-rfq .sn-rfq__process strong { display: block; color: var(--sn-navy); font-size: .9rem; }
+    .sn-rfq .sn-rfq__process span { color: var(--sn-text-muted); font-size: .8rem; }
+    .sn-rfq .sn-rfq__consent { margin-top: 24px; padding: 18px; border: 1px solid var(--sn-mid-gray); background: var(--sn-white); }
+    .sn-rfq .sn-rfq__submit-row { margin-top: 22px; }
+    .sn-rfq .sn-rfq__submit-row input[type="submit"], .sn-rfq .sn-rfq__submit-row button[type="submit"] { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 12px 26px; border: 1px solid var(--sn-cyan-dark); border-radius: var(--sn-radius); background: var(--sn-cyan-dark); color: var(--sn-white); font-family: var(--sn-font-body); font-size: .9rem; font-weight: 700; letter-spacing: .02em; cursor: pointer; transition: background-color var(--sn-transition), color var(--sn-transition); }
+    .sn-rfq .sn-rfq__submit-row input[type="submit"]:hover, .sn-rfq .sn-rfq__submit-row button[type="submit"]:hover { background: var(--sn-navy); border-color: var(--sn-navy); }
+    .sn-rfq .sn-rfq__submit-row p { margin: 12px 0 0; color: var(--sn-text-muted); font-size: .8rem; }
+    .sn-rfq .sn-rfq__success { margin-top: 28px; padding: 22px; border: 1px solid var(--sn-cyan-dark); border-left-width: 4px; background: var(--sn-light-gray); }
+    .sn-rfq .sn-rfq__success h3 { margin-bottom: 8px; }
+    .sn-rfq .sn-rfq__success p:last-child { margin-bottom: 0; }
+    .sn-rfq .sn-rfq__faq { max-width: 920px; }
+    .sn-rfq .sn-rfq__faq details { border-bottom: var(--sn-border); }
+    .sn-rfq .sn-rfq__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-rfq .sn-rfq__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-rfq .sn-rfq__faq details[open] summary::after { content: '−'; }
+    .sn-rfq .sn-rfq__faq-text { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-rfq .sn-rfq__faq-tail { margin: 2px 0 22px; padding-right: 40px; font-weight: 700; }
+    .sn-rfq .sn-rfq__faq-tail a { display: inline-flex; min-height: 44px; align-items: center; }
+    .sn-rfq .sn-rfq__cta-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .72fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+    .sn-rfq .sn-rfq__cta h2, .sn-rfq .sn-rfq__cta h3 { color: var(--sn-white); }
+    .sn-rfq .sn-rfq__cta p, .sn-rfq .sn-rfq__cta li { color: rgba(252, 254, 255, .8); }
+    .sn-rfq .sn-rfq__cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-rfq .sn-rfq__cta-panel { padding: 24px; border: 1px solid rgba(252, 254, 255, .2); }
+    .sn-rfq .sn-rfq__cta-panel ul { padding-left: 18px; }
+    .sn-rfq .sn-rfq__fine-print { margin-top: 16px; font-size: .82rem; }
+    .sn-rfq .sn-rfq__text-link { display: inline-flex; min-height: 44px; align-items: center; font-weight: 700; }
+    @media (max-width: 1100px) {
+      .sn-rfq .sn-rfq__form-layout { grid-template-columns: minmax(0, 1fr) 280px; }
+      .sn-rfq .sn-rfq__grid--three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .sn-rfq .sn-rfq__hero-grid, .sn-rfq .sn-rfq__form-layout, .sn-rfq .sn-rfq__cta-grid { grid-template-columns: 1fr; }
+      .sn-rfq .sn-rfq__form-layout { grid-template-areas: "main" "summary" "submit"; }
+      .sn-rfq .sn-rfq__summary { position: static; top: auto; }
+      .sn-rfq .sn-rfq__file-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-rfq .sn-rfq__file-row .sn-rfq__field:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 640px) {
+      .sn-rfq .sn-rfq__grid--two, .sn-rfq .sn-rfq__grid--three, .sn-rfq .sn-rfq__file-row, .sn-rfq .sn-rfq__choice-grid .wpcf7-radio, .sn-rfq .sn-rfq__choice-grid .wpcf7-checkbox { grid-template-columns: 1fr; }
+      .sn-rfq .sn-rfq__actions .sn-btn { width: 100%; }
+      .sn-rfq .sn-rfq__spec-groups .sn-rfq__fieldset, .sn-rfq .sn-rfq__confidentiality, .sn-rfq .sn-rfq__process { padding: 18px; }
+      .sn-rfq .sn-rfq__faq-text, .sn-rfq .sn-rfq__faq-tail { padding-right: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sn-rfq *, .sn-rfq *::before, .sn-rfq *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+    @media print {
+      .sn-rfq details:not([open]) > .sn-rfq__faq-text { display: block !important; }
+      .sn-rfq details::details-content { content-visibility: visible !important; display: block !important; }
+      .sn-rfq .sn-rfq__summary { position: static; }
+      .sn-rfq .sn-rfq__cta { color: var(--sn-ink); background: var(--sn-paper); }
+    }
+  </style>
+
+  <section class="sn-hero sn-rfq__hero" aria-labelledby="rfq-title">
+    <div class="sn-container sn-rfq__hero-grid">
+      <div class="sn-rfq__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Request a Quote</li></ol></nav>
+        <span class="sn-rfq__eyebrow">Custom RF · Waveguide · Combiners · Precision enclosures</span>
+        <h1 id="rfq-title">Request a Custom RF or Enclosure Quote</h1>
+        <p>Submit a band plan, specification or drawing for engineering review. Select the product line, describe the application and project stage, and mark values you do not know instead of guessing.</p>
+        <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. This is not a formal quotation or delivery commitment.</p>
+        <div class="sn-rfq__actions">
+          <a class="sn-btn sn-btn--primary" href="#rfq-form">Start Your RFQ</a>
+          <a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide">Review the Checklist</a>
+        </div>
+        <p class="sn-rfq__hero-note">Not sure which product line fits? <a href="/products">Compare the product lines</a>, or email <a href="mailto:info@zhide-tec.com?subject=RFQ%20question">info@zhide-tec.com</a>.</p>
+      </div>
+      <div class="sn-rfq__overview" aria-label="RFQ input overview">
+        <p class="sn-rfq__overview-title">What to include</p>
+        <ol>
+          <li><span class="sn-rfq__overview-index">01</span><div><strong>Product Line</strong><span>The main review area: filters, waveguide, combiners or enclosures.</span></div></li>
+          <li><span class="sn-rfq__overview-index">02</span><div><strong>Specifications</strong><span>Known bands, loss, isolation, power, PIM or mechanical targets.</span></div></li>
+          <li><span class="sn-rfq__overview-index">03</span><div><strong>Drawings</strong><span>Band plans, 2D drawings, 3D CAD, test requirements or revisions.</span></div></li>
+          <li><span class="sn-rfq__overview-index">04</span><div><strong>Quantity</strong><span>Sample quantity and the expected volume for later review.</span></div></li>
+          <li><span class="sn-rfq__overview-index">05</span><div><strong>Project Stage</strong><span>Concept, prototype, qualification, pilot or production.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-rfq__form-section" id="rfq-form" aria-labelledby="rfq-basics-title">
+    <div class="sn-container">
+      [contact-form-7 id="4762aee" title="Request a Quote"]
+      <div class="sn-rfq__success" data-rfq-success role="status" hidden tabindex="-1">
+        <h3>RFQ received</h3>
+        <p>Thank you. Your details have been submitted for review. Keep the confirmation email for your records.</p>
+        <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. This is not a formal quotation or delivery commitment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted sn-rfq__faq-section" aria-labelledby="rfq-faq-title">
+    <div class="sn-container sn-rfq__faq">
+      <h2 id="rfq-faq-title">RFQ Submission FAQs</h2>
+      <p class="sn-rfq__section-note">Short answers to the questions buyers ask before sharing specifications, drawings or sensitive files.</p>
+      <details>
+        <summary>Can I request a quote without complete specifications?</summary>
+        <p class="sn-rfq__faq-text">Yes. Submit the product line, application, project stage and the specifications you already know, then mark uncertain fields as unknown. Engineering can use that information to identify missing inputs and clarify the next step. A complete RFQ is more likely to receive initial engineering feedback in about 24 hours; a formal quote requires sufficient technical and commercial information.</p>
+        <p class="sn-rfq__faq-tail"><a href="/resources/rfq-guide">Prepare the inputs for your RFQ</a></p>
+      </details>
+      <details>
+        <summary>What frequency range can I include in an RFQ?</summary>
+        <p class="sn-rfq__faq-text">SONNE's core production range is DC to 40 GHz. Selected custom microwave and waveguide projects may reach 110 GHz, depending on topology and verification. Include your required bands, bandwidth and performance targets so engineering can assess feasibility. The upper frequency statement is not a blanket commitment for every component or design.</p>
+        <p class="sn-rfq__faq-tail"><a href="/engineering/testing-quality">See how testing and verification are handled</a></p>
+      </details>
+      <details>
+        <summary>What files should I upload with my RFQ?</summary>
+        <p class="sn-rfq__faq-text">Upload the files that define your requirement: a band plan, RF specification, 2D drawing, 3D CAD or test requirements as applicable. Identify each file's purpose and revision where known. If the material is sensitive, you can request a confidentiality discussion first and submit only a non-sensitive summary until the exchange arrangements are confirmed.</p>
+        <p class="sn-rfq__faq-tail"><a href="/resources/rfq-guide">Review the file checklist</a></p>
+      </details>
+      <details>
+        <summary>Does selecting the confidentiality option mean an NDA is accepted?</summary>
+        <p class="sn-rfq__faq-text">No. The option tells SONNE that confidentiality should be discussed before sensitive material is exchanged. It does not mean a universal NDA has been accepted or define its scope. Describe your requirement and avoid uploading sensitive files until the appropriate project-specific arrangement has been confirmed by both parties.</p>
+        <p class="sn-rfq__faq-tail"><a href="/contact">Ask about confidentiality before sharing files</a></p>
+      </details>
+      <details>
+        <summary>Will I receive a firm price and delivery date within 24 hours?</summary>
+        <p class="sn-rfq__faq-text">Not necessarily. The approximately 24-hour guideline refers to initial engineering feedback for a complete RFQ, not a guaranteed firm quotation or delivery commitment. Pricing and timing require review of the design, quantities, processes and capacity. The fastest approximately two-week reference applies only to prototyping in suitable cases, while mass-production timing is confirmed per project.</p>
+        <p class="sn-rfq__faq-tail"><a href="/engineering/testing-quality">Review the engineering review and testing path</a></p>
+      </details>
+    </div>
+  </section>
+
+  <section class="sn-section sn-rfq__cta-section" aria-labelledby="rfq-cta-title">
+    <div class="sn-container sn-cta sn-rfq__cta">
+      <div class="sn-rfq__cta-grid">
+        <div>
+          <h2 id="rfq-cta-title">Submit What You Know and Let Engineering Identify the Gaps</h2>
+          <p>Keep the form content you have already entered and submit it. Missing values and open questions are reviewed as part of the first response. To prepare first, use the RFQ guide; to ask a question before submitting, use Contact.</p>
+          <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. This is not a guaranteed firm quotation or delivery commitment. Formal pricing and production timing are confirmed after review.</p>
+          <div class="sn-rfq__actions">
+            <a class="sn-btn sn-btn--primary" href="#rfq-form">Submit RFQ</a>
+            <a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide">Review the Checklist</a>
+            <a class="sn-btn sn-btn--secondary" href="/contact">Ask a Question First</a>
+          </div>
+          <p class="sn-rfq__fine-print">If the form does not work, email the same details to <a href="mailto:info@zhide-tec.com?subject=RFQ%20submission">info@zhide-tec.com</a>. Please do not send sensitive files until a confidentiality arrangement has been confirmed by both parties.</p>
+        </div>
+        <div class="sn-rfq__cta-panel">
+          <h3>Before submitting</h3>
+          <ul>
+            <li>Product line and application summary</li>
+            <li>Known bands, RF targets or mechanical constraints</li>
+            <li>Project stage, sample quantity and expected volume</li>
+            <li>Band plan, drawing or specification with a revision label</li>
+            <li>Confidentiality needs stated before sensitive files are shared</li>
+          </ul>
+          <p>Unknown values can remain open. The first review identifies what is missing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/request-a-quote/#webpage",
+        "name": "Request a Custom RF or Enclosure Quote",
+        "url": "https://rf-sonne.com/request-a-quote/",
+        "description": "Submit your band plan, specifications or drawings for a custom RF, waveguide, combiner or enclosure project. Engineering review and clear next steps within 24 hours."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/request-a-quote/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Request a Quote","item":"https://rf-sonne.com/request-a-quote/"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script>
+  (function () {
+    'use strict';
+    function valueOf(selector, root) {
+      var field = (root || document).querySelector(selector);
+      return field ? String(field.value || '').trim() : '';
+    }
+    function selectedText(selector, root) {
+      var field = (root || document).querySelector(selector);
+      if (!field || !field.selectedOptions || !field.selectedOptions.length) { return ''; }
+      return String(field.selectedOptions[0].text || '').trim();
+    }
+    function checkedValue(selector, root) {
+      var field = (root || document).querySelector(selector + ':checked');
+      return field ? String(field.value || '').trim() : '';
+    }
+    function setSummary(key, text) {
+      var node = document.querySelector('[data-rfq-summary-value="' + key + '"]');
+      if (node) { node.textContent = text; }
+    }
+    function refreshSummary(form) {
+      setSummary('name', valueOf('[name="your-name"]', form) || 'Not provided');
+      setSummary('company', valueOf('[name="your-company"]', form) || 'Not provided');
+      setSummary('product-line', checkedValue('[name="product-line"]', form) || 'Not selected');
+      var application = valueOf('[name="application"]', form);
+      setSummary('application', application ? (application.length > 96 ? application.slice(0, 93) + '...' : application) : 'Not provided');
+      setSummary('project-stage', selectedText('[name="project-stage"]', form) || 'Not selected');
+      var specFields = form.querySelectorAll('.sn-rfq__spec-value');
+      var provided = 0;
+      for (var index = 0; index < specFields.length; index += 1) {
+        if (String(specFields[index].value || '').trim()) { provided += 1; }
+      }
+      var unknowns = form.querySelectorAll('input[name$="-unknown"]:checked').length;
+      setSummary('specifications', provided || unknowns ? provided + ' value(s), ' + unknowns + ' marked unknown' : 'No values entered');
+      var files = form.querySelectorAll('input[type="file"]');
+      var fileCount = 0;
+      for (var fileIndex = 0; fileIndex < files.length; fileIndex += 1) {
+        if (files[fileIndex].files.length) { fileCount += 1; }
+      }
+      setSummary('files', fileCount ? fileCount + ' file(s) selected' : 'No files selected');
+      setSummary('confidentiality', form.querySelector('[name="confidentiality-discussion"]:checked') ? 'Discussion requested' : 'No discussion requested');
+    }
+    function syncGroups(form) {
+      var selected = checkedValue('[name="product-line"]', form);
+      var groups = form.querySelectorAll('[data-rfq-product-group]');
+      for (var index = 0; index < groups.length; index += 1) {
+        var group = groups[index];
+        group.hidden = selected ? group.getAttribute('data-rfq-product-group') !== selected : false;
+      }
+    }
+    function init() {
+      var wrapper = document.querySelector('.sn-rfq');
+      var form = wrapper ? wrapper.querySelector('form') : null;
+      if (!form) { return; }
+      refreshSummary(form);
+      syncGroups(form);
+      form.addEventListener('input', function () { refreshSummary(form); });
+      form.addEventListener('change', function () { refreshSummary(form); syncGroups(form); });
+      form.addEventListener('submit', function () { refreshSummary(form); syncGroups(form); });
+      if (form.hasAttribute('data-rfq-preview')) {
+        form.addEventListener('submit', function (event) { event.preventDefault(); });
+      }
+    }
+    document.addEventListener('wpcf7submit', function () {
+      var form = document.querySelector('.sn-rfq form');
+      if (form) { refreshSummary(form); }
+    });
+    document.addEventListener('wpcf7mailsent', function () {
+      var success = document.querySelector('[data-rfq-success]');
+      if (!success) { return; }
+      success.hidden = false;
+      if (typeof success.focus === 'function') { success.focus(); }
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (typeof success.scrollIntoView === 'function') {
+        success.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+    });
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  }());
+  </script>
+</div>
+<!-- /wp:html -->

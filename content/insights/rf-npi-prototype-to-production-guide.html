@@ -1,0 +1,60 @@
+<p>An RF NPI process turns a working prototype into a production item that can be built, tested and shipped repeatedly, and the discipline that matters most is the evidence carried from one stage to the next.</p>
+
+<h2>What RF NPI Means for Custom RF Hardware</h2>
+<p>New product introduction, or NPI, is the controlled path from a specification to a production-ready product. For a custom RF filter, waveguide assembly, combiner or enclosure, the path includes design review, prototype build, measurement, first article approval, pilot production and the transition to volume. The exact stage names vary by company, but the purpose does not: reduce risk before the design is locked and before tooling or production capacity is committed.</p>
+<p>RF hardware adds a specific difficulty. The electrical response is sensitive to dimensions, material, plating, assembly pressure and test setup, so a design that works in simulation can still fail when it is machined and assembled. NPI is the process that closes that gap with measured evidence rather than assumption.</p>
+
+<h2>Requirements Review and Design for Manufacturability</h2>
+<p>The first stage is a structured review of the specification. The engineering team checks whether the electrical targets are self-consistent, whether the mechanical envelope allows the required topology, and whether the power, PIM, environmental and test requirements can be verified. Missing inputs are identified before the design is released rather than after the first parts are made.</p>
+<p>Design for manufacturability, or DFM, follows. The review looks at tolerances, tool access, surface finish, plating, assembly sequence and test access. A cavity filter may need tuning access that conflicts with a sealed enclosure; a waveguide diplexer may need a split-block joint that is difficult to align; an enclosure may need a bend radius that the sheet thickness cannot support. These issues are cheaper to resolve on a drawing than on a machined part.</p>
+<p>For high-frequency designs, the critical dimensions should be identified in the drawing and linked to the manufacturing and inspection plan. A general tolerance block is not enough when a small feature controls the passband or the isolation.</p>
+
+<h2>Prototype and Design Verification</h2>
+<p>The prototype stage proves that the design can meet the electrical target in hardware. It should include a measured comparison with the simulation, a review of the critical dimensions and a first look at the assembly and test process. If the prototype misses the target, the cause should be identified before the design is revised: a machining error, a material difference, a plating variation and a test-fixture error can all produce the same symptom.</p>
+<p>Design verification may include temperature, power, PIM and environmental testing, depending on the project. The acceptance criteria should be agreed in advance, and the test setup should be documented so the results can be repeated. A prototype that passes only under a special bench condition is not yet a production design.</p>
+
+<h2>First Article Inspection</h2>
+<p>First article inspection, or FAI, confirms that the first production-representative part matches the drawing and the approved prototype. It normally covers critical dimensions, material and finish, and the RF performance that the specification requires. The FAI record should identify the drawing revision, the part number, the serial or lot number and the measurement equipment used.</p>
+<p>The FAI is also the point to confirm the test baseline. The test fixture, calibration, reference plane, limits and data format should be the same ones that will be used in production. If the production test will differ from the prototype test, the correlation between the two should be established before the pilot run.</p>
+
+<figure>
+<img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-automated-assembly.webp" alt="Automated assembly machine for RF cavity filters" width="1920" height="1080" loading="lazy" decoding="async">
+<figcaption>Automated assembly of RF cavity filters. NPI should confirm that the production process, fixtures and test method reproduce the approved prototype, not only that the design is theoretically sound.</figcaption>
+</figure>
+
+<h2>Pilot Run and Process Capability</h2>
+<p>A pilot run builds a small production batch using the intended process, tooling, fixtures and test flow. Its purpose is to expose the variation that a single prototype cannot show: machining scatter, plating thickness distribution, assembly time, tuning time and test repeatability. The output should be a process that can meet the specification repeatedly, not just a batch that happened to pass.</p>
+<p>Process capability is evaluated against the critical characteristics. For RF parts, that may mean the passband edges, insertion loss, rejection, return loss, PIM or a critical mechanical dimension. The pilot run should show how those characteristics are distributed and whether the control limits leave enough margin for normal production variation.</p>
+<p>The pilot also tests the supply chain. Material availability, plating capacity, fixture life and inspection throughput can all become constraints at volume. A pilot run that ignores those constraints may pass technically but fail commercially.</p>
+
+<h2>Golden Sample and Test Baseline</h2>
+<p>A golden sample is an approved reference unit, or a set of reference data, used to confirm that production test setups remain consistent over time. It is not a substitute for specification limits. It is a correlation tool: if a production unit fails, the golden sample can show whether the unit or the test setup is responsible.</p>
+<p>The test baseline should include the instrument settings, calibration method, fixture, reference plane and data format. It should also define how often the setup is verified and what happens when a verification fails. For PIM testing, the baseline should include the carrier configuration and the measurement environment because those factors are difficult to reproduce without a documented procedure.</p>
+
+<h2>Change Control and Mass Production</h2>
+<p>Once the design and process are approved, changes should be controlled. A material substitution, a plating change, a new CNC program, a fixture modification or a supplier change can alter the RF result even when the drawing looks the same. The change control process should identify which changes require a new first article, which require a partial verification and which can be handled by routine inspection.</p>
+<p>Mass production depends on the same evidence continuing to be generated. Incoming material checks, in-process inspection, final RF test and lot traceability should be defined in the control plan. If a nonconformance appears, the lot or serial number should allow the affected units to be identified and the cause to be investigated.</p>
+
+<h2>RF NPI Checklist</h2>
+<ul>
+<li>Review the specification for missing or conflicting inputs before design release.</li>
+<li>Complete a DFM review of tolerances, tool access, plating, assembly and test access.</li>
+<li>Build a prototype and compare measured performance with the simulation.</li>
+<li>Agree the verification tests, acceptance criteria and test setup in advance.</li>
+<li>Complete a first article inspection against the approved drawing and prototype.</li>
+<li>Run a pilot batch with the intended process, tooling and test flow.</li>
+<li>Evaluate process capability on the critical RF and mechanical characteristics.</li>
+<li>Establish a golden sample and a documented test baseline.</li>
+<li>Define change control, traceability and the production control plan.</li>
+</ul>
+<p>SONNE supports RF NPI projects for custom filters, waveguide assemblies, combiners and enclosures from prototype through pilot run to mass production, with ISO 9001 quality management, high-precision CNC machining and VNA, PIM and reliability testing. The <a href="/engineering/npi/">NPI page</a> describes the project path, <a href="/engineering/manufacturing/">manufacturing</a> covers process control and <a href="/engineering/custom-rf-design/">custom RF design</a> explains the evaluation stage. When the requirements are ready, submit them through <a href="/request-a-quote/">Request a Quote</a>; a complete RFQ can receive initial engineering feedback in about 24 hours, not an automatic quotation.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>What is the difference between a prototype and a first article?</h3>
+<p>A prototype proves that the design can work. A first article confirms that the production-representative part, made with the intended process and tooling, matches the approved design and specification.</p>
+<h3>Why is a pilot run necessary if the prototype passed?</h3>
+<p>A prototype does not show production variation. A pilot run exposes machining scatter, assembly and tuning time, plating distribution and test repeatability before volume commitments are made.</p>
+<h3>What is a golden sample used for?</h3>
+<p>A golden sample is a reference for test correlation. It helps determine whether a failed result comes from the unit under test or from a change in the test setup, and it supports consistent verification over time.</p>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between a prototype and a first article?","acceptedAnswer":{"@type":"Answer","text":"A prototype proves that the design can work. A first article confirms that the production-representative part, made with the intended process and tooling, matches the approved design and specification."}},{"@type":"Question","name":"Why is a pilot run necessary if the prototype passed?","acceptedAnswer":{"@type":"Answer","text":"A prototype does not show production variation. A pilot run exposes machining scatter, assembly and tuning time, plating distribution and test repeatability before volume commitments are made."}},{"@type":"Question","name":"What is a golden sample used for?","acceptedAnswer":{"@type":"Answer","text":"A golden sample is a reference for test correlation. It helps determine whether a failed result comes from the unit under test or from a change in the test setup, and it supports consistent verification over time."}}]}</script>

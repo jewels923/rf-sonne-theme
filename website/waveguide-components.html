@@ -1,0 +1,381 @@
+<!-- wp:html -->
+<div class="sn-waveguide">
+  <style>
+    .sn-waveguide { --waveguide-label: .75rem; color: var(--sn-text); }
+    .sn-waveguide *, .sn-waveguide *::before, .sn-waveguide *::after { box-sizing: border-box; }
+    .sn-waveguide h2, .sn-waveguide h3, .sn-waveguide p, .sn-waveguide ul, .sn-waveguide ol, .sn-waveguide figure { margin-top: 0; }
+    .sn-waveguide h2 { margin-bottom: 18px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-waveguide h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-waveguide p, .sn-waveguide li { line-height: 1.7; }
+    .sn-waveguide a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-waveguide img { display: block; max-width: 100%; height: auto; }
+    .sn-waveguide .sn-waveguide__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: var(--waveguide-label); font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-waveguide .sn-waveguide__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
+
+    /* Hero: OMT plate, straight-waveguide detail and the graded frequency boundaries. */
+    .sn-waveguide .sn-waveguide__hero { padding-block: clamp(128px, 10vw, 158px) clamp(56px, 6vw, 84px); }
+    .sn-waveguide .sn-waveguide__hero::before { opacity: .5; }
+    .sn-waveguide .sn-waveguide__hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr); gap: clamp(36px, 5.5vw, 76px); align-items: center; }
+    .sn-waveguide .sn-waveguide__hero .sn-breadcrumbs { color: rgba(252, 254, 255, .56); }
+    .sn-waveguide .sn-waveguide__hero .sn-breadcrumbs a { color: var(--sn-accent-on-dark); }
+    .sn-waveguide .sn-waveguide__hero-copy > p { max-width: 64ch; margin-bottom: 0; color: rgba(252, 254, 255, .8); font-size: 1.04rem; line-height: 1.7; }
+    .sn-waveguide .sn-waveguide__hero-note { margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(140, 196, 255, .34); color: rgba(252, 254, 255, .72); font-size: .85rem; line-height: 1.65; }
+    .sn-waveguide .sn-waveguide__hero-note strong { color: var(--sn-white); }
+    .sn-waveguide .sn-waveguide__hero-paths { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; counter-reset: waveguide-path; }
+    .sn-waveguide .sn-waveguide__hero-paths a { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 12px; border: 1px solid rgba(252, 254, 255, .24); color: var(--sn-white); font-family: var(--sn-font-mono); font-size: .7rem; letter-spacing: .04em; text-decoration: none; counter-increment: waveguide-path; }
+    .sn-waveguide .sn-waveguide__hero-paths a::before { margin-right: 8px; color: var(--sn-cyan); font-size: .62rem; content: '0' counter(waveguide-path); }
+    .sn-waveguide .sn-waveguide__hero-paths a:hover, .sn-waveguide .sn-waveguide__hero-paths a:focus-visible { border-color: var(--sn-cyan); }
+    .sn-waveguide .sn-waveguide__hero-media { display: grid; grid-template-columns: minmax(0, 1fr) 132px; gap: 14px; align-items: end; }
+    .sn-waveguide .sn-waveguide__hero-media .sn-hero-plate { margin: 0; }
+    .sn-waveguide .sn-waveguide__hero-main .sn-hero-plate__media { padding: clamp(14px, 2.4vw, 26px); }
+    .sn-waveguide .sn-waveguide__hero-media .sn-hero-plate img { aspect-ratio: 16 / 10; }
+    .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__media { padding: 10px; }
+    .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate img { aspect-ratio: 1; }
+    .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__tag { padding: 8px 10px; font-size: .6rem; letter-spacing: .05em; }
+    .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__tag span:last-child { display: none; }
+    .sn-waveguide .sn-waveguide__hero-part figcaption { padding: 8px 10px; font-size: .6rem; }
+
+    /* Section rhythm and the shared record head. */
+    .sn-waveguide .sn-waveguide__intro { margin-bottom: clamp(28px, 3.4vw, 42px); }
+    .sn-waveguide .sn-waveguide__intro .sn-record-meta { font-size: var(--waveguide-label); }
+
+    /* Four product forms, each recorded as a plate. */
+    .sn-waveguide .sn-waveguide__product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .sn-waveguide .sn-waveguide__product-card { display: flex; min-width: 0; flex-direction: column; border: 1px solid var(--sn-line); background: var(--sn-card); transition: border-color var(--sn-transition), transform var(--sn-transition); }
+    .sn-waveguide .sn-waveguide__product-card:hover { border-color: var(--sn-cyan-dark); transform: translateY(-2px); }
+    .sn-waveguide .sn-waveguide__product-card > img { width: 100%; aspect-ratio: 4 / 3; padding: 16px; background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-waveguide .sn-waveguide__product-tag { display: flex; justify-content: space-between; gap: 10px; padding: 9px 16px; border-top: 1px solid var(--sn-line); border-bottom: 1px solid var(--sn-line); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; }
+    .sn-waveguide .sn-waveguide__product-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
+    .sn-waveguide .sn-waveguide__product-body p, .sn-waveguide .sn-waveguide__product-body li { color: var(--sn-text-muted); font-size: .86rem; line-height: 1.65; }
+    .sn-waveguide .sn-waveguide__product-body ul { margin-bottom: 14px; padding-left: 18px; }
+    .sn-waveguide .sn-waveguide__product-body a { display: inline-flex; align-items: center; min-height: 44px; margin-top: auto; font-weight: 700; }
+
+    /* Definition, application and evidence ledgers. */
+    .sn-waveguide .sn-waveguide__interface { min-width: 940px; }
+    .sn-waveguide .sn-waveguide__interface tbody th { width: 20%; }
+    .sn-waveguide .sn-waveguide__applications { min-width: 900px; }
+    .sn-waveguide .sn-waveguide__applications tbody th { width: 22%; }
+    .sn-waveguide .sn-waveguide__evidence { min-width: 940px; }
+    .sn-waveguide .sn-waveguide__evidence tbody th { width: 22%; }
+    .sn-waveguide .sn-waveguide__bandplan { min-width: 1000px; }
+    .sn-waveguide .sn-waveguide__ledger caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-waveguide .sn-waveguide__detail-grid { display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr); gap: 18px; margin-top: 28px; }
+    .sn-waveguide .sn-waveguide__detail-grid figure { margin-bottom: 0; }
+    .sn-waveguide .sn-waveguide__detail-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+    .sn-waveguide .sn-waveguide__detail-grid figure:last-child img { aspect-ratio: 4 / 3; padding: 18px; background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-waveguide .sn-waveguide__detail-grid figcaption, .sn-waveguide .sn-waveguide__application-media figcaption, .sn-waveguide .sn-waveguide__evidence-grid figcaption { margin-top: 9px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
+
+    /* Application block diagram and media. */
+    .sn-waveguide .sn-waveguide__backhaul { margin-top: 26px; padding: 22px 24px; border-top: 1px solid var(--sn-line-strong); border-bottom: 1px solid var(--sn-line); background: var(--sn-card); }
+    .sn-waveguide .sn-waveguide__backhaul h3 { margin-bottom: 6px; font-size: .98rem; }
+    .sn-waveguide .sn-waveguide__backhaul p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-waveguide .sn-waveguide__flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 16px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; }
+    .sn-waveguide .sn-waveguide__flow span { padding: 9px 11px; border: 1px solid var(--sn-line-strong); }
+    .sn-waveguide .sn-waveguide__flow b { color: var(--sn-cyan-dark); }
+    .sn-waveguide .sn-waveguide__application-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-waveguide .sn-waveguide__application-media figure { margin-bottom: 0; }
+    .sn-waveguide .sn-waveguide__application-media img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .sn-waveguide .sn-waveguide__evidence-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(240px, .6fr); gap: 18px; margin-top: 26px; }
+    .sn-waveguide .sn-waveguide__evidence-grid figure { margin-bottom: 0; }
+    .sn-waveguide .sn-waveguide__evidence-grid img { width: 100%; height: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+
+    /* Three RFQ input groups as a flat checklist ledger. */
+    .sn-waveguide .sn-waveguide__checklist-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 26px; border-top: 1px solid var(--sn-line-strong); counter-reset: waveguide-input; }
+    .sn-waveguide .sn-waveguide__checklist { padding: 18px 24px 20px 0; border-bottom: 1px solid var(--sn-line); counter-increment: waveguide-input; }
+    .sn-waveguide .sn-waveguide__checklist + .sn-waveguide__checklist { padding-left: 24px; border-left: 1px solid var(--sn-line); }
+    .sn-waveguide .sn-waveguide__checklist::before { display: block; margin-bottom: 12px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; line-height: 1.5; content: 'INPUT 0' counter(waveguide-input); }
+    .sn-waveguide .sn-waveguide__checklist h3 { margin-bottom: 8px; font-size: .98rem; }
+    .sn-waveguide .sn-waveguide__checklist ul { margin-bottom: 0; padding-left: 18px; color: var(--sn-text-muted); }
+    .sn-waveguide .sn-waveguide__checklist li { font-size: .84rem; line-height: 1.6; }
+
+    /* Project gates. */
+    .sn-waveguide .sn-waveguide__process { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--sn-line-strong); counter-reset: waveguide-process; }
+    .sn-waveguide .sn-waveguide__process > li { padding: 18px 20px 22px 0; border-bottom: 1px solid var(--sn-line); counter-increment: waveguide-process; }
+    .sn-waveguide .sn-waveguide__process > li + li { padding-left: 20px; border-left: 1px solid var(--sn-line); }
+    .sn-waveguide .sn-waveguide__process > li::before { display: block; margin-bottom: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; line-height: 1.5; content: 'PHASE 0' counter(waveguide-process); }
+    .sn-waveguide .sn-waveguide__process h3 { margin-bottom: 8px; font-size: .94rem; }
+    .sn-waveguide .sn-waveguide__process p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .82rem; line-height: 1.65; }
+    .sn-waveguide .sn-waveguide__process strong { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .04em; text-transform: uppercase; }
+
+    /* FAQ and RFQ. */
+    .sn-waveguide .sn-waveguide__faq { max-width: 1000px; }
+    .sn-waveguide .sn-waveguide__rfq { width: 100%; }
+    .sn-waveguide .sn-waveguide__fine-print { margin-top: 18px; font-size: .82rem; }
+
+    @media (max-width: 1100px) {
+      .sn-waveguide .sn-waveguide__product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-waveguide .sn-waveguide__process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-waveguide .sn-waveguide__process > li + li { padding-left: 0; border-left: 0; }
+      .sn-waveguide .sn-waveguide__process > li:nth-child(even) { padding-left: 22px; border-left: 1px solid var(--sn-line); }
+    }
+    @media (max-width: 1024px) {
+      .sn-waveguide .sn-waveguide__hero-grid { grid-template-columns: 1fr; }
+      .sn-waveguide .sn-waveguide__hero-media { max-width: 620px; }
+      .sn-waveguide .sn-waveguide__checklist-grid { grid-template-columns: 1fr; }
+      .sn-waveguide .sn-waveguide__checklist, .sn-waveguide .sn-waveguide__checklist + .sn-waveguide__checklist { padding: 18px 0 20px; border-left: 0; }
+    }
+    @media (max-width: 760px) {
+      .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__tag span:last-child { display: inline; }
+      .sn-waveguide .sn-waveguide__interface, .sn-waveguide .sn-waveguide__applications, .sn-waveguide .sn-waveguide__evidence, .sn-waveguide .sn-waveguide__bandplan { min-width: 0; }
+      .sn-waveguide .sn-waveguide__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-waveguide .sn-waveguide__ledger, .sn-waveguide .sn-waveguide__ledger tbody, .sn-waveguide .sn-waveguide__ledger tr, .sn-waveguide .sn-waveguide__ledger th, .sn-waveguide .sn-waveguide__ledger td { display: block; width: 100%; }
+      .sn-waveguide .sn-waveguide__ledger tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
+      .sn-waveguide .sn-waveguide__ledger tbody tr:last-child { border-bottom: 1px solid var(--sn-line-strong); }
+      .sn-waveguide .sn-waveguide__ledger tbody th { padding: 0 0 12px; border: 0; font-size: 1.02rem; }
+      .sn-waveguide .sn-waveguide__ledger tbody td { padding: 0 0 10px; border: 0; }
+      .sn-waveguide .sn-waveguide__ledger tbody td:last-child { padding-bottom: 0; }
+      .sn-waveguide .sn-waveguide__ledger tbody td::before { display: block; margin-bottom: 3px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .66rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; content: attr(data-label); }
+      .sn-waveguide .sn-waveguide__detail-grid, .sn-waveguide .sn-waveguide__application-media, .sn-waveguide .sn-waveguide__evidence-grid { grid-template-columns: 1fr; }
+      .sn-waveguide .sn-waveguide__process { grid-template-columns: 1fr; }
+      .sn-waveguide .sn-waveguide__process > li, .sn-waveguide .sn-waveguide__process > li + li, .sn-waveguide .sn-waveguide__process > li:nth-child(even) { padding: 18px 0 20px; border-left: 0; }
+      .sn-waveguide .sn-waveguide__rfq-panel ul { columns: 1; }
+      .sn-waveguide .sn-waveguide__actions .sn-btn { width: 100%; }
+    }
+    @media (max-width: 560px) {
+      .sn-waveguide .sn-waveguide__hero-media { grid-template-columns: 1fr; }
+      .sn-waveguide .sn-waveguide__hero-part { max-width: 190px; }
+      .sn-waveguide .sn-waveguide__product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <section class="sn-hero sn-waveguide__hero" aria-labelledby="waveguide-title">
+    <div class="sn-container">
+      <div class="sn-waveguide__hero-grid">
+        <div class="sn-waveguide__hero-copy">
+          <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">Waveguide Components</li></ol></nav>
+          <span class="sn-waveguide__eyebrow">Ku/Ka/E-band · Backhaul · Earth stations · Radar</span>
+          <h1 id="waveguide-title">Waveguide Components, Assemblies &amp; Diplexers</h1>
+          <p>Evaluate the RF function and mechanical interface together. SONNE reviews waveguide diplexers, OMTs, OCUs and custom assemblies against the band plan, flange, polarization, structure and verification requirements.</p>
+          <div class="sn-waveguide__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Waveguide Evaluation</a><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Send Band Plan</a></div>
+          <div class="sn-waveguide__hero-paths" aria-label="Waveguide product paths"><a href="#waveguide-products">Diplexer</a><a href="#waveguide-products">OMT</a><a href="#waveguide-products">OCU</a><a href="#waveguide-products">Custom assembly</a></div>
+          <p class="sn-waveguide__hero-note"><strong>Distinct boundaries:</strong> core RF portfolio DC–40 GHz; OCU customization 6–80 GHz; selected custom designs up to 110 GHz depending on topology and validation. These are not one universal range for every component.</p>
+        </div>
+        <div class="sn-waveguide__hero-media">
+          <figure class="sn-hero-plate sn-waveguide__hero-main">
+            <div class="sn-hero-plate__tag"><span>Plate 01</span><span>OMT family</span></div>
+            <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp" alt="Ortho-mode transducer" width="1024" height="571" loading="eager" fetchpriority="high" decoding="async"></div>
+            <figcaption>Ortho-mode transducer product visual; no unlisted isolation, loss or polarization value is implied.</figcaption>
+          </figure>
+          <figure class="sn-hero-plate sn-waveguide__hero-part">
+            <div class="sn-hero-plate__tag"><span>Detail</span><span>Guide</span></div>
+            <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/straight-waveguide.webp" alt="straight waveguide" width="720" height="720" loading="eager" decoding="async"></div>
+            <figcaption>Straight waveguide, shown separately from the OMT.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="sn-hero-meta"><span><b>Index</b>4 waveguide forms</span><span><b>Core RF</b>DC–40 GHz</span><span><b>OCU customization</b>6–80 GHz</span><span><b>Custom designs</b>Up to 110 GHz</span></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="waveguide-products" aria-labelledby="waveguide-products-title">
+    <div class="sn-container">
+      <div class="sn-waveguide__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>01</b> / Product forms</span><span>4 waveguide types</span></div>
+        <div class="sn-record-title"><h2 id="waveguide-products-title">Select Diplexers, OMTs, OCUs and Custom Waveguide Assemblies</h2><p>Similar hardware can perform different system functions. Name the port relationships and frequency or polarization logic before selecting a structure.</p></div>
+      </div>
+      <div class="sn-waveguide__product-grid">
+        <article class="sn-waveguide__product-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-duplexer-v3.webp" alt="RF duplexer" width="1024" height="571" loading="lazy" decoding="async"><div class="sn-waveguide__product-tag"><span>Form 01</span><span>Frequency path</span></div><div class="sn-waveguide__product-body"><h3>Waveguide Diplexer</h3><p>Separates or combines signal paths by frequency. The product image is a frequency-path device visual, not a claim about a specific waveguide model.</p><ul><li>Two frequency bands and port functions</li><li>Isolation, loss and flange requirements</li></ul><a href="/request-a-quote/">Evaluate a diplexer →</a></div></article>
+        <article class="sn-waveguide__product-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp" alt="Ortho-mode transducer" width="1024" height="571" loading="lazy" decoding="async"><div class="sn-waveguide__product-tag"><span>Form 02</span><span>Polarization</span></div><div class="sn-waveguide__product-body"><h3>OMT</h3><p>An ortho-mode transducer separates or combines orthogonal polarizations at a waveguide interface.</p><ul><li>Frequency and polarization definitions</li><li>Ports, isolation and polarization verification</li></ul><a href="/request-a-quote/">Evaluate an OMT →</a></div></article>
+        <article class="sn-waveguide__product-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-ocu-combiner-v2.webp" alt="Outdoor combining unit" width="1024" height="571" loading="lazy" decoding="async"><div class="sn-waveguide__product-tag"><span>Form 03</span><span>Outdoor combining</span></div><div class="sn-waveguide__product-body"><h3>OCU</h3><p>An outdoor combining unit combines signal paths in an outdoor link assembly. The disclosed customization range is 6–80 GHz.</p><ul><li>Link band plan and port relationships</li><li>Outdoor structure and interfaces</li></ul><a href="/request-a-quote/">Evaluate an OCU →</a></div></article>
+        <article class="sn-waveguide__product-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/curved-waveguide.webp" alt="curved waveguide" width="720" height="720" loading="lazy" decoding="async"><div class="sn-waveguide__product-tag"><span>Form 04</span><span>Drawing-based</span></div><div class="sn-waveguide__product-body"><h3>Custom Waveguide Assembly</h3><p>Straight, curved, twisted and transition forms are assessed against their drawing and assembly relationship.</p><ul><li>2D/3D drawing and waveguide size</li><li>Flanges, material, plating and envelope</li></ul><a href="/request-a-quote/">Evaluate an assembly →</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="waveguide-interface-title">
+    <div class="sn-container">
+      <div class="sn-waveguide__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>02</b> / Mechanical interface</span><span>4 definition elements</span></div>
+        <div class="sn-record-title"><h2 id="waveguide-interface-title">Define the Mechanical Details that High-Frequency Designs Depend On</h2><p>Machining, plating, flange and polarization details belong in the same review as the RF band plan. Unknown interfaces are marked for evaluation rather than replaced with supplier assumptions.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="waveguide-interface-title">
+        <table class="sn-table sn-ledger sn-waveguide__ledger sn-waveguide__interface">
+          <thead><tr><th scope="col">Element</th><th scope="col">Buyer input</th><th scope="col">Engineering check</th><th scope="col">Confirmable output</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Machining tolerance</th><td data-label="Buyer input">Critical dimensions, GD&amp;T, datums and drawing revision</td><td data-label="Engineering check">Structure, feature relationship, process and inspection feasibility</td><td data-label="Confirmable output">Reviewed drawing requirements and applicable inspection plan</td></tr>
+            <tr><th scope="row">Plating</th><td data-label="Buyer input">Material, surface specification and required thickness or finish</td><td data-label="Engineering check">Geometry, surface requirement and project-specific control method</td><td data-label="Confirmable output">Applicable surface and verification requirements</td></tr>
+            <tr><th scope="row">Flange</th><td data-label="Buyer input">Standard or model, interface drawing, sealing, mating and orientation</td><td data-label="Engineering check">Compatibility, assembly direction, envelope and reference plane</td><td data-label="Confirmable output">Defined interface and open items; no default flange assumed</td></tr>
+            <tr><th scope="row">Polarization</th><td data-label="Buyer input">Tx/Rx or orthogonal port definitions, directions and targets</td><td data-label="Engineering check">Port logic, polarization orientation and required validation</td><td data-label="Confirmable output">Documented polarization and verification definition</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-note"><strong>Conditional disclosed capabilities:</strong> Above 40 GHz, mechanical tolerance can reach ±0.01 mm, depending on structure. Above 60 GHz, plating-thickness control can reach 1 μm, depending on structure and project requirements. These are not blanket guarantees for all waveguide components.</p>
+      <div class="sn-waveguide__detail-grid">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/tech-precision-machining.webp" alt="Precision CNC machining of high frequency parts" width="1024" height="1024" loading="lazy" decoding="async"><figcaption>Precision CNC machining evidence for high-frequency parts.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/transition-waveguide-1.webp" alt="transition waveguide" width="720" height="720" loading="lazy" decoding="async"><figcaption>Transition waveguide interface example; dimensions must come from the project drawing.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="waveguide-applications-title">
+    <div class="sn-container">
+      <div class="sn-waveguide__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>03</b> / Applications</span><span>3 system paths</span></div>
+        <div class="sn-record-title"><h2 id="waveguide-applications-title">Map Waveguide Hardware to Backhaul, Earth Station and Radar Links</h2><p>The application narrows the questions; it does not select a component automatically. Submit the link function, exact bands and interfaces for a project-specific review.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="waveguide-applications-title">
+        <table class="sn-table sn-ledger sn-waveguide__ledger sn-waveguide__applications">
+          <thead><tr><th scope="col">Application</th><th scope="col">Candidate hardware</th><th scope="col">Priority inputs</th><th scope="col">Application path</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Microwave backhaul</th><td data-label="Candidate hardware">E-band diplexer, OCU and waveguide assemblies</td><td data-label="Priority inputs">Link bands, Tx/Rx, outdoor interfaces, loss and isolation targets</td><td data-label="Application path"><a href="/solutions/microwave-backhaul/">Microwave Backhaul</a></td></tr>
+            <tr><th scope="row">Satellite earth station</th><td data-label="Candidate hardware">Ku/Ka OMT, diplexer and waveguide assembly</td><td data-label="Priority inputs">Polarization, flanges, frequency bands and verification requirements</td><td data-label="Application path"><a href="/solutions/satellite-earth-station/">Satellite Earth Station</a></td></tr>
+            <tr><th scope="row">Radar</th><td data-label="Candidate hardware">Requirement-specific waveguide function or assembly</td><td data-label="Priority inputs">Exact function, frequency, power and mechanical structure</td><td data-label="Application path"><a href="/solutions/">Solutions application navigator</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-waveguide__backhaul">
+        <h3>Backhaul functional relationship</h3>
+        <p>This unscaled block diagram identifies where functions may sit; it is not a completed link design.</p>
+        <div class="sn-waveguide__flow" aria-label="Backhaul functional block diagram"><span>Tx / Rx band plan</span><b aria-hidden="true">→</b><span>OCU / Diplexer</span><b aria-hidden="true">→</b><span>Waveguide assembly</span><b aria-hidden="true">→</b><span>Defined outdoor interface</span></div>
+      </div>
+      <div class="sn-waveguide__application-media">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/satellite-693224-1280.webp" alt="satellite 693224 1280" width="1280" height="852" loading="lazy" decoding="async"><figcaption>Satellite application visual. Define polarization, bands and interfaces for the actual earth-station requirement.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/radar-4502518-1280.webp" alt="radar 4502518 1280" width="1280" height="853" loading="lazy" decoding="async"><figcaption>Radar application visual only; no radar performance or product suitability is inferred.</figcaption></figure>
+      </div>
+      <p class="sn-note">For filtering-specific structure selection, continue to <a href="/products/rf-microwave-filters/">RF &amp; Microwave Filters</a>.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="waveguide-evidence-title">
+    <div class="sn-container">
+      <div class="sn-waveguide__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>04</b> / Evidence</span><span>5 entries</span></div>
+        <div class="sn-record-title"><h2 id="waveguide-evidence-title">Review the Evidence behind Custom Waveguide Manufacturing</h2><p>Separate disclosed capability boundaries from evidence that still requires project approval. Real machining and test images support supplier review; they do not replace product-specific curves and records.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="waveguide-evidence-title">
+        <table class="sn-table sn-ledger sn-waveguide__ledger sn-waveguide__evidence">
+          <thead><tr><th scope="col">Evidence item</th><th scope="col">Disclosed scope</th><th scope="col">What remains project-specific</th><th scope="col">Review route</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">OCU frequency scope</th><td data-label="Disclosed scope">Customization from 6 to 80 GHz</td><td data-label="What remains project-specific">Exact band plan, outdoor structure, interfaces and validation</td><td data-label="Review route"><a href="/request-a-quote/">Submit OCU requirement</a></td></tr>
+            <tr><th scope="row">Selected high-frequency designs</th><td data-label="Disclosed scope">Up to 110 GHz, depending on topology and validation</td><td data-label="What remains project-specific">Device function, mechanical design and applicable test boundary</td><td data-label="Review route"><a href="/engineering/testing-quality/">Testing &amp; quality</a></td></tr>
+            <tr><th scope="row">High-isolation waveguide diplexer case</th><td data-label="Disclosed scope">Source case category only</td><td data-label="What remains project-specific">Only internally approved curves and conditions may be published; no customer, value or curve is shown here</td><td data-label="Review route"><a href="/request-a-quote/">Request applicable evidence</a></td></tr>
+            <tr><th scope="row">Precision CNC and plating</th><td data-label="Disclosed scope">Machining capability and conditional high-frequency controls</td><td data-label="What remains project-specific">Drawing, structure, material, plating and inspection requirements</td><td data-label="Review route"><a href="/engineering/manufacturing/">Manufacturing review</a></td></tr>
+            <tr><th scope="row">VNA verification</th><td data-label="Disclosed scope">RF test capability</td><td data-label="What remains project-specific">Bands, ports, calibration/reference plane, measurements and output files</td><td data-label="Review route"><a href="/engineering/testing-quality/">Testing &amp; quality</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sn-waveguide__evidence-grid">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-rf-testing-1.webp" alt="Technician testing an RF filter with bench instruments" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Real RF bench-testing operation. The applicable waveguide setup and measurements are defined by the project.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-machining-detail.webp" alt="Close-up of precision machining on a metal housing" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Precision machining detail; drawing requirements determine the actual inspection scope.</figcaption></figure>
+      </div>
+      <div class="sn-waveguide__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Waveguide Test Evidence</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="waveguide-checklist-title">
+    <div class="sn-container">
+      <div class="sn-waveguide__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>05</b> / RFQ preparation</span><span>3 input groups · 7 port fields</span></div>
+        <div class="sn-record-title"><h2 id="waveguide-checklist-title">Prepare a Waveguide RFQ Engineers Can Evaluate</h2><p>Submit known boundaries and mark the rest TBD. A clear open item is more useful than an assumed frequency, flange or polarization value.</p></div>
+      </div>
+      <div class="sn-waveguide__checklist-grid">
+        <article class="sn-waveguide__checklist"><h3>RF</h3><ul><li>Device function and port roles</li><li>Tx/Rx or per-port frequency bands</li><li>Bandwidth, insertion loss and isolation/rejection</li><li>Power and polarization verification targets</li></ul></article>
+        <article class="sn-waveguide__checklist"><h3>Mechanical</h3><ul><li>Waveguide size and flange/interface</li><li>Connectors and polarization direction</li><li>Material, plating and mechanical envelope</li><li>Assembly direction and outdoor conditions</li></ul></article>
+        <article class="sn-waveguide__checklist"><h3>Project</h3><ul><li>Application and prototype/batch stage</li><li>Expected quantity</li><li>Target verification and records</li><li>Band plan, 2D/3D drawings and test specification</li></ul></article>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="waveguide-checklist-title">
+        <table class="sn-table sn-ledger sn-waveguide__ledger sn-waveguide__bandplan">
+          <caption>Blank band-plan structure: add one row per port and preserve unknown fields as TBD.</caption>
+          <thead><tr><th scope="col">Port label</th><th scope="col">Function / direction</th><th scope="col">Frequency range</th><th scope="col">Waveguide / flange</th><th scope="col">Polarization</th><th scope="col">Loss / isolation target</th><th scope="col">Reference plane</th></tr></thead>
+          <tbody><tr><th scope="row">Define each port</th><td data-label="Function / direction">Buyer input</td><td data-label="Frequency range">Buyer input</td><td data-label="Waveguide / flange">Buyer input</td><td data-label="Polarization">Buyer input or N/A</td><td data-label="Loss / isolation target">Buyer input</td><td data-label="Reference plane">Buyer input</td></tr></tbody>
+        </table>
+      </div>
+      <p class="sn-note">Use the <a href="/resources/rfq-guide/">RFQ guide</a> to prepare the submission. No unconfirmed example bands or interface values are inserted into the template.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="waveguide-process-title">
+    <div class="sn-container">
+      <div class="sn-waveguide__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>06</b> / Project gates</span><span>Band plan to production</span></div>
+        <div class="sn-record-title"><h2 id="waveguide-process-title">From Band Plan and Interfaces to a Validated Waveguide Design</h2><p>RF and mechanical reviews run together from the first gate, reducing the chance that an electrically discussed concept later fails the flange, polarization or envelope requirement.</p></div>
+      </div>
+      <ol class="sn-waveguide__process">
+        <li><h3>Buyer inputs</h3><p>Check band plan, flange, polarization, envelope and application.<br><strong>Output:</strong> Known boundaries and open items.</p></li>
+        <li><h3>RF / mechanical review</h3><p>Evaluate function, topology, interfaces and structure together.<br><strong>Output:</strong> Feasibility questions and review path.</p></li>
+        <li><h3>Prototype &amp; VNA validation</h3><p>Define ports, calibration/reference plane and acceptance targets.<br><strong>Output:</strong> Prototype and agreed RF evidence.</p></li>
+        <li><h3>Pilot confirmation</h3><p>Confirm drawing, process and test baseline.<br><strong>Output:</strong> Project-specific production baseline.</p></li>
+        <li><h3>Production</h3><p>Execute controlled requirements and project-agreed verification.<br><strong>Output:</strong> Applicable production records.</p></li>
+      </ol>
+      <p class="sn-note">A complete RFQ typically receives initial engineering feedback in about 24 hours. Design conclusions, quotations and delivery timing require project review. The fastest prototype reference is about two weeks only as a reference, not a uniform commitment for E-band, OMT or OCU projects.</p>
+      <div class="sn-waveguide__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Waveguide Evaluation</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="waveguide-faq-title">
+    <div class="sn-container">
+      <div class="sn-waveguide__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>07</b> / Component notes</span><span>5 questions</span></div>
+        <div class="sn-record-title"><h2 id="waveguide-faq-title">Waveguide Component and Customization FAQs</h2><p>Clarify OMT and OCU functions, E-band inputs, flange and polarization definitions, frequency boundaries and drawing-based evaluation.</p></div>
+      </div>
+      <div class="sn-faq sn-waveguide__faq">
+        <details open><summary>What is the difference between an OMT and an OCU?</summary><p>An OMT, or ortho-mode transducer, separates or combines orthogonal polarizations in a waveguide interface. An OCU is an outdoor combining unit used to combine signal paths in an outdoor link assembly. They solve different system functions, so their RF inputs, interfaces and validation requirements should be specified separately.</p></details>
+        <details><summary>What parameters are required for an E-band waveguide evaluation?</summary><p>Provide the device function, exact transmit and receive bands, bandwidth, insertion loss, isolation or rejection targets, power, waveguide and flange interfaces, mechanical envelope and outdoor requirements. Include polarization details where relevant, plus expected quantity and test requirements. A band plan and interface drawing help engineering assess feasibility without assuming missing values.</p></details>
+        <details><summary>How should flange and polarization requirements be defined?</summary><p>Identify the waveguide size, flange type or interface drawing, port orientation, sealing or mating constraints and mechanical envelope. For polarization-sensitive hardware, define each port, polarization direction and the performance to be verified. If any item is unknown, mark it for review rather than allowing the supplier to assume an interface.</p></details>
+        <details><summary>What frequency range can custom waveguide components reach?</summary><p>SONNE lists OCU customization from 6 to 80 GHz and selected custom designs up to 110 GHz, depending on topology and validation. These figures do not establish one universal range for every waveguide component. Submit the exact device function and band plan so engineering can confirm the applicable design and test boundary.</p></details>
+        <details><summary>Can SONNE evaluate waveguide assemblies from drawings?</summary><p>Yes, custom waveguide assemblies can be evaluated from 2D or 3D drawings together with the operating frequency, waveguide and flange interfaces, material or plating requirements, quantity and validation needs. RF performance cannot be inferred from geometry alone, so include the required electrical targets and test conditions whenever they apply.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="waveguide-rfq-title">
+    <div class="sn-container">
+      <div class="sn-sheet sn-waveguide__rfq">
+        <div class="sn-sheet__head"><span>RFQ route · waveguide band plan</span><span>Known fields and TBD items accepted</span></div>
+        <div class="sn-sheet__grid">
+          <div>
+            <h2 id="waveguide-rfq-title">Send Your Band Plan, Flange and Polarization Requirements</h2>
+            <p>You can begin before every specification is complete. Identify the device function, target bands, application and expected quantity, then provide known flange, polarization and performance details.</p>
+            <p>Attach a band plan, interface drawing, 2D/3D files or test requirements when available. Mark unknown fields for review instead of guessing.</p>
+            <div class="sn-waveguide__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Waveguide Evaluation</a><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Send Band Plan</a></div>
+            <p class="sn-waveguide__fine-print">A complete RFQ typically receives initial engineering feedback in about 24 hours; quotation, prototype and production timing require evaluation. Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+          </div>
+          <div class="sn-sheet__panel sn-waveguide__rfq-panel">
+            <h3>Provided / to confirm</h3>
+            <ul><li>Device function</li><li>Target frequency bands</li><li>Application and quantity</li><li>Contact email</li><li>Flange or interface</li><li>Polarization definition</li><li>Loss and isolation targets</li><li>Power and environment</li><li>Mechanical envelope</li><li>Validation requirements</li><li>Band plan attachment</li><li>Drawing or test attachment</li></ul>
+            <p>The RFQ route carries the project brief and attachments to engineering; no unverified specification is prefilled here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/waveguide-components/#product",
+        "name": "Waveguide Components, Assemblies & Diplexers",
+        "url": "https://rf-sonne.com/products/waveguide-components/",
+        "description": "Waveguide diplexers, OMTs, OCUs and custom waveguide assemblies for Ku/Ka/E-band links, satellite earth stations and radar, with project-specific precision machining, plating and VNA evaluation.",
+        "category": "Waveguide and microwave components",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/waveguide-components/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"Waveguide Components","item":"https://rf-sonne.com/products/waveguide-components/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rf-sonne.com/products/waveguide-components/#faq",
+        "mainEntity": [
+          {"@type":"Question","name":"What is the difference between an OMT and an OCU?","acceptedAnswer":{"@type":"Answer","text":"An OMT, or ortho-mode transducer, separates or combines orthogonal polarizations in a waveguide interface. An OCU is an outdoor combining unit used to combine signal paths in an outdoor link assembly. They solve different system functions, so their RF inputs, interfaces and validation requirements should be specified separately."}},
+          {"@type":"Question","name":"What parameters are required for an E-band waveguide evaluation?","acceptedAnswer":{"@type":"Answer","text":"Provide the device function, exact transmit and receive bands, bandwidth, insertion loss, isolation or rejection targets, power, waveguide and flange interfaces, mechanical envelope and outdoor requirements. Include polarization details where relevant, plus expected quantity and test requirements. A band plan and interface drawing help engineering assess feasibility without assuming missing values."}},
+          {"@type":"Question","name":"How should flange and polarization requirements be defined?","acceptedAnswer":{"@type":"Answer","text":"Identify the waveguide size, flange type or interface drawing, port orientation, sealing or mating constraints and mechanical envelope. For polarization-sensitive hardware, define each port, polarization direction and the performance to be verified. If any item is unknown, mark it for review rather than allowing the supplier to assume an interface."}},
+          {"@type":"Question","name":"What frequency range can custom waveguide components reach?","acceptedAnswer":{"@type":"Answer","text":"SONNE lists OCU customization from 6 to 80 GHz and selected custom designs up to 110 GHz, depending on topology and validation. These figures do not establish one universal range for every waveguide component. Submit the exact device function and band plan so engineering can confirm the applicable design and test boundary."}},
+          {"@type":"Question","name":"Can SONNE evaluate waveguide assemblies from drawings?","acceptedAnswer":{"@type":"Answer","text":"Yes, custom waveguide assemblies can be evaluated from 2D or 3D drawings together with the operating frequency, waveguide and flange interfaces, material or plating requirements, quantity and validation needs. RF performance cannot be inferred from geometry alone, so include the required electrical targets and test conditions whenever they apply."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

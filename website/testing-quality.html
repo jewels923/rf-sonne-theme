@@ -1,0 +1,362 @@
+<!-- wp:html -->
+<div class="sn-testing sn-legacy-record">
+  <style>
+    .sn-testing { color: var(--sn-text); }
+    .sn-testing *, .sn-testing *::before, .sn-testing *::after { box-sizing: border-box; }
+    .sn-testing h2, .sn-testing h3, .sn-testing p, .sn-testing ul, .sn-testing ol, .sn-testing dl, .sn-testing dt, .sn-testing dd, .sn-testing figure { margin-top: 0; }
+    .sn-testing h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-testing h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-testing p, .sn-testing li, .sn-testing dd { line-height: 1.7; }
+    .sn-testing a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-testing img { display: block; max-width: 100%; height: auto; }
+    .sn-testing .sn-testing__eyebrow { display: block; margin-bottom: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-testing .sn-testing__intro { max-width: 860px; margin-bottom: 38px; }
+    .sn-testing .sn-testing__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.03rem; }
+    .sn-testing .sn-testing__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .sn-testing .sn-testing__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-testing .sn-testing__hero-grid { display: grid; grid-template-columns: minmax(0, 1.03fr) minmax(340px, .97fr); gap: clamp(34px, 6vw, 76px); align-items: center; }
+    .sn-testing .sn-testing__hero .sn-testing__eyebrow { color: var(--sn-cyan); }
+    .sn-testing .sn-testing__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-testing .sn-testing__hero-media { margin-bottom: 0; }
+    .sn-testing .sn-testing__hero-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid rgba(252, 254, 255, .2); }
+    .sn-testing .sn-testing__hero-media figcaption { margin-top: 12px; color: rgba(252, 254, 255, .64); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-testing .sn-testing__methods { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 26px 0 0; padding: 0; border-block: 1px solid rgba(252, 254, 255, .18); list-style: none; }
+    .sn-testing .sn-testing__methods li { padding: 16px 12px 16px 0; color: rgba(252, 254, 255, .76); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.5; }
+    .sn-testing .sn-testing__methods li + li { padding-left: 12px; border-left: 1px solid rgba(252, 254, 255, .18); }
+    .sn-testing .sn-testing__methods strong { display: block; margin-bottom: 3px; color: var(--sn-cyan); font-size: .82rem; }
+    .sn-testing .sn-testing__hero-note { margin: 18px 0 0; color: rgba(252, 254, 255, .68); font-size: .8rem; }
+    .sn-testing .sn-testing__table { min-width: 1060px; }
+    .sn-testing .sn-testing__table--compact { min-width: 0; }
+    .sn-testing .sn-testing__table caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-testing .sn-testing__table tbody th { color: var(--sn-navy); }
+    .sn-testing .sn-testing__note { margin: 18px 0 0; padding: 16px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .87rem; }
+    .sn-testing .sn-testing__report-layout { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr); gap: clamp(28px, 5vw, 54px); align-items: start; margin-bottom: 28px; }
+    .sn-testing .sn-testing__report { border: var(--sn-border); background: var(--sn-white); }
+    .sn-testing .sn-testing__report dl { margin: 0; }
+    .sn-testing .sn-testing__report-head { padding: 20px 22px; border-bottom: var(--sn-border); background: var(--sn-navy); color: var(--sn-white); }
+    .sn-testing .sn-testing__report-head span { display: block; margin-bottom: 4px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; }
+    .sn-testing .sn-testing__report-head strong { font-family: var(--sn-font-heading); font-size: 1.08rem; }
+    .sn-testing .sn-testing__report-row { display: grid; grid-template-columns: minmax(140px, .8fr) minmax(0, 1.2fr); gap: 14px; padding: 13px 22px; border-bottom: var(--sn-border); }
+    .sn-testing .sn-testing__report-row:last-child { border-bottom: 0; }
+    .sn-testing .sn-testing__report-row dt { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; }
+    .sn-testing .sn-testing__report-row dd { margin: 0; color: var(--sn-text-muted); font-size: .82rem; }
+    .sn-testing .sn-testing__report-layout figure { margin-bottom: 0; }
+    .sn-testing .sn-testing__report-layout img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-testing .sn-testing__report-layout figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-testing .sn-testing__buyer-check { margin: 0; padding: 0; list-style: none; border-top: var(--sn-border); }
+    .sn-testing .sn-testing__buyer-check li { position: relative; padding: 12px 0 12px 26px; border-bottom: var(--sn-border); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-testing .sn-testing__buyer-check li::before { position: absolute; top: 13px; left: 2px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .78rem; content: '□'; }
+    .sn-testing .sn-testing__chain-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 54px); align-items: start; }
+    .sn-testing .sn-testing__chain-layout figure { margin-bottom: 0; }
+    .sn-testing .sn-testing__chain-layout img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-testing .sn-testing__chain-layout figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-testing .sn-testing__chain { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 0 0 20px; padding: 0; list-style: none; counter-reset: chain; }
+    .sn-testing .sn-testing__chain li { padding: 16px 14px; border: var(--sn-border); background: var(--sn-white); counter-increment: chain; }
+    .sn-testing .sn-testing__chain li::before { display: block; margin-bottom: 8px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 700; content: '0' counter(chain); }
+    .sn-testing .sn-testing__chain strong { display: block; color: var(--sn-navy); font-size: .84rem; }
+    .sn-testing .sn-testing__chain span { color: var(--sn-text-muted); font-size: .76rem; line-height: 1.45; }
+    .sn-testing .sn-testing__wide-figure { margin-bottom: 24px; }
+    .sn-testing .sn-testing__wide-figure img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
+    .sn-testing .sn-testing__wide-figure figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-testing .sn-testing__audit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .sn-testing .sn-testing__audit-card { padding: 20px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-testing .sn-testing__audit-card span { display: block; margin-bottom: 8px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .sn-testing .sn-testing__audit-card p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .82rem; }
+    .sn-testing .sn-testing__faq { max-width: 920px; }
+    .sn-testing .sn-testing__faq details { border-bottom: var(--sn-border); }
+    .sn-testing .sn-testing__faq summary { position: relative; min-height: 44px; padding: 22px 48px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-testing .sn-testing__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.28rem; content: '+'; }
+    .sn-testing .sn-testing__faq details[open] summary::after { content: '−'; }
+    .sn-testing .sn-testing__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-testing .sn-testing__rfq h2, .sn-testing .sn-testing__rfq h3 { color: var(--sn-white); }
+    .sn-testing .sn-testing__rfq p, .sn-testing .sn-testing__rfq li { color: rgba(252, 254, 255, .8); }
+    .sn-testing .sn-testing__rfq a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-testing .sn-testing__rfq-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 58px); }
+    .sn-testing .sn-testing__rfq-panel { padding: clamp(22px, 4vw, 32px); border: 1px solid rgba(252, 254, 255, .2); }
+    .sn-testing .sn-testing__rfq-panel ul { margin: 0; padding-left: 20px; }
+    .sn-testing .sn-testing__fine-print { margin-top: 18px; font-size: .8rem; }
+    @media (max-width: 1000px) {
+      .sn-testing .sn-testing__audit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .sn-testing .sn-testing__hero-grid, .sn-testing .sn-testing__report-layout, .sn-testing .sn-testing__chain-layout, .sn-testing .sn-testing__rfq-grid { grid-template-columns: 1fr; }
+      .sn-testing .sn-testing__hero-media { max-width: 700px; }
+      .sn-testing .sn-testing__report-layout figure { max-width: 700px; }
+    }
+    @media (max-width: 700px) {
+      .sn-testing .sn-testing__methods, .sn-testing .sn-testing__chain, .sn-testing .sn-testing__audit { grid-template-columns: 1fr; }
+      .sn-testing .sn-testing__methods li + li { padding-left: 0; border-left: 0; border-top: 1px solid rgba(252, 254, 255, .18); }
+      .sn-testing .sn-testing__report-row { grid-template-columns: 1fr; gap: 4px; }
+      .sn-testing .sn-testing__faq details p { padding-right: 0; }
+    }
+    @media (max-width: 520px) {
+      .sn-testing .sn-testing__actions .sn-btn { width: 100%; }
+    }
+    @media print {
+      .sn-testing .sn-testing__faq details:not([open]) > p { display: block !important; }
+      .sn-testing .sn-testing__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-testing__hero" aria-labelledby="testing-title">
+    <div class="sn-container sn-testing__hero-grid">
+      <div class="sn-testing__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/engineering/">Engineering &amp; Quality</a></li><li aria-current="page">Testing &amp; Quality</li></ol></nav>
+        <span class="sn-testing__eyebrow">VNA · PIM · Reliability · Matrix automation</span>
+        <h1 id="testing-title">RF Testing and Quality Verification Buyers Can Audit</h1>
+        <p>Test evidence that connects the product and revision to the conditions, measured data, acceptance limit, lot or serial record and corrective action. The aim is a result your SQE can interpret, not a pass label without context.</p>
+        <ul class="sn-testing__methods" aria-label="Test capability areas"><li><strong>VNA</strong>S-parameters and applicable RF limits</li><li><strong>PIM</strong>Passive intermodulation by agreed setup</li><li><strong>Reliability</strong>Project-defined environmental or endurance checks</li><li><strong>Matrix</strong>Multi-port automated data capture</li></ul>
+        <p class="sn-testing__hero-note">ISO 9001 is presented as the quality-system fact. It is separate from the test evidence for a specific product and does not certify product performance.</p>
+        <div class="sn-testing__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Sample Test Report</a><a class="sn-btn sn-btn--secondary" href="/contact/">Define Your Test Requirements</a></div>
+      </div>
+      <figure class="sn-testing__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-rf-testing-1.webp" alt="Technician testing an RF filter with bench instruments" width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Technician testing an RF filter with bench instruments. The photograph shows the test environment; it is not a report or a measured result.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="testing-matrix-title">
+    <div class="sn-container">
+      <div class="sn-testing__intro">
+        <h2 id="testing-matrix-title">Match Each Test Method to the Question It Answers</h2>
+        <p>More test columns do not automatically mean more confidence. Each method needs a defined question, a test condition and an acceptance rule before its data can support a release decision.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="testing-matrix-caption">
+        <table class="sn-table sn-testing__table">
+          <caption id="testing-matrix-caption">Test capability matrix: what each method demonstrates, the conditions it needs and its applicable boundary.</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">Question it answers</th><th scope="col">Required conditions</th><th scope="col">Evidence output</th><th scope="col">Applicable boundary</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">VNA / S-parameters</th><td data-label="Question it answers">Do insertion loss, return loss, rejection or isolation meet the agreed limits?</td><td data-label="Required conditions">Frequency range, ports, impedance, sweep, calibration and setup conditions</td><td data-label="Evidence output">Curves or numerical data with product, revision, conditions and acceptance decision</td><td data-label="Applicable boundary">Parameters and samples defined by the verification plan; not every characteristic is covered</td></tr>
+            <tr><th scope="row">PIM</th><td data-label="Question it answers">Does passive intermodulation meet the project limit under the stated configuration?</td><td data-label="Required conditions">Applicable bands, test power, tone or signal arrangement, ports, connection setup and limit</td><td data-label="Evidence output">Result with configuration, units and sample or lot linkage</td><td data-label="Applicable boundary">A dBc value is not comparable without its product and test conditions</td></tr>
+            <tr><th scope="row">Reliability</th><td data-label="Question it answers">Does the product meet a specified environmental or endurance requirement?</td><td data-label="Required conditions">Test item, conditions, duration or cycles, sample size and before/after acceptance</td><td data-label="Evidence output">Condition record, performance comparison and disposition</td><td data-label="Applicable boundary">Only project-defined tests are included; no unconfirmed salt-spray or EMC claim is implied</td></tr>
+            <tr><th scope="row">Matrix automation</th><td data-label="Question it answers">Can multi-port data be captured in a defined sequence with consistent records?</td><td data-label="Required conditions">Port map, switching sequence, measurement list, setup and reporting rules</td><td data-label="Evidence output">Multi-port or batch record linked to product, ports and test steps</td><td data-label="Applicable boundary">Automation does not mean every test or every unit is covered</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-testing__note"><strong>Method boundary:</strong> VNA, PIM, reliability and matrix automation are capability areas. The actual test plan, sample size and acceptance criteria are agreed for the product and project.</p>
+      <div class="sn-testing__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Define Your Test Requirements</a><a class="sn-testing__text-link" href="/products/base-station-rf/">Review base-station RF context <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="testing-report-title">
+    <div class="sn-container">
+      <div class="sn-testing__intro">
+        <h2 id="testing-report-title">Read the Conditions and Traceability behind Every RF Result</h2>
+        <p>A curve without a product identity, revision and test condition is difficult to accept and almost impossible to compare. Use the field structure below to review a report before discussing the numbers.</p>
+      </div>
+      <div class="sn-testing__report-layout">
+        <div class="sn-testing__report" aria-label="Illustrative test report field structure">
+          <div class="sn-testing__report-head"><span>Illustrative field layout</span><strong>RF Test Report</strong></div>
+          <dl>
+            <div class="sn-testing__report-row"><dt>Product / project ID</dt><dd>Model, project or internal identifier</dd></div>
+            <div class="sn-testing__report-row"><dt>Drawing / spec revision</dt><dd>Controlled revision used for the test</dd></div>
+            <div class="sn-testing__report-row"><dt>Lot / serial</dt><dd>Applicable batch or unit reference</dd></div>
+            <div class="sn-testing__report-row"><dt>Test date and stage</dt><dd>Prototype, FAI, pilot or production</dd></div>
+            <div class="sn-testing__report-row"><dt>Test conditions</dt><dd>Ports, frequency range, power or environment</dd></div>
+            <div class="sn-testing__report-row"><dt>Method and equipment</dt><dd>Setup, method reference and applicable calibration status</dd></div>
+            <div class="sn-testing__report-row"><dt>Limit and result</dt><dd>Acceptance limit, measured value or curve, units</dd></div>
+            <div class="sn-testing__report-row"><dt>Decision</dt><dd>Pass, fail, deviation and reviewer note</dd></div>
+          </dl>
+        </div>
+        <div>
+          <figure>
+            <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-rig.webp" alt="RF test rig" width="1024" height="576" loading="lazy" decoding="async">
+            <figcaption>RF test rig. A photograph of the setup helps orientation but cannot replace the condition record and result data.</figcaption>
+          </figure>
+          <h3>Buyer check before accepting a result</h3>
+          <ul class="sn-testing__buyer-check">
+            <li>Is the product and revision the one you are approving?</li>
+            <li>Do the test conditions match the specification?</li>
+            <li>Is the acceptance limit stated with units?</li>
+            <li>Does the reported lot or serial match the delivered hardware?</li>
+            <li>Is a deviation identified, or is it hidden inside an average?</li>
+          </ul>
+        </div>
+      </div>
+      <p>The sample report used in a review is redacted. Field labels and blank values are intentional; no customer name, fabricated curve or invented measurement is added to illustrate the format.</p>
+      <div class="sn-testing__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Sample Test Report</a><a class="sn-testing__text-link" href="/resources/datasheets/">Request drawings or data sheets <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="testing-coverage-title">
+    <div class="sn-container">
+      <div class="sn-testing__intro">
+        <h2 id="testing-coverage-title">Define Test Coverage and Equipment Status before Release</h2>
+        <p>Coverage is a project definition: which characteristics, at which stage, on how many samples, with which method and record. It should be written before production starts, not reconstructed from a shipment.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="testing-coverage-caption">
+        <table class="sn-table sn-testing__table">
+          <caption id="testing-coverage-caption">Verification coverage matrix by stage; the final parameters, samples and reviewers come from the product control plan.</caption>
+          <thead><tr><th scope="col">Stage</th><th scope="col">Parameters in scope</th><th scope="col">Sample or coverage</th><th scope="col">Method and record</th><th scope="col">Responsible review point</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Prototype</th><td data-label="Parameters in scope">Critical RF and mechanical characteristics under evaluation</td><td data-label="Sample or coverage">Agreed prototype samples</td><td data-label="Method and record">Applicable VNA or PIM data with conditions</td><td data-label="Responsible review point">Design and test review before the prototype gate</td></tr>
+            <tr><th scope="row">First Article</th><td data-label="Parameters in scope">Drawing characteristics plus agreed functional tests</td><td data-label="Sample or coverage">Defined first-article sample</td><td data-label="Method and record">Inspection record and functional test data</td><td data-label="Responsible review point">Quality and engineering FAI review</td></tr>
+            <tr><th scope="row">Pilot</th><td data-label="Parameters in scope">Critical characteristics selected for process stability</td><td data-label="Sample or coverage">Pilot lot and defined sample plan</td><td data-label="Method and record">Test records linked to lot, revision and process baseline</td><td data-label="Responsible review point">Pilot exit review with open-item disposition</td></tr>
+            <tr><th scope="row">Production</th><td data-label="Parameters in scope">Critical parameters in the released control plan</td><td data-label="Sample or coverage">Coverage stated per product and characteristic</td><td data-label="Method and record">Production test record with traceability links</td><td data-label="Responsible review point">Routine quality review and change control</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>100% needs a subject.</strong> SONNE can apply 100% verification only where the specific product and measurement requirement support that statement. It is not a claim that every product, every parameter or every reliability test receives 100% coverage.</p>
+      <p class="sn-testing__note"><strong>Equipment status:</strong> Audit fields include equipment identity, applicable method, status and validity information. Only real records are referenced in a project review; missing or unavailable items are not filled with assumed certificate numbers.</p>
+      <div class="sn-testing__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Review Your Coverage Matrix</a><a class="sn-testing__text-link" href="/engineering/npi/">Connect coverage to the NPI baseline <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="testing-trace-title">
+    <div class="sn-container">
+      <div class="sn-testing__intro">
+        <h2 id="testing-trace-title">Trace Test Results to Lots, Revisions and Corrective Actions</h2>
+        <p>When a result is questioned, the first useful question is which product, revision and lot produced it. Traceability makes that answer retrievable without relying on a folder name or an individual's memory.</p>
+      </div>
+      <div class="sn-testing__chain-layout">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-assembly-detail.webp" alt="RF filter assembly detail" width="1024" height="576" loading="lazy" decoding="async">
+          <figcaption>RF filter assembly detail. Build records connect the physical unit to the revision and test record used for acceptance.</figcaption>
+        </figure>
+        <div>
+          <ol class="sn-testing__chain" aria-label="Traceability chain">
+            <li><strong>Product / lot</strong><span>Project or product ID, lot or serial where applicable.</span></li>
+            <li><strong>Revision</strong><span>Drawing and BOM version used for build and test.</span></li>
+            <li><strong>Test record</strong><span>Conditions, method, result and acceptance decision.</span></li>
+            <li><strong>Disposition</strong><span>Deviation, containment, correction and retest status.</span></li>
+          </ol>
+          <h3>Nonconformance record fields</h3>
+          <p>Record the discovery condition, affected scope, containment or quarantine status, preliminary review, responsible role and retest result. A corrective-action timeline is agreed for the specific case; no universal response time is promised.</p>
+          <p>If systemic correction is required, an 8D structure can organize the problem description, containment, root cause, corrective and preventive action and verification. Whether an 8D is opened, and in what format it is delivered, is confirmed for the project.</p>
+        </div>
+      </div>
+      <p class="sn-testing__note"><strong>Change linkage:</strong> Design, process or test-method changes connect to the ECN and the affected revision. Later results must use the correct version; see the <a href="/engineering/npi/">NPI change-control path</a>.</p>
+      <div class="sn-testing__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Discuss Traceability Requirements</a><a class="sn-testing__text-link" href="/engineering/npi/">Review gate records <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="testing-audit-title">
+    <div class="sn-container">
+      <div class="sn-testing__intro">
+        <h2 id="testing-audit-title">Build an Audit Checklist around Verifiable Quality Records</h2>
+        <p>A supplier review is more productive when each question names the record and revision behind it. The six groups below cover the evidence most often requested by an SQE.</p>
+      </div>
+      <figure class="sn-testing__wide-figure">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-station.webp" alt="RF test station" width="1024" height="575" loading="lazy" decoding="async">
+        <figcaption>RF test station. Audit scope, record access and confidentiality arrangements are agreed for the project before a review.</figcaption>
+      </figure>
+      <div class="sn-testing__audit">
+        <div class="sn-testing__audit-card"><span>Specification control</span><h3>Requirements and revisions</h3><p>Controlled drawing, BOM, specification revision and the approval status used for the product under review.</p></div>
+        <div class="sn-testing__audit-card"><span>Equipment and method</span><h3>Setup and calibration</h3><p>Equipment identity, applicable method, status and validity information for the tests being discussed.</p></div>
+        <div class="sn-testing__audit-card"><span>Test coverage</span><h3>Parameters and samples</h3><p>Critical characteristics, coverage by stage, sample plan and the acceptance rule for each parameter.</p></div>
+        <div class="sn-testing__audit-card"><span>Traceability</span><h3>Lot, serial and revision</h3><p>Links from the test record to the product, build revision and delivered batch where applicable.</p></div>
+        <div class="sn-testing__audit-card"><span>Nonconformance</span><h3>Disposition and correction</h3><p>Deviation records, containment, cause analysis, corrective action and retest evidence.</p></div>
+        <div class="sn-testing__audit-card"><span>Change control</span><h3>ECN and re-verification</h3><p>Change reason, impact assessment, verification decision and production effectivity.</p></div>
+      </div>
+      <p class="sn-testing__note">ISO 9001 is the quality-system entry point, not a product certificate. On-site or remote access, scope and record formats are confirmed with the buyer; no fixed audit policy or universal confidentiality scope is published here. Explore <a href="/about/factory/">the factory and test areas</a> or request engineering files through <a href="/resources/datasheets/">data sheets and drawings</a>.</p>
+      <div class="sn-testing__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Prepare a Quality Evidence Review</a><a class="sn-testing__text-link" href="/about/factory/">Inspect the factory <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="testing-faq-title">
+    <div class="sn-container">
+      <div class="sn-testing__intro">
+        <h2 id="testing-faq-title">RF Testing and Quality Evidence FAQs</h2>
+        <p>How to read a PIM result, what coverage means, which fields a VNA report needs, how test data is traced and how to request a sample report.</p>
+      </div>
+      <div class="sn-testing__faq">
+        <details open><summary>How should I read a PIM test report?</summary><p>Read the PIM result together with the product identity, frequency or band, test power, port and connection configuration, measurement units, limit and test conditions. Check whether the reported result corresponds to the required sample or lot and acceptance criterion. A single dBc value without those conditions is not enough for a meaningful comparison or approval decision.</p></details>
+        <details><summary>What is SONNE's RF test coverage?</summary><p>Test coverage is defined by the product, critical characteristics, agreed specification and production stage. SONNE identifies critical RF testing and can apply 100% verification only where the specific product and measurement requirement support that statement. It should not be interpreted as 100% coverage of every test on every product. Confirm the coverage matrix during project review.</p></details>
+        <details><summary>What information should a VNA test report include?</summary><p>A useful VNA report should identify the product and revision, relevant lot or serial information where applicable, ports, frequency range, measured S-parameters, test settings and applicable calibration status. It should also show limits, units, curves or numerical results and the acceptance decision. The exact report content and supplied data format should be agreed for the project.</p></details>
+        <details><summary>How are RF test results traced to production records?</summary><p>Traceability should link the test record to the product or project, applicable lot or serial identifier, drawing or BOM revision, production and test stage, and any deviation disposition. The required depth depends on the product and agreed control plan. During supplier review, buyers can request evidence showing those links rather than relying on an isolated curve or summary value.</p></details>
+        <details><summary>Can I request a sample RF test report before placing an order?</summary><p>You can request a sample test report to review the evidence format and discuss the fields needed for your project. Identify the product type and test method, such as VNA or PIM, so the request can be directed appropriately. A sample is illustrative only; actual measurements, coverage, traceability and report deliverables must be confirmed for your product and specification.</p></details>
+      </div>
+      <p class="sn-testing__note">A sample report shows the evidence format only. It does not represent measurements for your product or establish the report package you will receive.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="testing-rfq-title">
+    <div class="sn-container sn-cta sn-testing__rfq">
+      <h2 id="testing-rfq-title">Request Evidence That Matches Your Product and Test Plan</h2>
+      <p>Two paths are available: review a sample report to understand the evidence format, or bring a project test plan for engineering review. Both start with the product type and the method you care about.</p>
+      <div class="sn-testing__rfq-grid">
+        <div class="sn-testing__rfq-panel">
+          <h3>Sample test report</h3>
+          <ul>
+            <li>Product type and application</li>
+            <li>Method of interest: VNA, PIM or reliability</li>
+            <li>Frequency range or band</li>
+            <li>Report fields your team needs to see</li>
+            <li>Project stage and expected next step</li>
+          </ul>
+          <p>A sample is illustrative and may be redacted. It is not a measurement of your hardware or a commitment to an identical report package.</p>
+        </div>
+        <div class="sn-testing__rfq-panel">
+          <h3>Project test review</h3>
+          <ul>
+            <li>Critical parameters and acceptance limits</li>
+            <li>VNA ports, frequency range and conditions</li>
+            <li>PIM bands, power, ports and limit where applicable</li>
+            <li>Reliability test item, conditions and acceptance</li>
+            <li>Lot or serial traceability requirement</li>
+          </ul>
+          <p>Coverage, conditions and record depth are confirmed after the product and project requirements are reviewed.</p>
+        </div>
+      </div>
+      <div class="sn-testing__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Sample Test Report</a><a class="sn-btn sn-btn--secondary" href="/contact/">Submit Test Requirements</a></div>
+      <p class="sn-testing__fine-print">Formal project data belongs in the RFQ path. Email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> or continue to <a href="/request-a-quote/">/request-a-quote/</a> when you are ready to share drawings and limits.</p>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/engineering/testing-quality/#webpage",
+        "name": "RF Testing and Quality Verification Buyers Can Audit",
+        "url": "https://rf-sonne.com/engineering/testing-quality/",
+        "description": "VNA, PIM, reliability and matrix-switch automated testing with traceable reports, ISO 9001 quality system and batch-level verification for RF components."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/engineering/testing-quality/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Engineering & Quality","item":"https://rf-sonne.com/engineering/"},
+          {"@type":"ListItem","position":3,"name":"Testing & Quality","item":"https://rf-sonne.com/engineering/testing-quality/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rf-sonne.com/engineering/testing-quality/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How should I read a PIM test report?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Read the PIM result together with the product identity, frequency or band, test power, port and connection configuration, measurement units, limit and test conditions. Check whether the reported result corresponds to the required sample or lot and acceptance criterion. A single dBc value without those conditions is not enough for a meaningful comparison or approval decision."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is SONNE's RF test coverage?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Test coverage is defined by the product, critical characteristics, agreed specification and production stage. SONNE identifies critical RF testing and can apply 100% verification only where the specific product and measurement requirement support that statement. It should not be interpreted as 100% coverage of every test on every product. Confirm the coverage matrix during project review."}
+          },
+          {
+            "@type": "Question",
+            "name": "What information should a VNA test report include?",
+            "acceptedAnswer": {"@type": "Answer", "text": "A useful VNA report should identify the product and revision, relevant lot or serial information where applicable, ports, frequency range, measured S-parameters, test settings and applicable calibration status. It should also show limits, units, curves or numerical results and the acceptance decision. The exact report content and supplied data format should be agreed for the project."}
+          },
+          {
+            "@type": "Question",
+            "name": "How are RF test results traced to production records?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Traceability should link the test record to the product or project, applicable lot or serial identifier, drawing or BOM revision, production and test stage, and any deviation disposition. The required depth depends on the product and agreed control plan. During supplier review, buyers can request evidence showing those links rather than relying on an isolated curve or summary value."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can I request a sample RF test report before placing an order?",
+            "acceptedAnswer": {"@type": "Answer", "text": "You can request a sample test report to review the evidence format and discuss the fields needed for your project. Identify the product type and test method, such as VNA or PIM, so the request can be directed appropriately. A sample is illustrative only; actual measurements, coverage, traceability and report deliverables must be confirmed for your product and specification."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

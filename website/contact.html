@@ -1,0 +1,383 @@
+<!-- wp:html -->
+<div class="sn-contact sn-legacy-record">
+  <style>
+    .sn-contact { color: var(--sn-text); }
+    .sn-contact *, .sn-contact *::before, .sn-contact *::after { box-sizing: border-box; }
+    .sn-contact h2, .sn-contact h3, .sn-contact p, .sn-contact ul, .sn-contact ol, .sn-contact dl, .sn-contact dd, .sn-contact figure { margin-top: 0; }
+    .sn-contact h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-contact h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-contact p, .sn-contact li, .sn-contact dd { line-height: 1.7; }
+    .sn-contact a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-contact img { display: block; max-width: 100%; height: auto; }
+    .sn-contact .sn-contact__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-contact .sn-contact__intro { max-width: 880px; margin-bottom: 40px; }
+    .sn-contact .sn-contact__intro > p { max-width: 78ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.04rem; }
+    .sn-contact .sn-contact__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .sn-contact .sn-contact__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-contact .sn-contact__hero-grid { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(360px, .98fr); gap: clamp(36px, 6vw, 72px); align-items: center; }
+    .sn-contact .sn-contact__hero .sn-contact__eyebrow { color: var(--sn-cyan); }
+    .sn-contact .sn-contact__hero h1 { max-width: 20ch; }
+    .sn-contact .sn-contact__hero-copy > p { margin-bottom: 16px; font-size: 1.04rem; }
+    .sn-contact .sn-contact__hero-note { margin: 22px 0 0; color: rgba(252, 254, 255, .74); font-size: .84rem; }
+    .sn-contact .sn-contact__hero-note a { color: var(--sn-cyan); }
+    .sn-contact .sn-contact__paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .sn-contact .sn-contact__paths-title { display: block; grid-column: 1 / -1; margin-bottom: 2px; color: rgba(252, 254, 255, .72); font-family: var(--sn-font-mono); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .sn-contact .sn-contact__path { display: flex; min-height: 132px; flex-direction: column; justify-content: space-between; gap: 14px; padding: 18px; border: 1px solid rgba(252, 254, 255, .22); color: var(--sn-white); text-decoration: none; transition: border-color var(--sn-transition), background-color var(--sn-transition); }
+    .sn-contact .sn-contact__path:hover, .sn-contact .sn-contact__path:focus-visible { border-color: var(--sn-cyan); background: rgba(252, 254, 255, .06); }
+    .sn-contact .sn-contact__path strong { display: block; margin-bottom: 6px; font-family: var(--sn-font-heading); font-size: 1rem; line-height: 1.3; }
+    .sn-contact .sn-contact__path span { display: block; color: rgba(252, 254, 255, .7); font-size: .8rem; line-height: 1.5; }
+    .sn-contact .sn-contact__path-arrow { color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .78rem; }
+    .sn-contact .sn-contact__form-section { scroll-margin-top: 112px; }
+    .sn-contact .sn-contact__form-layout { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(300px, .88fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+    .sn-contact .sn-contact__form-panel { padding: clamp(22px, 4vw, 34px); border: var(--sn-border); border-top: 3px solid var(--sn-cyan-dark); background: var(--sn-white); }
+    .sn-contact .sn-contact__form { margin-bottom: 22px; }
+    .sn-contact .sn-contact__form .wpcf7 { margin: 0; }
+    .sn-contact .sn-contact__form form { display: grid; gap: 18px; margin: 0; }
+    .sn-contact .sn-contact__form p { margin-bottom: 0; }
+    .sn-contact .sn-contact__form label { display: block; margin-bottom: 6px; color: var(--sn-navy); font-size: .86rem; font-weight: 700; line-height: 1.45; }
+    .sn-contact .sn-contact__form .sn-contact__required-label { margin-left: 5px; color: var(--sn-cyan-dark); font-size: .66rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .sn-contact .sn-contact__form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]), .sn-contact .sn-contact__form textarea, .sn-contact .sn-contact__form select { width: 100%; min-height: 48px; padding: 11px 13px; border: 1px solid var(--sn-mid-gray); border-radius: var(--sn-radius); background: var(--sn-white); color: var(--sn-text); font-family: var(--sn-font-body); font-size: .92rem; line-height: 1.45; }
+    .sn-contact .sn-contact__form textarea { min-height: 140px; resize: vertical; }
+    .sn-contact .sn-contact__form input[type="file"] { width: 100%; padding: 10px 12px; border: 1px dashed var(--sn-mid-gray); border-radius: var(--sn-radius); background: var(--sn-light-gray); color: var(--sn-text-muted); font-family: var(--sn-font-body); font-size: .86rem; }
+    .sn-contact .sn-contact__form input[type="checkbox"], .sn-contact .sn-contact__form input[type="radio"] { width: 18px; height: 18px; margin-right: 8px; accent-color: var(--sn-cyan-dark); vertical-align: -3px; }
+    .sn-contact .sn-contact__form .wpcf7-list-item { display: block; margin: 0; }
+    .sn-contact .sn-contact__form .wpcf7-list-item-label { font-size: .86rem; line-height: 1.55; }
+    .sn-contact .sn-contact__form button, .sn-contact .sn-contact__form input[type="submit"] { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 12px 26px; border: 1px solid var(--sn-cyan-dark); border-radius: var(--sn-radius); background: var(--sn-cyan-dark); color: var(--sn-white); font-family: var(--sn-font-body); font-size: .9rem; font-weight: 700; letter-spacing: .02em; cursor: pointer; transition: background-color var(--sn-transition), border-color var(--sn-transition); }
+    .sn-contact .sn-contact__form button:hover, .sn-contact .sn-contact__form input[type="submit"]:hover { border-color: var(--sn-navy); background: var(--sn-navy); }
+    .sn-contact .sn-contact__form .wpcf7-response-output { margin: 4px 0 0; padding: 14px 16px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-contact .sn-contact__form .wpcf7-not-valid-tip { margin-top: 6px; color: var(--sn-navy); font-size: .8rem; font-weight: 700; }
+    .sn-contact .sn-contact__required { margin: 0; padding: 0; list-style: none; }
+    .sn-contact .sn-contact__required li { display: flex; gap: 10px; align-items: baseline; padding: 8px 0; border-bottom: var(--sn-border); color: var(--sn-text); font-size: .88rem; }
+    .sn-contact .sn-contact__required li:last-child { border-bottom: 0; }
+    .sn-contact .sn-contact__required span { color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .66rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-contact .sn-contact__aside { padding: 24px; border: var(--sn-border); background: var(--sn-light-gray); }
+    .sn-contact .sn-contact__aside h3:not(:first-child) { margin-top: 24px; }
+    .sn-contact .sn-contact__aside ul { margin: 0; padding-left: 20px; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-contact .sn-contact__aside dl { margin: 0; }
+    .sn-contact .sn-contact__aside dt { margin-top: 12px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .sn-contact .sn-contact__aside dd { margin: 3px 0 0; color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-contact .sn-contact__aside p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-contact .sn-contact__note { margin: 18px 0 0; padding: 16px 18px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-contact .sn-contact__process { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: reply; }
+    .sn-contact .sn-contact__process > li { position: relative; padding: 24px; border: var(--sn-border); border-right: 0; background: var(--sn-white); counter-increment: reply; }
+    .sn-contact .sn-contact__process > li:last-child { border-right: var(--sn-border); }
+    .sn-contact .sn-contact__process > li::before { display: block; margin-bottom: 18px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; content: 'STEP 0' counter(reply); }
+    .sn-contact .sn-contact__process h3 { font-size: 1.02rem; }
+    .sn-contact .sn-contact__process p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-contact .sn-contact__prep { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 24px; margin-top: 30px; }
+    .sn-contact .sn-contact__prep-panel { padding: 22px 24px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-contact .sn-contact__prep-panel ul { margin: 0; padding-left: 20px; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-contact .sn-contact__labels { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .sn-contact .sn-contact__labels li { display: inline-flex; align-items: center; min-height: 32px; }
+    .sn-contact .sn-contact__location { display: grid; grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+    .sn-contact .sn-contact__location figure { margin-bottom: 0; }
+    .sn-contact .sn-contact__location img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .sn-contact .sn-contact__cards { display: grid; gap: 14px; }
+    .sn-contact .sn-contact__card { padding: 20px 22px; border: var(--sn-border);  background: var(--sn-white); }
+    .sn-contact .sn-contact__card h3 { margin-bottom: 8px; font-size: 1rem; }
+    .sn-contact .sn-contact__card p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-contact .sn-contact__card a { display: inline-flex; align-items: center; min-height: 44px; font-size: .88rem; font-weight: 700; }
+    .sn-contact .sn-contact__card .sn-contact__address { margin: 0 0 8px; color: var(--sn-navy); font-size: .95rem; line-height: 1.6; }
+    .sn-contact .sn-contact__faq { max-width: 920px; }
+    .sn-contact .sn-contact__faq details { border-bottom: var(--sn-border); }
+    .sn-contact .sn-contact__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.08rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-contact .sn-contact__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-contact .sn-contact__faq details[open] summary::after { content: '−'; }
+    .sn-contact .sn-contact__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-contact .sn-contact__cta-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .78fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+    .sn-contact .sn-contact__cta h2, .sn-contact .sn-contact__cta h3 { color: var(--sn-white); }
+    .sn-contact .sn-contact__cta p, .sn-contact .sn-contact__cta li { color: rgba(252, 254, 255, .8); }
+    .sn-contact .sn-contact__cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-contact .sn-contact__cta-panel { padding: 24px; border: 1px solid rgba(252, 254, 255, .22); }
+    .sn-contact .sn-contact__cta-panel ol { margin: 0; padding-left: 20px; }
+    .sn-contact .sn-contact__fine-print { margin: 16px 0 0; font-size: .82rem; }
+    @media (max-width: 1100px) {
+      .sn-contact .sn-contact__process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-contact .sn-contact__process > li:nth-child(2) { border-right: var(--sn-border); }
+      .sn-contact .sn-contact__process > li:nth-child(n+3) { border-top: 0; }
+    }
+    @media (max-width: 960px) {
+      .sn-contact .sn-contact__hero-grid, .sn-contact .sn-contact__form-layout, .sn-contact .sn-contact__location, .sn-contact .sn-contact__cta-grid, .sn-contact .sn-contact__prep { grid-template-columns: 1fr; }
+      .sn-contact .sn-contact__location figure { max-width: 720px; }
+    }
+    @media (max-width: 768px) {
+      .sn-contact .sn-contact__process { grid-template-columns: 1fr; }
+      .sn-contact .sn-contact__process > li, .sn-contact .sn-contact__process > li:nth-child(2) { border: var(--sn-border); border-bottom: 0; }
+      .sn-contact .sn-contact__process > li:last-child { border-bottom: var(--sn-border); }
+      .sn-contact .sn-contact__paths { grid-template-columns: 1fr; }
+      .sn-contact .sn-contact__actions .sn-btn { width: 100%; }
+      .sn-contact .sn-contact__faq details p { padding-right: 0; }
+    }
+    @media print {
+      .sn-contact .sn-contact__faq details:not([open]) > p { display: block !important; }
+      .sn-contact .sn-contact__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-contact__hero" aria-labelledby="contact-title">
+    <div class="sn-container sn-contact__hero-grid">
+      <div class="sn-contact__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Contact</li></ol></nav>
+        <span class="sn-contact__eyebrow">Engineering · RFQ · Documents · Factory visit</span>
+        <h1 id="contact-title">Contact SONNE Engineering and Sales</h1>
+        <p>Choose the entry that matches what you have. An engineering question can start without a complete specification; a full RFQ goes to the team that reviews feasibility, drawings and test scope.</p>
+        <p>A complete RFQ can typically receive initial engineering feedback in about 24 hours. That is not a finished quotation, a delivery date or a technical proposal guarantee.</p>
+        <div class="sn-contact__actions">
+          <a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send Your RFQ</a>
+          <a class="sn-btn sn-btn--secondary" href="mailto:info@zhide-tec.com">Email Engineering and Sales</a>
+        </div>
+        <p class="sn-contact__hero-note">Public inquiry email: <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>. Telephone: <a href="tel:+8657463615958">+86-0574-63615958</a>. No instant-messaging account is presented as a verified channel.</p>
+      </div>
+      <div class="sn-contact__paths" role="group" aria-label="Contact paths">
+        <span class="sn-contact__paths-title">Select a contact path</span>
+        <a class="sn-contact__path" href="/engineering/">
+          <span><strong>Engineering Question</strong><span>Ask about feasibility, topology or test scope before quoting.</span></span>
+          <span class="sn-contact__path-arrow" aria-hidden="true">Review engineering →</span>
+        </a>
+        <a class="sn-contact__path" href="/request-a-quote/">
+          <span><strong>RFQ</strong><span>Send drawings, band plans, targets and quantity for review.</span></span>
+          <span class="sn-contact__path-arrow" aria-hidden="true">Open the RFQ form →</span>
+        </a>
+        <a class="sn-contact__path" href="/resources/datasheets/">
+          <span><strong>Document Request</strong><span>Ask for drawings, test evidence or documentation scope.</span></span>
+          <span class="sn-contact__path-arrow" aria-hidden="true">See datasheets →</span>
+        </a>
+        <a class="sn-contact__path" href="/about/factory/">
+          <span><strong>Factory Visit</strong><span>See the machining, assembly and test areas before a review.</span></span>
+          <span class="sn-contact__path-arrow" aria-hidden="true">Inspect the factory →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-contact__form-section" id="contact-form" aria-labelledby="contact-form-title">
+    <div class="sn-container">
+      <div class="sn-contact__intro">
+        <h2 id="contact-form-title">Start with What You Know about Your Project</h2>
+        <p>Five required fields are enough to open a conversation: your name, company, work email, contact topic and a short requirement summary. Technical detail, quantities and attachments can follow.</p>
+      </div>
+      <div class="sn-contact__form-layout">
+        <div class="sn-contact__form-panel">
+          <div class="sn-contact__form">
+[contact-form-7 id="71e4951" title="Contact SONNE"]
+          </div>
+          <h3>Required fields</h3>
+          <ul class="sn-contact__required">
+            <li><span>01</span>Name</li>
+            <li><span>02</span>Company</li>
+            <li><span>03</span>Work email</li>
+            <li><span>04</span>Contact topic: RF and microwave, waveguide, combiners and base-station RF, precision enclosures or a factory visit</li>
+            <li><span>05</span>Requirement summary</li>
+          </ul>
+          <p class="sn-contact__note">Write "unknown" rather than estimating. A short message does not create a formal quotation; the reply states what is still needed for a technical or commercial evaluation.</p>
+        </div>
+        <aside class="sn-contact__aside">
+          <h3>Optional details that speed up review</h3>
+          <ul>
+            <li>Country or region</li>
+            <li>Product line</li>
+            <li>Application</li>
+            <li>Frequency range</li>
+            <li>Target quantity</li>
+            <li>Project stage</li>
+            <li>Preferred reply channel</li>
+            <li>Attachment: band plan, drawing or specification</li>
+          </ul>
+          <h3>What to write for each line</h3>
+          <dl>
+            <dt>RF and microwave</dt>
+            <dd>Band, bandwidth and the connector or interface type.</dd>
+            <dt>Waveguide</dt>
+            <dd>Band, flange type and polarization where relevant.</dd>
+            <dt>Precision enclosures</dt>
+            <dd>Drawing, material and the critical tolerances.</dd>
+          </dl>
+          <h3>Need the full route?</h3>
+          <p>The detailed RFQ captures specifications, files and project stage in one submission. Use the <a href="/request-a-quote/">RFQ form</a> or read the <a href="/resources/rfq-guide/">RFQ guide</a> first. Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="contact-response-title">
+    <div class="sn-container">
+      <div class="sn-contact__intro">
+        <h2 id="contact-response-title">What Happens after You Contact SONNE</h2>
+        <p>Four steps describe the response. The approximately 24-hour guideline applies to initial engineering feedback on a complete RFQ; an incomplete message is used to clarify, not to quote.</p>
+      </div>
+      <ol class="sn-contact__process">
+        <li><h3>Received</h3><p>Your message reaches the engineering and sales team through the current inquiry route.</p></li>
+        <li><h3>Completeness check</h3><p>The team checks the application, product line, key requirements and attachments.</p></li>
+        <li><h3>Initial engineering review</h3><p>Feasibility questions, missing inputs and the applicable test scope are assessed.</p></li>
+        <li><h3>Reply with next step</h3><p>You receive clarifying questions or a proposed next step, such as a drawing review or sample discussion.</p></li>
+      </ol>
+      <div class="sn-contact__prep">
+        <div class="sn-contact__prep-panel">
+          <h3>Six items for the first email</h3>
+          <ul>
+            <li>Application and operating context</li>
+            <li>Product line or component function</li>
+            <li>Key frequency or mechanical requirements</li>
+            <li>Quantity range or project stage</li>
+            <li>Available attachments and their revision</li>
+            <li>The question you need answered first</li>
+          </ul>
+        </div>
+        <div class="sn-contact__prep-panel">
+          <h3>What is not assumed</h3>
+          <p>Commercial terms, confidentiality arrangements and after-sales conditions are not set by a website page; they are confirmed for the specific project. If documents are sensitive, describe the confidentiality need before exchanging files.</p>
+          <ul class="sn-contact__labels" aria-label="Response labels">
+            <li class="sn-chip">Initial feedback</li>
+            <li class="sn-chip">Not a formal quotation</li>
+            <li class="sn-chip">Clarification first</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sn-contact__actions">
+        <a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare a Complete RFQ</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="contact-location-title">
+    <div class="sn-container">
+      <div class="sn-contact__intro">
+        <h2 id="contact-location-title">Contact SONNE in Ningbo, China</h2>
+        <p>The manufacturing base is at No. 87, 89, 91, Sanbei Middle Road, Xinze Village, Guanhaiwei Town, Cixi City, Ningbo City, Zhejiang Province, China. Factory visits are arranged in advance so the team can confirm the schedule, site access and the people you need to meet.</p>
+      </div>
+      <div class="sn-contact__location">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-building-v2-1.webp" alt="SONNE factory building" width="1024" height="683" loading="lazy" decoding="async">
+          <figcaption>The SONNE factory building in Cixi, Ningbo, Zhejiang, China. The photograph records the facility, not a customer project or a production result.</figcaption>
+        </figure>
+        <div class="sn-contact__cards">
+          <div class="sn-contact__card">
+            <h3>Manufacturing base</h3>
+            <p class="sn-contact__address">No. 87, 89, 91, Sanbei Middle Road,<br>Xinze Village, Guanhaiwei Town,<br>Cixi City, Ningbo City, Zhejiang Province, China</p>
+            <p>Office and manufacturing building. Arrange a visit before travelling so the team can confirm access, timing and who will attend.</p>
+          </div>
+          <div class="sn-contact__card">
+            <h3>Telephone</h3>
+            <p>Telephone contact for the engineering and sales team. Send drawings and RFQ files by email or through the RFQ form.</p>
+            <a href="tel:+8657463615958">+86-0574-63615958</a>
+          </div>
+          <div class="sn-contact__card">
+            <h3>Inquiry email</h3>
+            <p>The current route for RF, waveguide and enclosure inquiries.</p>
+            <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>
+          </div>
+          <div class="sn-contact__card">
+            <h3>Factory visits</h3>
+            <p>Request a visit through the contact form or the factory page. The team confirms the schedule, review scope and travel details.</p>
+            <a href="/about/factory/">Review the factory evidence</a>
+          </div>
+        </div>
+      </div>
+      <div class="sn-contact__actions">
+        <a class="sn-btn sn-btn--primary" href="mailto:info@zhide-tec.com">Email Engineering and Sales</a>
+        <a class="sn-btn sn-btn--secondary" href="/about/factory/">Plan a Factory Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="contact-faq-title">
+    <div class="sn-container">
+      <div class="sn-contact__intro">
+        <h2 id="contact-faq-title">Contact and Engineering Response FAQs</h2>
+        <p>Five questions about reply timing, incomplete specifications, email, visits and messaging channels, answered without promising what cannot be promised.</p>
+      </div>
+      <div class="sn-contact__faq">
+        <details>
+          <summary>How quickly will SONNE respond to my inquiry?</summary>
+          <p><a href="/request-a-quote/">A complete RFQ</a> can typically receive initial engineering feedback in about 24 hours. This is not a guarantee of a finished quotation, technical proposal or delivery schedule. If information is missing, the first reply may focus on clarifying the application and requirements. Timing for a formal quote and production is confirmed after the project has been reviewed.</p>
+        </details>
+        <details>
+          <summary>Can I contact an engineer without complete specifications?</summary>
+          <p>Yes. Start with your application, product line, known frequency or mechanical requirements, project stage and the question you need answered. Mark unknown values rather than guessing. The team can use that information to identify the next clarification steps. <a href="/request-a-quote/">A complete RFQ</a> is still needed before a reliable technical or commercial evaluation can be completed.</p>
+        </details>
+        <details>
+          <summary>What email address should I use for an RF project?</summary>
+          <p>Use <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> for current RF, waveguide and enclosure inquiries. Include your company, application, product line and the main requirements in the subject or message. Attach available specifications or drawings when appropriate, and mention if confidentiality should be discussed before sensitive files are exchanged. The <a href="/contact/#contact-form">Contact form</a> provides an alternative route.</p>
+        </details>
+        <details>
+          <summary>How do I arrange a visit to the Ningbo facility?</summary>
+          <p><a href="/contact/#contact-form">Submit a factory visit request</a> with your company, preferred dates, number of visitors, product interest and audit objectives. SONNE will confirm the schedule, visit scope and who will attend. The manufacturing address is published above, but confirm your appointment before travelling; a preferred date is not a confirmed booking.</p>
+        </details>
+        <details>
+          <summary>Is WhatsApp available for contacting SONNE?</summary>
+          <p>A public WhatsApp channel has not been confirmed for the website. <a href="/contact/#contact-form">Use the Contact form</a>, email info@zhide-tec.com or call +86-0574-63615958 so your project details reach the team. Do not assume the published telephone number is a WhatsApp account.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="contact-cta-title">
+    <div class="sn-container sn-cta sn-contact__cta">
+      <div class="sn-contact__cta-grid">
+        <div>
+          <h2 id="contact-cta-title">Send Your Requirements for an Initial Engineering Review</h2>
+          <p>Two routes, one inbox. Use the short form when the requirement is still forming, or the full RFQ when drawings and targets are ready. You do not need to fill both.</p>
+          <p>If files are sensitive, describe the confidentiality need before uploading anything. The arrangement itself is confirmed for the project, not assumed from a website statement.</p>
+          <div class="sn-contact__actions">
+            <a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send Your RFQ</a>
+            <a class="sn-btn sn-btn--secondary" href="#contact-form">Use the Short Form</a>
+          </div>
+          <p class="sn-contact__fine-print">After submitting, keep the confirmation email; a member of the team replies to the address you provide. No ticket number is issued and no fixed sales contact is assigned. Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+        </div>
+        <div class="sn-contact__cta-panel">
+          <h3>RFQ checklist</h3>
+          <ol>
+            <li>Application and product line</li>
+            <li>Frequency, power or mechanical targets</li>
+            <li>Drawing or band plan with revision</li>
+            <li>Quantity range and project stage</li>
+            <li>Confidentiality need, stated first</li>
+          </ol>
+          <p>Unknown values can stay open. The first reply identifies what is missing before a technical or commercial evaluation is completed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://rf-sonne.com/contact/#contactpage",
+        "name": "Contact SONNE Engineering and Sales",
+        "url": "https://rf-sonne.com/contact/",
+        "description": "Contact SONNE in Cixi, Ningbo, Zhejiang, China for custom RF, waveguide and precision enclosure projects. Email: info@zhide-tec.com. Telephone: +86-0574-63615958.",
+        "about": { "@id": "https://rf-sonne.com/#organization" },
+        "isPartOf": { "@id": "https://rf-sonne.com/#website" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://rf-sonne.com/#organization",
+        "name": "SONNE",
+        "url": "https://rf-sonne.com/",
+        "email": "info@zhide-tec.com",
+        "telephone": "+86-0574-63615958",
+        "foundingDate": "2015",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "No. 87, 89, 91, Sanbei Middle Road, Xinze Village, Guanhaiwei Town",
+          "addressLocality": "Cixi City, Ningbo City",
+          "addressRegion": "Zhejiang Province",
+          "addressCountry": "CN"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/contact/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://rf-sonne.com/contact/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

@@ -1,0 +1,172 @@
+<!-- wp:html -->
+<div class="sn-terms">
+  <style>
+    .sn-terms { color: var(--sn-text); }
+    .sn-terms *, .sn-terms *::before, .sn-terms *::after { box-sizing: border-box; }
+    .sn-terms h1, .sn-terms h2, .sn-terms h3, .sn-terms p, .sn-terms ul, .sn-terms ol, .sn-terms li, .sn-terms figure { margin-top: 0; }
+    .sn-terms h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-terms h3 { margin-bottom: 8px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-terms p, .sn-terms li { line-height: 1.75; }
+    .sn-terms a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-terms img { display: block; max-width: 100%; height: auto; }
+    .sn-terms :focus-visible { outline: 3px solid var(--sn-cyan-dark); outline-offset: 3px; }
+    .sn-terms .sn-terms__hero a:focus-visible { outline-color: var(--sn-cyan); }
+    .sn-terms .sn-terms__eyebrow { display: block; margin-bottom: 14px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-terms .sn-terms__hero .sn-terms__eyebrow { color: var(--sn-cyan); }
+    .sn-terms .sn-terms__hero-copy { max-width: 880px; }
+    .sn-terms .sn-terms__hero-copy > p { font-size: 1.05rem; }
+    .sn-terms .sn-terms__hero-note { margin-top: 24px; padding: 16px 20px; border: 1px solid rgba(140, 196, 255, .35); background: rgba(252, 254, 255, .06); color: rgba(252, 254, 255, .8); font-size: .9rem; }
+    .sn-terms .sn-terms__body { padding-block: var(--sn-section-space); background: var(--sn-white); }
+    .sn-terms .sn-terms__layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+    .sn-terms .sn-terms__toc { position: sticky; top: 120px; padding: 22px; border: var(--sn-border); background: var(--sn-light-gray); }
+    .sn-terms .sn-terms__toc-title { margin-bottom: 12px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .sn-terms .sn-terms__toc ol { margin: 0; padding: 0; list-style: none; counter-reset: terms-toc; }
+    .sn-terms .sn-terms__toc li { counter-increment: terms-toc; }
+    .sn-terms .sn-terms__toc li + li { border-top: var(--sn-border); }
+    .sn-terms .sn-terms__toc a { display: flex; gap: 10px; align-items: baseline; min-height: 44px; padding: 10px 0; color: var(--sn-text); font-size: .86rem; font-weight: 600; line-height: 1.45; text-decoration: none; }
+    .sn-terms .sn-terms__toc a::before { color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; content: '0' counter(terms-toc); }
+    .sn-terms .sn-terms__toc a:hover { color: var(--sn-cyan-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .sn-terms .sn-terms__content { min-width: 0; }
+    .sn-terms .sn-terms__section { padding-bottom: 36px; scroll-margin-top: 120px; }
+    .sn-terms .sn-terms__section + .sn-terms__section { padding-top: 36px; border-top: var(--sn-border); }
+    .sn-terms .sn-terms__section p { max-width: 76ch; color: var(--sn-text-muted); }
+    .sn-terms .sn-terms__section p:last-child { margin-bottom: 0; }
+    .sn-terms .sn-terms__section ul { max-width: 76ch; margin: 0 0 18px; padding-left: 20px; color: var(--sn-text-muted); }
+    .sn-terms .sn-terms__section li + li { margin-top: 8px; }
+    .sn-terms .sn-terms__section h3:not(:first-of-type) { margin-top: 24px; }
+    .sn-terms .sn-terms__contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); gap: clamp(24px, 4vw, 44px); margin-top: 24px; padding: 24px; border: var(--sn-border); background: var(--sn-light-gray); align-items: start; }
+    .sn-terms .sn-terms__contact p { margin-bottom: 8px; }
+    .sn-terms .sn-terms__contact p:last-child { margin-bottom: 0; }
+    .sn-terms .sn-terms__contact a { font-weight: 700; }
+    .sn-terms .sn-terms__contact figure { margin-bottom: 0; }
+    .sn-terms .sn-terms__contact img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-terms figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.6; }
+    @media (max-width: 1024px) {
+      .sn-terms .sn-terms__layout { grid-template-columns: 1fr; }
+      .sn-terms .sn-terms__toc { position: static; }
+      .sn-terms .sn-terms__toc ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+      .sn-terms .sn-terms__toc li + li { border-top: 0; }
+    }
+    @media (max-width: 768px) {
+      .sn-terms .sn-terms__contact { grid-template-columns: 1fr; }
+      .sn-terms .sn-terms__toc ol { grid-template-columns: 1fr; }
+      .sn-terms .sn-terms__toc li + li { border-top: var(--sn-border); }
+    }
+    @media (max-width: 520px) {
+      .sn-terms .sn-terms__toc { padding: 18px; }
+      .sn-terms .sn-terms__contact { padding: 18px; }
+    }
+  </style>
+
+  <section class="sn-hero sn-terms__hero" aria-labelledby="terms-title">
+    <div class="sn-container sn-terms__hero-copy">
+      <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Terms of Service</li></ol></nav>
+      <span class="sn-terms__eyebrow">Legal · Website use</span>
+      <h1 id="terms-title">Website Terms of Service</h1>
+      <p>These terms explain how the SONNE website may be used, what the published content covers, and how to contact us with a question about the site.</p>
+      <p class="sn-terms__hero-note">They apply to this website. Commercial terms for a specific project are confirmed separately through an RFQ and the resulting project documents.</p>
+    </div>
+  </section>
+
+  <div class="sn-terms__body">
+    <div class="sn-container sn-terms__layout">
+      <aside class="sn-terms__toc" aria-label="On this page">
+        <p class="sn-terms__toc-title">On this page</p>
+        <ol>
+          <li><a href="#scope">Scope and acceptance</a></li>
+          <li><a href="#use">Use of the website and content</a></li>
+          <li><a href="#intellectual-property">Intellectual property</a></li>
+          <li><a href="#product-information">Product information and quotations</a></li>
+          <li><a href="#disclaimer">Disclaimer, changes and contact</a></li>
+        </ol>
+      </aside>
+
+      <div class="sn-terms__content">
+        <section class="sn-terms__section" id="scope" aria-labelledby="terms-scope-title">
+          <h2 id="terms-scope-title">Scope and Acceptance</h2>
+          <p>These terms apply to the SONNE website published at rf-sonne.com and to the pages, documents and information made available on it. In these terms, SONNE refers to the operator of this website, based in Cixi, Ningbo, Zhejiang, China.</p>
+          <p>By accessing or using the website, you agree to these terms. If you do not agree, please stop using the site. If you use the site on behalf of a company or another organisation, you confirm that you are authorised to do so.</p>
+          <p>These terms cover website use only. They do not replace the technical, commercial or confidentiality documents agreed for a specific project after an RFQ has been reviewed.</p>
+        </section>
+
+        <section class="sn-terms__section" id="use" aria-labelledby="terms-use-title">
+          <h2 id="terms-use-title">Use of the Website and Content</h2>
+          <p>You may view, read and print pages for your own evaluation and internal business use. You may share page addresses with colleagues who need the same information.</p>
+          <p>You must not:</p>
+          <ul>
+            <li>interfere with the operation, security or availability of the website;</li>
+            <li>attempt to reach restricted areas, accounts or systems without permission;</li>
+            <li>collect content through automated requests at a volume that burdens the site;</li>
+            <li>misrepresent your identity, your company or your relationship with SONNE; or</li>
+            <li>upload or transmit malicious code, or use the site in a way that breaches applicable law.</li>
+          </ul>
+          <p>SONNE may suspend or restrict access where these rules are not followed.</p>
+        </section>
+
+        <section class="sn-terms__section" id="intellectual-property" aria-labelledby="terms-ip-title">
+          <h2 id="terms-ip-title">Intellectual Property</h2>
+          <p>The text, page structure, product descriptions, photography, drawings, diagrams and code published on this website belong to SONNE or are used with the permission of their owners.</p>
+          <p>Reading the site does not transfer ownership or grant a licence to reproduce its content. You may not republish, resell, mirror or distribute substantial parts of the site, or present its content as your own, without prior written permission.</p>
+          <p>Product names, trade names and logos remain the property of their respective owners. Drawings, specifications and technical documents supplied by a customer remain subject to the arrangements agreed for that project.</p>
+        </section>
+
+        <section class="sn-terms__section" id="product-information" aria-labelledby="terms-product-title">
+          <h2 id="terms-product-title">Product Information, Quotations and Third-Party Links</h2>
+          <h3>Product information</h3>
+          <p>Product pages, capability figures and application notes are provided for information and initial evaluation. Frequency range, tolerance, plating control, capacity and similar statements describe the context in which a capability can be assessed; the applicable requirement depends on the product, structure and validation for each project.</p>
+          <p>Specifications, availability and commercial terms are confirmed per project and per RFQ. Please confirm the current revision of a drawing or specification before relying on it for a design decision or an order.</p>
+          <h3>Quotations</h3>
+          <p>An RFQ response may be initial engineering feedback rather than a formal quotation. A complete RFQ can typically receive initial engineering feedback in about 24 hours, but that guideline is not a price, availability or delivery commitment. Only the documents agreed for a specific project define its commercial terms.</p>
+          <h3>Third-party links</h3>
+          <p>This website may link to third-party sites for reference. SONNE does not control those sites and is not responsible for their content, availability or practices. Following an external link is at your own discretion.</p>
+        </section>
+
+        <section class="sn-terms__section" id="disclaimer" aria-labelledby="terms-disclaimer-title">
+          <h2 id="terms-disclaimer-title">Disclaimer, Changes and Contact</h2>
+          <h3>No additional commitments</h3>
+          <p>The website is provided on an informational basis. Nothing on it creates an additional commitment beyond the written documents agreed for a specific project. Capability figures, images and general descriptions are not a promise of performance, availability or delivery timing for a particular requirement.</p>
+          <p>We aim to keep the site accurate and current, but pages may contain errors or omissions, and content may change as products and services develop.</p>
+          <h3>Changes to these terms</h3>
+          <p>SONNE may update these terms or the content of the website at any time. The version published on this page is the current one. Continued use of the site after a change means you accept the updated terms.</p>
+          <h3>Contact</h3>
+          <div class="sn-terms__contact">
+            <div>
+              <p>Questions about these terms or a request to correct published information can be sent to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> or by telephone on <a href="tel:+8657463615958">+86-0574-63615958</a>.</p>
+              <p>SONNE<br>No. 87, 89, 91, Sanbei Middle Road,<br>Xinze Village, Guanhaiwei Town,<br>Cixi City, Ningbo City, Zhejiang Province, China</p>
+              <p><a href="/contact/">Contact SONNE</a> for a project-specific question, or read the <a href="/resources/rfq-guide/">RFQ guide</a> before submitting a request.</p>
+            </div>
+            <figure>
+              <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-workshop-wide.webp" alt="Wide view of the SONNE assembly workshop" width="1920" height="1080" loading="lazy" decoding="async">
+              <figcaption>SONNE assembly workshop, Cixi, Ningbo, Zhejiang, China. The image documents the facility and does not define project scope.</figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/terms-of-service/#webpage",
+        "name": "Website Terms of Service",
+        "url": "https://rf-sonne.com/terms-of-service/",
+        "description": "Terms covering use of the SONNE website, intellectual property, product information and quotations, third-party links, disclaimers, changes and contact details.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/terms-of-service/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://rf-sonne.com/terms-of-service/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

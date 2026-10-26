@@ -1,0 +1,78 @@
+<p>A custom RF filter quote is only as good as the inputs behind it, so an RF filter RFQ should describe the signal path, the electrical limits and the mechanical envelope in one reviewable package.</p>
+
+<h2>Why RF Filter RFQs Stall at the First Review</h2>
+<p>Most delayed filter projects do not fail because the specification is difficult. They stall because the first RFQ leaves engineering to guess. A request that says “bandpass filter at 2.6 GHz” without a bandwidth, a rejection mask or a power condition cannot be evaluated as a design. The supplier must either ask for clarification or quote a generic catalogue part that may not fit the application.</p>
+<p>A reviewable RFQ does not need to be a formal document. It needs to answer three questions in order: what signal must pass, what signal must be rejected, and what space and environment the hardware must survive. When those answers are present, an engineer can identify the likely topology, the critical manufacturing features and the test method before any quotation work begins.</p>
+
+<h2>Start With the Band Plan and Signal Path</h2>
+<p>The band plan is the foundation of filter selection. State the passband edges, not only the center frequency, and identify the transmit and receive paths if both are present. If the filter sits in a duplexer, combiner or multi-band front end, include the other bands and the duplex spacing. A filter that looks straightforward in isolation can become difficult when a nearby blocking signal sits close to the passband edge.</p>
+<p>Also describe the system role in one sentence. A receive filter protecting a low-noise amplifier has different priorities from a transmit filter handling high power, and a filter used in a test bench may need a different connector and tuning approach from one sealed inside an outdoor radio unit.</p>
+
+<table>
+<thead>
+<tr><th>RFQ input</th><th>What to state</th><th>Why engineering needs it</th></tr>
+</thead>
+<tbody>
+<tr><td>Passband</td><td>Lower and upper frequency, center frequency, bandwidth</td><td>Sets resonator count and coupling topology</td></tr>
+<tr><td>Signal path</td><td>Tx, Rx, common port, or bidirectional</td><td>Determines power, isolation and port definition</td></tr>
+<tr><td>Nearby bands</td><td>Co-sited transmitters, duplex spacing, guard bands</td><td>Defines the rejection mask and isolation target</td></tr>
+<tr><td>Reference hardware</td><td>Existing part number, curve or drawing</td><td>Shortens the path to a comparable design</td></tr>
+</tbody>
+</table>
+
+<h2>Specify Insertion Loss, Return Loss and Rejection as Numbers</h2>
+<p>Insertion loss should be stated as a maximum over the passband, with the temperature range and the measurement conditions that apply. If the system budget assumes a typical value, say so and state the maximum the system can tolerate. “Low loss” is not a specification because it cannot be verified.</p>
+<p>Return loss, or VSWR, belongs in the RFQ for the same reason. A filter can meet its passband shape while presenting a poor match at one port, which then interacts with the cable or amplifier behind it. State the required return loss across the passband and whether it applies at every port.</p>
+<p>Rejection is most useful as a mask: a table of frequency ranges and minimum attenuation. For example, a receive filter may need one rejection level at the transmitter band, a different level at the image frequency and a third level across a broadband measurement range. A single rejection number hides these requirements and makes the design appear easier or harder than it is.</p>
+<p>For multi-port parts, define isolation between ports in the same way. State whether isolation is measured with the other ports terminated and whether it must hold across temperature.</p>
+
+<h2>Add Power, PIM and Environmental Conditions</h2>
+<p>Power handling depends on the waveform, not only on a single watt figure. State average power, peak power, modulation, duty cycle and the expected load mismatch. A filter rated for a continuous carrier may behave differently with a pulsed or multi-carrier signal, and the tuning elements, connectors and internal contacts all contribute to the limit.</p>
+<p>Passive intermodulation, or PIM, must be tied to a test condition. Specify the two carrier frequencies, the power per carrier, the intermodulation order and the frequency at which the product is measured. A PIM target without those conditions cannot be compared between suppliers. Material selection, plating, joint design and connector torque all affect the result, so PIM should be treated as a configuration-specific requirement rather than a universal rating.</p>
+<p>Environmental inputs complete the electrical picture: operating and storage temperature, humidity, ingress protection, corrosion exposure, altitude, vibration and any applicable test standard. If a specific acceptance test is required, name it. If the filter will be sealed or potted, say so because the assembly and test sequence may change.</p>
+
+<h2>Define Connectors, Flanges and the Mechanical Envelope</h2>
+<p>The mechanical section should include connector or flange type, gender, torque requirement and port orientation. For coaxial parts, state whether the connector is standard or custom and whether a specific cable interface must be matched. For waveguide parts, state the waveguide size, flange standard and whether a straight, right-angle or split-block assembly is expected.</p>
+<p>Provide a 2D drawing or a 3D model with the mounting points, keep-out zones, cable routing and maximum mass. If no drawing exists, a dimensioned sketch with the available volume is enough to start. The most common mechanical problem is not a tight tolerance; it is a filter that meets the electrical target but cannot be installed, tuned or serviced in the intended enclosure.</p>
+
+<figure>
+<img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="lazy" decoding="async">
+<figcaption>Representative multi-cavity filter hardware. The RFQ should define the passband, rejection mask, power condition and mechanical envelope before tuning begins.</figcaption>
+</figure>
+
+<h2>State Prototype and Volume Intent</h2>
+<p>Tell the supplier where the project is in its lifecycle: engineering prototype, design verification, pilot run or mass production. Include the quantity for each stage and the target dates that matter. This helps engineering choose a tuning strategy, a test plan and a manufacturing route that can survive the transition to volume.</p>
+<p>If the project requires a first article inspection report, a VNA data file, a PIM report or a specific traceability format, include that requirement in the RFQ. These deliverables affect the test flow and should be agreed before the first hardware is built rather than after it is measured.</p>
+
+<h2>A Reviewable RF Filter RFQ Package</h2>
+<p>A complete package can be assembled from the following items. Not every project needs every line, but each missing line should be a conscious decision rather than an oversight.</p>
+<ul>
+<li>One-sentence description of the system, the filter function and the signal path.</li>
+<li>Band plan table with passband edges, center frequency and bandwidth.</li>
+<li>Rejection or isolation mask by frequency range.</li>
+<li>Maximum insertion loss and minimum return loss over temperature.</li>
+<li>Average power, peak power, waveform and load condition.</li>
+<li>PIM order, carrier power and measurement frequencies, if applicable.</li>
+<li>Connector or flange definition, port orientation and torque.</li>
+<li>2D drawing or 3D model with mounting and keep-out dimensions.</li>
+<li>Environmental conditions and any required acceptance tests.</li>
+<li>Prototype, pilot and production quantities with target dates.</li>
+<li>Required reports, data files and traceability format.</li>
+</ul>
+<p>If an existing filter is being replaced, include its part number, measured curve and the reason for replacement. A baseline curve is often more useful than a long description because it shows where the current design is adequate and where it fails.</p>
+
+<h2>What Happens After an RF Filter RFQ Is Submitted</h2>
+<p>A well-prepared RF filter RFQ gives engineering a clear starting point and gives the buyer a response that can be compared with other suppliers on the same technical basis.</p>
+<p>An engineering review checks whether the electrical targets are self-consistent, whether the mechanical envelope conflicts with the electrical design, and whether the power, PIM and environmental requirements are testable. Missing inputs are easier to resolve at this stage than after a prototype has been machined.</p>
+<p>SONNE reviews complete RFQs for custom RF and microwave filters and typically provides initial engineering feedback in about 24 hours. That feedback is an engineering response, not an automatic quotation or a delivery commitment. Commercial terms, tooling and lead time follow the technical review and depend on the final configuration.</p>
+<p>Use the <a href="/resources/rfq-guide/">RFQ guide</a> for the full input checklist, review the <a href="/products/rf-microwave-filters/">RF and microwave filter product line</a> for the available topologies, and see <a href="/engineering/custom-rf-design/">custom RF design</a> for the evaluation path. If the design is ready, submit the package through <a href="/request-a-quote/">Request a Quote</a>; if the test evidence is the main concern, review <a href="/engineering/testing-quality/">testing and quality</a> before the RFQ is sent.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>How much detail does an RF filter RFQ need?</h3>
+<p>Enough detail to make the electrical and mechanical trade-offs without guessing: passband, rejection, insertion loss, power, PIM, connector or flange, envelope, environment and quantity. A dimensioned sketch is acceptable when a formal drawing is not yet available.</p>
+<h3>Can I submit a partial RFQ?</h3>
+<p>Yes. A partial RFQ can still start an engineering review, and the response can identify the missing inputs. A complete RFQ usually shortens the path to a useful technical response because fewer clarification cycles are needed.</p>
+<h3>Does an RFQ create a binding quotation?</h3>
+<p>No. An RFQ starts the engineering review. A quotation follows the technical evaluation and depends on the final configuration, test requirements, tooling and order stage.</p>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much detail does an RF filter RFQ need?","acceptedAnswer":{"@type":"Answer","text":"Enough detail to make the electrical and mechanical trade-offs without guessing: passband, rejection, insertion loss, power, PIM, connector or flange, envelope, environment and quantity. A dimensioned sketch is acceptable when a formal drawing is not yet available."}},{"@type":"Question","name":"Can I submit a partial RFQ?","acceptedAnswer":{"@type":"Answer","text":"Yes. A partial RFQ can still start an engineering review, and the response can identify the missing inputs. A complete RFQ usually shortens the path to a useful technical response because fewer clarification cycles are needed."}},{"@type":"Question","name":"Does an RFQ create a binding quotation?","acceptedAnswer":{"@type":"Answer","text":"No. An RFQ starts the engineering review. A quotation follows the technical evaluation and depends on the final configuration, test requirements, tooling and order stage."}}]}</script>

@@ -1,0 +1,421 @@
+<!-- wp:html -->
+<div class="sn-about sn-legacy-record">
+  <style>
+    .sn-about { color: var(--sn-text); }
+    .sn-about *, .sn-about *::before, .sn-about *::after { box-sizing: border-box; }
+    .sn-about h2, .sn-about h3, .sn-about p, .sn-about ul, .sn-about ol, .sn-about dl, .sn-about dd, .sn-about figure { margin-top: 0; }
+    .sn-about h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-about h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-about p, .sn-about li, .sn-about dd { line-height: 1.7; }
+    .sn-about a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-about img { display: block; max-width: 100%; height: auto; }
+    .sn-about .sn-about__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-about .sn-about__intro { max-width: 880px; margin-bottom: 40px; }
+    .sn-about .sn-about__intro > p { max-width: 76ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.04rem; }
+    .sn-about .sn-about__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .sn-about .sn-about__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-about .sn-about__hero-grid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(340px, .94fr); gap: clamp(36px, 6vw, 76px); align-items: center; }
+    .sn-about .sn-about__hero .sn-about__eyebrow { color: var(--sn-cyan); }
+    .sn-about .sn-about__hero h1 { max-width: 24ch; }
+    .sn-about .sn-about__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-about .sn-about__hero-media { margin-bottom: 0; }
+    .sn-about .sn-about__hero-media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .sn-about figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-about .sn-about__hero figcaption { color: rgba(252, 254, 255, .66); }
+    .sn-about .sn-about__facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 34px; border-block: 1px solid rgba(252, 254, 255, .18); }
+    .sn-about .sn-about__fact { padding: 20px 18px 20px 0; }
+    .sn-about .sn-about__fact + .sn-about__fact { padding-left: 18px; border-left: 1px solid rgba(252, 254, 255, .18); }
+    .sn-about .sn-about__fact strong { display: block; margin-bottom: 5px; color: var(--sn-white); font-family: var(--sn-font-heading); font-size: 1.32rem; line-height: 1.2; }
+    .sn-about .sn-about__fact span { display: block; color: rgba(252, 254, 255, .7); font-size: .78rem; line-height: 1.55; }
+    .sn-about .sn-about__products { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+    .sn-about .sn-about__product { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-about .sn-about__product img { width: 100%; aspect-ratio: 4 / 3; padding: 14px; background: var(--sn-light-gray); object-fit: contain; }
+    .sn-about .sn-about__product-body { display: flex; flex: 1; flex-direction: column; padding: 20px; }
+    .sn-about .sn-about__product-body p { color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-about .sn-about__product-body .sn-about__text-link { margin-top: auto; font-size: .88rem; }
+    .sn-about .sn-about__support { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 28px 0 0; padding: 20px 22px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); }
+    .sn-about .sn-about__support-title { display: block; width: 100%; margin: 0; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-about .sn-about__support-item { display: inline-flex; align-items: center; min-height: 44px; font-size: .9rem; }
+    .sn-about .sn-about__note { margin: 22px 0 0; color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-about .sn-about__facts-table { min-width: 900px; }
+    .sn-about .sn-about__facts-table tbody th { width: 26%; color: var(--sn-navy); }
+    .sn-about caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-about .sn-about__timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin: 0; padding: 0; list-style: none; }
+    .sn-about .sn-about__timeline > li { padding-top: 20px; border-top: 3px solid var(--sn-cyan-dark); }
+    .sn-about .sn-about__timeline-year { display: block; margin-bottom: 10px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-about .sn-about__timeline p { margin-bottom: 12px; color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-about .sn-about__timeline a { display: inline-flex; align-items: center; min-height: 44px; font-size: .86rem; font-weight: 700; }
+    .sn-about .sn-about__quality { margin-top: 36px; padding: 22px 24px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); }
+    .sn-about .sn-about__quality p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .92rem; }
+    .sn-about .sn-about__flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: flow; }
+    .sn-about .sn-about__flow > li { position: relative; padding: 24px 20px 26px; border: var(--sn-border); border-right: 0; background: var(--sn-white); counter-increment: flow; }
+    .sn-about .sn-about__flow > li:last-child { border-right: var(--sn-border); }
+    .sn-about .sn-about__flow > li::before { display: block; margin-bottom: 20px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; content: 'STEP 0' counter(flow); }
+    .sn-about .sn-about__flow h3 { font-size: 1.02rem; }
+    .sn-about .sn-about__flow dl { margin-bottom: 0; }
+    .sn-about .sn-about__flow dt { margin-top: 14px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .66rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .sn-about .sn-about__flow dd { margin: 4px 0 0; color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-about .sn-about__timing { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-about .sn-about__timing p { margin-bottom: 0; padding: 18px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-about .sn-about__faq { max-width: 920px; }
+    .sn-about .sn-about__faq details { border-bottom: var(--sn-border); }
+    .sn-about .sn-about__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.08rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-about .sn-about__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-about .sn-about__faq details[open] summary::after { content: '−'; }
+    .sn-about .sn-about__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-about .sn-about__cta-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .72fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+    .sn-about .sn-about__cta h2, .sn-about .sn-about__cta h3 { color: var(--sn-white); }
+    .sn-about .sn-about__cta p, .sn-about .sn-about__cta li { color: rgba(252, 254, 255, .8); }
+    .sn-about .sn-about__cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-about .sn-about__cta-logo { width: 168px; height: auto; margin-bottom: 26px; }
+    .sn-about .sn-about__cta-panel { padding: 24px; border: 1px solid rgba(252, 254, 255, .22); }
+    .sn-about .sn-about__cta-panel ul { margin-bottom: 0; padding-left: 20px; }
+    .sn-about .sn-about__fine-print { margin: 18px 0 0; font-size: .82rem; }
+    @media (max-width: 1180px) {
+      .sn-about .sn-about__products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .sn-about .sn-about__flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .sn-about .sn-about__flow > li { border-right: var(--sn-border); }
+      .sn-about .sn-about__flow > li:nth-child(n+4) { border-top: 0; }
+    }
+    @media (max-width: 1024px) {
+      .sn-about .sn-about__timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-about .sn-about__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-about .sn-about__fact:nth-child(3) { padding-left: 0; border-left: 0; }
+    }
+    @media (max-width: 900px) {
+      .sn-about .sn-about__hero-grid, .sn-about .sn-about__cta-grid { grid-template-columns: 1fr; }
+      .sn-about .sn-about__hero-media { max-width: 640px; }
+    }
+    @media (max-width: 768px) {
+      .sn-about .sn-about__timing { grid-template-columns: 1fr; }
+      .sn-about .sn-about__flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .sn-about .sn-about__products, .sn-about .sn-about__flow, .sn-about .sn-about__timeline { grid-template-columns: 1fr; }
+      .sn-about .sn-about__facts { grid-template-columns: 1fr; }
+      .sn-about .sn-about__fact, .sn-about .sn-about__fact + .sn-about__fact { padding: 16px 0; border-left: 0; }
+      .sn-about .sn-about__fact + .sn-about__fact { border-top: 1px solid rgba(252, 254, 255, .18); }
+      .sn-about .sn-about__flow > li { border-right: var(--sn-border); }
+      .sn-about .sn-about__actions .sn-btn { width: 100%; }
+      .sn-about .sn-about__faq details p { padding-right: 0; }
+    }
+    @media print {
+      .sn-about .sn-about__faq details:not([open]) > p { display: block !important; }
+      .sn-about .sn-about__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-about__hero" aria-labelledby="about-title">
+    <div class="sn-container sn-about__hero-grid">
+      <div class="sn-about__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">About</li></ol></nav>
+        <span class="sn-about__eyebrow">RF engineering &amp; precision manufacturing · Cixi, Ningbo, China</span>
+        <h1 id="about-title">Engineered for RF Performance. Built for Repeatable Production.</h1>
+        <p>SONNE is an engineering and manufacturing partner for custom RF and microwave devices and precision structures. Work starts with your electrical and mechanical requirements, moves through an engineering feasibility review, and continues into machining, assembly and project-specific testing.</p>
+        <p>Founded in 2015 and operating within an ISO 9001 quality system, SONNE manufactures at a base in Cixi, Ningbo, Zhejiang, China. The company is a producer with its own engineering and production resources, not a catalogue reseller.</p>
+        <div class="sn-about__actions">
+          <a class="sn-btn sn-btn--primary" href="/request-a-quote/">Partner with SONNE</a>
+          <a class="sn-btn sn-btn--secondary" href="/about/factory/">Inspect the Factory</a>
+        </div>
+        <div class="sn-about__facts" aria-label="Company facts">
+          <div class="sn-about__fact"><strong>2015</strong><span>Founded as an RF and precision manufacturing business.</span></div>
+          <div class="sn-about__fact"><strong>ISO 9001</strong><span>Quality management system, open to buyer review.</span></div>
+          <div class="sn-about__fact"><strong>50+</strong><span>High-precision CNC machines in the machining area.</span></div>
+          <div class="sn-about__fact"><strong>≈20,000 m²</strong><span>Integrated office and manufacturing building, public 2025 update.</span></div>
+        </div>
+      </div>
+      <figure class="sn-about__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave.webp" alt="Microwave and RF components" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Microwave and RF hardware from the SONNE range. The image documents product types, not a customer project or a measured result.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="about-scope-title">
+    <div class="sn-container">
+      <div class="sn-about__intro">
+        <h2 id="about-scope-title">One Manufacturing Partner for RF Hardware and Precision Enclosures</h2>
+        <p>Five core lines cover the electrical and mechanical scope most projects need. Each line states the buyer task it answers, so you can tell quickly whether your requirement belongs here or needs a different supplier type.</p>
+      </div>
+      <div class="sn-about__products">
+        <article class="sn-about__product">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="lazy" decoding="async">
+          <div class="sn-about__product-body">
+            <h3>RF &amp; Microwave Filters</h3>
+            <p>Define passband, rejection and power handling for a cavity, waveguide or custom filter structure.</p>
+            <a class="sn-about__text-link" href="/products/rf-microwave-filters/">Explore RF filters <span aria-hidden="true">&nbsp;→</span></a>
+          </div>
+        </article>
+        <article class="sn-about__product">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp" alt="Ortho-mode transducer" width="1024" height="571" loading="lazy" decoding="async">
+          <div class="sn-about__product-body">
+            <h3>Waveguide &amp; Microwave</h3>
+            <p>Connect a high-frequency path to a defined flange, polarization and mechanical interface.</p>
+            <a class="sn-about__text-link" href="/products/waveguide-components/">Explore waveguide components <span aria-hidden="true">&nbsp;→</span></a>
+          </div>
+        </article>
+        <article class="sn-about__product">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-combiner-v2.webp" alt="RF combiner" width="1024" height="571" loading="lazy" decoding="async">
+          <div class="sn-about__product-body">
+            <h3>Combiners &amp; Duplexers</h3>
+            <p>Combine or separate frequency paths with explicit port logic, isolation and PIM targets.</p>
+            <a class="sn-about__text-link" href="/products/rf-combiners/">Explore combiners <span aria-hidden="true">&nbsp;→</span></a>
+          </div>
+        </article>
+        <article class="sn-about__product">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-n28-multiplexer.webp" alt="N28 multiplexer" width="1024" height="571" loading="lazy" decoding="async">
+          <div class="sn-about__product-body">
+            <h3>Base Station RF</h3>
+            <p>Evaluate passive RF hardware in its 4T4R or 8TR, N28 or N78 project context.</p>
+            <a class="sn-about__text-link" href="/products/base-station-rf/">Explore base station RF <span aria-hidden="true">&nbsp;→</span></a>
+          </div>
+        </article>
+        <article class="sn-about__product">
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-cabinet.webp" alt="Telecom enclosure cabinet" width="1024" height="1024" loading="lazy" decoding="async">
+          <div class="sn-about__product-body">
+            <h3>Precision Enclosures</h3>
+            <p>Turn equipment, thermal and shielding constraints into a buildable housing with defined tolerances.</p>
+            <a class="sn-about__text-link" href="/products/precision-enclosures/">Explore precision enclosures <span aria-hidden="true">&nbsp;→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="sn-about__support">
+        <span class="sn-about__support-title">Supporting lines for a defined BOM</span>
+        <a class="sn-about__support-item" href="/products/ibs-das-components/">IBS / DAS components</a>
+        <a class="sn-about__support-item" href="/products/fttx-fiber-distribution/">FTTX fiber distribution</a>
+        <a class="sn-about__support-item" href="/products/rf-accessories/">RF accessories</a>
+      </div>
+      <p class="sn-about__note">Core production covers DC–40 GHz. Selected custom microwave and waveguide projects can reach 110 GHz, depending on topology and validation. Frequency alone does not confirm feasibility; the interface, power, PIM and mechanical envelope are reviewed with it.</p>
+      <div class="sn-about__actions"><a class="sn-btn sn-btn--secondary" href="/products/">Explore Product Lines</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="about-facts-title">
+    <div class="sn-container">
+      <div class="sn-about__intro">
+        <h2 id="about-facts-title">What SONNE's Manufacturing Facts Mean for Your Project</h2>
+        <p>Capacity and equipment figures are screening inputs, not promises. The table connects each published fact to the decision it can support and to the page where a buyer can check it.</p>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="about-facts-title">
+        <table class="sn-table sn-about__facts-table">
+          <caption>Published manufacturing facts, their buyer value and the evidence entry point for each statement.</caption>
+          <thead><tr><th scope="col">Published fact</th><th scope="col">Buyer value</th><th scope="col">What must still be confirmed</th><th scope="col">Evidence entry point</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">More than 50 high-precision CNC machines</th><td data-label="Buyer value">Machining resources for cavities, housings, interfaces and other drawing-defined parts; not a delivery-date promise</td><td data-label="What must still be confirmed">Drawing tolerances, process route, materials and inspection records for your part</td><td data-label="Evidence entry point"><a href="/engineering/manufacturing/">Precision manufacturing review</a></td></tr>
+            <tr><th scope="row">Annual capacity above 500,000 units</th><td data-label="Buyer value">A basis for prototype-to-volume assessment across the factory</td><td data-label="What must still be confirmed">Quantity, process and current capacity, which together determine any schedule</td><td data-label="Evidence entry point"><a href="/about/factory/">Factory and production evidence</a></td></tr>
+            <tr><th scope="row">VNA, PIM, reliability and multi-port matrix automated testing</th><td data-label="Buyer value">Verification evidence can be planned against your stated RF criteria</td><td data-label="What must still be confirmed">Parameters, conditions, sample coverage and report fields; no blanket 100% testing claim</td><td data-label="Evidence entry point"><a href="/engineering/testing-quality/">Testing and quality review</a></td></tr>
+            <tr><th scope="row">≈20,000 m² integrated office and manufacturing building</th><td data-label="Buyer value">A facility fact for supplier review, from the public 2025 update</td><td data-label="What must still be confirmed">Accessible areas and visit scope, confirmed before any factory visit</td><td data-label="Evidence entry point"><a href="/about/factory/">Facility and process map</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-about__note">Two limits are worth repeating: annual capacity does not set a delivery date, and a company-level test capability list does not mean every component is tested to the same scope. Both are agreed per project in writing.</p>
+      <div class="sn-about__actions">
+        <a class="sn-btn sn-btn--secondary" href="/engineering/">Verify Our Capabilities</a>
+        <a class="sn-about__text-link" href="/about/factory/">Inspect the factory evidence <span aria-hidden="true">&nbsp;→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="about-history-title">
+    <div class="sn-container">
+      <div class="sn-about__intro">
+        <h2 id="about-history-title">From Our 2015 Foundation to Engineering-Led Production</h2>
+        <p>The company history is short enough to state plainly. Each confirmed milestone below is paired with what it changes for a buyer who has to justify a supplier internally.</p>
+      </div>
+      <ol class="sn-about__timeline">
+        <li>
+          <span class="sn-about__timeline-year">2015</span>
+          <h3>SONNE is founded</h3>
+          <p>A continuing engineering and manufacturing counterpart for the life of a programme, rather than a temporary trading catalogue.</p>
+        </li>
+        <li>
+          <span class="sn-about__timeline-year">Quality system</span>
+          <h3>ISO 9001 in operation</h3>
+          <p>A documented system that procurement can audit. It supports process discipline; it does not replace product-level verification.</p>
+          <a href="/engineering/testing-quality/">Review testing and quality <span aria-hidden="true">&nbsp;→</span></a>
+        </li>
+        <li>
+          <span class="sn-about__timeline-year">2025</span>
+          <h3>Facility update</h3>
+          <p>Public update describes an integrated office and manufacturing building of approximately 20,000 m², covering machining, assembly and test under one roof.</p>
+          <a href="/about/factory/">See the facility evidence <span aria-hidden="true">&nbsp;→</span></a>
+        </li>
+        <li>
+          <span class="sn-about__timeline-year">2025</span>
+          <h3>SVIAZ 2025 exhibition</h3>
+          <p>Public industry participation that buyers can check independently. It is not evidence of customer numbers, export markets or revenue.</p>
+          <a href="/contact/">Ask about industry participation <span aria-hidden="true">&nbsp;→</span></a>
+        </li>
+      </ol>
+      <div class="sn-about__quality">
+        <h3>How to use ISO 9001 in a supplier review</h3>
+        <p>Treat the certificate as an entry point to the quality system: ask how requirements, responsibilities, inspection records and change control apply to your part. Product performance still has to be shown by the agreed test evidence for that product and scope.</p>
+      </div>
+      <div class="sn-about__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Review Testing and Quality</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="about-model-title">
+    <div class="sn-container">
+      <div class="sn-about__intro">
+        <h2 id="about-model-title">A Practical Path from RFQ to Repeatable Production</h2>
+        <p>The working model is deliberately narrow: agree the requirement, verify a sample, then confirm what production will repeat. Commercial terms and production timing are settled per project, not assumed from a company page.</p>
+      </div>
+      <ol class="sn-about__flow">
+        <li>
+          <h3>Requirement intake</h3>
+          <dl>
+            <dt>Your input</dt><dd>Application, band plan, 2D/3D drawings, quantity range and open questions.</dd>
+            <dt>SONNE activity</dt><dd>Completeness check and routing to the responsible engineer.</dd>
+            <dt>Review output</dt><dd>List of missing inputs and the questions that block evaluation.</dd>
+          </dl>
+        </li>
+        <li>
+          <h3>Engineering evaluation</h3>
+          <dl>
+            <dt>Your input</dt><dd>Priority of RF targets and non-negotiable mechanical constraints.</dd>
+            <dt>SONNE activity</dt><dd>Feasibility, topology, tolerance and test-scope review.</dd>
+            <dt>Review output</dt><dd>Initial engineering feedback; a complete RFQ typically receives this in about 24 hours.</dd>
+          </dl>
+        </li>
+        <li>
+          <h3>Sample verification</h3>
+          <dl>
+            <dt>Your input</dt><dd>Acceptance targets, conditions and the measurements you need reported.</dd>
+            <dt>SONNE activity</dt><dd>Prototype build, tuning and measurement against the agreed limits.</dd>
+            <dt>Review output</dt><dd>Sample data with deviations and their disposition. The fastest prototype reference is about two weeks, only in suitable cases.</dd>
+          </dl>
+        </li>
+        <li>
+          <h3>Pilot and volume</h3>
+          <dl>
+            <dt>Your input</dt><dd>Target volume, acceptance criteria and any change constraints.</dd>
+            <dt>SONNE activity</dt><dd>Process route, capacity and inspection planning.</dd>
+            <dt>Review output</dt><dd>Production baseline, open deviations and the change interface.</dd>
+          </dl>
+        </li>
+        <li>
+          <h3>Agreed deliverables</h3>
+          <dl>
+            <dt>Your input</dt><dd>Required report fields, traceability depth and delivery documents.</dd>
+            <dt>SONNE activity</dt><dd>Project test plan and record keeping.</dd>
+            <dt>Review output</dt><dd>Records limited to the agreed product, lot and test scope.</dd>
+          </dl>
+        </li>
+      </ol>
+      <div class="sn-about__timing">
+        <p><strong>24-hour guideline:</strong> a complete RFQ typically receives initial engineering feedback in about 24 hours. This is not a quotation, a delivery date or a technical proposal guarantee.</p>
+        <p><strong>Timing:</strong> the approximately two-week reference applies to prototyping in suitable cases only. Production timing is assessed from drawings, quantity, process and current capacity.</p>
+      </div>
+      <div class="sn-about__actions">
+        <a class="sn-btn sn-btn--primary" href="/request-a-quote/">Start an Engineering Review</a>
+        <a class="sn-btn sn-btn--secondary" href="/engineering/npi/">Review the NPI Path</a>
+        <a class="sn-about__text-link" href="/resources/rfq-guide/">Prepare RFQ inputs <span aria-hidden="true">&nbsp;→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="about-faq-title">
+    <div class="sn-container">
+      <div class="sn-about__intro">
+        <h2 id="about-faq-title">Questions Buyers Ask About SONNE</h2>
+        <p>Five questions that appear in most supplier shortlists, answered with the same limits used elsewhere on this site. Each answer points to the page where the claim can be checked.</p>
+      </div>
+      <div class="sn-about__faq">
+        <details>
+          <summary>Is SONNE a factory or a trading company?</summary>
+          <p>SONNE is an engineering and manufacturing company founded in 2015, with a manufacturing base in Cixi, Ningbo, China. Its production capabilities include more than 50 high-precision CNC machines and RF testing resources. You can review factory photographs, machining, assembly and testing areas <a href="/about/factory/">on the Factory page</a> before arranging a project-specific audit or visit.</p>
+        </details>
+        <details>
+          <summary>Where is SONNE based?</summary>
+          <p>SONNE's manufacturing base is at No. 87, 89, 91, Sanbei Middle Road, Xinze Village, Guanhaiwei Town, Cixi City, Ningbo City, Zhejiang Province, China. Visitors should arrange a factory visit in advance through <a href="/contact/">the Contact page</a> so the team can confirm the schedule, site access and the people you need to meet.</p>
+        </details>
+        <details>
+          <summary>Does SONNE support custom RF and enclosure projects?</summary>
+          <p>Yes. SONNE supports custom RF and microwave filters, <a href="/products/waveguide-components/">waveguide components,</a> combiners, base-station RF hardware and precision enclosure projects. Core production covers DC to 40 GHz, while selected custom microwave and waveguide designs may reach 110 GHz depending on topology and verification. Feasibility, documentation and test scope are evaluated against each project's requirements.</p>
+        </details>
+        <details>
+          <summary>What do SONNE's capacity figures mean for a buyer?</summary>
+          <p>More than 50 high-precision CNC machines and <a href="/about/factory/">annual capacity above 500,000 units</a> indicate manufacturing resources for prototype-to-volume evaluation. They do not create a universal lead-time promise for every design. Your schedule still depends on drawings, quantities, processes and current capacity, so the project team should confirm timing after reviewing the actual RFQ.</p>
+        </details>
+        <details>
+          <summary>How does SONNE support quality verification?</summary>
+          <p>SONNE has an ISO 9001 quality system and VNA, PIM, reliability and multi-port matrix automated testing capabilities. These resources support verification according to the product and agreed test scope. Buyers should review <a href="/engineering/testing-quality/">the Testing and Quality page</a> and request project-relevant evidence rather than treating the company-level capability list as a blanket test claim for every component.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="about-cta-title">
+    <div class="sn-container sn-cta sn-about__cta">
+      <div class="sn-about__cta-grid">
+        <div>
+          <img class="sn-about__cta-logo" src="https://rf-sonne.com/wp-content/uploads/2026/10/logo-sonne-white.png" alt="SONNE Electronics logo" width="381" height="102" loading="lazy" decoding="async">
+          <h2 id="about-cta-title">Bring Your Next RF or Enclosure Project to SONNE</h2>
+          <p>Send the application, the specifications you already know and the project stage. You do not need a complete package to begin: unknown parameters can stay open, and the first reply identifies what is missing.</p>
+          <ul>
+            <li><strong>Application</strong> — what the component or housing has to do in the system.</li>
+            <li><strong>Known specifications</strong> — frequency, power, PIM, isolation or mechanical requirements.</li>
+            <li><strong>Project stage</strong> — concept, prototype, qualification, pilot or production.</li>
+          </ul>
+          <div class="sn-about__actions">
+            <a class="sn-btn sn-btn--primary" href="/request-a-quote/">Partner with SONNE</a>
+            <a class="sn-btn sn-btn--secondary" href="/contact/">Contact SONNE</a>
+          </div>
+          <p class="sn-about__fine-print">A complete RFQ typically receives initial engineering feedback in about 24 hours. This is not a formal quotation, delivery commitment or performance guarantee. Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
+        </div>
+        <div class="sn-about__cta-panel">
+          <h3>What the first reply covers</h3>
+          <ul>
+            <li>The engineering contact who replies to your message</li>
+            <li>Open items, missing inputs and assumptions</li>
+            <li>A recommended next step: drawing review, sample build or detailed RFQ</li>
+          </ul>
+          <p>Whether a factory visit, drawing exchange or sample build comes next is confirmed by the team after the requirement is understood.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://rf-sonne.com/about/#aboutpage",
+        "name": "Engineered for RF Performance. Built for Repeatable Production.",
+        "url": "https://rf-sonne.com/about/",
+        "description": "SONNE is an RF and microwave engineering and manufacturing company founded in 2015, with a manufacturing base in Cixi, Ningbo, Zhejiang, China and an ISO 9001 quality system.",
+        "about": { "@id": "https://rf-sonne.com/#organization" },
+        "isPartOf": { "@id": "https://rf-sonne.com/#website" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://rf-sonne.com/#organization",
+        "name": "SONNE",
+        "url": "https://rf-sonne.com/",
+        "email": "info@zhide-tec.com",
+        "telephone": "+86-0574-63615958",
+        "foundingDate": "2015",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "No. 87, 89, 91, Sanbei Middle Road, Xinze Village, Guanhaiwei Town",
+          "addressLocality": "Cixi City, Ningbo City",
+          "addressRegion": "Zhejiang Province",
+          "addressCountry": "CN"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/about/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
+          {"@type": "ListItem", "position": 2, "name": "About", "item": "https://rf-sonne.com/about/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

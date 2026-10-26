@@ -1,0 +1,86 @@
+{
+  "page": {
+    "title": "RF & Microwave Engineering Insights | SONNE",
+    "h1": "RF Engineering Guides for Buyers and Designers",
+    "description": "Practical RF guides: RFQ preparation, filter selection, waveguide and E-band engineering, low PIM design, test report reading and NPI for custom RF components.",
+    "focus_keyword": "RF engineering guides"
+  },
+  "hub": {
+    "title": "RF Resources | Insights, RFQ Guide, FAQ & Datasheets | SONNE",
+    "h1": "RF Engineering Resources and Buyer Tools",
+    "description": "RF engineering articles, RFQ checklists, strategic FAQ and datasheet downloads for custom RF, waveguide and enclosure projects.",
+    "focus_keyword": "RF resources"
+  },
+  "topics": [
+    {
+      "slug": "rfq-preparation",
+      "name": "RFQ Preparation",
+      "description": "How to turn a band plan, interface and mechanical envelope into a reviewable RFQ.",
+      "seo_title": "RFQ Preparation Guides | SONNE",
+      "seo_description": "How to turn a band plan, interface and mechanical envelope into a reviewable RFQ.",
+      "focus_keyword": "rfq preparation"
+    },
+    {
+      "slug": "filter-selection",
+      "name": "Filter Selection",
+      "description": "Compare cavity, waveguide and other filter topologies by loss, rejection, power and size.",
+      "seo_title": "Filter Selection Guides | SONNE",
+      "seo_description": "Compare cavity, waveguide and other filter topologies by loss, rejection, power and size.",
+      "focus_keyword": "filter selection"
+    },
+    {
+      "slug": "waveguide-eband",
+      "name": "Waveguide & E-Band",
+      "description": "Flange, polarization, tolerance and surface requirements for waveguide and E-band assemblies.",
+      "seo_title": "Waveguide & E-Band Guides | SONNE",
+      "seo_description": "Flange, polarization, tolerance and surface requirements for waveguide and E-band assemblies.",
+      "focus_keyword": "waveguide e-band"
+    },
+    {
+      "slug": "low-pim-combiners",
+      "name": "Low PIM & Combiners",
+      "description": "Duplexer, diplexer and multi-band combiner choices, with PIM tied to real test conditions.",
+      "seo_title": "Low PIM & Combiners Guides | SONNE",
+      "seo_description": "Duplexer, diplexer and multi-band combiner choices, with PIM tied to real test conditions.",
+      "focus_keyword": "low pim combiner"
+    },
+    {
+      "slug": "test-reports",
+      "name": "Test Reports & Verification",
+      "description": "How to read VNA, PIM and reliability data, including setup, limits and traceability.",
+      "seo_title": "Test Reports & Verification Guides | SONNE",
+      "seo_description": "How to read VNA, PIM and reliability data, including setup, limits and traceability.",
+      "focus_keyword": "rf test report"
+    },
+    {
+      "slug": "npi-manufacturing",
+      "name": "NPI & Manufacturing",
+      "description": "From prototype and first article to pilot run and controlled mass production.",
+      "seo_title": "NPI & Manufacturing Guides | SONNE",
+      "seo_description": "From prototype and first article to pilot run and controlled mass production.",
+      "focus_keyword": "rf npi"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Which RF engineering guide should I read first?",
+      "a": "Choose by task rather than publication date. Start with a selection guide when topology is uncertain, a test-report guide when reviewing evidence, or the RFQ guide when specifications are mostly ready. Each article should provide comparison criteria, measurement conditions and a link to the relevant product family."
+    },
+    {
+      "q": "What is the difference between a duplexer and a diplexer?",
+      "a": "A duplexer separates transmit and receive paths so they can share an antenna or port. A diplexer separates or combines different frequency bands. The suitable architecture depends on band plan, port definitions, isolation, insertion loss and power. Use the comparison guide, then submit the band plan through the combiner pathway."
+    },
+    {
+      "q": "How should a low PIM design guide support product selection?",
+      "a": "It should connect PIM targets to frequency, power, connector, material, surface and test conditions rather than present a universal rating. Readers should record the applicable configuration and request supporting PIM evidence. Low PIM performance must be assessed for the specific model and conditions, not generalized across all products."
+    },
+    {
+      "q": "What should I look for in an RF test report guide?",
+      "a": "Look for explanations of test setup, calibration, frequency range, acceptance limits and sample or lot identification. VNA curves, PIM results, reliability tests and matrix-switch automation answer different questions. Coverage must be defined for the applicable product and metric; a sample report shows evidence format, not a universal result."
+    },
+    {
+      "q": "Can an engineering guide replace a custom RFQ review?",
+      "a": "No. A guide helps define topology, specifications and evidence needs, but feasibility still depends on the actual band plan, mechanical envelope, environment and validation requirements. Submit those inputs for review. A complete RFQ can receive initial engineering feedback in about 24 hours, not an automatic quotation or lead-time commitment."
+    }
+  ]
+}

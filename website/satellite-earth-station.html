@@ -1,0 +1,317 @@
+<!-- wp:html -->
+<div class="sn-sol-satellite sn-legacy-record">
+  <style>
+    .sn-sol-satellite { color: var(--sn-text); }
+    .sn-sol-satellite *, .sn-sol-satellite *::before, .sn-sol-satellite *::after { box-sizing: border-box; }
+    .sn-sol-satellite h2, .sn-sol-satellite h3, .sn-sol-satellite p, .sn-sol-satellite ul, .sn-sol-satellite ol, .sn-sol-satellite dl, .sn-sol-satellite dd, .sn-sol-satellite figure { margin-top: 0; }
+    .sn-sol-satellite h2 { margin-bottom: 20px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); }
+    .sn-sol-satellite h3 { margin-bottom: 12px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); }
+    .sn-sol-satellite p, .sn-sol-satellite li, .sn-sol-satellite dd { line-height: 1.7; }
+    .sn-sol-satellite a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-sol-satellite img { display: block; max-width: 100%; height: auto; }
+    .sn-sol-satellite .sn-sol-satellite__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-sol-satellite .sn-sol-satellite__intro { max-width: 860px; margin-bottom: 40px; }
+    .sn-sol-satellite .sn-sol-satellite__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.05rem; }
+    .sn-sol-satellite .sn-sol-satellite__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .sn-sol-satellite .sn-sol-satellite__text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .sn-sol-satellite .sn-sol-satellite__hero .sn-sol-satellite__eyebrow { color: var(--sn-cyan); }
+    .sn-sol-satellite .sn-sol-satellite__hero-grid { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(340px, .96fr); gap: clamp(36px, 6vw, 80px); align-items: center; }
+    .sn-sol-satellite .sn-sol-satellite__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
+    .sn-sol-satellite .sn-sol-satellite__hero-risk { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 28px; border-block: 1px solid rgba(252, 254, 255, .2); }
+    .sn-sol-satellite .sn-sol-satellite__hero-risk div { padding: 16px 16px 16px 0; }
+    .sn-sol-satellite .sn-sol-satellite__hero-risk div + div { padding-left: 16px; border-left: 1px solid rgba(252, 254, 255, .2); }
+    .sn-sol-satellite .sn-sol-satellite__hero-risk strong { display: block; color: var(--sn-white); font-family: var(--sn-font-mono); font-size: .76rem; }
+    .sn-sol-satellite .sn-sol-satellite__hero-risk span { color: rgba(252, 254, 255, .7); font-size: .76rem; line-height: 1.5; }
+    .sn-sol-satellite .sn-sol-satellite__hero-media { margin-bottom: 0; }
+    .sn-sol-satellite .sn-sol-satellite__hero-media img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .sn-sol-satellite figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-sol-satellite .sn-sol-satellite__hero figcaption { color: rgba(252, 254, 255, .66); }
+    .sn-sol-satellite .sn-sol-satellite__boundary { margin: 16px 0 0; color: rgba(252, 254, 255, .68); font-size: .8rem; }
+    .sn-sol-satellite caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
+    .sn-sol-satellite .sn-sol-satellite__constraints { min-width: 900px; }
+    .sn-sol-satellite .sn-sol-satellite__constraints th:first-child { width: 150px; }
+    .sn-sol-satellite .sn-sol-satellite__constraints tbody th { color: var(--sn-navy); }
+    .sn-sol-satellite .sn-sol-satellite__note { margin: 18px 0 0; padding: 18px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-sol-satellite .sn-sol-satellite__feed { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(26px, 4vw, 46px); margin-bottom: 26px; align-items: start; }
+    .sn-sol-satellite .sn-sol-satellite__feed figure { margin-bottom: 0; }
+    .sn-sol-satellite .sn-sol-satellite__feed img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: var(--sn-light-gray); }
+    .sn-sol-satellite .sn-sol-satellite__feed-list { margin: 0; padding: 0; list-style: none; counter-reset: chain; }
+    .sn-sol-satellite .sn-sol-satellite__feed-list li { position: relative; padding: 14px 0 14px 46px; border-bottom: var(--sn-border); counter-increment: chain; }
+    .sn-sol-satellite .sn-sol-satellite__feed-list li::before { position: absolute; left: 0; top: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; content: '0' counter(chain); }
+    .sn-sol-satellite .sn-sol-satellite__feed-list strong { display: block; color: var(--sn-navy); font-size: .94rem; }
+    .sn-sol-satellite .sn-sol-satellite__feed-list span { display: block; color: var(--sn-text-muted); font-size: .83rem; }
+    .sn-sol-satellite .sn-sol-satellite__feed-list a { display: inline-flex; align-items: center; min-height: 44px; font-size: .8rem; font-weight: 700; }
+    .sn-sol-satellite .sn-sol-satellite__waveguides { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 24px; }
+    .sn-sol-satellite .sn-sol-satellite__waveguides figure { margin-bottom: 0; padding: 14px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-satellite .sn-sol-satellite__waveguides img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: var(--sn-light-gray); }
+    .sn-sol-satellite .sn-sol-satellite__waveguides h3 { margin: 12px 0 4px; font-size: .96rem; }
+    .sn-sol-satellite .sn-sol-satellite__waveguides p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .8rem; }
+    .sn-sol-satellite .sn-sol-satellite__polarity { display: grid; grid-template-columns: minmax(0, .55fr) minmax(0, 1.45fr); gap: 18px; margin-bottom: 26px; align-items: stretch; }
+    .sn-sol-satellite .sn-sol-satellite__ports { display: grid; gap: 10px; padding: 22px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-satellite .sn-sol-satellite__ports h3 { font-size: .94rem; }
+    .sn-sol-satellite .sn-sol-satellite__port { display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid var(--sn-mid-gray); }
+    .sn-sol-satellite .sn-sol-satellite__port-mark { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; flex: 0 0 auto; border: 2px solid var(--sn-cyan-dark); color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; font-weight: 700; }
+    .sn-sol-satellite .sn-sol-satellite__port-mark--v { border-right-width: 8px; border-left-width: 8px; }
+    .sn-sol-satellite .sn-sol-satellite__port span { color: var(--sn-text-muted); font-size: .78rem; line-height: 1.5; }
+    .sn-sol-satellite .sn-sol-satellite__trade { min-width: 900px; }
+    .sn-sol-satellite .sn-sol-satellite__trade th:first-child { width: 190px; }
+    .sn-sol-satellite .sn-sol-satellite__trade tbody th { color: var(--sn-navy); }
+    .sn-sol-satellite .sn-sol-satellite__drawings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 24px; }
+    .sn-sol-satellite .sn-sol-satellite__drawings figure { margin-bottom: 0; }
+    .sn-sol-satellite .sn-sol-satellite__drawings img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-sol-satellite .sn-sol-satellite__checks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: 0; padding: 0; list-style: none; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-satellite .sn-sol-satellite__checks li { padding: 18px; }
+    .sn-sol-satellite .sn-sol-satellite__checks li + li { border-left: var(--sn-border); }
+    .sn-sol-satellite .sn-sol-satellite__checks li:nth-child(n+4) { border-top: var(--sn-border); }
+    .sn-sol-satellite .sn-sol-satellite__checks li:nth-child(4) { border-left: 0; }
+    .sn-sol-satellite .sn-sol-satellite__checks strong { display: block; margin-bottom: 4px; color: var(--sn-navy); font-size: .86rem; }
+    .sn-sol-satellite .sn-sol-satellite__checks span { color: var(--sn-text-muted); font-size: .78rem; line-height: 1.55; }
+    .sn-sol-satellite .sn-sol-satellite__evidence { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(26px, 4vw, 46px); margin-bottom: 24px; align-items: start; }
+    .sn-sol-satellite .sn-sol-satellite__evidence figure { margin-bottom: 0; }
+    .sn-sol-satellite .sn-sol-satellite__evidence img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-sol-satellite .sn-sol-satellite__evidence figure + figure { margin-top: 14px; }
+    .sn-sol-satellite .sn-sol-satellite__report { margin: 0; padding: 0; list-style: none; border-top: var(--sn-border); }
+    .sn-sol-satellite .sn-sol-satellite__report li { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-bottom: var(--sn-border); }
+    .sn-sol-satellite .sn-sol-satellite__report strong { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .7rem; letter-spacing: .03em; text-transform: uppercase; }
+    .sn-sol-satellite .sn-sol-satellite__report span { color: var(--sn-text-muted); font-size: .84rem; }
+    .sn-sol-satellite .sn-sol-satellite__faq { max-width: 920px; }
+    .sn-sol-satellite .sn-sol-satellite__faq details { border-bottom: var(--sn-border); }
+    .sn-sol-satellite .sn-sol-satellite__faq summary { position: relative; min-height: 44px; padding: 24px 48px 24px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.08rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-sol-satellite .sn-sol-satellite__faq summary::after { position: absolute; top: 22px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-sol-satellite .sn-sol-satellite__faq details[open] summary::after { content: '−'; }
+    .sn-sol-satellite .sn-sol-satellite__faq details p { max-width: 78ch; padding-right: 40px; color: var(--sn-text-muted); }
+    .sn-sol-satellite .sn-sol-satellite__cta-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(28px, 5vw, 64px); }
+    .sn-sol-satellite .sn-sol-satellite__cta h2, .sn-sol-satellite .sn-sol-satellite__cta h3 { color: var(--sn-white); }
+    .sn-sol-satellite .sn-sol-satellite__cta p, .sn-sol-satellite .sn-sol-satellite__cta li { color: rgba(252, 254, 255, .8); }
+    .sn-sol-satellite .sn-sol-satellite__cta a:not(.sn-btn) { color: var(--sn-cyan); }
+    .sn-sol-satellite .sn-sol-satellite__panel { padding: clamp(24px, 4vw, 34px); border: 1px solid rgba(252, 254, 255, .22); }
+    .sn-sol-satellite .sn-sol-satellite__panel ul { margin: 0 0 18px; padding-left: 18px; }
+    .sn-sol-satellite .sn-sol-satellite__panel li { font-size: .85rem; }
+    .sn-sol-satellite .sn-sol-satellite__fine-print { margin: 18px 0 0; font-size: .8rem; color: rgba(252, 254, 255, .66) !important; }
+    @media (max-width: 1000px) {
+      .sn-sol-satellite .sn-sol-satellite__polarity { grid-template-columns: 1fr; }
+      .sn-sol-satellite .sn-sol-satellite__checks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-sol-satellite .sn-sol-satellite__checks li:nth-child(3), .sn-sol-satellite .sn-sol-satellite__checks li:nth-child(5) { border-left: 0; }
+      .sn-sol-satellite .sn-sol-satellite__checks li:nth-child(n+3) { border-top: var(--sn-border); }
+    }
+    @media (max-width: 900px) {
+      .sn-sol-satellite .sn-sol-satellite__hero-grid, .sn-sol-satellite .sn-sol-satellite__feed, .sn-sol-satellite .sn-sol-satellite__evidence, .sn-sol-satellite .sn-sol-satellite__cta-grid { grid-template-columns: 1fr; }
+      .sn-sol-satellite .sn-sol-satellite__hero-media { max-width: 720px; }
+      .sn-sol-satellite .sn-sol-satellite__waveguides { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 700px) {
+      .sn-sol-satellite .sn-sol-satellite__hero-risk { grid-template-columns: 1fr; }
+      .sn-sol-satellite .sn-sol-satellite__hero-risk div, .sn-sol-satellite .sn-sol-satellite__hero-risk div + div { padding: 12px 0; border-left: 0; }
+      .sn-sol-satellite .sn-sol-satellite__hero-risk div + div { border-top: 1px solid rgba(252, 254, 255, .2); }
+      .sn-sol-satellite .sn-sol-satellite__drawings, .sn-sol-satellite .sn-sol-satellite__waveguides, .sn-sol-satellite .sn-sol-satellite__checks { grid-template-columns: 1fr; }
+      .sn-sol-satellite .sn-sol-satellite__checks li + li { border-top: var(--sn-border); border-left: 0; }
+      .sn-sol-satellite .sn-sol-satellite__report li { grid-template-columns: 1fr; gap: 2px; }
+    }
+    @media (max-width: 520px) {
+      .sn-sol-satellite .sn-sol-satellite__actions .sn-btn { width: 100%; }
+      .sn-sol-satellite .sn-sol-satellite__faq details p { padding-right: 0; }
+    }
+    @media print {
+      .sn-sol-satellite .sn-sol-satellite__faq details:not([open]) > p { display: block !important; }
+      .sn-sol-satellite .sn-sol-satellite__faq details::details-content { content-visibility: visible !important; display: block !important; }
+    }
+  </style>
+
+  <section class="sn-hero sn-sol-satellite__hero" aria-labelledby="sol-satellite-title">
+    <div class="sn-container sn-sol-satellite__hero-grid">
+      <div class="sn-sol-satellite__hero-copy">
+        <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/solutions/">Solutions</a></li><li aria-current="page">Satellite Earth Stations</li></ol></nav>
+        <span class="sn-sol-satellite__eyebrow">Application · Earth station · Ku/Ka · OMT</span>
+        <h1 id="sol-satellite-title">RF and Waveguide Components for Satellite Earth Stations</h1>
+        <p>Polarization separation, port isolation and flange fit must agree on the same drawing. Begin with the feed-chain definition, then confirm which electrical characteristics can be verified and how.</p>
+        <div class="sn-sol-satellite__hero-risk" aria-label="Earth-station review priorities">
+          <div><strong>Polarization</strong><span>Port scheme and isolation definition</span></div>
+          <div><strong>Flange</strong><span>Waveguide size, hole pattern and datum</span></div>
+          <div><strong>VNA</strong><span>Agreed parameters, ports and limits</span></div>
+        </div>
+        <div class="sn-sol-satellite__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request OMT / Waveguide Evaluation</a><a class="sn-btn sn-btn--secondary" href="#feed-chain">View the Feed Chain</a></div>
+        <p class="sn-sol-satellite__boundary">OMT, waveguide assembly and diplexer projects are evaluated individually. Ku/Ka scope is not a blanket performance statement for every band or structure.</p>
+      </div>
+      <figure class="sn-sol-satellite__hero-media">
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/satellite-693224-1280.webp" alt="satellite 693224 1280" width="1280" height="852" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Satellite earth-station context. The image is a generic application illustration, not a customer site or an installed system.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-satellite-inputs-title">
+    <div class="sn-container">
+      <div class="sn-sol-satellite__intro"><h2 id="sol-satellite-inputs-title">Define Polarization, Bands and Mechanical Interfaces</h2><p>The electrical target and the mechanical interface have to be written down together. A polarization description without port definition cannot be verified, and a flange drawing without an RF target cannot be reviewed.</p></div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-satellite-inputs-caption">
+        <table class="sn-table sn-sol-satellite__constraints">
+          <caption id="sol-satellite-inputs-caption">Earth-station input sheet: electrical, mechanical and adjacent-application items that stay separate during review.</caption>
+          <thead><tr><th scope="col">Group</th><th scope="col">Input</th><th scope="col">Definition or unit</th><th scope="col">Open status to record</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Electrical</th><td data-label="Input">Uplink and downlink bands</td><td data-label="Definition or unit">GHz, bandwidth, sub-bands</td><td data-label="Open status to record">Ku, Ka or other; exact edges</td></tr>
+            <tr><th scope="row">Electrical</th><td data-label="Input">Port function and count</td><td data-label="Definition or unit">Tx, Rx, H, V, combined</td><td data-label="Open status to record">Port map and numbering</td></tr>
+            <tr><th scope="row">Electrical</th><td data-label="Input">Polarization scheme</td><td data-label="Definition or unit">Linear H/V, circular, dual</td><td data-label="Open status to record">Definition and reference plane</td></tr>
+            <tr><th scope="row">Electrical</th><td data-label="Input">Isolation, return loss, insertion loss</td><td data-label="Definition or unit">dB at stated ports and bands</td><td data-label="Open status to record">Targets and acceptance limits</td></tr>
+            <tr><th scope="row">Mechanical</th><td data-label="Input">Waveguide size and flange</td><td data-label="Definition or unit">WR size, flange standard or drawing</td><td data-label="Open status to record">Hole pattern and sealing face</td></tr>
+            <tr><th scope="row">Mechanical</th><td data-label="Input">Datum, orientation and envelope</td><td data-label="Definition or unit">mm, drawing views</td><td data-label="Open status to record">Assembly direction and critical dims</td></tr>
+            <tr><th scope="row">Material</th><td data-label="Input">Material and plating specification</td><td data-label="Definition or unit">Alloy, finish, thickness target</td><td data-label="Open status to record">Applicable surfaces and test</td></tr>
+            <tr><th scope="row">Adjacent use</th><td data-label="Input">Radar or public-safety application</td><td data-label="Definition or unit">Separate evaluation</td><td data-label="Open status to record">Do not inherit earth-station limits</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-sol-satellite__note"><strong>Adjacent applications are not clones.</strong> Radar and public-safety projects can share waveguide manufacturing, but their electrical requirements and acceptance conditions are reviewed separately from earth-station specifications.</p>
+      <div class="sn-sol-satellite__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Prepare Your Interface Specification</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-satellite-chain-title" id="feed-chain">
+    <div class="sn-container">
+      <div class="sn-sol-satellite__intro"><h2 id="sol-satellite-chain-title">Map the Feed, OMT and Waveguide Chain</h2><p>The OMT separates polarizations; a diplexer separates transmit and receive frequencies; waveguide sections carry and turn the signal. They are different functions and should not be described with one generic isolation figure.</p></div>
+      <div class="sn-sol-satellite__feed">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp" alt="Ortho-mode transducer" width="1024" height="571" loading="lazy" decoding="async"><figcaption>Ortho-mode transducer. The product view illustrates the component type; it is not a measured polarization result.</figcaption></figure>
+        <ol class="sn-sol-satellite__feed-list" aria-label="Generic earth-station feed chain">
+          <li><strong>Antenna feed</strong><span>Receives both polarizations and presents them to the OMT. Feed geometry is defined by the antenna design.</span></li>
+          <li><strong>OMT</strong><span>Separates or combines orthogonal polarizations into defined ports. Requires a port and polarization map.</span><a href="/products/waveguide-components/">Waveguide components <span aria-hidden="true">→</span></a></li>
+          <li><strong>Diplexer or filter</strong><span>Separates transmit and receive bands after polarization handling. Requires Tx/Rx edges and guard band.</span><a href="/products/rf-microwave-filters/">RF filters <span aria-hidden="true">→</span></a></li>
+          <li><strong>Waveguide run</strong><span>Straight, curved, twisted or transition sections connect the feed assembly to the equipment.</span><a href="/products/waveguide-components/">Waveguide assemblies <span aria-hidden="true">→</span></a></li>
+        </ol>
+      </div>
+      <div class="sn-sol-satellite__waveguides">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/curved-waveguide.webp" alt="curved waveguide" width="720" height="720" loading="lazy" decoding="async"><h3>Curved section</h3><p>Changes direction within the run. Bend radius and plane are drawing inputs.</p></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/twisted-waveguide.webp" alt="twisted waveguide" width="720" height="720" loading="lazy" decoding="async"><h3>Twisted section</h3><p>Rotates polarization between interfaces. Twist angle and length are confirmed per assembly.</p></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/transition-waveguide-1.webp" alt="transition waveguide" width="720" height="720" loading="lazy" decoding="async"><h3>Transition</h3><p>Adapts between waveguide sizes or interface types. Both mating ends must be specified.</p></figure>
+      </div>
+      <p class="sn-sol-satellite__note"><strong>OMT and OCU are not interchangeable.</strong> An OMT handles polarization; an outdoor combining unit in a backhaul link handles transmit and receive combining. Each has its own port definition and test conditions.</p>
+      <div class="sn-sol-satellite__actions"><a class="sn-btn sn-btn--secondary" href="/products/waveguide-components/">Review Waveguide Components</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-satellite-trade-title">
+    <div class="sn-container">
+      <div class="sn-sol-satellite__intro"><h2 id="sol-satellite-trade-title">Balance Polarization, Isolation, Loss and Packaging</h2><p>Polarization purity, port isolation and diplexer isolation are separate metrics. Each needs its own port pair, frequency range and acceptance limit before a design can be compared.</p></div>
+      <div class="sn-sol-satellite__polarity">
+        <div class="sn-sol-satellite__ports">
+          <h3>Port scheme example</h3>
+          <div class="sn-sol-satellite__port"><span class="sn-sol-satellite__port-mark">H</span><span>Horizontal port: defined band, return loss and isolation against the V port.</span></div>
+          <div class="sn-sol-satellite__port"><span class="sn-sol-satellite__port-mark sn-sol-satellite__port-mark--v">V</span><span>Vertical port: same electrical definition, measured at the agreed reference plane.</span></div>
+          <p>Circular or dual-polarization schemes need their own port map. The labels above are illustrative, not a fixed product configuration.</p>
+        </div>
+        <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sol-satellite-trade-caption">
+          <table class="sn-table sn-sol-satellite__trade">
+            <caption id="sol-satellite-trade-caption">Trade-off matrix for earth-station OMT and waveguide performance; limits are filled by the project, not assumed.</caption>
+            <thead><tr><th scope="col">Metric</th><th scope="col">Definition</th><th scope="col">Test port</th><th scope="col">Structural sensitivity</th><th scope="col">Acceptance field</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Polarization performance</th><td data-label="Definition">Purity or cross-polar discrimination at defined ports</td><td data-label="Test port">H and V ports</td><td data-label="Structural sensitivity">OMT geometry, symmetry, assembly alignment</td><td data-label="Acceptance field">Band, limit and measurement method</td></tr>
+              <tr><th scope="row">Port isolation</th><td data-label="Definition">Leakage between defined ports</td><td data-label="Test port">Port pair stated by the project</td><td data-label="Structural sensitivity">Internal geometry and connector or flange fit</td><td data-label="Acceptance field">Port pair, band and minimum value</td></tr>
+              <tr><th scope="row">Return loss</th><td data-label="Definition">Match at each interface</td><td data-label="Test port">Each port, reference plane</td><td data-label="Structural sensitivity">Interface transition and machining tolerance</td><td data-label="Acceptance field">Per-port limit across the band</td></tr>
+              <tr><th scope="row">Insertion loss</th><td data-label="Definition">Through loss of the assembly</td><td data-label="Test port">Defined input and output</td><td data-label="Structural sensitivity">Surface finish, plating and path length</td><td data-label="Acceptance field">Maximum loss over the band</td></tr>
+              <tr><th scope="row">Packaging</th><td data-label="Definition">Fit within the feed or equipment envelope</td><td data-label="Test port">Mechanical drawing</td><td data-label="Structural sensitivity">Port spacing, bend radius and flange size</td><td data-label="Acceptance field">Envelope and mounting constraints</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="sn-sol-satellite__note"><strong>Do not merge the metrics.</strong> A high-isolation diplexer does not define polarization purity, and a good return loss does not establish port isolation. Ask for each result with its own conditions.</p>
+      <div class="sn-sol-satellite__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Define Your Acceptance Priorities</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-satellite-flange-title">
+    <div class="sn-container">
+      <div class="sn-sol-satellite__intro"><h2 id="sol-satellite-flange-title">Control Flanges, Datums and High-Frequency Geometry</h2><p>Custom waveguide work starts with a drawing review. Flange details, datum choices and internal geometry decide both fit and electrical behaviour, so they are checked before machining is planned.</p></div>
+      <div class="sn-sol-satellite__drawings">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-engineering-cad.webp" alt="Engineer reviewing a 2D engineering drawing" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Drawing review at SONNE. The review records questions and assumptions; it is not a measurement result.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-engineering-dfm-1.webp" alt="Engineer checking a machined part against its 3D CAD model" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Checking a machined part against its CAD model. Critical features are agreed per drawing.</figcaption></figure>
+      </div>
+      <ul class="sn-sol-satellite__checks" aria-label="Drawing review checklist">
+        <li><strong>Flange specification</strong><span>Standard or drawing, hole pattern and bolt access.</span></li>
+        <li><strong>Sealing face</strong><span>Surface finish and groove details where a seal is required.</span></li>
+        <li><strong>Waveguide bore</strong><span>Internal dimensions, transitions and surface requirement.</span></li>
+        <li><strong>Polarization datum</strong><span>Reference feature and orientation relative to ports.</span></li>
+        <li><strong>GD&amp;T</strong><span>Critical dimensions, datums and inspection method.</span></li>
+        <li><strong>Assembly direction</strong><span>Mating order and access for fastening.</span></li>
+      </ul>
+      <p>Above 40 GHz, mechanical tolerance can reach <strong>±0.01 mm</strong>; above 60 GHz, plating-thickness control can reach <strong>1 μm</strong>. Both capabilities depend on the structure and are confirmed in drawing review rather than applied uniformly to every part.</p>
+      <div class="sn-sol-satellite__actions"><a class="sn-btn sn-btn--secondary" href="/request-a-quote/">Submit Drawings for Review</a><a class="sn-sol-satellite__text-link" href="/engineering/manufacturing/">Review manufacturing controls <span aria-hidden="true">&nbsp;→</span></a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-satellite-evidence-title">
+    <div class="sn-container">
+      <div class="sn-sol-satellite__intro"><h2 id="sol-satellite-evidence-title">Agree on VNA Evidence and Acceptance Criteria</h2><p>Define what the report must prove before samples are measured. The report format, port list, frequency ranges and limits should be agreed with the same revision that will be manufactured.</p></div>
+      <div class="sn-sol-satellite__evidence">
+        <div>
+          <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-rf-testing-1.webp" alt="Technician testing an RF filter with bench instruments" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Bench RF testing. The instruments and fixture do not define your acceptance limits.</figcaption></figure>
+          <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-rig.webp" alt="RF test rig" width="1024" height="576" loading="lazy" decoding="async"><figcaption>RF test rig. Test configuration is recorded with the result.</figcaption></figure>
+        </div>
+        <ul class="sn-sol-satellite__report" aria-label="VNA report fields to agree">
+          <li><strong>Product identity</strong><span>Part or assembly identifier, drawing revision and serial or lot linkage.</span></li>
+          <li><strong>Port map</strong><span>Which ports were measured and how they correspond to the polarization scheme.</span></li>
+          <li><strong>Frequency range</strong><span>Start, stop and any sub-band limits used for acceptance.</span></li>
+          <li><strong>Test configuration</strong><span>Calibration reference, fixtures, terminations and environmental condition where relevant.</span></li>
+          <li><strong>S-parameter set</strong><span>Return loss, insertion loss and isolation as defined for this assembly.</span></li>
+          <li><strong>Limits and results</strong><span>Acceptance values, measured data and pass or deviation disposition.</span></li>
+          <li><strong>Coverage</strong><span>Sample, lot or serial basis for the report; not every test applies to every unit.</span></li>
+        </ul>
+      </div>
+      <p class="sn-sol-satellite__note"><strong>Ask before assuming.</strong> Polarization-related system measurements, environmental tests and complete electrical coverage are not automatic. Confirm the test method, limits and any system-level measurement for the specific OMT or assembly.</p>
+      <div class="sn-sol-satellite__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Discuss Test Evidence</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="sol-satellite-faq-title">
+    <div class="sn-container">
+      <div class="sn-sol-satellite__intro"><h2 id="sol-satellite-faq-title">Satellite Earth Station RF FAQs</h2><p>OMT polarization verification, drawing-based manufacture, Ku/Ka scope, flange inputs and the evidence that can accompany a component.</p></div>
+      <div class="sn-sol-satellite__faq">
+        <details open><summary>How is OMT polarization performance verified?</summary><p>First define the frequency range, port configuration, polarization scheme, and the exact acceptance parameters. Polarization-related performance, port isolation, return loss, and insertion loss are not interchangeable. SONNE can review the geometry and apply VNA verification where applicable; the final test method, limits, and any system-level measurements must be agreed for the specific OMT.</p></details>
+        <details><summary>Can SONNE manufacture OMT and waveguide parts to my drawings?</summary><p>Yes, custom waveguide assemblies and OMT projects can be evaluated from customer drawings. Provide 2D and 3D files where available, including frequency, ports, polarization, waveguide size, flange, critical dimensions, materials or plating, quantity, and acceptance requirements. Feasibility remains subject to engineering review of the topology, tolerances, and validation scope.</p></details>
+        <details><summary>Are Ku-band and Ka-band OMT projects supported?</summary><p>Ku/Ka band OMT is part of the stated satellite earth-station component scope. Each design still requires confirmation of exact sub-bands, polarization, isolation, return loss, insertion loss, power, waveguide interfaces, and mechanical envelope. Selected custom microwave and waveguide work can extend to 110 GHz, depending on topology and validation rather than frequency alone.</p></details>
+        <details><summary>What flange and interface details should I provide?</summary><p>Provide the waveguide size, flange type or drawing, hole pattern, sealing features, mating interface, port orientation, polarization datum, mechanical envelope, and critical tolerances. Identify any controlled plating or surface requirements and the assembly context. Clear interface data helps engineering review both fit and high-frequency geometry before manufacturing decisions.</p></details>
+        <details><summary>What RF test evidence can accompany an earth-station component?</summary><p>The evidence package is defined per project. It may include agreed VNA measurements, test configuration details, frequency range, acceptance limits, and report records for the specified samples or production coverage. Request the required format during engineering review. Do not assume that every electrical, polarization, environmental, or system-level test is included by default.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sol-satellite-cta-title">
+    <div class="sn-container sn-cta sn-sol-satellite__cta">
+      <div class="sn-sol-satellite__cta-grid">
+        <div>
+          <h2 id="sol-satellite-cta-title">Request an OMT / Waveguide Evaluation</h2>
+          <p>Send the band, port and polarization definition together with the waveguide interface. Engineering can review the drawing, identify missing interface data and propose an acceptance baseline.</p>
+          <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. Feasibility, quotation and delivery timing are confirmed from the topology, drawings and validation scope.</p>
+          <div class="sn-sol-satellite__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request OMT / Waveguide Evaluation</a><a class="sn-btn sn-btn--secondary" href="/resources/rfq-guide/">Prepare RFQ Inputs</a></div>
+          <p class="sn-sol-satellite__fine-print">Email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> for a written summary or a drawing review request.</p>
+        </div>
+        <div class="sn-sol-satellite__panel">
+          <h3>Attachments to include</h3>
+          <ul><li>Ku/Ka or other frequency ranges</li><li>Port map and polarization scheme</li><li>Isolation, return-loss and insertion-loss targets</li><li>Waveguide size and flange drawing</li><li>Mechanical envelope and datum</li><li>Material, plating and acceptance requirements</li></ul>
+          <h3>What happens next</h3>
+          <p>Engineering checks drawing completeness, reviews feasible topology and lists the measurements needed. Unknown values can stay TBD for the first response, but manufacturing and quotation need agreed final inputs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rf-sonne.com/solutions/satellite-earth-station/#webpage",
+        "name": "RF and Waveguide Components for Satellite Earth Stations",
+        "url": "https://rf-sonne.com/solutions/satellite-earth-station/",
+        "description": "OMT, waveguide assemblies and high-isolation diplexers for Ku/Ka satellite earth stations, with flange, datum and VNA evidence guidance."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/solutions/satellite-earth-station/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://rf-sonne.com/solutions/"},
+          {"@type": "ListItem", "position": 3, "name": "Satellite Earth Stations", "item": "https://rf-sonne.com/solutions/satellite-earth-station/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->
