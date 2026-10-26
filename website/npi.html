@@ -368,19 +368,27 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebPage",
-        "@id": "https://rf-sonne.com/engineering/npi/#webpage",
-        "name": "From Prototype to Pilot Run to Repeatable Mass Production",
-        "url": "https://rf-sonne.com/engineering/npi/",
-        "description": "A structured RF NPI path: prototype validation, first article approval, pilot run and controlled mass production with golden samples, test baselines and change control."
-      },
-      {
         "@type": "BreadcrumbList",
         "@id": "https://rf-sonne.com/engineering/npi/#breadcrumb",
         "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
-          {"@type":"ListItem","position":2,"name":"Engineering & Quality","item":"https://rf-sonne.com/engineering/"},
-          {"@type":"ListItem","position":3,"name":"NPI","item":"https://rf-sonne.com/engineering/npi/"}
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rf-sonne.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Engineering & Quality",
+            "item": "https://rf-sonne.com/engineering/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "NPI",
+            "item": "https://rf-sonne.com/engineering/npi/"
+          }
         ]
       },
       {
@@ -390,27 +398,42 @@
           {
             "@type": "Question",
             "name": "What still needs verification after a prototype passes?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Prototype approval does not by itself demonstrate production repeatability. The next review should confirm controlled drawings and BOM, first article requirements, manufacturing and assembly risks, test settings, coverage, traceability and open deviations. A pilot run can then evaluate whether the proposed process and evidence baseline support the agreed production-release criteria."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Prototype approval does not by itself demonstrate production repeatability. The next review should confirm controlled drawings and BOM, first article requirements, manufacturing and assembly risks, test settings, coverage, traceability and open deviations. A pilot run can then evaluate whether the proposed process and evidence baseline support the agreed production-release criteria."
+            }
           },
           {
             "@type": "Question",
             "name": "How are engineering changes traced during NPI and production?",
-            "acceptedAnswer": {"@type": "Answer", "text": "An engineering change should reference the affected drawing and BOM revisions, reason, parts and production stage. The review records potential RF, mechanical, process and test impacts, plus any required re-verification. Effectivity, inventory or work-in-progress disposition, and customer notification or approval points should be agreed and linked to the project record."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An engineering change should reference the affected drawing and BOM revisions, reason, parts and production stage. The review records potential RF, mechanical, process and test impacts, plus any required re-verification. Effectivity, inventory or work-in-progress disposition, and customer notification or approval points should be agreed and linked to the project record."
+            }
           },
           {
             "@type": "Question",
             "name": "What is the difference between FAI and a golden sample?",
-            "acceptedAnswer": {"@type": "Answer", "text": "First article inspection documents whether specified characteristics of the first article meet the controlled requirements, including applicable measurements and deviations. A golden sample is an approved physical reference linked to a product and revision. It can support comparison, but it does not replace the inspection records, test data or acceptance decisions required for the project."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "First article inspection documents whether specified characteristics of the first article meet the controlled requirements, including applicable measurements and deviations. A golden sample is an approved physical reference linked to a product and revision. It can support comparison, but it does not replace the inspection records, test data or acceptance decisions required for the project."
+            }
           },
           {
             "@type": "Question",
             "name": "What should be reviewed before a pilot run is released to production?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Review the agreed drawing and BOM baseline, first article status, pilot results, critical process and assembly settings, test limits and coverage, traceability, and unresolved deviations. Each open item needs a documented disposition and a decision on whether it blocks release. The exact exit criteria and required customer approvals should be defined in the NPI plan."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Review the agreed drawing and BOM baseline, first article status, pilot results, critical process and assembly settings, test limits and coverage, traceability, and unresolved deviations. Each open item needs a documented disposition and a decision on whether it blocks release. The exact exit criteria and required customer approvals should be defined in the NPI plan."
+            }
           },
           {
             "@type": "Question",
             "name": "How long do RF prototyping and NPI take?",
-            "acceptedAnswer": {"@type": "Answer", "text": "There is no universal NPI schedule. The fastest prototype reference is about two weeks, but it is not a general lead-time promise. Actual timing depends on design freeze, geometry, materials, finishing, quantity, test scope, deviation cycles and capacity. Mass-production delivery must be assessed separately from prototype and stage-gate timing."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no universal NPI schedule. The fastest prototype reference is about two weeks, but it is not a general lead-time promise. Actual timing depends on design freeze, geometry, materials, finishing, quantity, test scope, deviation cycles and capacity. Mass-production delivery must be assessed separately from prototype and stage-gate timing."
+            }
           }
         ]
       }

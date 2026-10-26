@@ -309,19 +309,27 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebPage",
-        "@id": "https://rf-sonne.com/engineering/testing-quality/#webpage",
-        "name": "RF Testing and Quality Verification Buyers Can Audit",
-        "url": "https://rf-sonne.com/engineering/testing-quality/",
-        "description": "VNA, PIM, reliability and matrix-switch automated testing with traceable reports, ISO 9001 quality system and batch-level verification for RF components."
-      },
-      {
         "@type": "BreadcrumbList",
         "@id": "https://rf-sonne.com/engineering/testing-quality/#breadcrumb",
         "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
-          {"@type":"ListItem","position":2,"name":"Engineering & Quality","item":"https://rf-sonne.com/engineering/"},
-          {"@type":"ListItem","position":3,"name":"Testing & Quality","item":"https://rf-sonne.com/engineering/testing-quality/"}
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rf-sonne.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Engineering & Quality",
+            "item": "https://rf-sonne.com/engineering/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Testing & Quality",
+            "item": "https://rf-sonne.com/engineering/testing-quality/"
+          }
         ]
       },
       {
@@ -331,27 +339,42 @@
           {
             "@type": "Question",
             "name": "How should I read a PIM test report?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Read the PIM result together with the product identity, frequency or band, test power, port and connection configuration, measurement units, limit and test conditions. Check whether the reported result corresponds to the required sample or lot and acceptance criterion. A single dBc value without those conditions is not enough for a meaningful comparison or approval decision."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Read the PIM result together with the product identity, frequency or band, test power, port and connection configuration, measurement units, limit and test conditions. Check whether the reported result corresponds to the required sample or lot and acceptance criterion. A single dBc value without those conditions is not enough for a meaningful comparison or approval decision."
+            }
           },
           {
             "@type": "Question",
             "name": "What is SONNE's RF test coverage?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Test coverage is defined by the product, critical characteristics, agreed specification and production stage. SONNE identifies critical RF testing and can apply 100% verification only where the specific product and measurement requirement support that statement. It should not be interpreted as 100% coverage of every test on every product. Confirm the coverage matrix during project review."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Test coverage is defined by the product, critical characteristics, agreed specification and production stage. SONNE identifies critical RF testing and can apply 100% verification only where the specific product and measurement requirement support that statement. It should not be interpreted as 100% coverage of every test on every product. Confirm the coverage matrix during project review."
+            }
           },
           {
             "@type": "Question",
             "name": "What information should a VNA test report include?",
-            "acceptedAnswer": {"@type": "Answer", "text": "A useful VNA report should identify the product and revision, relevant lot or serial information where applicable, ports, frequency range, measured S-parameters, test settings and applicable calibration status. It should also show limits, units, curves or numerical results and the acceptance decision. The exact report content and supplied data format should be agreed for the project."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A useful VNA report should identify the product and revision, relevant lot or serial information where applicable, ports, frequency range, measured S-parameters, test settings and applicable calibration status. It should also show limits, units, curves or numerical results and the acceptance decision. The exact report content and supplied data format should be agreed for the project."
+            }
           },
           {
             "@type": "Question",
             "name": "How are RF test results traced to production records?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Traceability should link the test record to the product or project, applicable lot or serial identifier, drawing or BOM revision, production and test stage, and any deviation disposition. The required depth depends on the product and agreed control plan. During supplier review, buyers can request evidence showing those links rather than relying on an isolated curve or summary value."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Traceability should link the test record to the product or project, applicable lot or serial identifier, drawing or BOM revision, production and test stage, and any deviation disposition. The required depth depends on the product and agreed control plan. During supplier review, buyers can request evidence showing those links rather than relying on an isolated curve or summary value."
+            }
           },
           {
             "@type": "Question",
             "name": "Can I request a sample RF test report before placing an order?",
-            "acceptedAnswer": {"@type": "Answer", "text": "You can request a sample test report to review the evidence format and discuss the fields needed for your project. Identify the product type and test method, such as VNA or PIM, so the request can be directed appropriately. A sample is illustrative only; actual measurements, coverage, traceability and report deliverables must be confirmed for your product and specification."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can request a sample test report to review the evidence format and discuss the fields needed for your project. Identify the product type and test method, such as VNA or PIM, so the request can be directed appropriately. A sample is illustrative only; actual measurements, coverage, traceability and report deliverables must be confirmed for your product and specification."
+            }
           }
         ]
       }

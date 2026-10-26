@@ -16,6 +16,7 @@ CATEGORY = ROOT / 'category.php'
 SINGLE = ROOT / 'single-post.php'
 ARCHIVE = ROOT / 'archive.php'
 AUTHOR = ROOT / 'author.php'
+FOOTER = ROOT / 'template-parts' / 'footer.php'
 
 TOPIC_SLUGS = (
     'rfq-preparation',
@@ -65,7 +66,7 @@ def read(path):
 
 class PhpSyntaxTests(unittest.TestCase):
     def test_changed_php_files_parse(self):
-        for path in (INSIGHTS, FUNCTIONS, HEADER, HOME, CATEGORY, SINGLE, ARCHIVE, AUTHOR):
+        for path in (INSIGHTS, FUNCTIONS, HEADER, HOME, CATEGORY, SINGLE, ARCHIVE, AUTHOR, FOOTER):
             with self.subTest(path=path.name):
                 try:
                     errors = php_syntax_errors(read(path))
@@ -185,7 +186,7 @@ class TemplateTests(unittest.TestCase):
         self.assertIn('sonne_insight_topics()', source)
         self.assertIn('sonne_insight_post_card(', source)
         self.assertIn('paginate_links(', source)
-        self.assertIn("'@type' => 'Blog'", source)
+        self.assertNotIn("'@type' => 'Blog'", source)
         self.assertIn('sonne_breadcrumb_schema(', source)
         self.assertIn('The first SONNE guides are in preparation.', source)
         self.assertIn('Browse Guide Topics', source)
@@ -196,7 +197,7 @@ class TemplateTests(unittest.TestCase):
         self.assertIn('category_description(', source)
         self.assertIn('sonne_insight_post_card(', source)
         self.assertIn('paginate_links(', source)
-        self.assertIn("'@type' => 'CollectionPage'", source)
+        self.assertNotIn("'@type' => 'CollectionPage'", source)
         self.assertIn('sonne_breadcrumb_schema(', source)
         self.assertIn('No guides in this topic yet.', source)
 
@@ -204,7 +205,7 @@ class TemplateTests(unittest.TestCase):
         source = read(SINGLE)
         self.assertIn('sonne_insight_toc_from_html(', source)
         self.assertIn('sonne_reading_time(', source)
-        self.assertIn("'@type' => 'BlogPosting'", source)
+        self.assertNotIn("'@type' => 'BlogPosting'", source)
         self.assertIn('sonne_breadcrumb_schema(', source)
         self.assertIn('SONNE Engineering', source)
         self.assertIn('<time datetime=', source)
@@ -223,6 +224,8 @@ class TemplateTests(unittest.TestCase):
         self.assertIn('get_the_archive_title(', source)
         self.assertIn('sonne_insight_post_card(', source)
         self.assertIn('paginate_links(', source)
+        self.assertNotIn("'@type' => 'CollectionPage'", source)
+        self.assertIn('sonne_breadcrumb_schema(', source)
 
 
 class ChromeTests(unittest.TestCase):
@@ -288,8 +291,9 @@ class HubTests(unittest.TestCase):
 
     def test_hub_schema(self):
         source = self.source()
-        self.assertIn('"@type": "CollectionPage"', source)
         self.assertIn('"@type": "BreadcrumbList"', source)
+        self.assertNotIn('"@type": "CollectionPage"', source)
+        self.assertNotIn('"@type": "Organization"', source)
 
 
 class SafetyTests(unittest.TestCase):

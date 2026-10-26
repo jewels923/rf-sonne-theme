@@ -106,27 +106,6 @@ if (have_posts()) :
                 </div>
             </section>
             <?php
-            $contact = require get_stylesheet_directory() . '/template-parts/data/site-contact.php';
-            $schema = array(
-                '@context' => 'https://schema.org',
-                '@type' => 'BlogPosting',
-                'headline' => get_the_title(),
-                'description' => sonne_insight_excerpt($post_id, 40),
-                'datePublished' => get_the_date('c'),
-                'dateModified' => get_the_modified_date('c'),
-                'mainEntityOfPage' => array('@type' => 'WebPage', '@id' => get_permalink()),
-                'author' => array('@type' => 'Organization', 'name' => 'SONNE', 'url' => home_url('/')),
-                'publisher' => array(
-                    '@type' => 'Organization',
-                    'name' => 'SONNE',
-                    'url' => home_url('/'),
-                    'logo' => array('@type' => 'ImageObject', 'url' => $contact['logo_url']),
-                ),
-            );
-            if ($image_id) {
-                $schema['image'] = array(wp_get_attachment_image_url($image_id, 'sonne-insight-wide'));
-            }
-            echo sonne_schema_json($schema);
             echo sonne_schema_json(sonne_breadcrumb_schema($crumbs));
             ?>
         </main>

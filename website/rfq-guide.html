@@ -369,30 +369,73 @@ Notes:
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebPage",
-        "@id": "https://rf-sonne.com/resources/rfq-guide/#webpage",
-        "name": "How to Prepare an RFQ Engineers Can Quote Directly",
-        "url": "https://rf-sonne.com/resources/rfq-guide/",
-        "description": "A practical RFQ checklist for custom RF filters, waveguide, combiners and precision enclosures, with a copyable template and submission guidance."
-      },
-      {
         "@type": "FAQPage",
         "@id": "https://rf-sonne.com/resources/rfq-guide/#faq",
         "mainEntity": [
-          {"@type":"Question","name":"What information is required for a custom RF filter RFQ?","acceptedAnswer":{"@type":"Answer","text":"Provide frequency range and bandwidth, insertion loss, return loss, rejection or isolation, power, PIM where applicable, impedance, connectors, mechanical envelope, environment, quantity and verification needs. Mark unknown items as TBD so engineering can identify gaps instead of treating a model number as a complete specification."}},
-          {"@type":"Question","name":"Can SONNE evaluate a project before every parameter is final?","acceptedAnswer":{"@type":"Answer","text":"Yes. Submit the known frequency range, target performance, mechanical constraints and open questions. Engineering can identify missing inputs and discuss feasibility before the specification is final. Initial engineering feedback is distinct from a formal quote, and prototype or production timing still depends on the agreed scope and requirements."}},
-          {"@type":"Question","name":"Does a 24-hour response include a quotation and lead time?","acceptedAnswer":{"@type":"Answer","text":"No. Approximately 24 hours refers to initial engineering feedback after a complete RFQ. It may clarify feasibility, missing inputs or next steps. Quotation and delivery timing require further review of drawings, quantities, processes, verification and capacity, so they are not guaranteed by the initial-response statement."}},
-          {"@type":"Question","name":"How are prototype and production lead times estimated?","acceptedAnswer":{"@type":"Answer","text":"The approximately two-week figure is only a reference for applicable prototype projects, not a general promise. Production lead time depends on drawings, quantities, process route, verification requirements and available capacity. Confirm timing after engineering and commercial review rather than deriving it from annual capacity or a prototype example."}},
-          {"@type":"Question","name":"Can drawings be reviewed under an NDA?","acceptedAnswer":{"@type":"Answer","text":"Confidentiality scope and NDA terms must be agreed for the specific project. Start with a non-confidential overview where practical, then exchange controlled drawings through the agreed route. Do not assume a blanket NDA, disclosure scope or unrestricted file distribution before the parties confirm the applicable terms."}}
+          {
+            "@type": "Question",
+            "name": "What information is required for a custom RF filter RFQ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Provide frequency range and bandwidth, insertion loss, return loss, rejection or isolation, power, PIM where applicable, impedance, connectors, mechanical envelope, environment, quantity and verification needs. Mark unknown items as TBD so engineering can identify gaps instead of treating a model number as a complete specification."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can SONNE evaluate a project before every parameter is final?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Submit the known frequency range, target performance, mechanical constraints and open questions. Engineering can identify missing inputs and discuss feasibility before the specification is final. Initial engineering feedback is distinct from a formal quote, and prototype or production timing still depends on the agreed scope and requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a 24-hour response include a quotation and lead time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Approximately 24 hours refers to initial engineering feedback after a complete RFQ. It may clarify feasibility, missing inputs or next steps. Quotation and delivery timing require further review of drawings, quantities, processes, verification and capacity, so they are not guaranteed by the initial-response statement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are prototype and production lead times estimated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The approximately two-week figure is only a reference for applicable prototype projects, not a general promise. Production lead time depends on drawings, quantities, process route, verification requirements and available capacity. Confirm timing after engineering and commercial review rather than deriving it from annual capacity or a prototype example."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can drawings be reviewed under an NDA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Confidentiality scope and NDA terms must be agreed for the specific project. Start with a non-confidential overview where practical, then exchange controlled drawings through the agreed route. Do not assume a blanket NDA, disclosure scope or unrestricted file distribution before the parties confirm the applicable terms."
+            }
+          }
         ]
       },
       {
         "@type": "BreadcrumbList",
         "@id": "https://rf-sonne.com/resources/rfq-guide/#breadcrumb",
         "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
-          {"@type":"ListItem","position":2,"name":"Resources","item":"https://rf-sonne.com/resources/"},
-          {"@type":"ListItem","position":3,"name":"RFQ Guide","item":"https://rf-sonne.com/resources/rfq-guide/"}
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rf-sonne.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "https://rf-sonne.com/resources/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "RFQ Guide",
+            "item": "https://rf-sonne.com/resources/rfq-guide/"
+          }
         ]
       }
     ]

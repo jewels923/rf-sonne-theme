@@ -1,41 +1,9 @@
 <?php
 $contact = require __DIR__ . '/data/site-contact.php';
 $footer_groups = require __DIR__ . '/data/footer-groups.php';
-$organization_schema = array(
-    '@context' => 'https://schema.org',
-    '@graph' => array(
-        array(
-            '@type' => 'Organization',
-            '@id' => home_url('/#organization'),
-            'name' => $contact['company_name'],
-            'url' => home_url('/'),
-            'email' => $contact['email'],
-            'telephone' => $contact['phone'],
-            'address' => array(
-                '@type' => 'PostalAddress',
-                'streetAddress' => $contact['address_street'],
-                'addressLocality' => $contact['address_locality'],
-                'addressRegion' => $contact['address_region'],
-                'addressCountry' => $contact['address_country'],
-            ),
-            'logo' => array(
-                '@type' => 'ImageObject',
-                'url' => $contact['logo_url'],
-            ),
-        ),
-        array(
-            '@type' => 'WPFooter',
-            'copyrightYear' => date_i18n('Y'),
-            'copyrightHolder' => array(
-                '@id' => home_url('/#organization'),
-            ),
-        ),
-    ),
-);
 ?>
 
 <footer class="site-footer">
-    <script type="application/ld+json"><?php echo wp_json_encode($organization_schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?></script>
     <div class="container-xl sn-container">
         <div class="site-footer__top">
             <div class="site-footer__brand">

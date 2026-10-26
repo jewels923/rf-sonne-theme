@@ -795,39 +795,49 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": "https://rf-sonne.com/#organization",
-        "name": "SONNE ELECTRONICS",
-        "alternateName": "SONNE",
-        "url": "https://rf-sonne.com/",
-        "logo": "https://rf-sonne.com/wp-content/uploads/2026/10/logo-sonne-white.png",
-        "foundingDate": "2015",
-        "email": "info@zhide-tec.com",
-        "telephone": "+86-0574-63615958",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "No. 87, 89, 91, Sanbei Middle Road, Xinze Village, Guanhaiwei Town",
-          "addressLocality": "Cixi City, Ningbo City",
-          "addressRegion": "Zhejiang Province",
-          "addressCountry": "CN"
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://rf-sonne.com/#website",
-        "url": "https://rf-sonne.com/",
-        "name": "SONNE ELECTRONICS",
-        "publisher": { "@id": "https://rf-sonne.com/#organization" }
-      },
-      {
         "@type": "FAQPage",
         "@id": "https://rf-sonne.com/#faq",
         "mainEntity": [
-          {"@type":"Question","name":"What frequency range can SONNE manufacture?","acceptedAnswer":{"@type":"Answer","text":"SONNE's core production portfolio covers DC to 40 GHz. Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology, mechanical requirements and validation. Send your band plan and performance targets so engineering can confirm feasibility for the specific design rather than treating 110 GHz as a universal product limit."}},
-          {"@type":"Question","name":"Can SONNE support custom designs and prototypes?","acceptedAnswer":{"@type":"Answer","text":"Yes. SONNE supports custom RF evaluation and prototype development across its listed product lines. You can start with a specification, band plan, drawing or application description. Engineering reviews the requirements before defining prototype and validation steps. The fastest prototype reference is about two weeks, but actual timing depends on design, process and project confirmation."}},
-          {"@type":"Question","name":"How does SONNE approach repeatability in mass production?","acceptedAnswer":{"@type":"Answer","text":"SONNE links precision machining, assembly and project-specific RF verification through prototype, pilot and production stages. VNA, PIM, reliability and matrix-switch automated testing capabilities are available according to the product and agreed test plan. Buyers should define critical parameters, reporting and acceptance criteria during RFQ so batch verification is based on explicit requirements."}},
-          {"@type":"Question","name":"Is SONNE a manufacturer or a trading company?","acceptedAnswer":{"@type":"Answer","text":"SONNE ELECTRONICS was founded in 2015 and operates a manufacturing base in Cixi, Ningbo, with ISO 9001, more than 50 high-precision CNC machines and RF assembly and testing capabilities. Factory, machining and test evidence is available on the engineering and factory pages for buyers conducting supplier reviews."}},
-          {"@type":"Question","name":"What should I include in an initial RFQ?","acceptedAnswer":{"@type":"Answer","text":"Include the product function, frequency range and bandwidth, key RF targets, power or PIM needs where relevant, connectors or flanges, mechanical envelope, operating environment and expected quantity. Attach drawings, a band plan or an existing specification if available. Incomplete information can start a discussion, while a complete RFQ typically receives initial engineering feedback in about 24 hours."}}
+          {
+            "@type": "Question",
+            "name": "What frequency range can SONNE manufacture?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SONNE's core production portfolio covers DC to 40 GHz. Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology, mechanical requirements and validation. Send your band plan and performance targets so engineering can confirm feasibility for the specific design rather than treating 110 GHz as a universal product limit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can SONNE support custom designs and prototypes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. SONNE supports custom RF evaluation and prototype development across its listed product lines. You can start with a specification, band plan, drawing or application description. Engineering reviews the requirements before defining prototype and validation steps. The fastest prototype reference is about two weeks, but actual timing depends on design, process and project confirmation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does SONNE approach repeatability in mass production?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SONNE links precision machining, assembly and project-specific RF verification through prototype, pilot and production stages. VNA, PIM, reliability and matrix-switch automated testing capabilities are available according to the product and agreed test plan. Buyers should define critical parameters, reporting and acceptance criteria during RFQ so batch verification is based on explicit requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is SONNE a manufacturer or a trading company?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SONNE ELECTRONICS was founded in 2015 and operates a manufacturing base in Cixi, Ningbo, with ISO 9001, more than 50 high-precision CNC machines and RF assembly and testing capabilities. Factory, machining and test evidence is available on the engineering and factory pages for buyers conducting supplier reviews."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should I include in an initial RFQ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Include the product function, frequency range and bandwidth, key RF targets, power or PIM needs where relevant, connectors or flanges, mechanical envelope, operating environment and expected quantity. Attach drawings, a band plan or an existing specification if available. Incomplete information can start a discussion, while a complete RFQ typically receives initial engineering feedback in about 24 hours."
+            }
+          }
         ]
       }
     ]

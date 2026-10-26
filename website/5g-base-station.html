@@ -289,30 +289,73 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebPage",
-        "@id": "https://rf-sonne.com/solutions/5g-base-station/#webpage",
-        "name": "RF Components for 5G Base Stations and RRU",
-        "url": "https://rf-sonne.com/solutions/5g-base-station/",
-        "description": "Filters, duplexers, TMA and combiners for 5G macro sites and RRU, with co-siting, low PIM and batch-verification guidance."
-      },
-      {
         "@type": "BreadcrumbList",
         "@id": "https://rf-sonne.com/solutions/5g-base-station/#breadcrumb",
         "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rf-sonne.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://rf-sonne.com/solutions/"},
-          {"@type": "ListItem", "position": 3, "name": "5G Base Stations and RRU", "item": "https://rf-sonne.com/solutions/5g-base-station/"}
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rf-sonne.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Solutions",
+            "item": "https://rf-sonne.com/solutions/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "5G Base Stations and RRU",
+            "item": "https://rf-sonne.com/solutions/5g-base-station/"
+          }
         ]
       },
       {
         "@type": "FAQPage",
         "@id": "https://rf-sonne.com/solutions/5g-base-station/#faq",
         "mainEntity": [
-          {"@type": "Question", "name": "How can co-siting interference be addressed in a base station?", "acceptedAnswer": {"@type": "Answer", "text": "Start with a complete band plan showing wanted signals, interferers, duplex spacing, power, and antenna or feeder architecture. Engineering review can then assess filtering, duplexing, or combining positions and balance rejection, isolation, insertion loss, PIM, and size. The suitable approach and acceptance limits depend on the actual site configuration."}},
-          {"@type": "Question", "name": "Can SONNE support N28 and N78 base station projects?", "acceptedAnswer": {"@type": "Answer", "text": "N28 and N78 are within the stated base-station application scope, with existing capability references including an N28-related multiplexer and 3400–3600 MHz 8TR work. Each project still requires review of exact uplink and downlink ranges, bandwidth, rejection, power, PIM, interfaces, and mechanical limits before feasibility is confirmed."}},
-          {"@type": "Question", "name": "How should I choose between 4T4R and 8TR for an RRU project?", "acceptedAnswer": {"@type": "Answer", "text": "That choice belongs to the radio and antenna architecture, not to a filter or duplexer alone. Define the number of transmit and receive paths, band plan, power, port mapping, and space envelope first. SONNE can then evaluate suitable RF component positions and interfaces for the selected 4T4R or 8TR architecture."}},
-          {"@type": "Question", "name": "How is low PIM evaluated for repeat production?", "acceptedAnswer": {"@type": "Answer", "text": "Use an approved sample and an agreed production verification plan. Define PIM test conditions, power, connectors, acceptance limits, sampling or coverage, and required records before release. SONNE has PIM, VNA, reliability, and automated matrix test capabilities, but the exact production coverage must be confirmed for each component and order."}},
-          {"@type": "Question", "name": "What should a base station RF band plan include?", "acceptedAnswer": {"@type": "Answer", "text": "Include uplink and downlink frequencies, bandwidth, duplexing method, wanted and interfering bands, power, isolation or rejection targets, PIM requirements, port count, connectors, and mechanical envelope. Add architecture drawings and expected quantity where available. Missing values can be marked TBD, but feasibility and quotation require agreed final inputs."}}
+          {
+            "@type": "Question",
+            "name": "How can co-siting interference be addressed in a base station?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Start with a complete band plan showing wanted signals, interferers, duplex spacing, power, and antenna or feeder architecture. Engineering review can then assess filtering, duplexing, or combining positions and balance rejection, isolation, insertion loss, PIM, and size. The suitable approach and acceptance limits depend on the actual site configuration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can SONNE support N28 and N78 base station projects?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "N28 and N78 are within the stated base-station application scope, with existing capability references including an N28-related multiplexer and 3400–3600 MHz 8TR work. Each project still requires review of exact uplink and downlink ranges, bandwidth, rejection, power, PIM, interfaces, and mechanical limits before feasibility is confirmed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How should I choose between 4T4R and 8TR for an RRU project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "That choice belongs to the radio and antenna architecture, not to a filter or duplexer alone. Define the number of transmit and receive paths, band plan, power, port mapping, and space envelope first. SONNE can then evaluate suitable RF component positions and interfaces for the selected 4T4R or 8TR architecture."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is low PIM evaluated for repeat production?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use an approved sample and an agreed production verification plan. Define PIM test conditions, power, connectors, acceptance limits, sampling or coverage, and required records before release. SONNE has PIM, VNA, reliability, and automated matrix test capabilities, but the exact production coverage must be confirmed for each component and order."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should a base station RF band plan include?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Include uplink and downlink frequencies, bandwidth, duplexing method, wanted and interfering bands, power, isolation or rejection targets, PIM requirements, port count, connectors, and mechanical envelope. Add architecture drawings and expected quantity where available. Missing values can be marked TBD, but feasibility and quotation require agreed final inputs."
+            }
+          }
         ]
       }
     ]

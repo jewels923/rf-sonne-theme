@@ -250,6 +250,150 @@ add_action('wp_head', function () {
 }, 1);
 
 // ============================================================
+// Rank Math JSON-LD：站点与页面实体的唯一输出者
+// ============================================================
+function sonne_rank_math_organization_schema($contact) {
+    $home = home_url('/');
+    return array(
+        '@type' => 'Organization',
+        '@id' => $home . '#organization',
+        'name' => $contact['brand_name'],
+        'alternateName' => $contact['company_name'],
+        'url' => $home,
+        'email' => $contact['email'],
+        'telephone' => $contact['phone'],
+        'foundingDate' => $contact['founding_date'],
+        'address' => array(
+            '@type' => 'PostalAddress',
+            'streetAddress' => $contact['address_street'],
+            'addressLocality' => $contact['address_locality'],
+            'addressRegion' => $contact['address_region'],
+            'addressCountry' => $contact['address_country'],
+        ),
+        'logo' => array(
+            '@type' => 'ImageObject',
+            '@id' => $contact['logo_url'] . '#logo',
+            'url' => $contact['logo_url'],
+        ),
+    );
+}
+
+function sonne_rank_math_repoint_person_refs($value, $legacy_ids, $organization_id) {
+    if (!is_array($value)) {
+        return $value;
+    }
+    if (isset($value['@id']) && is_string($value['@id']) && in_array($value['@id'], $legacy_ids, true)) {
+        $value['@id'] = $organization_id;
+        unset($value['name'], $value['url'], $value['image'], $value['sameAs']);
+    }
+    foreach ($value as $key => $item) {
+        $value[$key] = sonne_rank_math_repoint_person_refs($item, $legacy_ids, $organization_id);
+    }
+    return $value;
+}
+
+function sonne_filter_rank_math_json_ld($data) {
+    if (!is_array($data) || empty($data)) {
+        return $data;
+    }
+
+    $contact = require get_stylesheet_directory() . '/template-parts/data/site-contact.php';
+    $home = home_url('/');
+    $organization_id = $home . '#organization';
+    $legacy_ids = array($home . '#person');
+    $keep_article = is_singular('post');
+    // Rank Math passes a keyed entity map here and wraps it into @graph afterwards.
+    $is_graph = isset($data['@graph']) && is_array($data['@graph']);
+    $nodes = $is_graph ? $data['@graph'] : $data;
+    $filtered = array();
+    $organization_added = false;
+
+    foreach ($nodes as $key => $node) {
+        if (!is_array($node) || empty($node['@type'])) {
+            $filtered[$key] = $node;
+            continue;
+        }
+        $types = (array) $node['@type'];
+        $is_organization = in_array('Organization', $types, true);
+        $is_person = in_array('Person', $types, true);
+        $is_article = in_array('Article', $types, true) || in_array('BlogPosting', $types, true);
+
+        if ($is_person && !$is_organization) {
+            if (!empty($node['@id']) && is_string($node['@id'])) {
+                $legacy_ids[] = $node['@id'];
+            }
+            continue;
+        }
+        if ($is_article && !$keep_article) {
+            continue;
+        }
+        if ($is_organization) {
+            $filtered[$key] = sonne_rank_math_organization_schema($contact);
+            $organization_added = true;
+            continue;
+        }
+        if (in_array('WebSite', $types, true)) {
+            $node['name'] = $contact['brand_name'];
+            $node['publisher'] = array('@id' => $organization_id);
+        }
+        if ($is_article) {
+            $node['author'] = array('@id' => $organization_id);
+            $node['publisher'] = array('@id' => $organization_id);
+        }
+        $filtered[$key] = $node;
+    }
+
+    if (!$organization_added) {
+        $key = isset($filtered['publisher']) ? 'organization' : 'publisher';
+        $filtered[$key] = sonne_rank_math_organization_schema($contact);
+    }
+
+    $filtered = sonne_rank_math_repoint_person_refs(
+        $filtered,
+        array_values(array_unique($legacy_ids)),
+        $organization_id
+    );
+
+    foreach ($filtered as &$node) {
+        if (is_array($node) && isset($node['inLanguage'])) {
+            $node['inLanguage'] = 'en-US';
+        }
+    }
+    unset($node);
+
+    if ($is_graph) {
+        $data['@graph'] = array_values($filtered);
+        return $data;
+    }
+    return $filtered;
+}
+add_filter('rank_math/json_ld', 'sonne_filter_rank_math_json_ld', 100);
+
+// Rank Math runs wp_kses_post_deep after the filter, which re-encodes "&" as "&amp;".
+function sonne_rank_math_json_ld_buffer_start() {
+    ob_start();
+}
+
+function sonne_rank_math_json_ld_buffer_end() {
+    $output = ob_get_clean();
+    if (!is_string($output) || $output === '') {
+        return;
+    }
+    $cleaned = preg_replace_callback(
+        '#(<script type="application/ld\+json" class="rank-math-schema[^"]*">)(.*?)(</script>)#s',
+        function ($matches) {
+            return $matches[1]
+                . str_replace(array('&amp;', '&#038;', '&#38;'), '&', $matches[2])
+                . $matches[3];
+        },
+        $output
+    );
+    echo $cleaned === null ? $output : $cleaned;
+}
+add_action('rank_math/head', 'sonne_rank_math_json_ld_buffer_start', 89);
+add_action('rank_math/head', 'sonne_rank_math_json_ld_buffer_end', 91);
+
+// ============================================================
 // 301 重定向映射（改名页面时在这里添加）
 // ============================================================
 add_action('template_redirect', function () {

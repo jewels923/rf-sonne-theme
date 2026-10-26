@@ -88,6 +88,17 @@ WRAPPERS = {
     'sitemap': 'sn-sitemap',
 }
 LEGACY_MARKERS = ('julong', 'wxkntest', 'sunglasses', 'sports eyewear')
+# Rank Math owns the page/site entity graph. Fragments keep only entities
+# that Rank Math does not emit: Product, FAQPage and the page breadcrumb.
+RANK_MATH_OWNED_SCHEMA_TYPES = {
+    'WebPage',
+    'AboutPage',
+    'ContactPage',
+    'CollectionPage',
+    'Organization',
+    'WebSite',
+}
+FRAGMENT_SCHEMA_TYPES = {'Product', 'FAQPage', 'BreadcrumbList'}
 VERIFIED_URL_PREFIX = 'https://rf-sonne.com/wp-content/uploads/'
 RFQ_SITE_URL = 'https://rf-sonne.com/request-a-quote/'
 RFQ_H1 = 'Request a Custom RF or Enclosure Quote'
@@ -1339,8 +1350,16 @@ class P3PageTests(unittest.TestCase):
                     for item in iter_top_level_jsonld_objects(document)
                 ]
                 actual_types = set().union(*(schema_types(item) for item in top_level_objects))
-                expected_types = set(FRAGMENT_PAGES[page_id]['schema'])
-                self.assertEqual(expected_types, actual_types, f'{slug}: top-level schema types differ from 01')
+                expected_types = (
+                    set(FRAGMENT_PAGES[page_id]['schema'])
+                    - RANK_MATH_OWNED_SCHEMA_TYPES
+                )
+                self.assertEqual(expected_types, actual_types, f'{slug}: fragment schema drifted from 01')
+                self.assertEqual(
+                    set(),
+                    actual_types & RANK_MATH_OWNED_SCHEMA_TYPES,
+                    f'{slug}: Rank Math owns these page entities; the fragment must not repeat them',
+                )
 
                 source_faqs = [
                     (normalize_text(faq['question']), normalize_text(faq['answer']))
@@ -1699,6 +1718,74 @@ class P3PageTests(unittest.TestCase):
                         continue
                     resolved = urljoin(base, href)
                     self.assertIn(normalize_route(resolved), VALID_ROUTES, f'{slug}: unplanned route {href}')
+
+
+class SchemaOwnershipTests(unittest.TestCase):
+    def test_rank_math_filter_owns_site_and_page_entities(self):
+        source = (ROOT / 'functions.php').read_text(encoding='utf-8')
+        for marker in (
+            "add_filter('rank_math/json_ld'",
+            "add_filter('rank_math/json_ld', 'sonne_filter_rank_math_json_ld', 100)",
+            "add_action('rank_math/head', 'sonne_rank_math_json_ld_buffer_start', 89)",
+            'rank-math-schema',
+            "is_singular('post')",
+            "'en-US'",
+            "'Organization'",
+            "'Person'",
+            "'Article'",
+            'alternateName',
+            'template-parts/data/site-contact.php',
+            '#organization',
+            "$is_graph = isset($data['@graph'])",
+            'organization_added',
+        ):
+            self.assertIn(marker, source)
+
+    def test_theme_templates_do_not_repeat_rank_math_entities(self):
+        footer = (ROOT / 'template-parts' / 'footer.php').read_text(encoding='utf-8')
+        self.assertNotIn('application/ld+json', footer)
+        self.assertNotIn("'@type' => 'Organization'", footer)
+        for name in ('single-post.php', 'home.php', 'category.php', 'archive.php'):
+            source = (ROOT / name).read_text(encoding='utf-8')
+            self.assertNotIn("'@type' => 'BlogPosting'", source, name)
+            self.assertNotIn("'@type' => 'Blog'", source, name)
+            self.assertNotIn("'@type' => 'CollectionPage'", source, name)
+            self.assertIn('sonne_breadcrumb_schema(', source, name)
+
+    def test_active_fragments_keep_only_product_faq_and_breadcrumb(self):
+        pages = json.loads((ROOT / 'pages.json').read_text(encoding='utf-8'))
+        slugs = sorted(
+            page['slug'] for page in pages
+            if (WEBSITE / f"{page['slug']}.html").is_file()
+        )
+        self.assertTrue(slugs)
+        for slug in slugs:
+            with self.subTest(slug=slug):
+                text = (WEBSITE / f'{slug}.html').read_text(encoding='utf-8')
+                collector = collect(text)
+                self.assertTrue(collector.jsonld_blocks, slug)
+                top_level = []
+                for block in collector.jsonld_blocks:
+                    try:
+                        document = json.loads(block)
+                    except json.JSONDecodeError as error:
+                        self.fail(f'{slug}: invalid JSON-LD: {error}')
+                    top_level.extend(iter_top_level_jsonld_objects(document))
+                entity_types = [schema_types(item) for item in top_level]
+                union = set().union(*entity_types)
+                self.assertEqual(set(), union - FRAGMENT_SCHEMA_TYPES, slug)
+                expected_breadcrumbs = 0 if slug == 'home' else 1
+                self.assertEqual(
+                    expected_breadcrumbs,
+                    sum('BreadcrumbList' in types for types in entity_types),
+                    f'{slug}: breadcrumb count',
+                )
+                self.assertLessEqual(
+                    sum('Product' in types for types in entity_types), 1, slug
+                )
+                self.assertLessEqual(
+                    sum('FAQPage' in types for types in entity_types), 1, slug
+                )
 
 
 SYSTEM_WRAPPERS = {
@@ -2442,29 +2529,21 @@ class RequestAQuoteTests(unittest.TestCase):
             faq_routes,
         )
 
-    def test_jsonld_is_webpage_and_breadcrumb_without_faqpage(self):
+    def test_jsonld_is_single_breadcrumb_without_page_or_faq(self):
         fragment = self.read_fragment()
         collector = collect(fragment)
         self.assertEqual(1, len(collector.jsonld_blocks))
         document = json.loads(collector.jsonld_blocks[0])
         top_level = list(iter_top_level_jsonld_objects(document))
         self.assertEqual(
-            {'WebPage', 'BreadcrumbList'},
+            {'BreadcrumbList'},
             set().union(*(schema_types(item) for item in top_level)),
         )
         all_types = set().union(
             *(schema_types(item) for item in iter_jsonld_objects(document))
         )
         self.assertNotIn('FAQPage', all_types)
-
-        webpage = next(item for item in top_level if 'WebPage' in schema_types(item))
-        self.assertEqual(RFQ_H1, normalize_text(webpage.get('name')))
-        self.assertEqual(RFQ_SITE_URL, webpage.get('url'))
-        self.assertEqual(
-            expected_tdk('page-31')['description'],
-            normalize_text(webpage.get('description')),
-        )
-        self.assertTrue(webpage.get('@id', '').endswith('#webpage'))
+        self.assertNotIn('WebPage', all_types)
 
         breadcrumb = next(
             item for item in top_level if 'BreadcrumbList' in schema_types(item)

@@ -663,35 +663,6 @@ def render_header(chrome):
 def render_footer(chrome):
     contact = chrome['contact']
     footer_groups = chrome['footer_groups']
-    organization = {
-        '@context': 'https://schema.org',
-        '@graph': [
-            {
-                '@type': 'Organization',
-                '@id': f'{SITE_URL}/#organization',
-                'name': contact['company_name'],
-                'url': f'{SITE_URL}/',
-                'email': contact['email'],
-                'telephone': contact['phone'],
-                'address': {
-                    '@type': 'PostalAddress',
-                    'streetAddress': contact['address_street'],
-                    'addressLocality': contact['address_locality'],
-                    'addressRegion': contact['address_region'],
-                    'addressCountry': contact['address_country'],
-                },
-                'logo': {
-                    '@type': 'ImageObject',
-                    'url': contact['logo_url'],
-                },
-            },
-            {
-                '@type': 'WPFooter',
-                'copyrightYear': 2026,
-                'copyrightHolder': {'@id': f'{SITE_URL}/#organization'},
-            },
-        ],
-    }
     menus = []
     for title, links in footer_groups.items():
         items = ''.join(
@@ -703,10 +674,7 @@ def render_footer(chrome):
             f'<p class="site-footer__menu-title">{_escape(title)}</p>'
             f'<ul class="site-footer__menu-list">{items}</ul></div>'
         )
-    schema = json.dumps(organization, separators=(',', ':'), ensure_ascii=False)
-
     return f'''<footer class="site-footer">
-  <script type="application/ld+json">{schema}</script>
   <div class="container-xl sn-container">
     <div class="site-footer__top">
       <div class="site-footer__brand">

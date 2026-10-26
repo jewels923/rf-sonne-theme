@@ -146,15 +146,6 @@ $crumbs = array(
         </div>
     </section>
     <?php
-    $blog_schema = array(
-        '@context' => 'https://schema.org',
-        '@type' => 'Blog',
-        'name' => 'SONNE Insights',
-        'description' => isset($page['description']) ? $page['description'] : '',
-        'url' => $insights_url,
-        'publisher' => array('@type' => 'Organization', 'name' => 'SONNE', 'url' => home_url('/')),
-    );
-    echo sonne_schema_json($blog_schema);
     echo sonne_schema_json(sonne_breadcrumb_schema($crumbs));
     ?>
 </main>

@@ -62,14 +62,6 @@ $crumbs = array(
         </div>
     </section>
     <?php
-    $schema = array(
-        '@context' => 'https://schema.org',
-        '@type' => 'CollectionPage',
-        'name' => $title,
-        'description' => wp_strip_all_tags($description),
-        'url' => get_pagenum_link(1),
-    );
-    echo sonne_schema_json($schema);
     echo sonne_schema_json(sonne_breadcrumb_schema($crumbs));
     ?>
 </main>

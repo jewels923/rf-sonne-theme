@@ -8,6 +8,7 @@ return array(
     'logo_url'         => 'https://rf-sonne.com/wp-content/uploads/2026/10/logo-sonne-white.png',
     'logo_alt'         => 'SONNE Electronics logo',
     'company_name'     => 'SONNE ELECTRONICS',
+    'founding_date'    => '2015',
     'email'            => 'info@zhide-tec.com',
     'phone'            => '+86-0574-63615958',
     'phone_href'       => '+8657463615958',
