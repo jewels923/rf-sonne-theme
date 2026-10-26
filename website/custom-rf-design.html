@@ -34,7 +34,8 @@
     .sn-custom-rf .sn-custom-rf__io-panel ul { margin: 0; padding-left: 18px; color: var(--sn-text-muted); font-size: .86rem; }
     .sn-custom-rf .sn-custom-rf__io-panel li { margin-bottom: 7px; }
     .sn-custom-rf .sn-custom-rf__io-panel li:last-child { margin-bottom: 0; }
-    .sn-custom-rf .sn-custom-rf__io-panel--output { border-top: 3px solid var(--sn-cyan-dark); background: var(--sn-light-gray); }
+    /* Inset accent keeps the 3px emphasis without shifting content 2px below the sibling panels. */
+    .sn-custom-rf .sn-custom-rf__io-panel--output { border-top-color: var(--sn-cyan-dark); box-shadow: inset 0 2px 0 var(--sn-cyan-dark); background: var(--sn-light-gray); }
     .sn-custom-rf .sn-custom-rf__gate-layout { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: clamp(28px, 5vw, 54px); align-items: start; }
     .sn-custom-rf .sn-custom-rf__gate-layout figure { margin-bottom: 0; }
     .sn-custom-rf .sn-custom-rf__gate-layout img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }

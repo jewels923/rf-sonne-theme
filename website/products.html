@@ -64,7 +64,8 @@
     /* Two route sheets. */
     .sn-products .sn-products__route-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
     .sn-products .sn-products__route-card { display: flex; flex-direction: column; padding: clamp(24px, 3.4vw, 38px); border: 1px solid var(--sn-line); background: var(--sn-card); }
-    .sn-products .sn-products__route-card--custom { border-top: 3px solid var(--sn-cyan-dark); }
+    /* Inset accent keeps the 3px emphasis without shifting content 2px below the sibling card. */
+    .sn-products .sn-products__route-card--custom { border-top-color: var(--sn-cyan-dark); box-shadow: inset 0 2px 0 var(--sn-cyan-dark); }
     .sn-products .sn-products__route-card .sn-chip { align-self: flex-start; margin-bottom: 18px; }
     .sn-products .sn-products__route-card p, .sn-products .sn-products__route-card li { color: var(--sn-text-muted); }
     .sn-products .sn-products__route-card ul { margin: 0; padding-left: 20px; }
