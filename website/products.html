@@ -47,8 +47,8 @@
     .sn-products .sn-products__support-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
     .sn-products .sn-products__support-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--sn-line); background: var(--sn-card); transition: border-color var(--sn-transition), transform var(--sn-transition); }
     .sn-products .sn-products__support-card:hover { border-color: var(--sn-cyan-dark); transform: translateY(-2px); }
-    .sn-products .sn-products__support-card > img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
-    .sn-products .sn-products__support-card:nth-child(3) > img { padding: 22px; object-fit: contain; background: var(--sn-paper-muted); }
+    /* inset(1px) trims the thin dark frame baked into the coupler product image. */
+    .sn-products .sn-products__support-card > img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; clip-path: inset(1px); }
     .sn-products .sn-products__support-tag { display: flex; justify-content: space-between; gap: 10px; padding: 9px 16px; border-top: 1px solid var(--sn-line); border-bottom: 1px solid var(--sn-line); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .7rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; }
     .sn-products .sn-products__support-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
     .sn-products .sn-products__support-body .sn-chip { align-self: flex-start; margin-bottom: 14px; }
