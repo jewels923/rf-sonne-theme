@@ -248,7 +248,8 @@ for source_page in SOURCE_PAGES:
 def normalize_text(value):
     if not isinstance(value, str):
         return ''
-    return ' '.join(value.split())
+    text = ' '.join(value.split())
+    return re.sub(r'\s+([,.;:!?])', r'\1', text)
 
 
 def expected_h1(page_id):
@@ -1235,7 +1236,7 @@ class P3PageTests(unittest.TestCase):
                 self.assertNotRegex(text, r'<(?:html|body|main)(?:\s|>)', slug)
                 self.assertNotRegex(text, r'\sstyle\s*=', slug)
                 self.assertEqual(count_h1(text), 1, slug)
-                self.assertIn(expected_h1(page_id), text, slug)
+                self.assertIn(html.escape(expected_h1(page_id), quote=False), text, slug)
                 self.assertEqual([expected_h1(page_id)], collector.h1s, slug)
                 for marker in LEGACY_MARKERS:
                     self.assertNotIn(marker, text.lower(), f'{slug}: {marker}')

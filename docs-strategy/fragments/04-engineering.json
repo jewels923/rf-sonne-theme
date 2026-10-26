@@ -1,0 +1,997 @@
+[
+  {
+    "number": 17,
+    "id": "page-17",
+    "name": "数据中心与工业机柜",
+    "url": "/solutions/data-center-enclosures",
+    "type": "应用方案",
+    "buyer_segment": "数据中心与工业电子设备 OEM 的机械工程师、热设计工程师、结构采购和 NPI 负责人，处于方案定义、图纸评审或供应商导入阶段",
+    "inner_monologue": "我需要的不只是一个钣金壳体供应商，而是能在图纸冻结前把装配、公差、屏蔽和散热冲突摊开评审的制造伙伴。",
+    "pain_points": [
+      "19 英寸安装界面、内部器件空间和线缆弯曲半径相互挤占，样机阶段才发现装配冲突",
+      "开孔有利于散热却可能削弱屏蔽连续性，缺少按项目目标排序的工程评审",
+      "GD&T、基准、紧固件和表面处理要求分散在图纸与邮件中，首件验收缺少统一依据",
+      "样品可用但量产后图纸版本、材料或工艺变更失控，采购与 SQE 难以追溯差异"
+    ],
+    "differentiators": [
+      "把机柜、RF 腔体、精密钣金和定制散热器放在同一机械需求评审中，减少跨供应商接口遗漏",
+      "以 GD&T、2D/3D 图纸和首件记录组织评审，让装配验收有明确基准而不是依赖外观判断",
+      "50+ 高精密 CNC 与精密结构件组合支持从加工件到装配体的协同评估，便于核对关键界面",
+      "通过 NPI 阶段基线和工程变更记录连接样品与量产，让买家能审查变更前后影响"
+    ],
+    "conversion": "主：Send Mechanical Drawings；次：Discuss EMI / Thermal Requirements，与机械图纸询盘及屏蔽/散热工程评估路径一致",
+    "three_gates": {
+      "search_demand": "custom telecom enclosure OEM、19 inch cabinet、EMI shielding enclosure、thermal management；SV 均未测，KD 均未测，以 OEM 结构方案评估和 Mechanical RFQ 决策问题承接需求",
+      "internal_links": "上游入口：/solutions、/products/precision-enclosures、/resources/rfq-guide；下游：/engineering/npi、/engineering/manufacturing、/request-a-quote",
+      "citation_value": "发布《Enclosure RFQ Input Matrix》，列出安装界面、包络尺寸、材料、GD&T、屏蔽目标、热耗、风道、防护目标、表面处理和预计用量；另附 EMI—散热—防护权衡表及 ECN 评审核对清单"
+    },
+    "keywords": {
+      "focus": {"term": "custom telecom enclosure OEM", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "19 inch cabinet", "sv": null, "kd": null},
+        {"term": "EMI shielding enclosure", "sv": null, "kd": null},
+        {"term": "thermal management", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "precision sheet metal enclosure supplier", "sv": null, "kd": null},
+        {"term": "custom heatsink CNC", "sv": null, "kd": null},
+        {"term": "IP55 IP65 telecom cabinet", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：以 enclosure、shielding、thermal solutions 承接 custom telecom enclosure OEM 应用意图",
+        "H2：分别布局 19-inch cabinet、EMI shielding、thermal management 与 GD&T 评审",
+        "正文/FAQ：覆盖 precision sheet metal enclosure supplier、custom heatsink CNC、IP55/IP65 项目评估，不承诺未经确认的认证等级"
+      ]
+    },
+    "h1": "Enclosure, Shielding and Thermal Solutions for Equipment OEMs",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "SONNE 是否能承接数据中心和工业设备的定制机柜、屏蔽与散热结构？",
+        "h2": "Enclosure, Shielding and Thermal Solutions for Equipment OEMs",
+        "points": [
+          "首屏明确对象：数据中心、工业电子与 RF 模块 OEM；范围为定制机柜、19 英寸安装结构、RF/EMI 屏蔽壳体和散热结构",
+          "副文案强调从机械图纸、关键界面与环境目标开始评估，不写通用现货机柜或低价承诺",
+          "首屏列三项可提交资料：2D/3D 图纸、热耗与风道约束、目标应用及数量阶段",
+          "主按钮进入 Mechanical RFQ，次按钮进入屏蔽与散热需求沟通，不要求买家先完成全部设计"
+        ],
+        "image": "使用真实 file：prod-cabinet.webp（1024×1024），右侧展示完整机柜白底图；建议桌面 16:9 首屏中占 40% 宽度，背景叠加简洁安装孔位与风道线稿，不伪造内部配置",
+        "cta": "Send Mechanical Drawings"
+      },
+      {
+        "number": 2,
+        "name": "Application and Configuration Map",
+        "question": "我的设备结构应对应哪类机柜、腔体、钣金件或散热组合？",
+        "h2": "Match the Enclosure Structure to the Equipment Interface",
+        "points": [
+          "用四列表格区分 19-inch cabinet、equipment enclosure、RF/EMI housing、custom heatsink：典型输入、关键界面、主要评审风险、对应输出",
+          "数据中心场景重点列 19 英寸安装、前后维护空间、线缆路径与风道；工业电子增加安装环境和外部包络约束",
+          "RF 模块场景列连接器位置、接合面、盖板紧固与内部隔腔，避免把屏蔽简化成材料名称",
+          "每类配置链接 /products/precision-enclosures，具体型号或非目标配置标记为需图纸评估，不扩写未确认产品系列"
+        ],
+        "image": "使用真实 file：market-datacenter.webp（1024×1024）作应用场景缩略图，旁配自制四行结构选择表；图片建议 4:3 裁切，不用其暗示 SONNE 拥有数据中心项目案例",
+        "cta": "Explore Precision Enclosures"
+      },
+      {
+        "number": 3,
+        "name": "EMI and Thermal Co-Design",
+        "question": "屏蔽、散热、防护与可维护性冲突时，工程评审需要哪些输入并作出什么决定？",
+        "h2": "Review Shielding and Thermal Trade-Offs before Design Freeze",
+        "points": [
+          "输入表设置热耗 W、允许温升或器件温度目标、气流方向、开孔禁布区、屏蔽目标、维护方式和目标环境；未知项允许标记 TBD 并进入问题清单",
+          "权衡图比较实壁加导热路径、开孔加风道、局部屏蔽隔腔三类思路，维度为热路径、屏蔽连续性、空间、加工与维护，不预设万能方案",
+          "评审输出包括待确认接口图、关键开孔/接合面清单、热与屏蔽风险项及需要验证的项目，不把一般工程建议写成 EMC 或散热性能保证",
+          "设置 Design Review 检查点：机械、热、RF/EMI 与制造共同确认优先级后，才冻结相关界面和验证需求"
+        ],
+        "image": "不配图；使用 1200×760 的 EMI—Thermal 决策示意图，左侧为热耗/风道/屏蔽目标输入，中间为开孔、导热、隔腔权衡，右侧为风险清单与验证项，所有性能值留作项目字段",
+        "cta": "Discuss EMI / Thermal Requirements"
+      },
+      {
+        "number": 4,
+        "name": "GD&T and Assembly Review",
+        "question": "图纸怎样转化为可加工、可装配、可验收的首件依据？",
+        "h2": "Turn Drawings into an Inspection and Assembly Baseline",
+        "points": [
+          "RFQ 图纸清单包括 2D PDF、3D 模型、BOM、材料与表面处理、关键尺寸/GD&T、紧固件和装配关系；只有 3D 时先补关键验收信息",
+          "DFM 评审表逐项记录基准一致性、刀具可达性、薄壁变形风险、接合面、孔位、表面处理后尺寸及装配工具空间",
+          "首件证据包建议包含受控图纸版本、关键尺寸记录、材料/表面处理核对项、装配检查与偏差关闭状态；实际交付范围按项目确认",
+          "证据图片只展示真实工程评审与加工，不把 ±0.01 mm 等高频 RF 特定能力扩展为全部机柜统一公差"
+        ],
+        "image": "使用真实 file：factory-engineering-dfm.webp（1920×1080），16:9 展示工程师按 3D CAD 检查加工件；旁置 5 列首件表样例：特性、图纸版本、要求、实测记录、偏差状态",
+        "cta": "Request a Drawing Review"
+      },
+      {
+        "number": 5,
+        "name": "Protection and Finish Requirements",
+        "question": "IP、防护、材料和表面处理要求应如何写进项目规格而不是变成笼统口号？",
+        "h2": "Specify Protection, Materials and Finishes by Project",
+        "points": [
+          "用需求表区分室内设备、户外机柜和工业现场：安装环境、防护目标、材料、表面状态、接合处与线缆入口均作为独立字段",
+          "仅引用 source-01 的 IP55/IP65 能力口径，写明具体等级须结合结构、密封、接口和约定测试验证，不把能力描述等同于第三方认证",
+          "屏蔽连续性评审覆盖接合面、紧固间距、开口与线缆入口；避免未确认的 RoHS、REACH、盐雾或 EMC 合规声明",
+          "输出为项目级材料/表面处理要求、待验证项和验收依据；如买家提出其他等级或试验条件，进入专项可行性评估"
+        ],
+        "image": "不配图；制作 1100×680 防护需求矩阵，列为结构位置、风险、设计要求、验证证据、项目状态；IP55/IP65 只放在目标等级示例行并标注按具体项目确认",
+        "cta": "Define Your Protection Requirements"
+      },
+      {
+        "number": 6,
+        "name": "NPI and Change Control",
+        "question": "样品批准后，如何控制量产基线和后续变更？",
+        "h2": "Control the Path from Prototype to Production Changes",
+        "points": [
+          "按 Prototype、First Article、Pilot、Controlled Production 四段列出输入、评审人、退出条件和证据，不把样品批准直接等同于量产放行",
+          "量产基线至少关联图纸版本、BOM、关键工艺、检验要求和首件批准状态；Golden Sample 仅作为约定项目中的比对证据之一",
+          "ECN 表包含变更原因、旧/新版本、影响物料与在制品、尺寸/装配/屏蔽/热影响、验证要求和生效点",
+          "变更评审由相关工程、生产与质量角色按项目参与，买家需批准的变更点和通知方式在项目中约定，链接 /engineering/npi 查看完整路径"
+        ],
+        "image": "不配图；使用横向 5 节点 NPI 流程图，节点下各挂一个证据标签：评审记录、受控图纸、FAI、试产总结、ECN 基线；节点间设置明确 Gate，不写虚构周期",
+        "cta": "Review the NPI Process"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "提交机械项目前，买家最常需要澄清哪些边界？",
+        "h2": "Enclosure Engineering FAQs",
+        "points": [
+          "集中回答 EMI 与散热权衡、3D 图纸是否足够、IP 等级边界、散热器定制和工程变更五类疑虑",
+          "每条答案给出可执行输入或评审流程，不用高品质、全覆盖等营销复述",
+          "未确认合规、测试和商业条款均指向项目级确认，不在 FAQ 中新增政策",
+          "FAQ 之后紧接低门槛 Mechanical RFQ，减少带着技术疑问直接提交正式报价的压力"
+        ],
+        "image": "不配图；采用单手风琴 FAQ 列表，默认展开第一问，问题与答案均可被复制；不添加 FAQPage Schema，因为 source-01 对本页仅建议 WebPage 与 BreadcrumbList",
+        "cta": "— 本段专注消除疑问，下方统一设置转化按钮"
+      },
+      {
+        "number": 8,
+        "name": "Mechanical RFQ CTA",
+        "question": "我现在提交哪些资料，就能获得有针对性的下一步工程反馈？",
+        "h2": "Start with Your Drawings and Equipment Constraints",
+        "points": [
+          "短表单字段：姓名、公司、邮箱、应用、项目阶段、预计数量区间、目标时间；数量只用于评估，不显示统一 MOQ",
+          "附件支持 2D/3D 图纸、BOM、接口图和热/屏蔽要求；缺少完整资料时可上传现有版本并列出待确认项",
+          "设置需求复选框：19-inch、EMI shielding、thermal、GD&T/FAI、IP 目标、表面处理，便于分配到对应评审",
+          "提交后预期写为工程需求澄清与下一步评估，不承诺固定报价或量产交期；也可链接 /resources/rfq-guide 先自查"
+        ],
+        "image": "不配图；使用 2 栏 RFQ 面板，左侧为最小资料清单和文件上传，右侧为表单；底部放 /resources/rfq-guide 文本链接及当前询盘邮箱 info@zhide-tec.com",
+        "cta": "Send Mechanical Drawings"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How can EMI shielding and thermal management be balanced in one enclosure?",
+        "answer": "Start with the heat load, airflow path, allowable openings, shielding objectives and maintenance constraints. SONNE can review conductive paths, joints, covers, vents and compartment layouts as related design choices. The appropriate balance and required verification depend on the equipment specification; neither EMI nor thermal performance should be assumed from enclosure material alone.",
+        "intent": "评估屏蔽与散热冲突时的工程介入能力",
+        "snippet": "目标为 55–65 词的段落式 Featured Snippet，以输入—设计变量—验证边界作答"
+      },
+      {
+        "question": "Is a 3D model enough for an enclosure quotation or design review?",
+        "answer": "A 3D model is useful for evaluating geometry, space and interfaces, but it usually does not define all acceptance requirements. Also provide available 2D drawings, materials, finishes, critical dimensions, GD&T, fasteners, quantities and application conditions. If information is missing, SONNE can identify open items before defining the next review or quotation step.",
+        "intent": "判断现有图纸是否足以发起 Mechanical RFQ",
+        "snippet": "目标为 50–60 词的直接回答，前半句明确不能只看 3D，后半句列补充资料"
+      },
+      {
+        "question": "Can SONNE provide IP55 or IP65 telecom cabinets?",
+        "answer": "IP55 and IP65 are within the enclosure capability information provided for project evaluation. The achievable rating depends on the complete cabinet design, seals, joints, cable entries and agreed verification method. Share the installation environment and target rating so the requirements can be reviewed; do not treat a capability statement as certification for every custom enclosure.",
+        "intent": "核实 IP 防护能力及是否存在认证边界",
+        "snippet": "目标为 50–60 词，采用能力口径加项目条件的澄清型答案"
+      },
+      {
+        "question": "What information is needed for a custom CNC heatsink review?",
+        "answer": "Provide the heat source and dissipation target, available envelope, mounting interface, airflow conditions, material preference, surface requirements, critical tolerances and production stage. Include 2D and 3D files when available. These inputs allow the machining and thermal interfaces to be reviewed together; final geometry and verification requirements remain project-specific.",
+        "intent": "准备定制散热器工程评估输入",
+        "snippet": "目标为 45–55 词的清单式 Featured Snippet，突出热、机械和制造三组输入"
+      },
+      {
+        "question": "How are enclosure design changes controlled after sample approval?",
+        "answer": "Changes should be linked to the controlled drawing and BOM revision, with the reason, affected parts and review result recorded. Depending on the change, the review may cover fit, machining, finish, shielding, thermal interfaces and renewed verification. Customer notification or approval points, inventory disposition and the effective production stage should be agreed for the specific project.",
+        "intent": "降低量产变更和版本混用风险",
+        "snippet": "目标为 50–65 词的流程型答案，覆盖版本、影响评估、验证和生效点"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList"],
+    "seo_title": "Custom Telecom Enclosures & EMI Shielding OEM | SONNE",
+    "meta_description": "Custom telecom enclosures, 19-inch racks, EMI shielding and heatsinks for data-center and industrial electronics, with GD&T and engineering change control.",
+    "focus_keyphrase": "custom telecom enclosure OEM"
+  },
+  {
+    "number": 18,
+    "id": "page-18",
+    "name": "工程与质量 Engineering & Quality",
+    "url": "/engineering",
+    "type": "能力聚合",
+    "buyer_segment": "正在建立合格供应商名单或启动定制项目的 RF 工程师、研发经理、采购和 SQE，需要从能力总览进入设计、NPI、测试或制造证据",
+    "inner_monologue": "别只告诉我设备很多，我要看到每个阶段谁评审、交什么记录、凭什么从样品走到稳定量产。",
+    "pain_points": [
+      "产品页只写定制和高质量，无法判断设计、加工、装配与测试是否形成同一项目闭环",
+      "供应商评审缺少明确输入输出，工程、采购和 SQE 各自追问，拉长技术澄清",
+      "单样曲线或设备照片不能证明试产和量产有受控基线、测试覆盖和追溯关系",
+      "工厂审核前不知道应索取哪些证据，也无法快速定位到对应能力详情页"
+    ],
+    "differentiators": [
+      "以 Custom RF Design、NPI、Testing & Quality、Manufacturing 四条工作流组织能力，每条都给出输入、评审点和证据输出",
+      "ISO 9001、50+ 高精密 CNC 和 500,000+ 年产能作为可核验事实入口，并分别解释其对流程、加工和产能评估的意义",
+      "VNA、PIM、可靠性与多端口矩阵自动化测试能力集中呈现，便于按产品指标定义验证计划",
+      "设计—制造—测试在同一 NPI 路径中关联，让买家能围绕图纸、样品、报告和变更记录开展项目评审"
+    ],
+    "conversion": "主：Start Engineering Review；次：Request Sample Test Report，分别承接项目需求评审和质量证据核验",
+    "three_gates": {
+      "search_demand": "RF engineering and manufacturing capability、custom RF design、RF NPI、VNA PIM testing、precision CNC；SV 均未测，KD 均未测，以供应商能力验证和工程审核决策旅程承接",
+      "internal_links": "上游入口：/、/products、/about；下游：/engineering/custom-rf-design、/engineering/npi、/engineering/testing-quality、/engineering/manufacturing、/about/factory、/request-a-quote",
+      "citation_value": "发布《RF Project Evidence Map》：按 Requirement Review、Design Review、Prototype Validation、FAI/Pilot、Production Release 列出买方输入、SONNE 评审点、退出条件和证据记录，可直接用于供应商评估会议"
+    },
+    "keywords": {
+      "focus": {"term": "RF engineering and manufacturing capability", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "custom RF design", "sv": null, "kd": null},
+        {"term": "RF NPI", "sv": null, "kd": null},
+        {"term": "VNA PIM testing", "sv": null, "kd": null},
+        {"term": "precision CNC", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "custom RF component manufacturer", "sv": null, "kd": null},
+        {"term": "prototype to mass production partner", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：承接 RF engineering and manufacturing capability，并落到 repeatable production",
+        "H2：四个能力入口分别分配 custom RF design、RF NPI、VNA/PIM testing、precision CNC",
+        "正文/FAQ：覆盖 custom RF component manufacturer 与 prototype to mass production partner 的审核问题，不补猜搜索量"
+      ]
+    },
+    "h1": "Engineering and Manufacturing behind Repeatable RF Production",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "SONNE 的工程与制造能力是否能支撑我的定制 RF 项目从需求走到量产？",
+        "h2": "Engineering and Manufacturing behind Repeatable RF Production",
+        "points": [
+          "首屏明确四条能力链：定制 RF 设计、NPI、测试与质量、精密制造，不停留在抽象公司实力介绍",
+          "用一句话说明闭环：需求与图纸输入，经设计和制造评审、样品验证、试产基线后进入受控生产",
+          "事实条仅放 ISO 9001、50+ 高精密 CNC、500,000+ 年产能，并注明年产能不是具体项目交期承诺",
+          "主 CTA 收集项目资料启动评审，次 CTA 索取样例测试报告以核验证据形式"
+        ],
+        "image": "使用真实 file：factory-engineering-cad.webp（1920×1080），16:9 首屏背景或右图，叠加四段工作流标签；不添加未证实客户、产品参数或认证标识",
+        "cta": "Start Engineering Review"
+      },
+      {
+        "number": 2,
+        "name": "Capability Workstreams",
+        "question": "四类工程能力分别需要什么输入、解决什么问题并交付什么输出？",
+        "h2": "Four Engineering Workstreams, One Project Record",
+        "points": [
+          "Custom RF Design 卡：输入频段、S 参数目标、功率/PIM、包络和接口；评审拓扑与制造约束；输出问题清单、建议方案及验证需求，链接 /engineering/custom-rf-design",
+          "NPI 卡：输入受控图纸、样品结果和目标阶段；评审 FAI、Pilot 与基线；输出阶段记录、偏差项和变更关联，链接 /engineering/npi",
+          "Testing & Quality 卡：输入产品指标、测试条件和覆盖要求；评审方法与报告字段；输出按项目约定的曲线、数据与追溯记录，链接 /engineering/testing-quality",
+          "Manufacturing 卡：输入材料、GD&T、结构与表面要求；评审可加工性和关键工艺；输出制造评审及按项目确认的检验记录，链接 /engineering/manufacturing"
+        ],
+        "image": "不配图；使用 1200×760 四列能力矩阵，每列固定为输入、评审点、输出、详情链接，底部以同一 Project ID/图纸版本字段贯穿，避免四张泛用图标卡",
+        "cta": "Compare Engineering Capabilities"
+      },
+      {
+        "number": 3,
+        "name": "Project Stage Gates",
+        "question": "一个项目在哪些节点评审，满足什么条件才进入下一阶段？",
+        "h2": "Review the Project at Defined Stage Gates",
+        "points": [
+          "G0 Requirement Review：买方提交规格、图纸、数量阶段和应用环境；输出缺失项与假设清单，未确认关键指标不进入方案冻结",
+          "G1 Design/DFM Review：RF、机械与制造核对拓扑、公差、材料、加工和测试可行性；输出评审记录及待验证风险",
+          "G2 Prototype Validation：将实测结果与批准目标逐项比较；输出样品数据、偏差与处置，样品通过不等于量产放行",
+          "G3 FAI/Pilot 与 G4 Release：核对首件、试产、检验基线和未关闭问题；只有约定退出条件满足后，才形成项目生产基线"
+        ],
+        "image": "不配图；绘制 G0–G4 五道 Stage-Gate 流程图，每道 Gate 下放买方输入、SONNE 输出、退出条件三行，使用可访问 HTML 表格而非只存在于图片中的文字",
+        "cta": "Map Your Project Stage"
+      },
+      {
+        "number": 4,
+        "name": "Manufacturing Envelope",
+        "question": "哪些量化事实可用于初步判断制造边界，又有哪些不能泛化？",
+        "h2": "Use Quantified Capability Facts with Their Limits",
+        "points": [
+          "列出 50+ 高精密 CNC 与 500,000+ 年产能，分别用于设备能力和产能评估入口；具体项目仍需按图纸、数量、工艺和产能排期",
+          "频段口径为标准产品组合核心生产 DC–40 GHz；选定定制微波/波导项目可达 110 GHz，取决于拓扑与验证",
+          "40 GHz 以上机械公差可达 ±0.01 mm、60 GHz 以上镀层厚度控制可达 1 μm，必须标注可达/视结构，不应用到所有产品",
+          "制造事实链接 /engineering/manufacturing，评审表增加适用产品、结构、指标和验证证据四列，避免数字脱离适用条件"
+        ],
+        "image": "使用真实 file：factory-cnc-cavity-milling.webp（1920×1080），16:9 展示 RF 腔体加工；图片旁用带脚注的数字表，禁止把 ±0.01 mm 写成无条件标题",
+        "cta": "Review Precision Manufacturing"
+      },
+      {
+        "number": 5,
+        "name": "Verification Evidence Pack",
+        "question": "我能拿到哪些证据来核对性能、首件、批次和变更，而不是只看宣传数字？",
+        "h2": "Connect Each Claim to a Project Evidence Record",
+        "points": [
+          "证据索引按项目列需求/图纸版本、设计评审记录、样品测试数据、FAI 或关键尺寸记录、试产总结和 ECN；实际提供范围按项目约定",
+          "测试证据字段包括产品标识、测试项目、条件、设备/方法信息、结果、判定和关联批次或序列信息，不用单张无上下文曲线代替报告",
+          "VNA、PIM、可靠性和矩阵自动化能力分别链接到测试详情；100% 验证只可按具体产品和指标约定，不扩展成全产品所有测试",
+          "设置 Evidence Review 检查点：买方 SQE 与项目工程确认报告样例、覆盖率和追溯字段后，再确定量产验证要求"
+        ],
+        "image": "使用真实 file：factory-test-station.webp（1024×575），16:9 展示 RF 测试工位；旁边放证据包目录，不伪造报告编号、客户名或实测曲线",
+        "cta": "Request Sample Test Report"
+      },
+      {
+        "number": 6,
+        "name": "Supplier Review and Factory Evidence",
+        "question": "供应商审核或工厂参观前，应怎样核对质量体系与现场证据？",
+        "h2": "Prepare a Focused Supplier and Factory Review",
+        "points": [
+          "审核准备表按质量体系、设计控制、采购/生产、检验测试、追溯和变更六组列问题与所需记录，ISO 9001 只按真实体系口径展示",
+          "现场路线建议连接 CNC、装配、VNA/PIM 或相关测试区域，具体可访问区域、时间和保密边界须提前按项目确认",
+          "工厂事实链接 /about/factory，可查看厂房、设备与测试区真实照片；不展示未经授权客户标识或保密产品",
+          "审核输出为发现项、责任角色、所需证据和关闭状态；不承诺统一审核周期、固定整改时限或通用 NDA 政策"
+        ],
+        "image": "使用真实 file：factory-workshop-wide.webp（1920×1080），16:9 展示装配车间全景；下方链接 factory-building-v2.webp 与 factory-vna-tuning-line.webp 到 /about/factory，不用摆拍会议图替代现场证据",
+        "cta": "Plan a Supplier Review"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "工程与质量供应商评估还有哪些常见门槛问题？",
+        "h2": "Engineering and Quality Review FAQs",
+        "points": [
+          "覆盖 source-01 的工厂审核与测试能力两种种子问题，并补充设计输入、评审输出和量产能力边界",
+          "回答均指向可提交资料、可检查记录和项目级约定，避免把能力总览写成所有项目统一承诺",
+          "对审核访问、报告范围、产能与响应时间分别给出边界，便于采购和 SQE 内部转述",
+          "FAQ 后承接 Start Engineering Review，让买家用现有资料进入 G0 而非直接要求正式下单"
+        ],
+        "image": "不配图；采用五问手风琴，并在每个答案末尾添加相关工程详情页文本链接；本页不配置 FAQPage Schema，保持与 source-01 一致",
+        "cta": "— 本段用于回答审核疑问，行动入口置于下一屏"
+      },
+      {
+        "number": 8,
+        "name": "Engineering Review CTA",
+        "question": "如何用最少的现有资料启动一次有明确输出的工程评审？",
+        "h2": "Bring Your Specification, Drawings or Open Questions",
+        "points": [
+          "表单先选工作流：RF Design、NPI、Testing & Quality、Manufacturing，再填应用、频段或结构范围、项目阶段和当前阻塞点",
+          "附件接受规格、band plan、2D/3D 图纸、现有测试数据或问题清单；未知字段可标 TBD，避免把不完整项目挡在门外",
+          "提交后第一步输出为资料完整性检查、关键问题和建议下一评审节点；完整 RFQ 通常约 24 小时获得初步工程反馈，但不是报价或交期保证",
+          "提供 /resources/rfq-guide 与 /request-a-quote 两个后续入口，分别服务需补资料和资料已齐的买家"
+        ],
+        "image": "不配图；使用 2 栏工程评审表单，左侧显示 G0 输入清单和初步反馈边界，右侧为字段与上传区；附 info@zhide-tec.com 作为备选询盘邮箱",
+        "cta": "Start Engineering Review"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can buyers audit SONNE's factory and quality processes?",
+        "answer": "Factory audit and visit requests can be reviewed around a specific project. The agenda may cover relevant machining, assembly, testing, traceability and change-control records. Timing, accessible areas, confidentiality and required documentation should be agreed in advance rather than assumed. Contact SONNE with your audit scope so the appropriate review path can be confirmed.",
+        "intent": "确认能否验厂以及审核范围如何约定",
+        "snippet": "目标为 50–60 词，采用可申请加项目级确认的直接回答"
+      },
+      {
+        "question": "What RF testing capabilities are available?",
+        "answer": "SONNE's stated capabilities include VNA, PIM, reliability and multi-port matrix automated testing. The applicable measurements, conditions, sample coverage and report content depend on the product and agreed specification. Buyers should identify critical RF parameters and acceptance criteria during engineering review so the verification plan and evidence requirements can be defined.",
+        "intent": "核验测试类型并判断能否匹配项目指标",
+        "snippet": "目标为 45–55 词的清单加限定式答案，适合段落 Featured Snippet"
+      },
+      {
+        "question": "What inputs are needed to start an engineering review?",
+        "answer": "Provide the application, project stage and the information already available: frequency or band plan, RF targets, power or PIM needs, mechanical envelope, connectors, drawings, environment and quantity range. Unknown items can be marked as open. SONNE can then identify missing inputs, review feasibility questions and recommend the next design, prototype or testing step.",
+        "intent": "降低首次工程咨询的资料准备门槛",
+        "snippet": "目标为 50–60 词，答案包含可直接复制的输入清单"
+      },
+      {
+        "question": "What should an engineering review deliver before prototyping?",
+        "answer": "A useful review should leave a controlled record of known requirements, open questions, assumptions, major mechanical or RF risks and the proposed verification scope. Depending on the project, it may also include drawing or DFM comments and a prototype input baseline. It should not be presented as a performance guarantee before hardware has been tested.",
+        "intent": "判断工程评估是否有实质输出而非销售沟通",
+        "snippet": "目标为 45–60 词，按记录内容和保证边界组织答案"
+      },
+      {
+        "question": "Does annual capacity guarantee a production lead time?",
+        "answer": "No. SONNE states annual capacity above 500,000 units and more than 50 high-precision CNC machines, but those figures do not determine a specific delivery date. Production timing must be evaluated from the drawing, quantity, process route, verification requirements and current capacity. Prototype and mass-production schedules should therefore be confirmed separately for each project.",
+        "intent": "避免把产能数字误读成交期承诺",
+        "snippet": "目标为 45–55 词的否定直答，随后列出真实排期变量"
+      }
+    ],
+    "schema": ["CollectionPage", "BreadcrumbList"],
+    "seo_title": "RF Engineering, Testing & Precision Manufacturing | SONNE",
+    "meta_description": "Custom RF design, NPI, VNA/PIM/reliability testing and precision CNC manufacturing — the capabilities that keep RF performance stable from prototype to volume.",
+    "focus_keyphrase": "RF engineering and manufacturing capability"
+  },
+  {
+    "number": 19,
+    "id": "page-19",
+    "name": "定制射频设计 Custom RF Design",
+    "url": "/engineering/custom-rf-design",
+    "type": "工程能力",
+    "buyer_segment": "有初步指标、band plan、参考结构或待改进样品的 RF 工程师和研发经理，处于可行性评估、方案比较或原型定义阶段",
+    "inner_monologue": "我想知道你们能不能指出规格和结构里的冲突，并给出可验证的方案，而不是收到图纸后只回一个价格。",
+    "pain_points": [
+      "频段、插损、抑制、隔离、功率和 PIM 指标很多，但优先级与测试条件尚未统一",
+      "电气目标与包络、连接器、法兰、公差或表面处理约束互相影响，单专业评审容易遗漏",
+      "仿真结果与加工、装配和实测之间缺少偏差复盘，无法确认下一轮该改什么",
+      "设计评估输出不清楚，研发团队难以向内部说明方案风险、开放项和样品验证范围"
+    ],
+    "differentiators": [
+      "支持滤波器、波导与合路项目的定制设计和工程评估，把 RF 指标与机械制造条件放在同一输入表",
+      "以 Specification Review、Design/DFM Review、Prototype Validation 三个检查点组织输出，避免只给概念性建议",
+      "设计、精密加工与 VNA/PIM 验证闭环可围绕同一版本记录比较目标和硬件结果",
+      "标准产品组合核心生产 DC–40 GHz，选定定制微波/波导项目可达 110 GHz，并明确取决于拓扑与验证"
+    ],
+    "conversion": "主：Start Engineering Review；次：Send Your RF Specification，均指向定制 RF 设计评估而非直接购买",
+    "three_gates": {
+      "search_demand": "custom RF design、custom microwave components、custom cavity filter、custom waveguide components；SV 均未测，KD 均未测，以设计可行性、规格输入和验证闭环问题承接",
+      "internal_links": "上游入口：/engineering、/products/rf-microwave-filters、/products/waveguide-components；下游：/engineering/npi、/engineering/testing-quality、/resources/rfq-guide、/request-a-quote",
+      "citation_value": "发布《Custom RF Evaluation Input/Output Sheet》：输入含频段、端口、S 参数目标、抑制/隔离、功率/PIM、接口、包络、环境与数量阶段；输出含开放项、假设、风险、设计/DFM 评审意见和验证矩阵"
+    },
+    "keywords": {
+      "focus": {"term": "custom RF design", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "custom microwave components", "sv": null, "kd": null},
+        {"term": "custom cavity filter", "sv": null, "kd": null},
+        {"term": "custom waveguide components", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "custom RF component manufacturer", "sv": null, "kd": null},
+        {"term": "engineering-first RF supplier", "sv": null, "kd": null},
+        {"term": "RF evaluation", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：以 Custom RF Design 为主词，并用 specification to validated hardware 表明工程闭环",
+        "H2：布局 custom microwave components、custom cavity filter 与 custom waveguide components 的评估输入和设计评审",
+        "正文/FAQ：覆盖 custom RF component manufacturer、engineering-first RF supplier、RF evaluation，不与其他产品页争夺通用产品主词"
+      ]
+    },
+    "h1": "Custom RF Design from Specification to Validated Hardware",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "SONNE 能否从指标和约束开始参与定制 RF 设计，而不只是照图加工？",
+        "h2": "Custom RF Design from Specification to Validated Hardware",
+        "points": [
+          "首屏明确服务范围：滤波器、波导与合路/双工项目的工程评估和定制设计，具体可行性以输入和验证为准",
+          "一句流程说明连接规格、设计/DFM、原型、实测与偏差复盘，不把仿真图当作已验证硬件",
+          "列出三种可启动状态：完整规格、部分指标加应用约束、已有样品/数据加待改进问题",
+          "主 CTA 启动工程评审，次 CTA 下载或查看输入清单，避免只有询价没有技术路径"
+        ],
+        "image": "使用真实 file：prod-bandpass-v2.webp（1024×571）作为已加工 RF 产品视觉，旁边叠加 Specification→Review→Hardware→Test 线稿；不得标注未经 source-01 支持的具体频率或性能",
+        "cta": "Start Engineering Review"
+      },
+      {
+        "number": 2,
+        "name": "Engineering Entry Points",
+        "question": "我的项目处于哪个起点，SONNE 应在什么位置介入？",
+        "h2": "Choose the Right Starting Point for Engineering Evaluation",
+        "points": [
+          "Specification-only 起点：输入应用、频段与 RF 目标；输出规格完整性检查、假设和开放项，适合方案尚未冻结的项目",
+          "Drawing-based 起点：输入 2D/3D、材料和关键指标；输出 RF/机械接口与 DFM 评审，不把照图评估等同于重新设计保证",
+          "Existing-hardware 起点：输入样品描述、已有曲线、测试条件和问题；输出差异清单及建议复测/改进验证项",
+          "三个入口统一汇入 G0 Requirement Review，由买方确认优先级、验收目标和不可变约束后再进入方案工作"
+        ],
+        "image": "不配图；使用三行入口选择表，列为当前资料、典型阻塞、SONNE 评审动作、输出记录、下一 Gate，便于买家自我定位",
+        "cta": "Identify Your Review Starting Point"
+      },
+      {
+        "number": 3,
+        "name": "RF Evaluation Inputs and Outputs",
+        "question": "一次可执行的 RF Evaluation 到底要收集什么、返回什么？",
+        "h2": "Define the RF Evaluation Inputs and Outputs",
+        "points": [
+          "RF 输入字段：中心频率/起止频率、带宽、端口与阻抗、插损/回波/抑制/隔离目标、功率、PIM（如适用）及各项测试条件",
+          "机械与项目输入字段：包络、连接器或法兰、安装方向、材料/表面要求、环境、2D/3D、数量阶段与目标验证节点",
+          "输出表包含已确认要求、TBD/假设、指标优先级、拓扑或结构评审意见、制造风险、建议原型范围和验证矩阵，不保证所有开放项一次关闭",
+          "评审会议逐条核对目标与条件，买方批准需求基线后才把指标转入样品验收表；标准 RFQ 模板链接 /resources/rfq-guide"
+        ],
+        "image": "不配图；制作可下载的 Input/Output 双栏工作表，所有字段有单位、测试条件、责任方和状态列；提供 3 行脱敏空白示例，不编造性能结果",
+        "cta": "Send Your RF Specification"
+      },
+      {
+        "number": 4,
+        "name": "Simulation-to-Hardware Gates",
+        "question": "从设计分析到硬件验证有哪些评审门，如何避免直接把仿真当结果？",
+        "h2": "Move from Design Analysis to Hardware through Review Gates",
+        "points": [
+          "G1 Design Review：核对需求基线、模型边界、关键结构假设与指标权衡；输出需验证假设及设计评审记录",
+          "G1b DFM Review：把关键尺寸、加工可达性、接合面、连接器/法兰、公差和表面处理纳入同一版本检查；输出可制造性与风险意见",
+          "G2 Prototype Build：冻结用于样品的图纸/BOM 和测试要求，记录实际偏差；最快约两周仅能作为打样参考，实际周期按结构、工艺和验证评估",
+          "G2 Validation Review：在约定条件下比较目标与 VNA/PIM 等适用实测，形成偏差清单；未达标项进入原因分析和下一轮评审，而非直接宣称通过"
+        ],
+        "image": "使用真实 file：tech-cat-tuning.webp（1024×575）展示计算机辅助调试场景，16:9；下方必须配 G1→G1b→G2→Validation 文字流程，图片只作真实工作场景证据",
+        "cta": "Review the Design-to-Prototype Path"
+      },
+      {
+        "number": 5,
+        "name": "Design-Manufacturing-Test Loop",
+        "question": "实测偏差如何反馈到结构和制造，而不是反复盲目打样？",
+        "h2": "Close the Loop between RF Results and Physical Design",
+        "points": [
+          "建立偏差对照表：参数、目标、测试条件、样品结果、差异、关联结构/装配假设、建议动作和复测状态",
+          "将插损、回波、抑制或隔离问题与腔体尺寸、接合、连接器、法兰、公差、镀层等可能因素关联评审，但不在无数据时断言根因",
+          "设计修订必须关联图纸/模型版本和变更原因；复测使用可比较的设置，保留前后数据以支持团队审查",
+          "当原型目标达到且未关闭制造风险有处置后，才移交 /engineering/npi 定义 FAI、Pilot 和量产测试基线"
+        ],
+        "image": "使用真实 file：factory-vna-tuning-line.webp（1891×1064），16:9 展示 VNA 调试线；旁边放实测—假设—修订—复测闭环，不展示虚构曲线或提升百分比",
+        "cta": "Discuss a Prototype Validation Loop"
+      },
+      {
+        "number": 6,
+        "name": "Frequency and Manufacturing Boundaries",
+        "question": "频率、精度与镀层能力的适用边界是什么？",
+        "h2": "Check Frequency and Manufacturing Feasibility by Design",
+        "points": [
+          "频段表明确标准产品组合核心生产 DC–40 GHz；选定定制微波/波导项目可达 110 GHz，取决于拓扑与验证，不写成所有设计均可达",
+          "40 GHz 以上机械公差可达 ±0.01 mm，必须结合结构与评审；不能把该数字转成整机 RF 性能或所有尺寸保证",
+          "60 GHz 以上镀层厚度控制可达 1 μm，同样使用可达/视结构口径，并由具体项目确定验证要求",
+          "高频项目检查点增加拓扑、法兰/接口、关键公差、表面要求和测试可行性五项评审，未确认项保留在风险清单"
+        ],
+        "image": "使用真实 file：factory-cnc-cavity-milling.webp（1920×1080），16:9；右侧以条件式事实表展示 DC–40 GHz、selected up to 110 GHz 与两项可达能力，禁止大字无条件宣传",
+        "cta": "Check Your High-Frequency Constraints"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "启动定制 RF 设计评估前，买家还需要确认哪些实际边界？",
+        "h2": "Custom RF Design Evaluation FAQs",
+        "points": [
+          "覆盖 source-01 的所需参数和能否参与设计评估两种种子问题，并补充频率范围、输出物和反馈时间",
+          "答案区分初步工程反馈、设计评审、样品验证和正式报价，避免时间与结果承诺混为一谈",
+          "对 110 GHz、公差和镀层等条件式能力仅引用已确认口径，不推导未提供的性能",
+          "FAQ 后使用现有规格即可提交的 CTA，并链接 RFQ 指南帮助补齐输入"
+        ],
+        "image": "不配图；五问手风琴配一个 Input Checklist 下载文本链接；本页 Schema 不含 FAQPage，页面仍保留可见 FAQ 内容",
+        "cta": "— 本段集中答疑，统一在下一屏收集项目资料"
+      },
+      {
+        "number": 8,
+        "name": "RF Design Review CTA",
+        "question": "怎样提交现有规格并获得清晰的工程下一步？",
+        "h2": "Start an RF Evaluation with the Inputs You Have",
+        "points": [
+          "表单字段包括产品类型、应用、频率范围、关键 RF 目标、机械包络、项目阶段、数量区间和当前最需要解决的问题",
+          "上传区支持规格、band plan、2D/3D、参考曲线或测试报告；不完整资料可用 TBD 和开放项说明，不虚构 NDA 默认覆盖范围",
+          "完整 RFQ 通常可在约 24 小时内获得初步工程反馈，页面明确这不是完整方案、报价或交期保证",
+          "预期下一步为缺失资料清单、评审范围与建议 Gate；需要正式询价时转 /request-a-quote"
+        ],
+        "image": "不配图；采用工程评估表单与输入清单双栏布局，底部显示 info@zhide-tec.com 和 /resources/rfq-guide 链接，避免放置与转化无关的图片",
+        "cta": "Start Engineering Review"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What parameters are needed for a custom RF design evaluation?",
+        "answer": "Provide the frequency range or band plan, bandwidth, ports and impedance, insertion loss, return loss, rejection or isolation targets, power and PIM where applicable. Add connector or flange details, mechanical envelope, environment, drawings and project stage. Include test conditions with critical targets; unknown items can be listed as open for review.",
+        "intent": "准备定制 RF 设计评估的完整技术输入",
+        "snippet": "目标为 50–60 词，采用射频、机械、项目三组参数的段落清单"
+      },
+      {
+        "question": "Can SONNE participate in design evaluation instead of only machining to drawing?",
+        "answer": "Yes, engineering evaluation is part of the stated custom RF design capability for filter, waveguide and combiner projects. The review can connect RF requirements with mechanical and manufacturing constraints, identify open questions and define prototype verification. The exact scope depends on the supplied information and agreed project objectives, and remains subject to hardware validation.",
+        "intent": "确认供应商是否具备前期工程参与能力",
+        "snippet": "目标为 45–60 词，先直接回答，再解释评审内容与验证边界"
+      },
+      {
+        "question": "What frequency range can a custom RF project cover?",
+        "answer": "SONNE's standard product portfolio is centered on production from DC to 40 GHz. Selected custom microwave and waveguide projects can reach 110 GHz, depending on topology and verification. Frequency alone is not enough to confirm feasibility; the design review must also consider interfaces, performance targets, mechanical structure, manufacturing constraints and the applicable test method.",
+        "intent": "核实定制项目频率边界并避免过度承诺",
+        "snippet": "目标为 50–60 词，使用标准范围与选定项目两级答案"
+      },
+      {
+        "question": "What outputs should I expect from an RF engineering review?",
+        "answer": "Expected review outputs can include a requirement and open-item list, documented assumptions, RF and mechanical risks, design or DFM comments, and a proposed prototype verification matrix. The agreed output set should be confirmed for the project. Simulation or design analysis should be identified separately from measured hardware evidence, so your team can see what remains to be validated.",
+        "intent": "判断工程评审是否会产生可审查交付物",
+        "snippet": "目标为 45–60 词，列举输出物并区分分析与实测"
+      },
+      {
+        "question": "How quickly can SONNE provide initial engineering feedback?",
+        "answer": "A complete RFQ can typically receive initial engineering feedback in about 24 hours. This refers to an initial response, such as identifying missing inputs or suggesting the next review step; it is not a guaranteed quotation, completed design or delivery commitment. Prototype and production timing must be assessed from the design, process, quantity and verification scope.",
+        "intent": "了解首次反馈时间且确认承诺边界",
+        "snippet": "目标为 45–60 词，首句给事实，随后澄清非报价和交期保证"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList"],
+    "seo_title": "Custom RF Design & Engineering Evaluation | SONNE",
+    "meta_description": "SONNE supports custom RF design and engineering evaluation for filters, waveguide and combiner projects, linking simulation, precision machining and VNA/PIM verification.",
+    "focus_keyphrase": "custom RF design"
+  },
+  {
+    "number": 20,
+    "id": "page-20",
+    "name": "从样品到量产 NPI",
+    "url": "/engineering/npi",
+    "type": "工程能力",
+    "buyer_segment": "已有原型或即将首件导入的 R&D、采购、NPI 工程师和 SQE，需要确认试产退出条件、基线证据和量产变更控制",
+    "inner_monologue": "样品通过只是开始，我要确认首件、试产、测试基线和变更记录能否支撑量产，而不是把风险留到批量交货。",
+    "pain_points": [
+      "原型性能合格，但图纸、BOM、工艺和检验要求尚未形成可重复的受控基线",
+      "FAI、Golden Sample 和 Pilot Run 各自证明什么不清楚，阶段放行容易依赖单件结果",
+      "试产暴露的加工、装配、调试或测试问题没有闭环到责任项和退出条件",
+      "ECN 后新旧图纸、物料、在制品和测试要求可能脱节，难以判断何时需要重新验证"
+    ],
+    "differentiators": [
+      "把 Prototype、First Article、Pilot Run、Controlled Production 分开定义输入、退出条件和证据，避免样品通过直接等于量产",
+      "以 FAI、Golden Sample、工艺与测试基线组织项目记录，让性能、尺寸和装配要求可以联合审查",
+      "ECN 与图纸/BOM 版本、影响评估、验证要求和生效点关联，支持变更追溯",
+      "50+ 高精密 CNC 与 500,000+ 年产能为制造评估提供事实基础，但项目交期仍按图纸、数量、工艺和产能确认"
+    ],
+    "conversion": "主：Plan Your NPI Path；次：Review FAI Requirements，分别承接阶段规划和首件证据评审",
+    "three_gates": {
+      "search_demand": "prototype to mass production、pilot run、first article inspection、NPI RF components；SV 均未测，KD 均未测，以样品到量产的风险控制和阶段 Gate 问题承接",
+      "internal_links": "上游入口：/engineering、/engineering/custom-rf-design、/products/precision-enclosures；下游：/engineering/testing-quality、/resources/rfq-guide、/request-a-quote",
+      "citation_value": "发布《RF NPI Stage-Gate Checklist》：Prototype、FAI、Pilot、Release 四阶段分别列输入、买方/工程/质量评审点、退出条件、证据记录与未关闭项，并附 ECN 影响评估字段"
+    },
+    "keywords": {
+      "focus": {"term": "prototype to mass production", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "pilot run", "sv": null, "kd": null},
+        {"term": "first article inspection", "sv": null, "kd": null},
+        {"term": "NPI RF components", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "prototype to mass production partner", "sv": null, "kd": null},
+        {"term": "custom RF component manufacturer", "sv": null, "kd": null},
+        {"term": "low volume RF prototype", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：直接覆盖 prototype to mass production，并以 repeatable 限定量产目标",
+        "H2：分别承接 pilot run、first article inspection、NPI RF components 与 ECN 控制",
+        "正文/FAQ：覆盖 prototype to mass production partner、custom RF component manufacturer、low volume RF prototype，不虚构统一打样或量产周期"
+      ]
+    },
+    "h1": "From Prototype to Pilot Run to Repeatable Mass Production",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "SONNE 如何把合格原型转化为有证据、有基线的可重复生产？",
+        "h2": "From Prototype to Pilot Run to Repeatable Mass Production",
+        "points": [
+          "首屏用一句话拆分原型验证、首件批准、试产和受控量产，明确各阶段回答不同风险",
+          "核心视觉不是单一合格曲线，而是图纸/BOM、FAI、试产记录、测试基线和 ECN 的证据链",
+          "说明 NPI 适用于 RF 组件与精密结构项目，具体 Gate 和交付记录按产品、指标及买方要求约定",
+          "主 CTA 收集当前项目阶段与未关闭风险，次 CTA 查看 FAI 输入和证据要求"
+        ],
+        "image": "使用真实 file：factory-production-line.webp（1920×1080），16:9 展示 RF 组件生产线；叠加 Prototype→FAI→Pilot→Release 四段标签，不标注虚构良率或交付周期",
+        "cta": "Plan Your NPI Path"
+      },
+      {
+        "number": 2,
+        "name": "NPI Stage Comparison",
+        "question": "Prototype、FAI、Pilot 和 Mass Production 各自要证明什么？",
+        "h2": "Separate Prototype, First Article, Pilot and Production Objectives",
+        "points": [
+          "Prototype 行：输入设计版本与验证目标；评审 RF/机械功能；输出样品数据和设计偏差，退出条件是约定原型目标有结论",
+          "First Article 行：输入受控图纸/BOM 和制造要求；评审关键尺寸、材料/表面、装配及约定 RF 测试；输出 FAI 与偏差状态",
+          "Pilot Run 行：输入首件处置、拟定工艺和测试基线；评审重复性、装配/调试、测试覆盖及问题关闭；输出试产总结与量产开放项",
+          "Controlled Production 行：输入批准基线；按约定控制生产、检验与变更；量产交期不由此表预设，链接 /engineering/testing-quality 定义证据"
+        ],
+        "image": "不配图；使用 1300×800 四行比较表，固定列为目的、输入、评审点、退出条件、证据和不能证明的事项，可直接截图用于内部 NPI 会议",
+        "cta": "Compare Your Current NPI Stage"
+      },
+      {
+        "number": 3,
+        "name": "Stage-Gate Reviews",
+        "question": "每次阶段放行由谁评审哪些证据，未关闭问题如何处理？",
+        "h2": "Use Stage Gates to Control NPI Release Decisions",
+        "points": [
+          "G0 NPI Kickoff：R&D、采购/项目、制造与质量按项目确认规格版本、数量阶段、目标验证和责任接口；输出 Gate 计划与资料缺口",
+          "G1 Prototype Exit：工程核对实测与目标，制造核对 DFM 风险，买方确认约定验收结论；输出偏差和是否进入首件的决定",
+          "G2 FAI/Pilot Exit：质量核对检验和追溯，工程核对性能偏差，制造核对工艺与装配；未关闭项必须有处置和是否阻止放行的结论",
+          "G3 Production Release：核对批准图纸/BOM、工艺、测试、样本/追溯要求和变更接口；输出生产基线，不宣称所有风险消失"
+        ],
+        "image": "不配图；绘制 G0–G3 泳道图，泳道为买方/R&D、制造、质量，交汇点列所需记录和放行结论；用 HTML 文本保证可审查与可访问",
+        "cta": "Build Your Stage-Gate Plan"
+      },
+      {
+        "number": 4,
+        "name": "FAI and Golden Sample Evidence",
+        "question": "FAI 和 Golden Sample 应如何一起使用，各自不能替代什么？",
+        "h2": "Link First Article Records to the Approved Reference Sample",
+        "points": [
+          "FAI 输入为受控图纸、BOM、关键特性、材料/表面要求和约定测试项；记录字段含特性编号、要求、实测/检查结果、设备或方法、偏差与结论",
+          "Golden Sample 需关联产品标识、图纸/BOM 版本、批准状态和约定 RF/机械数据；它是比对参考，不替代完整检验记录",
+          "样品保管、有效期、复验或失效处置不设置全公司统一政策，应在项目中按产品特性和双方要求确认",
+          "FAI Review 由相关工程与质量角色核对偏差关闭，买方需批准的项目和批准形式在 NPI 计划中明确"
+        ],
+        "image": "使用真实 file：factory-engineering-dfm.webp（1920×1080），16:9 展示图纸/模型与实物核对；旁放 FAI 字段表和 Golden Sample 关联标签，不伪造签名或实测值",
+        "cta": "Review FAI Requirements"
+      },
+      {
+        "number": 5,
+        "name": "Process and Test Baselines",
+        "question": "试产需要冻结哪些工艺与测试信息，才能支撑重复生产和异常比对？",
+        "h2": "Establish Process and Test Baselines during the Pilot Run",
+        "points": [
+          "工艺基线索引包括图纸/BOM 版本、关键加工与装配步骤、适用工装/紧固要求、表面处理和关键检验点，详细范围按产品定义",
+          "测试基线至少关联参数、限值、测试条件、方法/设置、适用覆盖率和报告字段；VNA、PIM、可靠性或矩阵测试按产品选用",
+          "试产问题表记录现象、涉及批次/样品、临时处置、原因分析状态、纠正动作与复验结果，不用最终平均值掩盖单件偏差",
+          "Pilot Exit Review 比较原型、首件与试产证据，确认哪些设置和记录进入生产基线，哪些仍需工程变更或补充验证"
+        ],
+        "image": "使用真实 file：factory-vna-tuning-line.webp（1891×1064），16:9 展示 VNA 调试场景；右侧以工艺基线、测试基线、问题闭环三层记录结构呈现，不宣称全产品 100% 测试",
+        "cta": "Define Your Pilot Evidence"
+      },
+      {
+        "number": 6,
+        "name": "Engineering Change Control",
+        "question": "ECN 如何关联版本、影响范围、验证和生效点，避免新旧要求混用？",
+        "h2": "Trace Every Engineering Change to Its Verification and Effectivity",
+        "points": [
+          "ECN 必填字段：变更编号、原因、旧/新图纸或 BOM 版本、提出方、日期、受影响产品/物料和变更分类",
+          "影响评审覆盖 RF 性能、关键尺寸、材料/表面、装配、工艺、测试方法、已有库存/在制品及追溯记录，按变更性质选择",
+          "验证矩阵明确无需复测的依据或需要复测的项目、样本和验收要求；不能默认所有变更都无需验证，也不设一刀切重测规则",
+          "生效评审记录批准人/角色、买方通知或批准点、切换批次/日期及旧版处置；具体客户要求按项目约定"
+        ],
+        "image": "不配图；制作 ECN 记录样表与 Change→Impact→Verification→Effectivity 流程，表格含旧版处置和关联证据列，全部示例值留空避免虚构记录",
+        "cta": "Review Change-Control Inputs"
+      },
+      {
+        "number": 7,
+        "name": "Capacity and Timing Inputs",
+        "question": "打样和量产时间应依据什么评估，产能数字能说明什么？",
+        "h2": "Evaluate Prototype and Production Timing from Project Inputs",
+        "points": [
+          "时间评估输入包括结构复杂度、图纸冻结状态、材料/表面工艺、样品数量、测试项目、偏差轮次和当前产能，不设统一 NPI 日历",
+          "最快约两周只作为打样参考，页面必须同时说明不是通用打样承诺；实际样品计划由工程评审后确认",
+          "50+ 高精密 CNC 与 500,000+ 年产能用于说明制造资源，量产交期仍须按图纸、数量、工艺和产能评估",
+          "NPI 计划表将技术 Gate 与商业交付日期分列，避免样品通过、量产放行和出货承诺混为同一节点"
+        ],
+        "image": "使用真实 file：factory-machine-shop.webp（1893×1065），16:9 展示 CNC 车间；旁边放时间评估变量表，产能数字加脚注，不出现倒计时或 guaranteed lead time 标签",
+        "cta": "Submit Your NPI Timing Constraints"
+      },
+      {
+        "number": 8,
+        "name": "FAQ",
+        "question": "样品通过之后，买家对 NPI 放行和变更还有哪些关键疑问？",
+        "h2": "RF NPI and Production Readiness FAQs",
+        "points": [
+          "覆盖 source-01 的样品后验证和变更追溯两个种子问题，并补充 FAI/Golden Sample、Pilot 退出和时间评估",
+          "每个回答区分事实、项目约定和需要评审的条件，避免统一周期或统一交付物承诺",
+          "FAQ 与上文 Stage-Gate 表互链，方便 SQE 从简答跳到证据字段",
+          "FAQ 后提供当前阶段诊断表单，降低直接发起完整量产询价的心理门槛"
+        ],
+        "image": "不配图；采用五问手风琴并保留 FAQPage 可见问答对应关系；答案不加入全站 MOQ、付款、质保或 NDA 通用问题",
+        "cta": "— 本段用于解除 NPI 疑虑，下一屏统一行动"
+      },
+      {
+        "number": 9,
+        "name": "NPI Planning CTA",
+        "question": "如何基于当前样品和资料状态制定下一步 NPI 计划？",
+        "h2": "Plan the Next Gate from Your Current Hardware and Records",
+        "points": [
+          "表单先选当前阶段：概念/原型、已有样品、首件、试产或量产变更，再填产品类型、关键指标和当前未关闭问题",
+          "上传受控或现有图纸/BOM、FAI、测试数据、试产问题清单或 ECN；版本不明确时先列为评审问题",
+          "期望输出为建议下一 Gate、缺失证据、需要参与的评审角色和验证事项，不直接承诺量产批准或交期",
+          "提供 /engineering/testing-quality 与 /request-a-quote 后续入口，分别用于定义报告证据和提交完整项目资料"
+        ],
+        "image": "不配图；使用 Current Stage→Missing Evidence→Next Gate 三栏转化面板，下方为表单与附件上传；附 info@zhide-tec.com 供项目资料询盘",
+        "cta": "Plan Your NPI Path"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What still needs verification after a prototype passes?",
+        "answer": "Prototype approval does not by itself demonstrate production repeatability. The next review should confirm controlled drawings and BOM, first article requirements, manufacturing and assembly risks, test settings, coverage, traceability and open deviations. A pilot run can then evaluate whether the proposed process and evidence baseline support the agreed production-release criteria.",
+        "intent": "理解样品通过与量产准备之间的差距",
+        "snippet": "目标为 45–60 词，先否定直接等同，再列出后续验证项"
+      },
+      {
+        "question": "How are engineering changes traced during NPI and production?",
+        "answer": "An engineering change should reference the affected drawing and BOM revisions, reason, parts and production stage. The review records potential RF, mechanical, process and test impacts, plus any required re-verification. Effectivity, inventory or work-in-progress disposition, and customer notification or approval points should be agreed and linked to the project record.",
+        "intent": "审查 ECN 版本和变更影响是否可追溯",
+        "snippet": "目标为 45–60 词的流程型答案，覆盖变更、影响、验证和生效点"
+      },
+      {
+        "question": "What is the difference between FAI and a golden sample?",
+        "answer": "First article inspection documents whether specified characteristics of the first article meet the controlled requirements, including applicable measurements and deviations. A golden sample is an approved physical reference linked to a product and revision. It can support comparison, but it does not replace the inspection records, test data or acceptance decisions required for the project.",
+        "intent": "澄清首件检验与批准参考样品的不同证据作用",
+        "snippet": "目标为 45–55 词的定义对比，适合段落 Featured Snippet"
+      },
+      {
+        "question": "What should be reviewed before a pilot run is released to production?",
+        "answer": "Review the agreed drawing and BOM baseline, first article status, pilot results, critical process and assembly settings, test limits and coverage, traceability, and unresolved deviations. Each open item needs a documented disposition and a decision on whether it blocks release. The exact exit criteria and required customer approvals should be defined in the NPI plan.",
+        "intent": "建立试产转量产的审查清单",
+        "snippet": "目标为 45–60 词，按放行证据和开放项处置组织"
+      },
+      {
+        "question": "How long do RF prototyping and NPI take?",
+        "answer": "There is no universal NPI schedule. The fastest prototype reference is about two weeks, but it is not a general lead-time promise. Actual timing depends on design freeze, geometry, materials, finishing, quantity, test scope, deviation cycles and capacity. Mass-production delivery must be assessed separately from prototype and stage-gate timing.",
+        "intent": "了解打样与 NPI 时间且避免统一交期误解",
+        "snippet": "目标为 45–55 词，保留最快参考并明确非通用承诺"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList", "FAQPage"],
+    "seo_title": "Prototype to Mass Production | RF NPI & Pilot Run | SONNE",
+    "meta_description": "A structured RF NPI path: prototype validation, first article approval, pilot run and controlled mass production with golden samples, test baselines and change control.",
+    "focus_keyphrase": "prototype to mass production"
+  },
+  {
+    "number": 21,
+    "id": "page-21",
+    "name": "测试与质量 Testing & Quality",
+    "url": "/engineering/testing-quality",
+    "type": "工程能力",
+    "buyer_segment": "进行供应商质量评估、定义验证计划或审查来料/量产数据的 SQE、资深采购、RF 工程师和渠道技术负责人",
+    "inner_monologue": "我需要能读懂、能追溯、能对应具体产品和批次的测试证据，而不是一句 100% tested 或一张没有条件的曲线。",
+    "pain_points": [
+      "测试项目罗列很多，但不清楚 VNA、PIM、可靠性和矩阵自动化分别证明什么",
+      "报告缺少产品标识、条件、限值、设备/方法和判定上下文，曲线无法用于验收或横向比较",
+      "100% 测试等表述没有对应产品、参数和覆盖率定义，容易把关键测试误解为所有测试",
+      "批次、序列、图纸版本和异常处置之间缺少关联，SQE 难以完成追溯和纠正措施审查"
+    ],
+    "differentiators": [
+      "VNA、PIM、可靠性和多端口矩阵自动化测试能力按适用产品与指标组织，不用单一测试覆盖所有质量风险",
+      "以报告字段、测试条件、限值和判定解释证据，让买方能够审查结果而不是只接收 pass 结论",
+      "ISO 9001 质量体系与 Lot/Serial 追溯口径连接生产记录和异常评审，支持项目级证据核验",
+      "多端口矩阵自动化测试用于提升多端口数据采集的一致性，实际覆盖和报告内容仍按具体产品验证计划确定"
+    ],
+    "conversion": "主：Request Sample Test Report；次：Define Your Test Requirements，分别承接报告验真和验证计划评审",
+    "three_gates": {
+      "search_demand": "RF testing and quality、VNA test、PIM test、reliability testing、matrix switch automated testing；SV 均未测，KD 均未测，以供应商审核、报告解读和覆盖率定义问题承接",
+      "internal_links": "上游入口：/engineering、/products/base-station-rf、/products/rf-microwave-filters；下游：/engineering/npi、/resources/datasheets、/about/factory、/request-a-quote",
+      "citation_value": "发布《RF Test Report Reading Guide》和《Verification Coverage Matrix》：前者解释产品/批次、参数、条件、限值、设备/方法、曲线、判定；后者按样品/首件/试产/量产定义项目测试覆盖与追溯字段"
+    },
+    "keywords": {
+      "focus": {"term": "RF testing and quality", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "VNA test", "sv": null, "kd": null},
+        {"term": "PIM test", "sv": null, "kd": null},
+        {"term": "reliability testing", "sv": null, "kd": null},
+        {"term": "matrix switch automated testing", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "RF component manufacturer audit", "sv": null, "kd": null},
+        {"term": "ISO 9001 RF supplier", "sv": null, "kd": null},
+        {"term": "PIM test report", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：以 RF testing and quality verification 为主，并用 buyers can audit 对应审核意图",
+        "H2：分别布局 VNA test、PIM test、reliability testing 和 matrix switch automated testing",
+        "正文/FAQ：覆盖 RF component manufacturer audit、ISO 9001 RF supplier、PIM test report，100% 仅按具体产品/指标限定"
+      ]
+    },
+    "h1": "RF Testing and Quality Verification Buyers Can Audit",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "SONNE 能否提供可审查的 RF 测试与质量证据，而不只是质量口号？",
+        "h2": "RF Testing and Quality Verification Buyers Can Audit",
+        "points": [
+          "首屏明确证据链：产品与版本标识、约定测试条件、实测数据、限值判定、批次/序列关联和异常处置",
+          "列出 VNA、PIM、可靠性、多端口矩阵自动化四类能力，实际测试项目由产品和规格决定",
+          "ISO 9001 作为质量体系事实单独展示，不把体系认证表述为任一产品性能或外部产品认证",
+          "主 CTA 索取样例报告，次 CTA 提交关键参数和覆盖要求，便于在采购前统一证据预期"
+        ],
+        "image": "使用真实 file：factory-rf-testing.webp（1920×1080），16:9 展示技术人员用台式仪器测试 RF 滤波器；画面旁只列证据字段，不叠加虚构测试结果",
+        "cta": "Request Sample Test Report"
+      },
+      {
+        "number": 2,
+        "name": "Test Capability Matrix",
+        "question": "不同测试分别回答什么性能或质量风险，需要怎样定义条件？",
+        "h2": "Match Each Test Method to the Question It Answers",
+        "points": [
+          "VNA 行：用于审查适用的 S 参数，如插损、回波、抑制或隔离；输入含频段、端口、阻抗、扫描与校准/设置条件，输出曲线、数据和判定",
+          "PIM 行：用于按约定条件评估无源互调；输入含适用频段、功率、端口/连接与测试配置、限值，输出对应结果和条件记录",
+          "Reliability 行：用于验证项目规定的环境或耐久要求；必须先定义试验项目、条件、样本、前后性能比较和验收，不宣称未确认的盐雾/EMC 等能力",
+          "Matrix Automation 行：多端口矩阵自动化用于按定义序列采集多端口数据；输出与产品/端口/步骤关联的记录，具体效率或覆盖数字不编造"
+        ],
+        "image": "不配图；使用 1250×780 四行测试矩阵，列为方法、证明什么、必需条件、输出证据、适用边界；方法名称与正文可检索，不只做图标",
+        "cta": "Define Your Test Requirements"
+      },
+      {
+        "number": 3,
+        "name": "Report Anatomy",
+        "question": "一份可用于验收和审核的测试报告应包含哪些上下文字段？",
+        "h2": "Read the Conditions and Traceability behind Every RF Result",
+        "points": [
+          "报告头字段：产品/型号或项目标识、图纸/规格版本、Lot/Serial（按项目适用）、测试日期、报告或记录标识和测试阶段",
+          "方法字段：测试参数、端口、频率范围、功率或环境条件、设备/方法信息、设置与适用校准状态；只展示有实际记录支持的信息",
+          "结果字段：规格限值、实测值或曲线、单位、判定、偏差/备注；PIM 等结果必须和测试配置一起阅读，不孤立比较单个 dBc 数字",
+          "审核练习用一份脱敏样例报告标注上述字段，并提供 Buyer Check 列：条件是否一致、限值是否明确、结果是否对应同一产品和版本"
+        ],
+        "image": "使用真实 file：factory-test-rig.webp（1024×576）作为测试环境实拍；主视觉使用自制脱敏报告字段示意，所有数值用字段标签或空白，不虚构客户、曲线和结果",
+        "cta": "Request Sample Test Report"
+      },
+      {
+        "number": 4,
+        "name": "Coverage and Calibration Review",
+        "question": "测试覆盖率、设备状态和抽样规则应如何约定，才能避免 100% 表述失真？",
+        "h2": "Define Test Coverage and Equipment Status before Release",
+        "points": [
+          "Coverage Matrix 按 Prototype、FAI、Pilot、Production 分行，列参数、样本/覆盖率、测试阶段、方法、记录和责任评审点，由具体产品控制计划确定",
+          "source-01 的 100% 关键 RF 测试只能落到对应产品和明确指标；禁止写成所有产品、所有参数、所有可靠性项目均 100% 验证",
+          "设备/校准信息设置设备标识、适用方法、状态与有效期等审核字段；发布样例时仅引用真实记录，缺失项不得补猜",
+          "Coverage Review 由买方 SQE/工程与 SONNE 项目角色确认关键特性、覆盖率和异常处置后，再将要求写入 NPI/生产测试基线"
+        ],
+        "image": "不配图；制作可下载的 Verification Coverage Matrix，含测试覆盖率定义行和 100% 使用边界提示；另设 Equipment Status 审核栏，不展示虚构证书编号",
+        "cta": "Review Your Coverage Matrix"
+      },
+      {
+        "number": 5,
+        "name": "Traceability and Nonconformance",
+        "question": "结果异常时，如何追溯到产品、版本和处置记录？",
+        "h2": "Trace Test Results to Lots, Revisions and Corrective Actions",
+        "points": [
+          "追溯索引关联产品/项目、Lot/Serial（按项目适用）、图纸/BOM 版本、生产/测试阶段、测试记录和偏差状态，具体深度按产品约定",
+          "异常记录字段包括发现条件、涉及范围、隔离或处置状态、初步评审、责任角色和复验结果，不预先承诺统一处理时限",
+          "需要系统纠正措施时，8D 表可组织问题描述、围堵、根因、纠正/预防措施和验证；是否启动及交付形式按具体项目确认",
+          "Change Review 将设计、工艺或测试方法变更与 ECN 关联，确保后续结果使用正确版本，并链接 /engineering/npi 查看 Gate"
+        ],
+        "image": "使用真实 file：factory-assembly-detail.webp（1024×576）展示 RF 滤波器装配细节，旁配 Lot/Serial→Revision→Test Record→Disposition 追溯图，不放置未经授权客户异常案例",
+        "cta": "Discuss Traceability Requirements"
+      },
+      {
+        "number": 6,
+        "name": "Quality System and Audit Evidence",
+        "question": "SQE 做供应商审核时，可以把哪些质量证据列入清单？",
+        "h2": "Build an Audit Checklist around Verifiable Quality Records",
+        "points": [
+          "体系入口列 ISO 9001，并区分体系证据与具体产品测试证据；审核范围按买家项目和实际可提供记录确认",
+          "审核清单六组：规格/图纸控制、设备与方法、测试覆盖、追溯、偏差/纠正措施、ECN；每组列记录名称、对应版本和审查问题",
+          "现场或远程审核的时间、范围、保密和记录访问方式需按项目确认，不公开承诺固定审核政策或通用 NDA 范围",
+          "下游链接 /about/factory 查看真实测试与生产区域，/resources/datasheets 用于申请图纸、S 参数或报告等工程资料"
+        ],
+        "image": "使用真实 file：factory-test-station.webp（1024×575），16:9 展示测试工位；下方用六组审核清单，不再重复摆拍设备大图，不显示虚构认证徽章",
+        "cta": "Prepare a Quality Evidence Review"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "买家在解读 PIM 报告、覆盖率和追溯证据时最常问什么？",
+        "h2": "RF Testing and Quality Evidence FAQs",
+        "points": [
+          "覆盖 source-01 的 PIM 报告解读与测试覆盖率两个种子问题，并补充 VNA 报告、追溯和样例报告申请",
+          "答案说明条件、产品、指标和批次边界，避免把所有测试或所有产品泛化成统一保证",
+          "对校准、覆盖和交付报告只给审核字段与项目确认流程，不编造设备证书或政策",
+          "FAQ 后保留样例报告申请和测试需求提交两个低门槛入口"
+        ],
+        "image": "不配图；五问手风琴，PIM 问题下链接 Report Anatomy，覆盖率问题下链接 Coverage Matrix；FAQPage 内容与可见问答保持一致",
+        "cta": "— 本段解答证据核验问题，下一屏提供报告申请"
+      },
+      {
+        "number": 8,
+        "name": "Test Evidence CTA",
+        "question": "如何索取相关样例报告或让工程团队按我的指标定义验证证据？",
+        "h2": "Request Evidence That Matches Your Product and Test Plan",
+        "points": [
+          "表单字段：产品类型、应用、关键参数、测试阶段、所需报告类型、Lot/Serial 追溯要求及项目阶段",
+          "PIM 需求增加频段、功率、端口/连接和限值；VNA 增加 S 参数、频率范围和端口；可靠性需求写清试验条件与验收目标",
+          "可选择 Sample Report 或 Project Test Review；样例仅用于说明证据形式，不代表买家产品实测结果或统一报告交付承诺",
+          "完整项目进入工程评审后确认测试覆盖、条件与记录范围；正式 RFQ 链接 /request-a-quote，询盘邮箱为 info@zhide-tec.com"
+        ],
+        "image": "不配图；使用双路径转化面板，左侧 Sample Test Report 最小表单，右侧 Project Test Review 参数清单与上传入口，避免要求机密资料才能查看基本流程",
+        "cta": "Request Sample Test Report"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How should I read a PIM test report?",
+        "answer": "Read the PIM result together with the product identity, frequency or band, test power, port and connection configuration, measurement units, limit and test conditions. Check whether the reported result corresponds to the required sample or lot and acceptance criterion. A single dBc value without those conditions is not enough for a meaningful comparison or approval decision.",
+        "intent": "读懂 PIM 报告并避免脱离条件比较数值",
+        "snippet": "目标为 50–60 词，按标识、条件、限值和批次顺序解答"
+      },
+      {
+        "question": "What is SONNE's RF test coverage?",
+        "answer": "Test coverage is defined by the product, critical characteristics, agreed specification and production stage. SONNE identifies critical RF testing and can apply 100% verification only where the specific product and measurement requirement support that statement. It should not be interpreted as 100% coverage of every test on every product. Confirm the coverage matrix during project review.",
+        "intent": "核实 100% 测试表述的实际范围",
+        "snippet": "目标为 50–60 词，明确按产品和指标定义并否定全产品泛化"
+      },
+      {
+        "question": "What information should a VNA test report include?",
+        "answer": "A useful VNA report should identify the product and revision, relevant lot or serial information where applicable, ports, frequency range, measured S-parameters, test settings and applicable calibration status. It should also show limits, units, curves or numerical results and the acceptance decision. The exact report content and supplied data format should be agreed for the project.",
+        "intent": "审查 VNA 报告是否具备验收所需上下文",
+        "snippet": "目标为 50–60 词的字段清单型 Featured Snippet"
+      },
+      {
+        "question": "How are RF test results traced to production records?",
+        "answer": "Traceability should link the test record to the product or project, applicable lot or serial identifier, drawing or BOM revision, production and test stage, and any deviation disposition. The required depth depends on the product and agreed control plan. During supplier review, buyers can request evidence showing those links rather than relying on an isolated curve or summary value.",
+        "intent": "判断测试结果能否回溯到具体产品和生产版本",
+        "snippet": "目标为 45–60 词，列出追溯链并提出审核证据"
+      },
+      {
+        "question": "Can I request a sample RF test report before placing an order?",
+        "answer": "You can request a sample test report to review the evidence format and discuss the fields needed for your project. Identify the product type and test method, such as VNA or PIM, so the request can be directed appropriately. A sample is illustrative only; actual measurements, coverage, traceability and report deliverables must be confirmed for your product and specification.",
+        "intent": "在下单前验证报告形式并明确项目证据要求",
+        "snippet": "目标为 45–60 词，直接肯定申请路径并说明样例非项目结果"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList", "FAQPage"],
+    "seo_title": "VNA, PIM & Reliability Testing | RF Quality Evidence | SONNE",
+    "meta_description": "VNA, PIM, reliability and matrix-switch automated testing with traceable reports, ISO 9001 quality system and batch-level verification for RF components.",
+    "focus_keyphrase": "RF testing and quality"
+  }
+]

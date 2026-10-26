@@ -1,0 +1,1136 @@
+[
+  {
+    "number": 11,
+    "id": "page-11",
+    "name": "解决方案 Solutions",
+    "url": "/solutions",
+    "type": "应用聚合",
+    "buyer_segment": "系统架构师、集成商技术负责人与项目采购，处于按应用场景筛选器件组合和供应商的初步评估阶段",
+    "inner_monologue": "我只知道网络场景和系统限制，能否不从器件型号开始，就找到正确的工程入口？",
+    "pain_points": [
+      "熟悉链路预算、覆盖或部署环境，但不确定应进入滤波器、波导、合路器还是结构件产品线",
+      "不同应用对频段、隔离、PIM、极化、防护和安装空间的优先级不同，通用产品目录无法直接回答",
+      "需要向内部团队说明选型路径，却缺少可截图的应用—系统位置—产品线对照表",
+      "担心过早提交不完整型号导致反复沟通，希望先进行应用级工程评估"
+    ],
+    "differentiators": [
+      "以六类应用入口连接对应产品线，让买家从系统约束进入器件评估，而不是先猜型号",
+      "核心标准产品覆盖 DC–40 GHz，选定定制微波与波导项目可达 110 GHz，便于按频段分流且明确验证边界",
+      "VNA、PIM、可靠性及多端口矩阵自动化测试能力可转化为按项目约定的验证计划",
+      "完整 RFQ 通常约 24 小时可获得初步工程反馈，帮助买家尽早识别缺失参数而不等同于报价或交期承诺"
+    ],
+    "conversion": "主：Describe Your Application；次：先进入对应应用方案，查看选型框架并准备 RFQ 参数",
+    "three_gates": {
+      "search_demand": "RF solutions by application；SV 未测、KD 未测，以‘我的应用该选哪类器件’这一明确决策问题组织内容",
+      "internal_links": "上游入口：/、/products；下游：/solutions/5g-base-station、/solutions/microwave-backhaul、/solutions/satellite-earth-station、/solutions/das-ibs、/solutions/fttx、/solutions/data-center-enclosures、/resources/rfq-guide、/request-a-quote",
+      "citation_value": "原创《应用约束到产品线》路由表：应用场景、系统位置、首要约束、关键权衡、候选产品线、RFQ 输入六项，可供系统集成商内部评审引用"
+    },
+    "keywords": {
+      "focus": {"term": "RF solutions by application", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "5G base station", "sv": null, "kd": null},
+        {"term": "microwave backhaul", "sv": null, "kd": null},
+        {"term": "satellite earth station", "sv": null, "kd": null},
+        {"term": "DAS", "sv": null, "kd": null},
+        {"term": "FTTX", "sv": null, "kd": null},
+        {"term": "enclosures", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "RF system component supplier", "sv": null, "kd": null},
+        {"term": "custom RF solutions OEM", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：RF solutions by application 作为应用导航主语义，不承诺单一名词方案",
+        "H2：六类 secondary 词分别进入应用卡片与系统接口对照",
+        "正文/FAQ：RF system component supplier、custom RF solutions OEM 用于评估流程与定制边界"
+      ]
+    },
+    "h1": "Application-Driven RF and Enclosure Solutions",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这里能否按我的网络应用找到正确的器件与工程入口？",
+        "h2": "Application-Driven RF and Enclosure Solutions",
+        "points": [
+          "首屏一句话说明面向 5G、微波回传、卫星地面站、DAS/IBS、FTTX 与设备机柜的应用级导航",
+          "主 CTA 打开应用描述表单，次入口为六个场景卡片，不让买家先填写具体料号",
+          "补充工程优先定位与 DC–40 GHz 核心组合、选定定制项目可达 110 GHz 的边界说明"
+        ],
+        "image": "首屏采用 1600×900 六宫格应用拼图，使用真实文件 app-basestation-5g-site.webp、card-microwave.webp、satellite-693224-1280.webp、card-ibs.webp、market-ftth.webp、market-datacenter.webp；每格只标应用名，不冒充客户项目",
+        "cta": "Describe Your Application"
+      },
+      {
+        "number": 2,
+        "name": "Application Constraints",
+        "question": "在不知道器件名称时，我应该先提供哪些系统约束？",
+        "h2": "Start with Your Deployment Constraints",
+        "points": [
+          "设置约束采集表，字段为应用、站点环境、工作频段、系统位置、接口、机械包络和验证优先级",
+          "用示例说明共站干扰、链路损耗、极化分离、室内 PIM、户外防护分别属于不同问题",
+          "提示未知字段可标记 TBD，但频段、数量与目标验证项会直接影响后续评估完整性"
+        ],
+        "image": "不配图；使用 1200×760 可填写约束表，列为约束、已知值、单位、未知项、对选型的影响",
+        "cta": "—（先完成应用识别，本节不设置按钮）"
+      },
+      {
+        "number": 3,
+        "name": "Application Paths",
+        "question": "六个应用中，哪一个最贴近我的项目？",
+        "h2": "Choose an Application Path",
+        "points": [
+          "每张卡片只写部署目标、两个典型约束和一个待确认输入，避免复制产品分类页文案",
+          "卡片依次链接六个已规划应用页，并以‘查看系统位置与权衡’作为锚文本语义",
+          "增加‘跨应用项目’提示，允许同时选择射频器件与精密结构件并进入统一应用评估"
+        ],
+        "image": "卡片使用 480×480 真实场景图：app-basestation-5g-site.webp、card-microwave.webp、satellite-693224-1280.webp、card-ibs.webp、market-ftth.webp、market-datacenter.webp，统一裁切并保留原 alt 语义",
+        "cta": "Explore Application Solutions"
+      },
+      {
+        "number": 4,
+        "name": "System-to-Product Routing",
+        "question": "选定应用后，系统位置如何映射到候选产品线？",
+        "h2": "Match System Interfaces to Product Lines",
+        "points": [
+          "制作路由矩阵，列为系统位置、主要矛盾、候选产品线、必须输入、下一步 URL",
+          "示例包括 RRU 滤波与共站合路、E-band OCU 与波导、地面站 OMT、DAS POI 与低 PIM 分配、FTTX 配线与接续",
+          "所有产品线链接指向 /products 下已规划页面；三级详情页只标注为后续阶段目标，不虚构现成 URL"
+        ],
+        "image": "不配图；使用横向泳道图与六行路由表，移动端改为应用折叠卡片，保留全部表头",
+        "cta": "Review Product Lines"
+      },
+      {
+        "number": 5,
+        "name": "Engineering Evidence",
+        "question": "在提交项目前，我能核验哪些制造与测试依据？",
+        "h2": "Check Engineering Evidence Before the RFQ",
+        "points": [
+          "按‘能力—证明什么—需索取什么’列示 CNC、VNA、PIM、可靠性和矩阵自动化测试，不将能力等同于所有产品默认测试",
+          "标明 40 GHz 以上机械公差可达 ±0.01 mm、60 GHz 以上镀层厚度控制可达 1 μm，均须视结构确认",
+          "链接 /engineering/testing-quality 与 /engineering/manufacturing，并引导按项目确认报告、样本与验收范围"
+        ],
+        "image": "使用 1200×675 双图实拍 factory-cnc-cavity-milling.webp 与 factory-rf-testing.webp，图注分别为加工与测试能力，不附加未经证实的检测结果",
+        "cta": "Review Testing and Manufacturing"
+      },
+      {
+        "number": 6,
+        "name": "Application Review Process",
+        "question": "应用描述提交后，会经过哪些评估步骤？",
+        "h2": "Prepare an Application Review",
+        "points": [
+          "流程为应用约束整理、系统位置确认、候选产品线分流、缺失参数清单、项目级工程评估",
+          "列出可上传材料：band plan、链路或覆盖草图、接口图、机械图、目标数量、验证要求",
+          "说明完整 RFQ 通常约 24 小时获得初步工程反馈；反馈不是报价、打样或量产交期保证"
+        ],
+        "image": "不配图；使用五步流程图，每步显示输入、责任方与输出物，末端链接 /resources/rfq-guide",
+        "cta": "Read the RFQ Guide"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "应用导航与初步评估还有哪些常见疑问？",
+        "h2": "Application Selection FAQs",
+        "points": [
+          "以手风琴呈现本页五个 FAQ，首问直接回答‘我的应用该选哪类器件’",
+          "答案保持应用级，不在这里重复各产品页的参数表或统一商业政策",
+          "每个答案按主题链接对应应用页或 RFQ 指南，页面 Schema 仍仅使用源定类型"
+        ],
+        "image": "不配图；使用可展开 FAQ 列表，默认展开首问并保留可抓取的完整答案文本",
+        "cta": "Ask an Application Question"
+      },
+      {
+        "number": 8,
+        "name": "Conversion",
+        "question": "我如何用最低成本启动一次有针对性的应用评估？",
+        "h2": "Describe Your Application",
+        "points": [
+          "表单字段为应用类型、系统位置、频段、关键约束、目标数量、项目阶段与附件，未知值允许标 TBD",
+          "提交前显示将获得的输出：应用分流、缺失参数清单与后续工程沟通建议，而非即时报价承诺",
+          "提供 info@zhide-tec.com 作为备用询盘入口，并链接 /request-a-quote 承载完整参数提交"
+        ],
+        "image": "不配图；使用双栏转化卡，左侧为三项提交收益，右侧为短表单与隐私必要说明",
+        "cta": "Describe Your Application"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do I know which SONNE product line fits my application?",
+        "answer": "Start with the system location and constraint, not a part name. Identify the band plan, interface, mechanical envelope, and the issue you need to control, such as isolation, PIM, polarization, or outdoor protection. The application routing table then points to candidate product lines for project-specific engineering review.",
+        "intent": "解决只懂应用、不懂器件分类时的导航与选型入口问题",
+        "snippet": "目标为步骤式 Featured Snippet，答案约 45–60 词并配应用路由表"
+      },
+      {
+        "question": "Can I submit an application before I have final part numbers?",
+        "answer": "Yes. An application review can begin with your deployment scenario, frequency range, system interface, estimated quantity, and known constraints. Mark unresolved items as TBD. SONNE can identify missing inputs and candidate product lines, while final specifications and acceptance criteria must be confirmed before quotation or production decisions.",
+        "intent": "降低没有料号或完整规格时不敢询盘的门槛",
+        "snippet": "目标为是非加前置条件摘要，答案约 45–60 词"
+      },
+      {
+        "question": "Does SONNE offer one standard solution for every network?",
+        "answer": "No. Applications may share component families, but frequency plans, interfaces, power, PIM, mechanical limits, and verification requirements differ. SONNE uses standard product capabilities where appropriate and evaluates custom requirements by topology and validation needs. Final suitability is established against the project specification rather than a universal solution claim.",
+        "intent": "确认方案是否定制以及是否存在一刀切的过度承诺",
+        "snippet": "目标为边界清晰的定义型摘要，答案约 45–60 词"
+      },
+      {
+        "question": "Which application areas are covered on this solutions hub?",
+        "answer": "The hub covers 5G base stations and RRU, microwave backhaul, satellite earth stations, DAS and in-building coverage, FTTX fiber distribution, and equipment enclosures. Each path starts with deployment constraints and then links to relevant RF, waveguide, combiner, passive, fiber-distribution, or precision-enclosure product lines.",
+        "intent": "快速核对应用覆盖范围并进入对应页面",
+        "snippet": "目标为列表型 Featured Snippet，答案约 40–50 词"
+      },
+      {
+        "question": "What happens after I describe my application?",
+        "answer": "The engineering team reviews the application, system position, available specifications, and requested validation. You may receive questions, a candidate product-line route, or a list of missing inputs. A complete RFQ typically receives initial engineering feedback within about 24 hours; this is not a guaranteed quotation, sample lead time, or production delivery date.",
+        "intent": "了解提交后的响应物与时间预期，避免把反馈当成交期承诺",
+        "snippet": "目标为流程摘要，答案约 55–65 词并突出反馈边界"
+      }
+    ],
+    "schema": ["CollectionPage", "BreadcrumbList"],
+    "seo_title": "RF Solutions for 5G, Backhaul, Satellite, DAS & FTTX | SONNE",
+    "meta_description": "Application solutions for 5G base stations, microwave backhaul, satellite earth stations, DAS/IBS, FTTX and equipment enclosures, built on SONNE engineering and manufacturing.",
+    "focus_keyphrase": "RF solutions by application"
+  },
+  {
+    "number": 12,
+    "id": "page-12",
+    "name": "5G 基站与 RRU",
+    "url": "/solutions/5g-base-station",
+    "type": "应用方案",
+    "buyer_segment": "宏站与 RRU 设备商的射频架构师、无线基础设施方案商及项目采购，处于 band plan 和站点架构评估阶段",
+    "inner_monologue": "共站干扰、低 PIM 和紧凑结构相互牵制，我需要先看清系统权衡，再决定滤波、双工或合路方案。",
+    "pain_points": [
+      "4T4R 与 8TR 架构、N28/N78 频段及多频共站组合使器件接口和数量难以直接套用标准型号",
+      "邻频抑制、插入损耗、隔离、功率和 PIM 同时受限，单看一条典型曲线无法完成系统判断",
+      "担心样品性能可接受但批量 PIM 与射频一致性缺少可审核的验证依据",
+      "RFQ 若缺少干扰频段、双工方式、功率和机械包络，会反复补充并延误工程评估"
+    ],
+    "differentiators": [
+      "以 4T4R/8TR、N28/N78 和共站 band plan 组织评估，直接对应基站系统位置而非泛化器件目录",
+      "已有 700 MHz 低 PIM 双工器、800/900 MHz 4T4R 与 3400–3600 MHz 8TR 能力案例口径，可按授权范围展示参数证据",
+      "VNA、PIM、可靠性与矩阵自动化测试能力支持把样品判断转化为约定的批次验证计划",
+      "滤波、双工、TMA 与共站合路产品线可从同一系统图进入，减少跨页面拼接信息的成本"
+    ],
+    "conversion": "主：Discuss Your Band Plan；次：查看基站与共站候选产品线并了解 PIM 验证输入",
+    "three_gates": {
+      "search_demand": "5G base station RF components；SV 未测、KD 未测，承接‘共站干扰怎么解决’与‘N28/N78 能否评估’的明确方案问题",
+      "internal_links": "上游入口：/solutions、/products/base-station-rf；下游：/products/base-station-rf、/products/rf-combiners、/products/rf-microwave-filters、/engineering/testing-quality、/resources/rfq-guide、/request-a-quote",
+      "citation_value": "原创《4T4R/8TR 共站 RF 权衡表》：架构、频段、系统位置、干扰源、插损/隔离/PIM/功率/包络优先级与 RFQ 必填项"
+    },
+    "keywords": {
+      "focus": {"term": "5G base station RF components", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "RRU filter", "sv": null, "kd": null},
+        {"term": "4T4R duplexer", "sv": null, "kd": null},
+        {"term": "N78 filter", "sv": null, "kd": null},
+        {"term": "base station duplexer", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "low PIM base station components", "sv": null, "kd": null},
+        {"term": "co-siting interference filter", "sv": null, "kd": null},
+        {"term": "multi-operator base station combiner", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：5G base station RF components 与 RRU 应用限定共同承载主词",
+        "H2：RRU filter、4T4R duplexer、N78 filter、base station duplexer 分配到系统位置与架构权衡",
+        "正文/FAQ：low PIM、co-siting、multi-operator 均保留 base station 语境，避免与通用合路器词互耗"
+      ]
+    },
+    "h1": "RF Components for 5G Base Stations and RRU",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这里是否针对我的基站架构、共站干扰和批量 PIM 问题？",
+        "h2": "RF Components for 5G Base Stations and RRU",
+        "points": [
+          "首屏明确宏站/RRU 应用、4T4R/8TR 架构与 N28/N78 等项目评估入口",
+          "价值句聚焦共站干扰、低 PIM 与紧凑集成的联合约束，不声称单一器件解决全部站点问题",
+          "主 CTA 收集 band plan，次入口跳转系统位置图与验证证据"
+        ],
+        "image": "使用 1600×900 场景图 app-basestation-5g-site.webp，叠加不含客户信息的 RRU—合路—天线简化系统线框，图注说明为应用示意",
+        "cta": "Discuss Your Band Plan"
+      },
+      {
+        "number": 2,
+        "name": "Site Constraints",
+        "question": "我的站点约束中，哪些信息决定射频方案？",
+        "h2": "Define the Site and RRU Constraints First",
+        "points": [
+          "约束清单包含 4T4R/8TR、频段与双工方式、载波功率、收发间隔、共站干扰源和可用机械空间",
+          "要求区分必须满足的阻断频段与期望优化的裕量，避免只用‘高隔离’描述需求",
+          "记录 PIM 目标、连接器、安装方向和环境要求，未确定项可标 TBD 并进入工程澄清"
+        ],
+        "image": "不配图；使用 1200×780 站点约束清单，列为输入、示例单位、为何影响方案、是否必填",
+        "cta": "Prepare Your Site Constraints"
+      },
+      {
+        "number": 3,
+        "name": "System Positions",
+        "question": "滤波、双工、TMA 与合路分别位于系统哪里？",
+        "h2": "Map Each Component to the Radio Path",
+        "points": [
+          "系统图标出 RRU 射频口、滤波/双工、塔顶放大、共站合路与天线馈线接口，不画成唯一固定架构",
+          "每个位置只说明功能与关键输入，并链接 /products/base-station-rf、/products/rf-combiners 或 /products/rf-microwave-filters",
+          "增加边界提示：实际拓扑取决于设备架构与 band plan，需避免把不同制式或端口配置直接互换"
+        ],
+        "image": "不配图；绘制 1440×720 可编辑系统位置图，节点下标注候选产品线 URL 与所需 band plan 字段",
+        "cta": "Review Base Station Product Lines"
+      },
+      {
+        "number": 4,
+        "name": "RF Trade-offs",
+        "question": "抑制、插损、隔离、PIM、功率与尺寸应如何一起评估？",
+        "h2": "Balance Rejection, Loss, Isolation, PIM and Size",
+        "points": [
+          "制作权衡矩阵，逐行列出指标定义、系统影响、与其他指标的冲突、所需测试条件和验收口径",
+          "说明更高抑制或隔离要求可能影响拓扑、插损与体积，不能仅凭单项典型值判断方案",
+          "将 PIM 与功率、连接器和装配条件一起记录，要求数据表、曲线和报告使用同一测试配置"
+        ],
+        "image": "不配图；使用六列权衡表和一张二维优先级示意，不填造未经源证实的数值",
+        "cta": "Compare Your RF Priorities"
+      },
+      {
+        "number": 5,
+        "name": "Architecture and Band Evidence",
+        "question": "N28/N78 与 4T4R/8TR 有哪些可核验的能力依据？",
+        "h2": "Review Band and Architecture Evidence",
+        "points": [
+          "证据索引列示 700 MHz 低 PIM 双工器、800/900 MHz 4T4R、3400–3600 MHz 8TR 三类既有能力案例口径",
+          "上线时仅使用已获授权的匿名频段、结构与测试摘要；没有授权不得添加客户名、logo 或站点结果",
+          "N28/N78 项目仍需按准确上下行、带宽、功率、隔离与包络复核，历史能力不等于任意规格可直接满足"
+        ],
+        "image": "使用 1024×571 产品图 prod-n28-multiplexer.webp 与 1200×675 实拍 factory-rf-testing.webp；另配架构证据表，不将图片标为未授权客户案例",
+        "cta": "Check Your Band Plan"
+      },
+      {
+        "number": 6,
+        "name": "Batch Verification",
+        "question": "样品通过后，批量一致性应如何用证据管理？",
+        "h2": "Plan Verification Beyond a Single Sample",
+        "points": [
+          "验证计划列出样品基线、PIM/VNA 项目、可靠性要求、抽样或覆盖范围、报告格式与批次标识需求",
+          "展示 VNA、PIM、可靠性和矩阵自动化测试能力，但不扩展为所有基站器件所有指标均 100% 测试",
+          "引导 SQE 在下单前确认验收限值、测试配置与可追溯记录，并链接 /engineering/testing-quality"
+        ],
+        "image": "使用 1200×675 实拍 factory-test-station.webp 与 factory-vna-tuning-line.webp，图注仅描述测试活动；旁置报告字段清单",
+        "cta": "Ask About PIM Verification"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "共站、N28/N78、架构和批量 PIM 还有哪些关键疑问？",
+        "h2": "5G Base Station RF FAQs",
+        "points": [
+          "覆盖源问题‘共站干扰怎么解决’与‘N28/N78 能做吗’，并补充 4T4R/8TR、批次 PIM 和 RFQ 输入",
+          "答案明确工程评估与项目验收边界，不承诺未给出的隔离、PIM 或交期数值",
+          "将相关问题分别链接至 band plan 表、测试质量页和完整 RFQ，而非重复营销文案"
+        ],
+        "image": "不配图；使用五问手风琴，问题下方保留对应系统图或表格的内部锚点",
+        "cta": "Ask a Base Station RF Question"
+      },
+      {
+        "number": 8,
+        "name": "Conversion",
+        "question": "提交哪些资料才能让基站项目进入有效工程讨论？",
+        "h2": "Discuss Your Band Plan",
+        "points": [
+          "表单字段为架构、频段/上下行、双工方式、干扰频段、插损/隔离/PIM/功率目标、连接器、包络、数量与阶段",
+          "支持上传 band plan、系统框图和 2D/3D 机械图，并列出缺失参数会收到的澄清输出",
+          "说明完整 RFQ 通常约 24 小时获得初步工程反馈，量产交期仍按图纸、数量、工艺与产能评估"
+        ],
+        "image": "不配图；使用 band plan 上传卡与 RFQ 字段清单，提交按钮后链接 /request-a-quote",
+        "cta": "Discuss Your Band Plan"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How can co-siting interference be addressed in a base station?",
+        "answer": "Start with a complete band plan showing wanted signals, interferers, duplex spacing, power, and antenna or feeder architecture. Engineering review can then assess filtering, duplexing, or combining positions and balance rejection, isolation, insertion loss, PIM, and size. The suitable approach and acceptance limits depend on the actual site configuration.",
+        "intent": "寻找共站干扰的系统级处理路径而非单一产品推销",
+        "snippet": "目标为步骤式 Featured Snippet，答案约 50–65 词"
+      },
+      {
+        "question": "Can SONNE support N28 and N78 base station projects?",
+        "answer": "N28 and N78 are within the stated base-station application scope, with existing capability references including an N28-related multiplexer and 3400–3600 MHz 8TR work. Each project still requires review of exact uplink and downlink ranges, bandwidth, rejection, power, PIM, interfaces, and mechanical limits before feasibility is confirmed.",
+        "intent": "确认具体 5G 频段能力并了解不能省略的评估条件",
+        "snippet": "目标为是非加条件型摘要，答案约 50–60 词"
+      },
+      {
+        "question": "How should I choose between 4T4R and 8TR for an RRU project?",
+        "answer": "That choice belongs to the radio and antenna architecture, not to a filter or duplexer alone. Define the number of transmit and receive paths, band plan, power, port mapping, and space envelope first. SONNE can then evaluate suitable RF component positions and interfaces for the selected 4T4R or 8TR architecture.",
+        "intent": "厘清架构选择责任并确定器件评估所需端口信息",
+        "snippet": "目标为定义与步骤摘要，答案约 45–60 词"
+      },
+      {
+        "question": "How is low PIM evaluated for repeat production?",
+        "answer": "Use an approved sample and an agreed production verification plan. Define PIM test conditions, power, connectors, acceptance limits, sampling or coverage, and required records before release. SONNE has PIM, VNA, reliability, and automated matrix test capabilities, but the exact production coverage must be confirmed for each component and order.",
+        "intent": "审核低 PIM 从样品到批量的验证方法与覆盖率",
+        "snippet": "目标为流程型 Featured Snippet，答案约 50–65 词"
+      },
+      {
+        "question": "What should a base station RF band plan include?",
+        "answer": "Include uplink and downlink frequencies, bandwidth, duplexing method, wanted and interfering bands, power, isolation or rejection targets, PIM requirements, port count, connectors, and mechanical envelope. Add architecture drawings and expected quantity where available. Missing values can be marked TBD, but feasibility and quotation require agreed final inputs.",
+        "intent": "准备完整 RFQ，减少工程往返澄清",
+        "snippet": "目标为清单型 Featured Snippet，答案约 45–60 词"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList", "FAQPage"],
+    "seo_title": "5G Base Station RF Components & Co-Siting Solutions | SONNE",
+    "meta_description": "Filters, duplexers, TMA and combiners for 5G macro sites and RRU. Solve co-siting interference, low PIM and compact-integration constraints with batch-verified production.",
+    "focus_keyphrase": "5G base station RF components"
+  },
+  {
+    "number": 13,
+    "id": "page-13",
+    "name": "微波回传 Microwave Backhaul",
+    "url": "/solutions/microwave-backhaul",
+    "type": "应用方案",
+    "buyer_segment": "点对点微波链路设备商的射频与结构工程师、ODM 项目负责人，处于 E-band 链路架构和户外硬件可行性评估阶段",
+    "inner_monologue": "E-band 链路损耗、收发隔离、加工精度和户外装配必须同时成立，还要弄清免调试到底能减少什么。",
+    "pain_points": [
+      "71–86 GHz 链路中插损、隔离、端口回波和机械接口相互影响，难以用低频器件经验直接判断",
+      "法兰、腔体公差、镀层与装配偏差可能改变高频结果，买家需要制造与测试证据而非单纯外形图",
+      "户外组合单元的密封、接口与表面处理要求必须按实际结构确认，不能笼统套用防护承诺",
+      "担心调试周期和量产重复性失控，需要区分免调试设计目标、验证工作与实际项目排期"
+    ],
+    "differentiators": [
+      "围绕点对点链路的 OCU、波导双工器、E-band 滤波与波导接口组织评估，直接回应损耗和隔离权衡",
+      "公开 OCU 6–80 GHz 定制与 E-band 71–86 GHz 应用口径，选定定制项目可达 110 GHz 且取决于拓扑与验证",
+      "40 GHz 以上机械公差可达 ±0.01 mm、60 GHz 以上镀层厚度控制可达 1 μm，均明确为视结构的能力上限表达",
+      "精密 CNC、镀层控制与 VNA 验证形成可审核路径，免调试不作为免除测试或固定交期的承诺"
+    ],
+    "conversion": "主：Send Link Requirements；次：查看波导与滤波候选产品线并准备高频机械接口资料",
+    "three_gates": {
+      "search_demand": "microwave backhaul components；SV 未测、KD 未测，以‘E-band 调试周期’和‘户外防护如何定义’承接明确评估问题",
+      "internal_links": "上游入口：/solutions、/products/waveguide-components；下游：/products/waveguide-components、/products/rf-microwave-filters、/engineering/manufacturing、/engineering/testing-quality、/resources/rfq-guide、/request-a-quote",
+      "citation_value": "原创《E-band 回传 RFQ 与权衡矩阵》：链路位置、收发频段、插损/隔离/回波、法兰、包络、户外条件、调试与验证输入"
+    },
+    "keywords": {
+      "focus": {"term": "microwave backhaul components", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "E-band waveguide", "sv": null, "kd": null},
+        {"term": "waveguide diplexer", "sv": null, "kd": null},
+        {"term": "OCU", "sv": null, "kd": null},
+        {"term": "tuning-free filter", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：microwave backhaul components 以 Waveguide and Filter Components 的应用语义承载",
+        "H2：E-band waveguide、waveguide diplexer、OCU、tuning-free filter 分配到链路位置、制造与调试章节",
+        "正文/FAQ：E-band tuning-free filter、71-86 GHz diplexer、outdoor combining unit OEM 保持回传应用限定"
+      ],
+      "long_tail": [
+        {"term": "E-band tuning-free filter", "sv": null, "kd": null},
+        {"term": "71-86 GHz diplexer", "sv": null, "kd": null},
+        {"term": "outdoor combining unit OEM", "sv": null, "kd": null}
+      ]
+    },
+    "h1": "Waveguide and Filter Components for Microwave Backhaul",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这里能否从回传链路约束评估 E-band 波导、双工与 OCU？",
+        "h2": "Waveguide and Filter Components for Microwave Backhaul",
+        "points": [
+          "首屏定位点对点微波回传硬件评估，突出 E-band 71–86 GHz、OCU 与波导接口，而非泛微波产品列表",
+          "用一句话说明损耗、隔离、加工和户外装配需联合评审，避免承诺单一指标代表整链路表现",
+          "主 CTA 引导提交链路需求，次入口查看系统位置与 RFQ 矩阵"
+        ],
+        "image": "使用 1600×900 技术场景底图 card-microwave.webp，叠加 ODU—OCU/双工器—天线接口线框；标注为应用示意，不虚构部署案例",
+        "cta": "Send Link Requirements"
+      },
+      {
+        "number": 2,
+        "name": "Link Constraints",
+        "question": "高频回传项目首先应锁定哪些链路与机械约束？",
+        "h2": "Define Link Budget and Interface Constraints",
+        "points": [
+          "输入表覆盖收发频段、带宽、双工间隔、链路损耗预算、功率、隔离和回波目标",
+          "机械部分记录波导口径、法兰、极化方向、安装包络、连接器及与 ODU/天线的装配关系",
+          "将户外温度、密封与其他环境要求列为项目输入，未确认的测试标准不得默认勾选"
+        ],
+        "image": "不配图；使用 1200×800 RFQ 约束表，分为电气、机械、环境和验证四组，字段含单位与 TBD 选项",
+        "cta": "Prepare Your Link Inputs"
+      },
+      {
+        "number": 3,
+        "name": "Link Architecture",
+        "question": "OCU、波导双工器、滤波器和波组件分别解决哪一段问题？",
+        "h2": "Map Components Across the Backhaul Link",
+        "points": [
+          "用链路图标出 ODU、收发分离/合路、滤波、波导传输和天线接口，并说明实际拓扑可按设备设计变化",
+          "每个节点给出候选产品线链接 /products/waveguide-components 或 /products/rf-microwave-filters，以及必须提交的频段和接口",
+          "OCU 以 6–80 GHz 定制口径展示，具体工作频段、功率和户外结构仍需项目级确认"
+        ],
+        "image": "使用 1024×571 产品图 prod-ocu-combiner-v2.webp 与 720×720 波导图 straight-waveguide.webp，旁配系统位置图，不以产品图代替电气证据",
+        "cta": "Review Waveguide and Filter Options"
+      },
+      {
+        "number": 4,
+        "name": "High-Frequency Trade-offs",
+        "question": "损耗、抑制、隔离、功率与体积之间需要怎样取舍？",
+        "h2": "Balance Loss, Rejection, Isolation and Integration",
+        "points": [
+          "权衡表列出指标、链路影响、可能冲突、验证方法与 RFQ 输入，避免只展示最佳典型曲线",
+          "说明更严格收发隔离或带外抑制可能影响拓扑、插损和机械尺寸，需以完整频段计划联合评估",
+          "对 71–86 GHz diplexer 明确要求 Tx/Rx 子带、保护带与端口定义，不能仅以 E-band 总范围代替规格"
+        ],
+        "image": "不配图；使用 1200×720 五维权衡矩阵及 Tx/Rx 频段示意，数值栏由项目填写，不预填虚构指标",
+        "cta": "Compare Link Trade-offs"
+      },
+      {
+        "number": 5,
+        "name": "Manufacturing Controls",
+        "question": "哪些加工与镀层证据能支撑高频结构评估？",
+        "h2": "Control Machining, Plating and Waveguide Interfaces",
+        "points": [
+          "按腔体、法兰、内腔表面与装配接口列出图纸评审和检测重点，强调高频性能需结合结构验证",
+          "公开口径写为 40 GHz 以上机械公差可达 ±0.01 mm、60 GHz 以上镀层厚度控制可达 1 μm，均视结构而非全产品保证",
+          "链接 /engineering/manufacturing 展示 CNC 与表面工程，并用 VNA 结果验证具体电气要求"
+        ],
+        "image": "使用 1200×675 实拍 factory-cnc-cavity-milling.webp、factory-machining-detail.webp 与 1024×1024 技术图 tech-precision-machining.webp，图注注明能力边界",
+        "cta": "Review Precision Manufacturing"
+      },
+      {
+        "number": 6,
+        "name": "Outdoor Integration and Validation",
+        "question": "户外防护、免调试与项目排期应如何诚实定义？",
+        "h2": "Specify Outdoor Integration and Validation Separately",
+        "points": [
+          "户外评审拆分密封接口、材料/镀层、装配、排水与环境试验要求，未确认的 IP、盐雾或 EMC 不作公开承诺",
+          "将 tuning-free 定义为减少人工调试的设计与制造路径，不代表所有结构免调试或免除 VNA 验证",
+          "调试与交付排期按设计成熟度、结构、数量和验证范围评估；最快约两周仅可作为打样参考，不作通用交期"
+        ],
+        "image": "不配图；使用‘结构评审—样件—VNA/约定环境验证—验收基线’流程图及户外输入清单",
+        "cta": "Define Your Validation Scope"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "E-band 调试、户外防护与定制输入还有哪些常见疑问？",
+        "h2": "Microwave Backhaul FAQs",
+        "points": [
+          "覆盖源问题‘E-band 调试周期多久’与‘户外防护怎么做’，并补充 71–86 GHz、双工器输入和免调试定义",
+          "答案不编造固定调试天数、统一 IP 等级或盐雾能力，均给出评估流程与确认项",
+          "FAQ 后保留链路资料提交入口，但本页 Schema 严格保持 WebPage 与 BreadcrumbList"
+        ],
+        "image": "不配图；使用五问手风琴和每项答案对应的约束表锚点",
+        "cta": "Ask a Backhaul Engineering Question"
+      },
+      {
+        "number": 8,
+        "name": "Conversion",
+        "question": "怎样提交一套可供高频回传工程评估的资料？",
+        "h2": "Send Your Link Requirements",
+        "points": [
+          "表单字段为链路类型、Tx/Rx 频段、带宽、功率、插损/隔离/回波目标、法兰、包络、户外条件、数量和验证要求",
+          "支持上传频段图、系统框图、2D/3D 图与接口定义，并提示缺失参数的工程澄清方式",
+          "完整 RFQ 通常约 24 小时获得初步工程反馈；报价、打样和量产排期分别按项目评估"
+        ],
+        "image": "不配图；使用分组 RFQ 表单与附件清单，按钮链接 /request-a-quote，旁链 /resources/rfq-guide",
+        "cta": "Send Link Requirements"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long does E-band filter or diplexer tuning take?",
+        "answer": "There is no responsible universal tuning-time figure. Timing depends on design maturity, topology, machining results, frequency range, and validation scope. A tuning-free design path may reduce manual adjustment, but it does not remove electrical verification. SONNE should review the drawings and acceptance requirements before confirming a project schedule.",
+        "intent": "了解 E-band 调试周期并识别免调试与固定交期的边界",
+        "snippet": "目标为条件式直接回答，答案约 50–60 词"
+      },
+      {
+        "question": "How is outdoor protection handled for a microwave OCU?",
+        "answer": "Outdoor protection is defined around the actual assembly: mating interfaces, sealing method, materials or plating, fasteners, drainage where relevant, and the required environmental test conditions. Provide the installation and specification requirements for review. IP, salt-spray, EMC, or other compliance claims must be confirmed for the specific design rather than assumed.",
+        "intent": "审核 OCU 户外结构与合规证据，避免通用防护承诺",
+        "snippet": "目标为清单型 Featured Snippet，答案约 50–65 词"
+      },
+      {
+        "question": "Can SONNE evaluate a 71–86 GHz waveguide diplexer?",
+        "answer": "Yes, E-band 71–86 GHz is part of the stated backhaul application scope. Feasibility still depends on the exact transmit and receive sub-bands, guard band, insertion loss, isolation, return loss, power, flange, and mechanical envelope. Selected custom microwave and waveguide projects can reach 110 GHz, subject to topology and validation.",
+        "intent": "确认 E-band 双工器频率覆盖和具体评估条件",
+        "snippet": "目标为是非加参数清单摘要，答案约 50–60 词"
+      },
+      {
+        "question": "What inputs are needed for a backhaul diplexer evaluation?",
+        "answer": "Provide transmit and receive frequency ranges, bandwidth, guard band, rejection and isolation targets, insertion loss, return loss, power, waveguide size, flange, port orientation, mechanical limits, and environmental requirements. Include system and interface drawings where available. Unknown items can be marked TBD for engineering clarification before final feasibility review.",
+        "intent": "准备波导双工器 RFQ 并减少信息遗漏",
+        "snippet": "目标为参数清单 Featured Snippet，答案约 45–60 词"
+      },
+      {
+        "question": "Does tuning-free mean that no RF testing is required?",
+        "answer": "No. Tuning-free refers to a design and manufacturing approach intended to reduce manual adjustment through controlled geometry and processes. It does not eliminate the need to verify the agreed electrical characteristics or production consistency. The applicable VNA measurements, acceptance limits, and test coverage should be defined for each design and order.",
+        "intent": "澄清免调试术语，防止误解为不测试或零验证",
+        "snippet": "目标为定义型 Featured Snippet，答案约 45–55 词"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList"],
+    "seo_title": "Microwave Backhaul Components | E-Band Diplexer & OCU | SONNE",
+    "seo_note": "源 SEO Title 为 61 字符，超过契约建议的 60 字符；按源值保留，待 source-01 修订，不在本 fragment 擅自改写。",
+    "meta_description": "E-band waveguide diplexers, OCU and tuning-free filters for point-to-point microwave backhaul. Precision machining and plating control up to 110 GHz custom projects.",
+    "focus_keyphrase": "microwave backhaul components"
+  },
+  {
+    "number": 14,
+    "id": "page-14",
+    "name": "卫星与地面站 Satellite & Earth Station",
+    "url": "/solutions/satellite-earth-station",
+    "type": "应用方案",
+    "buyer_segment": "卫星地面站集成商、波导链路设计师及雷达/公共安全设备项目负责人，处于 Ku/Ka 射频链路与定制接口评估阶段",
+    "inner_monologue": "我需要确认极化、隔离、法兰和高频测试能否按同一套图纸与验收条件落地，而不是只看一个 OMT 外形。",
+    "pain_points": [
+      "OMT 极化分离、端口隔离、回波和插损需要联合定义，单一‘高隔离’描述不足以形成验收依据",
+      "波导口径、法兰、极化方向与装配基准稍有不清，就可能造成接口或链路集成返工",
+      "Ku/Ka 高频结构对加工与镀层敏感，买家需要知道哪些能力可达以及哪些必须按结构确认",
+      "按图定制项目需要明确 VNA 测试范围、报告和最终验收，而非默认所有指标都有统一保证"
+    ],
+    "differentiators": [
+      "从地面站馈源/OMT、收发双工与波导互连位置组织内容，直接对应极化和法兰接口问题",
+      "Ku/Ka band OMT、定制化波导组件与高隔离波导双工器属于既有应用与产品组合口径",
+      "精密 CNC 与镀层控制支持高频结构评审，40 GHz 以上 ±0.01 mm 和 60 GHz 以上 1 μm 均以可达、视结构表述",
+      "VNA 验证能力可转化为按图纸与约定限值的测试计划，帮助买家把性能要求落实为证据"
+    ],
+    "conversion": "主：Request OMT / Waveguide Evaluation；次：提交频段、极化与法兰资料并查看测试验证路径",
+    "three_gates": {
+      "search_demand": "satellite earth station RF components；SV 未测、KD 未测，以‘OMT 极化纯度如何保证’和‘能否按图纸定制’承接明确工程疑虑",
+      "internal_links": "上游入口：/solutions、/products/waveguide-components；下游：/products/waveguide-components、/products/rf-microwave-filters、/engineering/testing-quality、/engineering/manufacturing、/resources/rfq-guide、/request-a-quote",
+      "citation_value": "原创《OMT/波导接口与验收清单》：频段、端口、极化、隔离/回波/插损、波导口径、法兰、基准、镀层、测试报告字段"
+    },
+    "keywords": {
+      "focus": {"term": "satellite earth station RF components", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "Ku/Ka band OMT", "sv": null, "kd": null},
+        {"term": "waveguide assembly", "sv": null, "kd": null},
+        {"term": "satellite RF components", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "OMT manufacturer", "sv": null, "kd": null},
+        {"term": "custom waveguide components manufacturer", "sv": null, "kd": null},
+        {"term": "high isolation waveguide diplexer", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：satellite earth station RF components 与 waveguide 应用限定共同承载主词",
+        "H2：Ku/Ka band OMT、waveguide assembly、satellite RF components 分配至链路、极化和定制接口章节",
+        "正文/FAQ：OMT manufacturer、custom waveguide components manufacturer、high isolation waveguide diplexer 用于能力与 RFQ 边界"
+      ]
+    },
+    "h1": "RF and Waveguide Components for Satellite Earth Stations",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这里能否按地面站链路评估 OMT、波导组件与高隔离双工器？",
+        "h2": "RF and Waveguide Components for Satellite Earth Stations",
+        "points": [
+          "首屏明确定位 Ku/Ka 地面站和相关波导链路，聚焦极化、法兰与 VNA 验证三个买家风险点",
+          "说明支持按项目评估 OMT、波导组件和双工器，不把选定定制能力扩展为所有频段统一覆盖",
+          "主 CTA 进入 OMT/波导资料提交，次入口查看链路和验收清单"
+        ],
+        "image": "使用 1600×900 场景图 satellite-693224-1280.webp，叠加馈源—OMT—双工—波导接口线框；明确为通用链路示意，不暗示客户站点",
+        "cta": "Request OMT / Waveguide Evaluation"
+      },
+      {
+        "number": 2,
+        "name": "Earth Station Constraints",
+        "question": "地面站射频评估必须先明确哪些链路与接口约束？",
+        "h2": "Define Polarization, Bands and Mechanical Interfaces",
+        "points": [
+          "电气输入包含上下行频段、带宽、端口功能、极化方式、隔离/回波/插损目标和功率条件",
+          "机械输入包含波导口径、法兰、极化方向、装配基准、包络与材料/镀层要求",
+          "将雷达或公共安全等相邻应用标为单独评估，不直接套用地面站规格或假设相同验收条件"
+        ],
+        "image": "不配图；使用 1200×800 三组约束表，字段包含定义、单位、图纸来源和待确认状态",
+        "cta": "Prepare Your Interface Specification"
+      },
+      {
+        "number": 3,
+        "name": "RF Chain Mapping",
+        "question": "OMT、双工器和波导组件在链路中各承担什么功能？",
+        "h2": "Map the Feed, OMT and Waveguide Chain",
+        "points": [
+          "链路图区分极化分离/合成、收发频率分离与机械传输/转向功能，避免把 OMT 和 OCU 混为一谈",
+          "每个节点列出候选产品线与必要输入，并链接 /products/waveguide-components 和 /products/rf-microwave-filters",
+          "对直段、弯段、扭段和过渡波导只按接口功能展示，具体电气与机械组合需按图纸确认"
+        ],
+        "image": "使用 1024×571 产品图 prod-omt-v2.webp，配合 curved-waveguide.webp、twisted-waveguide.webp、transition-waveguide.webp 组成 1200×700 链路示意",
+        "cta": "Review Waveguide Components"
+      },
+      {
+        "number": 4,
+        "name": "Performance Trade-offs",
+        "question": "极化纯度、隔离、回波、插损与尺寸为什么不能分开承诺？",
+        "h2": "Balance Polarization, Isolation, Loss and Packaging",
+        "points": [
+          "权衡表列明指标定义、建议测试端口、链路影响、结构敏感项和项目验收字段",
+          "说明极化纯度、端口隔离与高隔离双工不是同一概念，必须分别定义频段和测试条件",
+          "更严格的电气目标可能影响拓扑、加工难度与包络，需以完整规格评审而非单项最佳值选材"
+        ],
+        "image": "不配图；使用极化端口示意加五列权衡矩阵，所有限值栏留作项目输入，不填造数据",
+        "cta": "Define Your Acceptance Priorities"
+      },
+      {
+        "number": 5,
+        "name": "Precision and Custom Interfaces",
+        "question": "按图定制时，加工精度与法兰细节如何进入评审？",
+        "h2": "Control Flanges, Datums and High-Frequency Geometry",
+        "points": [
+          "图纸检查清单包括法兰规格、孔位、密封面、波导内腔、极化基准、GD&T 和装配方向",
+          "40 GHz 以上机械公差可达 ±0.01 mm、60 GHz 以上镀层厚度控制可达 1 μm，均须注明视结构与图纸评审",
+          "支持按图定制评估，但买家需确认关键尺寸、表面处理与验收要求，不将能力上限写成每个零件统一保证"
+        ],
+        "image": "使用 1200×675 实拍 factory-engineering-cad.webp 与 factory-engineering-dfm.webp，旁配法兰标注清单，展示图纸评审而非虚构测量结果",
+        "cta": "Submit Drawings for Review"
+      },
+      {
+        "number": 6,
+        "name": "Verification Evidence",
+        "question": "VNA 与项目验收需要看到哪些可追溯证据？",
+        "h2": "Agree on VNA Evidence and Acceptance Criteria",
+        "points": [
+          "验证计划列出被测端口、频段、校准/测试配置、S 参数项目、限值、样本范围和报告格式",
+          "说明 SONNE 具备 VNA 验证能力，但是否覆盖极化相关系统指标及其他项目须按具体结构和测试条件确认",
+          "上线证据采用可公开的匿名曲线字段或报告样例，不添加未授权客户名称、logo 或站点性能结论"
+        ],
+        "image": "使用 1200×675 实拍 factory-rf-testing.webp 与 factory-test-rig.webp，旁配报告字段表，不叠加未经证实的数值曲线",
+        "cta": "Discuss Test Evidence"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "OMT 极化、Ku/Ka、法兰和按图定制还有哪些疑问？",
+        "h2": "Satellite Earth Station RF FAQs",
+        "points": [
+          "覆盖源问题‘OMT 极化纯度如何保证’与‘能否按图纸定制’，并补充 Ku/Ka、法兰输入和 VNA 证据",
+          "答案强调约定定义与项目验证，不作无条件的极化、隔离或测试覆盖承诺",
+          "将 FAQ 答案锚接至接口清单和 RFQ，保持本页源定 WebPage/BreadcrumbList Schema"
+        ],
+        "image": "不配图；使用五问手风琴及可下载字段清单入口，下载物未建成前仅链接 RFQ 指南",
+        "cta": "Ask an OMT or Waveguide Question"
+      },
+      {
+        "number": 8,
+        "name": "Conversion",
+        "question": "提交哪些资料才能启动 OMT 或波导组件评估？",
+        "h2": "Request an OMT / Waveguide Evaluation",
+        "points": [
+          "表单字段为应用、Ku/Ka 或其他具体频段、端口与极化、电气目标、波导/法兰、包络、材料/镀层、数量和测试要求",
+          "附件支持 2D/3D 图、链路图与验收规范，未知参数允许标 TBD 并进入工程澄清",
+          "完整 RFQ 通常约 24 小时获得初步工程反馈；可行性、报价与交期均需按拓扑、图纸和验证范围确认"
+        ],
+        "image": "不配图；使用 OMT/波导专用 RFQ 表单和附件核对清单，链接 /request-a-quote 与 /resources/rfq-guide",
+        "cta": "Request OMT / Waveguide Evaluation"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How is OMT polarization performance verified?",
+        "answer": "First define the frequency range, port configuration, polarization scheme, and the exact acceptance parameters. Polarization-related performance, port isolation, return loss, and insertion loss are not interchangeable. SONNE can review the geometry and apply VNA verification where applicable; the final test method, limits, and any system-level measurements must be agreed for the specific OMT.",
+        "intent": "了解 OMT 极化性能的定义、测试边界与验收方式",
+        "snippet": "目标为定义加流程摘要，答案约 55–65 词"
+      },
+      {
+        "question": "Can SONNE manufacture OMT and waveguide parts to my drawings?",
+        "answer": "Yes, custom waveguide assemblies and OMT projects can be evaluated from customer drawings. Provide 2D and 3D files where available, including frequency, ports, polarization, waveguide size, flange, critical dimensions, materials or plating, quantity, and acceptance requirements. Feasibility remains subject to engineering review of the topology, tolerances, and validation scope.",
+        "intent": "确认按图定制能力与图纸提交要求",
+        "snippet": "目标为是非加清单型 Featured Snippet，答案约 50–60 词"
+      },
+      {
+        "question": "Are Ku-band and Ka-band OMT projects supported?",
+        "answer": "Ku/Ka band OMT is part of the stated satellite earth-station component scope. Each design still requires confirmation of exact sub-bands, polarization, isolation, return loss, insertion loss, power, waveguide interfaces, and mechanical envelope. Selected custom microwave and waveguide work can extend to 110 GHz, depending on topology and validation rather than frequency alone.",
+        "intent": "核对 Ku/Ka 应用范围与高频定制边界",
+        "snippet": "目标为条件式能力回答，答案约 50–60 词"
+      },
+      {
+        "question": "What flange and interface details should I provide?",
+        "answer": "Provide the waveguide size, flange type or drawing, hole pattern, sealing features, mating interface, port orientation, polarization datum, mechanical envelope, and critical tolerances. Identify any controlled plating or surface requirements and the assembly context. Clear interface data helps engineering review both fit and high-frequency geometry before manufacturing decisions.",
+        "intent": "准备波导法兰与机械接口资料，降低装配返工",
+        "snippet": "目标为清单型 Featured Snippet，答案约 45–55 词"
+      },
+      {
+        "question": "What RF test evidence can accompany an earth-station component?",
+        "answer": "The evidence package is defined per project. It may include agreed VNA measurements, test configuration details, frequency range, acceptance limits, and report records for the specified samples or production coverage. Request the required format during engineering review. Do not assume that every electrical, polarization, environmental, or system-level test is included by default.",
+        "intent": "确认测试报告与覆盖率，避免默认所有验证均包含",
+        "snippet": "目标为证据清单与边界摘要，答案约 50–60 词"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList"],
+    "seo_title": "Satellite Earth Station RF Components | OMT & Waveguide | SONNE",
+    "seo_note": "源 SEO Title 为 63 字符，超过契约建议的 60 字符；按源值保留，待 source-01 修订，不在本 fragment 擅自改写。",
+    "meta_description": "OMT, waveguide assemblies and high-isolation diplexers for Ku/Ka satellite earth stations and radar. Controlled flange accuracy, plating and VNA verification.",
+    "focus_keyphrase": "satellite earth station RF components"
+  },
+  {
+    "number": 15,
+    "id": "page-15",
+    "name": "室内覆盖 DAS / IBS",
+    "url": "/solutions/das-ibs",
+    "type": "应用方案",
+    "buyer_segment": "DAS 集成商、室内覆盖工程承包方与项目型采购，处于多运营商 band plan、无源 BOM 和批量配套评估阶段",
+    "inner_monologue": "我既要控制多运营商系统的 PIM 和损耗，也要把 POI、分配、耦合、天线与配件 BOM 一次理清。",
+    "pain_points": [
+      "多运营商与多频段合路后，POI 端口、隔离、功率和损耗预算必须按实际 band plan 评估",
+      "楼层分配中 low PIM splitter、coupler 与 hybrid 的端口和耦合要求不同，料号清单容易缺项或接口不一致",
+      "单个器件的低 PIM 指标不能直接代表整套 BOM，需按型号、测试条件与交付范围确认",
+      "项目采购需要按区域、数量和连接器整理 BOM，并核对配件配套与批次交付要求"
+    ],
+    "differentiators": [
+      "以多运营商系统位置和完整项目 BOM 组织 POI、低 PIM 分配/耦合及室内天线配套，而非只列单品",
+      "698–3800 MHz 宽带产品组合可对应室内覆盖需求，具体型号与频段仍需逐项核对",
+      "低 PIM 能力按具体型号表达，公开口径可至 ≤-160 dBc 的产品不得扩展为整套 BOM 或全部产品统一保证",
+      "IBS/DAS 器件、RF 配件与合路产品线可联动核对，帮助集成商减少接口遗漏和重复询价"
+    ],
+    "conversion": "主：Send Project BOM；次：先按系统图核对低 PIM 无源器件与配件清单",
+    "three_gates": {
+      "search_demand": "DAS low PIM components；SV 未测、KD 未测，以‘POI 支持几家运营商’和‘能否整套 BOM 报价’承接项目决策问题",
+      "internal_links": "上游入口：/solutions、/products/ibs-das-components；下游：/products/ibs-das-components、/products/rf-accessories、/products/rf-combiners、/engineering/testing-quality、/resources/rfq-guide、/request-a-quote",
+      "citation_value": "原创《多运营商 DAS BOM 核对表》：系统区域、器件功能、频段、分路/耦合、PIM、功率、连接器、数量、备选型号与验证要求"
+    },
+    "keywords": {
+      "focus": {"term": "DAS low PIM components", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "POI combiner", "sv": null, "kd": null},
+        {"term": "hybrid coupler", "sv": null, "kd": null},
+        {"term": "directional coupler", "sv": null, "kd": null},
+        {"term": "indoor DAS antenna", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "multi-operator POI", "sv": null, "kd": null},
+        {"term": "low PIM DAS components manufacturer", "sv": null, "kd": null},
+        {"term": "in-building wireless passive components", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：DAS low PIM components 以 Passive Components for DAS and In-Building Coverage 承载",
+        "H2：POI combiner、low PIM hybrid coupler、low PIM directional coupler、indoor DAS antenna 分配到系统位置与 BOM",
+        "正文/FAQ：multi-operator POI 与 in-building wireless passive components 保持项目语境，不用通用 RF power divider 抢 Combiners 词"
+      ]
+    },
+    "h1": "Passive Components for DAS and In-Building Coverage",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这里能否同时处理多运营商低 PIM 要求与项目 BOM 配套？",
+        "h2": "Passive Components for DAS and In-Building Coverage",
+        "points": [
+          "首屏定位多运营商 DAS/IBS 项目，突出 698–3800 MHz、POI 与 low PIM splitter/coupler 的系统语境",
+          "说明可从 band plan 和 BOM 开始评估，不承诺任意运营商数量或整套清单统一指标",
+          "主 CTA 收集项目 BOM，次入口进入系统位置与 BOM 核对表"
+        ],
+        "image": "使用 1600×900 场景图 card-ibs.webp，叠加 POI—分配/耦合—室内天线通用链路，图注为系统示意而非具体项目案例",
+        "cta": "Send Project BOM"
+      },
+      {
+        "number": 2,
+        "name": "Coverage Constraints",
+        "question": "多运营商室内覆盖需要先锁定哪些系统约束？",
+        "h2": "Define Operators, Bands, Loss and PIM Constraints",
+        "points": [
+          "输入表包含运营商/频段数量、上下行、POI 端口、功率、隔离、损耗预算和 PIM 目标",
+          "按楼层或覆盖区域记录分路数量、耦合值、线缆接口、天线位置和安装空间",
+          "将 698–3800 MHz 作为相关组合口径，要求每个 BOM 行仍核对实际型号频率和连接器"
+        ],
+        "image": "不配图；使用 1200×800 覆盖约束表，按运营商、区域、器件三级展开，含单位与 TBD 状态",
+        "cta": "Prepare Your Coverage Inputs"
+      },
+      {
+        "number": 3,
+        "name": "System Mapping",
+        "question": "POI、分配、耦合、电桥和天线在系统中如何衔接？",
+        "h2": "Map the POI to the Indoor Coverage Branches",
+        "points": [
+          "系统图从运营商/基站接口经 POI 到楼层分配，再连接 low PIM splitter、directional coupler、hybrid coupler 与室内天线",
+          "每个节点只写功能、关键参数与候选产品线链接，不复制产品分类页的完整 SKU 参数表",
+          "配件行链接 /products/rf-accessories，主无源器件链接 /products/ibs-das-components，合路需求链接 /products/rf-combiners"
+        ],
+        "image": "使用真实产品图 prod-hybrid.webp、directional-coupler-4-3-10-female.webp、power-splitter-2-way-4-3-10-female.webp、indoor-antenna-se-dpa-0640-v6801-nf.webp 组成 1200×760 系统图",
+        "cta": "Review DAS Component Options"
+      },
+      {
+        "number": 4,
+        "name": "Passive Trade-offs",
+        "question": "分路损耗、耦合、隔离、PIM 与功率如何共同核对？",
+        "h2": "Balance Split Loss, Coupling, Isolation, PIM and Power",
+        "points": [
+          "权衡表按器件功能列出理论分配关系之外的实际插损、耦合偏差、隔离、PIM、功率和接口检查项",
+          "说明 hybrid 与 directional coupler 的用途不同，不能仅按端口数量替换；具体选型由系统功能决定",
+          "低 PIM 需记录测试功率、连接器和型号条件，不用单个典型值替代全链路或全 BOM 结论"
+        ],
+        "image": "不配图；使用五行器件功能对照表和损耗预算工作表，公式说明与项目填写栏分离",
+        "cta": "Check Your Passive Loss Budget"
+      },
+      {
+        "number": 5,
+        "name": "BOM Consolidation",
+        "question": "怎样把多区域无源清单整理成可报价、可核对的 BOM？",
+        "h2": "Build One Reviewable Project BOM",
+        "points": [
+          "BOM 必填列为区域、功能、频段、分路/耦合规格、PIM、功率、连接器、数量、目标型号与备注",
+          "增加替代与缺项检查列，标记 TBD、接口冲突、频率不匹配和需工程确认的行，不自动承诺逆向替代",
+          "将主器件与天线、负载、线缆等配件分组汇总，并保留逐项数据表请求入口"
+        ],
+        "image": "不配图；提供 1400×820 BOM 示例表，示例行只写字段与 TBD，不虚构可售料号或项目数量",
+        "cta": "Prepare Your Project BOM"
+      },
+      {
+        "number": 6,
+        "name": "Model-Level Evidence and Delivery",
+        "question": "如何按型号确认 PIM 证据并约定项目交付范围？",
+        "h2": "Verify Each Model and Agree on Delivery Evidence",
+        "points": [
+          "证据表按 BOM 行列出数据表、PIM 条件、验收限值、报告需求与批次标识需求，避免全清单一句‘低 PIM’",
+          "仅对具体公开型号引用低 PIM 可至 ≤-160 dBc 的口径，其他型号和整套 BOM 必须单独确认",
+          "交付评审核对数量、包装/标识和文件需求；MOQ、报价与交期按项目清单确认，不制定统一政策"
+        ],
+        "image": "使用 1200×675 实拍 factory-test-station.webp 与 factory-assembly-team.webp，旁配按型号证据矩阵，不展示未经授权客户或虚构报告",
+        "cta": "Request Model-Level Verification"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "POI 运营商数量、整套 BOM、PIM 与批量条件还有哪些疑问？",
+        "h2": "DAS and IBS Project FAQs",
+        "points": [
+          "覆盖源问题‘POI 支持几家运营商’与‘能否整套 BOM 报价’，并补充 PIM、698–3800 MHz 和 MOQ 边界",
+          "答案坚持按 band plan、具体型号和项目清单确认，不把单线能力扩展为统一商业政策",
+          "FAQ 与 BOM 字段互相锚接，保持源定 WebPage/BreadcrumbList Schema"
+        ],
+        "image": "不配图；使用五问手风琴，答案旁提供返回 BOM 表或系统图的文本链接",
+        "cta": "Ask a DAS Project Question"
+      },
+      {
+        "number": 8,
+        "name": "Conversion",
+        "question": "如何提交 BOM 并获得有针对性的型号与工程澄清？",
+        "h2": "Send Your DAS Project BOM",
+        "points": [
+          "上传字段包括项目阶段、运营商/band plan、覆盖区域、BOM 文件、目标数量、PIM/功率要求和连接器偏好",
+          "提交后预期输出为缺项与冲突澄清、候选产品线/型号核对及验证范围讨论，不承诺即时全套报价",
+          "完整 RFQ 通常约 24 小时获得初步工程反馈，MOQ、报价和交期按具体项目确认"
+        ],
+        "image": "不配图；使用 BOM 上传卡、支持字段清单与 /request-a-quote 链接，备用入口为 info@zhide-tec.com",
+        "cta": "Send Project BOM"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many operators can a DAS POI support?",
+        "answer": "There is no universal operator count for every POI. The feasible configuration depends on the operator band plan, uplink and downlink paths, port architecture, isolation, insertion loss, power, PIM, and mechanical requirements. Submit the bands and interface diagram so the POI or combining approach can be evaluated for the actual multi-operator system.",
+        "intent": "确认 POI 运营商容量不是固定数字并了解评估输入",
+        "snippet": "目标为条件式直接回答，答案约 50–60 词"
+      },
+      {
+        "question": "Can SONNE review and quote a complete DAS passive BOM?",
+        "answer": "Yes, a project BOM can be reviewed across POI or combining items, low PIM splitters and couplers, hybrid couplers, indoor antennas, and related accessories. Include frequencies, quantities, connectors, power and PIM requirements for each line. Missing or conflicting entries may require clarification before model suitability, pricing, MOQ, and delivery are confirmed.",
+        "intent": "确认整套 BOM 配套能力与报价前资料要求",
+        "snippet": "目标为是非加清单摘要，答案约 50–60 词"
+      },
+      {
+        "question": "Does one low PIM rating apply to the entire DAS BOM?",
+        "answer": "No. PIM performance is model- and test-condition-dependent. A published capability of up to ≤-160 dBc applies only where stated for a specific model, not automatically to every component or the complete BOM. Confirm the rating, power, connectors, acceptance limit, and required verification for each relevant BOM line.",
+        "intent": "防止把特定型号 PIM 指标误用于全部无源清单",
+        "snippet": "目标为边界清晰的 Featured Snippet，答案约 45–60 词"
+      },
+      {
+        "question": "Does the DAS component range cover 698–3800 MHz?",
+        "answer": "The stated DAS/IBS passive component range includes 698–3800 MHz broadband products. Coverage must still be checked by model and function, including the required sub-bands, port configuration, coupling or split ratio, power, PIM, and connectors. Do not assume that every POI, splitter, coupler, antenna, or accessory spans the entire range.",
+        "intent": "核对宽带覆盖与不同型号之间的差异",
+        "snippet": "目标为是非加限定条件摘要，答案约 45–60 词"
+      },
+      {
+        "question": "Is there one MOQ for a complete DAS project?",
+        "answer": "No universal project MOQ should be assumed across a mixed BOM. Requirements can vary by component, model, customization, and order structure. Send the complete list with quantities so SONNE can confirm the applicable conditions line by line. Any MOQ, quotation, or delivery schedule must be agreed for the specific project rather than inferred from another product line.",
+        "intent": "了解混合 BOM 的 MOQ 边界并推动按项目确认",
+        "snippet": "目标为商业条件诚实摘要，答案约 50–60 词"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList"],
+    "seo_title": "DAS & IBS Low PIM Passive Components | POI, Couplers | SONNE",
+    "meta_description": "POI, splitters, directional and hybrid couplers plus indoor antennas for multi-operator DAS. Low PIM, 698-3800 MHz, complete project BOM support.",
+    "focus_keyphrase": "DAS low PIM components"
+  },
+  {
+    "number": 16,
+    "id": "page-16",
+    "name": "FTTX 光纤到户",
+    "url": "/solutions/fttx",
+    "type": "应用方案",
+    "buyer_segment": "FTTH 工程商、运营商配套采购与网络部署项目负责人，处于户外配线、接续防护和 OEM 结构需求整理阶段",
+    "inner_monologue": "我需要按安装环境和配线功能选对箱体或接续盒，并确认 IP 证据、尺寸和 OEM 要求分别适用于哪个型号。",
+    "pain_points": [
+      "分纤、光配线与接续功能不同，若只按外形采购，容易遗漏容量、安装和线缆入口要求",
+      "户外部署需要明确 IP 目标、材料、喷涂和密封结构，但不能把 IP68 接续能力套到所有 FTTX 箱体",
+      "定制尺寸、安装方式与 OEM 标识需要图纸和项目条件支撑，口头描述容易形成交付偏差",
+      "采购需要按型号核对防护证据、数量和定制范围，而不是接受全系列统一认证或交期承诺"
+    ],
+    "differentiators": [
+      "按 FTTX 部署位置区分分纤箱、光配线箱/机柜与接续盒，帮助买家先确定功能再核对结构",
+      "IP68 为接续类公开能力，可引导买家按具体型号索取证据而不泛化为全部 FTTX 产品等级",
+      "户外材料与喷涂、定制箱体和 OEM branding 属于既有能力口径，可承接项目图纸评估",
+      "精密结构件制造路径可联动机械图纸、装配和变更需求，减少 RF 与结构供应信息割裂"
+    ],
+    "conversion": "主：Request FTTX Project Quote；次：按部署清单核对防护、尺寸、材料和 OEM 输入",
+    "three_gates": {
+      "search_demand": "FTTX distribution solutions；SV 未测、KD 未测，以‘防护等级怎么选’和‘是否支持定制尺寸’承接明确采购问题",
+      "internal_links": "上游入口：/solutions、/products/fttx-fiber-distribution；下游：/products/fttx-fiber-distribution、/products/precision-enclosures、/engineering/manufacturing、/engineering/npi、/resources/rfq-guide、/request-a-quote",
+      "citation_value": "原创《FTTX 部署—箱体/接续选型与 RFQ 表》：安装位置、功能、容量、线缆入口、IP 目标、材料/涂层、尺寸、OEM 与证据需求"
+    },
+    "keywords": {
+      "focus": {"term": "FTTX distribution solutions", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "FTTH distribution box", "sv": null, "kd": null},
+        {"term": "optical distribution box", "sv": null, "kd": null},
+        {"term": "IP68 splice closure", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "outdoor FTTH distribution box", "sv": null, "kd": null},
+        {"term": "custom FTTX enclosure manufacturer", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：FTTX distribution solutions 以 Fiber Distribution and Closure Solutions 承载主语义",
+        "H2：FTTH distribution box、optical distribution box、IP68 splice closure 分配至部署场景和防护证据章节",
+        "正文/FAQ：outdoor FTTH distribution box、custom FTTX enclosure manufacturer 用于户外约束与 OEM 定制"
+      ]
+    },
+    "h1": "Fiber Distribution and Closure Solutions for FTTX",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这里能否按 FTTX 部署环境选择配线、机柜与接续结构？",
+        "h2": "Fiber Distribution and Closure Solutions for FTTX",
+        "points": [
+          "首屏定位户外 FTTH 配线、光配线箱/机柜与接续应用，明确从安装环境和功能开始选型",
+          "将 IP68 限定于接续类公开能力，定制尺寸与 OEM 选项均需按项目图纸和型号确认",
+          "主 CTA 收集部署清单，次入口进入功能与防护选型表"
+        ],
+        "image": "使用 1600×900 场景图 market-ftth.webp，叠加分纤箱—光配线—接续三类通用轮廓，轮廓标注为示意图而非真实型号",
+        "cta": "Request FTTX Project Quote"
+      },
+      {
+        "number": 2,
+        "name": "Deployment Constraints",
+        "question": "FTTX 项目首先需要记录哪些安装和使用约束？",
+        "h2": "Define the Deployment and Cable-Entry Constraints",
+        "points": [
+          "部署表记录室内/室外、墙面/杆路/机架或其他安装位置、配线/接续功能、目标容量和数量",
+          "结构输入包含线缆类型与入口数量、密封要求、弯曲与维护空间、箱体包络和开门/操作需求",
+          "环境部分单独列出 IP 目标、材料/涂层和其他项目规范，未确认的盐雾或防腐等级不默认承诺"
+        ],
+        "image": "不配图；使用 1200×800 部署约束表，列为现场输入、填写示例、影响结构和证据需求",
+        "cta": "Prepare Your Deployment Checklist"
+      },
+      {
+        "number": 3,
+        "name": "Deployment-to-Product Mapping",
+        "question": "分纤箱、光配线箱/机柜和接续盒分别适合什么功能？",
+        "h2": "Match the Enclosure to the FTTX Function",
+        "points": [
+          "对照表按分配、配线管理和接续保护三个功能组织，而非只按外观或产品名称分类",
+          "每行列出安装位置、需确认的容量/入口、机械要求和候选产品线链接 /products/fttx-fiber-distribution",
+          "定制机械结构需求链接 /products/precision-enclosures，三级具体型号页只标为后续阶段目标"
+        ],
+        "image": "使用 1024×1024 产品图 prod-cabinet.webp 仅作机柜类示意，并配 1200×700 三功能对照表；不得把该图标为特定 FTTX 型号",
+        "cta": "Review FTTX Product Options"
+      },
+      {
+        "number": 4,
+        "name": "Selection Trade-offs",
+        "question": "容量、维护空间、防护、尺寸和成本输入如何一起平衡？",
+        "h2": "Balance Capacity, Access, Protection and Footprint",
+        "points": [
+          "选型矩阵列为容量需求、线缆入口、维护操作、安装包络、IP 目标、材料/涂层与定制影响",
+          "说明增加容量或入口可能改变箱体尺寸、密封和维护空间，应在图纸阶段共同核对",
+          "成本讨论只列影响报价的项目变量，不发布统一低价、MOQ、付款或交期政策"
+        ],
+        "image": "不配图；使用七列选型矩阵与‘现场空间—入口—维护’三视图模板，供项目填写而非预置虚构参数",
+        "cta": "Compare Your Enclosure Requirements"
+      },
+      {
+        "number": 5,
+        "name": "IP and Material Evidence",
+        "question": "IP 等级和户外材料应怎样按型号核验？",
+        "h2": "Verify IP Rating and Outdoor Materials by Model",
+        "points": [
+          "证据表按型号列 IP 目标、公开能力、报告/测试证据需求、材料、喷涂和密封结构确认状态",
+          "明确 IP68 为接续类公开能力，不表示所有分纤箱、光配线箱或机柜均为 IP68",
+          "户外防腐与其他环境要求按项目规范和具体结构确认，未证实盐雾、RoHS、REACH 或 EMC 不作公开断言"
+        ],
+        "image": "不配图；使用‘型号—防护声明—证据—待确认项’审计表，避免用无防护语境的产品照片暗示 IP 等级",
+        "cta": "Ask for Model-Specific IP Evidence"
+      },
+      {
+        "number": 6,
+        "name": "OEM and Project Workflow",
+        "question": "定制尺寸、OEM 标识和项目交付需要经过哪些步骤？",
+        "h2": "Move from Custom Drawings to an Agreed Project Baseline",
+        "points": [
+          "流程为部署清单、2D/3D 图纸评审、材料/涂层与密封确认、样品/验收基线、项目数量与交付评估",
+          "OEM 输入包括标识文件、位置、颜色/表面要求、包装需求与版本确认，具体范围按项目确认",
+          "定制变更需回到图纸和验收基线复核；最快约两周仅为打样参考，不作为 FTTX 通用交期"
+        ],
+        "image": "使用 1200×675 实拍 factory-engineering-cad.webp 与 factory-engineering-dfm.webp，旁配五步 OEM 流程和版本确认字段",
+        "cta": "Discuss Custom FTTX Requirements"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "IP、防护、尺寸定制和 OEM 还有哪些常见疑问？",
+        "h2": "FTTX Distribution and Closure FAQs",
+        "points": [
+          "覆盖源问题‘防护等级怎么选’与‘是否支持定制尺寸’，并补充 IP68 适用范围、OEM 和户外防腐",
+          "答案坚持按型号、图纸和项目规范确认，不编造统一认证、MOQ、付款或交期",
+          "FAQ 与部署表、证据表交叉链接，保持源定 WebPage/BreadcrumbList Schema"
+        ],
+        "image": "不配图；使用五问手风琴，每个答案链接对应选型或 RFQ 字段",
+        "cta": "Ask an FTTX Project Question"
+      },
+      {
+        "number": 8,
+        "name": "Conversion",
+        "question": "提交哪些资料才能进行 FTTX 项目报价与结构评估？",
+        "h2": "Request an FTTX Project Quote",
+        "points": [
+          "表单字段为部署场景、产品功能、容量、线缆入口、安装方式、尺寸、IP 目标、材料/涂层、OEM、数量与项目阶段",
+          "支持上传图纸、现场接口和规范文件，并将未知项标为 TBD 以便工程澄清",
+          "完整 RFQ 通常约 24 小时获得初步工程反馈；报价、打样与量产交期按图纸、数量、工艺和产能评估"
+        ],
+        "image": "不配图；使用部署清单上传卡与分栏 RFQ 表单，链接 /request-a-quote 和 /resources/rfq-guide",
+        "cta": "Request FTTX Project Quote"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How should I choose an IP rating for an FTTX enclosure?",
+        "answer": "Start with the actual installation exposure, sealing interfaces, cable entries, maintenance method, and the operator or project specification. Select the enclosure and closure by function, then request model-specific evidence for the required rating. Do not choose by enclosure appearance alone or assume that one published IP rating covers every FTTX product.",
+        "intent": "按部署环境选择 IP 等级并核对具体型号证据",
+        "snippet": "目标为步骤式 Featured Snippet，答案约 45–60 词"
+      },
+      {
+        "question": "Can FTTX distribution boxes be made to custom dimensions?",
+        "answer": "Custom enclosure requirements can be evaluated from the deployment specification and drawings. Provide the required capacity, cable entries, mounting method, maintenance access, mechanical envelope, IP target, materials or coating, quantity, and OEM requirements. Final dimensions and feasibility must be agreed through engineering review rather than inferred from a standard product photograph.",
+        "intent": "确认定制尺寸能力与图纸评估输入",
+        "snippet": "目标为是非加参数清单摘要，答案约 45–60 词"
+      },
+      {
+        "question": "Are all SONNE FTTX boxes and closures IP68?",
+        "answer": "No. IP68 is a published capability for splice-closure products, not a blanket rating for every FTTX distribution box, optical cabinet, or enclosure. Check the exact model, structure, cable-entry configuration, and required test evidence for your project. Other enclosure ratings and compliance requirements must be confirmed individually.",
+        "intent": "澄清 IP68 只适用于公开接续类能力而非全系列",
+        "snippet": "目标为直接否定加范围说明，答案约 40–55 词"
+      },
+      {
+        "question": "Are custom dimensions and OEM branding available for FTTX projects?",
+        "answer": "Custom enclosure and OEM branding options are part of the stated FTTX capability. Submit dimension drawings, branding files, placement, color or surface requirements, packaging needs, and quantities for review. The available customization, acceptance baseline, MOQ, pricing, and delivery schedule must be confirmed for the specific project before release.",
+        "intent": "确认 OEM 定制范围并避免默认统一商业条件",
+        "snippet": "目标为能力加项目条件摘要，答案约 45–60 词"
+      },
+      {
+        "question": "How are outdoor corrosion and material requirements evaluated?",
+        "answer": "Provide the installation environment, material or coating specification, expected exposure, and any required test standard. SONNE can review outdoor materials, spraying, enclosure geometry, and sealing requirements for the proposed design. Salt-spray performance or other environmental compliance must not be assumed; applicable evidence and acceptance criteria need project-specific confirmation.",
+        "intent": "了解户外材料与防腐评估方式，避免未证实盐雾承诺",
+        "snippet": "目标为流程加合规边界摘要，答案约 45–60 词"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList"],
+    "seo_title": "FTTX Fiber Distribution Solutions | Boxes, Closures | SONNE",
+    "meta_description": "FTTX distribution boxes, optical cabinets and IP68 splice closures for outdoor FTTH networks, with custom enclosure and OEM options.",
+    "focus_keyphrase": "FTTX distribution solutions"
+  }
+]

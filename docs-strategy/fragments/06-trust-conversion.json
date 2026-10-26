@@ -1,0 +1,894 @@
+[
+  {
+    "number": 27,
+    "id": "page-27",
+    "name": "Datasheet 与图纸下载",
+    "url": "/resources/datasheets",
+    "type": "转化工具页",
+    "buyer_segment": "正在做器件选型、设计导入或供应商技术审核的 RF/机械工程师与渠道技术销售",
+    "inner_monologue": "我能不能不靠反复发邮件，就找到对应型号的参数、曲线和图纸，并判断它能否进入我的设计？",
+    "pain_points": [
+      "产品目录只给营销描述，缺少频段、接口、尺寸和测试条件等可比较字段",
+      "Datasheet、S 参数、2D/3D 图纸和测试报告混在一起，不知道哪些能直接下载、哪些需申请",
+      "定制项目没有现成型号，买家不确定应提交哪些资料才能获得匹配文件",
+      "下载后无法确认文档版本与适用型号，担心把过期资料带入设计评审"
+    ],
+    "differentiators": [
+      "按产品线、型号和文档类型组织资料，让工程师先核对适用对象再下载，减少错用文件",
+      "把公开资料与需工程确认的受控资料分开，避免用无效下载按钮浪费买家时间",
+      "可围绕具体型号申请 S 参数、图纸和样例测试报告，使资料请求直接进入工程评估",
+      "将测试报告入口连接到 VNA、PIM、可靠性和矩阵自动化测试能力说明，便于买家理解证据来源"
+    ],
+    "conversion": "主：Request Documents；次：按产品线浏览可下载资料或进入 Request a Quote",
+    "three_gates": {
+      "search_demand": "RF component datasheets 及 filter datasheet、waveguide drawing、enclosure CAD 的 SV/KD 均未测；覆盖资料检索、S 参数申请与测试报告获取的明确决策问题。",
+      "internal_links": "上游入口：/resources、/products/rf-microwave-filters、/products/waveguide-components、/products/precision-enclosures；下游 URL：/engineering/testing-quality、/resources/rfq-guide、/request-a-quote、/contact；后续阶段目标为各三级产品详情页的资料锚点。",
+      "citation_value": "原创《工程文档选择矩阵》：列为文档类型、适用阶段、应包含字段、公开/申请状态、请求时必填信息；附《Datasheet 版本核对清单》。"
+    },
+    "keywords": {
+      "focus": {"term": "RF component datasheets", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "filter datasheet", "sv": null, "kd": null},
+        {"term": "waveguide drawing", "sv": null, "kd": null},
+        {"term": "enclosure CAD", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "S-parameter file request", "sv": null, "kd": null},
+        {"term": "RF test report sample", "sv": null, "kd": null},
+        {"term": "2D/3D drawing request", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：RF component datasheets 与工程文档总入口",
+        "H2：filter datasheet、waveguide drawing、enclosure CAD 与受控资料申请",
+        "正文/FAQ：S-parameter file request、RF test report sample、2D/3D drawing request"
+      ]
+    },
+    "h1": "RF Datasheets and Engineering Documents",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这里能否找到支持设计判断的工程资料，而不只是产品宣传册？",
+        "h2": "RF Datasheets and Engineering Documents",
+        "points": [
+          "首屏说明资料范围：产品 Datasheet、性能曲线、2D/3D 图纸、S 参数与样例测试报告",
+          "提供产品线、型号/零件号、文档类型三个检索入口，并允许只按产品线开始浏览",
+          "明确区分“直接下载”和“提交型号后申请”，不承诺所有定制资料均可公开获取",
+          "主按钮进入资料申请，次按钮跳到检索结果，避免首屏只有泛联系入口"
+        ],
+        "image": "不配图；使用 1440×520 的资料检索界面示意，显示产品线筛选、型号输入和文档类型标签。",
+        "cta": "Find Engineering Documents"
+      },
+      {
+        "number": 2,
+        "name": "Document Finder",
+        "question": "我该如何按产品和文档类型快速定位资料？",
+        "h2": "Find Datasheets by Product Line and Document Type",
+        "points": [
+          "产品线筛选项固定为滤波器、波导与微波、合路/双工、多工、基站 RF、精密结构件及辅助产品",
+          "结果表列为产品线、型号、文档类型、频段/规格摘要、版本或发布日期、文件格式、获取方式",
+          "无匹配结果时显示申请入口并自动带入已选产品线，不展示虚构型号或空下载链接",
+          "每个结果只链接已实际上传的文件；无文件时标记为需申请而非可下载"
+        ],
+        "image": "不配图；使用可筛选数据表，移动端改为型号卡片并保留版本与获取方式字段。",
+        "cta": "Search the Document Library"
+      },
+      {
+        "number": 3,
+        "name": "Document Types",
+        "question": "不同文档分别能回答我的哪一个工程问题？",
+        "h2": "Choose the Right Datasheet, Drawing or Test Report",
+        "points": [
+          "用矩阵解释 Datasheet 核对电气与机械额定值，曲线查看频段响应，图纸核对接口与安装空间",
+          "说明 S 参数用于系统级仿真或匹配评估，申请时必须提供型号、端口与所需频段信息",
+          "样例测试报告用于理解报告结构与证据形式，不得把样例结果当作买家产品的实测结果",
+          "结构件资料区分 2D 尺寸图与 3D CAD，提示买家按材料、表面处理和关键公差申请对应版本"
+        ],
+        "image": "使用 prod-bandpass-v2.webp、straight-waveguide.webp、prod-cabinet.webp 组成 3 列文档类型卡片，图片仅作产品类别识别，旁配文档用途表。",
+        "cta": "Compare Document Types"
+      },
+      {
+        "number": 4,
+        "name": "Controlled Documents",
+        "question": "如果资料不能直接下载，我需要提供什么才能申请？",
+        "h2": "Request S-Parameter Files and Controlled Drawings",
+        "points": [
+          "受控申请字段包括姓名、公司、工作邮箱、产品线、型号/零件号、文档类型、目标频段和项目用途",
+          "图纸申请增加所需 2D/3D 格式；S 参数申请增加端口定义与频率范围，未知项允许填写待确认",
+          "保密需求设为“是否需要先讨论保密安排”的选择项，不公开承诺统一 NDA 范围或自动签署",
+          "提交后说明由团队核对型号与资料可用性，再通过已确认渠道回复，不承诺所有文件都会提供"
+        ],
+        "image": "不配图；使用三步流程图“识别型号→核对用途与版本→工程回复”，并展示申请字段预览。",
+        "cta": "Request Documents"
+      },
+      {
+        "number": 5,
+        "name": "Document Verification",
+        "question": "我如何避免把错误或过期文件用于设计评审？",
+        "h2": "Check Document Revision and Test Context Before Use",
+        "points": [
+          "给出五项核对清单：型号、文档版本、发布日期、频段/端口、测试或测量条件",
+          "要求下载文件与页面结果使用同一型号和版本标识；无法确认版本时不标注最新",
+          "解释样例报告只展示字段和读法，项目报告须对应实际样品或批次及约定测试项目",
+          "链接 /engineering/testing-quality，帮助买家理解 VNA、PIM、可靠性和自动化测试各自证明什么"
+        ],
+        "image": "不配图；使用文档页眉标注示意，突出型号、Revision、Date、Frequency Range、Test Conditions 五个位置。",
+        "cta": "Read the Testing Guide"
+      },
+      {
+        "number": 6,
+        "name": "FAQ",
+        "question": "资料申请、图纸和保密方面还有哪些最后疑问？",
+        "h2": "Datasheet and Drawing Request FAQs",
+        "points": [
+          "覆盖 S 参数、2D/3D 图纸、样例测试报告、无完整型号和 NDA 五类高频问题",
+          "每个答案说明适用条件或评估流程，不把项目级资料承诺扩大为全站公开下载",
+          "FAQ 答案与可见正文一致；本页 source schema 不含 FAQPage，不额外添加无关结构化类型",
+          "答案下保留对应操作链接，分别进入资料申请、RFQ 指南或联系页"
+        ],
+        "image": "不配图；使用手风琴列表，默认展开 S 参数问题，保留可复制的简洁答案。",
+        "cta": "—；FAQ 内按问题提供上下文链接，避免重复主按钮"
+      },
+      {
+        "number": 7,
+        "name": "Final CTA",
+        "question": "如果我没有找到资料，下一步最省力的做法是什么？",
+        "h2": "Tell Us Which Document Your Project Needs",
+        "points": [
+          "提供短表单：工作邮箱、公司、产品线、型号或应用、所需文档和项目说明",
+          "型号未知时允许上传现有规格或描述应用，不强迫买家先完成完整 RFQ",
+          "需要完整工程评估时引导 /request-a-quote，并保留本页已填写的资料需求",
+          "给出备选邮箱 info@zhide-tec.com，不添加未确认的即时通讯账号"
+        ],
+        "image": "不配图；使用双路径行动卡“Request a Specific Document / Start a Full RFQ”。",
+        "cta": "Request Documents"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I request S-parameter files for a SONNE component?",
+        "answer": "Yes. Submit the product line, model or part number, required frequency range and port details through the document request form. SONNE will check whether a suitable file is available for that specific component and confirm the next step. Availability and any confidentiality requirements are reviewed per project rather than assumed for every product.",
+        "intent": "确认 S 参数是否可申请以及申请所需输入",
+        "snippet": "目标是 45–60 词的段落式 Featured Snippet，直接回答可申请、必填信息和项目级确认。"
+      },
+      {
+        "question": "Can I request 2D and 3D drawings for a custom part?",
+        "answer": "You can request 2D drawings or 3D CAD for a custom part by identifying the product, drawing format and intended design use. Include the mechanical envelope, connector or interface requirements and any known revision. The engineering team will first confirm the applicable document version and whether the requested file can be shared for your project.",
+        "intent": "评估定制图纸获取路径与设计导入条件",
+        "snippet": "目标是编号步骤或 45–60 词答案，列出型号、格式、接口与版本核对。"
+      },
+      {
+        "question": "Are sample test reports the results for my own parts?",
+        "answer": "No. A sample test report shows the document structure and the kind of evidence a test can provide; it is not evidence for your own parts. Results for a project must relate to the actual sample or production batch and the agreed test scope. Ask for the relevant report context before using any values in a design review.",
+        "intent": "澄清样例报告与项目实测报告的证据边界",
+        "snippet": "目标是以 No 开头的 45–60 词直接答案，适合澄清型摘要。"
+      },
+      {
+        "question": "What if I do not know the exact model number?",
+        "answer": "You can still start with the product line, application, frequency range and the document you need. Add connector, mechanical or performance requirements when known, and mark uncertain fields as unknown. SONNE can use that information to identify whether a relevant standard document exists or whether your requirement needs a custom engineering review.",
+        "intent": "降低无型号买家的资料申请门槛",
+        "snippet": "目标是 45–60 词段落，突出可从应用和频段开始，不要求先知道型号。"
+      },
+      {
+        "question": "Do drawing requests require an NDA?",
+        "answer": "Confidentiality requirements depend on the document and project. Select the confidentiality discussion option in the request form and describe what you intend to share or receive before uploading sensitive material. SONNE will confirm the appropriate arrangement for that specific request; the website does not imply a universal NDA scope or automatic acceptance for every drawing exchange.",
+        "intent": "确认图纸交换前的保密处理方式",
+        "snippet": "目标是 45–65 词条件式答案，避免统一 NDA 政策断言。"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList"],
+    "seo_title": "Datasheets, Drawings & Test Reports | SONNE",
+    "meta_description": "Download product datasheets and request drawings, S-parameter files and sample test reports for SONNE RF, waveguide and enclosure products.",
+    "focus_keyphrase": "RF component datasheets"
+  },
+  {
+    "number": 28,
+    "id": "page-28",
+    "name": "关于 SONNE About",
+    "url": "/about",
+    "type": "公司页",
+    "buyer_segment": "正在建立供应商短名单、评估长期工程制造伙伴的 OEM 决策者、采购、研发负责人和渠道",
+    "inner_monologue": "这家公司究竟只是产品目录商，还是能理解我的指标并把设计稳定做成批量的制造伙伴？",
+    "pain_points": [
+      "品牌历史与产品能力割裂，买家无法判断 SONNE 的定位和实际制造边界",
+      "供应商宣传规模数字，却不解释这些数字对工程沟通、打样或批量一致性的意义",
+      "缺少可核验的制造与质量入口，采购难以把品牌介绍转化为内部审核材料",
+      "公司故事强调低价或泛全球合作，无法回应工程买家对变更、验证与量产风险的关注"
+    ],
+    "differentiators": [
+      "2015 年成立并聚焦 RF/微波与精密结构制造，为买家提供可持续对接的工程制造主体",
+      "宁波慈溪制造基地、50+ 高精密 CNC 与 500,000+ 年产能形成从样品到批量的制造承接基础",
+      "VNA、PIM、可靠性和多端口矩阵自动化测试能力，让性能讨论能够连接到验证证据",
+      "ISO 9001 与工程优先定位帮助采购把供应商评估从单价扩展到流程、一致性和项目风险"
+    ],
+    "conversion": "主：Partner with SONNE；次：查看 Factory 与 Engineering 证据后发起工程评估",
+    "three_gates": {
+      "search_demand": "SONNE RF manufacturer、SONNE zhide、SONNE RF Ningbo 的 SV/KD 均未测；主要承接品牌核验、工厂属性与工程伙伴评估需求。",
+      "internal_links": "上游入口：/、/products、/resources/faq；下游 URL：/about/factory、/engineering、/products、/contact、/request-a-quote；后续阶段目标为经授权的项目案例详情页。",
+      "citation_value": "原创《公司事实到买家利益对照表》：事实、可核验入口、降低的采购风险、适用项目阶段；附《供应商初筛问题清单》。"
+    },
+    "keywords": {
+      "focus": {"term": "SONNE RF manufacturer", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "custom RF component manufacturer", "sv": null, "kd": null},
+        {"term": "precision enclosure OEM/ODM", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "SONNE zhide", "sv": null, "kd": null},
+        {"term": "SONNE RF Ningbo", "sv": null, "kd": null},
+        {"term": "engineering-first RF supplier", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：保留品牌 slogan，由首屏副文案承载 SONNE RF manufacturer 定位",
+        "H2：custom RF component manufacturer、precision enclosure OEM/ODM 与宁波制造事实",
+        "正文/FAQ：SONNE zhide、SONNE RF Ningbo、engineering-first RF supplier"
+      ]
+    },
+    "h1": "Engineered for RF Performance. Built for Repeatable Production.",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "SONNE 是谁，为哪些买家解决什么问题？",
+        "h2": "Engineered for RF Performance. Built for Repeatable Production.",
+        "points": [
+          "首屏副文案明确 SONNE 是宁波的 RF/微波工程与制造伙伴，服务定制器件和精密结构项目",
+          "用一句话连接两类能力：围绕 RF 指标开展工程评估，并以制造和测试支持重复生产",
+          "标注 2015 年成立、ISO 9001 与宁波慈溪制造基地，作为可继续核验的公司事实",
+          "主 CTA 进入合作需求描述，次 CTA 导向 Factory，不在首屏堆砌未经证实的市场地位"
+        ],
+        "image": "使用真实 file logo-sonne-white.png，置于深色首屏并配 card-microwave.webp 产品技术图，尺寸建议 1440×640，不使用工厂照片作装饰。",
+        "cta": "Partner with SONNE"
+      },
+      {
+        "number": 2,
+        "name": "Business Scope",
+        "question": "SONNE 的产品与工程范围是否覆盖我的项目？",
+        "h2": "One Manufacturing Partner for RF Hardware and Precision Enclosures",
+        "points": [
+          "产品矩阵按滤波器、波导与微波、合路/双工/多工、基站 RF、精密结构件五个主推方向呈现",
+          "IBS/DAS、FTTX 与 RF 配件标为辅助配套，不与主推线争夺页面层级",
+          "每条线写清买家任务，例如频段与隔离实现、系统集成或机械/热/屏蔽结构承接",
+          "说明核心生产覆盖 DC–40 GHz，选定定制微波/波导项目可达 110 GHz，须按拓扑与验证评估"
+        ],
+        "image": "使用 prod-bandpass-v2.webp、prod-omt-v2.webp、prod-combiner-v2.webp、prod-n28-multiplexer.webp、prod-cabinet.webp 组成五列产品矩阵；全部 file 名来自 manifest。",
+        "cta": "Explore Product Lines"
+      },
+      {
+        "number": 3,
+        "name": "Facts to Buyer Value",
+        "question": "公司的规模和能力数字能为我的项目降低什么风险？",
+        "h2": "What SONNE's Manufacturing Facts Mean for Your Project",
+        "points": [
+          "对照表将 50+ 高精密 CNC 翻译为加工资源承接能力，不等同于对具体交期的承诺",
+          "将 500,000+ 年产能翻译为批量评估基础，实际项目仍按图纸、数量、工艺与产能确认",
+          "将 VNA/PIM/可靠性/矩阵自动化测试翻译为按指标建立验证证据的可能，不声称所有产品统一 100% 测试",
+          "公开 2025 更新中的约 20,000 m² 办公制造一体楼仅作设施事实，并链接 Factory 查看真实制造场景"
+        ],
+        "image": "不配图；使用四行“事实→工程/采购利益→验证入口”表格，避免用工厂图片替代事实解释。",
+        "cta": "Verify Our Capabilities"
+      },
+      {
+        "number": 4,
+        "name": "History and Quality",
+        "question": "SONNE 的发展历程如何转化为今天的合作可靠性？",
+        "h2": "From Our 2015 Foundation to Engineering-Led Production",
+        "points": [
+          "时间线只使用已确认节点：2015 年成立、ISO 9001 质量体系、公开 2025 设施更新与 SVIAZ 2025 参展",
+          "2015 节点对应买家利益：形成持续的工程与制造对接主体，而非临时贸易目录",
+          "设施与参展节点分别对应制造承接和公开行业交流，不延伸为客户数、出口国家或营收证明",
+          "ISO 9001 链接到测试质量内容，说明其是审核入口而非对单个产品性能的替代证明"
+        ],
+        "image": "不配图；使用横向时间线，节点字段为年份、已确认事件、对买家的意义、可核验链接。",
+        "cta": "Review Testing and Quality"
+      },
+      {
+        "number": 5,
+        "name": "Working Model",
+        "question": "与 SONNE 合作时，工程和制造如何衔接？",
+        "h2": "A Practical Path from RFQ to Repeatable Production",
+        "points": [
+          "流程分为需求与图纸输入、工程评估、样品验证、试产/批量评估和约定测试与交付物确认",
+          "完整 RFQ 通常可在约 24 小时内获得初步工程反馈，明确这不是报价或交期保证",
+          "最快约两周只作为打样参考并须按项目确认；量产交期不在公司页做统一承诺",
+          "每一步链接到对应工程内容或 RFQ 输入，不用公司历史代替合作流程说明"
+        ],
+        "image": "不配图；使用 5 阶段流程图，标注买家输入、SONNE 活动和评审输出。",
+        "cta": "Start an Engineering Review"
+      },
+      {
+        "number": 6,
+        "name": "FAQ",
+        "question": "供应商属性、制造范围和合作边界还有哪些疑问？",
+        "h2": "Questions Buyers Ask About SONNE",
+        "points": [
+          "覆盖 source 的工厂或贸易商问题，并补充公司位置、定制范围、规模数字和质量证据",
+          "答案把公司事实与项目级确认分开，不编造客户、国家覆盖、统一 MOQ 或交期",
+          "每个答案提供对应证据页路径，便于采购内部转发与复核",
+          "本页按 source 使用 AboutPage、Organization、BreadcrumbList，不额外声明 FAQPage"
+        ],
+        "image": "不配图；使用五问手风琴，首问为 Is SONNE a factory or a trading company?。",
+        "cta": "—；FAQ 项内链接 Factory、Engineering 和 Contact"
+      },
+      {
+        "number": 7,
+        "name": "Final CTA",
+        "question": "认可 SONNE 的定位后，如何开始一次低门槛合作评估？",
+        "h2": "Bring Your Next RF or Enclosure Project to SONNE",
+        "points": [
+          "提供两个入口：查看工厂证据或直接描述项目，不要求买家先决定采购方案",
+          "项目入口仅要求公司、工作邮箱、产品方向和需求摘要，附件与详细参数可后补",
+          "说明完整 RFQ 通常约 24 小时获得初步工程反馈，未知参数可在评估中澄清",
+          "联系入口使用 /contact 与已确认邮箱，不公开未确认 WhatsApp 或街道地址"
+        ],
+        "image": "不配图；使用双按钮行动区和三项输入提示“Application / Known Specifications / Project Stage”。",
+        "cta": "Partner with SONNE"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is SONNE a factory or a trading company?",
+        "answer": "SONNE is an engineering and manufacturing company founded in 2015, with a manufacturing base in Cixi, Ningbo, China. Its production capabilities include more than 50 high-precision CNC machines and RF testing resources. You can review factory photographs, machining, assembly and testing areas on the Factory page before arranging a project-specific audit or visit.",
+        "intent": "核验 SONNE 的工厂属性和实际制造能力",
+        "snippet": "目标是 50–65 词品牌实体答案，包含成立时间、基地与可核验路径。"
+      },
+      {
+        "question": "Where is SONNE based?",
+        "answer": "SONNE's manufacturing base is at No. 87, 89, 91, Sanbei Middle Road, Xinze Village, Guanhaiwei Town, Cixi City, Ningbo City, Zhejiang Province, China. Visitors should arrange a factory visit in advance through the Contact page so the team can confirm the schedule, site access and the people you need to meet.",
+        "intent": "确认已公开的完整制造地址并给出预约参观路径",
+        "snippet": "目标是 45–60 词位置答案，包含已批准的完整地址与 Contact 预约路径。"
+      },
+      {
+        "question": "Does SONNE support custom RF and enclosure projects?",
+        "answer": "Yes. SONNE supports custom RF and microwave filters, waveguide components, combiners, base-station RF hardware and precision enclosure projects. Core production covers DC to 40 GHz, while selected custom microwave and waveguide designs may reach 110 GHz depending on topology and verification. Feasibility, documentation and test scope are evaluated against each project's requirements.",
+        "intent": "评估定制产品范围及高频能力边界",
+        "snippet": "目标是 50–65 词段落，列出范围并保留高频项目条件。"
+      },
+      {
+        "question": "What do SONNE's capacity figures mean for a buyer?",
+        "answer": "More than 50 high-precision CNC machines and annual capacity above 500,000 units indicate manufacturing resources for prototype-to-volume evaluation. They do not create a universal lead-time promise for every design. Your schedule still depends on drawings, quantities, processes and current capacity, so the project team should confirm timing after reviewing the actual RFQ.",
+        "intent": "理解产能数字与具体交付计划之间的关系",
+        "snippet": "目标是 50–60 词解释型答案，将数字转化为利益并限制承诺。"
+      },
+      {
+        "question": "How does SONNE support quality verification?",
+        "answer": "SONNE has an ISO 9001 quality system and VNA, PIM, reliability and multi-port matrix automated testing capabilities. These resources support verification according to the product and agreed test scope. Buyers should review the Testing and Quality page and request project-relevant evidence rather than treating the company-level capability list as a blanket test claim for every component.",
+        "intent": "判断质量体系与测试能力是否可供项目审核",
+        "snippet": "目标是 50–65 词证据型答案，区分公司能力和项目测试范围。"
+      }
+    ],
+    "schema": ["AboutPage", "Organization", "BreadcrumbList"],
+    "seo_title": "About SONNE | RF & Microwave Engineering Manufacturer",
+    "meta_description": "SONNE is an RF and microwave engineering and manufacturing partner in Ningbo, China, serving OEMs in 4G/5G, microwave, satellite and precision enclosure markets.",
+    "focus_keyphrase": "SONNE RF manufacturer"
+  },
+  {
+    "number": 29,
+    "id": "page-29",
+    "name": "工厂与设备 Factory",
+    "url": "/about/factory",
+    "type": "公司页",
+    "buyer_segment": "进入供应商审核、现场验厂或量产风险评估阶段的 SQE、采购、质量经理与渠道",
+    "inner_monologue": "这些设备和测试区是否能证明我的图纸会被真实制造、按约定验证，而不是只看到一间展厅？",
+    "pain_points": [
+      "工厂页只有建筑外观，无法核对加工、装配、调试与测试是否真实存在",
+      "设备数量与产能数字缺乏工序对应，SQE 无法判断其对具体产品的意义",
+      "高频公差和镀层能力容易被误读为所有产品的统一保证",
+      "验厂前不知道应查看哪些工位、记录和测试证据，参观难以形成有效审核"
+    ],
+    "differentiators": [
+      "真实车间图片覆盖 CNC 加工、自动与人工装配、VNA 调试和 RF 测试，支持按工序验真",
+      "50+ 高精密 CNC、约 20,000 m² 办公制造一体楼和 500,000+ 年产能提供量化审核起点",
+      "VNA、PIM、可靠性和多端口矩阵自动化测试能力可连接到具体测试证据讨论",
+      "ISO 9001 与制造、测试内容互链，方便审核团队从现场画面继续检查流程和报告范围"
+    ],
+    "conversion": "主：Book a Factory Visit；次：查看 Manufacturing 与 Testing Quality 后提交审核需求",
+    "three_gates": {
+      "search_demand": "RF factory and equipment、RF component factory audit、ISO 9001 manufacturer China 的 SV/KD 均未测；重点覆盖验厂、设备核验与测试区审核问题。",
+      "internal_links": "上游入口：/about、/engineering、/engineering/manufacturing；下游 URL：/engineering/manufacturing、/engineering/testing-quality、/engineering/npi、/contact、/request-a-quote；后续阶段目标为经审核发布的设备明细与工厂审核准备页。",
+      "citation_value": "原创《工厂工序—设备—证据审核矩阵》和《现场验厂 12 项核对清单》，覆盖加工、表面处理、装配、调试、测试、追溯与变更。"
+    },
+    "keywords": {
+      "focus": {"term": "RF factory and equipment", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "50+ CNC", "sv": null, "kd": null},
+        {"term": "20000 m2 facility", "sv": null, "kd": null},
+        {"term": "RF production lines", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "RF component factory audit", "sv": null, "kd": null},
+        {"term": "ISO 9001 manufacturer China", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：SONNE RF factory 实景入口",
+        "H2：50+ CNC、20000 m2 facility、RF production lines 和测试区",
+        "正文/FAQ：RF component factory audit、ISO 9001 manufacturer China"
+      ]
+    },
+    "h1": "Inside SONNE's RF Manufacturing Facility",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "我能否一眼看到真实制造现场并理解工厂规模？",
+        "h2": "Inside SONNE's RF Manufacturing Facility",
+        "points": [
+          "首屏明确宁波慈溪制造基地，并以加工到测试的实景而非效果图作为验真入口",
+          "事实条列出 50+ 高精密 CNC、500,000+ 年产能与公开 2025 更新约 20,000 m² 办公制造一体楼",
+          "说明产能不等于具体项目交期，实际排产须按图纸、数量、工艺和当前产能评估",
+          "主 CTA 收集参观/审核需求，次 CTA 跳到工序矩阵"
+        ],
+        "image": "使用 factory-machine-shop.webp 作为 1920×900 首屏实拍，保留 CNC 设备与车间空间；图注说明用于制造现场核验，不叠加虚假设备标签。",
+        "cta": "Book a Factory Visit"
+      },
+      {
+        "number": 2,
+        "name": "Facility and Process Map",
+        "question": "工厂内有哪些关键工序，它们如何组成生产路径？",
+        "h2": "Follow the Production Path from Machining to RF Testing",
+        "points": [
+          "流程图标出精密加工、表面处理协调、装配、RF 调试、测试和量产评估，不虚构厂内未确认工序位置",
+          "每一步对应买家可核对的对象：设备、工位、工艺记录、样品/批次或测试报告",
+          "将 20,000 m² 设施数字放在事实栏，不据照片推算面积或设备数量",
+          "表面处理内容只描述工程控制能力，具体工艺和环保合规按项目及审核资料确认"
+        ],
+        "image": "使用 factory-building-v2.webp 仅作建筑事实核验，旁配不依赖照片的生产路径流程图；禁止用建筑图证明具体产线能力。",
+        "cta": "Review the Production Path"
+      },
+      {
+        "number": 3,
+        "name": "Machining Verification",
+        "question": "CNC 与精密加工能力如何对应高频结构和机械要求？",
+        "h2": "Verify CNC Machining for RF Cavities and Precision Parts",
+        "points": [
+          "设备事实采用 50+ 高精密 CNC；展示铣削、车削、装夹与加工细节，不编具体品牌型号",
+          "40 GHz 以上机械公差可达 ±0.01 mm，必须标注视结构与项目要求评估，并非全产品统一保证",
+          "审核表列为关键特征、图纸公差、加工工序、检验方式和项目证据，便于 SQE 按图核验",
+          "链接 /engineering/manufacturing 查看镀层与表面工程，不在 Factory 页扩大合规声明"
+        ],
+        "image": "使用 factory-cnc-cavity-milling.webp、factory-cnc-turning.webp、factory-machining-detail.webp 组成 3 张 16:9 工序核验图，分别标注腔体铣削、车削和金属件加工细节。",
+        "cta": "Explore Precision Manufacturing"
+      },
+      {
+        "number": 4,
+        "name": "Assembly Verification",
+        "question": "装配和自动化如何支持产品从样品走向重复生产？",
+        "h2": "Inspect Assembly Operations and Production Controls",
+        "points": [
+          "实景展示自动装配、自动紧固、人工装配与装配工位，避免把单张图片解释为全产线自动化",
+          "内容表区分设备动作、人员检查、工序输出和买家可查看记录，不用自动化等同零风险",
+          "说明样品通过后仍需按 NPI 路径确认试产、基线和变更，具体交付物按项目约定",
+          "500,000+ 年产能仅作工厂级口径，不分配到未确认的单一产品或产线"
+        ],
+        "image": "使用 factory-automated-assembly.webp、factory-robotic-fastening.webp、factory-manual-assembly.webp、factory-production-line.webp 组成 2×2 制造验真图组，逐图保留真实工序图注。",
+        "cta": "Review the NPI Path"
+      },
+      {
+        "number": 5,
+        "name": "Testing Verification",
+        "question": "测试区能否提供与我的指标相对应的证据？",
+        "h2": "See Where RF Performance Is Tuned and Tested",
+        "points": [
+          "展示 VNA 调试、台架测试和测试站，说明 VNA、PIM、可靠性与矩阵自动化测试能力需按项目核对",
+          "审核矩阵列为测试项目、适用指标、样品/批次对象、报告字段和约定覆盖范围",
+          "不将任何图片或能力描述写成所有产品、所有指标均 100% 验证",
+          "样例报告只说明证据结构，项目结果必须对应实际测试对象与条件"
+        ],
+        "image": "使用 factory-vna-tuning-line.webp、factory-rf-testing.webp、factory-test-station.webp 组成 3 列测试区实拍，尺寸 16:9，图注分别对应 VNA 调试、台架 RF 测试、测试站。",
+        "cta": "Review Testing and Quality"
+      },
+      {
+        "number": 6,
+        "name": "Audit Preparation",
+        "question": "如何安排一次能回答实际审核问题的工厂参观？",
+        "h2": "Prepare a Factory Visit around Your Audit Criteria",
+        "points": [
+          "预约字段包括公司、姓名、工作邮箱、产品/工序关注、审核目标、期望日期、人数和是否需要视频预审",
+          "列出可提前提交的关注项：CNC、装配、VNA/PIM/可靠性、质量体系、NPI 或具体图纸要求",
+          "期望日期仅为申请，页面须说明由团队确认时间、范围和可访问区域，不保证即时预约成功",
+          "参观地址只在内部确认后进入最终网站文案和确认信息；未确认时不公开占位地址或地图"
+        ],
+        "image": "使用 factory-engineering-dfm.webp 作为工程审核准备实拍，旁配 12 项验厂清单；图片用于证明图纸与实物核对场景。",
+        "cta": "Book a Factory Visit"
+      },
+      {
+        "number": 7,
+        "name": "FAQ and CTA",
+        "question": "验厂、产能和高频能力确认后，下一步怎么推进？",
+        "h2": "Factory Audit Questions and Next Steps",
+        "points": [
+          "FAQ 覆盖现场审核、虚拟审核、设备清单、产能口径和高频公差五类疑虑",
+          "答案区分可申请事项与已确认事实，避免统一审核范围、交期或测试覆盖承诺",
+          "FAQ 后提供项目型入口，让买家上传审核清单或先提交产品需求",
+          "联系表单保留邮箱与项目说明，未确认的电话即时通讯属性不作为公开联系承诺"
+        ],
+        "image": "不配图；FAQ 后使用双路径卡“Request an Audit / Discuss a Production Project”，此处无需重复工厂图片。",
+        "cta": "Discuss Your Audit Requirements"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I audit the SONNE factory in person?",
+        "answer": "You can request an in-person factory audit through the Factory or Contact page. Include your company, product interest, audit objectives, preferred dates and the processes you need to review. SONNE will confirm availability, timing and accessible areas for the visit. A requested date is not confirmed until the team responds with the visit arrangements.",
+        "intent": "确认现场验厂是否可申请及预约边界",
+        "snippet": "目标是 50–60 词流程型答案，列出申请信息和确认条件。"
+      },
+      {
+        "question": "Can I request a remote factory review?",
+        "answer": "You can ask for a remote review and identify the machining, assembly or testing areas relevant to your audit. The team will confirm what can be presented and whether a suitable remote session can be arranged. For a useful review, send your audit checklist in advance and separate general capability questions from evidence needed for your specific project.",
+        "intent": "评估远程验厂可能性并提高审核效率",
+        "snippet": "目标是 45–60 词条件式答案，适合远程审核搜索意图。"
+      },
+      {
+        "question": "What equipment can I verify at the factory?",
+        "answer": "The factory content covers high-precision CNC machining, automated and manual assembly, VNA tuning and RF test areas. SONNE states that it has more than 50 high-precision CNC machines plus VNA, PIM, reliability and matrix automated testing capabilities. For an audit, request the equipment and records relevant to your product rather than relying only on a general equipment list.",
+        "intent": "核对工厂设备范围并准备项目审核清单",
+        "snippet": "目标是 50–65 词列表或段落答案，区分画面、能力和项目证据。"
+      },
+      {
+        "question": "Does annual capacity above 500,000 units guarantee my delivery date?",
+        "answer": "No. Annual capacity above 500,000 units is a factory-level capability figure, not a delivery guarantee for an individual order. Production timing depends on the drawings, quantities, processes, validation requirements and available capacity. Submit the actual project details so the team can assess a schedule; prototype and mass-production timing should be confirmed separately.",
+        "intent": "澄清产能与订单交期的关系",
+        "snippet": "目标是以 No 开头的 45–60 词答案，适合交期顾虑摘要。"
+      },
+      {
+        "question": "Is ±0.01 mm tolerance guaranteed for every RF component?",
+        "answer": "No. For structures above 40 GHz, mechanical tolerance can reach ±0.01 mm depending on the design and manufacturing requirements. It is not a blanket guarantee across every component or feature. Share the drawing and identify critical dimensions so engineering can assess feasibility and the appropriate inspection approach for your specific part.",
+        "intent": "确认高频公差能力的适用条件和图纸评估方式",
+        "snippet": "目标是以 No 开头的 40–55 词限定答案，保留“可达/视结构”。"
+      }
+    ],
+    "schema": ["AboutPage", "BreadcrumbList"],
+    "seo_title": "Factory & Equipment | RF Manufacturing Facility | SONNE",
+    "meta_description": "20,000 m² manufacturing building, 50+ high-precision CNC machines, VNA/PIM and reliability test areas, and annual capacity above 500,000 units.",
+    "focus_keyphrase": "RF factory and equipment"
+  },
+  {
+    "number": 30,
+    "id": "page-30",
+    "name": "联系我们 Contact",
+    "url": "/contact",
+    "type": "公司联系页",
+    "buyer_segment": "已识别需求、希望快速确认工程适配性或建立供应商联系的技术买家、采购与渠道",
+    "inner_monologue": "我只需把需求交给对的人，并知道谁会回复、何时回复，而不是把技术问题丢进一个无人处理的邮箱。",
+    "pain_points": [
+      "只有泛邮箱或长表单，买家无法按 RF、波导或结构件需求选择联系路径",
+      "不清楚初步回复与正式报价的区别，容易把 24 小时反馈误解为完整报价承诺",
+      "地址、地图或即时通讯信息未核实就公开，会造成拜访和沟通预期错误",
+      "买家参数不完整时担心无法联系，又因表单过长而放弃询盘"
+    ],
+    "differentiators": [
+      "工程优先的联系路径按产品线分流，让买家先描述应用和关键约束，再补充详细资料",
+      "完整 RFQ 通常约 24 小时获得初步工程反馈，为买家提供清晰且不过度承诺的响应预期",
+      "同时提供表单和当前询盘邮箱 info@zhide-tec.com，保留低摩擦备选通道",
+      "宁波慈溪制造基地与 Factory、RFQ Guide 互链，联系前即可核对工厂和资料准备要求"
+    ],
+    "conversion": "主：Send Your RFQ；次：WhatsApp 仅作 source 中的待确认选项，未确认前不上线，保留 Email Engineering Team 备选入口",
+    "three_gates": {
+      "search_demand": "contact RF component manufacturer、RF engineer contact、custom RF quote email 的 SV/KD 均未测；承接工程联系、响应时间与宁波供应商核验的明确问题。",
+      "internal_links": "上游入口：/、/about、/about/factory、/products；下游 URL：/request-a-quote、/resources/rfq-guide、/about/factory、/resources/faq；后续阶段目标为按产品线确认后的工程联系分流页。",
+      "citation_value": "原创《联系路径选择器》：按资料完整度与问题类型选择短联系表、完整 RFQ、资料申请或工厂访问；附《首封工程邮件 6 项清单》。"
+    },
+    "keywords": {
+      "focus": {"term": "contact RF component manufacturer", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "RF engineer contact", "sv": null, "kd": null},
+        {"term": "SONNE Ningbo China", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "RF component supplier contact", "sv": null, "kd": null},
+        {"term": "custom RF quote email", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：Contact SONNE 与工程销售联系",
+        "H2：RF engineer contact、SONNE Ningbo China 和 custom RF quote email",
+        "正文/FAQ：RF component supplier contact、响应时间与资料准备"
+      ]
+    },
+    "h1": "Contact SONNE Engineering and Sales",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "我应该通过哪个入口联系，并能期待什么回复？",
+        "h2": "Contact SONNE Engineering and Sales",
+        "points": [
+          "首屏按 RF/微波、波导、合路/基站、精密结构件和工厂访问设置联系主题",
+          "明确完整 RFQ 通常可在约 24 小时内获得初步工程反馈，不等于完整报价、交期或技术方案保证",
+          "主按钮进入 Send Your RFQ，次按钮使用已确认邮箱 info@zhide-tec.com",
+          "不公开展示 WhatsApp 或 WeChat；电话是否对应这些渠道须内部确认后再决定"
+        ],
+        "image": "不配图；使用 1440×480 联系路径选择器，显示 Engineering Question、RFQ、Document Request、Factory Visit 四个入口。",
+        "cta": "Send Your RFQ"
+      },
+      {
+        "number": 2,
+        "name": "Contact Form",
+        "question": "参数还不完整时，我能否用短表单开始沟通？",
+        "h2": "Start with What You Know about Your Project",
+        "points": [
+          "必填字段仅为姓名、公司、工作邮箱、联系主题和需求摘要；国家/地区用于沟通背景但不作市场覆盖声明",
+          "可选字段为产品线、应用、频率范围、目标数量、项目阶段、期望回复方式和附件",
+          "产品线选择后显示对应提示：RF 填频段/接口，波导填频段/法兰/极化，结构件填图纸/材料/关键公差",
+          "未知参数可写 Unknown；详细 RFQ 链接 /request-a-quote，短表单提交不宣称已经获得正式报价"
+        ],
+        "image": "不配图；使用分两列表单原型，左侧必填五项，右侧可折叠的技术细节和附件区。",
+        "cta": "Send Your Project Message"
+      },
+      {
+        "number": 3,
+        "name": "Response Process",
+        "question": "提交后会发生什么，我如何避免反复补充信息？",
+        "h2": "What Happens after You Contact SONNE",
+        "points": [
+          "流程为接收需求、检查信息完整度、按产品方向进行初步工程评估、回复澄清问题或下一步",
+          "约 24 小时口径仅适用于完整 RFQ 的初步工程反馈；不完整需求先用于澄清，不承诺同一时限内报价",
+          "列出首封邮件六项：应用、产品线、关键频率/机械要求、数量或阶段、附件、希望解决的问题",
+          "商业条款、NDA、质保/RMA 等不预设统一政策，均按具体项目确认"
+        ],
+        "image": "不配图；使用四步响应流程和“初步反馈≠正式报价”的可见说明标签。",
+        "cta": "Prepare a Complete RFQ"
+      },
+      {
+        "number": 4,
+        "name": "Location and Channels",
+        "question": "我如何核对公司位置并选择可靠的联系方式？",
+        "h2": "Contact SONNE in Ningbo, China",
+        "points": [
+          "公开位置只使用已确认的浙江宁波慈溪制造基地；街道地址与地图为发布前内部确认栏位",
+          "最终网站不得保留地址占位符：未确认时省略街道地址和地图，只保留基地口径与联系渠道",
+          "公开询盘邮箱固定为 info@zhide-tec.com；工厂访问通过表单申请并由团队确认安排",
+          "LinkedIn 或 WhatsApp 仅在账号与公开属性核实后添加；本页策略不强制公开电话"
+        ],
+        "image": "不配图；使用文字位置卡和邮箱联系卡，避免未核实地图、地址别针或即时通讯二维码。",
+        "cta": "Email Engineering and Sales"
+      },
+      {
+        "number": 5,
+        "name": "FAQ",
+        "question": "回复时间、资料完整度、访问和联系渠道还有哪些疑问？",
+        "h2": "Contact and Engineering Response FAQs",
+        "points": [
+          "覆盖 source 的回复时间问题，并补充无完整参数、邮箱、工厂访问和 WhatsApp 四个真实疑虑",
+          "答案不将初步工程反馈扩大为报价或交期，不公开未确认渠道和地址",
+          "各答案链接到 RFQ Guide、Request a Quote 或 Factory Visit 对应操作",
+          "本页 schema 按 source 保持 ContactPage、Organization、BreadcrumbList"
+        ],
+        "image": "不配图；使用五问手风琴与响应预期提示，保持答案可复制。",
+        "cta": "—；FAQ 内使用与问题对应的上下文链接"
+      },
+      {
+        "number": 6,
+        "name": "Final CTA",
+        "question": "现在提交需求时，最低成本的安全下一步是什么？",
+        "h2": "Send Your Requirements for an Initial Engineering Review",
+        "points": [
+          "提供短表单与完整 RFQ 两个入口，买家按资料完整度选择，不强制重复填写",
+          "敏感图纸上传前先描述保密需求，具体保密安排按项目确认",
+          "显示邮箱备选 info@zhide-tec.com 和首封邮件六项提示，降低撰写成本",
+          "提交成功页说明保留确认邮件、后续由团队回复；不虚构工单编号或固定销售联系人"
+        ],
+        "image": "不配图；使用简洁行动区，左侧五项短表单入口，右侧 RFQ 清单和邮箱备选。",
+        "cta": "Send Your RFQ"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How quickly will SONNE respond to my inquiry?",
+        "answer": "A complete RFQ can typically receive initial engineering feedback in about 24 hours. This is not a guarantee of a finished quotation, technical proposal or delivery schedule. If information is missing, the first reply may focus on clarifying the application and requirements. Timing for a formal quote and production is confirmed after the project has been reviewed.",
+        "intent": "确认响应速度并区分初步反馈与正式报价",
+        "snippet": "目标是 50–60 词直接答案，首句给出约 24 小时的准确边界。"
+      },
+      {
+        "question": "Can I contact an engineer without complete specifications?",
+        "answer": "Yes. Start with your application, product line, known frequency or mechanical requirements, project stage and the question you need answered. Mark unknown values rather than guessing. The team can use that information to identify the next clarification steps. A complete RFQ is still needed before a reliable technical or commercial evaluation can be completed.",
+        "intent": "降低早期技术咨询门槛并了解补充资料要求",
+        "snippet": "目标是以 Yes 开头的 45–60 词答案，列出最低联系输入。"
+      },
+      {
+        "question": "What email address should I use for an RF project?",
+        "answer": "Use info@zhide-tec.com for current RF, waveguide and enclosure inquiries. Include your company, application, product line and the main requirements in the subject or message. Attach available specifications or drawings when appropriate, and mention if confidentiality should be discussed before sensitive files are exchanged. The Contact form provides an alternative route.",
+        "intent": "获取真实询盘邮箱并提高首封邮件有效性",
+        "snippet": "目标是 40–55 词答案，邮箱置首句并给出邮件内容清单。"
+      },
+      {
+        "question": "How do I arrange a visit to the Ningbo facility?",
+        "answer": "Submit a factory visit request with your company, preferred dates, number of visitors, product interest and audit objectives. SONNE will confirm the schedule, visit scope and who will attend. The manufacturing address is published above, but confirm your appointment before travelling; a preferred date is not a confirmed booking.",
+        "intent": "申请工厂访问并明确地址已公开但行程需确认",
+        "snippet": "目标是 40–55 词步骤答案，引用已公开地址并强调预约确认。"
+      },
+      {
+        "question": "Is WhatsApp available for contacting SONNE?",
+        "answer": "A public WhatsApp channel has not been confirmed for the website. Use the Contact form, email info@zhide-tec.com or call +86-0574-63615958 so your project details reach the team. Do not assume the published telephone number is a WhatsApp account.",
+        "intent": "确认即时通讯渠道并提供已公开的表单、邮箱与电话",
+        "snippet": "目标是 40–55 词诚实答案，提供当前可用替代渠道。"
+      }
+    ],
+    "schema": ["ContactPage", "Organization", "BreadcrumbList"],
+    "seo_title": "Contact SONNE | Talk to an RF Engineer",
+    "meta_description": "Contact SONNE in Ningbo, China for custom RF, waveguide and enclosure projects. Engineering review typically responds within 24 hours of a complete RFQ.",
+    "focus_keyphrase": "contact RF component manufacturer"
+  },
+  {
+    "number": 31,
+    "id": "page-31",
+    "name": "Request a Quote（按钮）",
+    "url": "/request-a-quote",
+    "type": "转化页",
+    "buyer_segment": "已完成初步供应商评估、准备提交规格或图纸进行工程与商务评估的采购、RF/机械工程师和研发负责人",
+    "inner_monologue": "我能不能一次提交真正有用的信息，同时不为未知参数卡住，并清楚提交后谁会怎么处理？",
+    "pain_points": [
+      "通用询盘表缺少频段、隔离、PIM、接口和机械约束，导致工程团队反复追问",
+      "表单强制填写所有参数，早期定制项目因未知值过多而无法提交",
+      "附件、保密需求和项目阶段没有清晰入口，敏感图纸与商业预期容易错位",
+      "提交后只收到泛确认，买家不知道初步工程反馈、正式报价和交期评估分别何时发生"
+    ],
+    "differentiators": [
+      "按 RF/波导/合路与基站/结构件动态显示字段，使不同产品线收集到可评估的关键输入",
+      "允许标记未知并从已知参数开始，同时明确完整 RFQ 更有利于约 24 小时初步工程反馈",
+      "附件与项目级保密讨论选项进入同一流程，不公开承诺统一 NDA 范围",
+      "工程评估连接定制设计、NPI 和测试质量内容，为后续样品与批量评估保留清晰路径"
+    ],
+    "conversion": "主：Submit RFQ；次：先查看 RFQ Guide 或通过 Contact 提交早期问题",
+    "three_gates": {
+      "search_demand": "custom RF components quote、RF filter quotation、waveguide RFQ、enclosure RFQ 的 SV/KD 均未测；覆盖提交规格、上传 band plan/drawing 和响应预期的高意图需求。",
+      "internal_links": "上游入口：/resources/rfq-guide、/products、/contact、/resources/datasheets；下游 URL：/engineering/custom-rf-design、/engineering/npi、/engineering/testing-quality、/contact；后续阶段目标为各产品线的预填 RFQ 入口。",
+      "citation_value": "原创《分产品线 RFQ 字段矩阵》：公共字段、RF 字段、波导字段、结构件字段、必填/可选、未知值处理与提交后输出。"
+    },
+    "keywords": {
+      "focus": {"term": "custom RF components quote", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "RF filter quotation", "sv": null, "kd": null},
+        {"term": "waveguide RFQ", "sv": null, "kd": null},
+        {"term": "enclosure RFQ", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "custom RF component manufacturer quote", "sv": null, "kd": null},
+        {"term": "band plan upload", "sv": null, "kd": null},
+        {"term": "drawing upload", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：custom RF components quote 与 enclosure 项目入口",
+        "H2：RF filter quotation、waveguide RFQ、enclosure RFQ 动态字段",
+        "正文/FAQ：custom RF component manufacturer quote、band plan upload、drawing upload"
+      ]
+    },
+    "h1": "Request a Custom RF or Enclosure Quote",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这个 RFQ 入口适合我的项目吗，提交后能获得什么？",
+        "h2": "Request a Custom RF or Enclosure Quote",
+        "points": [
+          "首屏覆盖定制滤波器、波导、合路/双工/多工、基站 RF 与精密结构件项目",
+          "说明可提交 band plan、规格或图纸，由工程团队评估可行性、澄清问题与下一步",
+          "完整 RFQ 通常约 24 小时获得初步工程反馈，明确不是正式报价或交期保证",
+          "提供 Submit RFQ 主入口与查看清单次入口，早期问题可转 Contact"
+        ],
+        "image": "不配图；使用 1440×520 的 RFQ 输入概览，显示 Product Line、Specifications、Drawings、Quantity、Project Stage 五类信息。",
+        "cta": "Start Your RFQ"
+      },
+      {
+        "number": 2,
+        "name": "Project Basics",
+        "question": "所有项目都需要哪些基本信息，哪些可以稍后再补？",
+        "h2": "Start with Your Product Line and Project Basics",
+        "points": [
+          "必填：姓名、公司、工作邮箱、产品线、需求摘要；国家/地区为沟通背景字段",
+          "产品线单选包含 RF Filters、Waveguide & Microwave、Combiners & Base Station RF、Precision Enclosures、Other/Not Sure",
+          "可选：应用、项目阶段（概念/设计/打样/试产/量产/替换评估）、样品数量、预计批量、目标日期",
+          "目标日期只作为评估输入，不自动形成交期承诺；Not Sure 可进入通用需求摘要路径"
+        ],
+        "image": "不配图；使用单列表单原型，清晰标注 Required 与 Optional，并在字段下提供示例而非空泛占位符。",
+        "cta": "Select a Product Line"
+      },
+      {
+        "number": 3,
+        "name": "Technical Fields",
+        "question": "不同产品线应填写哪些技术参数，未知值如何处理？",
+        "h2": "Add the Specifications Engineers Need to Review",
+        "points": [
+          "RF 动态字段：频率范围/中心频率、带宽、插损、回波损耗、抑制或隔离、功率、PIM、阻抗、连接器、机械包络、环境条件",
+          "波导增加频段、波导规格/法兰、极化、端口与隔离要求；合路/基站增加 band plan、4T4R/8TR、N28/N78 等已知限定",
+          "结构件字段：2D/3D 图、材料、外形尺寸、关键公差/GD&T、表面处理、散热/屏蔽要求、防护目标与装配约束",
+          "除公共必填项外技术字段可选并带 Unknown；提交时提示缺项会影响评估完整度，但不阻止早期咨询"
+        ],
+        "image": "不配图；使用按产品线切换的四列表格，列为参数、单位/格式、示例、Unknown 选项。",
+        "cta": "Add Project Specifications"
+      },
+      {
+        "number": 4,
+        "name": "Files and Confidentiality",
+        "question": "我如何上传 band plan 或图纸，并在敏感资料前先讨论保密？",
+        "h2": "Upload Band Plans and Drawings with Clear Confidentiality Context",
+        "points": [
+          "附件类型支持 PDF、STEP/STP、DXF、XLSX/CSV 与 ZIP；实际上传大小上限按 CMS 配置后在字段旁如实显示",
+          "为每个附件提供用途标签：Band Plan、RF Specification、2D Drawing、3D CAD、Test Requirement、Other",
+          "保密字段为“需要在分享敏感资料前讨论保密安排”及说明框，不声称自动接受或统一 NDA 范围",
+          "若选择先讨论保密，可只提交非敏感需求摘要，后续文件交换方式由双方按项目确认"
+        ],
+        "image": "不配图；使用附件上传组件示意，包含文件类型、用途标签、移除/重传状态和保密提示。",
+        "cta": "Attach Project Files"
+      },
+      {
+        "number": 5,
+        "name": "Review and Expectations",
+        "question": "提交前我如何检查信息，提交后哪些结果不能被视为保证？",
+        "h2": "Review Your RFQ and the Next Steps before Submitting",
+        "points": [
+          "提交前摘要按联系信息、产品线、技术指标、数量/阶段、附件和保密需求分组，可返回编辑",
+          "成功页显示已提交的产品线与需求摘要，并提示保存确认信息；不虚构报价编号或固定负责人",
+          "完整 RFQ 通常约 24 小时初步工程反馈；资料不完整时先澄清，正式报价与交期在评估后确认",
+          "最快约两周仅为打样参考且须项目确认；本页不展示统一 MOQ、付款、质保/RMA 或量产交期政策"
+        ],
+        "image": "不配图；使用“Submitted→Completeness Check→Engineering Review→Clarification or Next Step”流程图及提交前检查表。",
+        "cta": "Submit RFQ"
+      },
+      {
+        "number": 6,
+        "name": "FAQ",
+        "question": "信息不完整、频段范围、附件、保密和交期方面还有哪些疑问？",
+        "h2": "RFQ Submission FAQs",
+        "points": [
+          "覆盖 source 的无完整参数问题，并补充频段、附件、NDA 和报价/交期五类决策疑虑",
+          "答案说明 DC–40 GHz 核心生产和选定项目可达 110 GHz 的条件，不扩大产品覆盖",
+          "答案把初步工程反馈、打样参考和正式报价/量产排产区分开",
+          "本页按 source 只用 WebPage、BreadcrumbList，不额外添加 FAQPage"
+        ],
+        "image": "不配图；使用五问手风琴，并将“Prepare Your RFQ”链接到 /resources/rfq-guide。",
+        "cta": "—；FAQ 项内提供清单、Contact 与工程页链接"
+      },
+      {
+        "number": 7,
+        "name": "Final CTA",
+        "question": "我还缺一些参数，现在是提交还是先做其他准备？",
+        "h2": "Submit What You Know and Let Engineering Identify the Gaps",
+        "points": [
+          "主路径保留当前表单内容并提交已知信息，避免用户因查看指南而丢失输入",
+          "次路径打开 RFQ Guide 和 Contact，分别服务想自行补全与想先问问题的买家",
+          "最终按钮旁再次说明初步工程反馈的适用条件，不使用 Get Instant Quote 等误导文案",
+          "提供邮箱 info@zhide-tec.com 作为表单故障备选，不公开未确认 WhatsApp 或地址"
+        ],
+        "image": "不配图；使用低干扰行动条，主按钮 Submit RFQ，次链接 Review the Checklist 和 Ask a Question First。",
+        "cta": "Submit RFQ"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I request a quote without complete specifications?",
+        "answer": "Yes. Submit the product line, application, project stage and the specifications you already know, then mark uncertain fields as unknown. Engineering can use that information to identify missing inputs and clarify the next step. A complete RFQ is more likely to receive initial engineering feedback in about 24 hours; a formal quote requires sufficient technical and commercial information.",
+        "intent": "降低 RFQ 提交门槛并理解资料完整度影响",
+        "snippet": "目标是以 Yes 开头的 55–65 词答案，区分早期提交和正式报价。"
+      },
+      {
+        "question": "What frequency range can I include in an RFQ?",
+        "answer": "SONNE's core production range is DC to 40 GHz. Selected custom microwave and waveguide projects may reach 110 GHz, depending on topology and verification. Include your required bands, bandwidth and performance targets so engineering can assess feasibility. The upper frequency statement is not a blanket commitment for every component or design.",
+        "intent": "确认询价可覆盖的频率范围与高频边界",
+        "snippet": "目标是 45–55 词定义型答案，包含核心范围和选定项目条件。"
+      },
+      {
+        "question": "What files should I upload with my RFQ?",
+        "answer": "Upload the files that define your requirement: a band plan, RF specification, 2D drawing, 3D CAD or test requirements as applicable. Identify each file's purpose and revision where known. If the material is sensitive, you can request a confidentiality discussion first and submit only a non-sensitive summary until the exchange arrangements are confirmed.",
+        "intent": "准备 RFQ 附件并处理敏感资料上传顾虑",
+        "snippet": "目标是 45–60 词列表式答案，覆盖 band plan、drawing 与保密前置选择。"
+      },
+      {
+        "question": "Does selecting the confidentiality option mean an NDA is accepted?",
+        "answer": "No. The option tells SONNE that confidentiality should be discussed before sensitive material is exchanged. It does not mean a universal NDA has been accepted or define its scope. Describe your requirement and avoid uploading sensitive files until the appropriate project-specific arrangement has been confirmed by both parties.",
+        "intent": "澄清 NDA 选项的实际含义和文件交换边界",
+        "snippet": "目标是以 No 开头的 40–50 词答案，避免统一 NDA 政策断言。"
+      },
+      {
+        "question": "Will I receive a firm price and delivery date within 24 hours?",
+        "answer": "Not necessarily. The approximately 24-hour guideline refers to initial engineering feedback for a complete RFQ, not a guaranteed firm quotation or delivery commitment. Pricing and timing require review of the design, quantities, processes and capacity. The fastest approximately two-week reference applies only to prototyping in suitable cases, while mass-production timing is confirmed per project.",
+        "intent": "澄清 24 小时反馈、报价、打样与量产交期的区别",
+        "snippet": "目标是 50–60 词否定限定答案，适合响应承诺类摘要。"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList"],
+    "seo_title": "Request a Quote | Custom RF & Enclosure Projects | SONNE",
+    "meta_description": "Submit your band plan, specifications or drawings for a custom RF, waveguide, combiner or enclosure project. Engineering review and clear next steps within 24 hours.",
+    "focus_keyphrase": "custom RF components quote"
+  }
+]

@@ -1,0 +1,1054 @@
+[
+  {
+    "number": 1,
+    "id": "page-01",
+    "name": "首页 Home",
+    "url": "/",
+    "type": "首页",
+    "buyer_segment": "RF 设备商、基站厂商、系统集成商及结构件采购；处于供应商初筛、定制可行性判断或新品量产伙伴评估阶段",
+    "inner_monologue": "我能否在十秒内确认 SONNE 做我的产品、能参与定制，并且有能力把样品做成稳定批量？",
+    "pain_points": [
+      "供应商只列型号，无法判断其是否覆盖当前频段、结构和应用约束",
+      "样品性能与批量一致性脱节，采购和 SQE 缺少可审核的制造与测试证据",
+      "RF、波导和精密结构件分散采购，工程接口与变更协调成本高",
+      "询价参数不完整导致反复沟通，难以快速获得可执行的工程反馈"
+    ],
+    "differentiators": [
+      "核心产品覆盖 DC–40 GHz，选定定制微波与波导项目可达 110 GHz，便于先按项目边界筛选而非泛化承诺",
+      "50+ 高精密 CNC 与 500,000+ 年产能支撑从样机到批量的制造衔接，产能仍按具体项目评估",
+      "VNA、PIM、可靠性及多端口矩阵自动化测试能力，可把性能要求转化为项目级验证计划",
+      "宁波慈溪制造基地、ISO 9001 与约 24 小时完整 RFQ 初步工程反馈，降低供应商验真和首轮沟通成本"
+    ],
+    "conversion": "主转化：Request a Quote；次转化：Talk to an RF Engineer",
+    "three_gates": {
+      "search_demand": "custom RF component manufacturer；SV 未测、KD 未测。以寻找可同时评估定制、打样与量产的工程制造伙伴为决策问题，不承接单一器件词的分类页排名任务。",
+      "internal_links": "上游入口：/about 的品牌与工厂核验链接、/resources/insights 的制造商选型指南链接；下游 URL：/products、/engineering、/resources/rfq-guide、/request-a-quote。",
+      "citation_value": "制作“RF 制造伙伴初筛矩阵”：产品线、核心频率边界、所需输入、可用验证能力、原型/试产/量产阶段和对应入口；另给 Prototype → Pilot → Mass 阶段交付物核对表。"
+    },
+    "keywords": {
+      "focus": {"term": "custom RF component manufacturer", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "RF & microwave components manufacturer", "sv": null, "kd": null},
+        {"term": "base-station passive component manufacturer", "sv": null, "kd": null},
+        {"term": "precision enclosure OEM/ODM", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "prototype to mass production partner", "sv": null, "kd": null},
+        {"term": "custom microwave components", "sv": null, "kd": null},
+        {"term": "engineering-first RF supplier", "sv": null, "kd": null},
+        {"term": "DC to 40 GHz / up to 110 GHz", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：custom RF component manufacturer 的制造商定位，不在首页争夺 cavity filter、waveguide components 或 RF combiner 分类主词",
+        "H2：RF & microwave components manufacturer、prototype to mass production partner；base-station 仅作受限定的产品入口",
+        "正文/FAQ：custom microwave components、engineering-first RF supplier、DC to 40 GHz / up to 110 GHz，并清楚区分核心与选定定制频率范围"
+      ]
+    },
+    "h1": "Custom RF & Microwave Components, Engineered for Repeatable Production",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "SONNE 是谁，是否能承接我的定制 RF 与批量制造项目？",
+        "h2": "Custom RF & Microwave Components, Engineered for Repeatable Production",
+        "points": [
+          "首屏一句话说明 SONNE 是位于宁波慈溪的 RF、微波与精密结构件工程制造伙伴，成立于 2015 年并通过 ISO 9001",
+          "保留品牌标语 Engineered for RF Performance. Built for Repeatable Production.，但不得替代产品定位句",
+          "用 DC–40 GHz 核心生产范围与选定定制项目可达 110 GHz 作能力边界短注，注明取决于拓扑与验证",
+          "双按钮分别进入 RFQ 和工程沟通；首屏不堆产品参数、认证图标或未经确认的客户标志"
+        ],
+        "image": "首屏右侧使用真实车间宽景 factory-machine-shop.webp，构图保留左侧文案安全区，桌面建议 1600×900 裁切，移动端切换 4:3；图片标注 CNC 制造现场而非泛指所有工序。",
+        "cta": "Request a Quote / Talk to an RF Engineer"
+      },
+      {
+        "number": 2,
+        "name": "Core Product Matrix",
+        "question": "五条核心产品线中，哪一条与我的器件或结构需求对应？",
+        "h2": "Explore Five Core RF and Precision Product Lines",
+        "points": [
+          "并排展示 Filters、Waveguide & Microwave、Combiners & Duplexers、Base Station RF、Precision Enclosures 五张卡片，保持同等视觉层级",
+          "每张卡只写适用问题与两个入口示例，例如滤波器按频段和结构选型，波导按法兰、极化和频段评估，避免把首页写成参数目录",
+          "卡片分别链接 /products/rf-microwave-filters、/products/waveguide-components、/products/rf-combiners、/products/base-station-rf、/products/precision-enclosures",
+          "矩阵底部增加查看全部产品入口，辅助线不得插入核心五线之间"
+        ],
+        "image": "五卡依次使用 prod-bandpass-v2.webp、card-microwave.webp、prod-combiner-v2.webp、card-basestation.webp、prod-cabinet.webp；统一 4:3 展示框，白底产品图不拉伸，基站卡保留应用场景语义。",
+        "cta": "Explore Product Lines"
+      },
+      {
+        "number": 3,
+        "name": "Manufacturing and Test Evidence",
+        "question": "这些能力是否有真实设备、制造现场和测试环节支撑？",
+        "h2": "Verify the Manufacturing and Test Capabilities behind Your RFQ",
+        "points": [
+          "以 ISO 9001、50+ 高精密 CNC、500,000+ 年产能、约 20,000 m² 办公制造一体楼组成事实条，新楼数据注明为 2025 公开更新口径",
+          "用设备到买家利益的对应表说明 CNC 支撑结构实现、VNA 支撑 S 参数验证、PIM 与可靠性测试按项目要求纳入验证",
+          "展示多端口矩阵自动化测试能力，但不写成全产品、全指标 100% 测试承诺",
+          "链接 /engineering/testing-quality、/engineering/manufacturing 与 /about/factory，分别承接报告、工艺和现场验真"
+        ],
+        "image": "采用三幅真实实拍：factory-cnc-cavity-milling.webp、factory-vna-tuning-line.webp、factory-test-rig.webp，单图 16:9，图注分别写腔体加工、VNA 调试、RF 测试，不使用证书或客户 logo 拼贴。",
+        "cta": "Review Engineering & Quality"
+      },
+      {
+        "number": 4,
+        "name": "Frequency and Fit",
+        "question": "我的频段和定制边界是否符合 SONNE 的能力范围？",
+        "h2": "Match Frequency, Topology and Validation before You Specify a Part",
+        "points": [
+          "用双区间图区分 DC–40 GHz 核心生产组合与选定定制微波/波导项目可达 110 GHz，避免视觉上看成全产品统一覆盖",
+          "列出首轮适配输入：频率与带宽、拓扑或功能、功率/PIM/隔离要求、机械包络、数量与验证条件",
+          "增加“不在范围内也可提交评估”的边界说明，但不暗示所有需求均可承接或逆向替代",
+          "把频段相关读者导向对应产品分类，把尚无明确器件名称的读者导向 /solutions"
+        ],
+        "image": "不配图；使用横向频率边界图与“核心范围/选定定制”双色图例，旁置五项 RFQ 适配输入表，110 GHz 端点加项目评估脚注。",
+        "cta": "Check Your Project Fit"
+      },
+      {
+        "number": 5,
+        "name": "Prototype to Production",
+        "question": "从工程评估到批量，项目会经过哪些可检查的阶段？",
+        "h2": "Move from Prototype to Pilot Run to Repeatable Production",
+        "points": [
+          "用四步流程展示 RFQ 与工程评估、Prototype 验证、Pilot Run 基线确认、Mass Production 按受控要求执行",
+          "每步列输入与输出：规格/图纸、样品与测试数据、试产与基线确认、批量检验与项目约定记录",
+          "说明完整 RFQ 通常约 24 小时内获得初步工程反馈；最快约两周仅为打样参考，量产交期按图纸、数量、工艺与产能评估",
+          "链接 /engineering/npi 和 /resources/rfq-guide，让买家在提交前理解阶段与资料要求"
+        ],
+        "image": "不配图；使用四阶段横向流程图，每阶段固定显示“买家输入/SONNE 输出/确认门”，移动端改为纵向步骤，不设置虚构天数刻度。",
+        "cta": "Plan Your NPI Path"
+      },
+      {
+        "number": 6,
+        "name": "Supporting Products",
+        "question": "核心器件之外，能否找到 IBS、FTTX 和项目配件入口？",
+        "h2": "Complete the BOM with Supporting RF, FTTX and Accessory Lines",
+        "points": [
+          "以次要层级展示 IBS/DAS、FTTX 与 RF Accessories 三个入口，明确其配套定位，不与核心五线争夺首屏和主卡权重",
+          "IBS 卡限定 low PIM splitter/coupler 与 POI 配套语境；FTTX 卡聚焦分纤与户外接续结构；配件卡聚焦系统补全",
+          "分别链接 /products/ibs-das-components、/products/fttx-fiber-distribution、/products/rf-accessories，并保留统一 RFQ 路径",
+          "不在首页展开配件 MOQ、库存或整套 BOM 商务承诺，具体项目单独确认"
+        ],
+        "image": "三卡使用 card-ibs.webp、market-ftth.webp、cable-assembly-se-ca01-sma-008-01.webp；统一 4:3，配件图只代表线缆组件示例，不作为全部配件总图。",
+        "cta": "View Supporting Products"
+      },
+      {
+        "number": 7,
+        "name": "Engineering Resources",
+        "question": "在联系供应商前，我能否用专业资料完成选型和内部评审？",
+        "h2": "Use Engineering Guides to Prepare a Better RFQ",
+        "points": [
+          "设置三张内容卡：RFQ 参数清单、滤波器结构选型、duplexer 与 diplexer 功能辨析，分别服务准备、选型和术语澄清",
+          "RFQ 卡链接 /resources/rfq-guide；选型与术语卡链接 /resources/insights 的对应文章，具体文章未发布时只链聚合页",
+          "卡片摘要必须给出一个可带走的判断维度，如抑制与插损的权衡或 band plan 必填字段，不写公司新闻",
+          "模块尾部链接 /resources，建立首页到专业内容再到产品页的回溯路径"
+        ],
+        "image": "不配图；使用带字段预览的资料卡与术语对照卡，显示“Checklist / Selection Table / Terminology”文本标签，避免使用无关库存图。",
+        "cta": "Read the RFQ Guide"
+      },
+      {
+        "number": 8,
+        "name": "FAQ",
+        "question": "提交项目前，频率、定制、量产与资料方面还有哪些关键疑虑？",
+        "h2": "Frequently Asked Questions about Custom RF Manufacturing",
+        "points": [
+          "按频率边界、定制与打样、量产一致性、工厂身份、RFQ 输入五个问题展示下方独立 FAQ 内容",
+          "每个答案先直接回答，再说明项目条件与下一步，不插入统一 MOQ、付款、质保或未确认合规承诺",
+          "FAQ 与 /resources/faq 的全站通用问题保持分工，首页只处理制造伙伴初筛问题",
+          "FAQPage 标记仅对应页面实际可见的五组问答"
+        ],
+        "image": "不配图；使用单列手风琴，默认展开第一问，问题与答案保持可抓取文本，不用图片承载答案。",
+        "cta": "—；答案后统一由末节 RFQ 承接，避免每问重复按钮"
+      },
+      {
+        "number": 9,
+        "name": "Final RFQ",
+        "question": "我现在可以用最低成本提交什么，并获得什么下一步？",
+        "h2": "Start with Your Specification, Drawing or Application",
+        "points": [
+          "提供产品线选择、姓名/公司/邮箱、频率或应用、预计数量、需求说明和附件上传字段，允许尚无完整规格的买家先提交应用",
+          "在提交按钮旁说明完整 RFQ 通常约 24 小时内获得初步工程反馈，不表述为报价或交期保证",
+          "显示询盘邮箱 info@zhide-tec.com 作为备用路径，不强制公开未确认的电话即时通讯属性",
+          "按钮分为主 Request a Quote 与次 Talk to an RF Engineer，并链接 /request-a-quote 和 /contact"
+        ],
+        "image": "不配图；左侧放三步提交说明，右侧放短表单，附件旁列出规格书、band plan、2D/3D 图纸示例，避免再使用大幅场景图分散行动。",
+        "cta": "Request a Quote / Talk to an RF Engineer"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What frequency range can SONNE manufacture?",
+        "answer": "SONNE's core production portfolio covers DC to 40 GHz. Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology, mechanical requirements and validation. Send your band plan and performance targets so engineering can confirm feasibility for the specific design rather than treating 110 GHz as a universal product limit.",
+        "intent": "确认供应商频率边界并判断项目是否值得提交",
+        "snippet": "段落式 Featured Snippet；首句给 DC–40 GHz，随后限定 110 GHz 条件，约 55–65 词"
+      },
+      {
+        "question": "Can SONNE support custom designs and prototypes?",
+        "answer": "Yes. SONNE supports custom RF evaluation and prototype development across its listed product lines. You can start with a specification, band plan, drawing or application description. Engineering reviews the requirements before defining prototype and validation steps. The fastest prototype reference is about two weeks, but actual timing depends on design, process and project confirmation.",
+        "intent": "评估非标定制、打样入口和时间预期",
+        "snippet": "直接回答式段落；约 55–65 词，必须保留打样时间非通用承诺的限定"
+      },
+      {
+        "question": "How does SONNE approach repeatability in mass production?",
+        "answer": "SONNE links precision machining, assembly and project-specific RF verification through prototype, pilot and production stages. VNA, PIM, reliability and matrix-switch automated testing capabilities are available according to the product and agreed test plan. Buyers should define critical parameters, reporting and acceptance criteria during RFQ so batch verification is based on explicit requirements.",
+        "intent": "降低样品合格但批量失控的供应商风险",
+        "snippet": "流程概括型 Featured Snippet；约 55 词，不扩展为全产品所有测试 100% 覆盖"
+      },
+      {
+        "question": "Is SONNE a manufacturer or a trading company?",
+        "answer": "SONNE ELECTRONICS was founded in 2015 and operates a manufacturing base in Cixi, Ningbo, with ISO 9001, more than 50 high-precision CNC machines and RF assembly and testing capabilities. Factory, machining and test evidence is available on the engineering and factory pages for buyers conducting supplier reviews.",
+        "intent": "核验制造商身份与工厂真实性",
+        "snippet": "实体定义型段落；约 50–60 词，用事实回答而不作低价或全球覆盖承诺"
+      },
+      {
+        "question": "What should I include in an initial RFQ?",
+        "answer": "Include the product function, frequency range and bandwidth, key RF targets, power or PIM needs where relevant, connectors or flanges, mechanical envelope, operating environment and expected quantity. Attach drawings, a band plan or an existing specification if available. Incomplete information can start a discussion, while a complete RFQ typically receives initial engineering feedback in about 24 hours.",
+        "intent": "准备可评估的询价资料并减少往返沟通",
+        "snippet": "清单转段落式 Featured Snippet；约 60 词，24 小时仅限定完整 RFQ 初步工程反馈"
+      }
+    ],
+    "schema": ["Organization", "WebSite", "FAQPage"],
+    "seo_title": "Custom RF & Microwave Component Manufacturer | SONNE",
+    "meta_description": "SONNE manufactures RF & microwave filters, waveguide components, combiners, base-station RF and precision enclosures, from custom RFQ and prototype to repeatable mass production.",
+    "focus_keyphrase": "custom RF component manufacturer"
+  },
+  {
+    "number": 2,
+    "id": "page-02",
+    "name": "产品中心 Products",
+    "url": "/products",
+    "type": "产品聚合页",
+    "buyer_segment": "RF 工程师、采购、系统集成商与结构件买家；处于产品导航、供应范围核对和供应商短名单建立阶段",
+    "inner_monologue": "我只想快速进入正确产品线，同时确认这里能否覆盖标准选型和后续非标定制。",
+    "pain_points": [
+      "产品命名跨 RF、波导和结构件，买家难以凭型号判断正确入口",
+      "核心线与辅助线混排会增加选择成本，也容易误入不符合项目阶段的产品目录",
+      "只看产品卡片无法判断应按器件、应用还是定制路径继续",
+      "已有 BOM 的买家需要把不同产品线需求汇总到清晰 RFQ，而非重复提交"
+    ],
+    "differentiators": [
+      "七条产品线按五条核心与两条辅助分层，帮助买家快速识别供应重点",
+      "标准产品与定制路径并列展示，并继承 89 个 SKU 参数作为后续选型资料基础",
+      "核心 RF 组合覆盖 DC–40 GHz，选定定制微波/波导项目可达 110 GHz，范围边界清晰",
+      "从应用入口和统一 RFQ 清单连接产品、工程评估与制造验证，减少错误跳转"
+    ],
+    "conversion": "主转化：Find Your Product Line；次转化：Request a Quote",
+    "three_gates": {
+      "search_demand": "RF & microwave components；SV 未测、KD 未测。核心决策问题为“供应商有哪些产品线、我的需求应进入哪一条”，不以具体器件分类主词作为本页排名目标。",
+      "internal_links": "上游入口：/ 的核心产品矩阵、/solutions 的应用入口、/resources/rfq-guide 的分产品线清单；下游 URL：/products/rf-microwave-filters、/products/waveguide-components、/products/rf-combiners、/products/base-station-rf、/products/precision-enclosures、/request-a-quote。",
+      "citation_value": "制作“产品线导航主表”：核心/辅助层级、器件功能、典型应用、频率或结构输入、标准/定制路径和目标 URL；另做按应用反查产品线的二维索引。"
+    },
+    "keywords": {
+      "focus": {"term": "RF & microwave components", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "RF filters", "sv": null, "kd": null},
+        {"term": "waveguide components", "sv": null, "kd": null},
+        {"term": "RF combiners", "sv": null, "kd": null},
+        {"term": "base station RF", "sv": null, "kd": null},
+        {"term": "precision enclosures", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "custom RF component manufacturer", "sv": null, "kd": null},
+        {"term": "RF component supplier China", "sv": null, "kd": null},
+        {"term": "OEM RF components", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：RF & microwave components 聚合语义，并用 Precision Enclosure 保持源 H1 不变",
+        "H2：五条核心线以导航标签出现，waveguide components 的正式内容归属 /products/waveguide-components，本页不展开竞争深度",
+        "正文/FAQ：custom RF component manufacturer、RF component supplier China、OEM RF components；具体 cavity filter 与 RF combiner 查询分别导向对应分类页"
+      ]
+    },
+    "h1": "RF, Microwave and Precision Enclosure Product Lines",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这里有哪些产品线，我该如何开始选择？",
+        "h2": "RF, Microwave and Precision Enclosure Product Lines",
+        "points": [
+          "首屏用一句话说明五条核心 RF/结构产品线及 IBS/DAS、FTTX 辅助线，并标注标准选型与定制评估均可进入",
+          "主按钮锚定本页产品导航，次按钮进入统一 RFQ，不让首屏直接跳离聚合任务",
+          "放置两个选择提示：已知器件名称按产品线进入；只有应用场景则跳转应用导航",
+          "不展示单一产品的详细指标，避免聚合页被误认为某个分类页"
+        ],
+        "image": "使用 card-microwave.webp 作为 RF 产品组合视觉，右侧 1:1 展示，左侧保留导航文案；建议桌面首屏整体 1440×720，图下注明产品示意而非具体型号参数。",
+        "cta": "Find Your Product Line / Request a Quote"
+      },
+      {
+        "number": 2,
+        "name": "Core Product Lines",
+        "question": "五条核心线分别解决什么问题，我应该点击哪一条？",
+        "h2": "Choose from Five Core Product Lines",
+        "points": [
+          "以五行导航主表代替纯营销卡片，列为产品线、解决的问题、选型首要输入、标准/定制路径、详情入口",
+          "Filters 行以频率/带宽/抑制为输入；Waveguide 行以频段/法兰/极化为输入；Combiners 行以 band plan/端口/隔离为输入",
+          "Base Station 行必须写 4T4R/8TR、N28/N78 等限定语境；Precision Enclosures 行以图纸/GD&T/散热与屏蔽需求为输入",
+          "每行链接对应已规划分类 URL，三级型号详情只标注为后续阶段目标，不在本 fragment 新增页面"
+        ],
+        "image": "表格左侧缩略图依次使用 prod-bandpass-v2.webp、straight-waveguide.webp、prod-combiner-v2.webp、card-basestation.webp、prod-cabinet.webp，统一 96×96 展示；移动端隐藏缩略图保留全部文字字段。",
+        "cta": "Compare Core Lines"
+      },
+      {
+        "number": 3,
+        "name": "Supporting Lines",
+        "question": "如果需求属于室内覆盖、光纤配线或配件，应该去哪里？",
+        "h2": "Find Supporting IBS/DAS, FTTX and RF Accessories",
+        "points": [
+          "将 IBS/DAS 与 FTTX 标为辅助产品线，将 RF Accessories 标为配套入口且注明不进入主导航",
+          "IBS/DAS 只采用 low PIM splitter、coupler、POI 的室内覆盖语境，避免通用 RF power divider 主词归属冲突",
+          "FTTX 展示分纤箱、光配线箱和接续盒入口；配件展示衰减、负载、线缆等补全用途，但不承诺库存",
+          "三个入口分别链接 /products/ibs-das-components、/products/fttx-fiber-distribution、/products/rf-accessories"
+        ],
+        "image": "三列使用 card-ibs.webp、market-ftth.webp、directional-coupler-4-3-10-female.webp，统一 4:3；配件图注明确为 directional coupler 示例，不代表全部配件。",
+        "cta": "Browse Supporting Lines"
+      },
+      {
+        "number": 4,
+        "name": "Application Navigator",
+        "question": "我只知道系统应用、不知道器件名称时，如何反查产品？",
+        "h2": "Find Products by Application",
+        "points": [
+          "建立应用反查表，列为应用场景、系统问题、可能涉及的产品线、下一步链接，不直接替买家作未经评估的选型结论",
+          "覆盖 5G base station、microwave backhaul、satellite earth station、DAS/IBS、FTTX、data-center enclosures 六类已规划应用",
+          "每个应用优先链接 /solutions 下对应页面，再给相关产品分类作为第二入口，形成应用与产品双向路径",
+          "对跨线需求提示可在 RFQ 中选择多个产品线并上传一份 BOM，具体可制造性逐项评估"
+        ],
+        "image": "不配图；使用六行应用—产品映射表和可筛选标签，避免用六张库存场景图增加页面重量。",
+        "cta": "Explore Solutions by Application"
+      },
+      {
+        "number": 5,
+        "name": "Standard or Custom Route",
+        "question": "已有型号可选型，还是需要走定制工程评估？",
+        "h2": "Choose a Standard Selection or Custom Evaluation Route",
+        "points": [
+          "用双路径对照说明：标准路径从 SKU 参数与数据资料开始；定制路径从规格、band plan 或图纸开始",
+          "注明 89 个 SKU 参数继承是目录建设基础，上线前逐项核对参数与资料状态，不暗示全部有现货",
+          "定制路径列出频率、性能、接口、机械、环境与数量字段，并链接 /engineering/custom-rf-design",
+          "两条路径都汇入 /request-a-quote，但表单应保留标准型号与定制项目两种提交类型"
+        ],
+        "image": "不配图；使用左右双路径决策树，判断节点为“已有明确型号？”“关键指标满足？”“需要改结构或频段？”，终点均为对应资料或 RFQ。",
+        "cta": "Start a Custom Evaluation"
+      },
+      {
+        "number": 6,
+        "name": "Capability Boundary",
+        "question": "整个产品组合的制造与验证边界是什么？",
+        "h2": "Check the Manufacturing Scope behind the Product Portfolio",
+        "points": [
+          "用简短事实表列出核心 DC–40 GHz、选定定制可达 110 GHz、50+ 高精密 CNC、VNA/PIM/可靠性/矩阵自动测试能力",
+          "110 GHz 旁固定注明取决于拓扑与验证；测试能力按产品和项目计划配置，不作全线统一覆盖率承诺",
+          "给出 ISO 9001 与宁波慈溪制造基地信息，链接 /about/factory 供进一步验真",
+          "本节只做组合级边界说明，将具体指标和测试条件留给各产品分类及工程页面"
+        ],
+        "image": "使用 factory-production-line.webp 作为 16:9 真实生产线照片，旁边叠放不遮图的事实表；不使用产品渲染替代制造证据。",
+        "cta": "Review Engineering Capabilities"
+      },
+      {
+        "number": 7,
+        "name": "FAQ",
+        "question": "选定产品线前，供应范围、定制和 RFQ 还有哪些常见疑问？",
+        "h2": "Product Line Selection FAQs",
+        "points": [
+          "展示核心与辅助线划分、非标定制、产品线选择、频率范围和统一 RFQ 五个问题",
+          "答案保持导航性，具体器件技术问题通过链接交给对应分类页，避免聚合页内容过深",
+          "不回答库存、统一 MOQ 或交期等未经项目确认的问题",
+          "本页 source schema 不含 FAQPage，可见 FAQ 不额外声明无关结构化类型"
+        ],
+        "image": "不配图；使用紧凑手风琴，每问答案末尾最多一个相关链接，移动端保持问题完整可读。",
+        "cta": "—；导航答案内使用文本链接，集中 CTA 留到末节"
+      },
+      {
+        "number": 8,
+        "name": "RFQ Router",
+        "question": "我选定产品线后，怎样一次提交足够的信息？",
+        "h2": "Send One RFQ for One Line or a Multi-Line BOM",
+        "points": [
+          "表单首字段为核心五线、辅助线和配件多选，随后动态显示对应参数提示，不让买家重复填写通用联系信息",
+          "提供型号/规格、预计数量、目标阶段、附件上传和备注字段；跨线 BOM 允许上传表格",
+          "说明完整 RFQ 通常约 24 小时内获得初步工程反馈，具体报价和交期需项目评估",
+          "保留 Find Your Product Line 返回锚点，未确定分类的买家可回到导航而非被迫提交"
+        ],
+        "image": "不配图；使用两栏 RFQ 路由器，左侧为产品线勾选与资料提示，右侧为联系和附件字段，提交前显示已选产品线摘要。",
+        "cta": "Request a Quote"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Which SONNE product lines are core product lines?",
+        "answer": "The five core lines are RF and microwave filters, waveguide and microwave components, combiners and duplexers, base-station RF, and precision enclosures. IBS/DAS and FTTX are supporting product lines, while RF accessories provide additional project-completion items. This hierarchy helps buyers reach the main engineering categories before browsing supplementary products.",
+        "intent": "理解产品层级并快速进入核心分类",
+        "snippet": "列表型 Featured Snippet；答案约 55 词，页面可同步呈现五项有序列表"
+      },
+      {
+        "question": "Can SONNE manufacture non-standard RF components?",
+        "answer": "SONNE supports custom evaluation across its listed RF, microwave, waveguide, combiner and enclosure product lines. Feasibility depends on the requested frequency, topology, performance, mechanical interface and validation requirements. Submit a specification, band plan or drawing for engineering review; a non-standard request is not automatically treated as a confirmed manufacturable design.",
+        "intent": "判断非标需求能否进入工程评估",
+        "snippet": "条件式直接答案；约 55 词，区分可提交评估与已确认可制造"
+      },
+      {
+        "question": "How do I choose the right product line?",
+        "answer": "Start with the function you need: filtering, waveguide transmission or polarization, band combining or separation, base-station RF integration, or equipment enclosure. If you know only the application, use the application navigator. For a project spanning several lines, select all relevant categories in the RFQ and upload one BOM or system requirement.",
+        "intent": "按功能或应用减少错误选型与跳转",
+        "snippet": "步骤段落型 Featured Snippet；约 55–60 词，可在页面改写为五步判断清单"
+      },
+      {
+        "question": "What frequency range does the product portfolio cover?",
+        "answer": "The core production portfolio covers DC to 40 GHz. Selected custom microwave and waveguide designs can reach up to 110 GHz, subject to topology and validation. This does not mean every product line or model covers the full range. Check the relevant category and submit your exact frequency band for confirmation.",
+        "intent": "核对组合级频率范围并进入具体分类",
+        "snippet": "范围定义型 Featured Snippet；约 50 词，保留核心与选定定制的明确边界"
+      },
+      {
+        "question": "Can I request a quote before selecting a specific model?",
+        "answer": "Yes. You can submit an application, target specification, band plan, drawing or BOM without choosing a model. Identify the product line if known and include expected quantities and key constraints. Engineering can then determine the appropriate review path. A complete RFQ typically receives initial engineering feedback in about 24 hours, not a guaranteed quotation or delivery date.",
+        "intent": "降低无明确型号时的询价门槛",
+        "snippet": "直接回答加操作步骤；约 60 词，明确 24 小时反馈的非报价属性"
+      }
+    ],
+    "schema": ["CollectionPage", "BreadcrumbList"],
+    "seo_title": "RF & Microwave Components | Filters, Waveguide, Combiners | SONNE",
+    "seo_note": "源 SEO Title 超过 60 字符，按契约原样保留；待 01 总控修订，本 fragment 不擅自改写。",
+    "meta_description": "Explore SONNE product lines: RF and microwave filters, waveguide components, combiners and duplexers, base-station RF, precision enclosures, plus IBS/DAS and FTTX.",
+    "focus_keyphrase": "RF & microwave components"
+  },
+  {
+    "number": 3,
+    "id": "page-03",
+    "name": "主推1 射频与微波滤波器 RF & Microwave Filters",
+    "url": "/products/rf-microwave-filters",
+    "type": "产品分类页",
+    "buyer_segment": "RF 工程师、采购与 SQE；处于滤波器结构选型、高频定制可行性验证及供应商测试能力审核阶段",
+    "inner_monologue": "我需要按频段、结构和指标选对滤波器，并确认高频加工与批量验证不是只停留在样品曲线上。",
+    "pain_points": [
+      "cavity、waveguide、tuning-free 等方案差异不清，难以在损耗、体积、功率和调试之间取舍",
+      "只给中心频率无法形成可制造规格，抑制、功率、PIM 与机械约束容易遗漏",
+      "E-band 等高频项目对腔体公差、镀层和法兰细节敏感，买家缺乏可信工艺证据",
+      "打样曲线不能代表批量一致性，SQE 需要明确 VNA/PIM 验证和自动化测试依据"
+    ],
+    "differentiators": [
+      "滤波器组合覆盖 cavity、bandpass、waveguide、E-band、RRU 与定制组件语境，可围绕结构和应用选型",
+      "核心范围 DC–40 GHz，选定定制微波/波导项目可达 110 GHz，并按拓扑和验证判断 E-band 可行性",
+      "40 GHz 以上机械公差可达 ±0.01 mm、60 GHz 以上镀层厚度控制可达 1 μm，均限定为视结构能力",
+      "本产品线源证据包含 VNA/PIM 100% 验证与矩阵开关自动测试，可围绕 agreed limits 建立批量验证计划"
+    ],
+    "conversion": "主转化：Request Custom Filter Design；次转化：Download Datasheet",
+    "three_gates": {
+      "search_demand": "cavity filter；SV 未测、KD 未测。waveguide filter 为实测 SV=28、KD 未测，只归本页；决策重点为按结构、频率和指标完成滤波器选型并验证定制能力。",
+      "internal_links": "上游入口：/products 的核心产品表、/solutions/microwave-backhaul 的 E-band 器件入口、/solutions/5g-base-station 的滤波需求入口；下游 URL：/products/waveguide-components、/products/base-station-rf、/engineering/testing-quality、/resources/rfq-guide、/request-a-quote。三级滤波器型号详情为后续阶段目标。",
+      "citation_value": "发布“滤波器结构与指标选型框架”：cavity/waveguide/tuning-free 对比维度含频段、插损、抑制、功率、PIM、体积、调试和验证输入；附完整滤波器 RFQ 参数核对表。"
+    },
+    "keywords": {
+      "focus": {"term": "cavity filter", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "RF filter", "sv": null, "kd": null},
+        {"term": "microwave filter", "sv": null, "kd": null},
+        {"term": "bandpass filter", "sv": null, "kd": null},
+        {"term": "waveguide filter", "sv": 28, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "custom cavity filter manufacturer", "sv": null, "kd": null},
+        {"term": "waveguide filter manufacturer", "sv": null, "kd": null},
+        {"term": "E-band filter manufacturer", "sv": null, "kd": null},
+        {"term": "RRU filter manufacturer", "sv": null, "kd": null},
+        {"term": "high power low PIM filter", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：cavity filter 与 custom RF/microwave filter assemblies，保持源 H1 并确立本页滤波器主 ownership",
+        "H2：RF filter、microwave filter、bandpass filter、waveguide filter；waveguide filter 只在本页深入，波导分类页不争夺该词",
+        "正文/FAQ：custom cavity filter manufacturer、E-band/RRU filter manufacturer、high power low PIM filter；RRU 内容始终带基站应用限定"
+      ]
+    },
+    "h1": "Cavity Filters and Custom RF/Microwave Filter Assemblies",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这里是否覆盖我的滤波器结构、频段和定制需求？",
+        "h2": "Cavity Filters and Custom RF/Microwave Filter Assemblies",
+        "points": [
+          "首屏直接列 cavity、bandpass、waveguide、E-band、RRU 与 custom filter assemblies，建立本页完整滤波器归属",
+          "频率条分为 DC–40 GHz 核心范围和选定定制可达 110 GHz，后者注明取决于拓扑与验证",
+          "主按钮打开滤波器专用 RFQ，次按钮进入资料下载；页面不承诺未选型即可直接获得准确报价",
+          "用低 PIM、高抑制、VNA 验证作为项目评估维度，不写全型号统一性能数值"
+        ],
+        "image": "首屏主图使用 prod-bandpass-v2.webp，右侧 16:9 产品展示区，辅以小图 part-cavity-silver.webp 表现腔体结构；不得把示意图标注为特定频段型号。",
+        "cta": "Request Custom Filter Design / Download Datasheet"
+      },
+      {
+        "number": 2,
+        "name": "Filter Product Matrix",
+        "question": "不同滤波器形态中，哪一类与我的结构和应用相符？",
+        "h2": "Compare Filter Types by Structure and Application",
+        "points": [
+          "矩阵按 cavity filter、ceramic filter、tunable filter、waveguide filter、custom filter assembly 分行，bandpass 作为响应要求字段而非与结构混为一类",
+          "列为结构/形态、适用选型问题、首要输入、可评估应用和资料入口，RRU 与 E-band 作为应用标签而非另造统一规格",
+          "每行给“查看参数/提交定制”路径，三级型号页标记后续阶段目标，当前先链接 /resources/datasheets 或页内 RFQ",
+          "没有用实测资料支撑的型号不写插损、抑制或功率数值"
+        ],
+        "image": "矩阵使用 prod-bandpass-v2.webp、prod-ceramic-filter-v2.webp、prod-tunable-filter-clean.webp、straight-waveguide.webp、part-cavity-silver.webp 五行缩略图，统一 120×90；图注按真实 alt 语义。",
+        "cta": "Find Your Filter Type"
+      },
+      {
+        "number": 3,
+        "name": "Selection Framework",
+        "question": "cavity、waveguide 与 tuning-free 方案应依据哪些条件选择？",
+        "h2": "Choose between Cavity, Waveguide and Tuning-Free Filter Approaches",
+        "points": [
+          "对照表至少含工作频段、插损目标、带外抑制、功率、PIM、机械包络、接口/法兰、调试方式和验证条件",
+          "解释 cavity 与 waveguide 是结构路径，tuning-free 是生产与调试目标，三者不能简单视为互斥产品名称",
+          "设置三个判断问题：频率和功率约束是什么、体积与接口限制是什么、批量是否允许人工调试",
+          "对高功率低 PIM 需求提示同时提交功率类型、测试条件和 PIM 限值，不用单一形容词代替规格"
+        ],
+        "image": "不配图；使用原创三列选型矩阵和底部决策问题，tuning-free 列明确标注“制造/调试方法”，避免做成不真实的产品树。",
+        "cta": "Compare Filter Approaches"
+      },
+      {
+        "number": 4,
+        "name": "Specification Trade-offs",
+        "question": "哪些指标必须一起定义，才能判断滤波器是否真正适用？",
+        "h2": "Specify Insertion Loss, Rejection, Power and PIM Together",
+        "points": [
+          "参数表字段为 passband、bandwidth、insertion loss、return loss、rejection bands与最小抑制、power、PIM、connectors、envelope、environment",
+          "增加“测试条件/参考面”列，提醒抑制点、功率类型和 PIM 条件必须可追溯，避免孤立比较单个数字",
+          "用权衡说明解释更窄过渡带、更低插损、更高功率和更小体积可能互相制约，具体结果需设计与验证",
+          "提供复制规格清单和上传现有 datasheet 的入口，链接 /resources/rfq-guide"
+        ],
+        "image": "不配图；使用可复制的规格表与一条通用 passband/rejection 标注示意，示意图不附带未经证实的实测曲线或型号数值。",
+        "cta": "Build Your Filter Specification"
+      },
+      {
+        "number": 5,
+        "name": "High-Frequency Manufacturing",
+        "question": "高频滤波器所需的加工与镀层控制有什么可核验依据？",
+        "h2": "Control the Machining and Plating Details behind High-Frequency Filters",
+        "points": [
+          "公开口径写为 40 GHz 以上机械公差可达 ±0.01 mm，必须加“视结构”，不得写成全部产品统一保证",
+          "公开口径写为 60 GHz 以上镀层厚度控制可达 1 μm，同样注明视结构与项目要求",
+          "用腔体、盖板、调谐结构与表面处理四个检查点说明加工细节如何进入工程评审，不归因未经验证的性能提升百分比",
+          "链接 /engineering/manufacturing，买家可进一步审核 CNC、表面工程与图纸评估能力"
+        ],
+        "image": "使用 factory-cnc-cavity-milling.webp 与 part-cover-raw.webp 组成 16:9 + 1:1 证据组，图注分别为 RF 腔体 CNC 加工与表面处理前盖板，不虚构镀层显微照片。",
+        "cta": "Review Precision Manufacturing"
+      },
+      {
+        "number": 6,
+        "name": "Filter Verification",
+        "question": "样品和批量的 RF 性能如何按明确条件验证？",
+        "h2": "Verify Filter Performance with VNA, PIM and Automated Testing",
+        "points": [
+          "按 source 证据说明本滤波器线 VNA/PIM 100% 验证，页面需同时列具体产品、指标和测试条件由项目确认的限定",
+          "证据表列为验证项目、买家要定义的限值、输出记录和追溯字段；VNA 对应 S 参数，PIM 对应约定测试条件",
+          "展示矩阵开关自动测试能力，说明其用于多端口/批量测试流程，不声称覆盖所有可靠性项目",
+          "链接 /engineering/testing-quality 与 /resources/datasheets，提供索取样例报告和具体产品资料的路径"
+        ],
+        "image": "使用 factory-vna-tuning-line.webp 作为主图、factory-test-rig.webp 作为辅图，均为 16:9 实拍；图注说明工序，不把画面中的屏幕数值改写为产品指标。",
+        "cta": "Request Filter Test Evidence"
+      },
+      {
+        "number": 7,
+        "name": "Custom Filter Process",
+        "question": "定制滤波器从 RFQ 到批量要经过哪些评审与确认？",
+        "h2": "Move a Custom Filter from RFQ to Validated Production",
+        "points": [
+          "流程分为规格完整性检查、结构与可行性评估、原型验证、试产基线、批量生产五步，每步列出确认输出",
+          "完整 RFQ 通常约 24 小时内获得初步工程反馈；该反馈不等于设计定版、正式报价或交期承诺",
+          "最快约两周仅作为打样参考，实际原型与量产周期按拓扑、图纸、数量、工艺和产能评估",
+          "RRU 等批量项目链接 /products/base-station-rf，E-band 回传项目链接 /solutions/microwave-backhaul"
+        ],
+        "image": "不配图；使用五阶段门流程图，每门显示输入、评审、输出和买家确认，时间说明放在流程外作为条件注释。",
+        "cta": "Start a Filter Engineering Review"
+      },
+      {
+        "number": 8,
+        "name": "FAQ",
+        "question": "滤波器选型、E-band、周期和资料方面还有哪些关键疑问？",
+        "h2": "Custom Filter Selection and Manufacturing FAQs",
+        "points": [
+          "覆盖结构选择、E-band 频率、原型与量产周期、高功率低 PIM 输入、datasheet/S 参数五问",
+          "将 source 中 cavity/waveguide/tuning-free 和周期种子问题完整回答，并补足资料决策问题",
+          "答案避免统一交期、统一性能与全产品测试覆盖承诺",
+          "FAQPage 结构化数据只标记本页实际可见五问"
+        ],
+        "image": "不配图；使用按“选型/能力/项目/资料”分组标签的单列 FAQ，答案内保留相关工程与下载链接。",
+        "cta": "—；末节统一承接定制 RFQ，避免打断技术答案"
+      },
+      {
+        "number": 9,
+        "name": "Filter RFQ",
+        "question": "提交哪些字段，工程团队才能开始滤波器设计评估？",
+        "h2": "Send Your Filter Specification for Engineering Review",
+        "points": [
+          "专用字段包括 filter type、passband/bandwidth、insertion loss、return loss、rejection、power、PIM、connector/flange、envelope、environment、quantity",
+          "支持上传 datasheet、2D/3D 图纸、band plan 和测试要求；未知字段允许标记 TBD，但需说明应用与优先级",
+          "提供 Download Datasheet 次入口链接 /resources/datasheets，并注明具体资料按型号与项目确认",
+          "提交预期写为完整 RFQ 通常约 24 小时初步工程反馈，备用邮箱 info@zhide-tec.com"
+        ],
+        "image": "不配图；使用两栏工程表单，左侧 RF 指标，右侧机械/数量/附件，底部显示缺失关键字段提示而不是强制买家虚构数值。",
+        "cta": "Request Custom Filter Design"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do I choose between cavity, waveguide and tuning-free filters?",
+        "answer": "Start with frequency, insertion loss, rejection, power, PIM, size and interface requirements. Cavity and waveguide describe different structural approaches, while tuning-free describes a manufacturing and adjustment objective rather than a mutually exclusive filter type. Engineering should compare the complete specification and production expectations before recommending an approach.",
+        "intent": "理解三类方案的关系并完成初步结构选型",
+        "snippet": "比较型 Featured Snippet；约 55 词，页面配三列对照表增强摘要资格"
+      },
+      {
+        "question": "Can SONNE make E-band filters above 40 GHz?",
+        "answer": "Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology and validation, so E-band requirements can be submitted for evaluation. This is not a universal limit for every filter design. Provide the exact passband, rejection, power, waveguide interface and mechanical requirements for a feasibility review.",
+        "intent": "确认 E-band 与 40 GHz 以上定制可行性",
+        "snippet": "条件式直接答案；约 55 词，避免把 110 GHz 写成所有滤波器保证范围"
+      },
+      {
+        "question": "How long do filter prototypes and mass production take?",
+        "answer": "The fastest prototype reference is about two weeks, but it is not a general lead-time promise. Actual prototype and production timing depends on topology, drawings, quantity, process and capacity. A complete RFQ typically receives initial engineering feedback in about 24 hours; formal quotation and delivery schedules require project-specific confirmation.",
+        "intent": "建立打样与量产时间的合理预期",
+        "snippet": "时间答复型 Featured Snippet；约 55 词，必须同时保留参考值与项目条件"
+      },
+      {
+        "question": "What is needed to evaluate a high-power, low-PIM filter?",
+        "answer": "Provide the frequency bands, insertion loss and rejection targets, power level and power type, PIM limit and test conditions, return loss, connectors, mechanical envelope and operating environment. Also state expected quantity and verification requirements. High power and low PIM must be assessed with the complete design and test setup, not as standalone promotional labels.",
+        "intent": "准备高功率低 PIM 项目的可验证 RFQ",
+        "snippet": "清单型 Featured Snippet；约 55–60 词，可提取为 RFQ 核对列表"
+      },
+      {
+        "question": "Can I request filter datasheets and S-parameter files?",
+        "answer": "You can request available datasheets, drawings and S-parameter files for the relevant filter model or custom project. Document availability and the level of detail depend on the product and project, so identify the model, frequency band and required file type. Controlled documents or project-specific information should be discussed during the engineering review.",
+        "intent": "获取选型与仿真资料并判断受控文件流程",
+        "snippet": "资料获取型 Featured Snippet；约 50–55 词，不编造公开下载范围或 NDA 政策"
+      }
+    ],
+    "schema": ["Product", "BreadcrumbList", "FAQPage"],
+    "seo_title": "Cavity Filter Manufacturer | RF & Microwave Filters | SONNE",
+    "meta_description": "Custom cavity, bandpass, waveguide, E-band and RRU filters from DC to 40 GHz. Low PIM, high rejection, VNA verified, from prototype to mass production.",
+    "focus_keyphrase": "cavity filter"
+  },
+  {
+    "number": 4,
+    "id": "page-04",
+    "name": "主推2 波导与微波组件 Waveguide & Microwave",
+    "url": "/products/waveguide-components",
+    "type": "产品分类页",
+    "buyer_segment": "微波回传、卫星地面站与雷达客户的 RF/机械工程师及采购；处于高频器件配套、接口定义和供应商工艺验证阶段",
+    "inner_monologue": "我的频段、法兰和极化要求很具体，SONNE 能否把高频精度、镀层和测试一起落实到定制组件？",
+    "pain_points": [
+      "高频波导项目不仅看频率，还受法兰、极化、接口和机械装配共同约束",
+      "Diplexer、OMT、OCU 与普通 waveguide assembly 功能不同，错误命名会造成需求偏差",
+      "40 GHz 以上公差和 60 GHz 以上镀层控制若缺乏条件说明，难以判断证据可信度",
+      "E-band 与 Ku/Ka 项目需要明确测试边界和输入清单，不能只凭一张产品图下结论"
+    ],
+    "differentiators": [
+      "产品块覆盖 waveguide diplexer、OMT、OCU 与定制 waveguide assemblies，承接回传、地面站和雷达配套",
+      "OCU 公开定制范围为 6–80 GHz，选定定制设计可达 110 GHz，具体取决于拓扑与验证",
+      "40 GHz 以上机械公差可达 ±0.01 mm、60 GHz 以上镀层厚度控制可达 1 μm，均以视结构为边界",
+      "精密 CNC、镀层控制与 VNA 验证形成从接口和结构到 RF 测试的项目评估链条"
+    ],
+    "conversion": "主转化：Request Waveguide Evaluation；次转化：Send Band Plan",
+    "three_gates": {
+      "search_demand": "waveguide components；SV 未测、KD 未测。围绕高频项目能否制造、如何定义法兰/极化/频段展开；waveguide filter 词只归 Filters，本页不设置其目标排名。",
+      "internal_links": "上游入口：/products 的核心产品导航、/solutions/satellite-earth-station 的 OMT/组件入口、/solutions/microwave-backhaul 的 E-band 入口；下游 URL：/products/rf-microwave-filters、/solutions/satellite-earth-station、/solutions/microwave-backhaul、/engineering/manufacturing、/engineering/testing-quality。三级波导型号详情为后续阶段目标。",
+      "citation_value": "制作“波导 RFQ 接口定义表”：频段、端口功能、波导规格、法兰、极化、材料/镀层、功率、隔离/损耗、机械包络、测试参考面；附 OMT 与 OCU 术语定义及功能对照。"
+    },
+    "keywords": {
+      "focus": {"term": "waveguide components", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "waveguide diplexer", "sv": null, "kd": null},
+        {"term": "waveguide assembly", "sv": null, "kd": null},
+        {"term": "OMT", "sv": null, "kd": null},
+        {"term": "OCU", "sv": null, "kd": null},
+        {"term": "E-band waveguide", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "custom waveguide components manufacturer", "sv": null, "kd": null},
+        {"term": "OMT manufacturer", "sv": null, "kd": null},
+        {"term": "Ku/Ka band OMT", "sv": null, "kd": null},
+        {"term": "outdoor combining unit OEM", "sv": null, "kd": null},
+        {"term": "satellite earth station RF components", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：waveguide components、waveguide assembly 与 waveguide diplexer，保持分类主词归属",
+        "H2：OMT、OCU、E-band waveguide 和 custom waveguide components manufacturer；不把 waveguide filter 设为本页 H2",
+        "正文/FAQ：OMT manufacturer、Ku/Ka band OMT、outdoor combining unit OEM、satellite earth station RF components；滤波需求转链 Filters"
+      ]
+    },
+    "h1": "Waveguide Components, Assemblies & Diplexers",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "SONNE 是否能评估我的高频波导器件和机械接口？",
+        "h2": "Waveguide Components, Assemblies & Diplexers",
+        "points": [
+          "首屏列出 waveguide diplexer、OMT、OCU、custom waveguide assemblies 四类入口，并点明 Ku/Ka/E-band、卫星地面站、回传与雷达应用",
+          "能力短注区分核心 RF 组合 DC–40 GHz、OCU 6–80 GHz 定制口径及选定设计可达 110 GHz，避免混成单一全产品范围",
+          "主 CTA 进入波导评估表，次 CTA 直接发送 band plan；两者均要求接口与频率基本信息",
+          "不在首屏放无来源的隔离、极化纯度或损耗数值"
+        ],
+        "image": "首屏使用 prod-omt-v2.webp 为主图，辅以 straight-waveguide.webp 小图，桌面右侧 16:9 产品组合区；图注分别使用 OMT 与 straight waveguide，不暗示同一组件。",
+        "cta": "Request Waveguide Evaluation / Send Band Plan"
+      },
+      {
+        "number": 2,
+        "name": "Waveguide Product Blocks",
+        "question": "Diplexer、OMT、OCU 和波导组件各自解决什么问题？",
+        "h2": "Select Diplexers, OMTs, OCUs and Custom Waveguide Assemblies",
+        "points": [
+          "Diplexer 块说明按频率路径分离或合并信号，首要输入为两个频段、端口、隔离、损耗和法兰",
+          "OMT 块说明正交极化分离/合成，首要输入为频段、极化定义、端口、隔离与极化相关验证要求",
+          "OCU 块注明 outdoor combining unit 与 6–80 GHz 定制口径，首要输入为链路 band plan、户外结构和接口",
+          "Assembly 块展示 straight、curved、twisted、transition 等真实形态，要求按图纸、波导规格、法兰和装配关系评估"
+        ],
+        "image": "四块依次使用 prod-duplexer-v3.webp、prod-omt-v2.webp、prod-ocu-combiner-v2.webp、curved-waveguide.webp，统一 4:3；首图仅作频率合分器件视觉示例，OMT、OCU 与 curved waveguide 按清单真实名称标注。",
+        "cta": "Compare Waveguide Product Types"
+      },
+      {
+        "number": 3,
+        "name": "High-Frequency Engineering",
+        "question": "公差、镀层、法兰和极化如何进入高频工程评审？",
+        "h2": "Define the Mechanical Details that High-Frequency Designs Depend On",
+        "points": [
+          "用四列检查表呈现 machining tolerance、plating、flange、polarization，每列写买家输入、工程检查项和可确认输出",
+          "公差事实写为 40 GHz 以上可达 ±0.01 mm、视结构；镀层写为 60 GHz 以上厚度控制可达 1 μm、视结构",
+          "法兰字段要求标准/型号、密封与配合、方向和装配约束；未提供时先评估，不替买家默认假设",
+          "极化字段要求 Tx/Rx 或正交端口定义、极化方向与验证指标，不能仅用 OMT 名称代替完整定义"
+        ],
+        "image": "使用 tech-precision-machining.webp 与 transition-waveguide.webp 组成工艺和接口双图，分别 1:1 与 4:3；另配无参数法兰/极化标注示意，不编造尺寸。",
+        "cta": "Review Your Interface Requirements"
+      },
+      {
+        "number": 4,
+        "name": "Application Mapping",
+        "question": "卫星、回传或雷达应用应优先定义哪些器件和参数？",
+        "h2": "Map Waveguide Hardware to Backhaul, Earth Station and Radar Links",
+        "points": [
+          "Microwave backhaul 行优先关联 E-band diplexer、OCU 与组件，输入为链路频段、Tx/Rx、户外接口和损耗/隔离目标",
+          "Satellite earth station 行优先关联 Ku/Ka OMT、diplexer 与 waveguide assembly，输入为极化、法兰、频段和验证要求",
+          "Radar 行只作为 source 指定应用入口，要求提交具体功能、频率、功率和结构，不扩展未确认雷达产品性能",
+          "每行链接对应 /solutions 页面；波导滤波器具体选型统一链接 /products/rf-microwave-filters，守住关键词归属"
+        ],
+        "image": "应用场景使用 satellite-693224-1280.webp 与 radar-4502518-1280.webp 两张 3:2 图；回传不再找库存图，使用链路框图并在图中标识 OCU/Diplexer/Assembly 位置。",
+        "cta": "Find Your Application Path"
+      },
+      {
+        "number": 5,
+        "name": "Verification Evidence",
+        "question": "有哪些频率、制造与测试证据可以用于供应商评估？",
+        "h2": "Review the Evidence behind Custom Waveguide Manufacturing",
+        "points": [
+          "证据表列出 OCU 6–80 GHz 定制口径、selected designs up to 110 GHz、高隔离 waveguide diplexer 案例口径、精密 CNC 与镀层控制",
+          "高隔离案例只展示经内部核准可公开的曲线和条件；未核准前不放客户名、具体数值或虚构曲线",
+          "VNA 验证行要求记录频段、端口、校准/参考面、测试项目和输出文件，具体覆盖范围按项目确认",
+          "链接 /engineering/testing-quality 与 /engineering/manufacturing，分别承接 RF 证据和工艺审核"
+        ],
+        "image": "使用 factory-rf-testing.webp 作为 16:9 VNA/RF 测试现场图，搭配 factory-machining-detail.webp 细节图；案例曲线仅在真实且获准时后补，当前明确不配置虚拟曲线。",
+        "cta": "Request Waveguide Test Evidence"
+      },
+      {
+        "number": 6,
+        "name": "Waveguide RFQ Checklist",
+        "question": "一次提交哪些参数，才能减少高频项目反复澄清？",
+        "h2": "Prepare a Waveguide RFQ Engineers Can Evaluate",
+        "points": [
+          "RF 字段包括器件功能、Tx/Rx 或各端口频段、带宽、插损、隔离/抑制、功率和需要验证的极化指标",
+          "接口字段包括波导规格、法兰、连接器、极化方向、材料/镀层要求、机械包络、装配方向和户外条件",
+          "项目字段包括应用、原型/批量阶段、预计数量、目标验证项与附件，支持 band plan、2D/3D 图纸和测试规范",
+          "提供可复制清单并链接 /resources/rfq-guide；未知字段可标 TBD，但需写清已知边界"
+        ],
+        "image": "不配图；使用三栏核对清单 RF / Mechanical / Project，并提供空白 band-plan 表头，不添加未经买家确认的示例频段数值。",
+        "cta": "Send Band Plan"
+      },
+      {
+        "number": 7,
+        "name": "Evaluation Process",
+        "question": "提交 band plan 后，波导定制项目如何推进？",
+        "h2": "From Band Plan and Interfaces to a Validated Waveguide Design",
+        "points": [
+          "流程为输入检查、RF/机械联合评估、原型与 VNA 验证、试产确认、按项目要求批量执行",
+          "输入检查同时核对 band plan、法兰、极化和机械包络，避免只做电气评估后再返工结构",
+          "完整 RFQ 通常约 24 小时内获得初步工程反馈；具体设计结论、报价和交期在项目评审后确认",
+          "打样最快约两周仅为参考，不作为 E-band、OMT 或 OCU 的统一交付承诺"
+        ],
+        "image": "不配图；使用泳道流程图区分 Buyer Inputs、RF/Mechanical Review、Validation 与 Production 四条责任线，输出节点写清确认物。",
+        "cta": "Request Waveguide Evaluation"
+      },
+      {
+        "number": 8,
+        "name": "FAQ",
+        "question": "OMT/OCU、E-band、法兰极化和资料方面还有哪些疑问？",
+        "h2": "Waveguide Component and Customization FAQs",
+        "points": [
+          "完整覆盖 OMT 与 OCU 区别、E-band 输入、法兰/极化定义三个 source 种子问题",
+          "补充频率能力与按图定制/资料两个供应商评估问题，保持每问答案直接且带条件",
+          "不在 FAQ 中引入 waveguide filter 的深度选型内容，相关问题链接 Filters",
+          "FAQPage 仅对应实际可见五问"
+        ],
+        "image": "不配图；使用术语问题优先的手风琴，OMT 与 OCU 答案旁可嵌入文字对照表但不重复第二节整卡。",
+        "cta": "—；答案保留文本内链，统一转化由末节完成"
+      },
+      {
+        "number": 9,
+        "name": "Waveguide Evaluation CTA",
+        "question": "我尚未完成全部规格时，最低可行提交方式是什么？",
+        "h2": "Send Your Band Plan, Flange and Polarization Requirements",
+        "points": [
+          "短表单必填器件功能、目标频段、应用、数量、邮箱，法兰/极化/性能指标可填已知项并标记待确认",
+          "附件接受 band plan、接口图、2D/3D 图纸与测试要求，提示不要为提交而猜测未知参数",
+          "主按钮 Request Waveguide Evaluation，次按钮 Send Band Plan；备用邮箱 info@zhide-tec.com",
+          "提交旁说明完整 RFQ 通常约 24 小时初步工程反馈，不写报价、打样或量产交期保证"
+        ],
+        "image": "不配图；使用左侧最小输入清单、右侧上传表单的低门槛布局，提交前显示“已提供/待确认”字段摘要。",
+        "cta": "Request Waveguide Evaluation / Send Band Plan"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between an OMT and an OCU?",
+        "answer": "An OMT, or ortho-mode transducer, separates or combines orthogonal polarizations in a waveguide interface. An OCU is an outdoor combining unit used to combine signal paths in an outdoor link assembly. They solve different system functions, so their RF inputs, interfaces and validation requirements should be specified separately.",
+        "intent": "澄清 OMT 与 OCU 术语并避免错误询价",
+        "snippet": "术语定义型 Featured Snippet；约 50 词，可先给两句定义再给选型提示"
+      },
+      {
+        "question": "What parameters are required for an E-band waveguide evaluation?",
+        "answer": "Provide the device function, exact transmit and receive bands, bandwidth, insertion loss, isolation or rejection targets, power, waveguide and flange interfaces, mechanical envelope and outdoor requirements. Include polarization details where relevant, plus expected quantity and test requirements. A band plan and interface drawing help engineering assess feasibility without assuming missing values.",
+        "intent": "准备 E-band 项目的完整工程输入",
+        "snippet": "清单型 Featured Snippet；约 55–60 词，可转为 RFQ 字段列表"
+      },
+      {
+        "question": "How should flange and polarization requirements be defined?",
+        "answer": "Identify the waveguide size, flange type or interface drawing, port orientation, sealing or mating constraints and mechanical envelope. For polarization-sensitive hardware, define each port, polarization direction and the performance to be verified. If any item is unknown, mark it for review rather than allowing the supplier to assume an interface.",
+        "intent": "减少波导机械接口与极化定义错误",
+        "snippet": "操作清单型 Featured Snippet；约 50–55 词，适合有序列表展示"
+      },
+      {
+        "question": "What frequency range can custom waveguide components reach?",
+        "answer": "SONNE lists OCU customization from 6 to 80 GHz and selected custom designs up to 110 GHz, depending on topology and validation. These figures do not establish one universal range for every waveguide component. Submit the exact device function and band plan so engineering can confirm the applicable design and test boundary.",
+        "intent": "核实 OCU 与选定高频设计的频率边界",
+        "snippet": "范围型 Featured Snippet；约 50 词，明确 OCU 与 selected designs 两种口径"
+      },
+      {
+        "question": "Can SONNE evaluate waveguide assemblies from drawings?",
+        "answer": "Yes, custom waveguide assemblies can be evaluated from 2D or 3D drawings together with the operating frequency, waveguide and flange interfaces, material or plating requirements, quantity and validation needs. RF performance cannot be inferred from geometry alone, so include the required electrical targets and test conditions whenever they apply.",
+        "intent": "确认按图定制路径及图纸之外的必要输入",
+        "snippet": "直接回答加条件；约 50 词，不承诺所有图纸均可制造或全产品线逆向替代"
+      }
+    ],
+    "schema": ["Product", "BreadcrumbList", "FAQPage"],
+    "seo_title": "Waveguide Components | OMT, Diplexer, OCU | SONNE",
+    "meta_description": "Waveguide diplexers, OMT, OCU and custom waveguide assemblies for Ku/Ka/E-band links, satellite earth stations and radar. Precision CNC, plating control, VNA verified.",
+    "focus_keyphrase": "waveguide components"
+  },
+  {
+    "number": 5,
+    "id": "page-05",
+    "name": "主推3 合路/双工/多工 Combiners & Duplexers",
+    "url": "/products/rf-combiners",
+    "type": "产品分类页",
+    "buyer_segment": "RF 设备商、系统集成商与分销商；处于多频共站方案选型、端口/band plan 定义和低 PIM 供应商评估阶段",
+    "inner_monologue": "我需要先分清合路、双工、多工和功分，再用完整 band plan 确认插损、隔离、PIM 与功率能否同时满足。",
+    "pain_points": [
+      "duplexer、diplexer、multiplexer 与 power divider 术语混用，容易以错误器件逻辑提交需求",
+      "多频共站不能只追求低插损，还要同时检查隔离、PIM、功率和端口条件",
+      "只发型号或单频信息会让供应商无法还原系统连接与各运营商频段关系",
+      "低 PIM 样品结果不足以说明批量表现，买家需要明确验证条件和追溯证据"
+    ],
+    "differentiators": [
+      "覆盖 RF combiner、duplexer、diplexer、multiplexer 与 RF power divider 的通用功能选型，统一承接相关关键词",
+      "DC–40 GHz 定制 band plan 能力用于多频段项目评估，具体性能按拓扑和验证确认",
+      "低 PIM 批量验证与矩阵自动测试能力可转化为明确测试条件、限值和批次记录",
+      "以 band-plan RFQ 驱动选型，帮助买家同时提交频段、端口、隔离、功率、PIM 和机械约束"
+    ],
+    "conversion": "主转化：Submit Band Plan for Quote；次转化：Read Duplexer vs Diplexer",
+    "three_gates": {
+      "search_demand": "RF combiner；SV 未测、KD 未测。duplexer vs diplexer 为实测 SV=36、KD 未测；通用 duplexer/diplexer/multi-band combiner/RF power divider 均归本页，3dB hybrid coupler 不在本页布局。",
+      "internal_links": "上游入口：/products 的核心产品导航、/solutions/5g-base-station 的共站入口、/resources/insights 的术语与选型文章；下游 URL：/products/base-station-rf、/products/ibs-das-components、/resources/insights、/resources/rfq-guide、/request-a-quote。三级合路器型号详情为后续阶段目标。",
+      "citation_value": "发布“五类器件功能与端口对照表”和“多频共站 band-plan RFQ 模板”：逐端口列输入/输出、上下行频段、带宽、功率、隔离、PIM、接口和公共端，附 duplexer 与 diplexer 简明定义。"
+    },
+    "keywords": {
+      "focus": {"term": "RF combiner", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "microwave combiner", "sv": null, "kd": null},
+        {"term": "duplexer", "sv": null, "kd": null},
+        {"term": "diplexer", "sv": null, "kd": null},
+        {"term": "multiplexer", "sv": null, "kd": null},
+        {"term": "multi-band combiner", "sv": null, "kd": null},
+        {"term": "RF power divider", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "custom RF combiner manufacturer", "sv": null, "kd": null},
+        {"term": "DC to 40 GHz combiner", "sv": null, "kd": null},
+        {"term": "low PIM duplexer supplier", "sv": null, "kd": null},
+        {"term": "duplexer vs diplexer", "sv": 36, "kd": null},
+        {"term": "multi-operator combiner", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：RF combiner、microwave combiner、duplexer 与 multiplexer，确立通用合路/双工/多工词归属",
+        "H2：multi-band combiner、RF power divider、low PIM duplexer supplier；IBS 页面保留 low PIM splitter/coupler 专属语境",
+        "正文/FAQ：custom RF combiner manufacturer、DC to 40 GHz combiner、duplexer vs diplexer、multi-operator combiner；不布局 3dB hybrid coupler"
+      ]
+    },
+    "h1": "RF & Microwave Combiners, Duplexers and Multiplexers",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "我的系统需要合路、双工、多工还是功分，下一步该提供什么？",
+        "h2": "RF & Microwave Combiners, Duplexers and Multiplexers",
+        "points": [
+          "首屏用系统位置短句说明本页覆盖不同频段/端口的合路与分离及 RF power divider，低 PIM 与高隔离作为需定义的指标",
+          "频率短注为 DC–40 GHz custom band plans，不扩展为所有型号统一覆盖或选定 110 GHz 波导能力",
+          "主按钮直接打开 band-plan RFQ，次按钮锚定 duplexer vs diplexer 术语对照",
+          "首屏提供“不知道器件类型也可提交系统连接与频段”的低门槛提示"
+        ],
+        "image": "首屏使用 prod-combiner-v2.webp，右侧 16:9 白底产品区，左侧配简化多频输入到公共端的线条示意；不在图中写未经确认的隔离或 PIM 数值。",
+        "cta": "Submit Band Plan for Quote / Read Duplexer vs Diplexer"
+      },
+      {
+        "number": 2,
+        "name": "Device Function Comparison",
+        "question": "五类器件的功能、端口和选型输入有什么差别？",
+        "h2": "Compare Combiners, Duplexers, Diplexers, Multiplexers and Power Dividers",
+        "points": [
+          "原创对照表列为器件、解决的问题、典型端口关系、是否按频率分离、首要 RF 输入和常见误用",
+          "Duplexer 行以共用天线/端口的 Tx-Rx 双工为解释重点；Diplexer 行以不同频率路径合分并提醒实际系统定义需按端口确认",
+          "Multiplexer 行扩展到三个或以上频率路径；multi-band combiner 强调多频馈线共享，不用端口数量替代功能定义",
+          "RF power divider/splitter 行说明同一路信号分配，不将其与按频率合路混为一谈；具体相位/幅度要求需另行定义"
+        ],
+        "image": "产品缩略图使用 prod-combiner-v2.webp、prod-duplexer-v3.webp、prod-n28-multiplexer.webp、power-splitter-2-way-n-female.webp；diplexer 无专属真实图时只用端口示意图，不错误套用 duplexer 图。",
+        "cta": "Compare Device Functions"
+      },
+      {
+        "number": 3,
+        "name": "RF Trade-offs",
+        "question": "多频系统应如何同时评估插损、隔离、PIM 与功率？",
+        "h2": "Balance Insertion Loss, Isolation, PIM and Power across the Band Plan",
+        "points": [
+          "建立指标矩阵，每行对应一个频段或端口，列插损、隔离对象与限值、抑制、功率、PIM、return loss 和测试条件",
+          "解释隔离必须指明“哪两个端口、哪个频段、哪个方向”，PIM 必须写测试条件，避免单独比较数值",
+          "说明低插损、高隔离、宽带、多频和紧凑结构之间存在工程权衡，最终方案需围绕完整 band plan 评估",
+          "高功率或低 PIM 项目提供上传测试规范的入口，不用未确认的典型值替代项目指标"
+        ],
+        "image": "不配图；使用可下载的四指标权衡表和双端口隔离标注示意，所有数值单元留作买家输入，不绘制虚构实测蜘蛛图。",
+        "cta": "Check Your RF Trade-offs"
+      },
+      {
+        "number": 4,
+        "name": "Feeder Sharing Scenarios",
+        "question": "多频馈线共享和共站场景中，应怎样组织器件与需求？",
+        "h2": "Plan Multi-Band Feeder Sharing and Co-Siting Requirements",
+        "points": [
+          "用系统框图标注多个频段/运营商输入、合路级、公共馈线和天线端，只表达功能关系，不代替实际链路设计",
+          "场景表列 multi-band feeder sharing、multi-operator combining、Tx/Rx duplexing、co-siting filtering 的系统目标和相关产品路径",
+          "共站干扰与 N28/N78、4T4R/8TR 等基站具体问题链接 /products/base-station-rf 和 /solutions/5g-base-station，保留限定语境",
+          "IBS/DAS 的 POI、low PIM splitter/coupler 需求链接 /products/ibs-das-components，避免本页争夺其专属词"
+        ],
+        "image": "使用 multi-band-combiner-se-cb-3w-djo-mf.webp 与 prod-tri-band-combiner.webp 作为真实产品示例，统一 4:3；系统关系另用无参数框图，不宣称图片型号适用于所有场景。",
+        "cta": "Map Your Feeder-Sharing Scenario"
+      },
+      {
+        "number": 5,
+        "name": "Low-PIM Verification",
+        "question": "低 PIM 和多端口性能如何形成可审核的批量证据？",
+        "h2": "Verify Low PIM and Multi-Port Performance under Defined Conditions",
+        "points": [
+          "按 source 事实展示低 PIM 批量验证、多频段共站案例口径和矩阵自动测试能力，案例公开前须核准内容并隐藏未授权客户信息",
+          "验证计划表列为产品/批次、端口、频段、PIM 测试条件、VNA 项目、功率条件、判定限值与输出记录",
+          "说明自动化矩阵用于多端口测试流程与记录效率，具体测试覆盖率按产品和项目约定，不扩展成全指标 100%",
+          "链接 /engineering/testing-quality，提供索取样例报告路径；报告中的条件与曲线必须对应真实产品"
+        ],
+        "image": "使用 factory-test-station.webp 与 factory-automated-assembly.webp 两张 16:9 实拍，图注分别说明 RF 测试工位和自动化装配，不将自动化装配等同于 PIM 测试。",
+        "cta": "Request Low-PIM Test Evidence"
+      },
+      {
+        "number": 6,
+        "name": "Band-Plan RFQ Template",
+        "question": "完整 band plan 应该包含哪些端口和项目字段？",
+        "h2": "Build a Band Plan for an Accurate Combiner Evaluation",
+        "points": [
+          "模板逐端口列 port label、Tx/Rx 或 signal direction、frequency range、bandwidth、power、isolation target、PIM、connector 和 common-port relationship",
+          "系统字段包括器件类型（未知可选）、应用、插损/抑制、机械包络、环境、预计数量、原型/批量阶段与验证要求",
+          "提供多运营商与多频段行添加功能，允许上传现有 Excel/PDF band plan、系统图和测试规范",
+          "说明不完整 band plan 可先评估，但需标出未知项；完整 RFQ 通常约 24 小时获得初步工程反馈"
+        ],
+        "image": "不配图；使用可编辑 band-plan 表格，首列固定端口，顶部提供添加频段/运营商按钮，并显示公共端连接关系预览。",
+        "cta": "Submit Band Plan for Quote"
+      },
+      {
+        "number": 7,
+        "name": "Custom Evaluation Process",
+        "question": "提交 band plan 后，从选型到批量如何减少返工？",
+        "h2": "Move from Band-Plan Review to Verified Production",
+        "points": [
+          "流程为系统/端口核对、拓扑与指标权衡评估、原型验证、试产与测试基线、批量项目确认",
+          "第一步先确认端口连接和各频段方向，再讨论具体型号，避免基于错误功能定义开展报价",
+          "打样最快约两周仅为参考；量产交期按图纸、数量、工艺和产能评估，不作通用承诺",
+          "完整 RFQ 的约 24 小时响应限定为初步工程反馈，正式报价和项目计划在评审后提供"
+        ],
+        "image": "不配图；使用五阶段流程与每阶段的“确认问题/输出文件”两列，band-plan 核对作为第一道门。",
+        "cta": "Start a Combiner Engineering Review"
+      },
+      {
+        "number": 8,
+        "name": "FAQ",
+        "question": "术语、指标权衡、band plan 和低 PIM 验证还有哪些疑问？",
+        "h2": "RF Combiner, Duplexer and Diplexer FAQs",
+        "points": [
+          "覆盖 duplexer vs diplexer、多频插损与隔离、完整 band plan 三个 source 种子问题",
+          "补充 combiner 与 power divider 区别、低 PIM 验证条件两问，承接真实选型与 SQE 意图",
+          "duplexer vs diplexer 答案保持简洁定义并链接 /resources/insights 深度文章，不将通用词让给资源页",
+          "FAQPage 仅标记实际可见五组问答"
+        ],
+        "image": "不配图；使用单列手风琴，第一问可显示两列术语摘要，其余答案保持 35–70 词直接说明。",
+        "cta": "—；答案内提供术语文章与 RFQ 指南文本链接，末节统一行动"
+      },
+      {
+        "number": 9,
+        "name": "Band-Plan CTA",
+        "question": "没有确定型号时，如何直接提交系统需求？",
+        "h2": "Submit Your Band Plan, Even before You Choose a Model",
+        "points": [
+          "表单允许 device type 选择 unknown，并要求至少描述系统功能、端口关系和各频段，避免强制错误选型",
+          "字段含联系人、公司、应用、数量、功率/PIM/隔离目标、机械限制、附件和验证要求",
+          "主按钮 Submit Band Plan for Quote，次按钮 Read Duplexer vs Diplexer；备用邮箱 info@zhide-tec.com",
+          "说明完整 RFQ 通常约 24 小时初步工程反馈，具体方案、报价与交期均需项目评审"
+        ],
+        "image": "不配图；采用左侧系统/端口最小说明、右侧 band-plan 上传与联系字段的两栏表单，提交前提示缺失端口或频段。",
+        "cta": "Submit Band Plan for Quote"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between a duplexer and a diplexer?",
+        "answer": "A duplexer commonly enables transmit and receive paths to share a common antenna or port while providing the required isolation. A diplexer separates or combines different frequency paths. Because usage can vary by system, define every port, frequency band and signal direction in the RFQ rather than relying on the device name alone.",
+        "intent": "澄清 duplexer 与 diplexer 并按系统功能正确询价",
+        "snippet": "双定义型 Featured Snippet；约 50–60 词，首两句可直接作为搜索摘要"
+      },
+      {
+        "question": "How do I balance insertion loss and isolation in a multi-band combiner?",
+        "answer": "Evaluate both against the complete band plan, including port-to-port isolation targets, guard bands, power and mechanical constraints. Lower insertion loss and higher isolation can compete with bandwidth, size and topology choices. Specify which ports and frequency directions each isolation value applies to, then let engineering assess the trade-offs through design and verification.",
+        "intent": "理解多频合路的核心指标权衡并准备可评估要求",
+        "snippet": "方法型 Featured Snippet；约 55–60 词，可配合四步权衡清单"
+      },
+      {
+        "question": "Do I need a complete band plan to request a combiner quote?",
+        "answer": "A complete band plan is strongly recommended because frequency ranges, bandwidth, signal direction, power and isolation determine the topology. You can start with incomplete information if you identify unknown fields and describe the system connections. A complete RFQ typically receives initial engineering feedback in about 24 hours; quotation and delivery timing require further project review.",
+        "intent": "判断资料不完整时能否启动合路器询价",
+        "snippet": "直接回答加清单；约 60 词，保留完整与不完整输入两种路径"
+      },
+      {
+        "question": "How is an RF power divider different from a combiner?",
+        "answer": "An RF power divider splits a signal into multiple paths, with amplitude, phase and port requirements defined for the application. A frequency-selective combiner brings different frequency bands into a common path. Some functions can be bidirectional depending on the network, so provide the actual signal directions, frequencies and port relationships instead of choosing by name alone.",
+        "intent": "避免将功分与按频率合路混用",
+        "snippet": "术语比较型 Featured Snippet；约 55 词，答案不引入 IBS hybrid coupler 关键词"
+      },
+      {
+        "question": "How is low PIM verified for duplexers and combiners?",
+        "answer": "Low-PIM verification should define the product, ports, frequency bands, test setup, power conditions, PIM limit and acceptance criteria. SONNE lists low-PIM batch verification and matrix-switch automated testing capabilities. The exact coverage and reporting are agreed by product and project, so request the relevant test evidence rather than assuming one condition applies to every unit or model.",
+        "intent": "审核低 PIM 测试条件、批量证据与覆盖范围",
+        "snippet": "验证清单型 Featured Snippet；约 55–60 词，明确项目约定而非统一覆盖率"
+      }
+    ],
+    "schema": ["Product", "BreadcrumbList", "FAQPage"],
+    "seo_title": "RF Combiners, Duplexers & Multiplexers | SONNE",
+    "meta_description": "RF combiners, duplexers, diplexers, multiplexers and power dividers for multi-band feeder sharing. Low PIM, high isolation, DC to 40 GHz custom band plans.",
+    "focus_keyphrase": "RF combiner"
+  }
+]

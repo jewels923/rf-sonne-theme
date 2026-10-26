@@ -12,7 +12,12 @@ images-ready/
 website-legacy-sunglasses/
 infility-theme-plugin/
 docs/
-docs-strategy/
+# Test fixtures for tests/test_p3_pages.py stay tracked; generated strategy
+# documents and previews do not.
+docs-strategy/*
+!docs-strategy/source-01.json
+!docs-strategy/fragments/
+!docs-strategy/fragments/*.json
 .superpowers/
 .finesse/
 .tmp-*

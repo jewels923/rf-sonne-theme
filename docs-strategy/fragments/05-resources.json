@@ -1,0 +1,839 @@
+[
+  {
+    "number": 22,
+    "id": "page-22",
+    "name": "精密制造 Manufacturing",
+    "url": "/engineering/manufacturing",
+    "type": "工程能力",
+    "buyer_segment": "高频 RF/机械工程师、采购与 SQE，处于制造能力核验和工厂审核准备阶段",
+    "inner_monologue": "关键尺寸、镀层和装配要求能否稳定转化为可检验的高频硬件？",
+    "pain_points": [
+      "高频腔体、法兰和关键尺寸失控会带来插损、隔离或装配风险",
+      "设备数量和厂房照片不能证明公差与镀层有对应测量证据",
+      "样品通过后，量产装配、表面处理和测试基线能否重复仍不清晰",
+      "审核前缺少设备、工艺、检验记录和追溯材料的核对清单"
+    ],
+    "differentiators": [
+      "50+ 高精密 CNC 与公开约 20,000 m² 办公制造一体楼，为设备与产线审核提供真实入口",
+      "40 GHz 以上合适结构的机械公差可达 ±0.01 mm，60 GHz 以上合适结构的镀层厚度控制可达 1 μm，均非全线保证",
+      "CNC、表面处理、装配与 VNA/PIM/可靠性测试衔接，便于将结构要求连接到验证记录",
+      "公开年产能 500,000+ 仅作规模口径，具体交期仍按图纸、数量、工艺与产能评估"
+    ],
+    "conversion": "主：Book a Factory Audit；次：Review Testing Evidence",
+    "three_gates": {
+      "search_demand": "precision CNC RF manufacturing、5-axis CNC、surface engineering、RF plating control 的 SV/KD 均未测；以高频加工精度、表面处理与工厂审核问题承接决策需求",
+      "internal_links": "上游：/engineering、/products/waveguide-components、/products/precision-enclosures；下游：/engineering/testing-quality、/engineering/npi、/about/factory、/request-a-quote",
+      "citation_value": "制作“设计特性—加工方法—检验证据”矩阵，并给出设备、工艺、检验、追溯四组工厂审核清单"
+    },
+    "keywords": {
+      "focus": {"term": "precision CNC RF manufacturing", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "5-axis CNC", "sv": null, "kd": null},
+        {"term": "surface engineering", "sv": null, "kd": null},
+        {"term": "RF plating control", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "precision sheet metal enclosure supplier", "sv": null, "kd": null},
+        {"term": "custom heatsink CNC", "sv": null, "kd": null},
+        {"term": "high frequency machining", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：Precision Manufacturing for High-Frequency RF Hardware；副标题承接 precision CNC RF manufacturing",
+        "H2：Machining Capability and Process Evidence；Tolerance, Plating and Surface Control",
+        "正文/FAQ：5-axis CNC、custom heatsink CNC、high frequency machining；SV/KD 均未测"
+      ]
+    },
+    "h1": "Precision Manufacturing for High-Frequency RF Hardware",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "这家制造基地能否承接高频 RF 硬件并供买家审核？",
+        "h2": "Precision Manufacturing for High-Frequency RF Hardware",
+        "points": [
+          "首屏说明 CNC 加工、表面处理、装配与 RF 验证服务高频器件和精密结构件，不以低价作定位",
+          "并列展示 50+ 高精密 CNC、公开约 20,000 m² 办公制造一体楼与年产能 500,000+，不将产能换算成交期",
+          "能力条注明 40 GHz+ 公差可达 ±0.01 mm、60 GHz+ 镀层控制可达 1 μm，均以结构和验证为条件"
+        ],
+        "image": "1920×1080 实拍横幅使用 factory-cnc-cavity-milling.webp，叠加条件化公差文字，不写统一保证",
+        "cta": "Book a Factory Audit"
+      },
+      {
+        "number": 2,
+        "name": "Manufacturing Capability Map",
+        "question": "各加工与表面处理工序分别对应什么产品特性和证据？",
+        "h2": "Manufacturing Capability and Process Map",
+        "points": [
+          "矩阵列出 CNC 铣削/车削、钣金、表面处理、装配与测试，分别连接腔体、盖板、机柜、散热件和波导组件",
+          "每行设置输入、加工方法、关键控制项、输出记录四列，例如图纸—CNC—关键尺寸—测量记录",
+          "链接 /products/waveguide-components 与 /products/precision-enclosures，按产品核对制造输入与验证证据"
+        ],
+        "image": "1600×900 工序图展示图纸评审到 CNC、表面处理、装配与测试，旁配 factory-cnc-operator.webp",
+        "cta": "Review Manufacturing Inputs"
+      },
+      {
+        "number": 3,
+        "name": "Tolerance and Surface Control",
+        "question": "公差与镀层能力如何转化为可审核的证据？",
+        "h2": "Tolerance, Plating and Surface-Control Evidence",
+        "points": [
+          "证据表列出结构、频段适用条件、关键尺寸或镀层、测量方法与记录，两个数值均写可达/视结构",
+          "展示脱敏测量记录、镀层报告或批次记录模板，不使用未授权客户图纸或名称",
+          "链接 /engineering/testing-quality，说明几何与镀层结果如何与 VNA/PIM 或可靠性验证关联"
+        ],
+        "image": "1024×1024 使用 tech-precision-machining.webp，旁置“特性—条件—方法—记录”四列表格",
+        "cta": "Review Verification Evidence"
+      },
+      {
+        "number": 4,
+        "name": "Assembly and Verification",
+        "question": "加工零件如何成为可重复验证的 RF 组件？",
+        "h2": "Assembly, Tuning and RF Verification",
+        "points": [
+          "按来料检验、装配、紧固控制、调谐和测试展示流程，并标明各环节应保存的记录类型",
+          "VNA、PIM、可靠性与多端口矩阵自动化测试按产品和指标适用，不宣称全产品全部测试均为 100%",
+          "链接 /engineering/testing-quality 与 /engineering/npi，连接报告字段、批次追溯、首件和变更控制"
+        ],
+        "image": "三段流程版式依次使用 factory-assembly-detail.webp、factory-automated-assembly.webp、factory-vna-tuning-line.webp",
+        "cta": "Inspect Test Evidence"
+      },
+      {
+        "number": 5,
+        "name": "Factory Audit Checklist",
+        "question": "现场或远程审核时应逐项核对哪些制造证据？",
+        "h2": "A Practical RF Manufacturing Audit Checklist",
+        "points": [
+          "设备组核对 CNC 类型、加工范围、设备清单和校准状态，避免仅凭数量推断能力",
+          "工艺与质量组核对关键工序、表面处理边界、图纸版本、首件、测量、测试和异常记录",
+          "提供网页勾选及下载清单，字段为审核项、所需证据、判定、备注，并链接 /about/factory"
+        ],
+        "image": "A4 与网页双版本清单；主视觉使用 factory-workshop-wide.webp，不放未经确认的审核结论",
+        "cta": "Prepare an Audit Checklist"
+      },
+      {
+        "number": 6,
+        "name": "Manufacturing FAQ",
+        "question": "精度、表面处理、测试衔接、交期和审核还有哪些疑问？",
+        "h2": "Manufacturing Capability FAQs",
+        "points": [
+          "五问采用条件—证据—下一步结构，不用统一保证替代具体项目评估",
+          "具体设备型号、特殊材料、工艺范围和排产未知时按图纸确认，不补猜能力或政策",
+          "验证问题链接 /engineering/testing-quality，量产阶段问题链接 /engineering/npi"
+        ],
+        "image": "不配图；使用五问手风琴，每问展开为条件、证据和下一步",
+        "cta": "—；先集中回答审核疑虑，下一节统一预约"
+      },
+      {
+        "number": 7,
+        "name": "Factory Audit CTA",
+        "question": "如何把制造能力问题转成一次有议程的工厂审核？",
+        "h2": "Plan Your RF Manufacturing Audit",
+        "points": [
+          "表单收集产品类型、图纸版本、关键尺寸和表面要求、验证指标、项目阶段及希望审核的证据",
+          "区分远程资料审核与现场参观，不预先承诺审核结论、范围、日期或未确认地址",
+          "主要动作连接 /about/factory 与 /request-a-quote，次要动作链接 /engineering/testing-quality"
+        ],
+        "image": "不配图；采用审核目标、资料清单、远程或现场方式、下一步四栏预约面板",
+        "cta": "Book a Factory Audit"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What machining tolerance can SONNE achieve for high-frequency parts?",
+        "answer": "For suitable structures above 40 GHz, mechanical tolerances can reach ±0.01 mm. This is not a blanket tolerance for every dimension or product. Engineering must review the geometry, material, datum scheme and inspection method, then define measurable drawing requirements and supporting evidence.",
+        "intent": "核验高频结构公差能力及适用条件",
+        "snippet": "约 45 词条件式答案；先给可达数值，再说明结构、测量和图纸条件"
+      },
+      {
+        "question": "How is plating thickness controlled for RF components?",
+        "answer": "For suitable designs above 60 GHz, plating-thickness control can reach 1 μm, depending on structure and verification. Buyers should specify functional surfaces and acceptance criteria, then agree how thickness and related performance will be recorded. The figure is not a universal guarantee for every coating or component.",
+        "intent": "评估高频镀层控制能力及验证边界",
+        "snippet": "约 50 词条件与证据型答案，避免将 1 μm 扩大为统一保证"
+      },
+      {
+        "question": "How are machining, assembly and RF testing connected?",
+        "answer": "Machining and surface records should connect to drawing revisions and critical characteristics; assembly and testing should connect to the corresponding build or lot. Applicable VNA, PIM, reliability or matrix-switch tests then provide performance evidence. Exact inspections and coverage are agreed by product and project, not assumed universally.",
+        "intent": "确认机加工到射频测试的追溯与验证方式",
+        "snippet": "约 45 词流程型答案；用加工记录、装配和测试证据说明链路"
+      },
+      {
+        "question": "Does 500,000+ annual capacity guarantee my production lead time?",
+        "answer": "No. The 500,000+ figure is public annual capacity, not a delivery guarantee for any part. Production lead time must be assessed from drawings, quantity, process route, verification requirements and available capacity. Approximately two weeks is only a reference for applicable prototypes, not a general prototype or production promise.",
+        "intent": "判断产能数字能否直接转化为交期承诺",
+        "snippet": "约 50 词误解纠正答案；区分年产能、打样参考与量产交期"
+      },
+      {
+        "question": "What evidence should I request before a factory audit?",
+        "answer": "Request a relevant equipment list, drawing-to-process flow, inspection and calibration records, sample test reports, and lot or serial traceability where applicable. Sensitive customer information should be redacted. Audit scope, evidence access and any on-site agenda should be agreed for the project rather than inferred from machine count alone.",
+        "intent": "准备工厂审核证据并控制敏感信息披露",
+        "snippet": "约 45 词清单式答案；列出设备、流程、检验、测试和追溯证据"
+      }
+    ],
+    "schema": ["WebPage", "BreadcrumbList"],
+    "seo_title": "Precision CNC & Surface Engineering for RF Components | SONNE",
+    "meta_description": "50+ high-precision CNC, controlled plating and surface engineering for RF and enclosure production, with 40 GHz+ tolerance and 60 GHz+ plating-thickness control.",
+    "focus_keyphrase": "precision CNC RF manufacturing"
+  },
+  {
+    "number": 23,
+    "id": "page-23",
+    "name": "资源中心 Resources",
+    "url": "/resources",
+    "type": "内容聚合",
+    "buyer_segment": "新手采购、渠道与 RF/机械工程师，处于学习选型、准备询价或寻找项目文件阶段",
+    "inner_monologue": "能否快速找到与当前任务对应的指南、清单和文件，而不是在公司新闻里翻找？",
+    "pain_points": [
+      "文章、FAQ、RFQ 清单和技术文件混放，难以按选型、询价和验证任务定位",
+      "通用 PDF 被设为下载门槛，买家获得实用信息前就被要求留资",
+      "旧文章缺少产品线和任务分类，学习流量无法进入对应产品页",
+      "datasheet、曲线、图纸、S 参数和测试报告的公开或申请边界不清楚"
+    ],
+    "differentiators": [
+      "以任务和产品线组织 Insights、RFQ、FAQ 与文件入口，不用公司新闻填充资源中心",
+      "提供网页可读的 RFQ 清单、band plan 模板和报告解读框架，核心内容不设泛 PDF 留资门槛",
+      "把指南链接到 /products、/engineering/testing-quality 与 /request-a-quote，形成学习到询盘路径",
+      "区分公开 datasheet、项目图纸、S 参数和样例测试报告的获取方式，不承诺未发布资料"
+    ],
+    "conversion": "主：Get the RFQ Checklist；次：Browse Technical Guides",
+    "three_gates": {
+      "search_demand": "RF resources and downloads、RF insights、RFQ guide、FAQ、datasheets 的 SV/KD 均未测；以资料检索、RFQ 准备和文件获取任务承接需求",
+      "internal_links": "上游：/products、/engineering、/solutions；下游：/resources/insights、/resources/rfq-guide、/resources/faq、/resources/datasheets",
+      "citation_value": "建立“任务—资源类型—产品线—下一步”导航表；文件区按 datasheet、曲线、图纸、S 参数、测试报告分类并标注获取方式"
+    },
+    "keywords": {
+      "focus": {"term": "RF resources and downloads", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "RF insights", "sv": null, "kd": null},
+        {"term": "RFQ guide", "sv": null, "kd": null},
+        {"term": "FAQ", "sv": null, "kd": null},
+        {"term": "datasheets", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "RF filter RFQ template", "sv": null, "kd": null},
+        {"term": "RF test report sample", "sv": null, "kd": null},
+        {"term": "custom RF components quote", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：RF Engineering Resources and Buyer Tools",
+        "H2：Choose a Resource by Task；RFQ Checklists and Specification Templates",
+        "正文/FAQ：RF insights、RFQ guide、datasheets、RF filter RFQ template、RF test report sample；SV/KD 均未测"
+      ]
+    },
+    "h1": "RF Engineering Resources and Buyer Tools",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "如何按当前任务找到实用资料而不是泛公司内容？",
+        "h2": "RF Engineering Resources and Buyer Tools",
+        "points": [
+          "按学习选型、准备 RFQ、核验质量、获取文件四种任务链接 Insights、RFQ Guide、FAQ 与 Datasheets",
+          "主 CTA 直达网页版 RFQ 清单，次 CTA 进入技术指南；阅读公开资料不以订阅或留资为前提",
+          "增加按滤波器、波导、合路、基站和结构件筛选的入口，并区分公开资料与项目申请资料"
+        ],
+        "image": "1600×700 任务导航图，四列展示 Learn、Prepare RFQ、Verify、Documents，不用公司新闻缩略图",
+        "cta": "Get the RFQ Checklist"
+      },
+      {
+        "number": 2,
+        "name": "Resource Taxonomy",
+        "question": "应按任务还是产品线寻找资料？",
+        "h2": "Choose a Resource by Task",
+        "points": [
+          "制作任务—内容—工具或证据—下一步表：选型对应指南，询价对应 RFQ/band plan，验证对应报告解读",
+          "用 /products/rf-microwave-filters、/products/waveguide-components、/products/rf-combiners、/products/base-station-rf、/products/precision-enclosures 建产品入口",
+          "尚无独立文章的主题提供 RFQ 清单或对应产品页，不虚构已发布指南、下载文件或客户案例"
+        ],
+        "image": "1200×800 资源矩阵，行为了解、选型、询价、验证，列为五条产品线并链接已规划页面",
+        "cta": "Browse Technical Guides"
+      },
+      {
+        "number": 3,
+        "name": "Insights and RFQ Tools",
+        "question": "哪些指南和模板能直接解决选型与询价输入问题？",
+        "h2": "Engineering Guides, Checklists and Templates",
+        "points": [
+          "将已迁移文章按 RFQ 准备、滤波器选型、波导/E-band、低 PIM、测试报告和 NPI 分类，不把十大支柱写成已发布文章数量",
+          "提供网页版参数清单、band plan 与结构件模板，可直接复制；下载仅为等效便捷版本，不设通用 PDF 留资门",
+          "每类指南设置问题、适用产品、可带走工具和下游链接，并进入 /resources/insights 或 /resources/rfq-guide"
+        ],
+        "image": "卡片使用 prod-bandpass-v2.webp、prod-duplexer-v3.webp、prod-ocu-combiner-v2.webp；其他主题用比较表与流程图",
+        "cta": "Get the RFQ Checklist"
+      },
+      {
+        "number": 4,
+        "name": "Document Library and FAQ Routes",
+        "question": "技术文件和决策疑问分别如何获取或核验？",
+        "h2": "Find Documents and Resolve Buyer Questions",
+        "points": [
+          "文件索引按产品族、文件类型、版本和获取方式组织，覆盖 datasheet、曲线、图纸、S 参数和样例测试报告并链接 /resources/datasheets",
+          "公开 datasheet 直接访问；项目图纸、S 参数或报告样例按项目适用性提供，不宣称所有型号均有所有格式",
+          "FAQ 路由按技术、MOQ/交期、质量、NDA 和售后链接 /resources/faq，测试问题再链接 /engineering/testing-quality"
+        ],
+        "image": "文件索引与 FAQ 路由表并列；无真实文件预览时不虚构 PDF 封面",
+        "cta": "Browse Engineering Documents"
+      },
+      {
+        "number": 5,
+        "name": "Resource FAQ",
+        "question": "资料获取、参数不全、响应时效和文件申请有哪些边界？",
+        "h2": "RF Resource FAQs",
+        "points": [
+          "五问回答资料位置、是否留资、缺失参数评估、初步反馈和受控文件申请",
+          "24 小时仅指完整 RFQ 后初步工程反馈，不是报价或交期保证",
+          "NDA、受控图纸、S 参数和报告可用性按项目确认，不设统一开放或统一保密范围"
+        ],
+        "image": "不配图；五问手风琴采用答案、适用条件和下一链接结构",
+        "cta": "Ask an RF Engineer"
+      },
+      {
+        "number": 6,
+        "name": "RFQ CTA",
+        "question": "看完资料后如何带着完整输入进入工程评审？",
+        "h2": "Turn Requirements into an Engineering Review",
+        "points": [
+          "并列先填写清单与直接提交两条路径，分别进入 /resources/rfq-guide 和 /request-a-quote",
+          "提交字段提示频段、性能、机械、环境、数量与附件，完整 RFQ 后初步反馈和报价/交期分开说明",
+          "补充联系入口使用 info@zhide-tec.com，不公开未经确认的电话 WhatsApp 或 WeChat 属性"
+        ],
+        "image": "不配图；使用准备清单、提交资料、初步工程反馈、报价与交期确认四步流程卡",
+        "cta": "Submit Complete RFQ"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where can I find RFQ templates, guides and technical documents?",
+        "answer": "Start with the resource hub and choose a task: selection guides, RFQ preparation, quality evidence or engineering documents. Filter by product family, then follow the linked guide or document route. Public datasheets remain directly accessible; project drawings, S-parameter files and reports follow project-specific availability and disclosure requirements.",
+        "intent": "按任务定位指南、模板和技术文件",
+        "snippet": "约 50 词导航式答案；列出四类任务与公开或申请边界"
+      },
+      {
+        "question": "Do I need to submit contact details to download every resource?",
+        "answer": "No. Core checklists, selection explanations and public datasheets should remain useful without a generic gated PDF. Controlled drawings, S-parameter files or project-specific reports may require an engineering request. Availability and disclosure conditions depend on the document and project rather than a blanket download rule.",
+        "intent": "确认资料是否被强制留资或设通用下载门槛",
+        "snippet": "约 45 词规则型答案；区分公开实用内容与项目受控资料"
+      },
+      {
+        "question": "Can I request an evaluation before all specifications are final?",
+        "answer": "Yes. Provide the known frequency range, target performance, mechanical constraints and current uncertainties. Engineering can identify missing inputs and evaluate feasibility. A complete RFQ can receive initial engineering feedback in about 24 hours; that response is not a formal quotation or a prototype or production lead-time guarantee.",
+        "intent": "参数未完整时判断能否先评估及响应边界",
+        "snippet": "约 50 词条件式答案；区分缺失项评估、初步反馈、报价和交期"
+      },
+      {
+        "question": "How do I request drawings, S-parameter files or test reports?",
+        "answer": "Identify the product or custom project, required file type, frequency range and intended use. Public datasheets can be accessed directly, while controlled drawings, S-parameter data and sample reports depend on project applicability and agreed disclosure conditions. Do not assume every document exists for every model.",
+        "intent": "获取项目图纸、S 参数或测试报告并理解适用范围",
+        "snippet": "约 45 词操作型答案；列出产品、文件类型、频段和用途输入"
+      },
+      {
+        "question": "Which resource should I use before submitting a custom RFQ?",
+        "answer": "Use the RFQ guide when specifications or drawings are mostly ready, because it maps required RF, mechanical, environmental and quantity inputs. Use Insights first when the topology or product family is uncertain, then move to the relevant product page. Submit the completed RFQ for initial engineering feedback, not an automatic quote.",
+        "intent": "根据项目成熟度选择指南或直接提交 RFQ",
+        "snippet": "约 50 词路径型答案；按选型未定与规格就绪给出下一步"
+      }
+    ],
+    "schema": ["CollectionPage", "BreadcrumbList"],
+    "seo_title": "RF Resources | Insights, RFQ Guide, FAQ & Datasheets | SONNE",
+    "meta_description": "RF engineering articles, RFQ checklists, strategic FAQ and datasheet downloads for custom RF, waveguide and enclosure projects.",
+    "focus_keyphrase": "RF resources and downloads"
+  },
+  {
+    "number": 24,
+    "id": "page-24",
+    "name": "Insights 技术文章",
+    "url": "/resources/insights",
+    "type": "内容聚合",
+    "buyer_segment": "处于技术学习与方案定义阶段的新手买家、资深 RF 工程师和渠道技术人员",
+    "inner_monologue": "有没有能直接帮助选拓扑、读测试数据或准备 RFQ 的工程内容，并链接到对应产品？",
+    "pain_points": [
+      "旧站文章只按发布时间堆叠，难以按滤波器、波导、合路、低 PIM 或 NPI 主题查找",
+      "信息型文章只有概念，没有参数表、比较框架、报告字段或可执行 RFQ 下一步",
+      "duplexer 与 diplexer 比较内容和合路产品页的转化关键词边界不清",
+      "工程师验证能力与渠道分享资料的需求被公司新闻式更新淹没"
+    ],
+    "differentiators": [
+      "按任务、产品线和读者成熟度组织已迁移 zhide Insights 与内容支柱，不以公司新闻做内容中心",
+      "文章模板提供选型维度、参数单位、测量条件和下一步，避免纯概念科普",
+      "duplexer vs diplexer 信息内容链接 /products/rf-combiners，商业转化归合路页",
+      "测试报告、NPI 与 RFQ 内容链接工程证据页和询价页，形成学习到询盘路径"
+    ],
+    "conversion": "主：Read the RFQ Guide；次：Subscribe",
+    "three_gates": {
+      "search_demand": "RF engineering guides、RF filter selection guide、waveguide guide 与长尾 SV/KD 未测；duplexer vs diplexer 实测 SV=36、KD=null，由信息型比较文支持 /products/rf-combiners 商业页面",
+      "internal_links": "上游：/resources、/products/rf-microwave-filters、/products/rf-combiners；下游：/resources/rfq-guide、/products/waveguide-components、/engineering/testing-quality、/engineering/npi",
+      "citation_value": "建立“读者任务—选型问题—证据形式—产品页”内容矩阵；文章模板固定参数表、比较维度、测量条件和 RFQ 字段"
+    },
+    "keywords": {
+      "focus": {"term": "RF engineering guides", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "duplexer vs diplexer", "sv": 36, "kd": null},
+        {"term": "RF filter selection guide", "sv": null, "kd": null},
+        {"term": "waveguide guide", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "how to write RF filter RFQ", "sv": null, "kd": null},
+        {"term": "low PIM design guide", "sv": null, "kd": null},
+        {"term": "cavity vs waveguide filter", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：RF Engineering Guides for Buyers and Designers",
+        "H2：Browse Guides by Engineering Task；Move from Selection Logic to RFQ Inputs",
+        "正文/FAQ：duplexer vs diplexer 链接 /products/rf-combiners；cavity vs waveguide filter 链接滤波器页"
+      ]
+    },
+    "h1": "RF Engineering Guides for Buyers and Designers",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "能否快速找到解决当前工程问题的实用指南？",
+        "h2": "RF Engineering Guides for Buyers and Designers",
+        "points": [
+          "按选型、写 RFQ、低 PIM、波导/E-band、测试报告和 NPI 展示任务入口，不按公司新闻排序",
+          "主 CTA 进入 /resources/rfq-guide；次 CTA 提供订阅，但不以订阅作为公开内容阅读前提",
+          "分别服务新手术语学习、资深工程师验证和渠道资料分享，不虚构下载量或客户案例"
+        ],
+        "image": "1600×700 学习路径图，按 Select、Specify、Verify、NPI 四阶段连接指南与产品页",
+        "cta": "Read the RFQ Guide"
+      },
+      {
+        "number": 2,
+        "name": "Content Taxonomy",
+        "question": "文章如何按问题与产品线组织，而非按发布时间堆叠？",
+        "h2": "Browse Guides by Engineering Task",
+        "points": [
+          "建立 RFQ 准备、滤波器选型、波导/E-band、低 PIM、测试报告和 NPI 六类入口，将十篇旧文去重归类，不声称已有十篇新支柱文章",
+          "每组列用户问题、比较维度、证据形式和相关产品页；低 PIM 内容需写连接、材料、功率及测试条件",
+          "duplexer vs diplexer 导向 /products/rf-combiners，cavity vs waveguide filter 导向 /products/rf-microwave-filters"
+        ],
+        "image": "六类内容矩阵卡，使用 prod-bandpass-v2.webp、prod-duplexer-v3.webp、prod-ocu-combiner-v2.webp，其余用报告字段图",
+        "cta": "Browse Guide Topics"
+      },
+      {
+        "number": 3,
+        "name": "Selection and RFQ Paths",
+        "question": "读者如何从概念比较进入完整规格和 RFQ？",
+        "h2": "Move from Selection Logic to RFQ Inputs",
+        "points": [
+          "选型文章固定比较频段、带宽、拓扑、插损、抑制或隔离、功率/PIM、接口和机械包络",
+          "波导内容增加法兰、极化、Ku/Ka/E-band、结构和验证条件；110 GHz 仅写选定定制项目可达",
+          "每篇结尾用已知输入—缺失输入—下一步表链接 /resources/rfq-guide，已有 band plan 或图纸者进入产品页或 /request-a-quote"
+        ],
+        "image": "1200×800 规格决策树，从应用和频段进入拓扑、性能、机械与验证字段，终点为 RFQ 指南",
+        "cta": "Build a Complete RFQ"
+      },
+      {
+        "number": 4,
+        "name": "Evidence and Editorial Standards",
+        "question": "技术文章如何帮助工程师核验并保证数值可追溯？",
+        "h2": "Read Test Evidence with Clear Conditions",
+        "points": [
+          "报告指南解释测试设置、校准、频率范围、验收限值、样本或批次和判定，样例不当作客户结果",
+          "40 GHz+ ±0.01 mm、60 GHz+ 1 μm 均写可达/视结构；100% 验证仅按对应产品和关键指标使用",
+          "文章设置作者或工程审核、修订日期、相关产品和证据字段，并链接 /engineering/testing-quality、/engineering/manufacturing、/engineering/npi"
+        ],
+        "image": "报告解读示意图列 VNA/PIM/批次字段，搭配 factory-rf-testing.webp；不使用未授权客户结果",
+        "cta": "Read Test Report Guides"
+      },
+      {
+        "number": 5,
+        "name": "Insights FAQ",
+        "question": "选文、器件比较、测试证据和 RFQ 转化应怎样衔接？",
+        "h2": "RF Engineering Guide FAQs",
+        "points": [
+          "五问回答如何选择指南、duplexer/diplexer 区别、低 PIM 证据、报告阅读和定制评审边界",
+          "实测 SV=36 只支持信息型比较内容，商业链接仍归 /products/rf-combiners",
+          "24 小时为完整 RFQ 后初步工程反馈，不与报价、打样或量产交期混淆"
+        ],
+        "image": "不配图；五问手风琴附对应指南、证据页和产品页链接",
+        "cta": "Read the RFQ Guide"
+      },
+      {
+        "number": 6,
+        "name": "Subscription and RFQ CTA",
+        "question": "读完指南后如何订阅更新或提交可评审的规格？",
+        "h2": "Continue from Guide to Engineering Review",
+        "points": [
+          "主次路径分别为阅读 RFQ 清单与订阅技术更新，已有完整规格者直接进入 /request-a-quote",
+          "订阅只用于相关技术内容更新，不作为公开资料访问条件，不承诺更新频率或商业结果",
+          "完整 RFQ 后约 24 小时初步工程反馈与报价/交期分开说明，最快约两周仅为适用打样参考"
+        ],
+        "image": "不配图；三段路径卡分别显示 Learn、Prepare、Submit，并注明初步反馈边界",
+        "cta": "Read the RFQ Guide"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Which RF engineering guide should I read first?",
+        "answer": "Choose by task rather than publication date. Start with a selection guide when topology is uncertain, a test-report guide when reviewing evidence, or the RFQ guide when specifications are mostly ready. Each article should provide comparison criteria, measurement conditions and a link to the relevant product family.",
+        "intent": "按当前任务选择合适的技术指南",
+        "snippet": "约 45 词语义列表答案；按选型、验证和询价三种任务给路径"
+      },
+      {
+        "question": "What is the difference between a duplexer and a diplexer?",
+        "answer": "A duplexer separates transmit and receive paths so they can share an antenna or port. A diplexer separates or combines different frequency bands. The suitable architecture depends on band plan, port definitions, isolation, insertion loss and power. Use the comparison guide, then submit the band plan through the combiner pathway.",
+        "intent": "理解 duplexer 与 diplexer 差异并进入 band-plan 选型",
+        "snippet": "约 50 词定义加选型条件；承接实测 SV=36 的信息型需求"
+      },
+      {
+        "question": "How should a low PIM design guide support product selection?",
+        "answer": "It should connect PIM targets to frequency, power, connector, material, surface and test conditions rather than present a universal rating. Readers should record the applicable configuration and request supporting PIM evidence. Low PIM performance must be assessed for the specific model and conditions, not generalized across all products.",
+        "intent": "按型号与测试条件理解和验证低 PIM 选型",
+        "snippet": "约 45 词条件型答案；列出频率、功率、连接器、材料、表面和测试条件"
+      },
+      {
+        "question": "What should I look for in an RF test report guide?",
+        "answer": "Look for explanations of test setup, calibration, frequency range, acceptance limits and sample or lot identification. VNA curves, PIM results, reliability tests and matrix-switch automation answer different questions. Coverage must be defined for the applicable product and metric; a sample report shows evidence format, not a universal result.",
+        "intent": "读懂 VNA、PIM 和可靠性报告并核对覆盖范围",
+        "snippet": "约 50 词核对清单答案；突出设置、校准、限值、样本与批次字段"
+      },
+      {
+        "question": "Can an engineering guide replace a custom RFQ review?",
+        "answer": "No. A guide helps define topology, specifications and evidence needs, but feasibility still depends on the actual band plan, mechanical envelope, environment and validation requirements. Submit those inputs for review. A complete RFQ can receive initial engineering feedback in about 24 hours, not an automatic quotation or lead-time commitment.",
+        "intent": "区分自学指南与定制工程评审、报价和交期",
+        "snippet": "约 50 词边界型答案；先回答不能替代，再说明输入和响应边界"
+      }
+    ],
+    "schema": ["Blog", "BreadcrumbList"],
+    "seo_title": "RF & Microwave Engineering Insights | SONNE",
+    "meta_description": "Practical RF guides: RFQ preparation, filter selection, waveguide and E-band engineering, low PIM design, test report reading and NPI for custom RF components.",
+    "focus_keyphrase": "RF engineering guides"
+  },
+  {
+    "number": 25,
+    "id": "page-25",
+    "name": "RFQ 指南与清单",
+    "url": "/resources/rfq-guide",
+    "type": "转化工具",
+    "buyer_segment": "已有初步规格或图纸、准备提交定制 RF、波导或结构件询价的采购与工程师",
+    "inner_monologue": "应一次提交哪些参数、图纸和验证要求，才能获得明确工程反馈而不反复补资料？",
+    "pain_points": [
+      "只发型号或频段，缺少带宽、插损、隔离、功率、PIM、接口和机械包络，导致反复追问",
+      "波导、合路和结构件输入不同，单一通用表单无法覆盖法兰、极化和 GD&T 字段",
+      "24 小时初步工程反馈容易被误解为正式报价、打样或量产交期保证",
+      "模板只有泛 PDF 下载，买家无法在线复制字段并形成可提交规格"
+    ],
+    "differentiators": [
+      "按 RF 滤波、波导/合路、基站与精密结构件提供可复制字段清单和模板，而非泛营销 PDF",
+      "把频率、性能、接口、机械、环境、数量和验证要求连接到 Engineering Review，减少缺失项往返",
+      "明确完整 RFQ 后约 24 小时仅为初步工程反馈，报价、打样和量产交期需另行评审",
+      "支持公开网页清单与项目附件提交，敏感图纸披露和 NDA 范围按项目确认"
+    ],
+    "conversion": "主：Submit Complete RFQ；次：Download Checklist",
+    "three_gates": {
+      "search_demand": "RF filter RFQ、custom RF components quote、RFQ checklist、RF specification template 及长尾 SV/KD 均未测；以参数完整性、band plan、图纸要求和响应边界承接行动需求",
+      "internal_links": "上游：/resources、/resources/insights、/products/rf-combiners、/products/precision-enclosures；下游：/request-a-quote、/engineering/custom-rf-design、/engineering/testing-quality、/contact",
+      "citation_value": "提供可复制的 10 项 RFQ 主清单、分产品输入矩阵、band plan 表和附件命名规则；用完整度—初步反馈—报价/交期流程防止误解"
+    },
+    "keywords": {
+      "focus": {"term": "RF filter RFQ", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "custom RF components quote", "sv": null, "kd": null},
+        {"term": "RFQ checklist", "sv": null, "kd": null},
+        {"term": "RF specification template", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "how to specify a custom filter", "sv": null, "kd": null},
+        {"term": "band plan template", "sv": null, "kd": null},
+        {"term": "enclosure RFQ drawing requirements", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：How to Prepare an RFQ Engineers Can Quote Directly；首屏与清单承接 RF filter RFQ",
+        "H2：RF Specification Checklist；Band Plan, Waveguide and Mechanical Inputs",
+        "正文/FAQ：RFQ checklist、RF specification template、band plan template、enclosure RFQ drawing requirements；SV/KD 均未测"
+      ]
+    },
+    "h1": "How to Prepare an RFQ Engineers Can Quote Directly",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "要获得可执行的工程评审，RFQ 最少要准备什么？",
+        "h2": "How to Prepare an RFQ Engineers Can Quote Directly",
+        "points": [
+          "首屏展示频率与带宽、插损、抑制或隔离、功率、PIM、接口、机械包络、环境和数量核心字段",
+          "完整 RFQ 通常约 24 小时获得初步工程反馈，不在首屏承诺报价、打样或量产交期",
+          "主 CTA 进入 /request-a-quote，次 CTA 锚定网页版可下载清单；未知参数可标 TBD 后先评估"
+        ],
+        "image": "1600×700 输入到输出流程图，输出标 initial engineering feedback，不标 instant quote",
+        "cta": "Submit Complete RFQ"
+      },
+      {
+        "number": 2,
+        "name": "RF Specification Checklist",
+        "question": "定制滤波器和无源 RF 器件必须给哪些性能参数？",
+        "h2": "RF Specification Checklist",
+        "points": [
+          "列出起止或中心频率、带宽、插损、回波、带外抑制、端口隔离、功率、PIM 和阻抗，并要求单位与测试条件",
+          "未知指标可写 TBD 和目标优先级；参数不全可先评估，但不能将初步反馈等同正式报价",
+          "提供参数、目标值、单位、测试条件、必需或目标、备注六列可复制表，并链接滤波器与合路产品页"
+        ],
+        "image": "网页参数表格列出单位和条件；旁附低 PIM 与带外抑制字段示例，不写全型号统一指标",
+        "cta": "Complete RF Specifications"
+      },
+      {
+        "number": 3,
+        "name": "Band Plan and Mechanical Inputs",
+        "question": "多频系统、高频波导和结构件项目要补充哪些信息？",
+        "h2": "Band Plan, Waveguide and Mechanical Inputs",
+        "points": [
+          "合路和双工项目用端口、Tx/Rx 或频段、路径、隔离、插损和功率字段提交 band plan，并链接 /products/rf-combiners",
+          "波导项目补充波导规格、法兰、极化、材料、表面、机械包络和目标频段；高频能力按拓扑与验证评估",
+          "结构件项目提供 2D/3D 图纸、GD&T、关键尺寸、材料、表面、散热或屏蔽和环境要求，并链接 /products/precision-enclosures"
+        ],
+        "image": "1200×800 三类输入表分别为 band plan、waveguide、enclosure，列字段、单位、附件和验证需求",
+        "cta": "Prepare Project Inputs"
+      },
+      {
+        "number": 4,
+        "name": "Production and Verification Requirements",
+        "question": "数量、测试和追溯要求如何写入 RFQ，避免报价后重开范围？",
+        "h2": "Quantity, Verification and Change-Control Inputs",
+        "points": [
+          "收集原型、试产或量产阶段、目标数量、年度需求、关键测试、验收限值、报告格式和批次或序列追溯需求",
+          "VNA、PIM、可靠性和矩阵测试按产品与指标定义覆盖；只有对应产品和关键指标才讨论 100% 验证",
+          "量产交期按图纸、数量、工艺和产能评估；最快约两周仅作适用打样参考，并链接测试与 NPI 页面"
+        ],
+        "image": "验证矩阵列测试项目、条件、样本或批次、判定和报告，不使用全产品 100% 测试声明",
+        "cta": "Define Verification Requirements"
+      },
+      {
+        "number": 5,
+        "name": "Copyable RFQ Template",
+        "question": "能否直接复制完整模板，而不是下载空泛营销 PDF？",
+        "h2": "Copyable RFQ and Band-Plan Template",
+        "points": [
+          "网页模板包含项目背景、频段、RF 指标、功率/PIM、接口、机械、环境、数量、阶段、验证和附件字段",
+          "band plan 单列端口、频率、路径和指标，机械件单列图纸、GD&T、材料、表面与防护要求",
+          "提供网页复制和等效下载，不设通用 PDF 留资门；模板结尾进入 /request-a-quote 并提示缺失项处理"
+        ],
+        "image": "完整可复制模板与示例行，显示规格字段、单位、测试条件、数量和附件命名，不虚构参数结果",
+        "cta": "Download Checklist"
+      },
+      {
+        "number": 6,
+        "name": "Submission and FAQ",
+        "question": "提交后初步反馈、报价、交期和保密分别如何处理？",
+        "h2": "RFQ Submission and Preparation FAQs",
+        "points": [
+          "流程分完整性检查、初步工程反馈、澄清、报价评审和交期评估；24 小时仅对应完整 RFQ 后初步反馈",
+          "五问回答必须字段、缺失输入、响应边界、交期和 NDA；付款、质保/RMA 等条款按项目约定",
+          "选型问题链接 /resources/insights，验证证据链接 /engineering/testing-quality，补充联系链接 /contact"
+        ],
+        "image": "流程图分开标 complete RFQ、about 24h initial feedback、clarification、quote 和 project lead time",
+        "cta": "Review RFQ Answers"
+      },
+      {
+        "number": 7,
+        "name": "Final RFQ CTA",
+        "question": "准备好资料后怎样提交并减少后续澄清？",
+        "h2": "Submit Your RF Specification for Review",
+        "points": [
+          "表单包含产品类型、项目阶段、频率与性能、机械或环境、数量、验证需求和附件上传",
+          "完整 RFQ 才适用约 24 小时初步工程反馈口径，正式报价和交期需澄清后评估",
+          "同时提供 info@zhide-tec.com 邮件路径，不显示统一 MOQ、付款、NDA 或质保/RMA 承诺"
+        ],
+        "image": "不配图；使用提交清单与附件核对框，右侧显示初步反馈、报价和交期三个独立节点",
+        "cta": "Submit Complete RFQ"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What information is required for a custom RF filter RFQ?",
+        "answer": "Provide frequency range and bandwidth, insertion loss, return loss, rejection or isolation, power, PIM where applicable, impedance, connectors, mechanical envelope, environment, quantity and verification needs. Mark unknown items as TBD so engineering can identify gaps instead of treating a model number as a complete specification.",
+        "intent": "准备完整滤波器 RFQ 参数并减少往返澄清",
+        "snippet": "约 50 词清单答案；按 RF、机械、环境、数量和验证分组"
+      },
+      {
+        "question": "Can SONNE evaluate a project before every parameter is final?",
+        "answer": "Yes. Submit the known frequency range, target performance, mechanical constraints and open questions. Engineering can identify missing inputs and discuss feasibility before the specification is final. Initial engineering feedback is distinct from a formal quote, and prototype or production timing still depends on the agreed scope and requirements.",
+        "intent": "参数未冻结时寻求初步可行性评估",
+        "snippet": "约 45 词流程答案；区分缺失项识别、初步反馈、报价和时间评估"
+      },
+      {
+        "question": "Does a 24-hour response include a quotation and lead time?",
+        "answer": "No. Approximately 24 hours refers to initial engineering feedback after a complete RFQ. It may clarify feasibility, missing inputs or next steps. Quotation and delivery timing require further review of drawings, quantities, processes, verification and capacity, so they are not guaranteed by the initial-response statement.",
+        "intent": "确认 24 小时响应与报价、交期的区别",
+        "snippet": "约 45 词误解纠正答案；把初步工程反馈与报价和交期明确分开"
+      },
+      {
+        "question": "How are prototype and production lead times estimated?",
+        "answer": "The approximately two-week figure is only a reference for applicable prototype projects, not a general promise. Production lead time depends on drawings, quantities, process route, verification requirements and available capacity. Confirm timing after engineering and commercial review rather than deriving it from annual capacity or a prototype example.",
+        "intent": "理解打样参考与量产交期的项目评估条件",
+        "snippet": "约 45 词条件式答案；明确打样参考与图纸、数量、工艺和产能评估"
+      },
+      {
+        "question": "Can drawings be reviewed under an NDA?",
+        "answer": "Confidentiality scope and NDA terms must be agreed for the specific project. Start with a non-confidential overview where practical, then exchange controlled drawings through the agreed route. Do not assume a blanket NDA, disclosure scope or unrestricted file distribution before the parties confirm the applicable terms.",
+        "intent": "在提交敏感图纸前确认 NDA 和披露范围",
+        "snippet": "约 45 词程序型答案；只承诺协商流程，不声称统一 NDA 范围"
+      }
+    ],
+    "schema": ["WebPage", "FAQPage", "BreadcrumbList"],
+    "seo_title": "RFQ Guide & Checklist for Custom RF Components | SONNE",
+    "meta_description": "Frequency, bandwidth, insertion loss, isolation, power, PIM, connectors, mechanical envelope and environment — a complete RFQ checklist for custom RF and enclosure projects.",
+    "focus_keyphrase": "RF filter RFQ"
+  },
+  {
+    "number": 26,
+    "id": "page-26",
+    "name": "FAQ 常见问题",
+    "url": "/resources/faq",
+    "type": "信任内容",
+    "buyer_segment": "供应商评估与下单前风险核查阶段的 RF/机械工程师、采购、SQE 和渠道",
+    "inner_monologue": "频段、定制、MOQ、交期、NDA、测试和售后边界是否清楚，哪些必须写进项目确认？",
+    "pain_points": [
+      "核心 DC–40 GHz 与选定定制可达 110 GHz 容易被混成全产品通用频段保证",
+      "MOQ、打样、量产交期、付款、NDA 和质保/RMA 容易被误当作跨产品线统一政策",
+      "测试能力无法对应具体报告、样本、批次与判定条件",
+      "遇到质量问题或敏感图纸时，不知道应提供什么资料及如何进入项目级处理"
+    ],
+    "differentiators": [
+      "将技术范围、项目评审、质量证据和商业边界分开回答，避免统一承诺掩盖项目差异",
+      "公开 DC–40 GHz 核心生产与选定定制可达 110 GHz 的条件，并要求拓扑与验证确认",
+      "测试、制造和 NPI 证据分别链接对应工程页面，支持买家继续核验",
+      "对 MOQ、NDA、付款、质保/RMA、量产交期和认证不作未确认声明，明确按 RFQ 或协议确认"
+    ],
+    "conversion": "主：Ask an Engineer；次：Prepare an RFQ",
+    "three_gates": {
+      "search_demand": "RF component manufacturer FAQ、custom RF MOQ、RF prototype lead time、NDA custom drawings 及长尾 SV/KD 均未测；以供应商核验、保密、测试和售后问题承接",
+      "internal_links": "上游：/resources、/products、/contact；下游：/resources/rfq-guide、/engineering/testing-quality、/engineering/manufacturing、/about、/request-a-quote",
+      "citation_value": "制作“问题—适用条件—所需证据—确认路径”答疑表，覆盖频段、MOQ、初步反馈、交期、NDA、测试与售后"
+    },
+    "keywords": {
+      "focus": {"term": "RF component manufacturer FAQ", "sv": null, "kd": null},
+      "secondary": [
+        {"term": "custom RF MOQ", "sv": null, "kd": null},
+        {"term": "RF prototype lead time", "sv": null, "kd": null},
+        {"term": "NDA custom drawings", "sv": null, "kd": null}
+      ],
+      "long_tail": [
+        {"term": "how to verify RF supplier", "sv": null, "kd": null},
+        {"term": "PIM batch consistency", "sv": null, "kd": null},
+        {"term": "RF enclosure IP rating", "sv": null, "kd": null}
+      ],
+      "allocation": [
+        "H1：Frequently Asked Questions about Custom RF Manufacturing",
+        "H2：Capability and Customization Answers；Quality and Verification Evidence",
+        "正文/FAQ：custom RF MOQ、RF prototype lead time、NDA custom drawings、PIM batch consistency、RF enclosure IP rating；SV/KD 均未测"
+      ]
+    },
+    "h1": "Frequently Asked Questions about Custom RF Manufacturing",
+    "sections": [
+      {
+        "number": 1,
+        "name": "Hero",
+        "question": "哪些技术和商业问题能直接回答，哪些必须按项目确认？",
+        "h2": "Frequently Asked Questions about Custom RF Manufacturing",
+        "points": [
+          "首屏按技术范围、打样与量产、质量验证、MOQ或付款、NDA或 IP 和售后分类，避免只堆关键词",
+          "公开核心生产 DC–40 GHz、选定定制微波或波导项目可达 110 GHz，明确取决于拓扑与验证",
+          "完整 RFQ 后约 24 小时为初步工程反馈，最快约两周仅为适用打样参考；主 CTA 为 Ask an Engineer"
+        ],
+        "image": "1600×700 决策导航图，按 Capability、Verification、Commercial、Confidentiality、After-sales 分类，不用客户 logo",
+        "cta": "Ask an Engineer"
+      },
+      {
+        "number": 2,
+        "name": "Capability and Commercial Boundaries",
+        "question": "频段、定制、MOQ、外壳防护和交期怎样按项目核验？",
+        "h2": "Capability and Project-Specific Commercial Answers",
+        "points": [
+          "核心生产 DC–40 GHz；110 GHz 仅限选定定制微波或波导项目按拓扑和验证评估，不写成全线范围",
+          "MOQ 按产品族、定制程度、工艺和数量确认；IBS/DAS 特定线 MOQ 50+ 不扩展成全公司政策",
+          "机柜 IP55/IP65、接续类 IP68 仅按对应产品能力表述；付款、量产交期和未确认认证按项目确认"
+        ],
+        "image": "能力边界表列产品族、公开范围、条件和证据链接，不添加 RoHS、REACH、盐雾或 EMC 声明",
+        "cta": "Review Product Capabilities"
+      },
+      {
+        "number": 3,
+        "name": "Prototype and Lead-Time Process",
+        "question": "初步反馈、打样、报价和量产交期为什么不能给统一答案？",
+        "h2": "Prototype, Quote and Lead-Time Boundaries",
+        "points": [
+          "最快约两周仅为适用打样参考，不是通用打样或量产承诺，报价和交期须另行评审",
+          "24 小时只指完整 RFQ 后初步工程反馈，与报价、打样和量产排产节点分别展示",
+          "量产交期按图纸、数量、工艺、验证和产能评估，链接 /request-a-quote 收集项目输入"
+        ],
+        "image": "项目时间线图分为初步反馈、工程澄清、报价、打样和量产评估，不用固定天数承诺交期",
+        "cta": "Submit Project Requirements"
+      },
+      {
+        "number": 4,
+        "name": "Quality and Verification",
+        "question": "VNA、PIM、可靠性和批次一致性用什么证据证明？",
+        "h2": "Quality and Verification Evidence",
+        "points": [
+          "证据表列出 VNA、PIM、可靠性和矩阵自动化的适用测试、条件、样本或批次、判定和报告字段",
+          "100% 关键 RF 验证只在对应产品与指标语境说明，不扩展到全产品全部测试",
+          "链接 /engineering/testing-quality、/engineering/manufacturing 与 /engineering/npi 获取报告、工艺和变更证据"
+        ],
+        "image": "使用 factory-test-rig.webp 与 factory-vna-tuning-line.webp，并列测试条件、样本或批次和报告字段",
+        "cta": "Request Sample Test Report"
+      },
+      {
+        "number": 5,
+        "name": "Confidentiality and FAQ",
+        "question": "NDA、图纸披露、合规文件和售后如何按项目处理？",
+        "h2": "Confidentiality and Custom RF Manufacturing FAQs",
+        "points": [
+          "NDA 范围、图纸接收方式和允许披露对象按项目书面确认；RoHS、REACH、盐雾和 EMC 不作未确认保证",
+          "五问覆盖频段、MOQ、响应与交期、NDA和图纸、质量异常与售后，答案采用条件—证据—下一步结构",
+          "链接 /resources/rfq-guide 准备项目资料，链接 /contact 进入具体问题沟通，不宣称未授权客户或统一售后政策"
+        ],
+        "image": "不配图；合规边界表与五问手风琴并列，不使用认证 logo 或客户标识",
+        "cta": "Ask an Engineer"
+      },
+      {
+        "number": 6,
+        "name": "Engineering Contact CTA",
+        "question": "问题依赖项目条件时，下一步应提交什么？",
+        "h2": "Get a Project-Specific Engineering Answer",
+        "points": [
+          "表单收集产品族、频段或图纸、目标数量、验证要求、保密需求和当前阶段，避免只留请报价",
+          "完整 RFQ 后约 24 小时仅指初步工程反馈，报价、打样和量产交期分别确认",
+          "公开联系邮箱使用 info@zhide-tec.com，不将电话擅自标作 WhatsApp 或 WeChat"
+        ],
+        "image": "不配图；以项目类型、规格或图纸、数量、验证和保密需求组成提交清单及邮箱入口",
+        "cta": "Ask an Engineer"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What frequency range can SONNE support?",
+        "answer": "Core production covers DC to 40 GHz. Selected custom microwave and waveguide projects can reach 110 GHz, depending on topology and verification. This is not a universal range for every product. Submit frequency bands, interfaces, mechanical constraints and required test evidence for project-specific engineering review.",
+        "intent": "确认标准频段与定制高频能力的适用边界",
+        "snippet": "约 45 词直接答案；DC–40 GHz 与选定定制可达 110 GHz 分开表述"
+      },
+      {
+        "question": "What is the MOQ for custom RF components?",
+        "answer": "There is no universal MOQ across product lines. MOQ depends on the product family, customization, process route and project quantity. The public MOQ 50+ statement applies only where specified for the IBS/DAS line, not all SONNE products. Submit drawings or specifications and quantities for project confirmation.",
+        "intent": "了解 MOQ 是否统一以及按项目确认的依据",
+        "snippet": "约 45 词边界型答案；明确 IBS/DAS 限定与产品、工艺和数量条件"
+      },
+      {
+        "question": "How quickly can I receive feedback, a quote and delivery?",
+        "answer": "A complete RFQ can usually receive initial engineering feedback in about 24 hours. This is not a quotation or delivery guarantee. Prototypes in approximately two weeks are only a reference where applicable. Production timing is assessed from drawings, quantities, processes, verification requirements and available capacity.",
+        "intent": "区分初步反馈、正式报价、打样与量产交期",
+        "snippet": "约 50 词流程型答案；分别说明初步反馈、打样参考与量产评估"
+      },
+      {
+        "question": "Can custom drawings be protected by an NDA?",
+        "answer": "Confidentiality scope and NDA terms must be agreed for the specific project. Begin with a non-confidential overview where practical, then share controlled drawings through the agreed route. Do not assume unrestricted disclosure or a blanket NDA. Define recipients, permitted use and handling requirements before exchanging sensitive design files.",
+        "intent": "提交定制图纸前确认 NDA 和披露范围",
+        "snippet": "约 45 词流程答案；说明项目协商和受控披露，不作统一 NDA 保证"
+      },
+      {
+        "question": "How are quality problems and after-sales issues handled?",
+        "answer": "Report the order, lot or serial identification, measured evidence and operating conditions so engineering can review the issue and agree containment or corrective action. Applicable VNA, PIM or reliability evidence should support the analysis. Warranty and RMA scope, timing and remedies must be defined per project agreement, not assumed as a blanket policy.",
+        "intent": "了解质量异常分析、追溯和售后处理边界",
+        "snippet": "约 50 词证据流程答案；涵盖识别、测试证据、处置和项目级质保/RMA"
+      }
+    ],
+    "schema": ["FAQPage", "BreadcrumbList"],
+    "seo_title": "FAQ | Custom RF Components, MOQ, Lead Time & Quality | SONNE",
+    "meta_description": "Answers on custom RF capability, frequency range, prototyping, lead time, quality verification, NDA and enclosure IP ratings. Project-specific terms are confirmed per RFQ.",
+    "focus_keyphrase": "RF component manufacturer FAQ"
+  }
+]
