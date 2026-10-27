@@ -25,7 +25,6 @@
     .sn-base-station .sn-base-station__path-labels span { padding: 8px 10px; border: 1px solid rgba(252, 254, 255, .24); }
     .sn-base-station .sn-base-station__path-labels b { color: rgba(252, 254, 255, .5); font-weight: 400; }
     .sn-base-station .sn-base-station__hero-media { margin: 0; }
-    .sn-base-station .sn-base-station__hero-media .sn-hero-plate__media { padding: clamp(14px, 2.4vw, 26px); }
     .sn-base-station .sn-base-station__hero-media img { aspect-ratio: 1; }
 
     /* Section rhythm and the shared record head. */
@@ -41,7 +40,7 @@
     .sn-base-station .sn-base-station__ledger caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
     .sn-base-station .sn-base-station__architecture-evidence { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 24px; align-items: center; margin-top: 28px; }
     .sn-base-station .sn-base-station__architecture-evidence figure { margin-bottom: 0; }
-    .sn-base-station .sn-base-station__architecture-evidence img { width: 100%; aspect-ratio: 4 / 3; padding: 14px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-base-station .sn-base-station__architecture-evidence img { width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--sn-line); background: var(--sn-card); object-fit: cover; }
     .sn-base-station .sn-base-station__architecture-evidence figcaption, .sn-base-station .sn-base-station__test-grid figcaption, .sn-base-station .sn-base-station__band-media figcaption, .sn-base-station .sn-base-station__evidence-card figcaption { margin-top: 9px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
 
     /* Functional path and copy-ready block. */
@@ -68,8 +67,9 @@
     .sn-base-station .sn-base-station__report-fields li + li { padding-left: 20px; border-left: 1px solid var(--sn-line); }
     .sn-base-station .sn-base-station__report-fields strong { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .05em; text-transform: uppercase; }
     .sn-base-station .sn-base-station__test-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
-    .sn-base-station .sn-base-station__test-grid figure { margin-bottom: 0; }
-    .sn-base-station .sn-base-station__test-grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-base-station .sn-base-station__test-grid figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-base-station .sn-base-station__test-grid img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-base-station .sn-base-station__test-grid figcaption { flex: 1; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--sn-line); }
 
     /* Published evidence: three indexed records on one rule. */
     .sn-base-station .sn-base-station__evidence-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--sn-line-strong); }
@@ -86,7 +86,7 @@
     .sn-base-station .sn-base-station__port-map span { padding: 8px 10px; border: 1px solid var(--sn-line-strong); background: var(--sn-card); }
     .sn-base-station .sn-base-station__port-map b { color: var(--sn-cyan-dark); font-weight: 400; }
     .sn-base-station .sn-base-station__band-media { max-width: 720px; margin: 28px 0 0; }
-    .sn-base-station .sn-base-station__band-media img { width: 100%; aspect-ratio: 16 / 9; padding: 14px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-base-station .sn-base-station__band-media img { width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--sn-line); background: var(--sn-card); object-fit: cover; }
 
     /* Project gates. */
     .sn-base-station .sn-base-station__process { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--sn-line-strong); counter-reset: base-station-process; }

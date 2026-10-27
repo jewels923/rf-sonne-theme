@@ -41,9 +41,9 @@
     .sn-factory .sn-factory__wide img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
     .sn-factory .sn-factory__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 30px; }
     .sn-factory .sn-factory__grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .sn-factory .sn-factory__grid figure { margin-bottom: 0; }
-    .sn-factory .sn-factory__grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-    .sn-factory .sn-factory__grid figcaption { font-size: .7rem; }
+    .sn-factory .sn-factory__grid figure, .sn-factory .sn-factory__grid--three figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-factory .sn-factory__grid img, .sn-factory .sn-factory__grid--three img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-factory .sn-factory__grid figcaption, .sn-factory .sn-factory__grid--three figcaption { flex: 1; margin: 0; padding: 12px 14px 14px; border-top: 1px solid var(--sn-line); font-size: .7rem; }
     .sn-factory .sn-factory__stack { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
     .sn-factory .sn-factory__stack figure { margin-bottom: 0; }
     .sn-factory .sn-factory__stack img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }

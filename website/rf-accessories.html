@@ -36,13 +36,13 @@
     .sn-accessories .sn-accessories__check-table { min-width: 940px; }
     .sn-accessories .sn-accessories__check-table tbody th { width: 230px; color: var(--sn-navy); }
     .sn-accessories .sn-accessories__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
-    .sn-accessories .sn-accessories__pair figure { margin-bottom: 0; }
+    .sn-accessories .sn-accessories__pair figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
     .sn-accessories .sn-accessories__plate { border: var(--sn-border); background: var(--sn-white); }
-    .sn-accessories .sn-accessories__pair .sn-accessories__plate { padding: 16px; }
+    .sn-accessories .sn-accessories__pair .sn-accessories__plate { padding: 16px; border: 0; }
     .sn-accessories .sn-accessories__matching .sn-accessories__plate { padding: 18px; }
     .sn-accessories .sn-accessories__catalog-figure .sn-accessories__plate { padding: 18px; }
     .sn-accessories .sn-accessories__pair img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; clip-path: inset(1px); }
-    .sn-accessories .sn-accessories__pair figcaption { padding: 4px 2px 0; }
+    .sn-accessories .sn-accessories__pair figcaption { flex: 1; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--sn-line); }
     .sn-accessories .sn-accessories__point-table { min-width: 1000px; }
     .sn-accessories .sn-accessories__point-table tbody th { color: var(--sn-navy); }
     .sn-accessories .sn-accessories__point-table td:last-child a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }

@@ -43,10 +43,10 @@
     .sn-combiners .sn-combiners__bandplan { min-width: 1100px; }
     .sn-combiners .sn-combiners__ledger caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
     .sn-combiners .sn-combiners__product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
-    .sn-combiners .sn-combiners__product-grid figure { margin-bottom: 0; }
-    .sn-combiners .sn-combiners__product-frame { padding: 14px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); }
+    .sn-combiners .sn-combiners__product-grid figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-combiners .sn-combiners__product-frame { padding: 14px; background: var(--sn-paper-muted); }
     .sn-combiners .sn-combiners__product-grid img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; clip-path: inset(1px); }
-    .sn-combiners .sn-combiners__product-grid figcaption, .sn-combiners .sn-combiners__scenario-media figcaption, .sn-combiners .sn-combiners__evidence-grid figcaption { margin-top: 9px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
+    .sn-combiners .sn-combiners__product-grid figcaption, .sn-combiners .sn-combiners__scenario-media figcaption, .sn-combiners .sn-combiners__evidence-grid figcaption { flex: 1; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--sn-line); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
 
     /* Functional diagrams use the same hairline language as the ledgers. */
     .sn-combiners .sn-combiners__port-diagram { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; margin-top: 22px; color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .72rem; }
@@ -58,12 +58,12 @@
     .sn-combiners .sn-combiners__system-flow span { padding: 9px 11px; border: 1px solid var(--sn-line-strong); }
     .sn-combiners .sn-combiners__system-flow b { color: var(--sn-cyan-dark); font-weight: 400; }
     .sn-combiners .sn-combiners__scenario-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
-    .sn-combiners .sn-combiners__scenario-media figure { margin-bottom: 0; }
-    .sn-combiners .sn-combiners__scenario-frame { overflow: hidden; border: 1px solid var(--sn-line); background: var(--sn-card); }
-    .sn-combiners .sn-combiners__scenario-media img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; clip-path: inset(1px); }
+    .sn-combiners .sn-combiners__scenario-media figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-combiners .sn-combiners__scenario-frame { padding: 14px; background: var(--sn-paper-muted); }
+    .sn-combiners .sn-combiners__scenario-media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; clip-path: inset(1px); }
     .sn-combiners .sn-combiners__evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
-    .sn-combiners .sn-combiners__evidence-grid figure { margin-bottom: 0; }
-    .sn-combiners .sn-combiners__evidence-grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-combiners .sn-combiners__evidence-grid figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-combiners .sn-combiners__evidence-grid img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 
     /* Four band-plan steps as a flat ledger. */
     .sn-combiners .sn-combiners__workflow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 26px; padding: 0; list-style: none; border-top: 1px solid var(--sn-line-strong); counter-reset: combiner-step; }

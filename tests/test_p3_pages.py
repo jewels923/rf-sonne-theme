@@ -836,6 +836,29 @@ def css_declarations_for_selector(css, target_selector):
     return declarations
 
 
+def css_without_media_queries(css):
+    """Return CSS with @media blocks removed, preserving base declarations."""
+    result = []
+    index = 0
+    while True:
+        match = re.search(r'@media\b[^{]*\{', css[index:])
+        if not match:
+            result.append(css[index:])
+            break
+        start = index + match.start()
+        result.append(css[index:start])
+        depth = 1
+        position = index + match.end()
+        while position < len(css) and depth:
+            if css[position] == '{':
+                depth += 1
+            elif css[position] == '}':
+                depth -= 1
+            position += 1
+        index = position
+    return ''.join(result)
+
+
 def split_selector_list(selector_list):
     selectors = []
     start = 0
@@ -1780,29 +1803,205 @@ class P3PageTests(unittest.TestCase):
                 )
                 self.assertEqual('1', part_image.get('aspect-ratio'))
 
-    def test_combiner_scenario_images_use_framed_cover_crops(self):
+    def test_shared_hero_plates_run_flush_without_mats(self):
+        css = SONNE_CSS.read_text(encoding='utf-8')
+        media = css_declarations_for_selector(css, '.sn-hero-plate__media')
+        self.assertEqual('0', media.get('padding'))
+        image = css_declarations_for_selector(css, '.sn-hero-plate img')
+        self.assertEqual('cover', image.get('object-fit'))
+        for slug, selector in (
+            ('base-station-rf', '.sn-base-station .sn-base-station__hero-media .sn-hero-plate__media'),
+            ('precision-enclosures', '.sn-enclosures .sn-enclosures__hero-media .sn-hero-plate__media'),
+            ('products', '.sn-products .sn-products__hero-media .sn-hero-plate__media'),
+        ):
+            with self.subTest(slug=slug):
+                text, collector = self.target(slug)
+                if text is None:
+                    continue
+                self.assertEqual(1, len(collector.styles))
+                self.assertNotIn('padding', css_declarations_for_selector(collector.styles[0], selector))
+
+    def test_combiner_scenario_images_use_equal_evidence_cards(self):
         text, collector = self.target('rf-combiners')
         if text is None:
             return
         self.assertEqual(1, len(collector.styles))
+        figure = css_declarations_for_selector(
+            collector.styles[0],
+            '.sn-combiners .sn-combiners__scenario-media figure',
+        )
+        self.assertEqual('flex', figure.get('display'))
+        self.assertEqual('column', figure.get('flex-direction'))
+        self.assertEqual('0', figure.get('margin-bottom'))
+        self.assertEqual('hidden', figure.get('overflow'))
+        self.assertEqual('var(--sn-border)', figure.get('border'))
         frame = css_declarations_for_selector(
             collector.styles[0],
             '.sn-combiners .sn-combiners__scenario-frame',
         )
-        self.assertEqual('1px solid var(--sn-line)', frame.get('border'))
-        self.assertEqual('hidden', frame.get('overflow'))
+        self.assertEqual('14px', frame.get('padding'))
+        self.assertEqual('var(--sn-paper-muted)', frame.get('background'))
+        self.assertNotIn('border', frame)
         image = css_declarations_for_selector(
             collector.styles[0],
             '.sn-combiners .sn-combiners__scenario-media img',
         )
-        self.assertEqual('16 / 10', image.get('aspect-ratio'))
-        self.assertEqual('cover', image.get('object-fit'))
+        self.assertEqual('4 / 3', image.get('aspect-ratio'))
+        self.assertEqual('contain', image.get('object-fit'))
         self.assertEqual('inset(1px)', image.get('clip-path'))
         self.assertNotIn('padding', image)
+        caption = css_declarations_for_selector(
+            collector.styles[0],
+            '.sn-combiners .sn-combiners__scenario-media figcaption',
+        )
+        self.assertEqual('0', caption.get('margin'))
+        self.assertEqual('12px 16px 14px', caption.get('padding'))
+        self.assertEqual('1px solid var(--sn-line)', caption.get('border-top'))
         self.assertEqual(2, text.count('class="sn-combiners__scenario-frame"'))
         self.assertEqual(
             2, text.count('<div class="sn-combiners__scenario-frame"><img'),
         )
+
+    def test_multi_figure_rows_use_equal_framed_evidence_cards(self):
+        cases = (
+            (
+                'rf-microwave-filters',
+                '.sn-filters .sn-filters__evidence-grid',
+                '.sn-filters .sn-filters__evidence-grid figure',
+                '.sn-filters .sn-filters__evidence-grid figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'rf-microwave-filters',
+                '.sn-filters .sn-filters__test-grid',
+                '.sn-filters .sn-filters__test-grid figure',
+                '.sn-filters .sn-filters__test-grid figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'rf-combiners',
+                '.sn-combiners .sn-combiners__product-grid',
+                '.sn-combiners .sn-combiners__product-grid figure',
+                '.sn-combiners .sn-combiners__product-grid figcaption',
+                'repeat(4, minmax(0, 1fr))',
+            ),
+            (
+                'rf-combiners',
+                '.sn-combiners .sn-combiners__scenario-media',
+                '.sn-combiners .sn-combiners__scenario-media figure',
+                '.sn-combiners .sn-combiners__scenario-media figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'rf-combiners',
+                '.sn-combiners .sn-combiners__evidence-grid',
+                '.sn-combiners .sn-combiners__evidence-grid figure',
+                '.sn-combiners .sn-combiners__evidence-grid figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'waveguide-components',
+                '.sn-waveguide .sn-waveguide__detail-grid',
+                '.sn-waveguide .sn-waveguide__detail-grid figure',
+                '.sn-waveguide .sn-waveguide__detail-grid figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'waveguide-components',
+                '.sn-waveguide .sn-waveguide__application-media',
+                '.sn-waveguide .sn-waveguide__application-media figure',
+                '.sn-waveguide .sn-waveguide__application-media figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'waveguide-components',
+                '.sn-waveguide .sn-waveguide__evidence-grid',
+                '.sn-waveguide .sn-waveguide__evidence-grid figure',
+                '.sn-waveguide .sn-waveguide__evidence-grid figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'base-station-rf',
+                '.sn-base-station .sn-base-station__test-grid',
+                '.sn-base-station .sn-base-station__test-grid figure',
+                '.sn-base-station .sn-base-station__test-grid figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'engineering',
+                '.sn-engineering .sn-engineering__factory-grid',
+                '.sn-engineering .sn-engineering__factory-grid figure',
+                '.sn-engineering .sn-engineering__factory-grid figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'precision-enclosures',
+                '.sn-enclosures .sn-enclosures__manufacturing-grid',
+                '.sn-enclosures .sn-enclosures__manufacturing-grid figure',
+                '.sn-enclosures .sn-enclosures__manufacturing-grid figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'ibs-das-components',
+                '.sn-ibs-das .sn-ibs-das__product-grid',
+                '.sn-ibs-das .sn-ibs-das__product-grid figure',
+                '.sn-ibs-das .sn-ibs-das__product-grid figcaption',
+                'repeat(3, minmax(0, 1fr))',
+            ),
+            (
+                'ibs-das-components',
+                '.sn-ibs-das .sn-ibs-das__mapping-media',
+                '.sn-ibs-das .sn-ibs-das__mapping-media figure',
+                '.sn-ibs-das .sn-ibs-das__mapping-media figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'rf-accessories',
+                '.sn-accessories .sn-accessories__pair',
+                '.sn-accessories .sn-accessories__pair figure',
+                '.sn-accessories .sn-accessories__pair figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'factory',
+                '.sn-factory .sn-factory__grid',
+                '.sn-factory .sn-factory__grid figure',
+                '.sn-factory .sn-factory__grid figcaption',
+                'repeat(4, minmax(0, 1fr))',
+            ),
+            (
+                'factory',
+                '.sn-factory .sn-factory__grid--three',
+                '.sn-factory .sn-factory__grid--three figure',
+                '.sn-factory .sn-factory__grid--three figcaption',
+                'repeat(3, minmax(0, 1fr))',
+            ),
+        )
+        for slug, grid_selector, figure_selector, caption_selector, columns in cases:
+            with self.subTest(slug=slug, grid=grid_selector):
+                text, collector = self.target(slug)
+                if text is None:
+                    continue
+                self.assertEqual(1, len(collector.styles))
+                base_css = css_without_media_queries(collector.styles[0])
+                grid = css_declarations_for_selector(base_css, grid_selector)
+                self.assertEqual(columns, grid.get('grid-template-columns'))
+                figure = css_declarations_for_selector(base_css, figure_selector)
+                self.assertEqual('flex', figure.get('display'))
+                self.assertEqual('column', figure.get('flex-direction'))
+                self.assertEqual('0', figure.get('margin-bottom'))
+                self.assertEqual('hidden', figure.get('overflow'))
+                self.assertEqual('var(--sn-border)', figure.get('border'))
+                self.assertEqual('var(--sn-white)', figure.get('background'))
+                caption = css_declarations_for_selector(base_css, caption_selector)
+                self.assertEqual('0', caption.get('margin'))
+                self.assertIn(
+                    caption.get('padding'),
+                    ('12px 16px 14px', '12px 14px 14px'),
+                )
+                self.assertEqual(
+                    '1px solid var(--sn-line)', caption.get('border-top')
+                )
 
     def test_backhaul_product_images_run_flush_in_their_cards(self):
         text, collector = self.target('microwave-backhaul')

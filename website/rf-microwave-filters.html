@@ -52,12 +52,12 @@
     .sn-filters .sn-filters__test tbody th { width: 20%; }
     .sn-filters .sn-filters__ledger caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
 
-    /* Flat check ledger under the manufacturing evidence. */
-    .sn-filters .sn-filters__evidence-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(240px, .55fr); gap: 18px; margin-bottom: 28px; }
-    .sn-filters .sn-filters__evidence-grid figure { margin-bottom: 0; }
-    .sn-filters .sn-filters__evidence-grid img { width: 100%; height: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-    .sn-filters .sn-filters__evidence-grid .sn-filters__part img { aspect-ratio: 1; object-fit: contain; background: var(--sn-paper-muted); }
-    .sn-filters .sn-filters__evidence-grid figcaption, .sn-filters .sn-filters__test-grid figcaption { margin-top: 9px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
+    /* Manufacturing evidence as equal cards with captions inside the frame. */
+    .sn-filters .sn-filters__evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 28px; }
+    .sn-filters .sn-filters__evidence-grid figure, .sn-filters .sn-filters__test-grid figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-filters .sn-filters__evidence-grid img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-filters .sn-filters__evidence-grid .sn-filters__part img { padding: 18px; background: var(--sn-white); object-fit: contain; }
+    .sn-filters .sn-filters__evidence-grid figcaption, .sn-filters .sn-filters__test-grid figcaption { flex: 1; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--sn-line); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
     .sn-filters .sn-filters__checkpoints { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--sn-line-strong); counter-reset: filter-checkpoint; }
     .sn-filters .sn-filters__checkpoint { padding: 18px 22px 20px 0; border-bottom: 1px solid var(--sn-line); counter-increment: filter-checkpoint; }
     .sn-filters .sn-filters__checkpoint + .sn-filters__checkpoint { padding-left: 22px; border-left: 1px solid var(--sn-line); }
@@ -120,7 +120,6 @@
       .sn-filters .sn-filters__checkpoints { grid-template-columns: 1fr; }
       .sn-filters .sn-filters__checkpoint, .sn-filters .sn-filters__checkpoint + .sn-filters__checkpoint { padding: 18px 0 20px; border-left: 0; }
       .sn-filters .sn-filters__evidence-grid, .sn-filters .sn-filters__test-grid { grid-template-columns: 1fr; }
-      .sn-filters .sn-filters__evidence-grid .sn-filters__part { max-width: 260px; }
       .sn-filters .sn-filters__process { grid-template-columns: 1fr; }
       .sn-filters .sn-filters__process > li, .sn-filters .sn-filters__process > li + li, .sn-filters .sn-filters__process > li:nth-child(even) { padding: 18px 0 20px; border-left: 0; }
       .sn-filters .sn-filters__rfq-panel ul { columns: 1; }

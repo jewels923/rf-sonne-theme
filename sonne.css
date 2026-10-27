@@ -825,13 +825,13 @@ body [class*="__eyebrow "][class] {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(18px, 3.4vw, 36px);
+  padding: 0;
 }
 
 .sn-hero-plate img {
   width: 100%;
   aspect-ratio: 1;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .sn-hero-plate figcaption {
