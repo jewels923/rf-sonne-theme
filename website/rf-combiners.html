@@ -25,8 +25,8 @@
     .sn-combiners .sn-combiners__mini-diagram span { padding: 8px 10px; border: 1px solid rgba(252, 254, 255, .24); }
     .sn-combiners .sn-combiners__mini-diagram b { color: rgba(252, 254, 255, .5); font-weight: 400; }
     .sn-combiners .sn-combiners__hero-media { margin: 0; }
-    .sn-combiners .sn-combiners__hero-media .sn-hero-plate__media { padding: clamp(14px, 2.4vw, 26px); }
-    .sn-combiners .sn-combiners__hero-media img { aspect-ratio: 16 / 10; }
+    .sn-combiners .sn-combiners__hero-media .sn-hero-plate__media { padding: 0; background: var(--sn-white); }
+    .sn-combiners .sn-combiners__hero-media img { aspect-ratio: 16 / 9; }
 
     /* Section rhythm and the shared record head. */
     .sn-combiners .sn-combiners__intro { margin-bottom: clamp(28px, 3.4vw, 42px); }
@@ -44,7 +44,8 @@
     .sn-combiners .sn-combiners__ledger caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
     .sn-combiners .sn-combiners__product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
     .sn-combiners .sn-combiners__product-grid figure { margin-bottom: 0; }
-    .sn-combiners .sn-combiners__product-grid img { width: 100%; aspect-ratio: 4 / 3; padding: 14px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-combiners .sn-combiners__product-frame { padding: 14px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); }
+    .sn-combiners .sn-combiners__product-grid img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; clip-path: inset(1px); }
     .sn-combiners .sn-combiners__product-grid figcaption, .sn-combiners .sn-combiners__scenario-media figcaption, .sn-combiners .sn-combiners__evidence-grid figcaption { margin-top: 9px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
 
     /* Functional diagrams use the same hairline language as the ledgers. */
@@ -58,7 +59,8 @@
     .sn-combiners .sn-combiners__system-flow b { color: var(--sn-cyan-dark); font-weight: 400; }
     .sn-combiners .sn-combiners__scenario-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
     .sn-combiners .sn-combiners__scenario-media figure { margin-bottom: 0; }
-    .sn-combiners .sn-combiners__scenario-media img { width: 100%; aspect-ratio: 4 / 3; padding: 18px; background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-combiners .sn-combiners__scenario-frame { overflow: hidden; border: 1px solid var(--sn-line); background: var(--sn-card); }
+    .sn-combiners .sn-combiners__scenario-media img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; clip-path: inset(1px); }
     .sn-combiners .sn-combiners__evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
     .sn-combiners .sn-combiners__evidence-grid figure { margin-bottom: 0; }
     .sn-combiners .sn-combiners__evidence-grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
@@ -163,10 +165,10 @@
         </table>
       </div>
       <div class="sn-combiners__product-grid">
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-combiner-v2.webp" alt="RF combiner" width="1024" height="571" loading="lazy" decoding="async"><figcaption>RF combiner example.</figcaption></figure>
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-duplexer-v3.webp" alt="RF duplexer" width="1024" height="571" loading="lazy" decoding="async"><figcaption>RF duplexer example.</figcaption></figure>
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-n28-multiplexer.webp" alt="N28 multiplexer" width="1024" height="571" loading="lazy" decoding="async"><figcaption>N28 multiplexer example; the name retains its base-station band context.</figcaption></figure>
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/power-splitter-2-way-n-female-1.webp" alt="2-way power splitter with N female connectors" width="720" height="720" loading="lazy" decoding="async"><figcaption>Two-way power splitter example; amplitude and phase requirements remain project-specific.</figcaption></figure>
+        <figure><div class="sn-combiners__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-combiner-v2.webp" alt="RF combiner" width="1024" height="571" loading="lazy" decoding="async"></div><figcaption>RF combiner example.</figcaption></figure>
+        <figure><div class="sn-combiners__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-duplexer-v3.webp" alt="RF duplexer" width="1024" height="571" loading="lazy" decoding="async"></div><figcaption>RF duplexer example.</figcaption></figure>
+        <figure><div class="sn-combiners__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-n28-multiplexer.webp" alt="N28 multiplexer" width="1024" height="571" loading="lazy" decoding="async"></div><figcaption>N28 multiplexer example; the name retains its base-station band context.</figcaption></figure>
+        <figure><div class="sn-combiners__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/power-splitter-2-way-n-female-1.webp" alt="2-way power splitter with N female connectors" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>Two-way power splitter example; amplitude and phase requirements remain project-specific.</figcaption></figure>
       </div>
       <p class="sn-note"><strong>Diplexer visual:</strong> no verified dedicated diplexer image is assigned, so a functional port diagram is used instead of mislabeling a duplexer photo.</p>
       <div class="sn-combiners__port-diagram" aria-label="Diplexer functional port diagram"><span>Frequency path 1</span><b aria-hidden="true">↔</b><span>Diplexer</span><b aria-hidden="true">↔</b><span>Common port</span><b aria-hidden="true">↔</b><span>Frequency path 2</span></div>
@@ -219,8 +221,8 @@
         </table>
       </div>
       <div class="sn-combiners__scenario-media">
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/multi-band-combiner-se-cb-3w-djo-mf.webp" alt="SONNE multi-band combiner SE-CB-3W-DJO-MF" width="720" height="720" loading="lazy" decoding="async"><figcaption>Multi-band combiner SE-CB-3W-DJO-MF product example, not a universal scenario match.</figcaption></figure>
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-tri-band-combiner.webp" alt="Tri-band RF combiner" width="1024" height="571" loading="lazy" decoding="async"><figcaption>Tri-band RF combiner example; exact bands and parameters require model or project confirmation.</figcaption></figure>
+        <figure><div class="sn-combiners__scenario-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/multi-band-combiner-se-cb-3w-djo-mf.webp" alt="SONNE multi-band combiner SE-CB-3W-DJO-MF" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>Multi-band combiner SE-CB-3W-DJO-MF product example, not a universal scenario match.</figcaption></figure>
+        <figure><div class="sn-combiners__scenario-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-tri-band-combiner.webp" alt="Tri-band RF combiner" width="1024" height="571" loading="lazy" decoding="async"></div><figcaption>Tri-band RF combiner example; exact bands and parameters require model or project confirmation.</figcaption></figure>
       </div>
     </div>
   </section>

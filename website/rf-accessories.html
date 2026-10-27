@@ -25,7 +25,8 @@
     .sn-accessories .sn-accessories__hero-note { margin: 16px 0 0; padding: 14px; border: 1px solid rgba(140, 196, 255, .32); border-radius: var(--sn-radius); background: rgba(252, 254, 255, .06); color: rgba(252, 254, 255, .8); font-size: .85rem; }
     .sn-accessories .sn-accessories__hero-media { margin: 0; }
     .sn-accessories .sn-accessories__triptych { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-    .sn-accessories .sn-accessories__triptych img { width: 100%; aspect-ratio: 1 / 1; padding: 8px; border: 1px solid rgba(252, 254, 255, .2); background: var(--sn-white); object-fit: contain; }
+    .sn-accessories .sn-accessories__triptych-tile { padding: 8px; border: 1px solid rgba(252, 254, 255, .2); background: var(--sn-white); }
+    .sn-accessories .sn-accessories__triptych img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; clip-path: inset(1px); }
     .sn-accessories .sn-accessories__hero-media figcaption { margin-top: 12px; color: rgba(252, 254, 255, .68); }
     .sn-accessories .sn-accessories__matrix-table { min-width: 1180px; }
     .sn-accessories .sn-accessories__matrix-table tbody th { width: 190px; color: var(--sn-navy); }
@@ -36,7 +37,11 @@
     .sn-accessories .sn-accessories__check-table tbody th { width: 230px; color: var(--sn-navy); }
     .sn-accessories .sn-accessories__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
     .sn-accessories .sn-accessories__pair figure { margin-bottom: 0; }
-    .sn-accessories .sn-accessories__pair img { width: 100%; aspect-ratio: 1 / 1; padding: 16px; border: var(--sn-border); background: var(--sn-white); object-fit: contain; }
+    .sn-accessories .sn-accessories__plate { border: var(--sn-border); background: var(--sn-white); }
+    .sn-accessories .sn-accessories__pair .sn-accessories__plate { padding: 16px; }
+    .sn-accessories .sn-accessories__matching .sn-accessories__plate { padding: 18px; }
+    .sn-accessories .sn-accessories__catalog-figure .sn-accessories__plate { padding: 18px; }
+    .sn-accessories .sn-accessories__pair img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; clip-path: inset(1px); }
     .sn-accessories .sn-accessories__pair figcaption { padding: 4px 2px 0; }
     .sn-accessories .sn-accessories__point-table { min-width: 1000px; }
     .sn-accessories .sn-accessories__point-table tbody th { color: var(--sn-navy); }
@@ -46,12 +51,12 @@
     .sn-accessories .sn-accessories__diagram b { color: var(--sn-cyan-dark); }
     .sn-accessories .sn-accessories__matching { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 24px; align-items: start; margin-top: 26px; }
     .sn-accessories .sn-accessories__matching figure { margin: 0; }
-    .sn-accessories .sn-accessories__matching img { width: 100%; aspect-ratio: 1 / 1; padding: 18px; border: var(--sn-border); background: var(--sn-white); object-fit: contain; }
+    .sn-accessories .sn-accessories__matching img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; clip-path: inset(1px); }
     .sn-accessories .sn-accessories__matching p { color: var(--sn-text-muted); font-size: .9rem; }
     .sn-accessories .sn-accessories__catalog-table { min-width: 860px; }
     .sn-accessories .sn-accessories__catalog-table tbody th { color: var(--sn-navy); font-family: var(--sn-font-mono); font-size: .78rem; }
     .sn-accessories .sn-accessories__catalog-figure { margin: 26px 0 0; }
-    .sn-accessories .sn-accessories__catalog-figure img { width: 100%; aspect-ratio: 16 / 7; padding: 18px; border: var(--sn-border); background: var(--sn-white); object-fit: contain; }
+    .sn-accessories .sn-accessories__catalog-figure img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: contain; clip-path: inset(2px calc(28.125% + 2px)); }
     .sn-accessories .sn-accessories__order-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
     .sn-accessories .sn-accessories__order { padding: 24px; border: var(--sn-border); background: var(--sn-white); }
     .sn-accessories .sn-accessories__order h3 { font-family: var(--sn-font-mono); font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; }
@@ -85,7 +90,7 @@
     @media (max-width: 700px) {
       .sn-accessories .sn-accessories__pair { grid-template-columns: 1fr; }
       .sn-accessories .sn-accessories__triptych { grid-template-columns: 1fr; }
-      .sn-accessories .sn-accessories__triptych img { aspect-ratio: 16 / 9; }
+      .sn-accessories .sn-accessories__triptych-tile img { aspect-ratio: 16 / 9; clip-path: inset(2px calc(21.875% + 2px)); }
     }
     @media (max-width: 520px) {
       .sn-accessories .sn-accessories__actions .sn-btn { width: 100%; }
@@ -113,9 +118,9 @@
       </div>
       <figure class="sn-accessories__hero-media">
         <div class="sn-accessories__triptych">
-          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/cable-assembly-se-ca01-sma-008-01.webp" alt="SONNE high frequency cable assembly SE-CA01-SMA-008-01" width="720" height="720" loading="eager" fetchpriority="high" decoding="async">
-          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/termination-load-se-tl-050-0727-nf.webp" alt="SONNE termination load SE-TL-050-0727-NF" width="720" height="720" loading="lazy" decoding="async">
-          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/indoor-antenna-se-oca-0640-v2501-nf.webp" alt="SONNE indoor antenna SE-OCA-0640-V2501-NF" width="720" height="720" loading="lazy" decoding="async">
+          <div class="sn-accessories__triptych-tile"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/cable-assembly-se-ca01-sma-008-01.webp" alt="SONNE high frequency cable assembly SE-CA01-SMA-008-01" width="720" height="720" loading="eager" fetchpriority="high" decoding="async"></div>
+          <div class="sn-accessories__triptych-tile"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/termination-load-se-tl-050-0727-nf.webp" alt="SONNE termination load SE-TL-050-0727-NF" width="720" height="720" loading="lazy" decoding="async"></div>
+          <div class="sn-accessories__triptych-tile"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/indoor-antenna-se-oca-0640-v2501-nf.webp" alt="SONNE indoor antenna SE-OCA-0640-V2501-NF" width="720" height="720" loading="lazy" decoding="async"></div>
         </div>
         <figcaption>Three of the seven categories: cable assembly SE-CA01-SMA-008-01, termination load SE-TL-050-0727-NF and indoor antenna SE-OCA-0640-V2501-NF. Representative items only, not the full range.</figcaption>
       </figure>
@@ -174,8 +179,8 @@
         </table>
       </div>
       <div class="sn-accessories__pair">
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/termination-load-se-at-050-0030-n.webp" alt="SONNE termination load SE-AT-050-0030-N" width="720" height="720" loading="lazy" decoding="async"><figcaption>Termination load SE-AT-050-0030-N: capture its model code, not just the housing shape.</figcaption></figure>
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/termination-load-se-tl-050-0727-nf.webp" alt="SONNE termination load SE-TL-050-0727-NF" width="720" height="720" loading="lazy" decoding="async"><figcaption>Termination load SE-TL-050-0727-NF. A similar body does not prove that the two loads are interchangeable.</figcaption></figure>
+        <figure><div class="sn-accessories__plate"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/termination-load-se-at-050-0030-n.webp" alt="SONNE termination load SE-AT-050-0030-N" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>Termination load SE-AT-050-0030-N: capture its model code, not just the housing shape.</figcaption></figure>
+        <figure><div class="sn-accessories__plate"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/termination-load-se-tl-050-0727-nf.webp" alt="SONNE termination load SE-TL-050-0727-NF" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>Termination load SE-TL-050-0727-NF. A similar body does not prove that the two loads are interchangeable.</figcaption></figure>
       </div>
       <p class="sn-accessories__note">Visual similarity and connector matching alone cannot confirm compatibility, and SONNE does not claim reverse replacement across the product range. Where the original specification cannot be confirmed, keep the original rating in the request and submit it for engineering assessment.</p>
       <div class="sn-accessories__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Check an Accessory Replacement</a></div>
@@ -210,7 +215,7 @@
           <p>Keep one interface column per connection point in the same spreadsheet. The accessory line then inherits the connector, band and quantity from the main item it serves, which removes most commissioning surprises.</p>
           <p><a href="/products/ibs-das-components/">Open the IBS / DAS passive BOM matrix</a> · <a href="/products/rf-combiners/">Open the RF combiners page</a></p>
         </div>
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/indoor-antenna-se-dpa-0640-v6801-nf.webp" alt="SONNE indoor antenna SE-DPA-0640-V6801-NF" width="720" height="720" loading="lazy" decoding="async"><figcaption>Indoor antenna SE-DPA-0640-V6801-NF as a distribution-node example. Band, gain and mounting are confirmed per model.</figcaption></figure>
+        <figure><div class="sn-accessories__plate"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/indoor-antenna-se-dpa-0640-v6801-nf.webp" alt="SONNE indoor antenna SE-DPA-0640-V6801-NF" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>Indoor antenna SE-DPA-0640-V6801-NF as a distribution-node example. Band, gain and mounting are confirmed per model.</figcaption></figure>
       </div>
       <p class="sn-accessories__note">Low PIM termination loads and 698–3800 MHz indoor antennas are described only where the selected model supports the requirement. A shared BOM does not create a universal kit, and no system gain or coverage result is claimed here.</p>
       <div class="sn-accessories__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Complete My System BOM</a></div>
@@ -237,7 +242,7 @@
         </table>
       </div>
       <figure class="sn-accessories__catalog-figure">
-        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/cable-assembly-se-ca03-sma-026-01.webp" alt="SONNE high frequency cable assembly SE-CA03-SMA-026-01" width="720" height="720" loading="lazy" decoding="async">
+        <div class="sn-accessories__plate"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/cable-assembly-se-ca03-sma-026-01.webp" alt="SONNE high frequency cable assembly SE-CA03-SMA-026-01" width="720" height="720" loading="lazy" decoding="async"></div>
         <figcaption>Cable assembly SE-CA03-SMA-026-01 as a catalog-card example. The model code identifies the assembly; its performance is defined by the datasheet.</figcaption>
       </figure>
       <p class="sn-accessories__note">For low PIM, 698–3800 MHz or a custom cable assembly, quote only the datasheet and confirmation that belong to the matching model. Accessories are produced in the same factory as the main components, which supports interface matching within one project; it is not a claim that every accessory is tested to the same extent.</p>

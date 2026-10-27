@@ -1130,6 +1130,19 @@ class P3SharedChromeTests(unittest.TestCase):
             r'\.sn-legacy-record \.sn-table tbody td::before \{\s*content: attr\(data-label\);\s*display: table-cell;',
         )
 
+    def test_mega_preview_image_fills_its_frame(self):
+        card = css_declarations_for_selector(self.sonne_css, 'body .site-nav__mega-preview')
+        image = css_declarations_for_selector(self.sonne_css, 'body .site-nav__mega-preview img')
+        self.assertEqual('var(--sn-navy-deep)', card.get('background'))
+        self.assertEqual('cover', image.get('object-fit'))
+        self.assertEqual('0', image.get('padding'))
+
+    def test_sitewide_breadcrumb_and_eyebrow_labels_are_enlarged(self):
+        breadcrumbs = css_declarations_for_selector(self.sonne_css, '.sn-breadcrumbs')
+        eyebrow = css_declarations_for_selector(self.sonne_css, 'body [class$="__eyebrow"][class]')
+        self.assertEqual('0.9375rem', breadcrumbs.get('font-size'))
+        self.assertEqual('0.9375rem', eyebrow.get('font-size'))
+
     def test_sonne_stylesheet_loads_after_main_and_widget_is_bypassed(self):
         main_version = "child_theme_asset_version('main.css')"
         sonne_version = "child_theme_asset_version('sonne.css')"
@@ -1703,6 +1716,209 @@ class P3PageTests(unittest.TestCase):
         self.assertEqual('inline-flex', declarations.get('display'))
         self.assertEqual('center', declarations.get('align-items'))
         self.assertEqual('44px', declarations.get('min-height'))
+
+    def test_route_cards_share_one_border_language(self):
+        text, collector = self.target('products')
+        if text is None:
+            return
+        self.assertNotIn('sn-products__route-card--custom', text)
+        self.assertEqual(2, text.count('class="sn-products__route-card"'))
+        self.assertEqual(1, len(collector.styles))
+        card = css_declarations_for_selector(
+            collector.styles[0], '.sn-products .sn-products__route-card'
+        )
+        self.assertEqual('1px solid var(--sn-line)', card.get('border'))
+        self.assertNotIn('border-top-color', card)
+
+    def test_product_hero_plates_run_flush_inside_dark_frames(self):
+        expectations = (
+            (
+                'rf-combiners',
+                '.sn-combiners .sn-combiners__hero-media .sn-hero-plate__media',
+                '.sn-combiners .sn-combiners__hero-media img',
+            ),
+            (
+                'rf-microwave-filters',
+                '.sn-filters .sn-filters__hero-main .sn-hero-plate__media',
+                '.sn-filters .sn-filters__hero-media .sn-hero-plate img',
+            ),
+            (
+                'waveguide-components',
+                '.sn-waveguide .sn-waveguide__hero-main .sn-hero-plate__media',
+                '.sn-waveguide .sn-waveguide__hero-media .sn-hero-plate img',
+            ),
+        )
+        for slug, media_selector, image_selector in expectations:
+            with self.subTest(slug=slug):
+                text, collector = self.target(slug)
+                if text is None:
+                    continue
+                self.assertEqual(1, len(collector.styles))
+                media = css_declarations_for_selector(collector.styles[0], media_selector)
+                self.assertEqual('0', media.get('padding'))
+                self.assertEqual('var(--sn-white)', media.get('background'))
+                image = css_declarations_for_selector(collector.styles[0], image_selector)
+                self.assertEqual('16 / 9', image.get('aspect-ratio'))
+
+        for slug, prefix in (
+            ('rf-microwave-filters', 'sn-filters'),
+            ('waveguide-components', 'sn-waveguide'),
+        ):
+            with self.subTest(slug=slug, plate='part'):
+                text, collector = self.target(slug)
+                if text is None:
+                    continue
+                part_media = css_declarations_for_selector(
+                    collector.styles[0],
+                    f'.{prefix} .{prefix}__hero-part .sn-hero-plate__media',
+                )
+                self.assertEqual('0', part_media.get('padding'))
+                self.assertEqual('var(--sn-white)', part_media.get('background'))
+                part_image = css_declarations_for_selector(
+                    collector.styles[0],
+                    f'.{prefix} .{prefix}__hero-part.sn-hero-plate img',
+                )
+                self.assertEqual('1', part_image.get('aspect-ratio'))
+
+    def test_combiner_scenario_images_use_framed_cover_crops(self):
+        text, collector = self.target('rf-combiners')
+        if text is None:
+            return
+        self.assertEqual(1, len(collector.styles))
+        frame = css_declarations_for_selector(
+            collector.styles[0],
+            '.sn-combiners .sn-combiners__scenario-frame',
+        )
+        self.assertEqual('1px solid var(--sn-line)', frame.get('border'))
+        self.assertEqual('hidden', frame.get('overflow'))
+        image = css_declarations_for_selector(
+            collector.styles[0],
+            '.sn-combiners .sn-combiners__scenario-media img',
+        )
+        self.assertEqual('16 / 10', image.get('aspect-ratio'))
+        self.assertEqual('cover', image.get('object-fit'))
+        self.assertEqual('inset(1px)', image.get('clip-path'))
+        self.assertNotIn('padding', image)
+        self.assertEqual(2, text.count('class="sn-combiners__scenario-frame"'))
+        self.assertEqual(
+            2, text.count('<div class="sn-combiners__scenario-frame"><img'),
+        )
+
+    def test_backhaul_product_images_run_flush_in_their_cards(self):
+        text, collector = self.target('microwave-backhaul')
+        if text is None:
+            return
+        self.assertEqual(1, len(collector.styles))
+        card = css_declarations_for_selector(
+            collector.styles[0], '.sn-sol-backhaul .sn-sol-backhaul__products figure'
+        )
+        self.assertEqual('0', card.get('padding'))
+        self.assertEqual('hidden', card.get('overflow'))
+        image = css_declarations_for_selector(
+            collector.styles[0], '.sn-sol-backhaul .sn-sol-backhaul__products img'
+        )
+        self.assertEqual('16 / 10', image.get('aspect-ratio'))
+        self.assertEqual('cover', image.get('object-fit'))
+        self.assertEqual('inset(1px)', image.get('clip-path'))
+        self.assertNotIn('background', image)
+        caption = css_declarations_for_selector(
+            collector.styles[0],
+            '.sn-sol-backhaul .sn-sol-backhaul__products figcaption',
+        )
+        self.assertEqual('0', caption.get('margin'))
+        self.assertEqual('14px 18px 18px', caption.get('padding'))
+
+    def test_product_plates_clip_baked_catalog_borders(self):
+        cases = (
+            ('rf-combiners', '.sn-combiners .sn-combiners__product-grid img', 'inset(1px)'),
+            (
+                'waveguide-components',
+                '.sn-waveguide .sn-waveguide__product-frame img',
+                'inset(1px)',
+            ),
+            (
+                'waveguide-components',
+                '.sn-waveguide .sn-waveguide__product-frame--square img',
+                'inset(2px calc(12.5% + 2px))',
+            ),
+            (
+                'waveguide-components',
+                '.sn-waveguide .sn-waveguide__detail-grid figure:last-child img',
+                'inset(1px)',
+            ),
+            ('rf-accessories', '.sn-accessories .sn-accessories__pair img', 'inset(1px)'),
+            ('rf-accessories', '.sn-accessories .sn-accessories__matching img', 'inset(1px)'),
+            (
+                'rf-accessories',
+                '.sn-accessories .sn-accessories__catalog-figure img',
+                'inset(2px calc(28.125% + 2px))',
+            ),
+            (
+                'rf-accessories',
+                '.sn-accessories .sn-accessories__triptych img',
+                'inset(1px)',
+            ),
+            ('ibs-das-components', '.sn-ibs-das .sn-ibs-das__product-grid img', 'inset(1px)'),
+            (
+                'ibs-das-components',
+                '.sn-ibs-das .sn-ibs-das__mapping-media figure:last-child img',
+                'inset(2px calc(12.5% + 2px))',
+            ),
+            (
+                'satellite-earth-station',
+                '.sn-sol-satellite .sn-sol-satellite__waveguides img',
+                'inset(1px)',
+            ),
+            ('das-ibs', '.sn-sol-das .sn-sol-das__components img', 'inset(1px)'),
+        )
+        for slug, selector, expected_clip in cases:
+            with self.subTest(slug=slug, selector=selector):
+                text, collector = self.target(slug)
+                if text is None:
+                    continue
+                self.assertEqual(1, len(collector.styles))
+                declarations = css_declarations_for_selector(
+                    collector.styles[0], selector
+                )
+                self.assertEqual(expected_clip, declarations.get('clip-path'))
+                self.assertIn(declarations.get('padding'), (None, '0'))
+                self.assertIn(declarations.get('border'), (None, '0'))
+
+        text, collector = self.target('rf-accessories')
+        if text is not None:
+            mobile = css_declarations_for_selector(
+                collector.styles[0],
+                '.sn-accessories .sn-accessories__triptych-tile img',
+            )
+            self.assertEqual('16 / 9', mobile.get('aspect-ratio'))
+            self.assertEqual(
+                'inset(2px calc(21.875% + 2px))', mobile.get('clip-path')
+            )
+
+        frames = (
+            ('rf-combiners', 'sn-combiners__product-frame', 4),
+            ('waveguide-components', 'sn-waveguide__product-frame', 4),
+            ('waveguide-components', 'sn-waveguide__detail-frame', 1),
+            ('ibs-das-components', 'sn-ibs-das__product-frame', 3),
+            ('ibs-das-components', 'sn-ibs-das__mapping-frame', 1),
+            ('rf-accessories', 'sn-accessories__plate', 4),
+            ('rf-accessories', 'sn-accessories__triptych-tile', 3),
+        )
+        for slug, frame_class, count in frames:
+            with self.subTest(slug=slug, frame=frame_class):
+                text, _ = self.target(slug)
+                if text is None:
+                    continue
+                wrapper_pattern = re.compile(
+                    r'<div class="(?:[^"]*\s)?'
+                    + re.escape(frame_class)
+                    + r'(?:\s[^"]*)?"><img'
+                )
+                self.assertEqual(
+                    count,
+                    len(wrapper_pattern.findall(text)),
+                    f'{slug}: every {frame_class} wrapper must hold its image',
+                )
 
     def test_internal_routes_and_nonempty_hrefs(self):
         for slug, (page_id, route) in TARGETS.items():

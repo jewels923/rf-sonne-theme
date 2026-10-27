@@ -27,10 +27,10 @@
     .sn-waveguide .sn-waveguide__hero-paths a:hover, .sn-waveguide .sn-waveguide__hero-paths a:focus-visible { border-color: var(--sn-cyan); }
     .sn-waveguide .sn-waveguide__hero-media { display: grid; grid-template-columns: minmax(0, 1fr) 132px; gap: 14px; align-items: end; }
     .sn-waveguide .sn-waveguide__hero-media .sn-hero-plate { margin: 0; }
-    .sn-waveguide .sn-waveguide__hero-main .sn-hero-plate__media { padding: clamp(14px, 2.4vw, 26px); }
-    .sn-waveguide .sn-waveguide__hero-media .sn-hero-plate img { aspect-ratio: 16 / 10; }
-    .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__media { padding: 10px; }
-    .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate img { aspect-ratio: 1; }
+    .sn-waveguide .sn-waveguide__hero-main .sn-hero-plate__media { padding: 0; background: var(--sn-white); }
+    .sn-waveguide .sn-waveguide__hero-media .sn-hero-plate img { aspect-ratio: 16 / 9; }
+    .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__media { padding: 0; background: var(--sn-white); }
+    .sn-waveguide .sn-waveguide__hero-part.sn-hero-plate img { aspect-ratio: 1; }
     .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__tag { padding: 8px 10px; font-size: .6rem; letter-spacing: .05em; }
     .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__tag span:last-child { display: none; }
     .sn-waveguide .sn-waveguide__hero-part figcaption { padding: 8px 10px; font-size: .6rem; }
@@ -43,7 +43,9 @@
     .sn-waveguide .sn-waveguide__product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
     .sn-waveguide .sn-waveguide__product-card { display: flex; min-width: 0; flex-direction: column; border: 1px solid var(--sn-line); background: var(--sn-card); transition: border-color var(--sn-transition), transform var(--sn-transition); }
     .sn-waveguide .sn-waveguide__product-card:hover { border-color: var(--sn-cyan-dark); transform: translateY(-2px); }
-    .sn-waveguide .sn-waveguide__product-card > img { width: 100%; aspect-ratio: 4 / 3; padding: 16px; background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-waveguide .sn-waveguide__product-frame { padding: 16px; background: var(--sn-paper-muted); }
+    .sn-waveguide .sn-waveguide__product-frame img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; clip-path: inset(1px); }
+    .sn-waveguide .sn-waveguide__product-frame--square img { clip-path: inset(2px calc(12.5% + 2px)); }
     .sn-waveguide .sn-waveguide__product-tag { display: flex; justify-content: space-between; gap: 10px; padding: 9px 16px; border-top: 1px solid var(--sn-line); border-bottom: 1px solid var(--sn-line); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; }
     .sn-waveguide .sn-waveguide__product-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
     .sn-waveguide .sn-waveguide__product-body p, .sn-waveguide .sn-waveguide__product-body li { color: var(--sn-text-muted); font-size: .86rem; line-height: 1.65; }
@@ -62,7 +64,8 @@
     .sn-waveguide .sn-waveguide__detail-grid { display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr); gap: 18px; margin-top: 28px; }
     .sn-waveguide .sn-waveguide__detail-grid figure { margin-bottom: 0; }
     .sn-waveguide .sn-waveguide__detail-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; }
-    .sn-waveguide .sn-waveguide__detail-grid figure:last-child img { aspect-ratio: 4 / 3; padding: 18px; background: var(--sn-paper-muted); object-fit: contain; }
+    .sn-waveguide .sn-waveguide__detail-frame { padding: 18px; background: var(--sn-paper-muted); }
+    .sn-waveguide .sn-waveguide__detail-grid figure:last-child img { aspect-ratio: 4 / 3; object-fit: contain; clip-path: inset(1px); }
     .sn-waveguide .sn-waveguide__detail-grid figcaption, .sn-waveguide .sn-waveguide__application-media figcaption, .sn-waveguide .sn-waveguide__evidence-grid figcaption { margin-top: 9px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
 
     /* Application block diagram and media. */
@@ -174,10 +177,10 @@
         <div class="sn-record-title"><h2 id="waveguide-products-title">Select Diplexers, OMTs, OCUs and Custom Waveguide Assemblies</h2><p>Similar hardware can perform different system functions. Name the port relationships and frequency or polarization logic before selecting a structure.</p></div>
       </div>
       <div class="sn-waveguide__product-grid">
-        <article class="sn-waveguide__product-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-duplexer-v3.webp" alt="RF duplexer" width="1024" height="571" loading="lazy" decoding="async"><div class="sn-waveguide__product-tag"><span>Form 01</span><span>Frequency path</span></div><div class="sn-waveguide__product-body"><h3>Waveguide Diplexer</h3><p>Separates or combines signal paths by frequency. The product image is a frequency-path device visual, not a claim about a specific waveguide model.</p><ul><li>Two frequency bands and port functions</li><li>Isolation, loss and flange requirements</li></ul><a href="/request-a-quote/">Evaluate a diplexer →</a></div></article>
-        <article class="sn-waveguide__product-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp" alt="Ortho-mode transducer" width="1024" height="571" loading="lazy" decoding="async"><div class="sn-waveguide__product-tag"><span>Form 02</span><span>Polarization</span></div><div class="sn-waveguide__product-body"><h3>OMT</h3><p>An ortho-mode transducer separates or combines orthogonal polarizations at a waveguide interface.</p><ul><li>Frequency and polarization definitions</li><li>Ports, isolation and polarization verification</li></ul><a href="/request-a-quote/">Evaluate an OMT →</a></div></article>
-        <article class="sn-waveguide__product-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-ocu-combiner-v2.webp" alt="Outdoor combining unit" width="1024" height="571" loading="lazy" decoding="async"><div class="sn-waveguide__product-tag"><span>Form 03</span><span>Outdoor combining</span></div><div class="sn-waveguide__product-body"><h3>OCU</h3><p>An outdoor combining unit combines signal paths in an outdoor link assembly. The disclosed customization range is 6–80 GHz.</p><ul><li>Link band plan and port relationships</li><li>Outdoor structure and interfaces</li></ul><a href="/request-a-quote/">Evaluate an OCU →</a></div></article>
-        <article class="sn-waveguide__product-card"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/curved-waveguide.webp" alt="curved waveguide" width="720" height="720" loading="lazy" decoding="async"><div class="sn-waveguide__product-tag"><span>Form 04</span><span>Drawing-based</span></div><div class="sn-waveguide__product-body"><h3>Custom Waveguide Assembly</h3><p>Straight, curved, twisted and transition forms are assessed against their drawing and assembly relationship.</p><ul><li>2D/3D drawing and waveguide size</li><li>Flanges, material, plating and envelope</li></ul><a href="/request-a-quote/">Evaluate an assembly →</a></div></article>
+        <article class="sn-waveguide__product-card"><div class="sn-waveguide__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-duplexer-v3.webp" alt="RF duplexer" width="1024" height="571" loading="lazy" decoding="async"></div><div class="sn-waveguide__product-tag"><span>Form 01</span><span>Frequency path</span></div><div class="sn-waveguide__product-body"><h3>Waveguide Diplexer</h3><p>Separates or combines signal paths by frequency. The product image is a frequency-path device visual, not a claim about a specific waveguide model.</p><ul><li>Two frequency bands and port functions</li><li>Isolation, loss and flange requirements</li></ul><a href="/request-a-quote/">Evaluate a diplexer →</a></div></article>
+        <article class="sn-waveguide__product-card"><div class="sn-waveguide__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp" alt="Ortho-mode transducer" width="1024" height="571" loading="lazy" decoding="async"></div><div class="sn-waveguide__product-tag"><span>Form 02</span><span>Polarization</span></div><div class="sn-waveguide__product-body"><h3>OMT</h3><p>An ortho-mode transducer separates or combines orthogonal polarizations at a waveguide interface.</p><ul><li>Frequency and polarization definitions</li><li>Ports, isolation and polarization verification</li></ul><a href="/request-a-quote/">Evaluate an OMT →</a></div></article>
+        <article class="sn-waveguide__product-card"><div class="sn-waveguide__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-ocu-combiner-v2.webp" alt="Outdoor combining unit" width="1024" height="571" loading="lazy" decoding="async"></div><div class="sn-waveguide__product-tag"><span>Form 03</span><span>Outdoor combining</span></div><div class="sn-waveguide__product-body"><h3>OCU</h3><p>An outdoor combining unit combines signal paths in an outdoor link assembly. The disclosed customization range is 6–80 GHz.</p><ul><li>Link band plan and port relationships</li><li>Outdoor structure and interfaces</li></ul><a href="/request-a-quote/">Evaluate an OCU →</a></div></article>
+        <article class="sn-waveguide__product-card"><div class="sn-waveguide__product-frame sn-waveguide__product-frame--square"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/curved-waveguide.webp" alt="curved waveguide" width="720" height="720" loading="lazy" decoding="async"></div><div class="sn-waveguide__product-tag"><span>Form 04</span><span>Drawing-based</span></div><div class="sn-waveguide__product-body"><h3>Custom Waveguide Assembly</h3><p>Straight, curved, twisted and transition forms are assessed against their drawing and assembly relationship.</p><ul><li>2D/3D drawing and waveguide size</li><li>Flanges, material, plating and envelope</li></ul><a href="/request-a-quote/">Evaluate an assembly →</a></div></article>
       </div>
     </div>
   </section>
@@ -202,7 +205,7 @@
       <p class="sn-note"><strong>Conditional disclosed capabilities:</strong> Above 40 GHz, mechanical tolerance can reach ±0.01 mm, depending on structure. Above 60 GHz, plating-thickness control can reach 1 μm, depending on structure and project requirements. These are not blanket guarantees for all waveguide components.</p>
       <div class="sn-waveguide__detail-grid">
         <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/tech-precision-machining.webp" alt="Precision CNC machining of high frequency parts" width="1024" height="1024" loading="lazy" decoding="async"><figcaption>Precision CNC machining evidence for high-frequency parts.</figcaption></figure>
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/transition-waveguide-1.webp" alt="transition waveguide" width="720" height="720" loading="lazy" decoding="async"><figcaption>Transition waveguide interface example; dimensions must come from the project drawing.</figcaption></figure>
+        <figure><div class="sn-waveguide__detail-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/transition-waveguide-1.webp" alt="transition waveguide" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>Transition waveguide interface example; dimensions must come from the project drawing.</figcaption></figure>
       </div>
     </div>
   </section>

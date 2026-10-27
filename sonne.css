@@ -274,7 +274,7 @@ summary:focus-visible {
   margin-bottom: 24px;
   color: var(--sn-text-muted);
   font-family: var(--sn-font-mono);
-  font-size: 0.75rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
 }
 
@@ -311,6 +311,11 @@ summary:focus-visible {
 .sn-hero .sn-breadcrumbs,
 .sn-hero .sn-breadcrumbs a {
   color: var(--sn-accent-on-dark);
+}
+
+body [class$="__eyebrow"][class],
+body [class*="__eyebrow "][class] {
+  font-size: 0.9375rem;
 }
 
 .sn-card {
@@ -1073,12 +1078,12 @@ body .site-nav__mega-footer {
 }
 
 body .site-nav__mega-preview {
-  background: var(--sn-white);
+  background: var(--sn-navy-deep);
 }
 
 body .site-nav__mega-preview img {
-  object-fit: contain;
-  padding: 24px;
+  object-fit: cover;
+  padding: 0;
 }
 
 body .site-nav__dropdown-list a:hover,

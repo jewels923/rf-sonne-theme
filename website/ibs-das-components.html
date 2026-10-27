@@ -35,7 +35,8 @@
     .sn-ibs-das .sn-ibs-das__bom-table td:last-child { color: var(--sn-text-muted); }
     .sn-ibs-das .sn-ibs-das__product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
     .sn-ibs-das .sn-ibs-das__product-grid figure { margin-bottom: 0; }
-    .sn-ibs-das .sn-ibs-das__product-grid img { width: 100%; aspect-ratio: 1 / 1; padding: 16px; border: var(--sn-border); background: var(--sn-white); object-fit: contain; }
+    .sn-ibs-das .sn-ibs-das__product-frame { padding: 16px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-ibs-das .sn-ibs-das__product-grid img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; clip-path: inset(1px); }
     .sn-ibs-das .sn-ibs-das__note { margin: 18px 0 0; padding: 16px 18px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .9rem; }
     .sn-ibs-das .sn-ibs-das__note p:last-child { margin-bottom: 0; }
     .sn-ibs-das .sn-ibs-das__check-table { min-width: 940px; }
@@ -54,7 +55,8 @@
     .sn-ibs-das .sn-ibs-das__mapping-media figure { margin-bottom: 0; }
     .sn-ibs-das .sn-ibs-das__mapping-media img { width: 100%; aspect-ratio: 4 / 3; border: var(--sn-border); background: var(--sn-white); }
     .sn-ibs-das .sn-ibs-das__mapping-media figure:first-child img { object-fit: cover; }
-    .sn-ibs-das .sn-ibs-das__mapping-media figure:last-child img { padding: 18px; object-fit: contain; }
+    .sn-ibs-das .sn-ibs-das__mapping-frame { padding: 18px; border: var(--sn-border); background: var(--sn-white); }
+    .sn-ibs-das .sn-ibs-das__mapping-media figure:last-child img { display: block; padding: 0; border: 0; background: none; object-fit: contain; clip-path: inset(2px calc(12.5% + 2px)); }
     .sn-ibs-das .sn-ibs-das__evidence-table { min-width: 980px; }
     .sn-ibs-das .sn-ibs-das__evidence-table tbody th { width: 220px; color: var(--sn-navy); }
     .sn-ibs-das .sn-ibs-das__process { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 28px 0; padding: 0; list-style: none; counter-reset: ibs-gate; }
@@ -158,9 +160,9 @@
         </table>
       </div>
       <div class="sn-ibs-das__product-grid">
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/power-splitter-2-way-4-3-10-female.webp" alt="2-way power splitter with 4.3-10 female connectors" width="720" height="720" loading="lazy" decoding="async"><figcaption>2-way power splitter with 4.3-10 female connectors. Way count, band and PIM remain model-specific.</figcaption></figure>
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/directional-coupler-4-3-10-female.webp" alt="directional coupler with 4.3-10 female connectors" width="720" height="720" loading="lazy" decoding="async"><figcaption>Directional coupler with 4.3-10 female connectors. Coupling value and directivity must match the selected model.</figcaption></figure>
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/hybrid-coupler-se-hc-22-0727-nf.webp" alt="SONNE hybrid coupler SE-HC-22-0727-NF" width="720" height="720" loading="lazy" decoding="async"><figcaption>SE-HC-22-0727-NF hybrid coupler. Phase and amplitude balance are read from its datasheet, not from the photo.</figcaption></figure>
+        <figure><div class="sn-ibs-das__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/power-splitter-2-way-4-3-10-female.webp" alt="2-way power splitter with 4.3-10 female connectors" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>2-way power splitter with 4.3-10 female connectors. Way count, band and PIM remain model-specific.</figcaption></figure>
+        <figure><div class="sn-ibs-das__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/directional-coupler-4-3-10-female.webp" alt="directional coupler with 4.3-10 female connectors" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>Directional coupler with 4.3-10 female connectors. Coupling value and directivity must match the selected model.</figcaption></figure>
+        <figure><div class="sn-ibs-das__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/hybrid-coupler-se-hc-22-0727-nf.webp" alt="SONNE hybrid coupler SE-HC-22-0727-NF" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>SE-HC-22-0727-NF hybrid coupler. Phase and amplitude balance are read from its datasheet, not from the photo.</figcaption></figure>
       </div>
       <p class="sn-ibs-das__note">No dedicated POI photo is assigned to this page, so the POI row stays a functional table entry. Splitter rows are limited to indoor DAS use; generic duplexer, multiplexer, multi-band combining and RF power divider definitions belong to the <a href="/products/rf-combiners/">RF combiners page</a>. <a href="/resources/datasheets/">Request the datasheet pack</a> for the series you are shortlisting.</p>
       <div class="sn-ibs-das__actions"><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Request Datasheet Pack</a></div>
@@ -224,7 +226,7 @@
       </div>
       <div class="sn-ibs-das__mapping-media">
         <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-ibs.webp" alt="In-building wireless coverage" width="1024" height="1024" loading="lazy" decoding="async"><figcaption>In-building coverage setting. Scene imagery only; no operator count or coverage result is implied.</figcaption></figure>
-        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/indoor-antenna-se-dpa-0640-v6801-nf.webp" alt="SONNE indoor antenna SE-DPA-0640-V6801-NF" width="720" height="720" loading="lazy" decoding="async"><figcaption>Distribution-node accessory from the RF accessories line: indoor antenna SE-DPA-0640-V6801-NF. Band, gain and connector remain model-specific.</figcaption></figure>
+        <figure><div class="sn-ibs-das__mapping-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/indoor-antenna-se-dpa-0640-v6801-nf.webp" alt="SONNE indoor antenna SE-DPA-0640-V6801-NF" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>Distribution-node accessory from the RF accessories line: indoor antenna SE-DPA-0640-V6801-NF. Band, gain and connector remain model-specific.</figcaption></figure>
       </div>
       <p class="sn-ibs-das__note">Indoor antennas, loads and cable assemblies are ordered through <a href="/products/rf-accessories/">RF accessories</a>, keeping them subordinate to the passive BOM. Multi-operator scope and deployment questions sit with the <a href="/solutions/das-ibs/">DAS / IBS solution guide</a>; feeder sharing and combiner selection stay on the <a href="/products/rf-combiners/">combiners page</a>.</p>
       <div class="sn-ibs-das__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Map My Project BOM</a></div>
