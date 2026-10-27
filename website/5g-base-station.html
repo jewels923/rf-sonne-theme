@@ -63,8 +63,9 @@
     .sn-sol-5g .sn-sol-5g__priority strong { display: block; margin-bottom: 6px; color: var(--sn-navy); font-size: .92rem; }
     .sn-sol-5g .sn-sol-5g__priority span { color: var(--sn-text-muted); font-size: .8rem; line-height: 1.55; }
     .sn-sol-5g .sn-sol-5g__evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 0 0 26px; }
-    .sn-sol-5g .sn-sol-5g__evidence figure { margin-bottom: 0; }
-    .sn-sol-5g .sn-sol-5g__evidence img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-sol-5g .sn-sol-5g__evidence figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-5g .sn-sol-5g__evidence img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-sol-5g .sn-sol-5g__evidence figcaption { flex: 1; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--sn-line); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
     .sn-sol-5g .sn-sol-5g__band-table { min-width: 880px; }
     .sn-sol-5g .sn-sol-5g__band-table tbody th { color: var(--sn-navy); }
     .sn-sol-5g .sn-sol-5g__pipeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 0 0 26px; padding: 0; list-style: none; counter-reset: verify; border-top: 3px solid var(--sn-navy); }

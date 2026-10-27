@@ -1976,6 +1976,41 @@ class P3PageTests(unittest.TestCase):
                 '.sn-factory .sn-factory__grid--three figcaption',
                 'repeat(3, minmax(0, 1fr))',
             ),
+            (
+                '5g-base-station',
+                '.sn-sol-5g .sn-sol-5g__evidence',
+                '.sn-sol-5g .sn-sol-5g__evidence figure',
+                '.sn-sol-5g .sn-sol-5g__evidence figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'das-ibs',
+                '.sn-sol-das .sn-sol-das__evidence',
+                '.sn-sol-das .sn-sol-das__evidence figure',
+                '.sn-sol-das .sn-sol-das__evidence figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'fttx',
+                '.sn-sol-fttx .sn-sol-fttx__shopfloor',
+                '.sn-sol-fttx .sn-sol-fttx__shopfloor figure',
+                '.sn-sol-fttx .sn-sol-fttx__shopfloor figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'satellite-earth-station',
+                '.sn-sol-satellite .sn-sol-satellite__drawings',
+                '.sn-sol-satellite .sn-sol-satellite__drawings figure',
+                '.sn-sol-satellite .sn-sol-satellite__drawings figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
+            (
+                'solutions',
+                '.sn-solutions .sn-solutions__evidence',
+                '.sn-solutions .sn-solutions__evidence figure',
+                '.sn-solutions .sn-solutions__evidence figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
         )
         for slug, grid_selector, figure_selector, caption_selector, columns in cases:
             with self.subTest(slug=slug, grid=grid_selector):
@@ -2002,6 +2037,70 @@ class P3PageTests(unittest.TestCase):
                 self.assertEqual(
                     '1px solid var(--sn-line)', caption.get('border-top')
                 )
+
+    def test_stacked_evidence_groups_use_framed_cards(self):
+        cases = (
+            (
+                'satellite-earth-station',
+                '.sn-sol-satellite .sn-sol-satellite__evidence',
+                '.sn-sol-satellite .sn-sol-satellite__evidence figure',
+                '.sn-sol-satellite .sn-sol-satellite__evidence figcaption',
+                'minmax(0, .8fr) minmax(0, 1.2fr)',
+            ),
+            (
+                'microwave-backhaul',
+                '.sn-sol-backhaul .sn-sol-backhaul__manufacturing',
+                '.sn-sol-backhaul .sn-sol-backhaul__manufacturing figure',
+                '.sn-sol-backhaul .sn-sol-backhaul__manufacturing figcaption',
+                'minmax(0, 1.25fr) minmax(0, .75fr)',
+            ),
+        )
+        for slug, grid_selector, figure_selector, caption_selector, columns in cases:
+            with self.subTest(slug=slug, grid=grid_selector):
+                text, collector = self.target(slug)
+                if text is None:
+                    continue
+                self.assertEqual(1, len(collector.styles))
+                base_css = css_without_media_queries(collector.styles[0])
+                grid = css_declarations_for_selector(base_css, grid_selector)
+                self.assertEqual(columns, grid.get('grid-template-columns'))
+                figure = css_declarations_for_selector(base_css, figure_selector)
+                self.assertEqual('flex', figure.get('display'))
+                self.assertEqual('column', figure.get('flex-direction'))
+                self.assertEqual('0', figure.get('margin-bottom'))
+                self.assertEqual('hidden', figure.get('overflow'))
+                self.assertEqual('var(--sn-border)', figure.get('border'))
+                self.assertEqual('var(--sn-white)', figure.get('background'))
+                caption = css_declarations_for_selector(base_css, caption_selector)
+                self.assertEqual('0', caption.get('margin'))
+                self.assertEqual('12px 16px 14px', caption.get('padding'))
+                self.assertEqual(
+                    '1px solid var(--sn-line)', caption.get('border-top')
+                )
+
+        text, collector = self.target('satellite-earth-station')
+        if text is not None:
+            figures = css_declarations_for_selector(
+                css_without_media_queries(collector.styles[0]),
+                '.sn-sol-satellite .sn-sol-satellite__evidence img',
+            )
+            self.assertEqual('16 / 9', figures.get('aspect-ratio'))
+            self.assertEqual('cover', figures.get('object-fit'))
+
+        text, collector = self.target('microwave-backhaul')
+        if text is not None:
+            base_css = css_without_media_queries(collector.styles[0])
+            main_image = css_declarations_for_selector(
+                base_css,
+                '.sn-sol-backhaul .sn-sol-backhaul__manufacturing-main img',
+            )
+            self.assertEqual('16 / 9', main_image.get('aspect-ratio'))
+            side_image = css_declarations_for_selector(
+                base_css,
+                '.sn-sol-backhaul .sn-sol-backhaul__manufacturing-side img',
+            )
+            self.assertEqual('16 / 10', side_image.get('aspect-ratio'))
+            self.assertEqual('cover', side_image.get('object-fit'))
 
     def test_backhaul_product_images_run_flush_in_their_cards(self):
         text, collector = self.target('microwave-backhaul')

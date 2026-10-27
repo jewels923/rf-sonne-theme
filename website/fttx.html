@@ -62,8 +62,9 @@
     .sn-sol-fttx .sn-sol-fttx__flow h3 { margin: 10px 0 6px; font-size: 1.02rem; }
     .sn-sol-fttx .sn-sol-fttx__flow p { margin-bottom: 0; max-width: 70ch; color: var(--sn-text-muted); font-size: .9rem; }
     .sn-sol-fttx .sn-sol-fttx__shopfloor { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 26px; }
-    .sn-sol-fttx .sn-sol-fttx__shopfloor figure { margin-bottom: 0; }
-    .sn-sol-fttx .sn-sol-fttx__shopfloor img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-sol-fttx .sn-sol-fttx__shopfloor figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-fttx .sn-sol-fttx__shopfloor img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+    .sn-sol-fttx .sn-sol-fttx__shopfloor figcaption { flex: 1; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--sn-line); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
     .sn-sol-fttx .sn-sol-fttx__oem { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
     .sn-sol-fttx .sn-sol-fttx__oem div { padding: 22px; border: var(--sn-border); background: var(--sn-white); }
     .sn-sol-fttx .sn-sol-fttx__oem h3 { font-size: 1rem; }
