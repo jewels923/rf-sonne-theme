@@ -1754,54 +1754,51 @@ class P3PageTests(unittest.TestCase):
         self.assertNotIn('border-top-color', card)
 
     def test_product_hero_plates_run_flush_inside_dark_frames(self):
-        expectations = (
-            (
-                'rf-combiners',
+        text, collector = self.target('rf-combiners')
+        if text is not None:
+            self.assertEqual(1, len(collector.styles))
+            media = css_declarations_for_selector(
+                collector.styles[0],
                 '.sn-combiners .sn-combiners__hero-media .sn-hero-plate__media',
+            )
+            self.assertEqual('0', media.get('padding'))
+            self.assertEqual('var(--sn-white)', media.get('background'))
+            image = css_declarations_for_selector(
+                collector.styles[0],
                 '.sn-combiners .sn-combiners__hero-media img',
-            ),
-            (
-                'rf-microwave-filters',
-                '.sn-filters .sn-filters__hero-main .sn-hero-plate__media',
-                '.sn-filters .sn-filters__hero-media .sn-hero-plate img',
-            ),
-            (
-                'waveguide-components',
-                '.sn-waveguide .sn-waveguide__hero-main .sn-hero-plate__media',
-                '.sn-waveguide .sn-waveguide__hero-media .sn-hero-plate img',
-            ),
-        )
-        for slug, media_selector, image_selector in expectations:
-            with self.subTest(slug=slug):
-                text, collector = self.target(slug)
-                if text is None:
-                    continue
-                self.assertEqual(1, len(collector.styles))
-                media = css_declarations_for_selector(collector.styles[0], media_selector)
-                self.assertEqual('0', media.get('padding'))
-                self.assertEqual('var(--sn-white)', media.get('background'))
-                image = css_declarations_for_selector(collector.styles[0], image_selector)
-                self.assertEqual('16 / 9', image.get('aspect-ratio'))
+            )
+            self.assertEqual('16 / 9', image.get('aspect-ratio'))
 
         for slug, prefix in (
             ('rf-microwave-filters', 'sn-filters'),
             ('waveguide-components', 'sn-waveguide'),
         ):
-            with self.subTest(slug=slug, plate='part'):
+            with self.subTest(slug=slug):
                 text, collector = self.target(slug)
                 if text is None:
                     continue
-                part_media = css_declarations_for_selector(
-                    collector.styles[0],
-                    f'.{prefix} .{prefix}__hero-part .sn-hero-plate__media',
+                self.assertEqual(1, len(collector.styles))
+                base_css = css_without_media_queries(collector.styles[0])
+                media_grid = css_declarations_for_selector(
+                    base_css,
+                    f'.{prefix} .{prefix}__hero-media',
                 )
-                self.assertEqual('0', part_media.get('padding'))
-                self.assertEqual('var(--sn-white)', part_media.get('background'))
-                part_image = css_declarations_for_selector(
-                    collector.styles[0],
-                    f'.{prefix} .{prefix}__hero-part.sn-hero-plate img',
+                self.assertEqual(
+                    'repeat(2, minmax(0, 1fr))', media_grid.get('grid-template-columns')
                 )
-                self.assertEqual('1', part_image.get('aspect-ratio'))
+                self.assertEqual('14px', media_grid.get('gap'))
+                self.assertEqual('start', media_grid.get('align-items'))
+                plate_media = css_declarations_for_selector(
+                    collector.styles[0],
+                    f'.{prefix} .{prefix}__hero-media .sn-hero-plate__media',
+                )
+                self.assertEqual('0', plate_media.get('padding'))
+                self.assertEqual('var(--sn-white)', plate_media.get('background'))
+                plate_image = css_declarations_for_selector(
+                    collector.styles[0],
+                    f'.{prefix} .{prefix}__hero-media .sn-hero-plate img',
+                )
+                self.assertEqual('1', plate_image.get('aspect-ratio'))
 
     def test_shared_hero_plates_run_flush_without_mats(self):
         css = SONNE_CSS.read_text(encoding='utf-8')

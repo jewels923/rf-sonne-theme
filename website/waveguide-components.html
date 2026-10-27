@@ -25,15 +25,10 @@
     .sn-waveguide .sn-waveguide__hero-paths a { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 12px; border: 1px solid rgba(252, 254, 255, .24); color: var(--sn-white); font-family: var(--sn-font-mono); font-size: .7rem; letter-spacing: .04em; text-decoration: none; counter-increment: waveguide-path; }
     .sn-waveguide .sn-waveguide__hero-paths a::before { margin-right: 8px; color: var(--sn-cyan); font-size: .62rem; content: '0' counter(waveguide-path); }
     .sn-waveguide .sn-waveguide__hero-paths a:hover, .sn-waveguide .sn-waveguide__hero-paths a:focus-visible { border-color: var(--sn-cyan); }
-    .sn-waveguide .sn-waveguide__hero-media { display: grid; grid-template-columns: minmax(0, 1fr) 132px; gap: 14px; align-items: end; }
+    .sn-waveguide .sn-waveguide__hero-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-items: start; }
     .sn-waveguide .sn-waveguide__hero-media .sn-hero-plate { margin: 0; }
-    .sn-waveguide .sn-waveguide__hero-main .sn-hero-plate__media { padding: 0; background: var(--sn-white); }
-    .sn-waveguide .sn-waveguide__hero-media .sn-hero-plate img { aspect-ratio: 16 / 9; }
-    .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__media { padding: 0; background: var(--sn-white); }
-    .sn-waveguide .sn-waveguide__hero-part.sn-hero-plate img { aspect-ratio: 1; }
-    .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__tag { padding: 8px 10px; font-size: .6rem; letter-spacing: .05em; }
-    .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__tag span:last-child { display: none; }
-    .sn-waveguide .sn-waveguide__hero-part figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 7px 9px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .6rem; line-height: 1.35; }
+    .sn-waveguide .sn-waveguide__hero-media .sn-hero-plate__media { padding: 0; background: var(--sn-white); }
+    .sn-waveguide .sn-waveguide__hero-media .sn-hero-plate img { aspect-ratio: 1; }
 
     /* Section rhythm and the shared record head. */
     .sn-waveguide .sn-waveguide__intro { margin-bottom: clamp(28px, 3.4vw, 42px); }
@@ -118,7 +113,6 @@
       .sn-waveguide .sn-waveguide__checklist, .sn-waveguide .sn-waveguide__checklist + .sn-waveguide__checklist { padding: 18px 0 20px; border-left: 0; }
     }
     @media (max-width: 760px) {
-      .sn-waveguide .sn-waveguide__hero-part .sn-hero-plate__tag span:last-child { display: inline; }
       .sn-waveguide .sn-waveguide__interface, .sn-waveguide .sn-waveguide__applications, .sn-waveguide .sn-waveguide__evidence, .sn-waveguide .sn-waveguide__bandplan { min-width: 0; }
       .sn-waveguide .sn-waveguide__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
       .sn-waveguide .sn-waveguide__ledger, .sn-waveguide .sn-waveguide__ledger tbody, .sn-waveguide .sn-waveguide__ledger tr, .sn-waveguide .sn-waveguide__ledger th, .sn-waveguide .sn-waveguide__ledger td { display: block; width: 100%; }
@@ -136,7 +130,6 @@
     }
     @media (max-width: 560px) {
       .sn-waveguide .sn-waveguide__hero-media { grid-template-columns: 1fr; }
-      .sn-waveguide .sn-waveguide__hero-part { max-width: 190px; }
       .sn-waveguide .sn-waveguide__product-grid { grid-template-columns: 1fr; }
     }
     .sn-waveguide figure { position: relative; }
@@ -159,7 +152,7 @@
           <figure class="sn-hero-plate sn-waveguide__hero-main">
             <div class="sn-hero-plate__tag"><span>Plate 01</span><span>OMT family</span></div>
             <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp" alt="Ortho-mode transducer" width="1024" height="571" loading="eager" fetchpriority="high" decoding="async"></div>
-            <figcaption>Ortho-mode transducer product visual; no unlisted isolation, loss or polarization value is implied.</figcaption>
+            <figcaption>Ortho-mode transducer product visual; no RF performance is implied.</figcaption>
           </figure>
           <figure class="sn-hero-plate sn-waveguide__hero-part">
             <div class="sn-hero-plate__tag"><span>Detail</span><span>Guide</span></div>

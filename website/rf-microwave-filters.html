@@ -21,15 +21,10 @@
     .sn-filters .sn-filters__hero-copy > p { max-width: 64ch; margin-bottom: 0; color: rgba(252, 254, 255, .8); font-size: 1.04rem; line-height: 1.7; }
     .sn-filters .sn-filters__hero-note { margin-top: 26px; padding-top: 14px; border-top: 1px solid rgba(34, 197, 217, .32); color: rgba(252, 254, 255, .72); font-size: .86rem; line-height: 1.65; }
     .sn-filters .sn-filters__hero-note strong { color: var(--sn-white); }
-    .sn-filters .sn-filters__hero-media { display: grid; grid-template-columns: minmax(0, 1fr) 132px; gap: 14px; align-items: end; }
+    .sn-filters .sn-filters__hero-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-items: start; }
     .sn-filters .sn-filters__hero-media .sn-hero-plate { margin: 0; }
-    .sn-filters .sn-filters__hero-main .sn-hero-plate__media { padding: 0; background: var(--sn-white); }
-    .sn-filters .sn-filters__hero-media .sn-hero-plate img { aspect-ratio: 16 / 9; }
-    .sn-filters .sn-filters__hero-part .sn-hero-plate__media { padding: 0; background: var(--sn-white); }
-    .sn-filters .sn-filters__hero-part.sn-hero-plate img { aspect-ratio: 1; }
-    .sn-filters .sn-filters__hero-part .sn-hero-plate__tag { padding: 8px 10px; font-size: .6rem; letter-spacing: .05em; }
-    .sn-filters .sn-filters__hero-part .sn-hero-plate__tag span:last-child { display: none; }
-    .sn-filters .sn-filters__hero-part figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 7px 9px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .6rem; line-height: 1.35; }
+    .sn-filters .sn-filters__hero-media .sn-hero-plate__media { padding: 0; background: var(--sn-white); }
+    .sn-filters .sn-filters__hero-media .sn-hero-plate img { aspect-ratio: 1; }
 
     /* Section rhythm and the shared record head. */
     .sn-filters .sn-filters__intro { margin-bottom: clamp(28px, 3.4vw, 42px); }
@@ -103,7 +98,6 @@
       .sn-filters .sn-filters__checkpoint:nth-child(odd) { padding-left: 0; border-left: 0; }
     }
     @media (max-width: 760px) {
-      .sn-filters .sn-filters__hero-part .sn-hero-plate__tag span:last-child { display: inline; }
       .sn-filters .sn-filters__matrix, .sn-filters .sn-filters__selection, .sn-filters .sn-filters__spec, .sn-filters .sn-filters__test { min-width: 0; }
       .sn-filters .sn-filters__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
       .sn-filters .sn-filters__ledger, .sn-filters .sn-filters__ledger tbody, .sn-filters .sn-filters__ledger tr, .sn-filters .sn-filters__ledger th, .sn-filters .sn-filters__ledger td { display: block; width: 100%; }
@@ -127,7 +121,6 @@
     }
     @media (max-width: 560px) {
       .sn-filters .sn-filters__hero-media { grid-template-columns: 1fr; }
-      .sn-filters .sn-filters__hero-part { max-width: 190px; }
     }
     .sn-filters figure { position: relative; }
     .sn-filters figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
@@ -148,7 +141,7 @@
           <figure class="sn-hero-plate sn-filters__hero-main">
             <div class="sn-hero-plate__tag"><span>Plate 01</span><span>Bandpass family</span></div>
             <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="eager" fetchpriority="high" decoding="async"></div>
-            <figcaption>Bandpass filter product visual; no specific frequency-band model is implied.</figcaption>
+            <figcaption>Bandpass filter product visual; no specific band or model is implied.</figcaption>
           </figure>
           <figure class="sn-hero-plate sn-filters__hero-part">
             <div class="sn-hero-plate__tag"><span>Detail</span><span>Cavity</span></div>
