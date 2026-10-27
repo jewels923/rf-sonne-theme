@@ -23,8 +23,8 @@
     .sn-sol-fttx .sn-sol-fttx__hero-notes span { display: block; color: rgba(252, 254, 255, .72); font-size: .78rem; line-height: 1.5; }
     .sn-sol-fttx .sn-sol-fttx__hero-media { margin-bottom: 0; }
     .sn-sol-fttx .sn-sol-fttx__hero-media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
-    .sn-sol-fttx .sn-sol-fttx__hero figcaption { color: rgba(252, 254, 255, .66); }
-    .sn-sol-fttx figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-sol-fttx .sn-sol-fttx__hero figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
+    .sn-sol-fttx figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-sol-fttx .sn-sol-fttx__boundary { margin: 16px 0 0; color: rgba(252, 254, 255, .68); font-size: .8rem; }
     .sn-sol-fttx caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
     .sn-sol-fttx .sn-sol-fttx__inputs { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(250px, .45fr); gap: 26px; align-items: start; }
@@ -42,7 +42,7 @@
     .sn-sol-fttx .sn-sol-fttx__function-table tbody th { color: var(--sn-navy); }
     .sn-sol-fttx .sn-sol-fttx__cabinet { margin-bottom: 0; padding: 14px; border: var(--sn-border); background: var(--sn-white); }
     .sn-sol-fttx .sn-sol-fttx__cabinet img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: var(--sn-light-gray); }
-    .sn-sol-fttx .sn-sol-fttx__cabinet figcaption { margin-top: 10px; }
+    .sn-sol-fttx .sn-sol-fttx__cabinet figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-sol-fttx .sn-sol-fttx__matrix { min-width: 1180px; }
     .sn-sol-fttx .sn-sol-fttx__matrix th:first-child { width: 150px; }
     .sn-sol-fttx .sn-sol-fttx__matrix thead th { vertical-align: bottom; }
@@ -62,9 +62,9 @@
     .sn-sol-fttx .sn-sol-fttx__flow h3 { margin: 10px 0 6px; font-size: 1.02rem; }
     .sn-sol-fttx .sn-sol-fttx__flow p { margin-bottom: 0; max-width: 70ch; color: var(--sn-text-muted); font-size: .9rem; }
     .sn-sol-fttx .sn-sol-fttx__shopfloor { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 26px; }
-    .sn-sol-fttx .sn-sol-fttx__shopfloor figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-sol-fttx .sn-sol-fttx__shopfloor figure { position: relative; display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
     .sn-sol-fttx .sn-sol-fttx__shopfloor img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
-    .sn-sol-fttx .sn-sol-fttx__shopfloor figcaption { flex: 1; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--sn-line); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
+    .sn-sol-fttx .sn-sol-fttx__shopfloor figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-sol-fttx .sn-sol-fttx__oem { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
     .sn-sol-fttx .sn-sol-fttx__oem div { padding: 22px; border: var(--sn-border); background: var(--sn-white); }
     .sn-sol-fttx .sn-sol-fttx__oem h3 { font-size: 1rem; }
@@ -106,6 +106,8 @@
       .sn-sol-fttx .sn-sol-fttx__faq details:not([open]) > p { display: block !important; }
       .sn-sol-fttx .sn-sol-fttx__faq details::details-content { content-visibility: visible !important; display: block !important; }
     }
+    .sn-sol-fttx figure { position: relative; }
+    .sn-sol-fttx figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
   </style>
 
   <section class="sn-hero sn-sol-fttx__hero" aria-labelledby="sol-fttx-title">

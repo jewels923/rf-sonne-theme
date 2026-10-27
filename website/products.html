@@ -75,7 +75,7 @@
     .sn-products .sn-products__capability-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr); gap: clamp(30px, 5vw, 60px); align-items: start; }
     .sn-products .sn-products__capability-grid figure { margin-bottom: 0; }
     .sn-products .sn-products__capability-grid figure img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
-    .sn-products .sn-products__capability-grid figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-products .sn-products__capability-grid figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-products .sn-products__facts { width: 100%; border-collapse: collapse; }
     .sn-products .sn-products__facts th, .sn-products .sn-products__facts td { padding: 13px 0; border-bottom: 1px solid var(--sn-line); text-align: left; vertical-align: top; line-height: 1.55; }
     .sn-products .sn-products__facts tr:first-child th, .sn-products .sn-products__facts tr:first-child td { border-top: 1px solid var(--sn-line-strong); }
@@ -136,6 +136,8 @@
     @media (prefers-reduced-motion: reduce) {
       .sn-products .sn-products__support-card:hover { transform: none; }
     }
+    .sn-products figure { position: relative; }
+    .sn-products figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
   </style>
 
   <section class="sn-hero sn-products__hero" aria-labelledby="products-title">

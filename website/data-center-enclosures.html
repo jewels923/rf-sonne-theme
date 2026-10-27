@@ -20,7 +20,7 @@
     .sn-sol-enclosures .sn-sol-enclosures__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
     .sn-sol-enclosures .sn-sol-enclosures__hero-media { margin-bottom: 0; padding: 14px; border: 1px solid rgba(252, 254, 255, .22); }
     .sn-sol-enclosures .sn-sol-enclosures__hero-media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: var(--sn-white); }
-    .sn-sol-enclosures .sn-sol-enclosures__hero-media figcaption { margin-top: 12px; color: rgba(252, 254, 255, .64); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-sol-enclosures .sn-sol-enclosures__hero-media figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-sol-enclosures .sn-sol-enclosures__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 30px; border-block: 1px solid rgba(252, 254, 255, .18); }
     .sn-sol-enclosures .sn-sol-enclosures__fact { padding: 20px 18px 20px 0; }
     .sn-sol-enclosures .sn-sol-enclosures__fact + .sn-sol-enclosures__fact { padding-left: 18px; border-left: 1px solid rgba(252, 254, 255, .18); }
@@ -31,7 +31,7 @@
     .sn-sol-enclosures .sn-sol-enclosures__split figure, .sn-sol-enclosures .sn-sol-enclosures__drawing figure { margin-bottom: 0; }
     .sn-sol-enclosures .sn-sol-enclosures__split img, .sn-sol-enclosures .sn-sol-enclosures__drawing img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
     .sn-sol-enclosures .sn-sol-enclosures__drawing img { aspect-ratio: 16 / 9; }
-    .sn-sol-enclosures .sn-sol-enclosures__split figcaption, .sn-sol-enclosures .sn-sol-enclosures__drawing figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-sol-enclosures .sn-sol-enclosures__split figcaption, .sn-sol-enclosures .sn-sol-enclosures__drawing figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-sol-enclosures .sn-sol-enclosures__table { min-width: 920px; }
     .sn-sol-enclosures .sn-sol-enclosures__table caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
     .sn-sol-enclosures .sn-sol-enclosures__table tbody th { color: var(--sn-navy); }
@@ -85,6 +85,8 @@
       .sn-sol-enclosures .sn-sol-enclosures__faq details:not([open]) > p { display: block !important; }
       .sn-sol-enclosures .sn-sol-enclosures__faq details::details-content { content-visibility: visible !important; display: block !important; }
     }
+    .sn-sol-enclosures figure { position: relative; }
+    .sn-sol-enclosures figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
   </style>
 
   <section class="sn-hero sn-sol-enclosures__hero" aria-labelledby="enclosures-solution-title">

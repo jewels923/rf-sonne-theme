@@ -19,8 +19,8 @@
     .sn-thank-you .sn-thank-you__status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sn-cyan); }
     .sn-thank-you .sn-thank-you__hero-media { margin-bottom: 0; }
     .sn-thank-you .sn-thank-you__hero-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-    .sn-thank-you figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.6; }
-    .sn-thank-you .sn-thank-you__hero figcaption { color: rgba(252, 254, 255, .66); }
+    .sn-thank-you figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
+    .sn-thank-you .sn-thank-you__hero figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-thank-you .sn-thank-you__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
     .sn-thank-you .sn-thank-you__note { margin: 22px 0 0; padding: 16px 20px; border: 1px solid var(--sn-mid-gray); background: var(--sn-light-gray); color: var(--sn-text-muted); font-size: .9rem; }
     .sn-thank-you .sn-thank-you__hero .sn-thank-you__note { border-left-color: var(--sn-cyan); background: rgba(252, 254, 255, .06); color: rgba(252, 254, 255, .8); }
@@ -59,6 +59,8 @@
       .sn-thank-you .sn-thank-you__step { padding: 22px; }
       .sn-thank-you .sn-thank-you__contact { align-items: flex-start; flex-direction: column; }
     }
+    .sn-thank-you figure { position: relative; }
+    .sn-thank-you figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
   </style>
 
   <section class="sn-hero sn-thank-you__hero" aria-labelledby="thank-you-title">

@@ -1830,6 +1830,7 @@ class P3PageTests(unittest.TestCase):
             collector.styles[0],
             '.sn-combiners .sn-combiners__scenario-media figure',
         )
+        self.assertEqual('relative', figure.get('position'))
         self.assertEqual('flex', figure.get('display'))
         self.assertEqual('column', figure.get('flex-direction'))
         self.assertEqual('0', figure.get('margin-bottom'))
@@ -1854,13 +1855,79 @@ class P3PageTests(unittest.TestCase):
             collector.styles[0],
             '.sn-combiners .sn-combiners__scenario-media figcaption',
         )
+        self.assertEqual('absolute', caption.get('position'))
+        self.assertEqual('0', caption.get('right'))
+        self.assertEqual('0', caption.get('bottom'))
+        self.assertEqual('0', caption.get('left'))
         self.assertEqual('0', caption.get('margin'))
-        self.assertEqual('12px 16px 14px', caption.get('padding'))
-        self.assertEqual('1px solid var(--sn-line)', caption.get('border-top'))
+        self.assertEqual('9px 12px', caption.get('padding'))
+        self.assertEqual('rgba(5, 16, 27, .82)', caption.get('background'))
         self.assertEqual(2, text.count('class="sn-combiners__scenario-frame"'))
         self.assertEqual(
             2, text.count('<div class="sn-combiners__scenario-frame"><img'),
         )
+
+    def test_all_page_figcaptions_are_image_bottom_overlay_bars(self):
+        exempt = {
+            'home.html',  # product-card tag bars, not descriptive captions
+            'about-us.html',
+            'contact-us.html',
+            'blog.html',
+        }
+        checked_pages = 0
+        checked_captions = 0
+        for path in sorted(WEBSITE.glob('*.html')):
+            if path.name in exempt:
+                continue
+            text = path.read_text(encoding='utf-8')
+            if '<figcaption' not in text:
+                continue
+            checked_pages += 1
+            checked_captions += text.count('<figcaption')
+            collector = collect(text)
+            css = collector.styles[0]
+            wrapper_match = re.search(r'<div class="(sn-[a-z0-9-]+)', text)
+            self.assertIsNotNone(wrapper_match, path.name)
+            wrapper = wrapper_match.group(1)
+            for selector, body in iter_css_rules(css):
+                if 'figcaption' not in selector:
+                    continue
+                declarations = {}
+                for declaration in body.split(';'):
+                    name, separator, value = declaration.partition(':')
+                    if separator:
+                        declarations[name.strip()] = value.strip()
+                with self.subTest(page=path.name, selector=selector):
+                    self.assertEqual('absolute', declarations.get('position'))
+                    self.assertEqual('0', declarations.get('right'))
+                    self.assertEqual('0', declarations.get('bottom'))
+                    self.assertEqual('0', declarations.get('left'))
+                    self.assertEqual('0', declarations.get('margin'))
+                    self.assertEqual('rgba(5, 16, 27, .82)', declarations.get('background'))
+            figure = css_declarations_for_selector(css, f'.{wrapper} figure')
+            self.assertEqual('relative', figure.get('position'), path.name)
+            caption = css_declarations_for_selector(css, f'.{wrapper} figcaption')
+            self.assertEqual('absolute', caption.get('position'), path.name)
+            self.assertEqual('9px 12px', caption.get('padding'), path.name)
+            self.assertEqual('rgba(5, 16, 27, .82)', caption.get('background'), path.name)
+            self.assertEqual('rgba(252, 254, 255, .8)', caption.get('color'), path.name)
+        self.assertGreaterEqual(checked_pages, 30)
+        self.assertGreaterEqual(checked_captions, 130)
+
+    def test_shared_hero_plate_caption_is_an_image_bottom_overlay_bar(self):
+        css = SONNE_CSS.read_text(encoding='utf-8')
+        plate = css_declarations_for_selector(css, '.sn-hero-plate')
+        self.assertEqual('relative', plate.get('position'))
+        self.assertEqual('hidden', plate.get('overflow'))
+        caption = css_declarations_for_selector(css, '.sn-hero-plate figcaption')
+        self.assertEqual('absolute', caption.get('position'))
+        self.assertEqual('0', caption.get('right'))
+        self.assertEqual('0', caption.get('bottom'))
+        self.assertEqual('0', caption.get('left'))
+        self.assertEqual('0', caption.get('margin'))
+        self.assertEqual('9px 12px', caption.get('padding'))
+        self.assertEqual('rgba(5, 16, 27, .82)', caption.get('background'))
+        self.assertEqual('rgba(252, 254, 255, .8)', caption.get('color'))
 
     def test_multi_figure_rows_use_equal_framed_evidence_cards(self):
         cases = (
@@ -2011,6 +2078,13 @@ class P3PageTests(unittest.TestCase):
                 '.sn-solutions .sn-solutions__evidence figcaption',
                 'repeat(2, minmax(0, 1fr))',
             ),
+            (
+                'microwave-backhaul',
+                '.sn-sol-backhaul .sn-sol-backhaul__products',
+                '.sn-sol-backhaul .sn-sol-backhaul__products figure',
+                '.sn-sol-backhaul .sn-sol-backhaul__products figcaption',
+                'repeat(2, minmax(0, 1fr))',
+            ),
         )
         for slug, grid_selector, figure_selector, caption_selector, columns in cases:
             with self.subTest(slug=slug, grid=grid_selector):
@@ -2022,6 +2096,7 @@ class P3PageTests(unittest.TestCase):
                 grid = css_declarations_for_selector(base_css, grid_selector)
                 self.assertEqual(columns, grid.get('grid-template-columns'))
                 figure = css_declarations_for_selector(base_css, figure_selector)
+                self.assertEqual('relative', figure.get('position'))
                 self.assertEqual('flex', figure.get('display'))
                 self.assertEqual('column', figure.get('flex-direction'))
                 self.assertEqual('0', figure.get('margin-bottom'))
@@ -2029,13 +2104,14 @@ class P3PageTests(unittest.TestCase):
                 self.assertEqual('var(--sn-border)', figure.get('border'))
                 self.assertEqual('var(--sn-white)', figure.get('background'))
                 caption = css_declarations_for_selector(base_css, caption_selector)
+                self.assertEqual('absolute', caption.get('position'))
+                self.assertEqual('0', caption.get('right'))
+                self.assertEqual('0', caption.get('bottom'))
+                self.assertEqual('0', caption.get('left'))
                 self.assertEqual('0', caption.get('margin'))
-                self.assertIn(
-                    caption.get('padding'),
-                    ('12px 16px 14px', '12px 14px 14px'),
-                )
+                self.assertEqual('9px 12px', caption.get('padding'))
                 self.assertEqual(
-                    '1px solid var(--sn-line)', caption.get('border-top')
+                    'rgba(5, 16, 27, .82)', caption.get('background')
                 )
 
     def test_stacked_evidence_groups_use_framed_cards(self):
@@ -2065,6 +2141,7 @@ class P3PageTests(unittest.TestCase):
                 grid = css_declarations_for_selector(base_css, grid_selector)
                 self.assertEqual(columns, grid.get('grid-template-columns'))
                 figure = css_declarations_for_selector(base_css, figure_selector)
+                self.assertEqual('relative', figure.get('position'))
                 self.assertEqual('flex', figure.get('display'))
                 self.assertEqual('column', figure.get('flex-direction'))
                 self.assertEqual('0', figure.get('margin-bottom'))
@@ -2072,10 +2149,12 @@ class P3PageTests(unittest.TestCase):
                 self.assertEqual('var(--sn-border)', figure.get('border'))
                 self.assertEqual('var(--sn-white)', figure.get('background'))
                 caption = css_declarations_for_selector(base_css, caption_selector)
+                self.assertEqual('absolute', caption.get('position'))
+                self.assertEqual('0', caption.get('bottom'))
                 self.assertEqual('0', caption.get('margin'))
-                self.assertEqual('12px 16px 14px', caption.get('padding'))
+                self.assertEqual('9px 12px', caption.get('padding'))
                 self.assertEqual(
-                    '1px solid var(--sn-line)', caption.get('border-top')
+                    'rgba(5, 16, 27, .82)', caption.get('background')
                 )
 
         text, collector = self.target('satellite-earth-station')
@@ -2112,6 +2191,7 @@ class P3PageTests(unittest.TestCase):
         )
         self.assertEqual('0', card.get('padding'))
         self.assertEqual('hidden', card.get('overflow'))
+        self.assertEqual('relative', card.get('position'))
         image = css_declarations_for_selector(
             collector.styles[0], '.sn-sol-backhaul .sn-sol-backhaul__products img'
         )
@@ -2124,7 +2204,9 @@ class P3PageTests(unittest.TestCase):
             '.sn-sol-backhaul .sn-sol-backhaul__products figcaption',
         )
         self.assertEqual('0', caption.get('margin'))
-        self.assertEqual('14px 18px 18px', caption.get('padding'))
+        self.assertEqual('9px 12px', caption.get('padding'))
+        self.assertEqual('absolute', caption.get('position'))
+        self.assertEqual('rgba(5, 16, 27, .82)', caption.get('background'))
 
     def test_product_plates_clip_baked_catalog_borders(self):
         cases = (

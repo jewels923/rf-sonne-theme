@@ -48,7 +48,7 @@
     .sn-enclosures .sn-enclosures__split--spaced { margin-top: 30px; }
     .sn-enclosures .sn-enclosures__split figure { margin-bottom: 0; }
     .sn-enclosures .sn-enclosures__split figure img { width: 100%; aspect-ratio: 4 / 3; padding: 14px; border: 1px solid var(--sn-line); background: var(--sn-paper-muted); object-fit: contain; }
-    .sn-enclosures .sn-enclosures__split figcaption, .sn-enclosures .sn-enclosures__manufacturing-grid figcaption { margin-top: 9px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
+    .sn-enclosures .sn-enclosures__split figcaption, .sn-enclosures .sn-enclosures__manufacturing-grid figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-enclosures .sn-enclosures__panel { padding: 20px 0 0; border-top: 1px solid var(--sn-line-strong); }
     .sn-enclosures .sn-enclosures__panel h3 { font-size: 1rem; }
     .sn-enclosures .sn-enclosures__panel p { color: var(--sn-text-muted); font-size: .9rem; }
@@ -68,9 +68,9 @@
     .sn-enclosures .sn-enclosures__fact span { display: block; margin-top: 8px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; }
     .sn-enclosures .sn-enclosures__fact p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .92rem; }
     .sn-enclosures .sn-enclosures__manufacturing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
-    .sn-enclosures .sn-enclosures__manufacturing-grid figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-enclosures .sn-enclosures__manufacturing-grid figure { position: relative; display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
     .sn-enclosures .sn-enclosures__manufacturing-grid img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
-    .sn-enclosures .sn-enclosures__manufacturing-grid figcaption { flex: 1; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--sn-line); }
+    .sn-enclosures .sn-enclosures__manufacturing-grid figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
 
     /* NPI gates. */
     .sn-enclosures .sn-enclosures__process { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0 0 28px; padding: 0; list-style: none; border-top: 1px solid var(--sn-line-strong); counter-reset: enclosure-process; }
@@ -128,6 +128,8 @@
       .sn-enclosures .sn-enclosures__faq details { display: block; }
       .sn-enclosures .sn-enclosures__faq details > * { display: block; }
     }
+    .sn-enclosures figure { position: relative; }
+    .sn-enclosures figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
   </style>
 
   <section class="sn-hero sn-enclosures__hero" aria-labelledby="enclosures-title">

@@ -9,7 +9,7 @@
     .sn-datasheets p, .sn-datasheets li, .sn-datasheets dd { line-height: 1.7; }
     .sn-datasheets a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
     .sn-datasheets img { display: block; max-width: 100%; height: auto; }
-    .sn-datasheets figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-datasheets figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-datasheets .sn-datasheets__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
     .sn-datasheets .sn-datasheets__hero .sn-datasheets__eyebrow { color: var(--sn-cyan); }
     .sn-datasheets .sn-datasheets__hero-grid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(340px, .94fr); gap: clamp(34px, 5vw, 72px); align-items: center; }
@@ -22,7 +22,7 @@
     .sn-datasheets .sn-datasheets__hero-note { margin: 22px 0 0; color: rgba(252, 254, 255, .72); font-size: .84rem; line-height: 1.6; }
     .sn-datasheets .sn-datasheets__hero-media { margin-bottom: 0; }
     .sn-datasheets .sn-datasheets__hero-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-    .sn-datasheets .sn-datasheets__hero figcaption { color: rgba(252, 254, 255, .62); }
+    .sn-datasheets .sn-datasheets__hero figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-datasheets .sn-datasheets__intro { max-width: 860px; margin-bottom: 36px; }
     .sn-datasheets .sn-datasheets__intro > p { margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.02rem; }
     .sn-datasheets .sn-datasheets__section-target { scroll-margin-top: 112px; }
@@ -109,6 +109,8 @@
       .sn-datasheets .sn-datasheets__faq details:not([open]) > p { display: block !important; }
       .sn-datasheets .sn-datasheets__faq details::details-content { content-visibility: visible !important; display: block !important; }
     }
+    .sn-datasheets figure { position: relative; }
+    .sn-datasheets figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
   </style>
 
   <section class="sn-hero sn-datasheets__hero" aria-labelledby="datasheets-title">

@@ -19,7 +19,7 @@
     .sn-custom-rf .sn-custom-rf__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
     .sn-custom-rf .sn-custom-rf__hero-media { margin-bottom: 0; }
     .sn-custom-rf .sn-custom-rf__hero-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid rgba(252, 254, 255, .2); }
-    .sn-custom-rf .sn-custom-rf__hero-media figcaption { margin-top: 12px; color: rgba(252, 254, 255, .64); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.55; }
+    .sn-custom-rf .sn-custom-rf__hero-media figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-custom-rf .sn-custom-rf__path { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 22px 0 0; padding: 0; list-style: none; }
     .sn-custom-rf .sn-custom-rf__path li { color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .72rem; }
     .sn-custom-rf .sn-custom-rf__path li + li::before { margin-right: 10px; color: rgba(252, 254, 255, .4); content: '→'; }
@@ -39,7 +39,7 @@
     .sn-custom-rf .sn-custom-rf__gate-layout { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: clamp(28px, 5vw, 54px); align-items: start; }
     .sn-custom-rf .sn-custom-rf__gate-layout figure { margin-bottom: 0; }
     .sn-custom-rf .sn-custom-rf__gate-layout img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-    .sn-custom-rf .sn-custom-rf__gate-layout figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-custom-rf .sn-custom-rf__gate-layout figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-custom-rf .sn-custom-rf__rail { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--sn-mid-gray); }
     .sn-custom-rf .sn-custom-rf__rail li { position: relative; padding: 0 0 24px 24px; }
     .sn-custom-rf .sn-custom-rf__rail li:last-child { padding-bottom: 0; }
@@ -53,11 +53,11 @@
     .sn-custom-rf .sn-custom-rf__loop span { color: var(--sn-text-muted); font-size: .8rem; line-height: 1.55; }
     .sn-custom-rf .sn-custom-rf__wide-figure { margin-bottom: 0; }
     .sn-custom-rf .sn-custom-rf__wide-figure img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
-    .sn-custom-rf .sn-custom-rf__wide-figure figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-custom-rf .sn-custom-rf__wide-figure figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-custom-rf .sn-custom-rf__boundary-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(28px, 5vw, 54px); align-items: start; }
     .sn-custom-rf .sn-custom-rf__boundary-layout figure { margin-bottom: 0; }
     .sn-custom-rf .sn-custom-rf__boundary-layout img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-    .sn-custom-rf .sn-custom-rf__boundary-layout figcaption { margin-top: 10px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
+    .sn-custom-rf .sn-custom-rf__boundary-layout figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-custom-rf .sn-custom-rf__boundary-list { margin: 0 0 18px; padding: 0; border-top: var(--sn-border); list-style: none; }
     .sn-custom-rf .sn-custom-rf__boundary-list li { position: relative; padding: 10px 0 10px 24px; border-bottom: var(--sn-border); color: var(--sn-text-muted); font-size: .86rem; }
     .sn-custom-rf .sn-custom-rf__boundary-list li::before { position: absolute; top: 11px; left: 2px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .78rem; content: '□'; }
@@ -94,6 +94,8 @@
       .sn-custom-rf .sn-custom-rf__faq details:not([open]) > p { display: block !important; }
       .sn-custom-rf .sn-custom-rf__faq details::details-content { content-visibility: visible !important; display: block !important; }
     }
+    .sn-custom-rf figure { position: relative; }
+    .sn-custom-rf figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
   </style>
 
   <section class="sn-hero sn-custom-rf__hero" aria-labelledby="custom-rf-title">

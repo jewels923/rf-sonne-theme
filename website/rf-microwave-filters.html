@@ -29,7 +29,7 @@
     .sn-filters .sn-filters__hero-part.sn-hero-plate img { aspect-ratio: 1; }
     .sn-filters .sn-filters__hero-part .sn-hero-plate__tag { padding: 8px 10px; font-size: .6rem; letter-spacing: .05em; }
     .sn-filters .sn-filters__hero-part .sn-hero-plate__tag span:last-child { display: none; }
-    .sn-filters .sn-filters__hero-part figcaption { padding: 8px 10px; font-size: .6rem; }
+    .sn-filters .sn-filters__hero-part figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 7px 9px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .6rem; line-height: 1.35; }
 
     /* Section rhythm and the shared record head. */
     .sn-filters .sn-filters__intro { margin-bottom: clamp(28px, 3.4vw, 42px); }
@@ -54,10 +54,10 @@
 
     /* Manufacturing evidence as equal cards with captions inside the frame. */
     .sn-filters .sn-filters__evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 28px; }
-    .sn-filters .sn-filters__evidence-grid figure, .sn-filters .sn-filters__test-grid figure { display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
+    .sn-filters .sn-filters__evidence-grid figure, .sn-filters .sn-filters__test-grid figure { position: relative; display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
     .sn-filters .sn-filters__evidence-grid img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
     .sn-filters .sn-filters__evidence-grid .sn-filters__part img { padding: 18px; background: var(--sn-white); object-fit: contain; }
-    .sn-filters .sn-filters__evidence-grid figcaption, .sn-filters .sn-filters__test-grid figcaption { flex: 1; margin: 0; padding: 12px 16px 14px; border-top: 1px solid var(--sn-line); color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; line-height: 1.55; }
+    .sn-filters .sn-filters__evidence-grid figcaption, .sn-filters .sn-filters__test-grid figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-filters .sn-filters__checkpoints { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--sn-line-strong); counter-reset: filter-checkpoint; }
     .sn-filters .sn-filters__checkpoint { padding: 18px 22px 20px 0; border-bottom: 1px solid var(--sn-line); counter-increment: filter-checkpoint; }
     .sn-filters .sn-filters__checkpoint + .sn-filters__checkpoint { padding-left: 22px; border-left: 1px solid var(--sn-line); }
@@ -129,6 +129,8 @@
       .sn-filters .sn-filters__hero-media { grid-template-columns: 1fr; }
       .sn-filters .sn-filters__hero-part { max-width: 190px; }
     }
+    .sn-filters figure { position: relative; }
+    .sn-filters figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
   </style>
 
   <section class="sn-hero sn-filters__hero" aria-labelledby="filters-title">

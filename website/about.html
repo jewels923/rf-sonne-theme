@@ -20,8 +20,8 @@
     .sn-about .sn-about__hero-copy > p { margin-bottom: 18px; font-size: 1.05rem; }
     .sn-about .sn-about__hero-media { margin-bottom: 0; }
     .sn-about .sn-about__hero-media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
-    .sn-about figcaption { margin-top: 12px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .72rem; line-height: 1.55; }
-    .sn-about .sn-about__hero figcaption { color: rgba(252, 254, 255, .66); }
+    .sn-about figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
+    .sn-about .sn-about__hero figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-about .sn-about__facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 34px; border-block: 1px solid rgba(252, 254, 255, .18); }
     .sn-about .sn-about__fact { padding: 20px 18px 20px 0; }
     .sn-about .sn-about__fact + .sn-about__fact { padding-left: 18px; border-left: 1px solid rgba(252, 254, 255, .18); }
@@ -103,6 +103,8 @@
       .sn-about .sn-about__faq details:not([open]) > p { display: block !important; }
       .sn-about .sn-about__faq details::details-content { content-visibility: visible !important; display: block !important; }
     }
+    .sn-about figure { position: relative; }
+    .sn-about figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
   </style>
 
   <section class="sn-hero sn-about__hero" aria-labelledby="about-title">
