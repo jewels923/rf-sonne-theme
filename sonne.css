@@ -51,6 +51,10 @@
   --sn-transition: 180ms ease;
 }
 
+html {
+  font-size: 110%;
+}
+
 html,
 body {
   overflow-x: clip;
