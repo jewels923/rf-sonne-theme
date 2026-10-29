@@ -6,7 +6,7 @@
 $mega_menu_defaults = array(
     'default_preview_image' => 'https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave.webp',
     'default_preview_alt'   => 'Microwave and RF components',
-    'footer_copy'           => 'Five core product lines for RF, microwave and precision enclosure projects.',
+    'footer_copy'           => 'Five passive component lines and five system and active RF lines for RF, microwave and precision enclosure projects.',
 );
 
 return array(
@@ -21,29 +21,56 @@ return array(
             'footer_copy'           => $mega_menu_defaults['footer_copy'],
             'children' => array(
                 array(
-                    'title' => 'RF & Microwave Filters',
-                    'url'   => home_url('/products/rf-microwave-filters/'),
-                    'links' => array(),
+                    'title' => 'Components',
+                    'url'   => home_url('/products/#core-lines'),
+                    'links' => array(
+                        array(
+                            'label' => 'RF & Microwave Filters',
+                            'url'   => home_url('/products/rf-microwave-filters/'),
+                        ),
+                        array(
+                            'label' => 'Waveguide Components',
+                            'url'   => home_url('/products/waveguide-components/'),
+                        ),
+                        array(
+                            'label' => 'RF Combiners & Duplexers',
+                            'url'   => home_url('/products/rf-combiners/'),
+                        ),
+                        array(
+                            'label' => 'Base Station RF',
+                            'url'   => home_url('/products/base-station-rf/'),
+                        ),
+                        array(
+                            'label' => 'Precision Enclosures',
+                            'url'   => home_url('/products/precision-enclosures/'),
+                        ),
+                    ),
                 ),
                 array(
-                    'title' => 'Waveguide Components',
-                    'url'   => home_url('/products/waveguide-components/'),
-                    'links' => array(),
-                ),
-                array(
-                    'title' => 'RF Combiners & Duplexers',
-                    'url'   => home_url('/products/rf-combiners/'),
-                    'links' => array(),
-                ),
-                array(
-                    'title' => 'Base Station RF',
-                    'url'   => home_url('/products/base-station-rf/'),
-                    'links' => array(),
-                ),
-                array(
-                    'title' => 'Precision Enclosures',
-                    'url'   => home_url('/products/precision-enclosures/'),
-                    'links' => array(),
+                    'title' => 'Systems & Active RF',
+                    'url'   => home_url('/products/#systems'),
+                    'links' => array(
+                        array(
+                            'label' => 'Antenna Test Systems',
+                            'url'   => home_url('/products/antenna-test-systems/'),
+                        ),
+                        array(
+                            'label' => 'Switch Matrices',
+                            'url'   => home_url('/products/switch-matrices/'),
+                        ),
+                        array(
+                            'label' => 'T/R Modules',
+                            'url'   => home_url('/products/tr-modules/'),
+                        ),
+                        array(
+                            'label' => 'Passive Microwave Components',
+                            'url'   => home_url('/products/passive-microwave-components/'),
+                        ),
+                        array(
+                            'label' => 'RF Front-Ends',
+                            'url'   => home_url('/products/rf-front-ends/'),
+                        ),
+                    ),
                 ),
             ),
         ),

@@ -54,6 +54,9 @@
     .sn-manufacturing .sn-manufacturing__gallery-body span { display: block; margin-bottom: 8px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
     .sn-manufacturing .sn-manufacturing__gallery-body h3 { font-size: 1rem; }
     .sn-manufacturing .sn-manufacturing__gallery-body p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .82rem; }
+    .sn-manufacturing .sn-manufacturing__line-evidence { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 28px; }
+    .sn-manufacturing .sn-manufacturing__line-evidence figure { margin-bottom: 0; }
+    .sn-manufacturing .sn-manufacturing__line-evidence img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
     .sn-manufacturing .sn-manufacturing__audit-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 54px); align-items: start; }
     .sn-manufacturing .sn-manufacturing__audit-layout figure { margin-bottom: 0; }
     .sn-manufacturing .sn-manufacturing__audit-layout img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
@@ -86,7 +89,7 @@
       .sn-manufacturing .sn-manufacturing__evidence-layout figure { max-width: 560px; }
     }
     @media (max-width: 700px) {
-      .sn-manufacturing .sn-manufacturing__hero-facts, .sn-manufacturing .sn-manufacturing__gallery, .sn-manufacturing .sn-manufacturing__checklists { grid-template-columns: 1fr; }
+      .sn-manufacturing .sn-manufacturing__hero-facts, .sn-manufacturing .sn-manufacturing__gallery, .sn-manufacturing .sn-manufacturing__line-evidence, .sn-manufacturing .sn-manufacturing__checklists { grid-template-columns: 1fr; }
       .sn-manufacturing .sn-manufacturing__hero-fact, .sn-manufacturing .sn-manufacturing__hero-fact + .sn-manufacturing__hero-fact { padding: 14px 0; border-left: 0; }
       .sn-manufacturing .sn-manufacturing__hero-fact + .sn-manufacturing__hero-fact { border-top: 1px solid rgba(252, 254, 255, .18); }
       .sn-manufacturing .sn-manufacturing__faq details p { padding-right: 0; }
@@ -223,6 +226,16 @@
           <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-tuning-line.webp" alt="Technicians tuning RF filters with vector network analyzers" width="1891" height="1064" loading="lazy" decoding="async">
           <div class="sn-manufacturing__gallery-body"><span>Step 03 · RF verification</span><h3>Measured evidence</h3><p>VNA, PIM, reliability or matrix testing is selected by product and specification. The result is recorded with conditions and limits; coverage is defined by the project plan.</p></div>
         </article>
+      </div>
+      <div class="sn-manufacturing__line-evidence">
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-cavity-assembly-station.webp" alt="Operator at a cavity filter assembly station" width="1920" height="1440" loading="lazy" decoding="async">
+          <figcaption>Cavity filter assembly station. Station screens show process data, not product specifications.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-filter-assembly-line.webp" alt="Cavity filter housings on an assembly line" width="1920" height="1440" loading="lazy" decoding="async">
+          <figcaption>Cavity filter housings moving through assembly. Photographs show the operation, not lot-specific results.</figcaption>
+        </figure>
       </div>
       <p>Applicable testing is not presented as 100% coverage for every product. The released control plan defines which characteristics are measured, at which stage and on which samples. See the <a href="/engineering/testing-quality/">testing and quality page</a> for report fields and traceability, and the <a href="/engineering/npi/">NPI path</a> for first-article and change-control records.</p>
       <div class="sn-manufacturing__actions"><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Inspect Test Evidence</a><a class="sn-btn sn-btn--secondary" href="/engineering/npi/">Review the NPI Baseline</a></div>

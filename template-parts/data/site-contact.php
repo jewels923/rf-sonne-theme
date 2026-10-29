@@ -23,4 +23,10 @@ return array(
     'address_region'   => 'Zhejiang Province',
     'address_country'  => 'CN',
     'quote_subject'    => 'Custom RF or Enclosure Quote Request',
+    'default_og_image' => array(
+        'url'    => 'https://rf-sonne.com/wp-content/uploads/2026/10/hero-satellite-earth-station-wide.webp',
+        'width'  => 1376,
+        'height' => 768,
+        'alt'    => 'SONNE RF and microwave components for satellite earth stations',
+    ),
 );

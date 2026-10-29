@@ -1,0 +1,70 @@
+<p>An RF diplexer routes two frequency bands between a common port and two band ports. On a block diagram it looks like a splitter, but most of these projects run into three inputs that were never stated: the guard band between the passbands, the match at the common port, and the power each band actually carries. This guide explains how the device works, which parameters decide its performance, and what an RFQ needs so that the quoted part matches the system rather than the product name.</p>
+
+<h2>What an RF Diplexer Does</h2>
+<p>A diplexer separates or combines two different frequency bands. Each band port passes its own band and rejects the other, and the common port connects to the antenna, feeder or distribution path. The device is reciprocal, so the same hardware splits one feed into two bands or combines two bands into one feed.</p>
+<p>The requirement is band-based, not direction-based. Each band port may carry a transmit signal, a receive signal, or both in a time-division system. That is what separates a diplexer from a duplexer, which separates transmit and receive directions of the same radio. When the architecture is still open, the <a href="/resources/insights/duplexer-vs-diplexer-combiner-guide/">duplexer vs diplexer comparison</a> sets out the decision; this guide assumes the band-based case and focuses on specifying the part.</p>
+<p>A multiplexer extends the same principle to three or more bands. Every additional band adds another junction interaction, so the common-port match and the isolation between non-adjacent bands both become harder to hold.</p>
+
+<h2>Diplexer Configurations in Practice</h2>
+<p>The most common configuration is a dual-band antenna fed by one cable: two radios connect to the band ports, the antenna connects to the common port, and each radio sees only its own band. A second configuration combines two sub-bands of the same direction into one broadband path, for example when a radio covers two transmit sub-bands that must share a feeder.</p>
+<p>Diplexers also appear in distributed antenna systems, where several bands are combined into one distribution path and must remain isolated from each other. The <a href="/products/ibs-das-components/">IBS and DAS component line</a> covers that context. In every configuration the internal structure is the same: two band-selective filter paths meeting at a common junction. The filters set the passbands and the rejection; the junction sets the common-port match and how the two paths interact.</p>
+
+<figure>
+<img src="https://rf-sonne.com/wp-content/uploads/2026/10/multi-band-combiner-se-cb-2w-ch-mf.webp" alt="Two-way multi-band RF combiner" width="720" height="720" loading="lazy" decoding="async">
+<figcaption>Representative two-way multi-band combiner hardware. A diplexer is the two-band case; the internal filters and the common-port junction decide isolation and loss, so the datasheet conditions matter more than the package photo.</figcaption>
+</figure>
+
+<h2>Cavity and Waveguide Diplexers</h2>
+<p>The electrical function is the same, but the realization changes with frequency, power and size. Cavity diplexers are common at lower bands where the enclosure can be compact and the filters can be tuned after assembly. Waveguide diplexers are used at higher frequencies and in applications where low loss and high power handling matter; the flange interface and the machining tolerance then become part of the electrical specification.</p>
+<p>The <a href="/products/waveguide-components/">waveguide component line</a> covers diplexers built in waveguide, including the flange and assembly details that decide repeatability. In both realizations, the tolerance chain from machining to plating to tuning determines whether the guard band and isolation hold across a production run, not only on the first article.</p>
+
+<h2>Parameters That Decide Diplexer Performance</h2>
+<p>Six parameters carry most of the risk. Each one needs a value, a frequency reference and a test condition; a diplexer datasheet that quotes a single typical number without them cannot be compared with another supplier's.</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>What it controls</th><th>What to state</th></tr>
+</thead>
+<tbody>
+<tr><td>Passbands and guard band</td><td>Which frequencies pass and how close the two bands sit</td><td>Lower and upper band edges per port; the separation between them</td></tr>
+<tr><td>Insertion loss</td><td>Signal loss through each band path</td><td>Loss per band, across the band, with connectors included or excluded</td></tr>
+<tr><td>Band-to-band isolation</td><td>How much signal from one band reaches the other port</td><td>Isolation across each band, with the remaining ports terminated</td></tr>
+<tr><td>Common-port return loss</td><td>Match seen by the antenna or feeder</td><td>Return loss across both bands at the common port</td></tr>
+<tr><td>Power handling</td><td>What each band port can carry, and whether both transmit at once</td><td>Average and peak power per band; simultaneous or exclusive</td></tr>
+<tr><td>PIM</td><td>Intermodulation produced in the filters and the common junction</td><td>Carrier frequencies, power per carrier, order and measurement frequency</td></tr>
+</tbody>
+</table>
+
+<h2>Reading the Guard Band Requirement</h2>
+<p>The guard band is the frequency space between the two passbands. A wide guard band allows simpler filters, lower loss and a more compact layout. A narrow guard band forces higher-order filtering, more resonators and tighter manufacturing control, and the insertion loss rises as a result.</p>
+<p>Rejection should be specified where it matters: inside the other band's passband, not only at the band edge. A diplexer can show strong rejection at the crossover and still leak at the far end of the adjacent band if the filter skirt is not defined there. State the rejection mask across the full band to be protected, and state the termination used for the measurement.</p>
+
+<h2>Power and PIM in Diplexer Applications</h2>
+<p>Unlike a duplexer, a diplexer may have power on both band ports at the same time. If both bands transmit simultaneously, the common junction carries the sum, and the filters must handle their own band without arcing, heating or drifting. That condition belongs in the RFQ; a rating quoted for one band alone does not cover it.</p>
+<p>PIM is generated where current density and material interfaces are least controlled: connector joints, tuning elements, plating transitions and the common junction. Specify the two carrier frequencies, the power per carrier, the intermodulation order and the measurement frequency. A low-power or single-carrier test does not predict multi-carrier behavior, so the PIM requirement should be tied to the actual configuration. The <a href="/engineering/testing-quality/">testing and quality process</a> describes how VNA and PIM evidence is produced and recorded.</p>
+
+<h2>Diplexer RFQ Checklist</h2>
+<ul>
+<li>Band edges for each port, and the guard band between them.</li>
+<li>Rejection mask inside the opposite band, with the termination used for the test.</li>
+<li>Insertion loss and return loss per band, and the common-port return loss across both bands.</li>
+<li>Power per band, average and peak, and whether both bands transmit simultaneously.</li>
+<li>PIM order, carrier frequencies, power per carrier and measurement frequency.</li>
+<li>Connector or flange types, port orientation, mounting and the available envelope.</li>
+<li>Test evidence and acceptance limits for the first article and for production lots.</li>
+</ul>
+<p>These inputs let the supplier choose the filter order and the junction design against the real requirement instead of quoting a catalogue part. They also make two quotations comparable, because each number carries the same condition.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>What is the difference between a diplexer and a duplexer?</h3>
+<p>A diplexer separates two frequency bands, while a duplexer separates transmit and receive directions of one radio. Both can share a common antenna port, but the isolation requirements and the port map differ. The comparison guide covers the decision in detail.</p>
+<h3>Can a diplexer combine two transmitters?</h3>
+<p>Yes, when the guard band, isolation, power and PIM conditions are specified for simultaneous operation. The common junction then carries both signals, so the power rating and the PIM test must reflect that condition rather than a single-band case.</p>
+<h3>How much isolation does a diplexer need?</h3>
+<p>It depends on what the isolation protects. State the receiver sensitivity or blocking level that must not be exceeded, and the power present in the opposite band. The required isolation follows from those two numbers, measured across the band and under defined terminations.</p>
+<h3>Can a diplexer feed a dual-band antenna with one connector?</h3>
+<p>Yes. The common port connects to the antenna and each band port connects to its radio. The antenna match across both bands matters, because a poor common-port match degrades both paths, so the antenna return loss belongs in the same specification.</p>
+
+<h2>Conclusion</h2>
+<p>A diplexer is a band-routing component whose performance is set by the guard band, the isolation mask, the common-port match and the power condition, not by the package or the product name. Specify each band separately, state the simultaneous-transmit case, and tie the PIM requirement to real test conditions. Review the <a href="/products/rf-combiners/">RF combiner, duplexer and diplexer range</a>, use the <a href="/resources/insights/duplexer-vs-diplexer-combiner-guide/">duplexer vs diplexer guide</a> when the architecture is still open, check the <a href="/engineering/testing-quality/">test and verification process</a>, and submit the band plan through <a href="/request-a-quote/">Request a Quote</a> for an engineering review.</p>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between a diplexer and a duplexer?","acceptedAnswer":{"@type":"Answer","text":"A diplexer separates two frequency bands, while a duplexer separates transmit and receive directions of one radio. Both can share a common antenna port, but the isolation requirements and the port map differ. The comparison guide covers the decision in detail."}},{"@type":"Question","name":"Can a diplexer combine two transmitters?","acceptedAnswer":{"@type":"Answer","text":"Yes, when the guard band, isolation, power and PIM conditions are specified for simultaneous operation. The common junction then carries both signals, so the power rating and the PIM test must reflect that condition rather than a single-band case."}},{"@type":"Question","name":"How much isolation does a diplexer need?","acceptedAnswer":{"@type":"Answer","text":"It depends on what the isolation protects. State the receiver sensitivity or blocking level that must not be exceeded, and the power present in the opposite band. The required isolation follows from those two numbers, measured across the band and under defined terminations."}},{"@type":"Question","name":"Can a diplexer feed a dual-band antenna with one connector?","acceptedAnswer":{"@type":"Answer","text":"Yes. The common port connects to the antenna and each band port connects to its radio. The antenna match across both bands matters, because a poor common-port match degrades both paths, so the antenna return loss belongs in the same specification."}}]}</script>

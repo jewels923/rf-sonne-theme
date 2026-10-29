@@ -245,6 +245,12 @@ class ChromeTests(unittest.TestCase):
         self.assertIn('sonne-insights', source)
         self.assertIn("'/assets/css/sonne-insights.css'", source)
 
+    def test_sitemap_cache_invalidated_on_publish(self):
+        source = read(FUNCTIONS)
+        self.assertIn("add_action('save_post'", source)
+        self.assertIn('invalidate_storage', source)
+        self.assertIn('RankMath\\Sitemap\\Cache', source)
+
 
 class CssTests(unittest.TestCase):
     def test_shared_cta_headings_stay_white(self):

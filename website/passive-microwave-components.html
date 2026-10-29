@@ -1,0 +1,266 @@
+<!-- wp:html -->
+<div class="sn-pmc">
+  <style>
+    .sn-pmc { color: var(--sn-text); }
+    .sn-pmc *, .sn-pmc *::before, .sn-pmc *::after { box-sizing: border-box; }
+    .sn-pmc h2, .sn-pmc h3, .sn-pmc p, .sn-pmc ul, .sn-pmc ol, .sn-pmc figure { margin-top: 0; }
+    .sn-pmc h2 { margin-bottom: 18px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-pmc h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-pmc p, .sn-pmc li { line-height: 1.7; }
+    .sn-pmc a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-pmc img { display: block; max-width: 100%; height: auto; }
+    .sn-pmc [id] { scroll-margin-top: 96px; }
+    .sn-pmc figure { position: relative; margin-bottom: 0; }
+    .sn-pmc figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
+    .sn-pmc .sn-pmc__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-pmc .sn-pmc__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 26px; }
+    .sn-pmc .sn-pmc__hero { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr); gap: clamp(34px, 6vw, 72px); align-items: center; }
+    .sn-pmc .sn-pmc__ledger { min-width: 1100px; }
+    .sn-pmc .sn-pmc__ledger tbody th { width: 215px; }
+    .sn-pmc .sn-pmc__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-pmc .sn-pmc__pair figure { display: flex; flex-direction: column; overflow: hidden; border: var(--sn-border); background: var(--sn-card); }
+    .sn-pmc .sn-pmc__pair img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .sn-pmc .sn-pmc__single { margin-top: 26px; overflow: hidden; border: var(--sn-border); background: var(--sn-card); }
+    .sn-pmc .sn-pmc__single img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
+    .sn-pmc .sn-pmc__blocks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 26px; border: var(--sn-border); background: var(--sn-line); }
+    .sn-pmc .sn-pmc__block { padding: 22px 20px; background: var(--sn-card); }
+    .sn-pmc .sn-pmc__block span { display: block; margin-bottom: 8px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; }
+    .sn-pmc .sn-pmc__block h3 { font-size: 1rem; }
+    .sn-pmc .sn-pmc__block p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-pmc .sn-pmc__note { max-width: 80ch; margin: 16px 0 0; color: var(--sn-text-muted); font-size: .85rem; line-height: 1.65; }
+    .sn-pmc .sn-pmc__links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-pmc .sn-pmc__link { display: flex; flex-direction: column; gap: 8px; padding: 22px; border: var(--sn-border); background: var(--sn-card); color: var(--sn-text); text-decoration: none; }
+    .sn-pmc .sn-pmc__link b { color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1rem; }
+    .sn-pmc .sn-pmc__link span { color: var(--sn-text-muted); font-size: .86rem; line-height: 1.6; }
+    .sn-pmc .sn-pmc__link em { color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .7rem; font-style: normal; letter-spacing: .06em; text-transform: uppercase; }
+    .sn-pmc .sn-pmc__link:hover b, .sn-pmc .sn-pmc__link:focus-visible b { color: var(--sn-cyan-dark); }
+    .sn-pmc .sn-pmc__order-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-pmc .sn-pmc__order { padding: 24px; border: var(--sn-border); background: var(--sn-card); }
+    .sn-pmc .sn-pmc__order h3 { font-family: var(--sn-font-mono); font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-pmc .sn-pmc__order ul { margin-bottom: 0; padding-left: 20px; }
+    .sn-pmc .sn-pmc__order li, .sn-pmc .sn-pmc__order p { color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-pmc .sn-pmc__order p:last-child { margin-bottom: 0; }
+    .sn-pmc .sn-pmc__faq { max-width: 940px; }
+    .sn-pmc .sn-pmc__faq details { border-bottom: var(--sn-border); }
+    .sn-pmc .sn-pmc__faq summary { position: relative; min-height: 44px; padding: 22px 46px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-pmc .sn-pmc__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-pmc .sn-pmc__faq details[open] summary::after { content: '−'; }
+    .sn-pmc .sn-pmc__faq details p { max-width: 78ch; padding-right: 36px; color: var(--sn-text-muted); }
+    @media (max-width: 1024px) {
+      .sn-pmc .sn-pmc__blocks, .sn-pmc .sn-pmc__links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .sn-pmc .sn-pmc__hero { grid-template-columns: 1fr; }
+      .sn-pmc .sn-pmc__pair, .sn-pmc .sn-pmc__order-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .sn-pmc .sn-pmc__ledger { min-width: 0; }
+      .sn-pmc .sn-pmc__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-pmc .sn-pmc__ledger, .sn-pmc .sn-pmc__ledger tbody, .sn-pmc .sn-pmc__ledger tr, .sn-pmc .sn-pmc__ledger th, .sn-pmc .sn-pmc__ledger td { display: block; width: 100%; }
+      .sn-pmc .sn-pmc__ledger tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
+      .sn-pmc .sn-pmc__ledger tbody th { width: auto; padding: 0 0 12px; border: 0; font-size: 1.04rem; }
+      .sn-pmc .sn-pmc__ledger tbody td { padding: 0 0 10px; border: 0; }
+      .sn-pmc .sn-pmc__ledger tbody td:last-child { padding-bottom: 0; }
+      .sn-pmc .sn-pmc__ledger tbody td::before { display: block; margin-bottom: 3px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; content: attr(data-label); }
+      .sn-pmc .sn-pmc__blocks, .sn-pmc .sn-pmc__links { grid-template-columns: 1fr; }
+      .sn-pmc .sn-pmc__single img { aspect-ratio: 4 / 3; }
+      .sn-pmc .sn-pmc__actions .sn-btn { width: 100%; }
+    }
+  </style>
+
+  <section class="sn-hero" aria-labelledby="pmc-title">
+    <div class="sn-container">
+      <div class="sn-pmc__hero">
+        <div>
+          <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">Passive Microwave Components</li></ol></nav>
+          <span class="sn-pmc__eyebrow">High-power passives · DC to 40 GHz</span>
+          <h1 id="pmc-title">High-Power Passive Microwave Components, DC–40 GHz</h1>
+          <p style="max-width:64ch;margin-bottom:18px;font-size:1.04rem;">Attenuators, terminations, dividers, couplers, waveguide parts and calibration networks built for benches and systems that cannot afford a weak link. Power rating, band, connector and environment decide the build — not the other way round.</p>
+          <div class="sn-pmc__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Specify a Passive</a><a class="sn-btn sn-btn--secondary" href="#pmc-matrix">Review the Range</a></div>
+        </div>
+        <figure class="sn-hero-plate">
+          <div class="sn-hero-plate__tag"><span>Plate 04</span><span>High-power attenuators</span></div>
+          <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/passive-attenuators.webp" alt="High-power RF attenuators with heat-sink fins" width="1080" height="1080" loading="eager" fetchpriority="high" decoding="async"></div>
+          <figcaption>High-power attenuators with heat-sink fins. The fin stack and housing are sized by the dissipated power, not by the attenuation value.</figcaption>
+        </figure>
+      </div>
+      <div class="sn-hero-meta"><span><b>Band</b>DC–40 GHz</span><span><b>Power</b>2 W–200 W</span><span><b>Waveguide</b>39–50 GHz</span><span><b>Linearity</b>IM ≤ −160 dBc</span></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="pmc-matrix" aria-labelledby="pmc-matrix-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>01</b> / Component matrix</span><span>8 families</span></div>
+        <div class="sn-record-title"><h2 id="pmc-matrix-title">Eight Families, One Selection Logic</h2><p>Each family below answers a different problem on the bench or in the rack. The band column narrows the choice; power and connector settle it.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="pmc-matrix-caption">
+        <table class="sn-ledger sn-pmc__ledger">
+          <caption id="pmc-matrix-caption" style="text-align:left;padding:0 0 12px;color:var(--sn-text-muted);font-size:.85rem;">High-power passive families with published band, rating and key figures. Values are the source specification and are confirmed on the datasheet for the ordered part.</caption>
+          <thead><tr><th scope="col">Family</th><th scope="col">Function</th><th scope="col">Band</th><th scope="col">Rating</th><th scope="col">Key figures</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">High-power attenuators</th><td data-label="Function">Level control and protection</td><td data-label="Band">DC–40 GHz</td><td data-label="Rating">2–200 W</td><td data-label="Key figures">200 W at 40 dB, 4 GHz · IM ≤ −160 dBc</td></tr>
+            <tr><th scope="row">Terminations and loads</th><td data-label="Function">Absorb unused power</td><td data-label="Band">DC–40 GHz</td><td data-label="Rating">2–200 W</td><td data-label="Key figures">Low VSWR across the rated band · forced-air options</td></tr>
+            <tr><th scope="row">Power dividers</th><td data-label="Function">Split one path into eight</td><td data-label="Band">1–18 / 16–32 / 17–22 / 32–36 GHz</td><td data-label="Rating">Reactively split, no active stage</td><td data-label="Key figures">8-way · insertion loss ≤3 dB excluding split · isolation ≥18 dB · VSWR ≤1.5</td></tr>
+            <tr><th scope="row">Two-way dividers</th><td data-label="Function">Split into two</td><td data-label="Band">27–31 GHz</td><td data-label="Rating">Reactively split</td><td data-label="Key figures">Isolation ≥18 dB · VSWR ≤1.5</td></tr>
+            <tr><th scope="row">Directional couplers</th><td data-label="Function">Sample forward or reverse power</td><td data-label="Band">1–40 GHz</td><td data-label="Rating">250 W (1–6 GHz) · 200 W (6–18 GHz) · 80 W (18–40 GHz)</td><td data-label="Key figures">Coupling and directivity confirmed per band and part number</td></tr>
+            <tr><th scope="row">Antenna calibration network</th><td data-label="Function">Inject a calibration signal into an antenna feed</td><td data-label="Band">1.7–6 GHz</td><td data-label="Rating">50 W · N female · IP55</td><td data-label="Key figures">Isolation &gt;50 dB · VSWR &lt;1.4 · IL &lt;2.5 dB · cal port 26 ± 2 dB</td></tr>
+            <tr><th scope="row">Waveguide components</th><td data-label="Function">V-band routing and termination</td><td data-label="Band">39–50 GHz</td><td data-label="Rating">≤50 W</td><td data-label="Key figures">Insertion loss ≤0.5 dB · VSWR ≤1.4</td></tr>
+            <tr><th scope="row">75 ↔ 50 Ω transformer</th><td data-label="Function">Match two impedance systems</td><td data-label="Band">Project-defined</td><td data-label="Rating">Project-defined</td><td data-label="Key figures">Impedance transformation with matched connector series</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-pmc__note">Power ratings are quoted for a defined mounting and ambient condition. A part run without the intended heat sink or airflow will not carry its published rating, so the mounting condition is part of the specification.</p>
+      <div class="sn-pmc__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send a Power and Band</a><a class="sn-btn sn-btn--secondary" href="/products/rf-accessories/">See RF Accessories</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="pmc-thermal" aria-labelledby="pmc-thermal-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>02</b> / Thermal path</span><span>3 blocks</span></div>
+        <div class="sn-record-title"><h2 id="pmc-thermal-title">Where High-Power Passives Fail</h2><p>A 200 W attenuator is a thermal component that happens to have an RF function. Heat has to leave the resistive element and reach the housing before it reaches the connector.</p></div>
+      </div>
+      <div class="sn-pmc__blocks">
+        <div class="sn-pmc__block"><span>Block 01</span><h3>Resistive element</h3><p>Thin-film or thick-film on a thermally conductive substrate. The element geometry sets both the attenuation value and the heat density it must survive.</p></div>
+        <div class="sn-pmc__block"><span>Block 02</span><h3>Die attach and substrate</h3><p>The die attachment and substrate carry heat into the metal housing. A void here shows up later as drift or an open circuit under load.</p></div>
+        <div class="sn-pmc__block"><span>Block 03</span><h3>Housing and fins</h3><p>Machined housing with fins or a mounting pad. The interface to the bench or cold plate is part of the rating and is stated on the datasheet.</p></div>
+      </div>
+      <div class="sn-pmc__pair">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/passive-load.webp" alt="High-power RF termination load with heat sink" width="1080" height="1080" loading="lazy" decoding="async"><figcaption>High-power termination. The heat sink is sized for continuous dissipation at the rated ambient, not for short bursts.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/passive-divider.webp" alt="Eight-way microstrip power divider with SMA connectors" width="1400" height="1400" loading="lazy" decoding="async"><figcaption>Eight-way microstrip divider in a machined housing. Isolation depends on the internal termination quality, not only the split ratio.</figcaption></figure>
+      </div>
+      <p class="sn-pmc__note">Linear performance matters as much as thermal performance. Intermodulation values down to −160 dBc and lower are quoted for defined two-tone conditions, and the test condition is part of the number. Divider isolation follows the network topology as much as the split ratio; the <a href="/resources/insights/wilkinson-power-divider-guide/">Wilkinson power divider guide</a> explains how isolation and split loss are read separately.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" id="pmc-cal" aria-labelledby="pmc-cal-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>03</b> / Calibration network</span><span>1 reference build</span></div>
+        <div class="sn-record-title"><h2 id="pmc-cal-title">A Calibration Network Is a Tracking Problem</h2><p>The antenna calibration network injects a known signal into an active antenna feed. What matters is not the absolute value but how little the coupled path drifts in amplitude and phase across the band and over temperature.</p></div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="pmc-cal-caption">
+        <table class="sn-table">
+          <caption id="pmc-cal-caption" style="text-align:left;padding:0 0 12px;color:var(--sn-text-muted);font-size:.85rem;">Published values for the antenna calibration network reference build.</caption>
+          <thead><tr><th scope="col">Parameter</th><th scope="col">Published value</th><th scope="col">Why it matters</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Band</th><td data-label="Published value">1.7–6 GHz</td><td data-label="Why it matters">Covers the cellular bands where active antennas are calibrated in service</td></tr>
+            <tr><th scope="row">Isolation</th><td data-label="Published value">&gt;50 dB</td><td data-label="Why it matters">Keeps the calibration path from loading the antenna during traffic</td></tr>
+            <tr><th scope="row">VSWR / insertion loss</th><td data-label="Published value">&lt;1.4 / &lt;2.5 dB</td><td data-label="Why it matters">Limits the standing wave and loss added to the main path</td></tr>
+            <tr><th scope="row">Cal port level</th><td data-label="Published value">26 ± 2 dB coupled</td><td data-label="Why it matters">Sets the injection level the radio expects at the calibration port</td></tr>
+            <tr><th scope="row">Amplitude tracking</th><td data-label="Published value">±0.5 dB / ±0.6 dB</td><td data-label="Why it matters">Keeps calibration accuracy stable across units and temperature</td></tr>
+            <tr><th scope="row">Phase tracking</th><td data-label="Published value">±8° / ±6°</td><td data-label="Why it matters">Phase error maps directly into beam-steering error</td></tr>
+            <tr><th scope="row">Power and environment</th><td data-label="Published value">50 W · N female · IP55</td><td data-label="Why it matters">Outdoor mounting and the transmit power through the main path</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-pmc__note">Two tracking figures are listed where the source distinguishes them. The condition that separates the two — band segment or temperature range — is defined on the datasheet and confirmed at review.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="pmc-scope" aria-labelledby="pmc-scope-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>04</b> / Scope</span><span>3 linked ranges</span></div>
+        <div class="sn-record-title"><h2 id="pmc-scope-title">Where This Range Ends</h2><p>Some components that sit next to these passives are catalogued on their own pages, with their own selection tables. Use the links below to avoid buying from the wrong list.</p></div>
+      </div>
+      <div class="sn-pmc__links">
+        <a class="sn-pmc__link" href="/products/waveguide-components/"><em>Waveguide</em><b>Waveguide Components</b><span>Straight, curved and twisted sections, couplers, transitions and waveguide terminations.</span></a>
+        <a class="sn-pmc__link" href="/products/rf-combiners/"><em>Combining</em><b>RF Combiners</b><span>Multi-band combiners, hybrid couplers and low-loss combining networks for base stations.</span></a>
+        <a class="sn-pmc__link" href="/products/rf-accessories/"><em>Accessories</em><b>RF Accessories</b><span>Cable assemblies, adapters, loads and bench accessories catalogued by part number.</span></a>
+      </div>
+      <div class="sn-pmc__single">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/passive-waveguide-parts.webp" alt="V-band waveguide loads and adapters with circular flanges" width="1400" height="788" loading="lazy" decoding="async"><figcaption>V-band waveguide loads and adapters, 39–50 GHz. Waveguide sections and couplers are listed on the waveguide page.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="pmc-rfq" aria-labelledby="pmc-rfq-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>05</b> / RFQ inputs</span><span>2 stages</span></div>
+        <div class="sn-record-title"><h2 id="pmc-rfq-title">What a Passive Quote Needs</h2><p>Power, band and connector decide most of the build. Add the mounting condition and the environment, and the thermal case can be checked in the same pass.</p></div>
+      </div>
+      <div class="sn-pmc__order-grid">
+        <div class="sn-pmc__order">
+          <h3>Known at inquiry</h3>
+          <ul><li>Function and value: attenuation, split ratio or coupling</li><li>Band and the frequencies actually used</li><li>Forward power, duty cycle and load VSWR</li><li>Connector series or waveguide flange</li><li>Mounting condition: free air, heat sink or cold plate</li><li>Ambient temperature and indoor or outdoor use</li><li>Quantity and delivery schedule</li></ul>
+        </div>
+        <div class="sn-pmc__order">
+          <h3>Confirmed by review</h3>
+          <p>Element type, housing, connector and thermal path are confirmed against the power, band and mounting condition.</p>
+          <p>Price, lead time, warranty and acceptance tests are quoted per configuration and per order. This page does not publish a cross-project policy for any of them.</p>
+          <p>A complete RFQ typically receives initial engineering feedback in about 24 hours; that response is not a final specification.</p>
+        </div>
+      </div>
+      <div class="sn-pmc__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit a Passive RFQ</a><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Request a Datasheet</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="pmc-faq" aria-labelledby="pmc-faq-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>06</b> / Questions</span><span>5 entries</span></div>
+        <div class="sn-record-title"><h2 id="pmc-faq-title">High-Power Passive Questions</h2><p>Five questions asked before a power component is ordered.</p></div>
+      </div>
+      <div class="sn-pmc__faq">
+        <details open><summary>Is the power rating continuous or peak?</summary><p>The rating is stated for a defined mounting and ambient condition, and that condition is on the datasheet. A part used without the intended heat sink or airflow will not carry the published figure. Where the application is pulsed, the duty cycle and pulse width are supplied so the thermal case can be checked.</p></details>
+        <details><summary>Why does insertion loss exclude the split?</summary><p>A two-way divider inherently halves the power, which is 3 dB. Quoting insertion loss excluding the split separates the design's own loss from that unavoidable division, so an eight-way divider can be compared with another eight-way divider on equal terms.</p></details>
+        <details><summary>Can a calibration network be built for another band?</summary><p>Yes, when the band and the feed interface are defined. The published build covers 1.7–6 GHz with N female connectors and IP55. A different band or connector changes the internal coupler and the housing, so those are confirmed before quotation.</p></details>
+        <details><summary>Do you supply waveguide components on this page?</summary><p>Only the V-band 39–50 GHz parts are listed here. Straight, curved and twisted sections, couplers and transitions are catalogued on the <a href="/products/waveguide-components/">waveguide components</a> page so the flange and section tables stay in one place.</p></details>
+        <details><summary>How is linearity specified?</summary><p>As intermodulation for a defined two-tone test, with values to −160 dBc and lower depending on the part. The test condition — tone spacing and power per tone — is part of the number; without it, an IM figure cannot be compared with another supplier's.</p></details>
+      </div>
+      <div class="sn-pmc__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Ask a Passive Engineer</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="pmc-cta-title">
+    <div class="sn-container">
+      <div class="sn-sheet">
+        <div class="sn-sheet__head"><span>RFQ route · high-power passives</span><span>Power, band, mounting</span></div>
+        <div class="sn-sheet__grid">
+          <div>
+            <h2 id="pmc-cta-title">Send the Power, the Band and the Mounting</h2>
+            <p>One RFQ can cover attenuators, loads, dividers, couplers and waveguide parts. Attach the block diagram and the mounting condition so the thermal path and the connector series are checked together.</p>
+            <p>Working on a multi-component chain? <a href="/engineering/custom-rf-design/">Open a custom evaluation</a> or <a href="/resources/datasheets/">request the datasheet set</a>.</p>
+            <div class="sn-pmc__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request a Passive Quote</a></div>
+          </div>
+          <div class="sn-sheet__panel">
+            <h3>Attach to the RFQ</h3>
+            <ul><li>Function and value per part</li><li>Band and used frequencies</li><li>Forward power and load VSWR</li><li>Connector series or flange</li><li>Mounting and cooling condition</li><li>Ambient and indoor or outdoor use</li><li>Quantity and delivery site</li></ul>
+            <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. Quotation and delivery follow the confirmed configuration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/passive-microwave-components/#product",
+        "name": "High-Power Passive Microwave Components, DC–40 GHz",
+        "url": "https://rf-sonne.com/products/passive-microwave-components/",
+        "description": "High-power attenuators, terminations, power dividers, directional couplers, waveguide parts and antenna calibration networks from DC to 40 GHz.",
+        "category": "Passive microwave components",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/passive-attenuators.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/passive-microwave-components/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"Passive Microwave Components","item":"https://rf-sonne.com/products/passive-microwave-components/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

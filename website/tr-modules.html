@@ -1,0 +1,264 @@
+<!-- wp:html -->
+<div class="sn-trm">
+  <style>
+    .sn-trm { color: var(--sn-text); }
+    .sn-trm *, .sn-trm *::before, .sn-trm *::after { box-sizing: border-box; }
+    .sn-trm h2, .sn-trm h3, .sn-trm p, .sn-trm ul, .sn-trm ol, .sn-trm figure { margin-top: 0; }
+    .sn-trm h2 { margin-bottom: 18px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-trm h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-trm p, .sn-trm li { line-height: 1.7; }
+    .sn-trm a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-trm img { display: block; max-width: 100%; height: auto; }
+    .sn-trm [id] { scroll-margin-top: 96px; }
+    .sn-trm figure { position: relative; margin-bottom: 0; }
+    .sn-trm figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
+    .sn-trm .sn-trm__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-trm .sn-trm__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 26px; }
+    .sn-trm .sn-trm__hero { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr); gap: clamp(34px, 6vw, 72px); align-items: center; }
+    .sn-trm .sn-trm__ledger { min-width: 1080px; }
+    .sn-trm .sn-trm__ledger tbody th { width: 210px; }
+    .sn-trm .sn-trm__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-trm .sn-trm__pair figure { display: flex; flex-direction: column; overflow: hidden; border: var(--sn-border); background: var(--sn-card); }
+    .sn-trm .sn-trm__pair img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .sn-trm .sn-trm__blocks { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 26px; border: var(--sn-border); background: var(--sn-line); }
+    .sn-trm .sn-trm__block { padding: 22px 20px; background: var(--sn-card); }
+    .sn-trm .sn-trm__block span { display: block; margin-bottom: 8px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; }
+    .sn-trm .sn-trm__block h3 { font-size: 1rem; }
+    .sn-trm .sn-trm__block p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-trm .sn-trm__note { max-width: 80ch; margin: 16px 0 0; color: var(--sn-text-muted); font-size: .85rem; line-height: 1.65; }
+    .sn-trm .sn-trm__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .62fr); gap: clamp(22px, 4vw, 48px); align-items: start; margin-top: 26px; }
+    .sn-trm .sn-trm__callout { padding: 24px; border: var(--sn-border); background: var(--sn-card); }
+    .sn-trm .sn-trm__callout h3 { font-family: var(--sn-font-mono); font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-trm .sn-trm__callout ul { margin-bottom: 0; padding-left: 20px; }
+    .sn-trm .sn-trm__callout li, .sn-trm .sn-trm__callout p { color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-trm .sn-trm__callout p:last-child { margin-bottom: 0; }
+    .sn-trm .sn-trm__order-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-trm .sn-trm__order { padding: 24px; border: var(--sn-border); background: var(--sn-card); }
+    .sn-trm .sn-trm__order h3 { font-family: var(--sn-font-mono); font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-trm .sn-trm__order ul { margin-bottom: 0; padding-left: 20px; }
+    .sn-trm .sn-trm__order li, .sn-trm .sn-trm__order p { color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-trm .sn-trm__order p:last-child { margin-bottom: 0; }
+    .sn-trm .sn-trm__faq { max-width: 940px; }
+    .sn-trm .sn-trm__faq details { border-bottom: var(--sn-border); }
+    .sn-trm .sn-trm__faq summary { position: relative; min-height: 44px; padding: 22px 46px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-trm .sn-trm__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-trm .sn-trm__faq details[open] summary::after { content: '−'; }
+    .sn-trm .sn-trm__faq details p { max-width: 78ch; padding-right: 36px; color: var(--sn-text-muted); }
+    @media (max-width: 1024px) {
+      .sn-trm .sn-trm__blocks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sn-trm .sn-trm__grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .sn-trm .sn-trm__hero { grid-template-columns: 1fr; }
+      .sn-trm .sn-trm__pair, .sn-trm .sn-trm__order-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .sn-trm .sn-trm__ledger { min-width: 0; }
+      .sn-trm .sn-trm__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-trm .sn-trm__ledger, .sn-trm .sn-trm__ledger tbody, .sn-trm .sn-trm__ledger tr, .sn-trm .sn-trm__ledger th, .sn-trm .sn-trm__ledger td { display: block; width: 100%; }
+      .sn-trm .sn-trm__ledger tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
+      .sn-trm .sn-trm__ledger tbody th { width: auto; padding: 0 0 12px; border: 0; font-size: 1.04rem; }
+      .sn-trm .sn-trm__ledger tbody td { padding: 0 0 10px; border: 0; }
+      .sn-trm .sn-trm__ledger tbody td:last-child { padding-bottom: 0; }
+      .sn-trm .sn-trm__ledger tbody td::before { display: block; margin-bottom: 3px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; content: attr(data-label); }
+      .sn-trm .sn-trm__blocks { grid-template-columns: 1fr; }
+      .sn-trm .sn-trm__actions .sn-btn { width: 100%; }
+    }
+  </style>
+
+  <section class="sn-hero" aria-labelledby="trm-title">
+    <div class="sn-container">
+      <div class="sn-trm__hero">
+        <div>
+          <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">T/R Modules</li></ol></nav>
+          <span class="sn-trm__eyebrow">T/R modules · 8 to 32 channels · Ku to Ka band</span>
+          <h1 id="trm-title">Ku, K and Ka-Band T/R Modules for Phased Arrays</h1>
+          <p style="max-width:64ch;margin-bottom:18px;font-size:1.04rem;">Multichannel transmit/receive modules with integrated phase and attenuation control, built for array front ends, satellite terminals and instrumentation. Channel count, band, output power and control word are fixed per project; a module layout from one band is not assumed to fit another.</p>
+          <div class="sn-trm__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Specify a T/R Module</a><a class="sn-btn sn-btn--secondary" href="#trm-models">Compare Modules</a></div>
+        </div>
+        <figure class="sn-hero-plate">
+          <div class="sn-hero-plate__tag"><span>Plate 03</span><span>8-channel Ku</span></div>
+          <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/tr-module-8ch.webp" alt="Eight-channel Ku-band T/R module assembly" width="924" height="924" loading="eager" fetchpriority="high" decoding="async"></div>
+          <figcaption>Eight-channel Ku-band T/R module. Phase and attenuation are set per channel through the control interface.</figcaption>
+        </figure>
+      </div>
+      <div class="sn-hero-meta"><span><b>Channels</b>8 / 13 / 32</span><span><b>Bands</b>Ku · K · Ka</span><span><b>Transmit</b>to 5 W per channel</span><span><b>Control</b>6-bit phase and attenuation</span></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="trm-models" aria-labelledby="trm-models-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>01</b> / Modules</span><span>4 entries</span></div>
+        <div class="sn-record-title"><h2 id="trm-models-title">Four Module Families Across Three Bands</h2><p>Each family is a starting point, not a catalogue item. Band edges, channel count and output power are re-cut for the array geometry and the control electronics behind it.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="trm-models-caption">
+        <table class="sn-ledger sn-trm__ledger">
+          <caption id="trm-models-caption" style="text-align:left;padding:0 0 12px;color:var(--sn-text-muted);font-size:.85rem;">T/R module families with published band, channel count and key figures. Values are the source specification and are confirmed on the datasheet for the ordered variant.</caption>
+          <thead><tr><th scope="col">Module</th><th scope="col">Band</th><th scope="col">Channels</th><th scope="col">Transmit</th><th scope="col">Receive</th><th scope="col">Control</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">8-channel Ku</th><td data-label="Band">Ku, 4 GHz bandwidth</td><td data-label="Channels">8</td><td data-label="Transmit">≥5 W per channel · efficiency ≥23% at 10% duty</td><td data-label="Receive">Noise figure ≤3.5 dB</td><td data-label="Control">6-bit phase and 6-bit attenuation · 78 × 47 × 9 mm</td></tr>
+            <tr><th scope="row">32-channel K</th><td data-label="Band">K, 24–28 GHz</td><td data-label="Channels">32</td><td data-label="Transmit">≥0.1 W per channel</td><td data-label="Receive">Noise figure ≤4.5 dB · gain 32 ± 1.5 dB</td><td data-label="Control">Per-channel phase and attenuation</td></tr>
+            <tr><th scope="row">Ku configurable</th><td data-label="Band">Ku, 15–18 GHz typical</td><td data-label="Channels">Defined by the array</td><td data-label="Transmit">2 / 5 / 10 / 15 W options</td><td data-label="Receive">Noise figure ≤3.5 dB · gain 20–50 dB</td><td data-label="Control">4-bit to 7-bit phase and attenuation</td></tr>
+            <tr><th scope="row">Ka single-channel</th><td data-label="Band">Ka, 35 GHz ± 400 MHz</td><td data-label="Channels">1</td><td data-label="Transmit">Input 3.4 GHz or 3.475 GHz, ×4 multiplier</td><td data-label="Receive">Noise figure ≤11 dB</td><td data-label="Control">LO 9.6 GHz ± 100 MHz</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-trm__note">Transmit power is quoted per channel at the module output. Duty cycle, pulse width and cooling change what the module can sustain, so the thermal case is agreed for the actual waveform rather than assumed from the peak figure.</p>
+      <div class="sn-trm__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send an Array Requirement</a><a class="sn-btn sn-btn--secondary" href="/products/rf-front-ends/">Review RF Front-Ends</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="trm-anatomy" aria-labelledby="trm-anatomy-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>02</b> / Module anatomy</span><span>4 blocks</span></div>
+        <div class="sn-record-title"><h2 id="trm-anatomy-title">What Sits Inside a T/R Channel</h2><p>Every channel repeats the same four blocks. The array performance is the sum of these channels, so channel-to-channel tracking matters as much as the single-channel specification.</p></div>
+      </div>
+      <div class="sn-trm__blocks">
+        <div class="sn-trm__block"><span>Block 01</span><h3>Transmit chain</h3><p>Drives the antenna port at the rated power. Gain, saturated output and efficiency are set together with the duty cycle the array will run.</p></div>
+        <div class="sn-trm__block"><span>Block 02</span><h3>Receive chain</h3><p>Low-noise amplification ahead of the array combiner. Noise figure and gain are specified at the module output, not at the antenna.</p></div>
+        <div class="sn-trm__block"><span>Block 03</span><h3>Phase and attenuation</h3><p>Beam steering and amplitude taper are applied per channel. Resolution is 4 to 7 bits depending on the family; the control word is defined with the beam controller.</p></div>
+        <div class="sn-trm__block"><span>Block 04</span><h3>Control and power</h3><p>A single control interface carries channel settings and health data. Supply voltage, current per channel and thermal path are confirmed against the array housing.</p></div>
+      </div>
+      <div class="sn-trm__pair">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/tr-module-32ch.webp" alt="32-channel K-band T/R module board" width="760" height="760" loading="lazy" decoding="async"><figcaption>32-channel K-band module with a single control connector. Channel pitch follows the array lattice, not a standard card format.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/tr-module-pcb.webp" alt="Multi-channel RF module board with surface-mount devices" width="609" height="403" loading="lazy" decoding="async"><figcaption>Multi-channel RF board. Assembly, shielding and thermal path are designed together; a board photograph is not a build specification.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="trm-validation" aria-labelledby="trm-validation-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>03</b> / Validation</span><span>5 checkpoints</span></div>
+        <div class="sn-record-title"><h2 id="trm-validation-title">How a Module Is Accepted</h2><p>Acceptance is written before the first article is built. Each checkpoint below is agreed with the customer and reported as measured data for the delivered units.</p></div>
+      </div>
+      <div class="sn-trm__grid">
+        <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="trm-validation-caption">
+          <table class="sn-table">
+            <caption id="trm-validation-caption" style="text-align:left;padding:0 0 12px;color:var(--sn-text-muted);font-size:.85rem;">T/R module acceptance checkpoints and what each one verifies.</caption>
+            <thead><tr><th scope="col">Checkpoint</th><th scope="col">Method</th><th scope="col">What it verifies</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Small-signal RF</th><td data-label="Method">S-parameters per channel over the band</td><td data-label="What it verifies">Gain, match and channel-to-channel tracking</td></tr>
+              <tr><th scope="row">Transmit power</th><td data-label="Method">Pulsed power at the specified duty cycle</td><td data-label="What it verifies">Output and compression margin at the array waveform</td></tr>
+              <tr><th scope="row">Noise figure</th><td data-label="Method">Noise measurement at the module output</td><td data-label="What it verifies">Receive sensitivity against the published limit</td></tr>
+              <tr><th scope="row">Phase and attenuation</th><td data-label="Method">Step response across all control states</td><td data-label="What it verifies">Resolution, monotonicity and state accuracy</td></tr>
+              <tr><th scope="row">Thermal</th><td data-label="Method">Temperature rise at the mounting interface</td><td data-label="What it verifies">That the housing can carry the dissipated heat</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sn-trm__callout">
+          <h3>Before release</h3>
+          <ul><li>Band edges and channel count frozen</li><li>Control word and interface agreed</li><li>Waveform and duty cycle defined</li><li>Cooling method and interface temperature</li><li>Acceptance limits written into the PO</li></ul>
+          <p style="margin-top:14px;">Where a project needs screening beyond this list, the additional tests and their limits are agreed in writing before first article.</p>
+        </div>
+      </div>
+      <p class="sn-trm__note">Environmental qualification is quoted per project against the stated test standards. This page does not publish a qualification claim that applies to every module in the family.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="trm-fit" aria-labelledby="trm-fit-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>04</b> / Application fit</span><span>3 routes</span></div>
+        <div class="sn-record-title"><h2 id="trm-fit-title">Where These Modules Are Used</h2><p>The module is the repeating element of an array. The application decides the channel pitch, the control bus and how much heat the housing must move.</p></div>
+      </div>
+      <div class="sn-trm__blocks">
+        <div class="sn-trm__block"><span>Route 01</span><h3>Radar front ends</h3><p>Pulsed operation with tight channel tracking. Duty cycle drives the thermal case, and the module is specified against the waveform rather than a continuous rating.</p></div>
+        <div class="sn-trm__block"><span>Route 02</span><h3>Satellite terminals</h3><p>Ku and Ka bands with phase control for electronic steering. Gain and noise figure are specified at the module interface used by the terminal.</p></div>
+        <div class="sn-trm__block"><span>Route 03</span><h3>Test and instrumentation</h3><p>Multichannel sources and receivers where a compact 8- or 32-channel block replaces discrete instruments.</p></div>
+        <div class="sn-trm__block"><span>Route 04</span><h3>Custom array builds</h3><p>Channel count, pitch and control interface are re-cut for the array. A module family is a starting point, and the layout is confirmed against the housing.</p></div>
+      </div>
+      <p class="sn-trm__note">Customer names and program references are not published. Applications are described by function so the engineering fit can be assessed without disclosing a customer's design.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" id="trm-rfq" aria-labelledby="trm-rfq-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>05</b> / RFQ inputs</span><span>2 stages</span></div>
+        <div class="sn-record-title"><h2 id="trm-rfq-title">What a Module Quote Needs</h2><p>Band, channel count, waveform and control interface decide the design. Sending the array geometry with the RFQ removes the most common round of questions.</p></div>
+      </div>
+      <div class="sn-trm__order-grid">
+        <div class="sn-trm__order">
+          <h3>Known at inquiry</h3>
+          <ul><li>Band and bandwidth per channel</li><li>Channel count and lattice pitch</li><li>Transmit power and duty cycle</li><li>Noise figure and gain targets</li><li>Phase and attenuation resolution</li><li>Control interface and supply rails</li><li>Housing envelope and cooling path</li><li>Quantity and delivery schedule</li></ul>
+        </div>
+        <div class="sn-trm__order">
+          <h3>Confirmed by review</h3>
+          <p>Channel layout, device selection, control board and thermal path are confirmed against the array housing and the beam controller.</p>
+          <p>Price, lead time, warranty and acceptance tests are quoted per configuration and per order. This page does not publish a cross-project policy for any of them.</p>
+          <p>A complete RFQ typically receives initial engineering feedback in about 24 hours; that response is not a final specification.</p>
+        </div>
+      </div>
+      <div class="sn-trm__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit a Module RFQ</a><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Review Test and Quality</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="trm-faq" aria-labelledby="trm-faq-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>06</b> / Questions</span><span>5 entries</span></div>
+        <div class="sn-record-title"><h2 id="trm-faq-title">T/R Module Questions</h2><p>Five questions asked before a module layout is frozen.</p></div>
+      </div>
+      <div class="sn-trm__faq">
+        <details open><summary>Can the channel count be changed?</summary><p>Yes. The published families cover 8, 13 and 32 channels, and the count follows the array lattice. Channel count changes the board layout, the control word and the thermal path, so it is fixed before the first article rather than added afterwards.</p></details>
+        <details><summary>Is transmit power quoted per channel or for the module?</summary><p>Per channel, at the module output. The figure depends on duty cycle, pulse width and cooling, so the sustained rating is agreed for the actual waveform. A peak number taken from another application is not a valid comparison.</p></details>
+        <details><summary>Which phase and attenuation resolution is available?</summary><p>Six-bit phase and six-bit attenuation on the 8-channel Ku module; 4-bit to 7-bit options on the configurable Ku family. The resolution is chosen with the beam controller so the control word and the software table match.</p></details>
+        <details><summary>Do you publish environmental qualification for every module?</summary><p>No. Qualification is quoted per project against the stated test standards, and the report covers the delivered configuration. A generic qualification statement would not tell you how a specific module behaves in your housing.</p></details>
+        <details><summary>Can you supply the control electronics as well?</summary><p>Yes, when the project needs it. The control board, interface and channel table can be supplied with the module or built to the customer's own controller. The interface definition is agreed before layout so both sides can be tested independently.</p></details>
+      </div>
+      <div class="sn-trm__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Ask a Module Engineer</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="trm-cta-title">
+    <div class="sn-container">
+      <div class="sn-sheet">
+        <div class="sn-sheet__head"><span>RFQ route · T/R modules</span><span>Band, channels and waveform</span></div>
+        <div class="sn-sheet__grid">
+          <div>
+            <h2 id="trm-cta-title">Send the Array Geometry and the Waveform</h2>
+            <p>One RFQ can cover band, channel count, transmit power, receive chain, control interface and housing. Attach the lattice drawing and the duty cycle so the review starts from the conditions the module will actually run.</p>
+            <p>Need the front end around the module? <a href="/products/rf-front-ends/">Review the Ku-band RF front-end</a> or <a href="/engineering/custom-rf-design/">open a custom evaluation</a>.</p>
+            <div class="sn-trm__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request a Module Quote</a></div>
+          </div>
+          <div class="sn-sheet__panel">
+            <h3>Attach to the RFQ</h3>
+            <ul><li>Array lattice drawing and channel pitch</li><li>Band edges and per-channel bandwidth</li><li>Transmit power, duty cycle and pulse width</li><li>Noise figure and gain targets</li><li>Phase and attenuation resolution</li><li>Control interface and supply rails</li><li>Housing envelope and cooling path</li></ul>
+            <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. Quotation and delivery follow the confirmed configuration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/tr-modules/#product",
+        "name": "Ku, K and Ka-Band T/R Modules for Phased Arrays",
+        "url": "https://rf-sonne.com/products/tr-modules/",
+        "description": "Multichannel Ku, K and Ka-band transmit/receive modules with integrated phase and attenuation control for array front ends, satellite terminals and instrumentation.",
+        "category": "RF transmit/receive modules",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/tr-module-8ch.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/tr-modules/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"T/R Modules","item":"https://rf-sonne.com/products/tr-modules/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

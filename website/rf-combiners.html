@@ -41,11 +41,12 @@
     .sn-combiners .sn-combiners__scenarios tbody th { width: 20%; }
     .sn-combiners .sn-combiners__verification { min-width: 1050px; }
     .sn-combiners .sn-combiners__bandplan { min-width: 1100px; }
+    .sn-combiners .sn-combiners__dividers { min-width: 980px; }
     .sn-combiners .sn-combiners__ledger caption { padding: 0 0 12px; color: var(--sn-text-muted); font-size: .82rem; text-align: left; }
     .sn-combiners .sn-combiners__product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
     .sn-combiners .sn-combiners__product-grid figure { position: relative; display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
-    .sn-combiners .sn-combiners__product-frame { padding: 14px; background: var(--sn-paper-muted); }
-    .sn-combiners .sn-combiners__product-grid img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; clip-path: inset(1px); }
+    .sn-combiners .sn-combiners__product-frame { overflow: hidden; background: var(--sn-white); }
+    .sn-combiners .sn-combiners__product-grid img { display: block; width: 100%; height: auto; aspect-ratio: 1024 / 571; object-fit: cover; clip-path: inset(1px); }
     .sn-combiners .sn-combiners__product-grid figcaption, .sn-combiners .sn-combiners__scenario-media figcaption, .sn-combiners .sn-combiners__evidence-grid figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
 
     /* Functional diagrams use the same hairline language as the ledgers. */
@@ -59,8 +60,8 @@
     .sn-combiners .sn-combiners__system-flow b { color: var(--sn-cyan-dark); font-weight: 400; }
     .sn-combiners .sn-combiners__scenario-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
     .sn-combiners .sn-combiners__scenario-media figure { position: relative; display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
-    .sn-combiners .sn-combiners__scenario-frame { padding: 14px; background: var(--sn-paper-muted); }
-    .sn-combiners .sn-combiners__scenario-media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; clip-path: inset(1px); }
+    .sn-combiners .sn-combiners__scenario-frame { overflow: hidden; background: var(--sn-white); }
+    .sn-combiners .sn-combiners__scenario-media img { display: block; width: 100%; height: auto; aspect-ratio: 1024 / 571; object-fit: cover; clip-path: inset(1px); }
     .sn-combiners .sn-combiners__evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
     .sn-combiners .sn-combiners__evidence-grid figure { position: relative; display: flex; min-width: 0; flex-direction: column; margin-bottom: 0; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
     .sn-combiners .sn-combiners__evidence-grid img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
@@ -100,7 +101,7 @@
       .sn-combiners .sn-combiners__hero-media { max-width: 620px; }
     }
     @media (max-width: 760px) {
-      .sn-combiners .sn-combiners__functions, .sn-combiners .sn-combiners__tradeoffs, .sn-combiners .sn-combiners__scenarios, .sn-combiners .sn-combiners__verification, .sn-combiners .sn-combiners__bandplan { min-width: 0; }
+      .sn-combiners .sn-combiners__functions, .sn-combiners .sn-combiners__tradeoffs, .sn-combiners .sn-combiners__scenarios, .sn-combiners .sn-combiners__verification, .sn-combiners .sn-combiners__bandplan, .sn-combiners .sn-combiners__dividers { min-width: 0; }
       .sn-combiners .sn-combiners__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
       .sn-combiners .sn-combiners__ledger, .sn-combiners .sn-combiners__ledger tbody, .sn-combiners .sn-combiners__ledger tr, .sn-combiners .sn-combiners__ledger th, .sn-combiners .sn-combiners__ledger td { display: block; width: 100%; }
       .sn-combiners .sn-combiners__ledger tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
@@ -133,7 +134,7 @@
           <h1 id="combiners-title">RF &amp; Microwave Combiners, Duplexers and Multiplexers</h1>
           <p>Define whether the system combines or separates different frequency paths, shares a common antenna for Tx/Rx, or divides one signal into multiple paths. Low PIM and high isolation are targets to specify with conditions, not assumed product-wide values.</p>
           <div class="sn-combiners__mini-diagram" aria-label="Simplified multi-band combining relationship"><span>Band A</span><span>Band B</span><b aria-hidden="true">→</b><span>Combiner</span><b aria-hidden="true">→</b><span>Common port</span></div>
-          <div class="sn-combiners__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit Band Plan for Quote</a><a class="sn-btn sn-btn--secondary" href="/resources/insights/">Read Duplexer vs Diplexer</a></div>
+          <div class="sn-combiners__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit Band Plan for Quote</a><a class="sn-btn sn-btn--secondary" href="/resources/insights/duplexer-vs-diplexer-combiner-guide/">Read Duplexer vs Diplexer</a></div>
           <p class="sn-combiners__hero-note"><strong>DC–40 GHz custom band plans.</strong> Exact coverage and performance depend on the model, topology and validation. If the device type is unclear, submit the system connections and frequency bands instead of guessing a name.</p>
         </div>
         <figure class="sn-hero-plate sn-combiners__hero-media">
@@ -172,8 +173,23 @@
         <figure><div class="sn-combiners__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-n28-multiplexer.webp" alt="N28 multiplexer" width="1024" height="571" loading="lazy" decoding="async"></div><figcaption>N28 multiplexer example; the name retains its base-station band context.</figcaption></figure>
         <figure><div class="sn-combiners__product-frame"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/power-splitter-2-way-n-female-1.webp" alt="2-way power splitter with N female connectors" width="720" height="720" loading="lazy" decoding="async"></div><figcaption>Two-way power splitter example; amplitude and phase requirements remain project-specific.</figcaption></figure>
       </div>
-      <p class="sn-note"><strong>Diplexer visual:</strong> no verified dedicated diplexer image is assigned, so a functional port diagram is used instead of mislabeling a duplexer photo.</p>
+      <p class="sn-note"><strong>Diplexer visual:</strong> no verified dedicated diplexer image is assigned, so a functional port diagram is used instead of mislabeling a duplexer photo. For band routing, guard-band and RFQ inputs, read the <a href="/resources/insights/rf-diplexer-guide/">RF diplexer guide</a>.</p>
       <div class="sn-combiners__port-diagram" aria-label="Diplexer functional port diagram"><span>Frequency path 1</span><b aria-hidden="true">↔</b><span>Diplexer</span><b aria-hidden="true">↔</b><span>Common port</span><b aria-hidden="true">↔</b><span>Frequency path 2</span></div>
+      <div class="sn-combiners__system">
+        <h3 id="combiners-dividers-title">Wilkinson and Reactive Power Divider Topologies</h3>
+        <p>A power divider splits one input into two or more outputs. The topology determines whether the outputs are matched and isolated, how wide the usable band is, and how much power the part can handle. The two common families below are evaluated against the band plan first; the topology name alone does not define performance.</p>
+        <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="combiners-dividers-title">
+          <table class="sn-table sn-ledger sn-combiners__ledger sn-combiners__dividers">
+            <caption>Wilkinson and reactive power divider comparison for first-pass topology selection.</caption>
+            <thead><tr><th scope="col">Topology</th><th scope="col">Split behavior</th><th scope="col">Port isolation</th><th scope="col">Bandwidth</th><th scope="col">Typical fit</th><th scope="col">What to specify</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Wilkinson power divider</th><td data-label="Split behavior">Equal or defined split using quarter-wave sections and an isolation resistor between outputs</td><td data-label="Port isolation">Output-to-output isolation is provided by the resistor</td><td data-label="Bandwidth">Narrow to moderate; multi-section designs widen the band</td><td data-label="Typical fit">Matched outputs with isolation, such as antenna feeds and test paths</td><td data-label="What to specify">Split ratio, band, isolation, amplitude and phase balance, power and connector</td></tr>
+              <tr><th scope="row">Reactive power divider</th><td data-label="Split behavior">L-C or transmission-line network without a lossy isolation resistor</td><td data-label="Port isolation">Output-to-output isolation is limited</td><td data-label="Bandwidth">Usually narrower; the response depends on the network order</td><td data-label="Typical fit">Low-loss splitting or combining where efficiency matters more than port isolation</td><td data-label="What to specify">Band, insertion loss, return loss, phase balance, power and connector</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="sn-note">A resistive divider is a third option for broadband, low-cost splitting, but its loss is fixed and it does not replace a low-loss reactive design. For the internal topology, isolation and RFQ inputs, read the <a href="/resources/insights/wilkinson-power-divider-guide/">Wilkinson power divider guide</a>. For low-PIM splitters, directional couplers and hybrid couplers used in indoor DAS, see <a href="/products/ibs-das-components/">IBS &amp; DAS Components</a>. For waveguide diplexers and waveguide combining hardware, see <a href="/products/waveguide-components/">Waveguide Components</a>.</p>
+      </div>
     </div>
   </section>
 
@@ -311,6 +327,8 @@
         <details><summary>How do I balance insertion loss and isolation in a multi-band combiner?</summary><p>Evaluate both against the complete band plan, including port-to-port isolation targets, guard bands, power and mechanical constraints. Lower insertion loss and higher isolation can compete with bandwidth, size and topology choices. Specify which ports and frequency directions each isolation value applies to, then let engineering assess the trade-offs through design and verification.</p></details>
         <details><summary>Do I need a complete band plan to request a combiner quote?</summary><p>A complete band plan is strongly recommended because frequency ranges, bandwidth, signal direction, power and isolation determine the topology. You can start with incomplete information if you identify unknown fields and describe the system connections. A complete RFQ typically receives initial engineering feedback in about 24 hours; quotation and delivery timing require further project review.</p></details>
         <details><summary>How is an RF power divider different from a combiner?</summary><p>An RF power divider splits a signal into multiple paths, with amplitude, phase and port requirements defined for the application. A frequency-selective combiner brings different frequency bands into a common path. Some functions can be bidirectional depending on the network, so provide the actual signal directions, frequencies and port relationships instead of choosing by name alone.</p></details>
+        <details><summary>What is a Wilkinson power divider?</summary><p>A Wilkinson power divider splits one input into two or more outputs using quarter-wave transmission-line sections and an isolation resistor between the outputs. The resistor provides output-to-output isolation and dissipates reflected power, which is why the topology is used when matched outputs and isolation matter. Bandwidth, power handling and isolation depend on the number of sections and the physical construction, so specify the band, split ratio, isolation, amplitude and phase balance, power and connector rather than the name alone.</p></details>
+        <details><summary>When should I specify a reactive power divider instead?</summary><p>A reactive power divider uses an L-C or transmission-line network without a lossy isolation resistor, so it can offer lower insertion loss, but output-to-output isolation is limited and the usable bandwidth is usually narrower. It fits systems where efficiency matters more than port isolation. A resistive divider is a third option for broadband splitting with fixed loss. Because the trade-offs depend on the band plan, provide the frequency range, loss, isolation, power and phase requirements for evaluation.</p></details>
         <details><summary>How is low PIM verified for duplexers and combiners?</summary><p>Low-PIM verification should define the product, ports, frequency bands, test setup, power conditions, PIM limit and acceptance criteria. SONNE lists low-PIM batch verification and matrix-switch automated testing capabilities. The exact coverage and reporting are agreed by product and project, so request the relevant test evidence rather than assuming one condition applies to every unit or model.</p></details>
       </div>
     </div>
@@ -325,7 +343,7 @@
             <h2 id="combiners-rfq-title">Submit Your Band Plan, Even before You Choose a Model</h2>
             <p>Select “unknown” for device type when needed, but describe the system function, port relationships and every known frequency band. Engineering can then determine the appropriate evaluation path.</p>
             <p>Attach a band plan, system diagram or test specification if available, and identify missing ports or bands rather than forcing a premature model choice.</p>
-            <div class="sn-combiners__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit Band Plan for Quote</a><a class="sn-btn sn-btn--secondary" href="/resources/insights/">Read Duplexer vs Diplexer</a></div>
+            <div class="sn-combiners__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit Band Plan for Quote</a><a class="sn-btn sn-btn--secondary" href="/resources/insights/duplexer-vs-diplexer-combiner-guide/">Read Duplexer vs Diplexer</a></div>
             <p class="sn-combiners__fine-print">A complete RFQ typically receives initial engineering feedback in about 24 hours. Design, quotation and delivery timing require project review. Prefer email? Write to <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a>.</p>
           </div>
           <div class="sn-sheet__panel sn-combiners__rfq-panel">
@@ -369,6 +387,8 @@
           {"@type":"Question","name":"How do I balance insertion loss and isolation in a multi-band combiner?","acceptedAnswer":{"@type":"Answer","text":"Evaluate both against the complete band plan, including port-to-port isolation targets, guard bands, power and mechanical constraints. Lower insertion loss and higher isolation can compete with bandwidth, size and topology choices. Specify which ports and frequency directions each isolation value applies to, then let engineering assess the trade-offs through design and verification."}},
           {"@type":"Question","name":"Do I need a complete band plan to request a combiner quote?","acceptedAnswer":{"@type":"Answer","text":"A complete band plan is strongly recommended because frequency ranges, bandwidth, signal direction, power and isolation determine the topology. You can start with incomplete information if you identify unknown fields and describe the system connections. A complete RFQ typically receives initial engineering feedback in about 24 hours; quotation and delivery timing require further project review."}},
           {"@type":"Question","name":"How is an RF power divider different from a combiner?","acceptedAnswer":{"@type":"Answer","text":"An RF power divider splits a signal into multiple paths, with amplitude, phase and port requirements defined for the application. A frequency-selective combiner brings different frequency bands into a common path. Some functions can be bidirectional depending on the network, so provide the actual signal directions, frequencies and port relationships instead of choosing by name alone."}},
+          {"@type":"Question","name":"What is a Wilkinson power divider?","acceptedAnswer":{"@type":"Answer","text":"A Wilkinson power divider splits one input into two or more outputs using quarter-wave transmission-line sections and an isolation resistor between the outputs. The resistor provides output-to-output isolation and dissipates reflected power, which is why the topology is used when matched outputs and isolation matter. Bandwidth, power handling and isolation depend on the number of sections and the physical construction, so specify the band, split ratio, isolation, amplitude and phase balance, power and connector rather than the name alone."}},
+          {"@type":"Question","name":"When should I specify a reactive power divider instead?","acceptedAnswer":{"@type":"Answer","text":"A reactive power divider uses an L-C or transmission-line network without a lossy isolation resistor, so it can offer lower insertion loss, but output-to-output isolation is limited and the usable bandwidth is usually narrower. It fits systems where efficiency matters more than port isolation. A resistive divider is a third option for broadband splitting with fixed loss. Because the trade-offs depend on the band plan, provide the frequency range, loss, isolation, power and phase requirements for evaluation."}},
           {"@type":"Question","name":"How is low PIM verified for duplexers and combiners?","acceptedAnswer":{"@type":"Answer","text":"Low-PIM verification should define the product, ports, frequency bands, test setup, power conditions, PIM limit and acceptance criteria. SONNE lists low-PIM batch verification and matrix-switch automated testing capabilities. The exact coverage and reporting are agreed by product and project, so request the relevant test evidence rather than assuming one condition applies to every unit or model."}}
         ]
       }

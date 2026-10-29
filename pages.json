@@ -1,5 +1,35 @@
 [
   {
+    "id": 469,
+    "title": "RF Front-Ends",
+    "slug": "rf-front-ends",
+    "url": "https://rf-sonne.com/products/rf-front-ends/"
+  },
+  {
+    "id": 468,
+    "title": "Passive Microwave Components",
+    "slug": "passive-microwave-components",
+    "url": "https://rf-sonne.com/products/passive-microwave-components/"
+  },
+  {
+    "id": 467,
+    "title": "T/R Modules",
+    "slug": "tr-modules",
+    "url": "https://rf-sonne.com/products/tr-modules/"
+  },
+  {
+    "id": 466,
+    "title": "Switch Matrices",
+    "slug": "switch-matrices",
+    "url": "https://rf-sonne.com/products/switch-matrices/"
+  },
+  {
+    "id": 465,
+    "title": "Antenna Test Systems",
+    "slug": "antenna-test-systems",
+    "url": "https://rf-sonne.com/products/antenna-test-systems/"
+  },
+  {
     "id": 202,
     "title": "Sitemap",
     "slug": "sitemap",

@@ -18,6 +18,13 @@ return array(
         array('label' => 'Base Station RF', 'url' => home_url('/products/base-station-rf/')),
         array('label' => 'Precision Enclosures', 'url' => home_url('/products/precision-enclosures/')),
     ),
+    'Systems & Active RF' => array(
+        array('label' => 'Antenna Test Systems', 'url' => home_url('/products/antenna-test-systems/')),
+        array('label' => 'Switch Matrices', 'url' => home_url('/products/switch-matrices/')),
+        array('label' => 'T/R Modules', 'url' => home_url('/products/tr-modules/')),
+        array('label' => 'Passive Microwave Components', 'url' => home_url('/products/passive-microwave-components/')),
+        array('label' => 'RF Front-Ends', 'url' => home_url('/products/rf-front-ends/')),
+    ),
     'Resources' => array(
         array('label' => 'Resource Center', 'url' => home_url('/resources/')),
         array('label' => 'Insights', 'url' => home_url('/resources/insights/')),

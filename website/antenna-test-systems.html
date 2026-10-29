@@ -1,0 +1,240 @@
+<!-- wp:html -->
+<div class="sn-test">
+  <style>
+    .sn-test { color: var(--sn-text); }
+    .sn-test *, .sn-test *::before, .sn-test *::after { box-sizing: border-box; }
+    .sn-test h2, .sn-test h3, .sn-test p, .sn-test ul, .sn-test ol, .sn-test figure { margin-top: 0; }
+    .sn-test h2 { margin-bottom: 18px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-test h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-test p, .sn-test li { line-height: 1.7; }
+    .sn-test a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-test img { display: block; max-width: 100%; height: auto; }
+    .sn-test [id] { scroll-margin-top: 96px; }
+    .sn-test figure { position: relative; margin-bottom: 0; }
+    .sn-test figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
+    .sn-test .sn-test__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-test .sn-test__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 26px; }
+    .sn-test .sn-test__intro { max-width: 880px; margin-bottom: 34px; }
+    .sn-test .sn-test__intro > p { max-width: 74ch; margin-bottom: 0; color: var(--sn-text-muted); font-size: 1.02rem; }
+    .sn-test .sn-test__hero { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr); gap: clamp(34px, 6vw, 72px); align-items: center; }
+    .sn-test .sn-test__ledger { min-width: 1060px; }
+    .sn-test .sn-test__ledger tbody th { width: 200px; }
+    .sn-test .sn-test__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-test .sn-test__pair figure { display: flex; flex-direction: column; overflow: hidden; border: var(--sn-border); background: var(--sn-card); }
+    .sn-test .sn-test__pair img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .sn-test .sn-test__blocks { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 26px; border: var(--sn-border); background: var(--sn-line); }
+    .sn-test .sn-test__block { padding: 22px 20px; background: var(--sn-card); }
+    .sn-test .sn-test__block span { display: block; margin-bottom: 8px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; }
+    .sn-test .sn-test__block h3 { font-size: 1rem; }
+    .sn-test .sn-test__block p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-test .sn-test__note { max-width: 80ch; margin: 16px 0 0; color: var(--sn-text-muted); font-size: .85rem; line-height: 1.65; }
+    .sn-test .sn-test__order-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-test .sn-test__order { padding: 24px; border: var(--sn-border); background: var(--sn-card); }
+    .sn-test .sn-test__order h3 { font-family: var(--sn-font-mono); font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-test .sn-test__order ul { margin-bottom: 0; padding-left: 20px; }
+    .sn-test .sn-test__order li, .sn-test .sn-test__order p { color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-test .sn-test__order p:last-child { margin-bottom: 0; }
+    .sn-test .sn-test__faq { max-width: 940px; }
+    .sn-test .sn-test__faq details { border-bottom: var(--sn-border); }
+    .sn-test .sn-test__faq summary { position: relative; min-height: 44px; padding: 22px 46px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-test .sn-test__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-test .sn-test__faq details[open] summary::after { content: '−'; }
+    .sn-test .sn-test__faq details p { max-width: 78ch; padding-right: 36px; color: var(--sn-text-muted); }
+    @media (max-width: 1024px) {
+      .sn-test .sn-test__blocks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .sn-test .sn-test__hero { grid-template-columns: 1fr; }
+      .sn-test .sn-test__pair, .sn-test .sn-test__order-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .sn-test .sn-test__ledger { min-width: 0; }
+      .sn-test .sn-test__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-test .sn-test__ledger, .sn-test .sn-test__ledger tbody, .sn-test .sn-test__ledger tr, .sn-test .sn-test__ledger th, .sn-test .sn-test__ledger td { display: block; width: 100%; }
+      .sn-test .sn-test__ledger tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
+      .sn-test .sn-test__ledger tbody th { width: auto; padding: 0 0 12px; border: 0; font-size: 1.04rem; }
+      .sn-test .sn-test__ledger tbody td { padding: 0 0 10px; border: 0; }
+      .sn-test .sn-test__ledger tbody td:last-child { padding-bottom: 0; }
+      .sn-test .sn-test__ledger tbody td::before { display: block; margin-bottom: 3px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; content: attr(data-label); }
+      .sn-test .sn-test__blocks { grid-template-columns: 1fr; }
+      .sn-test .sn-test__actions .sn-btn { width: 100%; }
+    }
+  </style>
+
+  <section class="sn-hero" aria-labelledby="test-title">
+    <div class="sn-container">
+      <div class="sn-test__hero">
+        <div>
+          <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">Antenna Test Systems</li></ol></nav>
+          <span class="sn-test__eyebrow">RF test systems · four production configurations</span>
+          <h1 id="test-title">Antenna and RF Test Systems for Production Lines</h1>
+          <p style="max-width:64ch;margin-bottom:18px;font-size:1.04rem;">Multi-position, multi-port, base-station and automotive antenna test systems built around a vector network analyzer, a solid-state switch matrix, a guarded RF fixture and test software. The configuration follows the device under test, port map, measurement set and data output — not a fixed catalogue kit.</p>
+          <div class="sn-test__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Specify a Test System</a><a class="sn-btn sn-btn--secondary" href="#test-configurations">Compare Configurations</a></div>
+        </div>
+        <figure class="sn-hero-plate">
+          <div class="sn-hero-plate__tag"><span>Plate 01</span><span>RF test fixture</span></div>
+          <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/test-system-fixture.webp" alt="Pneumatic RF antenna test fixture with spring probes" width="737" height="737" loading="eager" fetchpriority="high" decoding="async"></div>
+          <figcaption>Pneumatic RF test fixture with spring probes and a two-hand start. Fixture geometry is built to the device under test.</figcaption>
+        </figure>
+      </div>
+      <div class="sn-hero-meta"><span><b>Configurations</b>4 production set-ups</span><span><b>Matrix band</b>9 kHz–8 GHz</span><span><b>Port options</b>8 / 9 / 16 / 32</span><span><b>Output</b>Pass-fail, CSV, labels</span></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="test-configurations" aria-labelledby="test-config-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>01</b> / Configurations</span><span>4 entries</span></div>
+        <div class="sn-record-title"><h2 id="test-config-title">Match the System to the Device and the Line</h2><p>The four configurations share one architecture but differ in fixture, port count and measurement sequence. Start with the device and the data the line must produce.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="test-config-caption">
+        <table class="sn-ledger sn-test__ledger">
+          <caption id="test-config-caption" style="text-align:left;padding:0 0 12px;color:var(--sn-text-muted);font-size:.85rem;">Antenna test configurations: device examples, measurement set, matrix fit and the inputs that decide the build.</caption>
+          <thead><tr><th scope="col">Configuration</th><th scope="col">Device examples</th><th scope="col">Measurements</th><th scope="col">How the system fits</th><th scope="col">Decision inputs</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Multi-position bench</th><td data-label="Device examples">Wi-Fi, Bluetooth, PCB, FPC, GPS, SMT ceramic and rod antennas</td><td data-label="Measurements">Return loss / VSWR, gain, efficiency; sequential checks across positions</td><td data-label="How the system fits">The matrix steps between probe positions so one analyzer serves several test points</td><td data-label="Decision inputs">Position count, index time, probe spacing and fixture access</td></tr>
+            <tr><th scope="row">Multi-port device test</th><td data-label="Device examples">Dipole, phone-shell, watch and base-station antennas</td><td data-label="Measurements">VSWR, port-to-port isolation, amplitude and phase balance</td><td data-label="How the system fits">All device ports land on one connection field; the matrix selects the port pair</td><td data-label="Decision inputs">Port count, port map, connector type and switching sequence</td></tr>
+            <tr><th scope="row">Base-station antenna test</th><td data-label="Device examples">Nine-port and higher base-station antenna panels</td><td data-label="Measurements">VSWR, isolation, amplitude tracking, phase tracking, logged records</td><td data-label="How the system fits">A 16×16 or 32-port matrix covers the panel; software records each port pair</td><td data-label="Decision inputs">Port map, band, limits, record format and traceability fields</td></tr>
+            <tr><th scope="row">Automotive antenna test</th><td data-label="Device examples">Roof, glass and shark-fin antenna assemblies</td><td data-label="Measurements">Gain, VSWR, DC current and resistance in one cycle</td><td data-label="How the system fits">RF and DC measurements are sequenced once; results upload and labels print</td><td data-label="Decision inputs">Electrical interface, DC channels, data fields and label format</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-test__note">The table defines what each configuration is built to measure. Frequency range, limits and acceptance conditions come from the device specification and are frozen during the system review.</p>
+      <div class="sn-test__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send a Device and Port Map</a><a class="sn-btn sn-btn--secondary" href="/products/switch-matrices/">Review Switch Matrices</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="test-anatomy" aria-labelledby="test-anatomy-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>02</b> / System anatomy</span><span>4 blocks</span></div>
+        <div class="sn-record-title"><h2 id="test-anatomy-title">Four Blocks Decide Measurement Capability</h2><p>A test system is only as repeatable as its weakest block. The analyzer sets the electrical range, the matrix sets the port count, the fixture sets contact repeatability and the software sets what the line records.</p></div>
+      </div>
+      <div class="sn-test__blocks">
+        <div class="sn-test__block"><span>Block 01</span><h3>Vector network analyzer</h3><p>Measurement engine for S-parameters, gain and VSWR. Frequency range, port count and sweep settings are fixed against the device specification.</p></div>
+        <div class="sn-test__block"><span>Block 02</span><h3>Solid-state switch matrix</h3><p>Expands analyzer ports to the device. Port expansion runs from 2 to 8, 9, 16 or 32 ports over 9 kHz–8 GHz; full-matrix options cover 12 and 18 ports.</p></div>
+        <div class="sn-test__block"><span>Block 03</span><h3>RF test fixture</h3><p>Positions the device and makes the RF and DC contacts. Pneumatic actuation, replaceable spring probes, SMA female RF interface and a two-hand start.</p></div>
+        <div class="sn-test__block"><span>Block 04</span><h3>Test software</h3><p>Runs the sequence, applies limits, shows pass or fail by channel and records results. CSV export, label printing and line-side data upload are configured per project.</p></div>
+      </div>
+      <div class="sn-test__pair">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/test-system-bench.webp" alt="Vector network analyzer connected to a 32-port switch matrix" width="684" height="446" loading="lazy" decoding="async"><figcaption>A 32-port matrix connected to a network analyzer. The matrix extends analyzer ports to the fixture; it does not change analyzer accuracy.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/test-system-software.webp" alt="Antenna test software showing pass and fail rows" width="1400" height="822" loading="lazy" decoding="async"><figcaption>Pass and fail rows across test channels. Limits, channel names and record fields are written for the device, not supplied as a universal template.</figcaption></figure>
+      </div>
+      <p class="sn-test__note">System integration is project-specific. Cycle time, repeatability and gauge capability depend on the device, fixture, switch settling, analyzer settings and accepted limits; no universal figure is published here.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" id="test-fixture" aria-labelledby="test-fixture-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>03</b> / Fixture</span><span>8 checkpoints</span></div>
+        <div class="sn-record-title"><h2 id="test-fixture-title">Fixture Checklist for Repeatable Contact</h2><p>The fixture carries the mechanical and electrical interface to the device. These checkpoints are confirmed against the device drawing before the fixture is released.</p></div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="test-fixture-caption">
+        <table class="sn-table">
+          <caption id="test-fixture-caption" style="text-align:left;padding:0 0 12px;color:var(--sn-text-muted);font-size:.85rem;">RF test fixture checkpoints and what the device drawing must define.</caption>
+          <thead><tr><th scope="col">Checkpoint</th><th scope="col">Baseline configuration</th><th scope="col">Confirm against the device</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Overall size</th><td data-label="Baseline configuration">300 × 200 × 316 mm</td><td data-label="Confirm against the device">Bench space, guarding envelope and loading clearance</td></tr>
+            <tr><th scope="row">Actuation</th><td data-label="Baseline configuration">Pneumatic slide cylinder, downward press after start</td><td data-label="Confirm against the device">Travel needed for loading clearance and contact force</td></tr>
+            <tr><th scope="row">Stroke</th><td data-label="Baseline configuration">50 mm or 75 mm slide stroke</td><td data-label="Confirm against the device">Device height, carrier thickness and probe overtravel</td></tr>
+            <tr><th scope="row">Probes</th><td data-label="Baseline configuration">Spring probes with replaceable sleeves</td><td data-label="Confirm against the device">Probe pitch, current rating, target pad size and access</td></tr>
+            <tr><th scope="row">RF interface</th><td data-label="Baseline configuration">SMA female at the fixture interface</td><td data-label="Confirm against the device">Cable route, torque access and strain relief</td></tr>
+            <tr><th scope="row">Start condition</th><td data-label="Baseline configuration">Manual two-button start, left and right</td><td data-label="Confirm against the device">Operator position, guarding and line safety rules</td></tr>
+            <tr><th scope="row">Poka-yoke</th><td data-label="Baseline configuration">Mechanical keying against wrong orientation</td><td data-label="Confirm against the device">Device datum, orientation marks and variant family</td></tr>
+            <tr><th scope="row">Communication</th><td data-label="Baseline configuration">Serial interface to the test software</td><td data-label="Confirm against the device">Line protocol, MES fields and record retention</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-test__note">The fixture is built from the device drawing and a sample where available. Mechanical dimensions, probe selection and guarding are confirmed before release; a photograph of a similar fixture is not a build specification.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="test-rfq" aria-labelledby="test-rfq-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>04</b> / RFQ inputs</span><span>2 review stages</span></div>
+        <div class="sn-record-title"><h2 id="test-rfq-title">What to Send for a System Review</h2><p>A test-system quote needs the device, the measurements and the line interface. Commercial terms follow the configuration, not a catalogue price.</p></div>
+      </div>
+      <div class="sn-test__order-grid">
+        <div class="sn-test__order">
+          <h3>Known at inquiry</h3>
+          <ul><li>Device type and a drawing or sample photograph</li><li>Frequency range and required measurements</li><li>Port map, connector series and DC channels</li><li>Pass and fail limits, if already defined</li><li>Target cycle time and line interface</li><li>Data output: screen, CSV, label or MES</li><li>Quantity of systems and commissioning scope</li></ul>
+        </div>
+        <div class="sn-test__order">
+          <h3>Confirmed by system review</h3>
+          <p>Analyzer model, matrix size, fixture concept, software sequence and acceptance method are confirmed against the device and the line.</p>
+          <p>Price, lead time, warranty and acceptance tests are quoted per configuration and per order. This page does not publish a cross-project policy for any of them.</p>
+          <p>A complete RFQ typically receives initial engineering feedback in about 24 hours; that response is not a final system specification.</p>
+        </div>
+      </div>
+      <div class="sn-test__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit a Test-System RFQ</a><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Review Test and Quality</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="test-faq" aria-labelledby="test-faq-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>05</b> / Questions</span><span>5 entries</span></div>
+        <div class="sn-record-title"><h2 id="test-faq-title">Antenna Test System Questions</h2><p>Five questions asked before a production test system is specified.</p></div>
+      </div>
+      <div class="sn-test__faq">
+        <details open><summary>Can one system test a nine-port base-station antenna?</summary><p>Yes, if the matrix and fixture are sized for the port map. A 16×16 or 32-port matrix covers panels with nine or more ports, and the software records each port pair. The port map, connector type and measurement sequence must be supplied before the matrix and fixture are confirmed.</p></details>
+        <details><summary>Which network analyzer is used?</summary><p>The analyzer is selected with the project against frequency range, port count and required measurements. The system software controls it over its remote interface. A customer-supplied analyzer can be evaluated, but compatibility and required options must be confirmed before acceptance.</p></details>
+        <details><summary>Does the software upload data and print labels?</summary><p>The software records pass or fail by channel and can export results as CSV. Label printing and line-side upload are configured per project against the fields the customer needs. No specific MES integration is claimed until the interface is confirmed.</p></details>
+        <details><summary>Is cycle time guaranteed?</summary><p>No universal cycle time is published. Cycle time depends on the device, number of measurement points, switch settling, analyzer sweep settings and fixture actuation. It is measured on the accepted configuration, not inferred from a similar system.</p></details>
+        <details><summary>Can the fixture be built for a new device?</summary><p>Yes. Fixtures are built from the device drawing and a sample where available. Probe selection, keying, RF interface, guarding and the start condition are confirmed before release. A fixture for one device is not assumed to fit another, even when the outline is similar.</p></details>
+      </div>
+      <div class="sn-test__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Ask a Test Engineer</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="test-cta-title">
+    <div class="sn-container">
+      <div class="sn-sheet">
+        <div class="sn-sheet__head"><span>RFQ route · test systems</span><span>Device, port map and limits</span></div>
+        <div class="sn-sheet__grid">
+          <div>
+            <h2 id="test-cta-title">Send the Device and the Measurement Set</h2>
+            <p>One RFQ can cover the analyzer, matrix, fixture and software. Attach the device drawing, a sample photograph and the port map so the review starts from the same data as the fixture design.</p>
+            <p>Not ready to specify the fixture? <a href="/products/switch-matrices/">Review the switch-matrix range</a> or <a href="/engineering/custom-rf-design/">open a custom evaluation</a>.</p>
+            <div class="sn-test__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request a Test-System Quote</a></div>
+          </div>
+          <div class="sn-sheet__panel">
+            <h3>Attach to the RFQ</h3>
+            <ul><li>Device drawing or sample photograph</li><li>Frequency range and measurement list</li><li>Port map and connector series</li><li>Pass and fail limits</li><li>Cycle-time target and line interface</li><li>Data output and label format</li><li>Site and commissioning constraints</li></ul>
+            <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. Quotation and delivery follow the confirmed configuration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/antenna-test-systems/#product",
+        "name": "Antenna and RF Test Systems for Production Lines",
+        "url": "https://rf-sonne.com/products/antenna-test-systems/",
+        "description": "Multi-position, multi-port, base-station and automotive antenna test systems built from a vector network analyzer, solid-state switch matrix, RF test fixture and test software.",
+        "category": "Antenna and RF test systems",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/test-system-fixture.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/antenna-test-systems/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"Antenna Test Systems","item":"https://rf-sonne.com/products/antenna-test-systems/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

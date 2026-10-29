@@ -1,0 +1,247 @@
+<!-- wp:html -->
+<div class="sn-rfe">
+  <style>
+    .sn-rfe { color: var(--sn-text); }
+    .sn-rfe *, .sn-rfe *::before, .sn-rfe *::after { box-sizing: border-box; }
+    .sn-rfe h2, .sn-rfe h3, .sn-rfe p, .sn-rfe ul, .sn-rfe ol, .sn-rfe figure { margin-top: 0; }
+    .sn-rfe h2 { margin-bottom: 18px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-rfe h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-rfe p, .sn-rfe li { line-height: 1.7; }
+    .sn-rfe a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-rfe img { display: block; max-width: 100%; height: auto; }
+    .sn-rfe [id] { scroll-margin-top: 96px; }
+    .sn-rfe figure { position: relative; margin-bottom: 0; }
+    .sn-rfe figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
+    .sn-rfe .sn-rfe__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-rfe .sn-rfe__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 26px; }
+    .sn-rfe .sn-rfe__hero { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr); gap: clamp(34px, 6vw, 72px); align-items: center; }
+    .sn-rfe .sn-rfe__chain { margin: 26px 0 0; padding: 0; counter-reset: node; list-style: none; }
+    .sn-rfe .sn-rfe__chain li { position: relative; padding: 18px 0 18px 74px; border-bottom: 1px solid var(--sn-line); counter-increment: node; }
+    .sn-rfe .sn-rfe__chain li:first-child { border-top: 1px solid var(--sn-line-strong); }
+    .sn-rfe .sn-rfe__chain li:last-child { border-bottom: 1px solid var(--sn-line-strong); }
+    .sn-rfe .sn-rfe__chain li::before { position: absolute; top: 18px; left: 0; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; letter-spacing: .06em; content: 'STAGE ' counter(node, decimal-leading-zero); }
+    .sn-rfe .sn-rfe__chain b { display: block; margin-bottom: 4px; color: var(--sn-navy); font-family: var(--sn-font-heading); }
+    .sn-rfe .sn-rfe__chain span { display: block; max-width: 74ch; color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-rfe .sn-rfe__note { max-width: 80ch; margin: 16px 0 0; color: var(--sn-text-muted); font-size: .85rem; line-height: 1.65; }
+    .sn-rfe .sn-rfe__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .58fr); gap: clamp(22px, 4vw, 48px); align-items: start; }
+    .sn-rfe .sn-rfe__callout { padding: 24px; border: var(--sn-border); background: var(--sn-card); }
+    .sn-rfe .sn-rfe__callout h3 { font-family: var(--sn-font-mono); font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-rfe .sn-rfe__callout ul { margin-bottom: 0; padding-left: 20px; }
+    .sn-rfe .sn-rfe__callout li, .sn-rfe .sn-rfe__callout p { color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-rfe .sn-rfe__callout p:last-child { margin-bottom: 0; }
+    .sn-rfe .sn-rfe__order-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-rfe .sn-rfe__order { padding: 24px; border: var(--sn-border); background: var(--sn-card); }
+    .sn-rfe .sn-rfe__order h3 { font-family: var(--sn-font-mono); font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-rfe .sn-rfe__order ul { margin-bottom: 0; padding-left: 20px; }
+    .sn-rfe .sn-rfe__order li, .sn-rfe .sn-rfe__order p { color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-rfe .sn-rfe__order p:last-child { margin-bottom: 0; }
+    .sn-rfe .sn-rfe__faq { max-width: 940px; }
+    .sn-rfe .sn-rfe__faq details { border-bottom: var(--sn-border); }
+    .sn-rfe .sn-rfe__faq summary { position: relative; min-height: 44px; padding: 22px 46px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-rfe .sn-rfe__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-rfe .sn-rfe__faq details[open] summary::after { content: '−'; }
+    .sn-rfe .sn-rfe__faq details p { max-width: 78ch; padding-right: 36px; color: var(--sn-text-muted); }
+    @media (max-width: 1024px) {
+      .sn-rfe .sn-rfe__grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .sn-rfe .sn-rfe__hero { grid-template-columns: 1fr; }
+      .sn-rfe .sn-rfe__order-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .sn-rfe .sn-rfe__chain li { padding-left: 0; padding-top: 24px; }
+      .sn-rfe .sn-rfe__chain li::before { top: 0; }
+      .sn-rfe .sn-rfe__actions .sn-btn { width: 100%; }
+    }
+  </style>
+
+  <section class="sn-hero" aria-labelledby="rfe-title">
+    <div class="sn-container">
+      <div class="sn-rfe__hero">
+        <div>
+          <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">RF Front-Ends</li></ol></nav>
+          <span class="sn-rfe__eyebrow">RF front-ends · 13 channels · 6–18 GHz</span>
+          <h1 id="rfe-title">Ku-Band Multi-Channel RF Front-Ends, 6–18 GHz</h1>
+          <p style="max-width:64ch;margin-bottom:18px;font-size:1.04rem;">A 13-channel receive front-end with protected low-noise amplification, switched delay and per-channel attenuation for wideband arrays and instrumentation. The reference build below is a starting point; channel count, band and control word are re-cut for the platform.</p>
+          <div class="sn-rfe__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Specify a Front-End</a><a class="sn-btn sn-btn--secondary" href="#rfe-spec">Review the Specification</a></div>
+        </div>
+        <figure class="sn-hero-plate">
+          <div class="sn-hero-plate__tag"><span>Plate 05</span><span>13-channel Ku</span></div>
+          <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/rf-front-end-ku.webp" alt="Ku-band 13-channel RF front-end housing with SMPM connectors" width="1400" height="1398" loading="eager" fetchpriority="high" decoding="async"></div>
+          <figcaption>13-channel Ku-band front-end housing with SMPM connectors. Channels share one control interface and one thermal path.</figcaption>
+        </figure>
+      </div>
+      <div class="sn-hero-meta"><span><b>Channels</b>13</span><span><b>Band</b>6–18 GHz</span><span><b>Gain</b>40.5 ± 1.5 dB</span><span><b>Noise figure</b>≤4 dB</span></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="rfe-spec" aria-labelledby="rfe-spec-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>01</b> / Reference build</span><span>11 values</span></div>
+        <div class="sn-record-title"><h2 id="rfe-spec-title">Reference Build: 13 Channels, 6–18 GHz</h2><p>These are the published values for the reference front-end. They define what the platform can do before a project changes the channel count or the band.</p></div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="rfe-spec-caption">
+        <table class="sn-table">
+          <caption id="rfe-spec-caption" style="text-align:left;padding:0 0 12px;color:var(--sn-text-muted);font-size:.85rem;">Published values for the 13-channel Ku-band RF front-end reference build.</caption>
+          <thead><tr><th scope="col">Parameter</th><th scope="col">Published value</th><th scope="col">Notes</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Channel count</th><td data-label="Published value">13</td><td data-label="Notes">Channels share one control interface and one housing</td></tr>
+            <tr><th scope="row">Frequency range</th><td data-label="Published value">6–18 GHz</td><td data-label="Notes">Wideband receive coverage across Ku and lower bands</td></tr>
+            <tr><th scope="row">Noise figure</th><td data-label="Published value">≤4 dB, 4.5 dB over temperature</td><td data-label="Notes">Specified at the front-end input</td></tr>
+            <tr><th scope="row">Gain</th><td data-label="Published value">40.5 ± 1.5 dB</td><td data-label="Notes">Channel-to-channel gain spread inside the stated window</td></tr>
+            <tr><th scope="row">Amplitude tracking</th><td data-label="Published value">±1 dB</td><td data-label="Notes">Across channels at matched attenuation states</td></tr>
+            <tr><th scope="row">Phase tracking</th><td data-label="Published value">±10°</td><td data-label="Notes">Across channels; the delay states add their own quantization</td></tr>
+            <tr><th scope="row">Switched delay</th><td data-label="Published value">1λ at 12 GHz, 6-bit</td><td data-label="Notes">Delay range and step are set by the 12 GHz reference</td></tr>
+            <tr><th scope="row">Attenuation</th><td data-label="Published value">≥31 dB range, 1 dB step</td><td data-label="Notes">Applied per channel for amplitude taper</td></tr>
+            <tr><th scope="row">Channel isolation</th><td data-label="Published value">≥50 dB</td><td data-label="Notes">Between adjacent channels in the same housing</td></tr>
+            <tr><th scope="row">Input burn-out</th><td data-label="Published value">≥10 W</td><td data-label="Notes">Protection level at the input without damage</td></tr>
+            <tr><th scope="row">Power and cooling</th><td data-label="Published value">12 V, ≤10 W, natural convection to +55 °C</td><td data-label="Notes">No forced air in the reference build</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-rfe__note">Values are the source specification for this build. Any change to channel count, band or housing changes the thermal case and usually the gain budget, so the table is re-issued for the ordered variant rather than carried over unchanged.</p>
+      <div class="sn-rfe__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send a Platform Requirement</a><a class="sn-btn sn-btn--secondary" href="/products/tr-modules/">Review T/R Modules</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="rfe-chain" aria-labelledby="rfe-chain-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>02</b> / Signal chain</span><span>6 stages</span></div>
+        <div class="sn-record-title"><h2 id="rfe-chain-title">Six Stages Between the Antenna and the Receiver</h2><p>Each stage exists to protect a downstream one. The order is not arbitrary: protection comes before amplification, and delay comes after the noise figure is set.</p></div>
+      </div>
+      <ol class="sn-rfe__chain">
+        <li><b>Input protection</b><span>Limits the level that reaches the first amplifier. The burn-out rating of at least 10 W is the level the input survives without damage.</span></li>
+        <li><b>Low-noise amplification</b><span>Sets the noise figure for the whole chain. Published at ≤4 dB, rising to 4.5 dB across the temperature range.</span></li>
+        <li><b>Switched delay</b><span>Adds a 6-bit delay covering one wavelength at 12 GHz. Delay is applied after the noise figure is fixed so the switch loss does not sit in front of the LNA.</span></li>
+        <li><b>Per-channel attenuation</b><span>Applies amplitude taper at a 1 dB step over at least 31 dB. Attenuation states are used for tracking and for taper, not as a substitute for level control elsewhere.</span></li>
+        <li><b>Gain and distribution</b><span>Brings each channel to 40.5 ± 1.5 dB at the output and routes it to the connector field.</span></li>
+        <li><b>Control interface</b><span>Carries channel settings for delay and attenuation. The control word is agreed with the beam controller before layout.</span></li>
+      </ol>
+      <div class="sn-rfe__grid">
+        <div>
+          <h3 style="margin-top:26px;">What the numbers mean together</h3>
+          <p style="color:var(--sn-text-muted);max-width:74ch;">Gain, noise figure and tracking are specified together because they compete. Adding gain in front of the delay improves the noise figure but increases the power the switch must handle; increasing attenuation range reduces the output level available for the receiver. The gain budget is agreed as one set of values, not parameter by parameter.</p>
+          <p style="color:var(--sn-text-muted);max-width:74ch;">Delay quantization matters as well: a 6-bit delay creates phase steps that appear as residual phase error after beam steering. The step size and the resulting error at the operating frequency are stated with the datasheet so the digitization can be judged against the array requirement.</p>
+        </div>
+        <div class="sn-rfe__callout">
+          <h3>At review</h3>
+          <ul><li>Channel count and channel spacing</li><li>Band and the delay reference frequency</li><li>Gain budget and noise-figure target</li><li>Delay range, step and quantization limit</li><li>Attenuation range and step</li><li>Input protection level</li><li>Housing, connector field and cooling</li></ul>
+          <p style="margin-top:14px;">The reference build is natural convection to +55 °C. A higher ambient or a sealed housing changes the thermal path and is quoted separately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="rfe-validation" aria-labelledby="rfe-validation-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>03</b> / Validation</span><span>5 checkpoints</span></div>
+        <div class="sn-record-title"><h2 id="rfe-validation-title">How a Front-End Is Accepted</h2><p>Acceptance is agreed in writing before the first article. Tracking and delay quantization are measured, not inferred from component data.</p></div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="rfe-validation-caption">
+        <table class="sn-table">
+          <caption id="rfe-validation-caption" style="text-align:left;padding:0 0 12px;color:var(--sn-text-muted);font-size:.85rem;">Front-end acceptance checkpoints and what each one verifies.</caption>
+          <thead><tr><th scope="col">Checkpoint</th><th scope="col">Method</th><th scope="col">What it verifies</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Gain and match</th><td data-label="Method">S-parameters per channel across 6–18 GHz</td><td data-label="What it verifies">Gain window and input match at the connector</td></tr>
+            <tr><th scope="row">Noise figure</th><td data-label="Method">Noise measurement per channel at ambient and at temperature</td><td data-label="What it verifies">Both the ≤4 dB and the 4.5 dB over-temperature values</td></tr>
+            <tr><th scope="row">Tracking</th><td data-label="Method">Amplitude and phase across all 13 channels at matched states</td><td data-label="What it verifies">The ±1 dB and ±10° windows the array assumes</td></tr>
+            <tr><th scope="row">Delay states</th><td data-label="Method">Step response across all 6-bit delay states</td><td data-label="What it verifies">Range, step and quantization against the array limit</td></tr>
+            <tr><th scope="row">Protection</th><td data-label="Method">Input level applied at the burn-out rating</td><td data-label="What it verifies">That the protection survives the stated level without damage</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-rfe__note">Environmental qualification beyond the stated operating temperature is quoted per project against the test standards in the requirement. This page does not publish a qualification claim for every build.</p>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="rfe-rfq" aria-labelledby="rfe-rfq-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>04</b> / RFQ inputs</span><span>2 stages</span></div>
+        <div class="sn-record-title"><h2 id="rfe-rfq-title">What a Front-End Quote Needs</h2><p>Channel count, band and delay requirement decide the architecture. The housing and the connector field follow, and they set the thermal limit.</p></div>
+      </div>
+      <div class="sn-rfe__order-grid">
+        <div class="sn-rfe__order">
+          <h3>Known at inquiry</h3>
+          <ul><li>Channel count and channel spacing</li><li>Band and delay reference frequency</li><li>Gain and noise-figure targets</li><li>Delay range, step and allowed quantization</li><li>Attenuation range and step</li><li>Input protection level</li><li>Connector series and housing envelope</li><li>Ambient and cooling condition</li></ul>
+        </div>
+        <div class="sn-rfe__order">
+          <h3>Confirmed by review</h3>
+          <p>Channel layout, delay line design, attenuation stage and thermal path are confirmed against the housing and the beam controller.</p>
+          <p>Price, lead time, warranty and acceptance tests are quoted per configuration and per order. This page does not publish a cross-project policy for any of them.</p>
+          <p>A complete RFQ typically receives initial engineering feedback in about 24 hours; that response is not a final specification.</p>
+        </div>
+      </div>
+      <div class="sn-rfe__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit a Front-End RFQ</a><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Review Test and Quality</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="rfe-faq" aria-labelledby="rfe-faq-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>05</b> / Questions</span><span>5 entries</span></div>
+        <div class="sn-record-title"><h2 id="rfe-faq-title">RF Front-End Questions</h2><p>Five questions asked before a multichannel front-end is specified.</p></div>
+      </div>
+      <div class="sn-rfe__faq">
+        <details open><summary>Is the noise figure specified at ambient only?</summary><p>No. The reference build publishes ≤4 dB at ambient and 4.5 dB across the operating temperature range. Both values are measured, because a receiver budget built only on the room-temperature figure will be optimistic at the top of the range.</p></details>
+        <details><summary>Why is the delay referenced to 12 GHz?</summary><p>One wavelength of delay is a physical length, so a delay range quoted in wavelengths needs a reference frequency. At 12 GHz one wavelength corresponds to a defined time delay; the same hardware produces a different number of wavelengths at another frequency. The reference is stated so the range can be converted correctly.</p></details>
+        <details><summary>Does attenuation affect the noise figure?</summary><p>Attenuation is applied after the low-noise stage in this architecture, so it reduces output level without directly setting the input noise figure. The exact effect depends on where the attenuation sits relative to the gain stages, and that placement is shown on the block diagram issued with the datasheet.</p></details>
+        <details><summary>Can the channel count change from 13?</summary><p>Yes. Thirteen channels is the reference build. Channel count changes the housing, the control board and the thermal path, so it is fixed before layout. The gain and tracking budgets are re-issued for the new count rather than scaled from this table.</p></details>
+        <details><summary>What input level can it survive?</summary><p>The published burn-out rating is at least 10 W at the input, with protection ahead of the first amplifier. The duration and frequency condition of that rating are defined with the datasheet; a continuous high level outside those conditions is reviewed separately.</p></details>
+      </div>
+      <div class="sn-rfe__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Ask an RF Engineer</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" aria-labelledby="rfe-cta-title">
+    <div class="sn-container">
+      <div class="sn-sheet">
+        <div class="sn-sheet__head"><span>RFQ route · RF front-ends</span><span>Channels, band, delay</span></div>
+        <div class="sn-sheet__grid">
+          <div>
+            <h2 id="rfe-cta-title">Send the Channel Count and the Delay Requirement</h2>
+            <p>One RFQ can cover channels, band, gain budget, delay states, attenuation, housing and cooling. Attach the array drawing and the beam-controller interface so the control word is agreed with the RF layout.</p>
+            <p>Comparing with a transmit path? <a href="/products/tr-modules/">Review the T/R module families</a> or <a href="/engineering/custom-rf-design/">open a custom evaluation</a>.</p>
+            <div class="sn-rfe__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request a Front-End Quote</a></div>
+          </div>
+          <div class="sn-sheet__panel">
+            <h3>Attach to the RFQ</h3>
+            <ul><li>Channel count and spacing</li><li>Band and delay reference frequency</li><li>Gain and noise-figure targets</li><li>Delay range, step and quantization limit</li><li>Attenuation range and step</li><li>Connector series and housing envelope</li><li>Ambient and cooling condition</li></ul>
+            <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. Quotation and delivery follow the confirmed configuration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/rf-front-ends/#product",
+        "name": "Ku-Band Multi-Channel RF Front-Ends, 6–18 GHz",
+        "url": "https://rf-sonne.com/products/rf-front-ends/",
+        "description": "Thirteen-channel 6-18 GHz RF front-end with protected low-noise amplification, 6-bit switched delay, per-channel attenuation and 40.5 dB nominal gain.",
+        "category": "RF front-end assemblies",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/rf-front-end-ku.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/rf-front-ends/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"RF Front-Ends","item":"https://rf-sonne.com/products/rf-front-ends/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

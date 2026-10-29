@@ -1,0 +1,261 @@
+<!-- wp:html -->
+<div class="sn-sw">
+  <style>
+    .sn-sw { color: var(--sn-text); }
+    .sn-sw *, .sn-sw *::before, .sn-sw *::after { box-sizing: border-box; }
+    .sn-sw h2, .sn-sw h3, .sn-sw p, .sn-sw ul, .sn-sw ol, .sn-sw figure { margin-top: 0; }
+    .sn-sw h2 { margin-bottom: 18px; color: var(--sn-navy); font-size: var(--sn-h2-size); line-height: var(--sn-h2-leading); letter-spacing: var(--sn-h2-tracking); overflow-wrap: anywhere; }
+    .sn-sw h3 { margin-bottom: 10px; color: var(--sn-navy); font-size: var(--sn-h3-size); line-height: var(--sn-h3-leading); overflow-wrap: anywhere; }
+    .sn-sw p, .sn-sw li { line-height: 1.7; }
+    .sn-sw a { color: var(--sn-cyan-dark); text-underline-offset: 3px; }
+    .sn-sw img { display: block; max-width: 100%; height: auto; }
+    .sn-sw [id] { scroll-margin-top: 96px; }
+    .sn-sw figure { position: relative; margin-bottom: 0; }
+    .sn-sw figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
+    .sn-sw .sn-sw__eyebrow { display: block; margin-bottom: 16px; color: var(--sn-cyan); font-family: var(--sn-font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .sn-sw .sn-sw__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 26px; }
+    .sn-sw .sn-sw__hero { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr); gap: clamp(34px, 6vw, 72px); align-items: center; }
+    .sn-sw .sn-sw__ledger { min-width: 1080px; }
+    .sn-sw .sn-sw__ledger tbody th { width: 210px; }
+    .sn-sw .sn-sw__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-sw .sn-sw__pair figure { display: flex; flex-direction: column; overflow: hidden; border: var(--sn-border); background: var(--sn-card); }
+    .sn-sw .sn-sw__pair img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+    .sn-sw .sn-sw__blocks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 26px; border: var(--sn-border); background: var(--sn-line); }
+    .sn-sw .sn-sw__block { padding: 22px 20px; background: var(--sn-card); }
+    .sn-sw .sn-sw__block span { display: block; margin-bottom: 8px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .08em; }
+    .sn-sw .sn-sw__block h3 { font-size: 1rem; }
+    .sn-sw .sn-sw__block p { margin-bottom: 0; color: var(--sn-text-muted); font-size: .86rem; }
+    .sn-sw .sn-sw__note { max-width: 80ch; margin: 16px 0 0; color: var(--sn-text-muted); font-size: .85rem; line-height: 1.65; }
+    .sn-sw .sn-sw__chain { margin: 0; padding: 0; counter-reset: chain; list-style: none; }
+    .sn-sw .sn-sw__chain li { position: relative; padding: 18px 0 18px 62px; border-bottom: 1px solid var(--sn-line); counter-increment: chain; }
+    .sn-sw .sn-sw__chain li:first-child { border-top: 1px solid var(--sn-line-strong); }
+    .sn-sw .sn-sw__chain li:last-child { border-bottom: 1px solid var(--sn-line-strong); }
+    .sn-sw .sn-sw__chain li::before { position: absolute; top: 18px; left: 0; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: .72rem; letter-spacing: .06em; content: 'NODE ' counter(chain, decimal-leading-zero); }
+    .sn-sw .sn-sw__chain b { display: block; margin-bottom: 4px; color: var(--sn-navy); font-family: var(--sn-font-heading); }
+    .sn-sw .sn-sw__chain span { display: block; max-width: 72ch; color: var(--sn-text-muted); font-size: .9rem; }
+    .sn-sw .sn-sw__order-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .sn-sw .sn-sw__order { padding: 24px; border: var(--sn-border); background: var(--sn-card); }
+    .sn-sw .sn-sw__order h3 { font-family: var(--sn-font-mono); font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; }
+    .sn-sw .sn-sw__order ul { margin-bottom: 0; padding-left: 20px; }
+    .sn-sw .sn-sw__order li, .sn-sw .sn-sw__order p { color: var(--sn-text-muted); font-size: .88rem; }
+    .sn-sw .sn-sw__order p:last-child { margin-bottom: 0; }
+    .sn-sw .sn-sw__faq { max-width: 940px; }
+    .sn-sw .sn-sw__faq details { border-bottom: var(--sn-border); }
+    .sn-sw .sn-sw__faq summary { position: relative; min-height: 44px; padding: 22px 46px 22px 0; color: var(--sn-navy); font-family: var(--sn-font-heading); font-size: 1.06rem; font-weight: 700; line-height: 1.45; cursor: pointer; }
+    .sn-sw .sn-sw__faq summary::after { position: absolute; top: 20px; right: 4px; color: var(--sn-cyan-dark); font-family: var(--sn-font-mono); font-size: 1.3rem; content: '+'; }
+    .sn-sw .sn-sw__faq details[open] summary::after { content: '−'; }
+    .sn-sw .sn-sw__faq details p { max-width: 78ch; padding-right: 36px; color: var(--sn-text-muted); }
+    @media (max-width: 1024px) {
+      .sn-sw .sn-sw__blocks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .sn-sw .sn-sw__hero { grid-template-columns: 1fr; }
+      .sn-sw .sn-sw__pair, .sn-sw .sn-sw__order-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .sn-sw .sn-sw__ledger { min-width: 0; }
+      .sn-sw .sn-sw__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+      .sn-sw .sn-sw__ledger, .sn-sw .sn-sw__ledger tbody, .sn-sw .sn-sw__ledger tr, .sn-sw .sn-sw__ledger th, .sn-sw .sn-sw__ledger td { display: block; width: 100%; }
+      .sn-sw .sn-sw__ledger tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
+      .sn-sw .sn-sw__ledger tbody th { width: auto; padding: 0 0 12px; border: 0; font-size: 1.04rem; }
+      .sn-sw .sn-sw__ledger tbody td { padding: 0 0 10px; border: 0; }
+      .sn-sw .sn-sw__ledger tbody td:last-child { padding-bottom: 0; }
+      .sn-sw .sn-sw__ledger tbody td::before { display: block; margin-bottom: 3px; color: var(--sn-text-muted); font-family: var(--sn-font-mono); font-size: .68rem; letter-spacing: .07em; line-height: 1.5; text-transform: uppercase; content: attr(data-label); }
+      .sn-sw .sn-sw__blocks { grid-template-columns: 1fr; }
+      .sn-sw .sn-sw__chain li { padding-left: 0; padding-top: 24px; }
+      .sn-sw .sn-sw__chain li::before { top: 0; }
+      .sn-sw .sn-sw__actions .sn-btn { width: 100%; }
+    }
+  </style>
+
+  <section class="sn-hero" aria-labelledby="sw-title">
+    <div class="sn-container">
+      <div class="sn-sw__hero">
+        <div>
+          <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">Switch Matrices</li></ol></nav>
+          <span class="sn-sw__eyebrow">RF switching · 9 kHz to 18 GHz</span>
+          <h1 id="sw-title">Solid-State Switch Matrices for RF Test and Signal Routing</h1>
+          <p style="max-width:64ch;margin-bottom:18px;font-size:1.04rem;">Full-crosspoint and fan-out switch matrices that expand analyzer ports, step between multichannel devices and route signals across a rack. Topology, frequency range, isolation and control interface are fixed per project, with the port map supplied by the customer.</p>
+          <div class="sn-sw__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Specify a Matrix</a><a class="sn-btn sn-btn--secondary" href="#sw-models">Review Configurations</a></div>
+        </div>
+        <figure class="sn-hero-plate">
+          <div class="sn-hero-plate__tag"><span>Plate 02</span><span>8×8 full matrix</span></div>
+          <div class="sn-hero-plate__media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/switch-matrix-8x8-1.webp" alt="8x8 full-crosspoint solid-state switch matrix front panel" width="1400" height="1400" loading="eager" fetchpriority="high" decoding="async"></div>
+          <figcaption>8×8 full-crosspoint matrix with A1–A8 and B1–B8 ports. Any input can reach any output without rewiring the bench.</figcaption>
+        </figure>
+      </div>
+      <div class="sn-hero-meta"><span><b>Topologies</b>Fan-out and full matrix</span><span><b>Largest fan-out</b>64×1</span><span><b>Full matrix</b>8×8 · 16×16</span><span><b>Band</b>9 kHz–18 GHz</span></div>
+    </div>
+  </section>
+
+  <section class="sn-section" id="sw-models" aria-labelledby="sw-models-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>01</b> / Configurations</span><span>7 entries</span></div>
+        <div class="sn-record-title"><h2 id="sw-models-title">Choose the Topology Before the Port Count</h2><p>A fan-out matrix connects one instrument to many devices; a full matrix connects any port to any port. The choice follows the measurement sequence, not the largest available channel count.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="sw-models-caption">
+        <table class="sn-ledger sn-sw__ledger">
+          <caption id="sw-models-caption" style="text-align:left;padding:0 0 12px;color:var(--sn-text-muted);font-size:.85rem;">Switch-matrix configurations with published topology, band and key figures. Values are the source specification and are confirmed on the datasheet for the ordered configuration.</caption>
+          <thead><tr><th scope="col">Configuration</th><th scope="col">Topology</th><th scope="col">Frequency</th><th scope="col">Key figures</th><th scope="col">Typical fit</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">HW-KG6401-6</th><td data-label="Topology">Fan-out, 1 to 64 paths</td><td data-label="Frequency">0.01–6 GHz</td><td data-label="Key figures">Isolation ≥70 dB</td><td data-label="Typical fit">One analyzer stepped across up to 64 test points</td></tr>
+            <tr><th scope="row">HW-KG8801-1</th><td data-label="Topology">Full matrix, 8×8</td><td data-label="Frequency">1–18 GHz</td><td data-label="Key figures">Isolation 60 dB · gain 0 ± 2 dB · ≤20 dBm</td><td data-label="Typical fit">Any-to-any routing across a microwave bench</td></tr>
+            <tr><th scope="row">64×1 broadband</th><td data-label="Topology">Fan-out, 1 to 64 paths</td><td data-label="Frequency">0.01–8 GHz</td><td data-label="Key figures">Isolation ≥65 dB</td><td data-label="Typical fit">Antenna and component test with many switch positions</td></tr>
+            <tr><th scope="row">30×1 phase-matched</th><td data-label="Topology">Fan-out, phase-aligned paths</td><td data-label="Frequency">0.05–6 GHz</td><td data-label="Key figures">Path phase spread ≤3°</td><td data-label="Typical fit">Phase-sensitive arrays and multichannel modules</td></tr>
+            <tr><th scope="row">16×16 full matrix</th><td data-label="Topology">Full matrix, 16×16</td><td data-label="Frequency">1–10 GHz</td><td data-label="Key figures">Insertion loss ≤16 dB · isolation ≥70 dB</td><td data-label="Typical fit">Base-station panels and multi-port devices</td></tr>
+            <tr><th scope="row">Port expansion</th><td data-label="Topology">Analyzer port extension · ES5204 / ES5208 / ES5209 / ES5216 / ES5232</td><td data-label="Frequency">9 kHz–8 GHz</td><td data-label="Key figures">2 ports to 4 / 8 / 9 / 16 / 32 ports</td><td data-label="Typical fit">Growing a two-port VNA into a production test set</td></tr>
+            <tr><th scope="row">Full-matrix expansion</th><td data-label="Topology">Full matrix</td><td data-label="Frequency">Project-defined</td><td data-label="Key figures">12-port and 18-port builds</td><td data-label="Typical fit">Devices whose ports must all be measured against each other</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-sw__note">Listed figures are the published values for the named configuration. Insertion loss varies with path length and frequency; the accepted value for a specific build is the one measured on the delivered unit. Confirm the datasheet revision before design freeze.</p>
+      <div class="sn-sw__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Send a Port Map</a><a class="sn-btn sn-btn--secondary" href="/products/antenna-test-systems/">See Matrices in Test Systems</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="sw-spec" aria-labelledby="sw-spec-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>02</b> / Specification</span><span>4 levers</span></div>
+        <div class="sn-record-title"><h2 id="sw-spec-title">Four Values Settle Most Matrix Projects</h2><p>Frequency range, path count, isolation and power handling are coupled. Raising one usually moves the others, so they are reviewed together rather than quoted one at a time.</p></div>
+      </div>
+      <div class="sn-sw__blocks">
+        <div class="sn-sw__block"><span>Lever 01</span><h3>Frequency range</h3><p>The band sets switch type, connector series and path layout. Wideband coverage to 18 GHz is available, but loss and isolation are specified at defined points, not as one flat figure.</p></div>
+        <div class="sn-sw__block"><span>Lever 02</span><h3>Path count and topology</h3><p>Fan-out accepts one common port and many branches. A full matrix needs a crosspoint at every intersection, so cost and loss rise faster than the port count.</p></div>
+        <div class="sn-sw__block"><span>Lever 03</span><h3>Isolation</h3><p>Isolation decides whether an unselected path can disturb the measurement. Published values range from 60 dB to 70 dB depending on configuration and band.</p></div>
+        <div class="sn-sw__block"><span>Lever 04</span><h3>Power and control</h3><p>Solid-state switches suit low-level measurement paths; the 8×8 configuration is rated to 20 dBm. Control is by the test software over the interface agreed at review.</p></div>
+      </div>
+      <p class="sn-sw__note">Where a project needs higher power than a solid-state path allows, a different switch technology or a relay-based design is reviewed instead. That decision is made before the enclosure and control board are released.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" id="sw-path" aria-labelledby="sw-path-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>03</b> / Signal path</span><span>5 nodes</span></div>
+        <div class="sn-record-title"><h2 id="sw-path-title">From Instrument Port to Device Under Test</h2><p>The signal path is short by design. Every added node contributes loss, mismatch and a calibration step, so the chain is drawn before the hardware is built.</p></div>
+      </div>
+      <ol class="sn-sw__chain">
+        <li><b>Instrument port</b><span>The analyzer or source connects at the common port. Port count and connector series are confirmed against the instrument.</span></li>
+        <li><b>Input routing</b><span>Internal cabling and the first switch stage set the loss floor. Cable lengths are matched where phase matters.</span></li>
+        <li><b>Switch core</b><span>Solid-state switches select the path. Switching time, isolation and power rating are properties of this stage.</span></li>
+        <li><b>Output field</b><span>Outputs land on a labelled connector field — A1–A8 and B1–B8 on the 8×8 unit — so the port map is readable at the rack.</span></li>
+        <li><b>Control and calibration</b><span>The control interface is driven by the test software. Path loss and phase are characterized during integration so limits can be set per path.</span></li>
+      </ol>
+      <div class="sn-sw__pair">
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/switch-matrix-stack.webp" alt="Stack of ES-series switch matrix units with 8 to 32 ports" width="490" height="490" loading="lazy" decoding="async"><figcaption>Rack units across the matrix family. Front-panel port labels follow the customer port map, not a fixed numbering.</figcaption></figure>
+        <figure><img src="https://rf-sonne.com/wp-content/uploads/2026/10/switch-matrix-module.webp" alt="Multi-port solid-state switch module assembly" width="1012" height="524" loading="lazy" decoding="async"><figcaption>Multi-port switch module. Internal assembly, connector field and control board are built as one replaceable unit.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="sw-fit" aria-labelledby="sw-fit-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>04</b> / Integration</span><span>3 checks</span></div>
+        <div class="sn-record-title"><h2 id="sw-fit-title">What the Integration Review Covers</h2><p>A matrix is rarely bought alone. It is accepted as part of a measurement chain, and the chain is what determines whether the published isolation still holds at the device.</p></div>
+      </div>
+      <div class="sn-table-wrap" tabindex="0" role="region" aria-labelledby="sw-fit-caption">
+        <table class="sn-table">
+          <caption id="sw-fit-caption" style="text-align:left;padding:0 0 12px;color:var(--sn-text-muted);font-size:.85rem;">Integration checks before a switch matrix is accepted into a measurement chain.</caption>
+          <thead><tr><th scope="col">Check</th><th scope="col">What is reviewed</th><th scope="col">Why it matters</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Cabling and connectors</th><td data-label="What is reviewed">Connector series, torque access, cable bend radius and rack depth</td><td data-label="Why it matters">A poor cable route can add more loss and mismatch than the matrix itself</td></tr>
+            <tr><th scope="row">Path calibration</th><td data-label="What is reviewed">Per-path loss and phase, stored and applied by the software</td><td data-label="Why it matters">Limits set against an uncalibrated path will pass or fail the wrong units</td></tr>
+            <tr><th scope="row">Control sequence</th><td data-label="What is reviewed">Switching order, settling time and instrument handshake</td><td data-label="Why it matters">Reading before the path settles produces intermittent, hard-to-trace failures</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-sw__note">Where the matrix is supplied with a test system, these checks are part of system acceptance. Where it is supplied as a standalone unit, the interface and calibration method are documented so the customer can repeat them.</p>
+    </div>
+  </section>
+
+  <section class="sn-section" id="sw-rfq" aria-labelledby="sw-rfq-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>05</b> / RFQ inputs</span><span>2 stages</span></div>
+        <div class="sn-record-title"><h2 id="sw-rfq-title">What a Matrix Quote Needs</h2><p>Topology, band and port map decide most of the build. Sending them together shortens the review from several exchanges to one.</p></div>
+      </div>
+      <div class="sn-sw__order-grid">
+        <div class="sn-sw__order">
+          <h3>Known at inquiry</h3>
+          <ul><li>Number of instrument ports and device ports</li><li>Required topology: fan-out or full matrix</li><li>Frequency range and connector series</li><li>Maximum signal level on any path</li><li>Isolation or crosstalk limit</li><li>Control interface and software owner</li><li>Rack, bench or system-mount format</li></ul>
+        </div>
+        <div class="sn-sw__order">
+          <h3>Confirmed by review</h3>
+          <p>Switch technology, path layout, connector field and control board are confirmed against the port map and the instrument.</p>
+          <p>Price, lead time, warranty and acceptance tests are quoted per configuration and per order. This page does not publish a cross-project policy for any of them.</p>
+          <p>A complete RFQ typically receives initial engineering feedback in about 24 hours; that response is not a final specification.</p>
+        </div>
+      </div>
+      <div class="sn-sw__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Submit a Matrix RFQ</a><a class="sn-btn sn-btn--secondary" href="/engineering/testing-quality/">Review Test and Quality</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section sn-section--muted" id="sw-faq" aria-labelledby="sw-faq-title">
+    <div class="sn-container">
+      <div class="sn-record-head" style="margin-bottom:clamp(28px,3.4vw,42px);">
+        <div class="sn-record-meta"><span><b>06</b> / Questions</span><span>5 entries</span></div>
+        <div class="sn-record-title"><h2 id="sw-faq-title">Switch Matrix Questions</h2><p>Five questions asked before a routing configuration is fixed.</p></div>
+      </div>
+      <div class="sn-sw__faq">
+        <details open><summary>Fan-out or full matrix — which one do I need?</summary><p>Use fan-out when one instrument must reach many test points in sequence. Use a full matrix when any port must be measured against any other, as with multi-port antennas or multichannel modules. A full matrix needs a crosspoint at every intersection, so loss and cost rise faster than the port count.</p></details>
+        <details><summary>Can the matrix extend my existing analyzer?</summary><p>Yes. Port expansion from two ports to 4, 8, 9, 16 or 32 ports is available over 9 kHz–8 GHz; the configurations are ES5204, ES5208, ES5209, ES5216 and ES5232. The analyzer model, its remote interface and the connector series are confirmed before the matrix is built, because the control software must drive both.</p></details>
+        <details><summary>How is isolation specified across the band?</summary><p>Isolation is specified at defined frequencies for each configuration, not as one flat number across the whole band. Published values range from 60 dB to 70 dB. The value that matters is the one at the frequencies where the device is actually measured.</p></details>
+        <details><summary>Is the switch matrix calibrated?</summary><p>Path loss and phase are characterized during integration, and the correction is applied by the test software. The calibration method is documented so the customer can repeat it. A standalone matrix is delivered with its measured path data, not with a permanent internal correction that cannot be verified.</p></details>
+        <details><summary>Can the port labels follow our own naming?</summary><p>Yes. The front-panel field is labelled to the customer port map — A1–A8 and B1–B8 on the 8×8 unit are one example, not a fixed scheme. The labels, the software channel names and the record fields are aligned so an operator reads the same name at the rack and in the report.</p></details>
+      </div>
+      <div class="sn-sw__actions"><a class="sn-btn sn-btn--secondary" href="/contact/">Ask a Switching Engineer</a></div>
+    </div>
+  </section>
+
+  <section class="sn-section" aria-labelledby="sw-cta-title">
+    <div class="sn-container">
+      <div class="sn-sheet">
+        <div class="sn-sheet__head"><span>RFQ route · switch matrices</span><span>Port map, band and isolation</span></div>
+        <div class="sn-sheet__grid">
+          <div>
+            <h2 id="sw-cta-title">Send the Port Map and the Band</h2>
+            <p>One RFQ can cover topology, frequency range, isolation, control interface and enclosure. Attach the port map and the instrument model so the review starts from the same data as the switch layout.</p>
+            <p>Building a production line around the matrix? <a href="/products/antenna-test-systems/">See how matrices integrate into antenna test systems</a> or <a href="/engineering/custom-rf-design/">open a custom evaluation</a>.</p>
+            <div class="sn-sw__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request a Matrix Quote</a></div>
+          </div>
+          <div class="sn-sheet__panel">
+            <h3>Attach to the RFQ</h3>
+            <ul><li>Instrument model and port count</li><li>Device port map and connector series</li><li>Frequency range and maximum level</li><li>Isolation or crosstalk limit</li><li>Control interface and software owner</li><li>Rack or bench format and depth</li><li>Quantity and delivery site</li></ul>
+            <p>A complete RFQ typically receives initial engineering feedback in about 24 hours. Quotation and delivery follow the confirmed configuration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://rf-sonne.com/products/switch-matrices/#product",
+        "name": "Solid-State Switch Matrices for RF Test and Signal Routing",
+        "url": "https://rf-sonne.com/products/switch-matrices/",
+        "description": "Fan-out and full-crosspoint solid-state switch matrices from 9 kHz to 18 GHz, including 64x1, 30x1 phase-matched, 8x8 and 16x16 configurations for RF test systems.",
+        "category": "RF switch matrices",
+        "brand": "SONNE ELECTRONICS",
+        "image": "https://rf-sonne.com/wp-content/uploads/2026/10/switch-matrix-8x8-1.webp"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rf-sonne.com/products/switch-matrices/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://rf-sonne.com/"},
+          {"@type":"ListItem","position":2,"name":"Products","item":"https://rf-sonne.com/products/"},
+          {"@type":"ListItem","position":3,"name":"Switch Matrices","item":"https://rf-sonne.com/products/switch-matrices/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</div>
+<!-- /wp:html -->

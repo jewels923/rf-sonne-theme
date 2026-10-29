@@ -26,17 +26,49 @@
       "citation_value": "制作“RF 制造伙伴初筛矩阵”：产品线、核心频率边界、所需输入、可用验证能力、原型/试产/量产阶段和对应入口；另给 Prototype → Pilot → Mass 阶段交付物核对表。"
     },
     "keywords": {
-      "focus": {"term": "custom RF component manufacturer", "sv": null, "kd": null},
+      "focus": {
+        "term": "custom RF component manufacturer",
+        "sv": null,
+        "kd": null
+      },
       "secondary": [
-        {"term": "RF & microwave components manufacturer", "sv": null, "kd": null},
-        {"term": "base-station passive component manufacturer", "sv": null, "kd": null},
-        {"term": "precision enclosure OEM/ODM", "sv": null, "kd": null}
+        {
+          "term": "RF & microwave components manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "base-station passive component manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "precision enclosure OEM/ODM",
+          "sv": null,
+          "kd": null
+        }
       ],
       "long_tail": [
-        {"term": "prototype to mass production partner", "sv": null, "kd": null},
-        {"term": "custom microwave components", "sv": null, "kd": null},
-        {"term": "engineering-first RF supplier", "sv": null, "kd": null},
-        {"term": "DC to 40 GHz / up to 110 GHz", "sv": null, "kd": null}
+        {
+          "term": "prototype to mass production partner",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "custom microwave components",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "engineering-first RF supplier",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "DC to 40 GHz / up to 110 GHz",
+          "sv": null,
+          "kd": null
+        }
       ],
       "allocation": [
         "H1：custom RF component manufacturer 的制造商定位，不在首页争夺 cavity filter、waveguide components 或 RF combiner 分类主词",
@@ -205,7 +237,11 @@
         "snippet": "清单转段落式 Featured Snippet；约 60 词，24 小时仅限定完整 RFQ 初步工程反馈"
       }
     ],
-    "schema": ["Organization", "WebSite", "FAQPage"],
+    "schema": [
+      "Organization",
+      "WebSite",
+      "FAQPage"
+    ],
     "seo_title": "Custom RF & Microwave Component Manufacturer | SONNE",
     "meta_description": "SONNE manufactures RF & microwave filters, waveguide components, combiners, base-station RF and precision enclosures, from custom RFQ and prototype to repeatable mass production.",
     "focus_keyphrase": "custom RF component manufacturer"
@@ -237,18 +273,54 @@
       "citation_value": "制作“产品线导航主表”：核心/辅助层级、器件功能、典型应用、频率或结构输入、标准/定制路径和目标 URL；另做按应用反查产品线的二维索引。"
     },
     "keywords": {
-      "focus": {"term": "RF & microwave components", "sv": null, "kd": null},
+      "focus": {
+        "term": "RF & microwave components",
+        "sv": null,
+        "kd": null
+      },
       "secondary": [
-        {"term": "RF filters", "sv": null, "kd": null},
-        {"term": "waveguide components", "sv": null, "kd": null},
-        {"term": "RF combiners", "sv": null, "kd": null},
-        {"term": "base station RF", "sv": null, "kd": null},
-        {"term": "precision enclosures", "sv": null, "kd": null}
+        {
+          "term": "RF filters",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "waveguide components",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "RF combiners",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "base station RF",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "precision enclosures",
+          "sv": null,
+          "kd": null
+        }
       ],
       "long_tail": [
-        {"term": "custom RF component manufacturer", "sv": null, "kd": null},
-        {"term": "RF component supplier China", "sv": null, "kd": null},
-        {"term": "OEM RF components", "sv": null, "kd": null}
+        {
+          "term": "custom RF component manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "RF component supplier China",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "OEM RF components",
+          "sv": null,
+          "kd": null
+        }
       ],
       "allocation": [
         "H1：RF & microwave components 聚合语义，并用 Precision Enclosure 保持源 H1 不变",
@@ -276,7 +348,7 @@
         "number": 2,
         "name": "Core Product Lines",
         "question": "五条核心线分别解决什么问题，我应该点击哪一条？",
-        "h2": "Choose from Five Core Product Lines",
+        "h2": "Choose from Five Passive Component Lines",
         "points": [
           "以五行导航主表代替纯营销卡片，列为产品线、解决的问题、选型首要输入、标准/定制路径、详情入口",
           "Filters 行以频率/带宽/抑制为输入；Waveguide 行以频段/法兰/极化为输入；Combiners 行以 band plan/端口/隔离为输入",
@@ -288,6 +360,20 @@
       },
       {
         "number": 3,
+        "name": "Systems & Active RF",
+        "question": "Which system and active RF lines cover test, switching, modules and front ends?",
+        "h2": "Choose from Five System and Active RF Lines",
+        "points": [
+          "Five lines: Antenna Test Systems, Switch Matrices, T/R Modules, Passive Microwave Components and RF Front-Ends.",
+          "Each line links to a category page with a configuration matrix, engineering detail and RFQ inputs.",
+          "These lines are built to a project specification; published configurations are starting points.",
+          "System thumbnails use the uploaded PPT photography with per-image alt text."
+        ],
+        "image": "Test fixture, 8x8 switch matrix, 8-channel T/R module, high-power attenuator and 13-channel front-end thumbnails at 82px.",
+        "cta": "Compare System Lines"
+      },
+      {
+        "number": 4,
         "name": "Supporting Lines",
         "question": "如果需求属于室内覆盖、光纤配线或配件，应该去哪里？",
         "h2": "Find Supporting IBS/DAS, FTTX and RF Accessories",
@@ -301,7 +387,7 @@
         "cta": "Browse Supporting Lines"
       },
       {
-        "number": 4,
+        "number": 5,
         "name": "Application Navigator",
         "question": "我只知道系统应用、不知道器件名称时，如何反查产品？",
         "h2": "Find Products by Application",
@@ -315,7 +401,7 @@
         "cta": "Explore Solutions by Application"
       },
       {
-        "number": 5,
+        "number": 6,
         "name": "Standard or Custom Route",
         "question": "已有型号可选型，还是需要走定制工程评估？",
         "h2": "Choose a Standard Selection or Custom Evaluation Route",
@@ -329,7 +415,7 @@
         "cta": "Start a Custom Evaluation"
       },
       {
-        "number": 6,
+        "number": 7,
         "name": "Capability Boundary",
         "question": "整个产品组合的制造与验证边界是什么？",
         "h2": "Check the Manufacturing Scope behind the Product Portfolio",
@@ -343,7 +429,7 @@
         "cta": "Review Engineering Capabilities"
       },
       {
-        "number": 7,
+        "number": 8,
         "name": "FAQ",
         "question": "选定产品线前，供应范围、定制和 RFQ 还有哪些常见疑问？",
         "h2": "Product Line Selection FAQs",
@@ -357,7 +443,7 @@
         "cta": "—；导航答案内使用文本链接，集中 CTA 留到末节"
       },
       {
-        "number": 8,
+        "number": 9,
         "name": "RFQ Router",
         "question": "我选定产品线后，怎样一次提交足够的信息？",
         "h2": "Send One RFQ for One Line or a Multi-Line BOM",
@@ -374,7 +460,7 @@
     "faqs": [
       {
         "question": "Which SONNE product lines are core product lines?",
-        "answer": "The five core lines are RF and microwave filters, waveguide and microwave components, combiners and duplexers, base-station RF, and precision enclosures. IBS/DAS and FTTX are supporting product lines, while RF accessories provide additional project-completion items. This hierarchy helps buyers reach the main engineering categories before browsing supplementary products.",
+        "answer": "The portfolio is organised in two groups. Five passive component lines cover RF and microwave filters, waveguide and microwave components, combiners and duplexers, base-station RF, and precision enclosures. Five system and active RF lines cover antenna test systems, switch matrices, T/R modules, high-power passive microwave components, and RF front-ends. IBS/DAS and FTTX are supporting product lines, while RF accessories provide additional project-completion items.",
         "intent": "理解产品层级并快速进入核心分类",
         "snippet": "列表型 Featured Snippet；答案约 55 词，页面可同步呈现五项有序列表"
       },
@@ -403,7 +489,10 @@
         "snippet": "直接回答加操作步骤；约 60 词，明确 24 小时反馈的非报价属性"
       }
     ],
-    "schema": ["CollectionPage", "BreadcrumbList"],
+    "schema": [
+      "CollectionPage",
+      "BreadcrumbList"
+    ],
     "seo_title": "RF & Microwave Components | Filters, Waveguide, Combiners | SONNE",
     "seo_note": "源 SEO Title 超过 60 字符，按契约原样保留；待 01 总控修订，本 fragment 不擅自改写。",
     "meta_description": "Explore SONNE product lines: RF and microwave filters, waveguide components, combiners and duplexers, base-station RF, precision enclosures, plus IBS/DAS and FTTX.",
@@ -436,27 +525,72 @@
       "citation_value": "发布“滤波器结构与指标选型框架”：cavity/waveguide/tuning-free 对比维度含频段、插损、抑制、功率、PIM、体积、调试和验证输入；附完整滤波器 RFQ 参数核对表。"
     },
     "keywords": {
-      "focus": {"term": "cavity filter", "sv": null, "kd": null},
+      "focus": {
+        "term": "bandpass filter",
+        "sv": 2400,
+        "kd": 9
+      },
       "secondary": [
-        {"term": "RF filter", "sv": null, "kd": null},
-        {"term": "microwave filter", "sv": null, "kd": null},
-        {"term": "bandpass filter", "sv": null, "kd": null},
-        {"term": "waveguide filter", "sv": 28, "kd": null}
+        {
+          "term": "cavity filter",
+          "sv": 320,
+          "kd": 0
+        },
+        {
+          "term": "RF filter",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "microwave filter",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "waveguide filter",
+          "sv": 28,
+          "kd": null
+        }
       ],
       "long_tail": [
-        {"term": "custom cavity filter manufacturer", "sv": null, "kd": null},
-        {"term": "waveguide filter manufacturer", "sv": null, "kd": null},
-        {"term": "E-band filter manufacturer", "sv": null, "kd": null},
-        {"term": "RRU filter manufacturer", "sv": null, "kd": null},
-        {"term": "high power low PIM filter", "sv": null, "kd": null}
+        {
+          "term": "bandpass filter manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "custom cavity filter manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "waveguide filter manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "E-band filter manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "RRU filter manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "high power low PIM filter",
+          "sv": null,
+          "kd": null
+        }
       ],
       "allocation": [
-        "H1：cavity filter 与 custom RF/microwave filter assemblies，保持源 H1 并确立本页滤波器主 ownership",
+        "H1：bandpass filter 与 cavity filter 同时进入 H1，保持源 H1 的滤波器 ownership；bandpass 响应章节承接头部词意图，cavity 继续由结构与规格章节承接",
         "H2：RF filter、microwave filter、bandpass filter、waveguide filter；waveguide filter 只在本页深入，波导分类页不争夺该词",
         "正文/FAQ：custom cavity filter manufacturer、E-band/RRU filter manufacturer、high power low PIM filter；RRU 内容始终带基站应用限定"
       ]
     },
-    "h1": "Cavity Filters and Custom RF/Microwave Filter Assemblies",
+    "h1": "Bandpass and Cavity Filters for Custom RF/Microwave Assemblies",
     "sections": [
       {
         "number": 1,
@@ -488,6 +622,20 @@
       },
       {
         "number": 3,
+        "name": "Bandpass Filter Response",
+        "question": "我的 bandpass 指标是否写全，能否被一致地制造和验证？",
+        "h2": "Read the Bandpass Filter Response before Comparing Structures",
+        "points": [
+          "先定义 bandpass 响应：通带边界、带宽、插损、两侧抑制与回波损耗并列说明",
+          "用参数表把每个术语转成频率参考和测试条件，避免只写中心频率",
+          "区分 bandpass 与 lowpass/highpass/notch，说明结构跟随响应而非反过来",
+          "内链 cavity vs waveguide 选型指南与 RF filter RFQ 清单，导向结构选择与询价"
+        ],
+        "image": "不配图；使用原创六行响应参数表，正文注明无特定型号或频段性能承诺。",
+        "cta": "Define the Bandpass Response"
+      },
+      {
+        "number": 4,
         "name": "Selection Framework",
         "question": "cavity、waveguide 与 tuning-free 方案应依据哪些条件选择？",
         "h2": "Choose between Cavity, Waveguide and Tuning-Free Filter Approaches",
@@ -501,7 +649,7 @@
         "cta": "Compare Filter Approaches"
       },
       {
-        "number": 4,
+        "number": 5,
         "name": "Specification Trade-offs",
         "question": "哪些指标必须一起定义，才能判断滤波器是否真正适用？",
         "h2": "Specify Insertion Loss, Rejection, Power and PIM Together",
@@ -515,7 +663,7 @@
         "cta": "Build Your Filter Specification"
       },
       {
-        "number": 5,
+        "number": 6,
         "name": "High-Frequency Manufacturing",
         "question": "高频滤波器所需的加工与镀层控制有什么可核验依据？",
         "h2": "Control the Machining and Plating Details behind High-Frequency Filters",
@@ -529,7 +677,7 @@
         "cta": "Review Precision Manufacturing"
       },
       {
-        "number": 6,
+        "number": 7,
         "name": "Filter Verification",
         "question": "样品和批量的 RF 性能如何按明确条件验证？",
         "h2": "Verify Filter Performance with VNA, PIM and Automated Testing",
@@ -543,7 +691,7 @@
         "cta": "Request Filter Test Evidence"
       },
       {
-        "number": 7,
+        "number": 8,
         "name": "Custom Filter Process",
         "question": "定制滤波器从 RFQ 到批量要经过哪些评审与确认？",
         "h2": "Move a Custom Filter from RFQ to Validated Production",
@@ -557,7 +705,7 @@
         "cta": "Start a Filter Engineering Review"
       },
       {
-        "number": 8,
+        "number": 9,
         "name": "FAQ",
         "question": "滤波器选型、E-band、周期和资料方面还有哪些关键疑问？",
         "h2": "Custom Filter Selection and Manufacturing FAQs",
@@ -571,7 +719,7 @@
         "cta": "—；末节统一承接定制 RFQ，避免打断技术答案"
       },
       {
-        "number": 9,
+        "number": 10,
         "name": "Filter RFQ",
         "question": "提交哪些字段，工程团队才能开始滤波器设计评估？",
         "h2": "Send Your Filter Specification for Engineering Review",
@@ -586,6 +734,18 @@
       }
     ],
     "faqs": [
+      {
+        "question": "What is a bandpass filter?",
+        "answer": "A bandpass filter passes a defined frequency band and rejects signals below and above it. Its performance is described by the passband edges, insertion loss, rejection in each stopband and return loss, and each value needs a frequency reference and a test condition before it can be quoted or verified.",
+        "intent": "确认 bandpass filter 的定义与可验证指标构成",
+        "snippet": "定义型 Featured Snippet；约 50 词，首句直接回答"
+      },
+      {
+        "question": "How do I specify bandpass filter bandwidth and rejection?",
+        "answer": "State the passband edges, the minimum bandwidth, the maximum insertion loss across the band, and the rejection required in each stopband with its exact frequency interval. Add return loss, power type and PIM conditions where they apply. General terms such as narrow or high rejection cannot be quoted or verified consistently without those numbers.",
+        "intent": "把 bandpass 指标写成可报价、可测试的 RFQ 输入",
+        "snippet": "步骤/清单型 Featured Snippet；先给输入项再给反例"
+      },
       {
         "question": "How do I choose between cavity, waveguide and tuning-free filters?",
         "answer": "Start with frequency, insertion loss, rejection, power, PIM, size and interface requirements. Cavity and waveguide describe different structural approaches, while tuning-free describes a manufacturing and adjustment objective rather than a mutually exclusive filter type. Engineering should compare the complete specification and production expectations before recommending an approach.",
@@ -617,10 +777,14 @@
         "snippet": "资料获取型 Featured Snippet；约 50–55 词，不编造公开下载范围或 NDA 政策"
       }
     ],
-    "schema": ["Product", "BreadcrumbList", "FAQPage"],
-    "seo_title": "Cavity Filter Manufacturer | RF & Microwave Filters | SONNE",
-    "meta_description": "Custom cavity, bandpass, waveguide, E-band and RRU filters from DC to 40 GHz. Low PIM, high rejection, VNA verified, from prototype to mass production.",
-    "focus_keyphrase": "cavity filter"
+    "schema": [
+      "Product",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "seo_title": "Bandpass Filter Manufacturer | Cavity & RF Filters | SONNE",
+    "meta_description": "Custom bandpass, cavity, waveguide, E-band and RRU filters from DC to 40 GHz. Low PIM, high rejection, VNA verified, from prototype to mass production.",
+    "focus_keyphrase": "bandpass filter"
   },
   {
     "number": 4,
@@ -649,20 +813,64 @@
       "citation_value": "制作“波导 RFQ 接口定义表”：频段、端口功能、波导规格、法兰、极化、材料/镀层、功率、隔离/损耗、机械包络、测试参考面；附 OMT 与 OCU 术语定义及功能对照。"
     },
     "keywords": {
-      "focus": {"term": "waveguide components", "sv": null, "kd": null},
+      "focus": {
+        "term": "waveguide components",
+        "sv": null,
+        "kd": null
+      },
       "secondary": [
-        {"term": "waveguide diplexer", "sv": null, "kd": null},
-        {"term": "waveguide assembly", "sv": null, "kd": null},
-        {"term": "OMT", "sv": null, "kd": null},
-        {"term": "OCU", "sv": null, "kd": null},
-        {"term": "E-band waveguide", "sv": null, "kd": null}
+        {
+          "term": "waveguide diplexer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "waveguide assembly",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "OMT",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "OCU",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "E-band waveguide",
+          "sv": null,
+          "kd": null
+        }
       ],
       "long_tail": [
-        {"term": "custom waveguide components manufacturer", "sv": null, "kd": null},
-        {"term": "OMT manufacturer", "sv": null, "kd": null},
-        {"term": "Ku/Ka band OMT", "sv": null, "kd": null},
-        {"term": "outdoor combining unit OEM", "sv": null, "kd": null},
-        {"term": "satellite earth station RF components", "sv": null, "kd": null}
+        {
+          "term": "custom waveguide components manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "OMT manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "Ku/Ka band OMT",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "outdoor combining unit OEM",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "satellite earth station RF components",
+          "sv": null,
+          "kd": null
+        }
       ],
       "allocation": [
         "H1：waveguide components、waveguide assembly 与 waveguide diplexer，保持分类主词归属",
@@ -831,7 +1039,11 @@
         "snippet": "直接回答加条件；约 50 词，不承诺所有图纸均可制造或全产品线逆向替代"
       }
     ],
-    "schema": ["Product", "BreadcrumbList", "FAQPage"],
+    "schema": [
+      "Product",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
     "seo_title": "Waveguide Components | OMT, Diplexer, OCU | SONNE",
     "meta_description": "Waveguide diplexers, OMT, OCU and custom waveguide assemblies for Ku/Ka/E-band links, satellite earth stations and radar. Precision CNC, plating control, VNA verified.",
     "focus_keyphrase": "waveguide components"
@@ -863,26 +1075,79 @@
       "citation_value": "发布“五类器件功能与端口对照表”和“多频共站 band-plan RFQ 模板”：逐端口列输入/输出、上下行频段、带宽、功率、隔离、PIM、接口和公共端，附 duplexer 与 diplexer 简明定义。"
     },
     "keywords": {
-      "focus": {"term": "RF combiner", "sv": null, "kd": null},
+      "focus": {
+        "term": "RF combiner",
+        "sv": null,
+        "kd": null
+      },
       "secondary": [
-        {"term": "microwave combiner", "sv": null, "kd": null},
-        {"term": "duplexer", "sv": null, "kd": null},
-        {"term": "diplexer", "sv": null, "kd": null},
-        {"term": "multiplexer", "sv": null, "kd": null},
-        {"term": "multi-band combiner", "sv": null, "kd": null},
-        {"term": "RF power divider", "sv": null, "kd": null}
+        {
+          "term": "microwave combiner",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "duplexer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "diplexer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "multiplexer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "multi-band combiner",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "RF power divider",
+          "sv": null,
+          "kd": null
+        }
       ],
       "long_tail": [
-        {"term": "custom RF combiner manufacturer", "sv": null, "kd": null},
-        {"term": "DC to 40 GHz combiner", "sv": null, "kd": null},
-        {"term": "low PIM duplexer supplier", "sv": null, "kd": null},
-        {"term": "duplexer vs diplexer", "sv": 36, "kd": null},
-        {"term": "multi-operator combiner", "sv": null, "kd": null}
+        {
+          "term": "custom RF combiner manufacturer",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "DC to 40 GHz combiner",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "low PIM duplexer supplier",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "duplexer vs diplexer",
+          "sv": 36,
+          "kd": null
+        },
+        {
+          "term": "multi-operator combiner",
+          "sv": null,
+          "kd": null
+        },
+        {
+          "term": "wilkinson power divider",
+          "sv": 720,
+          "kd": 0
+        }
       ],
       "allocation": [
         "H1：RF combiner、microwave combiner、duplexer 与 multiplexer，确立通用合路/双工/多工词归属",
         "H2：multi-band combiner、RF power divider、low PIM duplexer supplier；IBS 页面保留 low PIM splitter/coupler 专属语境",
-        "正文/FAQ：custom RF combiner manufacturer、DC to 40 GHz combiner、duplexer vs diplexer、multi-operator combiner；不布局 3dB hybrid coupler"
+        "正文/FAQ：custom RF combiner manufacturer、DC to 40 GHz combiner、duplexer vs diplexer、multi-operator combiner、wilkinson power divider；不布局 3dB hybrid coupler"
       ]
     },
     "h1": "RF & Microwave Combiners, Duplexers and Multiplexers",
@@ -1040,14 +1305,30 @@
         "snippet": "术语比较型 Featured Snippet；约 55 词，答案不引入 IBS hybrid coupler 关键词"
       },
       {
+        "question": "What is a Wilkinson power divider?",
+        "answer": "A Wilkinson power divider splits one input into two or more outputs using quarter-wave transmission-line sections and an isolation resistor between the outputs. The resistor provides output-to-output isolation and dissipates reflected power, which is why the topology is used when matched outputs and isolation matter. Bandwidth, power handling and isolation depend on the number of sections and the physical construction, so specify the band, split ratio, isolation, amplitude and phase balance, power and connector rather than the name alone.",
+        "intent": "解释 Wilkinson 功分器原理并引导按指标询价",
+        "snippet": "定义型 Featured Snippet；约 65 词，落到可提交的规格字段"
+      },
+      {
+        "question": "When should I specify a reactive power divider instead?",
+        "answer": "A reactive power divider uses an L-C or transmission-line network without a lossy isolation resistor, so it can offer lower insertion loss, but output-to-output isolation is limited and the usable bandwidth is usually narrower. It fits systems where efficiency matters more than port isolation. A resistive divider is a third option for broadband splitting with fixed loss. Because the trade-offs depend on the band plan, provide the frequency range, loss, isolation, power and phase requirements for evaluation.",
+        "intent": "区分 reactive 与电阻式功分的适用场景",
+        "snippet": "对比型 Featured Snippet；约 65 词，强调按频段与隔离要求评估"
+      },
+      {
         "question": "How is low PIM verified for duplexers and combiners?",
         "answer": "Low-PIM verification should define the product, ports, frequency bands, test setup, power conditions, PIM limit and acceptance criteria. SONNE lists low-PIM batch verification and matrix-switch automated testing capabilities. The exact coverage and reporting are agreed by product and project, so request the relevant test evidence rather than assuming one condition applies to every unit or model.",
         "intent": "审核低 PIM 测试条件、批量证据与覆盖范围",
         "snippet": "验证清单型 Featured Snippet；约 55–60 词，明确项目约定而非统一覆盖率"
       }
     ],
-    "schema": ["Product", "BreadcrumbList", "FAQPage"],
-    "seo_title": "RF Combiners, Duplexers & Multiplexers | SONNE",
+    "schema": [
+      "Product",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "seo_title": "RF Combiners, Duplexers & Power Dividers | SONNE",
     "meta_description": "RF combiners, duplexers, diplexers, multiplexers and power dividers for multi-band feeder sharing. Low PIM, high isolation, DC to 40 GHz custom band plans.",
     "focus_keyphrase": "RF combiner"
   }

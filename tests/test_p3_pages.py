@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WEBSITE = ROOT / 'website'
 SOURCE_01 = ROOT / 'docs-strategy' / 'source-01.json'
 FRAGMENTS_DIR = ROOT / 'docs-strategy' / 'fragments'
+INSIGHTS_DIR = ROOT / 'content' / 'insights'
 UPLOAD_LOG = ROOT / 'images-upload-log.json'
 IMAGES_MANIFEST = ROOT / 'images-manifest.json'
 SONNE_CSS = ROOT / 'sonne.css'
@@ -60,6 +61,11 @@ WRAPPERS = {
     'rf-combiners': 'sn-combiners',
     'base-station-rf': 'sn-base-station',
     'precision-enclosures': 'sn-enclosures',
+    'antenna-test-systems': 'sn-test',
+    'switch-matrices': 'sn-sw',
+    'tr-modules': 'sn-trm',
+    'passive-microwave-components': 'sn-pmc',
+    'rf-front-ends': 'sn-rfe',
     'engineering': 'sn-engineering',
     'request-a-quote': 'sn-rfq',
     'ibs-das-components': 'sn-ibs-das',
@@ -254,12 +260,15 @@ VALID_ROUTES = set()
 for source_page in SOURCE_PAGES:
     source_path = urlsplit(source_page['url']).path
     VALID_ROUTES.add(source_path if source_path == '/' else source_path.rstrip('/'))
+for post_path in INSIGHTS_DIR.glob('*.html'):
+    VALID_ROUTES.add(f'/resources/insights/{post_path.stem}')
 
 
 def normalize_text(value):
     if not isinstance(value, str):
         return ''
-    text = ' '.join(value.split())
+    text = value.replace('\u2019', "'").replace('\u2018', "'").replace('\u201c', '"').replace('\u201d', '"')
+    text = ' '.join(text.split())
     return re.sub(r'\s+([,.;:!?])', r'\1', text)
 
 
@@ -272,6 +281,14 @@ def normalize_route(url):
     path = urlsplit(url).path or '/'
     return path if path == '/' else path.rstrip('/')
 
+
+NEW_PRODUCT_LINE_FILES = {
+    'antenna-test-systems.html',
+    'switch-matrices.html',
+    'tr-modules.html',
+    'passive-microwave-components.html',
+    'rf-front-ends.html',
+}
 
 FORBIDDEN_CLAIM_PATTERNS = (
     re.compile(
@@ -1265,7 +1282,7 @@ class P3PageTests(unittest.TestCase):
         return text, collect(text)
 
     def test_source_contracts_are_complete(self):
-        self.assertEqual(31, len(SOURCE_PAGES))
+        self.assertEqual(36, len(SOURCE_PAGES))
         for slug, (page_id, route) in TARGETS.items():
             with self.subTest(contract=slug):
                 self.assertIn(page_id, SOURCE_BY_ID)
@@ -1837,15 +1854,15 @@ class P3PageTests(unittest.TestCase):
             collector.styles[0],
             '.sn-combiners .sn-combiners__scenario-frame',
         )
-        self.assertEqual('14px', frame.get('padding'))
-        self.assertEqual('var(--sn-paper-muted)', frame.get('background'))
+        self.assertNotIn('padding', frame)
+        self.assertEqual('var(--sn-white)', frame.get('background'))
         self.assertNotIn('border', frame)
         image = css_declarations_for_selector(
             collector.styles[0],
             '.sn-combiners .sn-combiners__scenario-media img',
         )
-        self.assertEqual('4 / 3', image.get('aspect-ratio'))
-        self.assertEqual('contain', image.get('object-fit'))
+        self.assertEqual('1024 / 571', image.get('aspect-ratio'))
+        self.assertEqual('cover', image.get('object-fit'))
         self.assertEqual('inset(1px)', image.get('clip-path'))
         self.assertNotIn('padding', image)
         caption = css_declarations_for_selector(
@@ -2215,11 +2232,6 @@ class P3PageTests(unittest.TestCase):
             ),
             (
                 'waveguide-components',
-                '.sn-waveguide .sn-waveguide__product-frame--square img',
-                'inset(2px calc(12.5% + 2px))',
-            ),
-            (
-                'waveguide-components',
                 '.sn-waveguide .sn-waveguide__detail-grid figure:last-child img',
                 'inset(1px)',
             ),
@@ -2328,6 +2340,50 @@ class P3PageTests(unittest.TestCase):
                         continue
                     resolved = urljoin(base, href)
                     self.assertIn(normalize_route(resolved), VALID_ROUTES, f'{slug}: unplanned route {href}')
+
+    def test_combiners_power_divider_depth_and_routing_links(self):
+        text, collector = self.target('rf-combiners')
+        if text is None:
+            return
+        self.assertIn('Wilkinson and Reactive Power Divider Topologies', text)
+        self.assertIn('Wilkinson power divider', text)
+        self.assertIn('reactive power divider', text)
+        self.assertNotIn('3dB hybrid coupler', text)
+        self.assertIn('/products/waveguide-components/', text)
+        self.assertIn('/products/ibs-das-components/', text)
+        self.assertIn(
+            '/resources/insights/duplexer-vs-diplexer-combiner-guide/', text
+        )
+        self.assertIn('/resources/insights/wilkinson-power-divider-guide/', text)
+        self.assertIn('/resources/insights/rf-diplexer-guide/', text)
+
+    def test_filters_bandpass_depth_and_routing_links(self):
+        text, collector = self.target('rf-microwave-filters')
+        if text is None:
+            return
+        self.assertIn('Read the Bandpass Filter Response before Comparing Structures', text)
+        self.assertIn('Bandpass and Cavity Filters', text)
+        self.assertGreaterEqual(text.lower().count('bandpass'), 12)
+        self.assertIn('What is a bandpass filter?', text)
+        self.assertIn('How do I specify bandpass filter bandwidth and rejection?', text)
+        self.assertIn('/resources/insights/cavity-vs-waveguide-filter-selection-guide/', text)
+        self.assertIn('/resources/insights/rf-filter-rfq-preparation-guide/', text)
+        self.assertIn('/resources/insights/rf-diplexer-guide/', text)
+
+    def test_insights_inbound_links_from_product_pages(self):
+        expectations = {
+            'waveguide-components': ['/resources/insights/rf-diplexer-guide/'],
+            'base-station-rf': ['/resources/insights/rf-diplexer-guide/'],
+            'passive-microwave-components': [
+                '/resources/insights/wilkinson-power-divider-guide/'
+            ],
+        }
+        for slug, hrefs in expectations.items():
+            text, collector = self.target(slug)
+            if text is None:
+                continue
+            for href in hrefs:
+                self.assertIn(href, text, f'{slug} should link to {href}')
 
 
 class SchemaOwnershipTests(unittest.TestCase):
@@ -3350,10 +3406,10 @@ class PreviewHarnessTests(unittest.TestCase):
             'terms-of-service.html',
             'privacy-policy.html',
             'sitemap.html',
-        } | {f'{slug}.html' for slug in TARGETS if slug != 'home'}
-        self.assertEqual(33, len(expected_files))
+        } | {f'{slug}.html' for slug in TARGETS if slug != 'home'} | NEW_PRODUCT_LINE_FILES
+        self.assertEqual(38, len(expected_files))
         self.assertEqual(expected_files, {path.name for path in self.documents})
-        self.assertEqual(33, len(self.documents))
+        self.assertEqual(38, len(self.documents))
 
         for page in self.preview.PREVIEW_PAGES:
             path = self.output / page.filename
@@ -3442,8 +3498,13 @@ class PreviewHarnessTests(unittest.TestCase):
             '/terms-of-service': 'terms-of-service.html',
             '/privacy-policy': 'privacy-policy.html',
             '/sitemap': 'sitemap.html',
+            '/products/antenna-test-systems': 'antenna-test-systems.html',
+            '/products/switch-matrices': 'switch-matrices.html',
+            '/products/tr-modules': 'tr-modules.html',
+            '/products/passive-microwave-components': 'passive-microwave-components.html',
+            '/products/rf-front-ends': 'rf-front-ends.html',
         }
-        self.assertEqual(33, len(self.preview.ROUTE_FILES))
+        self.assertEqual(38, len(self.preview.ROUTE_FILES))
         for route, filename in expected_routes.items():
             with self.subTest(route=route):
                 self.assertEqual(

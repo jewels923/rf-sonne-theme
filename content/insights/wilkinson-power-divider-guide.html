@@ -1,0 +1,72 @@
+<p>A Wilkinson power divider is often selected by name alone, yet the name only tells you the topology. Whether the part suits a system depends on the isolation it provides, the bandwidth over which the ports stay matched, and what happens when one output is mismatched. This guide explains how the network works, how it compares with reactive and resistive dividers, and which values to put in an RFQ so that a supplier can quote the right device instead of a generic splitter.</p>
+
+<h2>What Is a Wilkinson Power Divider?</h2>
+<p>A Wilkinson power divider splits one input into two outputs of equal amplitude and phase while keeping all three ports matched and providing isolation between the outputs. It uses quarter-wave transmission-line sections and an isolation resistor between the output ports. The resistor carries no current when the outputs are matched and absorbs difference-mode power when they are not.</p>
+<p>The equal-split, 50 Ω case is the one most engineers meet first: each quarter-wave section has an impedance of about 70.7 Ω, and a 100 Ω resistor bridges the outputs. Unequal split ratios are possible by changing the line impedances and the resistor value, but the principle stays the same: the network trades bandwidth and physical size for match and isolation.</p>
+
+<h2>How the Wilkinson Power Divider Works</h2>
+<p>At the design frequency, a signal entering the input port divides equally. Because the two paths are identical, the outputs are in phase and at the same amplitude. The quarter-wave sections transform the load impedances so that the input sees the system impedance.</p>
+<p>Isolation comes from symmetry. When a signal is injected into one output while the other ports are terminated, the two paths present equal magnitudes with opposite phase at the resistor, so the difference appears across it and is dissipated. In the matched, equal-split case, the resistor sees no voltage and the divider behaves as a lossless network. That is why the topology is described as lossless in theory and why its excess loss in practice is set by conductor, dielectric and connector losses.</p>
+<p>Bandwidth is the main limitation. A single-section design operates over a moderate band; multi-section designs add quarter-wave sections and resistors to widen the band at the cost of length and complexity. An N-way Wilkinson uses several sections and resistors, and its isolation is defined between specific output ports, so the port map must be stated clearly.</p>
+
+<figure>
+<img src="https://rf-sonne.com/wp-content/uploads/2026/10/power-splitter-2-way-n-female-1.webp" alt="2-way power splitter with N female connectors" width="720" height="720" loading="lazy" decoding="async">
+<figcaption>Representative two-way power splitter hardware. A product photo does not confirm the internal topology; ask for the topology, isolation data and test conditions for the specified band.</figcaption>
+</figure>
+
+<h2>Wilkinson vs Reactive vs Resistive Power Dividers</h2>
+<p>Three topologies cover most power-divider requirements. They are not interchangeable, and the choice usually comes down to whether output isolation or low loss matters more.</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Wilkinson</th><th>Reactive</th><th>Resistive</th></tr>
+</thead>
+<tbody>
+<tr><td>Output isolation</td><td>Provided by the isolation resistor</td><td>Limited; no isolation resistor</td><td>Limited</td></tr>
+<tr><td>Excess loss</td><td>Low when matched; mismatch power dissipates in the resistor</td><td>Low; no resistor loss, mismatch is reflected</td><td>Fixed and highest</td></tr>
+<tr><td>Bandwidth</td><td>Moderate for one section; wider with multiple sections</td><td>Usually narrower; depends on network order</td><td>Broadband</td></tr>
+<tr><td>Power handling</td><td>Set by the resistor, connectors and thermal design</td><td>Set by conductors and dielectrics; no resistor to burn out</td><td>Set by resistor rating and heating</td></tr>
+<tr><td>Typical use</td><td>Antenna feeds, test paths and systems needing matched, isolated outputs</td><td>Low-loss combining or splitting where efficiency dominates</td><td>Broadband monitoring and low-cost splitting</td></tr>
+</tbody>
+</table>
+<p>A reactive divider uses an L-C or transmission-line network without a lossy resistor. It can be very efficient and robust, but it does not isolate the outputs, so a mismatch on one port affects the other. A resistive divider is simple and broadband, but its loss is fixed and it does not replace a low-loss design. For low-PIM splitters and couplers used in indoor DAS, the topology and materials are chosen around the PIM requirement rather than the divider name; the <a href="/products/ibs-das-components/">IBS and DAS component line</a> covers that context.</p>
+
+<h2>Reading a Power Divider Datasheet</h2>
+<p>Datasheets mix theoretical split loss with measured insertion loss, and that is where most comparisons go wrong.</p>
+<h3>Split loss is not insertion loss</h3>
+<p>An ideal two-way divider delivers half the power to each output, which is 3.01 dB below the input. A three-way divider delivers 4.77 dB per output, and a four-way divider 6.02 dB. These figures are split loss, not loss in the component. Insertion loss is the additional loss above the split ratio; when a datasheet quotes “insertion loss” without stating whether split loss is included, ask for the definition.</p>
+<h3>Isolation and return loss measure different things</h3>
+<p>Isolation is measured between output ports with the remaining ports terminated, and it describes how much signal reaches the other output. Return loss describes how well each port matches its termination. A part can have good return loss and modest isolation, or the reverse. Specify both, and state the frequency range and termination used for the measurement.</p>
+<h3>Amplitude and phase balance</h3>
+<p>For a two-way divider, amplitude balance is the difference in output power and phase balance is the difference in output phase. Both matter for antenna arrays and for combining, where imbalance turns into reflected power and heat. Specify balance across the band, not at the centre frequency alone.</p>
+<h3>Power handling and derating</h3>
+<p>The forward power rating is only the starting point. The isolation resistor must survive mismatch, phase error and temperature, and in a combining application the dissipated power can rise sharply. State the load VSWR, the expected phase and amplitude spread, the ambient temperature and the duty cycle so that the supplier can check the thermal design.</p>
+
+<h2>Power Divider or Combiner?</h2>
+<p>The same network works in both directions. Used as a divider, one input feeds two outputs. Used as a combiner, two inputs feed one output. The difference is the signal relationship: two coherent, well-matched signals combine efficiently, while uncorrelated signals or phase errors produce mismatch power that the isolation resistor must absorb. That is why a part rated for splitting may not be suitable for combining at the same power. If the application combines different frequency bands rather than the same band, a frequency-selective combiner or duplexer is the right device; the <a href="/products/rf-combiners/">RF combiner and duplexer line</a> explains the difference, and the <a href="/resources/insights/duplexer-vs-diplexer-combiner-guide/">duplexer vs diplexer guide</a> covers the band-based case.</p>
+
+<h2>What to Specify in a Power Divider RFQ</h2>
+<ul>
+<li>Function: divider, combiner, or both, with the signal direction for each port.</li>
+<li>Configuration: two-way, three-way or N-way, and whether the split is equal or unequal.</li>
+<li>Frequency range and the limits for return loss, isolation and insertion loss across that range.</li>
+<li>Amplitude and phase balance limits, measured across the band.</li>
+<li>Power: forward power, load VSWR, phase and amplitude spread, ambient temperature and duty cycle.</li>
+<li>Connector or flange types, port orientation, mounting and the available envelope.</li>
+<li>Test evidence: VNA data, test conditions and the acceptance limits used for the run.</li>
+</ul>
+<p>For a combining application, add the number of carriers, their frequency relationship and the expected phase spread. These inputs decide whether the isolation resistor is a detail or the limiting component.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>What is the difference between a Wilkinson and a reactive power divider?</h3>
+<p>A Wilkinson divider uses quarter-wave sections and an isolation resistor, so its outputs are matched and isolated over a defined band. A reactive divider uses an L-C or line network without a lossy resistor, so it can offer lower loss but provides little output isolation. Choose by whether isolation or efficiency is the harder requirement.</p>
+<h3>Can a Wilkinson power divider be used as a combiner?</h3>
+<p>Yes, the network is reciprocal. Combining works when the inputs are coherent and the ports are matched; amplitude or phase errors produce mismatch power that the isolation resistor must dissipate. Check the combining power, phase spread and load condition rather than reusing the splitting rating unchanged.</p>
+<h3>Does the isolation resistor limit power handling?</h3>
+<p>It can. The resistor sets a thermal limit for mismatch and isolation conditions, and its dissipation rises with load VSWR and phase error. A forward-power rating without the matching test condition is incomplete, so specify the load, temperature and duty cycle used for the rating.</p>
+<h3>How is power divider bandwidth defined?</h3>
+<p>Bandwidth is the frequency range over which return loss, isolation, insertion loss and amplitude and phase balance stay within the specified limits. A single-section Wilkinson covers a moderate band; multi-section designs widen it. Two suppliers may quote different bandwidths for similar hardware because their limits differ.</p>
+
+<h2>Conclusion</h2>
+<p>The Wilkinson power divider is a precise network, not a generic splitter. Its value comes from matched ports and output isolation, and those properties hold only over a defined band and under stated conditions. Compare topologies by isolation, excess loss and power handling, read the datasheet for split loss versus insertion loss, and state the combining case explicitly. When the requirement moves from dividing one band to combining different bands, switch to a frequency-selective combiner or duplexer. Review the <a href="/products/rf-combiners/">RF combiner, duplexer and power divider range</a>, check the <a href="/engineering/testing-quality/">test and verification process</a>, and submit the port map through <a href="/request-a-quote/">Request a Quote</a> for an engineering review.</p>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between a Wilkinson and a reactive power divider?","acceptedAnswer":{"@type":"Answer","text":"A Wilkinson divider uses quarter-wave sections and an isolation resistor, so its outputs are matched and isolated over a defined band. A reactive divider uses an L-C or line network without a lossy resistor, so it can offer lower loss but provides little output isolation. Choose by whether isolation or efficiency is the harder requirement."}},{"@type":"Question","name":"Can a Wilkinson power divider be used as a combiner?","acceptedAnswer":{"@type":"Answer","text":"Yes, the network is reciprocal. Combining works when the inputs are coherent and the ports are matched; amplitude or phase errors produce mismatch power that the isolation resistor must dissipate. Check the combining power, phase spread and load condition rather than reusing the splitting rating unchanged."}},{"@type":"Question","name":"Does the isolation resistor limit power handling?","acceptedAnswer":{"@type":"Answer","text":"It can. The resistor sets a thermal limit for mismatch and isolation conditions, and its dissipation rises with load VSWR and phase error. A forward-power rating without the matching test condition is incomplete, so specify the load, temperature and duty cycle used for the rating."}},{"@type":"Question","name":"How is power divider bandwidth defined?","acceptedAnswer":{"@type":"Answer","text":"Bandwidth is the frequency range over which return loss, isolation, insertion loss and amplitude and phase balance stay within the specified limits. A single-section Wilkinson covers a moderate band; multi-section designs widen it. Two suppliers may quote different bandwidths for similar hardware because their limits differ."}}]}</script>

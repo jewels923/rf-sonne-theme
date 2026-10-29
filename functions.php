@@ -49,6 +49,16 @@ function child_theme_asset_version($relative_path) {
 }
 
 function child_theme_enqueue_assets() {
+    // 自托管字体（Archivo / IBM Plex Sans / IBM Plex Mono latin 子集）
+    if (file_exists(get_stylesheet_directory() . '/assets/css/sonne-fonts.css')) {
+        wp_enqueue_style(
+            'child-theme-fonts',
+            get_stylesheet_directory_uri() . '/assets/css/sonne-fonts.css',
+            array(),
+            child_theme_asset_version('assets/css/sonne-fonts.css')
+        );
+    }
+
     // 父主题样式
     wp_enqueue_style('generate-style');
 
@@ -84,24 +94,6 @@ function child_theme_enqueue_assets() {
         }
     }
 
-    // Lenis 平滑滚动
-    wp_enqueue_script('lenis', 'https://unpkg.com/lenis@1.1.20/dist/lenis.min.js', array(), '1.1.20', true);
-
-    // GSAP + ScrollTrigger
-    wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), '3.12.5', true);
-    wp_enqueue_script('gsap-scrolltrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', array('gsap'), '3.12.5', true);
-
-    // 主动画脚本 main.js
-    if (file_exists(get_stylesheet_directory() . '/main.js')) {
-        wp_enqueue_script(
-            'child-theme-main-js',
-            get_stylesheet_directory_uri() . '/main.js',
-            array('lenis', 'gsap', 'gsap-scrolltrigger'),
-            child_theme_asset_version('main.js') ?: '1.0.0',
-            true
-        );
-    }
-
     // 页头行为脚本（可选）
     if (file_exists(get_stylesheet_directory() . '/assets/site-header.js')) {
         wp_enqueue_script(
@@ -114,6 +106,111 @@ function child_theme_enqueue_assets() {
     }
 }
 add_action('wp_enqueue_scripts', 'child_theme_enqueue_assets');
+
+// ============================================================
+// 资源裁剪
+// hCaptcha / CF7 只在含表单的两页加载；其余页面移除 WP 内核与插件样式。
+// ============================================================
+function child_theme_is_form_page() {
+    return is_page('contact') || is_page('request-a-quote');
+}
+
+function child_theme_prune_assets() {
+    foreach (array(
+        'wp-block-library',
+        'wp-block-library-theme',
+        'classic-theme-styles',
+        'global-styles',
+        'wp-emoji-styles',
+        'wp-img-auto-sizes-contain',
+        'wp-img-auto-sizes',
+        'hostinger_main_styles',
+        'generate-child',
+    ) as $handle) {
+        wp_dequeue_style($handle);
+        wp_deregister_style($handle);
+    }
+
+    if (child_theme_is_form_page()) {
+        return;
+    }
+
+    foreach (array(
+        'contact-form-7',
+        'swv',
+        'wp-hooks',
+        'wp-i18n',
+        'cf7apps-redirection',
+        'cf7apps-honeypot-frontend',
+        'jquery',
+        'jquery-core',
+        'jquery-migrate',
+    ) as $handle) {
+        wp_dequeue_script($handle);
+        wp_deregister_script($handle);
+    }
+    wp_dequeue_style('contact-form-7');
+    wp_dequeue_style('cf7apps-honeypot-frontend');
+}
+add_action('wp_enqueue_scripts', 'child_theme_prune_assets', 100);
+
+// Emoji 探测脚本与样式全站无用
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('admin_print_styles', 'print_emoji_styles');
+
+// CF7 Apps 把 hCaptcha loader 直接 echo 在 wp_footer。两套表单都没有
+// .h-captcha 字段，loader 只会白白拉取 ~390KB，这里整段剥掉。
+// 若日后表单真的加入 hCaptcha 字段，需同步移除这段过滤。
+function child_theme_start_footer_buffer() {
+    ob_start();
+}
+
+function child_theme_strip_footer_scripts() {
+    $output = ob_get_clean();
+    if (!is_string($output) || $output === '') {
+        return;
+    }
+    $output = preg_replace(
+        '#<script[^>]+src=["\']https://js\.hcaptcha\.com/1/api\.js[^"\']*["\'][^>]*>\s*</script>#i',
+        '',
+        $output
+    );
+    $output = preg_replace(
+        '#<script[^>]*>\s*var CF7AppsLoadhCaptcha[\s\S]*?</script>#i',
+        '',
+        $output
+    );
+    echo $output;
+}
+add_action('wp_footer', 'child_theme_start_footer_buffer', -9999);
+add_action('wp_footer', 'child_theme_strip_footer_scripts', 9999);
+
+// ============================================================
+// 匿名 HTML 缓存头
+// 上线（关闭 Coming Soon）后把 SONNE_HTML_CACHE 改为 true；
+// 维护页在线时保持 false，避免 hcdn 缓存住 Coming Soon 页面。
+// ============================================================
+if (!defined('SONNE_HTML_CACHE')) {
+    define('SONNE_HTML_CACHE', false);
+}
+
+add_action('send_headers', function () {
+    if (!SONNE_HTML_CACHE || is_admin() || is_user_logged_in() || is_404() || is_preview() || is_feed()) {
+        return;
+    }
+    if (!isset($_SERVER['REQUEST_METHOD']) || $_SERVER['REQUEST_METHOD'] !== 'GET') {
+        return;
+    }
+    if (child_theme_is_form_page()) {
+        return;
+    }
+    header('Cache-Control: public, max-age=300, s-maxage=86400, stale-while-revalidate=86400');
+    header_remove('Expires');
+    header_remove('Pragma');
+    header_remove('Set-Cookie');
+});
 
 // ============================================================
 // 注入自定义 header / footer（替换 GeneratePress 默认）
@@ -248,6 +345,99 @@ add_action('wp_head', function () {
         echo '<link rel="canonical" href="' . esc_url($canonical) . '" />' . "\n";
     }
 }, 1);
+
+// ============================================================
+// Rank Math 输出规范化：站点语言/OG 类型/作者名/缺省分享图
+// 由 header.php 在缓冲 wp_head 之后调用。
+// ============================================================
+function sonne_normalize_head_meta($head) {
+    if (!is_string($head) || $head === '') {
+        return $head;
+    }
+
+    // Rank Math inherits the zh_CN site locale; the site ships in US English.
+    $head = preg_replace(
+        '/<meta property="og:locale" content="[^"]*"\s*\/?>/',
+        '<meta property="og:locale" content="en_US" />',
+        $head
+    );
+
+    // Rank Math marks nearly every page as "article"; only posts really are.
+    if (!is_singular('post')) {
+        $head = preg_replace(
+            '/<meta property="og:type" content="article"\s*\/?>/',
+            '<meta property="og:type" content="website" />',
+            $head
+        );
+    }
+
+    // Never expose the WordPress login in the social byline.
+    $head = preg_replace(
+        '/<meta name="twitter:data1" content="jewels923"\s*\/?>/',
+        '<meta name="twitter:data1" content="SONNE Engineering" />',
+        $head
+    );
+
+    if (strpos($head, 'property="og:image"') === false) {
+        $contact = require get_stylesheet_directory() . '/template-parts/data/site-contact.php';
+        $image = $contact['default_og_image'];
+        $head .= '<meta property="og:image" content="' . esc_url($image['url']) . '" />' . "\n";
+        $head .= '<meta property="og:image:width" content="' . esc_attr($image['width']) . '" />' . "\n";
+        $head .= '<meta property="og:image:height" content="' . esc_attr($image['height']) . '" />' . "\n";
+        $head .= '<meta property="og:image:alt" content="' . esc_attr($image['alt']) . '" />' . "\n";
+        if (strpos($head, 'name="twitter:card"') === false) {
+            $head .= '<meta name="twitter:card" content="summary_large_image" />' . "\n";
+        }
+        $head .= '<meta name="twitter:image" content="' . esc_url($image['url']) . '" />' . "\n";
+    }
+
+    return $head;
+}
+
+// ============================================================
+// 索引策略：topic 归档与 thank-you 不索引，也不进 sitemap
+// ============================================================
+function sonne_is_noindex_view() {
+    return is_page('thank-you') || is_category();
+}
+
+add_filter('rank_math/frontend/robots', function ($robots) {
+    if (!sonne_is_noindex_view()) {
+        return $robots;
+    }
+    $robots['index'] = 'noindex';
+    $robots['follow'] = 'follow';
+    return $robots;
+});
+
+// 整类排除 category 分类法：sitemap 索引里也不会再列出 category-sitemap.xml
+add_filter('rank_math/sitemap/exclude_taxonomy', function ($exclude, $taxonomy) {
+    return $taxonomy === 'category' ? true : $exclude;
+}, 10, 2);
+
+add_filter('rank_math/sitemap/entry', function ($url, $type = '', $object = null) {
+    // Rank Math 的 post provider 传入的是 stdClass（DB 原始行），不是 WP_Post，
+    // 因此这里用属性存在性判断而不是 instanceof。
+    if ($type === 'term' && isset($object->taxonomy) && $object->taxonomy === 'category') {
+        return false;
+    }
+    if ($type === 'post' && isset($object->post_name) && $object->post_name === 'thank-you') {
+        return false;
+    }
+    return $url;
+}, 10, 3);
+
+// Rank Math 把 sitemap 缓存成磁盘文件，REST 发布不会触发失效，新页面会缺席 sitemap 直到手动清缓存。
+add_action('save_post', function ($post_id, $post, $update) {
+    if (!$post instanceof WP_Post || 'publish' !== $post->post_status) {
+        return;
+    }
+    if (!class_exists('RankMath\Sitemap\Cache')) {
+        return;
+    }
+    $cache = new RankMath\Sitemap\Cache();
+    $cache->invalidate_storage();
+}, 20, 3);
 
 // ============================================================
 // Rank Math JSON-LD：站点与页面实体的唯一输出者
@@ -392,6 +582,143 @@ function sonne_rank_math_json_ld_buffer_end() {
 }
 add_action('rank_math/head', 'sonne_rank_math_json_ld_buffer_start', 89);
 add_action('rank_math/head', 'sonne_rank_math_json_ld_buffer_end', 91);
+
+// ============================================================
+// FAQPage：从可见 FAQ 折叠块生成，已有内联 schema 的页面不重复输出
+// ============================================================
+function sonne_faq_clean_text($html, $texturize = true) {
+    $html = (string) $html;
+    $html = preg_replace('#<(script|style)\b[^>]*>.*?</\1>#is', ' ', $html);
+    $html = preg_replace('#<br\s*/?>#i', ' ', $html);
+    $html = preg_replace('#</?(?:p|div|li|ul|ol|h[1-6]|summary|details|section)\b[^>]*>#i', ' ', $html);
+    $text = html_entity_decode(wp_strip_all_tags($html), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $text = preg_replace('/[\s\x{00A0}\x{2007}\x{202F}\x{FEFF}]+/u', ' ', $text);
+    if (!is_string($text)) {
+        $text = wp_strip_all_tags($html);
+    }
+    if ($texturize) {
+        // 正文经 the_content 的 wptexturize 渲染，这里同步；它返回的是 HTML 实体，需再解码一次。
+        $text = html_entity_decode(wptexturize($text), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    }
+    return trim($text);
+}
+
+function sonne_faq_pairs_from_html($html) {
+    $html = (string) $html;
+    if ('' === $html || false === stripos($html, '<details')) {
+        return array();
+    }
+    if (!preg_match_all('#<details\b[^>]*>(.*?)</details>#is', $html, $matches)) {
+        return array();
+    }
+    if (preg_match_all('#<details\b#i', $html) !== count($matches[1])) {
+        return array();
+    }
+    $pairs = array();
+    foreach ($matches[1] as $block) {
+        if (false !== stripos($block, '<details')) {
+            continue;
+        }
+        if (!preg_match('#<summary\b[^>]*>(.*?)</summary>(.*)$#is', $block, $parts)) {
+            continue;
+        }
+        $q = sonne_faq_clean_text($parts[1]);
+        $a = sonne_faq_clean_text($parts[2]);
+        if ('' !== $q && '' !== $a) {
+            $pairs[] = array('q' => $q, 'a' => $a);
+        }
+    }
+    return count($pairs) >= 2 ? $pairs : array();
+}
+
+function sonne_faq_pairs_from_config($faqs) {
+    $pairs = array();
+    foreach ((array) $faqs as $faq) {
+        if (!is_array($faq) || !isset($faq['q'], $faq['a'])) {
+            continue;
+        }
+        // 归档页由 home.php 用 esc_html 渲染，不经过 wptexturize。
+        $q = sonne_faq_clean_text($faq['q'], false);
+        $a = sonne_faq_clean_text($faq['a'], false);
+        if ('' !== $q && '' !== $a) {
+            $pairs[] = array('q' => $q, 'a' => $a);
+        }
+    }
+    return count($pairs) >= 2 ? $pairs : array();
+}
+
+function sonne_faq_has_schema($post_id, $content = null) {
+    if (null !== $content && preg_match('#"@type"\s*:\s*"FAQPage"#', (string) $content)) {
+        return true;
+    }
+    if (null !== $content && function_exists('has_block') && has_block('rank-math/faq-block', $post_id)) {
+        return true;
+    }
+    foreach ((array) get_post_meta($post_id) as $key => $values) {
+        if (0 === strpos((string) $key, 'rank_math_schema')) {
+            $blob = wp_json_encode($values);
+            if (is_string($blob) && false !== stripos($blob, 'FAQPage')) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function sonne_faq_schema_output() {
+    if (is_admin() || is_feed() || is_preview() || is_404() || is_embed() || is_customize_preview()
+        || (function_exists('wp_doing_ajax') && wp_doing_ajax())
+        || (defined('REST_REQUEST') && REST_REQUEST) || is_paged()) {
+        return;
+    }
+
+    $pairs = array();
+    $url = '';
+    if (is_singular('page')) {
+        $post = get_queried_object();
+        if (!($post instanceof WP_Post) || post_password_required($post)) {
+            return;
+        }
+        if (sonne_faq_has_schema($post->ID, $post->post_content)) {
+            return;
+        }
+        $pairs = sonne_faq_pairs_from_html(strip_shortcodes($post->post_content));
+        $url = get_permalink($post);
+    } elseif (is_home()) {
+        $page_id = (int) get_option('page_for_posts');
+        if (!$page_id || sonne_faq_has_schema($page_id, get_post_field('post_content', $page_id))) {
+            return;
+        }
+        $config = function_exists('sonne_insights_config') ? sonne_insights_config() : array();
+        $pairs = sonne_faq_pairs_from_config(isset($config['faqs']) ? $config['faqs'] : array());
+        $url = get_permalink($page_id);
+    } else {
+        return;
+    }
+
+    if (count($pairs) < 2 || !$url) {
+        return;
+    }
+
+    $main = array();
+    foreach ($pairs as $pair) {
+        $main[] = array(
+            '@type' => 'Question',
+            'name' => $pair['q'],
+            'acceptedAnswer' => array('@type' => 'Answer', 'text' => $pair['a']),
+        );
+    }
+    $json = wp_json_encode(array(
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        '@id' => $url . '#faq',
+        'mainEntity' => $main,
+    ), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP);
+    if (is_string($json) && '' !== $json) {
+        echo '<script type="application/ld+json" class="sonne-faq-schema">' . $json . "</script>\n";
+    }
+}
+add_action('wp_head', 'sonne_faq_schema_output', 20);
 
 // ============================================================
 // 301 重定向映射（改名页面时在这里添加）

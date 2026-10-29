@@ -56,7 +56,7 @@
     .sn-testing .sn-testing__chain strong { display: block; color: var(--sn-navy); font-size: .84rem; }
     .sn-testing .sn-testing__chain span { color: var(--sn-text-muted); font-size: .76rem; line-height: 1.45; }
     .sn-testing .sn-testing__wide-figure { margin-bottom: 24px; }
-    .sn-testing .sn-testing__wide-figure img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
+    .sn-testing .sn-testing__wide-figure img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: center 30%; }
     .sn-testing .sn-testing__wide-figure figcaption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; padding: 9px 12px; border-top: 0; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: .7rem; line-height: 1.45; }
     .sn-testing .sn-testing__audit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
     .sn-testing .sn-testing__audit-card { padding: 20px; border: var(--sn-border); background: var(--sn-white); }
@@ -163,8 +163,8 @@
         </div>
         <div>
           <figure>
-            <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-rig.webp" alt="RF test rig" width="1024" height="576" loading="lazy" decoding="async">
-            <figcaption>RF test rig. A photograph of the setup helps orientation but cannot replace the condition record and result data.</figcaption>
+            <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-vna-test-bench.webp" alt="Technician testing an RF assembly with a vector network analyzer" width="1920" height="1440" loading="lazy" decoding="async">
+            <figcaption>VNA test bench. A photograph of the setup helps orientation but cannot replace the condition record and result data.</figcaption>
           </figure>
           <h3>Buyer check before accepting a result</h3>
           <ul class="sn-testing__buyer-check">
@@ -240,8 +240,8 @@
         <p>A supplier review is more productive when each question names the record and revision behind it. The six groups below cover the evidence most often requested by an SQE.</p>
       </div>
       <figure class="sn-testing__wide-figure">
-        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-station.webp" alt="RF test station" width="1024" height="575" loading="lazy" decoding="async">
-        <figcaption>RF test station. Audit scope, record access and confidentiality arrangements are agreed for the project before a review.</figcaption>
+        <img src="https://rf-sonne.com/wp-content/uploads/2026/10/factory-test-line.webp" alt="RF test line with vector network analyzer and test software" width="1707" height="1280" loading="lazy" decoding="async">
+        <figcaption>RF test line. Audit scope, record access and confidentiality arrangements are agreed for the project before a review.</figcaption>
       </figure>
       <div class="sn-testing__audit">
         <div class="sn-testing__audit-card"><span>Specification control</span><h3>Requirements and revisions</h3><p>Controlled drawing, BOM, specification revision and the approval status used for the product under review.</p></div>
@@ -348,7 +348,7 @@
           },
           {
             "@type": "Question",
-            "name": "What is SONNE's RF test coverage?",
+            "name": "What is SONNE’s RF test coverage?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Test coverage is defined by the product, critical characteristics, agreed specification and production stage. SONNE identifies critical RF testing and can apply 100% verification only where the specific product and measurement requirement support that statement. It should not be interpreted as 100% coverage of every test on every product. Confirm the coverage matrix during project review."

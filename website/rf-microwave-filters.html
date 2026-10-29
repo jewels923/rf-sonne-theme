@@ -42,6 +42,7 @@
     .sn-filters .sn-filters__selection { min-width: 940px; }
     .sn-filters .sn-filters__selection tbody th { width: 22%; }
     .sn-filters .sn-filters__spec { min-width: 900px; }
+    .sn-filters .sn-filters__bandpass { min-width: 900px; }
     .sn-filters .sn-filters__spec tbody th { width: 22%; }
     .sn-filters .sn-filters__test { min-width: 900px; }
     .sn-filters .sn-filters__test tbody th { width: 20%; }
@@ -98,7 +99,7 @@
       .sn-filters .sn-filters__checkpoint:nth-child(odd) { padding-left: 0; border-left: 0; }
     }
     @media (max-width: 760px) {
-      .sn-filters .sn-filters__matrix, .sn-filters .sn-filters__selection, .sn-filters .sn-filters__spec, .sn-filters .sn-filters__test { min-width: 0; }
+      .sn-filters .sn-filters__matrix, .sn-filters .sn-filters__selection, .sn-filters .sn-filters__spec, .sn-filters .sn-filters__test, .sn-filters .sn-filters__bandpass { min-width: 0; }
       .sn-filters .sn-filters__ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
       .sn-filters .sn-filters__ledger, .sn-filters .sn-filters__ledger tbody, .sn-filters .sn-filters__ledger tr, .sn-filters .sn-filters__ledger th, .sn-filters .sn-filters__ledger td { display: block; width: 100%; }
       .sn-filters .sn-filters__ledger tbody tr { padding: 20px 0; border-bottom: 1px solid var(--sn-line); }
@@ -132,7 +133,7 @@
         <div class="sn-filters__hero-copy">
           <nav class="sn-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/products/">Products</a></li><li aria-current="page">RF &amp; Microwave Filters</li></ol></nav>
           <span class="sn-filters__eyebrow">Cavity · Bandpass · Waveguide · E-band · RRU · Custom assemblies</span>
-          <h1 id="filters-title">Cavity Filters and Custom RF/Microwave Filter Assemblies</h1>
+          <h1 id="filters-title">Bandpass and Cavity Filters for Custom RF/Microwave Assemblies</h1>
           <p>Select by structure, response and application, then define the electrical and mechanical conditions together. Low PIM, high rejection and VNA verification are evaluation dimensions, not uniform values claimed for every model.</p>
           <div class="sn-filters__actions"><a class="sn-btn sn-btn--primary" href="/request-a-quote/">Request Custom Filter Design</a><a class="sn-btn sn-btn--secondary" href="/resources/datasheets/">Download Datasheet</a></div>
           <p class="sn-filters__hero-note"><strong>Core production range: DC–40 GHz.</strong> Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology and validation. This is not a universal limit for every filter.</p>
@@ -177,10 +178,34 @@
     </div>
   </section>
 
+  <section class="sn-section sn-section--muted" aria-labelledby="filters-bandpass-title">
+    <div class="sn-container">
+      <div class="sn-filters__intro sn-record-head">
+        <div class="sn-record-meta"><span><b>02</b> / Bandpass response</span><span>6 terms · one measured curve</span></div>
+        <div class="sn-record-title"><h2 id="filters-bandpass-title">Read the Bandpass Filter Response before Comparing Structures</h2><p>A bandpass filter passes a defined band and rejects frequencies below and above it. Each term below describes that curve, and each one needs a frequency reference and a test condition before it can be quoted or verified.</p></div>
+      </div>
+      <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="filters-bandpass-title">
+        <table class="sn-table sn-ledger sn-filters__ledger sn-filters__bandpass">
+          <caption>Response terms apply to cavity, waveguide and assembly-level bandpass designs alike.</caption>
+          <thead><tr><th scope="col">Response term</th><th scope="col">What it describes</th><th scope="col">What to state</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Passband edges</th><td data-label="What it describes">The frequencies the filter must pass</td><td data-label="What to state">Lower and upper edges, with the loss level used to define them</td></tr>
+            <tr><th scope="row">Bandwidth</th><td data-label="What it describes">The width of the passband</td><td data-label="What to state">Minimum bandwidth across the operating condition</td></tr>
+            <tr><th scope="row">Insertion loss</th><td data-label="What it describes">Loss through the passband</td><td data-label="What to state">Maximum loss across the band, with the reference plane stated</td></tr>
+            <tr><th scope="row">Rejection</th><td data-label="What it describes">Attenuation below and above the passband</td><td data-label="What to state">Each stopband interval and its minimum attenuation</td></tr>
+            <tr><th scope="row">Return loss</th><td data-label="What it describes">Match at each port across the passband</td><td data-label="What to state">Value per port and the frequency range</td></tr>
+            <tr><th scope="row">Power and PIM</th><td data-label="What it describes">What the filter carries and what it must not generate</td><td data-label="What to state">Power type and level; PIM limit, tones, order and test setup where applicable</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sn-note">A bandpass filter is one response shape among several: a lowpass passes below a corner, a highpass above it, and a notch rejects a narrow band. The structure follows the response, not the other way round. When separate bands are routed to separate ports, the device is a diplexer; the <a href="/resources/insights/rf-diplexer-guide/">RF diplexer guide</a> covers guard band, isolation and power inputs. For the structural comparison, read the <a href="/resources/insights/cavity-vs-waveguide-filter-selection-guide/">cavity vs waveguide filter selection guide</a>; for the complete input list, use the <a href="/resources/insights/rf-filter-rfq-preparation-guide/">RF filter RFQ preparation checklist</a>.</p>
+    </div>
+  </section>
+
   <section class="sn-section sn-section--muted" aria-labelledby="filters-selection-title">
     <div class="sn-container">
       <div class="sn-filters__intro sn-record-head">
-        <div class="sn-record-meta"><span><b>02</b> / Selection ledger</span><span>3 approaches · 9 review dimensions</span></div>
+        <div class="sn-record-meta"><span><b>03</b> / Selection ledger</span><span>3 approaches · 9 review dimensions</span></div>
         <div class="sn-record-title"><h2 id="filters-selection-title">Choose between Cavity, Waveguide and Tuning-Free Filter Approaches</h2><p>Cavity and waveguide describe structural paths. Tuning-free is a manufacturing and adjustment objective. These labels are not three mutually exclusive product branches.</p></div>
       </div>
       <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="filters-selection-title">
@@ -206,7 +231,7 @@
   <section class="sn-section" aria-labelledby="filters-spec-title">
     <div class="sn-container">
       <div class="sn-filters__intro sn-record-head">
-        <div class="sn-record-meta"><span><b>03</b> / Specification</span><span>11 input fields</span></div>
+        <div class="sn-record-meta"><span><b>04</b> / Specification</span><span>11 input fields</span></div>
         <div class="sn-record-title"><h2 id="filters-spec-title">Specify Insertion Loss, Rejection, Power and PIM Together</h2><p>A center frequency is not a manufacturable specification. Every critical value needs a band, reference and test condition so engineering can evaluate trade-offs instead of comparing isolated numbers.</p></div>
       </div>
       <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="filters-spec-title">
@@ -235,7 +260,7 @@
   <section class="sn-section sn-section--muted" aria-labelledby="filters-manufacturing-title">
     <div class="sn-container">
       <div class="sn-filters__intro sn-record-head">
-        <div class="sn-record-meta"><span><b>04</b> / Manufacturing</span><span>4 process checkpoints</span></div>
+        <div class="sn-record-meta"><span><b>05</b> / Manufacturing</span><span>4 process checkpoints</span></div>
         <div class="sn-record-title"><h2 id="filters-manufacturing-title">Control the Machining and Plating Details behind High-Frequency Filters</h2><p>High-frequency review connects the cavity, cover, tuning features and surface requirements to drawing and process controls. No unverified performance-improvement percentage is inferred from machining or plating.</p></div>
       </div>
       <div class="sn-filters__evidence-grid">
@@ -255,7 +280,7 @@
   <section class="sn-section" aria-labelledby="filters-verification-title">
     <div class="sn-container">
       <div class="sn-filters__intro sn-record-head">
-        <div class="sn-record-meta"><span><b>05</b> / Verification</span><span>3 record types</span></div>
+        <div class="sn-record-meta"><span><b>06</b> / Verification</span><span>3 record types</span></div>
         <div class="sn-record-title"><h2 id="filters-verification-title">Verify Filter Performance with VNA, PIM and Automated Testing</h2><p>The source capability for this filter line includes 100% VNA/PIM verification. The exact products, measured parameters, conditions and acceptance limits are confirmed in the project plan; this does not mean every RF or reliability characteristic is tested on every product.</p></div>
       </div>
       <div class="sn-table-wrap sn-ledger-wrap" tabindex="0" role="region" aria-labelledby="filters-verification-title">
@@ -280,7 +305,7 @@
   <section class="sn-section sn-section--muted" aria-labelledby="filters-process-title">
     <div class="sn-container">
       <div class="sn-filters__intro sn-record-head">
-        <div class="sn-record-meta"><span><b>06</b> / Project gates</span><span>RFQ to validated production</span></div>
+        <div class="sn-record-meta"><span><b>07</b> / Project gates</span><span>RFQ to validated production</span></div>
         <div class="sn-record-title"><h2 id="filters-process-title">Move a Custom Filter from RFQ to Validated Production</h2><p>Each gate carries forward explicit inputs and confirmation outputs. A prototype result becomes a production baseline only after the agreed pilot and verification review.</p></div>
       </div>
       <ol class="sn-filters__process">
@@ -298,10 +323,12 @@
   <section class="sn-section" aria-labelledby="filters-faq-title">
     <div class="sn-container">
       <div class="sn-filters__intro sn-record-head">
-        <div class="sn-record-meta"><span><b>07</b> / Selection notes</span><span>5 questions</span></div>
-        <div class="sn-record-title"><h2 id="filters-faq-title">Custom Filter Selection and Manufacturing FAQs</h2><p>Direct answers for structure selection, high-frequency feasibility, project timing, low-PIM inputs and technical documents.</p></div>
+        <div class="sn-record-meta"><span><b>08</b> / Selection notes</span><span>7 questions</span></div>
+        <div class="sn-record-title"><h2 id="filters-faq-title">Custom Filter Selection and Manufacturing FAQs</h2><p>Direct answers for the bandpass response, structure selection, high-frequency feasibility, project timing, low-PIM inputs and technical documents.</p></div>
       </div>
       <div class="sn-faq sn-filters__faq">
+        <details open><summary>What is a bandpass filter?</summary><p>A bandpass filter passes a defined frequency band and rejects signals below and above it. Its performance is described by the passband edges, insertion loss, rejection in each stopband and return loss, and each value needs a frequency reference and a test condition before it can be quoted or verified.</p></details>
+        <details><summary>How do I specify bandpass filter bandwidth and rejection?</summary><p>State the passband edges, the minimum bandwidth, the maximum insertion loss across the band, and the rejection required in each stopband with its exact frequency interval. Add return loss, power type and PIM conditions where they apply. General terms such as narrow or high rejection cannot be quoted or verified consistently without those numbers.</p></details>
         <details open><summary>How do I choose between cavity, waveguide and tuning-free filters?</summary><p>Start with frequency, insertion loss, rejection, power, PIM, size and interface requirements. Cavity and waveguide describe different structural approaches, while tuning-free describes a manufacturing and adjustment objective rather than a mutually exclusive filter type. Engineering should compare the complete specification and production expectations before recommending an approach.</p></details>
         <details><summary>Can SONNE make E-band filters above 40 GHz?</summary><p>Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology and validation, so E-band requirements can be submitted for evaluation. This is not a universal limit for every filter design. Provide the exact passband, rejection, power, waveguide interface and mechanical requirements for a feasibility review.</p></details>
         <details><summary>How long do filter prototypes and mass production take?</summary><p>The fastest prototype reference is about two weeks, but it is not a general lead-time promise. Actual prototype and production timing depends on topology, drawings, quantity, process and capacity. A complete RFQ typically receives initial engineering feedback in about 24 hours; formal quotation and delivery schedules require project-specific confirmation.</p></details>
@@ -360,6 +387,8 @@
         "@type": "FAQPage",
         "@id": "https://rf-sonne.com/products/rf-microwave-filters/#faq",
         "mainEntity": [
+          {"@type":"Question","name":"What is a bandpass filter?","acceptedAnswer":{"@type":"Answer","text":"A bandpass filter passes a defined frequency band and rejects signals below and above it. Its performance is described by the passband edges, insertion loss, rejection in each stopband and return loss, and each value needs a frequency reference and a test condition before it can be quoted or verified."}},
+          {"@type":"Question","name":"How do I specify bandpass filter bandwidth and rejection?","acceptedAnswer":{"@type":"Answer","text":"State the passband edges, the minimum bandwidth, the maximum insertion loss across the band, and the rejection required in each stopband with its exact frequency interval. Add return loss, power type and PIM conditions where they apply. General terms such as narrow or high rejection cannot be quoted or verified consistently without those numbers."}},
           {"@type":"Question","name":"How do I choose between cavity, waveguide and tuning-free filters?","acceptedAnswer":{"@type":"Answer","text":"Start with frequency, insertion loss, rejection, power, PIM, size and interface requirements. Cavity and waveguide describe different structural approaches, while tuning-free describes a manufacturing and adjustment objective rather than a mutually exclusive filter type. Engineering should compare the complete specification and production expectations before recommending an approach."}},
           {"@type":"Question","name":"Can SONNE make E-band filters above 40 GHz?","acceptedAnswer":{"@type":"Answer","text":"Selected custom microwave and waveguide projects can reach up to 110 GHz, depending on topology and validation, so E-band requirements can be submitted for evaluation. This is not a universal limit for every filter design. Provide the exact passband, rejection, power, waveguide interface and mechanical requirements for a feasibility review."}},
           {"@type":"Question","name":"How long do filter prototypes and mass production take?","acceptedAnswer":{"@type":"Answer","text":"The fastest prototype reference is about two weeks, but it is not a general lead-time promise. Actual prototype and production timing depends on topology, drawings, quantity, process and capacity. A complete RFQ typically receives initial engineering feedback in about 24 hours; formal quotation and delivery schedules require project-specific confirmation."}},
