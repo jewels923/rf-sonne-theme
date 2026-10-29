@@ -1,0 +1,24 @@
+﻿keyword,search_volume,keyword_difficulty,competition,competition_level,cpc,low_top_of_page_bid,high_top_of_page_bid,search_volume_trend_monthly,search_volume_trend_quarterly,search_volume_trend_yearly,core_keyword,synonym_clustering_algorithm,detected_language,is_another_language,words_count,backlinks,dofollow,referring_pages,referring_domains,referring_main_domains,rank,main_domain_rank,main_intent,foreign_intent
+tr module,30,0,0.04,LOW,6.48,,,33,-20,100,tr modules,text_processing,sr,True,2,2.4,2.1,2.4,1.7,1.5,20.9,498.8,informational,
+pac tr 4 remote turn on module,20,0,0.85,HIGH,0.64,,,0,0,-50,pac tr-4 remote turn-on module,text_processing,en,False,7,1.8,1.6,1.8,0.3,0.3,16.8,513.9,transactional,['navigational']
+pac tr 4 trigger module,20,,0.45,MEDIUM,0.7,0.5,1,50,200,,,keyword_metrics,da,True,5,,,,,,,,transactional,
+pac tr-4 remote turn-on module,20,0,0.74,HIGH,0.58,,,0,-67,-50,,text_processing,en,False,5,2.6,1.8,2.4,0.7,0.7,9.2,522.7,transactional,['navigational']
+pac tr-4 remote turn on module,20,0,0.85,HIGH,0.64,,,0,0,-50,pac tr-4 remote turn-on module,text_processing,en,False,6,,,,,,,,transactional,
+korg tr rack trinity sound module,10,,,,,,,0,0,0,,text_processing,en,False,6,,,,,,,,transactional,['navigational']
+roland tr 08 sound module,10,47,0.57,MEDIUM,,,,0,0,0,roland tr-08 sound module,text_processing,fr,True,5,,,,,,,,transactional,
+apg 81 tr module,10,,,,,,,0,0,-100,,text_processing,hi,True,4,,,,,,,,navigational,"['transactional', 'informational']"
+tr module block diagram,10,,0,LOW,,,,0,0,,,text_processing,en,False,4,,,,,,,,informational,['navigational']
+roland tr-08 sound module,10,47,0.57,MEDIUM,,,,0,0,0,,text_processing,fr,True,4,,,,,,,,transactional,
+korg tr-rack module,10,,1,HIGH,0.07,,,,0,,korg tr rack module,text_processing,da,True,3,,,,,,,,transactional,
+tr module radar,10,44,0,LOW,,,,0,0,0,t r module radar,text_processing,id,True,3,,,,,,,,informational,['navigational']
+korg tr-rack trinity sound module,10,,,,,,,0,0,0,korg tr rack trinity sound module,text_processing,en,False,5,,,,,,,,transactional,
+apg-81 tr module,10,,,,,,,0,0,-100,apg 81 tr module,text_processing,sr,True,3,,,,,,,,transactional,
+aesa tr module,10,,0,LOW,,,,0,0,0,,text_processing,war,True,3,,,,,,,,navigational,['informational']
+x band tr module,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,"['transactional', 'navigational']"
+aesa radar tr module,10,,0,LOW,,,,0,0,0,,,ceb,True,4,,,,,,,,informational,
+pac tr-4 trigger module,10,,0.73,HIGH,0.82,0.48,1,100,-50,,,keyword_metrics,vi,True,4,,,,,,,,transactional,
+tr module design,10,,0,LOW,,,,,,,,,en,False,3,,,,,,,,navigational,
+astro c40 tr module,10,19,0.43,MEDIUM,,,,,0,0,astro c40 tr modules,text_processing,es,True,4,,,,,,,,transactional,
+korg tr rack module,10,,,,,,,-100,0,0,,text_processing,et,True,4,,,,,,,,transactional,['navigational']
+korg tr rack expanded access module,10,,0,LOW,,,,0,,0,,,en,False,6,,,,,,,,navigational,['transactional']
+sap tr module,10,,,,,,,0,-100,-100,,text_processing,ta,True,3,,,,,,,,navigational,"['informational', 'commercial']"

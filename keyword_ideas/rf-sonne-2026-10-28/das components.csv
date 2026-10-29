@@ -1,0 +1,6 @@
+﻿keyword,search_volume,keyword_difficulty,competition,competition_level,cpc,low_top_of_page_bid,high_top_of_page_bid,search_volume_trend_monthly,search_volume_trend_quarterly,search_volume_trend_yearly,core_keyword,synonym_clustering_algorithm,detected_language,is_another_language,words_count,backlinks,dofollow,referring_pages,referring_domains,referring_main_domains,rank,main_domain_rank,main_intent,foreign_intent
+components of das,10,1,,,,,,-100,-100,0,das components,text_processing,en,False,3,,,,,,,,informational,
+active das components,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,informational,"['navigational', 'transactional']"
+das components,10,1,0.31,LOW,10.38,,,0,0,-50,,text_processing,en,False,2,73.3,57.8,66.6,19.3,17.8,77.6,370.7,informational,
+das system components,10,44,0.21,LOW,11.07,5.81,9.04,100,0,100,,text_processing,en,False,3,,,,,,,,informational,
+passive das components,10,42,,,,,,-100,-100,-100,,,en,False,3,,,,,,,,transactional,"['informational', 'navigational']"

@@ -1,0 +1,52 @@
+{
+  "executive_summary": [
+    "rf-sonne.com scores 20 out of 100, grade F, and that number is a cap rather than a verdict on the work. All 59 crawled pages carry a noindex directive, so search engines are told to keep the whole site out of results. That is deliberate for a site that is still pre-launch, and it is the one setting that decides whether any other improvement pays off. Underneath the cap the measured areas are strong: on-page 96, links and architecture 100, structured data and sharing 99, AI search readiness 100, performance 97, security and trust 96, crawl and indexing 67.",
+    "Read this as a partial audit. Jev semantic judgments were unavailable, so content quality was not scored by machine; three reviewers read the saved pages by hand instead, and their judgments are labelled as such below. PageSpeed Insights returned a rate-limit error for both mobile and desktop, so performance came from crawl timings only. DataForSEO was not run, so there are no rankings, keyword or backlink numbers anywhere in this report. Two things matter most for the business. JEV-001 is the launch switch: until noindex is removed the site cannot appear in search at all. JEV-007 and JEV-008 are the only measured defects that are not consequences of that switch, and both live in the server response rather than in the content.",
+    "Four actions in the table describe one page six times over. The crawler reached /request-a-quote with query parameters such as ?topic=pim-verification and ?product=tma and counted each parameter as a separate URL. Those parameters are intentional: internal links on the base-station RF page use them to prefill the quote form. The canonical on every variant points back to /request-a-quote, which is the correct consolidation behaviour, so JEV-003, JEV-004, JEV-005 and JEV-010 are rule artefacts rather than defects. They stay in the action table for completeness and are called out here so nobody spends a week rewriting one page."
+  ],
+  "strengths": [
+    "The crawl and the on-page basics are both clean: every page returned HTTP 200 with no broken internal links, no redirect chains, no soft 404s and no mixed content, and every page carries one h1, a title, a meta description, a language attribute, a viewport, no skipped heading levels, and images with alt text plus explicit dimensions.",
+    "Crawler access is wide open where it matters. robots.txt allows Googlebot and Bingbot and all 10 AI crawlers checked, including GPTBot, OAI-SearchBot, ClaudeBot, Claude-SearchBot, PerplexityBot and Google-Extended, and llms.txt is present.",
+    "The delivery layer measured well where it could be measured: static assets are served from the CDN with long cache lifetimes, most images are WebP, about half of the image references are lazy-loaded, and not one image is missing alt text or dimensions.",
+    "The company is described consistently enough for readers and machines to attribute claims to it: Organization markup carries the name, an alternate name, the address, founding date, telephone, email and URL, and the page copy repeats the same facts. Structured data overall scored 99 with no parse errors.",
+    "Reviewed by hand, the writing is honest and quotable: the technical guides open with a direct definition of the device, frequency ranges are given as explicit non-universal bands with 'confirmed per RFQ' where a value is not fixed, and no page invents certifications, customers or lead times."
+  ],
+  "risks": [
+    "JEV-001, priority P1, impact 100: 59 pages carry noindex. Until that is removed the site is invisible to search, and every other item in this report waits behind it.",
+    "JEV-002: 40 of the crawled sitemap URLs are not final indexable pages, which follows directly from JEV-001 and should be re-checked after launch rather than patched separately. A separate gap the rules did not flag was found and fixed during review: seven pages that are meant to be indexed were missing from every sitemap while returning 200, five product pages (antenna test systems, passive microwave components, RF front ends, switch matrices, TR modules) and the two newest Insights guides. The cause was the SEO plugin's on-disk sitemap cache, which held a snapshot from before those pages existed and does not invalidate when content is published over the REST API; the cache was invalidated and a theme hook now invalidates it on every publish, and the sitemaps were re-verified to list all of them. The six Insights topic archives stay out by design: they are noindex views of a taxonomy the site deliberately excludes.",
+    "JEV-008 and JEV-007: the homepage response is missing x-content-type-options, referrer-policy and x-frame-options or CSP frame-ancestors, and it sends no Strict-Transport-Security header. These are hosting-layer settings, so they are quick to add and they do not depend on launch.",
+    "JEV-009: Product markup on 13 pages has no offers, review or aggregateRating, so those pages are not eligible for product rich results. For a custom manufacturer with no published prices the honest choices are a real offer where one exists, or leaving the markup as it is and accepting no rich result; inventing prices or ratings would break Google's structured data guidelines. The same review found no Service markup on the six solution pages or the engineering pages, which is where a machine would look for what the company offers.",
+    "Reviewed by hand rather than by rule: three of the eight Insights guides are not linked back from any product, solution or engineering page, and the six solution pages link only to the Insights index, so the path from a technical article to the part it supports is one-way or missing. The five core product pages also open with instructions such as 'Select by structure, response and application' instead of a one-line definition of what the product is, which makes them harder for a reader or an answer engine to quote."
+  ],
+  "plan": [
+    {
+      "horizon": "This week",
+      "items": [
+        "JEV-001 Fix the launch date and prepare the switch that removes sitewide noindex and reopens WordPress reading visibility (hours)",
+        "JEV-007 Add Strict-Transport-Security at the hosting layer, for example via .htaccess header directives or a security plugin, and confirm it on the homepage response (hours)",
+        "JEV-008 Add x-content-type-options, referrer-policy and x-frame-options or CSP frame-ancestors to the same response (hours)",
+        "JEV-003 Confirm the six /request-a-quote parameter variants are the intended form-prefill links from the base-station page, and leave the canonical consolidation as it is (hours)"
+      ]
+    },
+    {
+      "horizon": "This month",
+      "items": [
+        "JEV-002 Re-check after launch that every sitemap URL resolves to a final indexable page; the missing-page gap behind this action was fixed during review by clearing the plugin sitemap cache and adding a publish hook (about a day)",
+        "JEV-009 Decide the Product markup policy for the 13 pages: a real offer where one exists, or accept no product rich result, and write the decision down (hours)",
+        "JEV-006 Measure the three slow pages with a keyed PageSpeed run once the site is public; the crawl shows a healthy median response and cached CDN assets, but every page also loads jQuery in the head plus two third-party script origins, so fix whatever the lab data names (several days)",
+        "Add one declarative opening sentence to the five core product pages, and add backlinks from the matching product, solution and engineering pages to the three detached guides (about a day)"
+      ]
+    },
+    {
+      "horizon": "This quarter",
+      "items": [
+        "JEV-004 and JEV-010 Re-run the duplicate title and description checks after launch; on current evidence the pairs are one RFQ page reached with form-prefill parameters, so no rewrite is needed (hours)",
+        "JEV-005 Re-run the duplicate main text check on the same pages and confirm one RFQ page is the only version indexed (about a day)",
+        "Curate llms.txt into a short company brief plus a grouped page list with real summaries, and make the brand suffix consistent across Insights titles; both are editorial best practice, not ranking factors (about a day)",
+        "Re-run this audit with Jev judgments and DataForSEO enabled after launch, so content quality and search visibility, both n/a here, get scored (several days)"
+      ]
+    }
+  ],
+  "closing": "After the launch switch, measure three things: the noindex count in Search Console coverage, the sitemap URLs that resolve to final indexable pages, and Core Web Vitals from real field data, which a pre-launch site cannot have yet. One note for the record: FAQ markup appears on most of the 59 pages, and Google limits FAQ rich results to government and health authorities, so the markup is harmless but will not produce rich results. This audit could not see content quality or search visibility by machine, so the 20 reflects the cap and the measured technical areas only.",
+  "author": "Qoder agent, from the audit evidence and three reviewer passes"
+}

@@ -1,0 +1,25 @@
+﻿keyword,search_volume,keyword_difficulty,competition,competition_level,cpc,low_top_of_page_bid,high_top_of_page_bid,search_volume_trend_monthly,search_volume_trend_quarterly,search_volume_trend_yearly,core_keyword,synonym_clustering_algorithm,detected_language,is_another_language,words_count,backlinks,dofollow,referring_pages,referring_domains,referring_main_domains,rank,main_domain_rank,main_intent,foreign_intent
+waveguide filter,70,0,0.98,HIGH,3.91,2,4.8,80,29,0,waveguide filters,text_processing,en,False,2,6.7,2.8,3.1,1.8,1.7,15.3,503.7,transactional,
+corrugated waveguide filter,10,,,,,,,-100,0,-100,,,en,False,3,,,,,,,,transactional,
+waveguide filter design,10,14,0.2,LOW,5.53,,,0,0,-50,,,en,False,3,47.9,16.2,37.7,8.7,6.9,40,478.3,transactional,"['informational', 'commercial']"
+waveguide filter design software,10,40,0.71,HIGH,,,,,0,,,,en,False,4,,,,,,,,transactional,['commercial']
+waveguide cavity filter,10,45,0.2,LOW,,,,0,0,,,,en,False,3,,,,,,,,transactional,
+waveguide low-pass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+waveguide high pass filter,10,42,0.29,LOW,,,,0,0,0,waveguide high-pass filter,text_processing,en,False,4,,,,,,,,transactional,
+waveguide notch filter,10,45,0.14,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+waveguide is a high-pass filter,10,47,0.29,LOW,,,,0,0,0,,text_processing,en,False,5,,,,,,,,informational,['transactional']
+waveguide low pass filter,10,44,0,LOW,,,,0,0,0,waveguide low-pass filter,text_processing,en,False,4,,,,,,,,transactional,
+waveguide low pass filter design,10,45,0,LOW,,,,0,0,0,waveguide low-pass filter design,text_processing,en,False,5,,,,,,,,informational,
+waveguide low-pass filter design,10,45,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+waveguide bandpass filter design,10,47,0,LOW,,,,,-50,0,,,en,False,4,,,,,,,,informational,
+circular waveguide filter,10,,1,HIGH,,,,,0,0,,,en,False,3,,,,,,,,transactional,
+waveguide filter calculator,10,45,0,LOW,,,,,,,,,en,False,3,,,,,,,,informational,['transactional']
+waveguide is a high pass filter,10,47,0.29,LOW,,,,0,0,0,waveguide is a high-pass filter,text_processing,en,False,6,,,,,,,,transactional,['informational']
+ceramic waveguide filter,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+waveguide high-pass filter,10,,0.29,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+waveguide bandpass filter,10,42,1,HIGH,10.14,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+waveguide filter design tutorial,10,45,,,,,,0,0,0,,,en,False,4,,,,,,,,informational,
+filter characteristics of rectangular waveguide,10,,,,,,,-100,0,0,,,en,False,5,,,,,,,,informational,
+iris waveguide filter,10,0,0.29,LOW,,,,0,0,0,,text_processing,en,False,3,56.9,23.9,36.3,4.9,4.5,39,592.2,transactional,
+waveguide iris filter,10,,0.29,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+substrate integrated waveguide filter,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,informational,['transactional']

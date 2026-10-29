@@ -1,0 +1,861 @@
+﻿keyword,search_volume,keyword_difficulty,competition,competition_level,cpc,low_top_of_page_bid,high_top_of_page_bid,search_volume_trend_monthly,search_volume_trend_quarterly,search_volume_trend_yearly,core_keyword,synonym_clustering_algorithm,detected_language,is_another_language,words_count,backlinks,dofollow,referring_pages,referring_domains,referring_main_domains,rank,main_domain_rank,main_intent,foreign_intent
+filter bandpass,2900,17,0.18,LOW,2.98,1.37,3.72,0,0,0,band pass filter,text_processing,en,False,2,75.3,56.7,65.3,31.7,29.1,81.8,451.5,transactional,
+bandpass filter,2400,9,0.12,LOW,5.03,1.14,5.42,50,50,-17,band pass filter,text_processing,en,False,2,65,49.2,58.3,31.8,29.6,96.7,500.7,transactional,
+passive bandpass filter,260,2,0.03,LOW,0.38,,,-66,-66,-77,bandpass passive filter,text_processing,en,False,3,64.4,47.6,57.7,30.4,28.4,69.1,489.8,transactional,
+active bandpass filter,260,0,0.01,LOW,,,,200,133,24,bandpass filter active,text_processing,en,False,3,8.1,5.1,6.8,4.1,3.8,35,435.1,transactional,
+bandpass passive filter,260,4,0,LOW,,,,24,0,86,,text_processing,en,False,3,81.5,58.3,68.3,32.6,30.6,72.3,539.2,transactional,
+butterworth filter bandpass,260,9,0,LOW,,,,133,-19,24,butterworth bandpass filter,text_processing,en,False,3,83,54.5,72.5,38.4,35.1,79.8,674,informational,['navigational']
+bandpass filter passive,260,3,0,LOW,,,,24,0,86,bandpass passive filter,text_processing,en,False,3,58.6,43.7,52.2,28.7,26.8,51.5,673,transactional,
+butterworth bandpass filter,260,10,0,LOW,,,,133,-19,24,,text_processing,en,False,3,83.1,54.6,72.6,38.5,35.2,87.9,638.4,navigational,"['informational', 'transactional']"
+what is a bandpass filter,260,0,0,LOW,,,,53,0,0,,text_processing,en,False,5,59.6,44.5,53,28.8,26.9,56.2,533.7,informational,
+bandpass butterworth filter,260,8,0,LOW,,,,133,-19,24,butterworth bandpass filter,text_processing,en,False,3,83.1,54.6,72.6,38.5,35.2,79.9,601.2,navigational,['informational']
+bandpass filter butterworth,260,8,0,LOW,,,,133,-19,24,butterworth bandpass filter,text_processing,en,False,3,83.1,54.6,72.6,38.5,35.2,79.9,601.2,navigational,
+bandpass filter circuit,210,8,0.01,LOW,2.94,,,200,320,24,band pass filter circuit,text_processing,en,False,3,85.2,60.5,71,35.1,32.6,92.2,494.7,transactional,
+bandpass filter rlc,210,0,0,LOW,,,,0,0,-36,band pass filter rlc,text_processing,en,False,3,66.4,32.9,53.5,26.6,23.1,34,503.4,informational,"['transactional', 'navigational']"
+bandpass filter active,210,0,0.02,LOW,,,,56,0,-18,,text_processing,en,False,3,7.9,5.2,6.6,4,3.7,35,440.4,transactional,
+bandpass active filter,210,0,0.02,LOW,,,,56,0,-18,bandpass filter active,text_processing,en,False,3,7.9,5.2,6.6,4,3.7,35,468.9,transactional,
+bandpass rlc filter,210,0,0.01,LOW,,,,57,57,-35,band pass filter rlc,text_processing,en,False,3,51.3,39,46.6,25.2,23.7,45.7,513.9,informational,['transactional']
+rlc bandpass filter,210,0,0.01,LOW,,,,57,57,-35,band pass filter rlc,text_processing,en,False,3,66.8,33.3,53.9,26.8,23.3,47.6,539,informational,['transactional']
+active filter bandpass,210,0,0.01,LOW,,,,-36,0,29,bandpass filter active,text_processing,en,False,3,7.9,5.2,6.6,4,3.7,35,473.5,transactional,
+bandpass filter matlab,170,0,0,LOW,,,,29,-18,-57,,text_processing,en,False,3,1.5,1.5,1.5,0.5,0.5,13.3,637.8,informational,['transactional']
+matlab bandpass filter,170,0,0,LOW,,,,-36,-50,-36,bandpass filter matlab,text_processing,en,False,3,1.5,1.5,1.5,0.5,0.5,13.3,596.1,informational,['transactional']
+bandpass filter in matlab,170,0,0,LOW,,,,-36,-50,-36,bandpass filter matlab,text_processing,en,False,4,2,1.8,2,1,1,23.2,596.2,informational,
+matlab filter bandpass,170,0,0,LOW,,,,29,-18,-57,bandpass filter matlab,text_processing,en,False,3,1.5,1.5,1.5,0.5,0.5,13.3,596.1,informational,
+transfer function for bandpass filter,140,0,0,LOW,,,,-40,-57,-25,transfer function of bandpass filter,text_processing,en,False,5,14.4,13.5,14.4,3.1,2.9,47.7,516.7,informational,
+optical bandpass filter,140,2,0.58,MEDIUM,3.87,1.1,2.97,-18,-18,-77,bandpass filter optics,text_processing,en,False,3,40.6,32.2,37.4,11.6,10.6,73.5,449.1,transactional,
+bandpass filter optics,140,4,0.58,MEDIUM,3.87,1.1,2.97,-18,-18,-77,,text_processing,en,False,3,27.5,19.1,24.3,11.6,10.5,82.3,436.2,navigational,"['informational', 'transactional']"
+bode plot bandpass filter,140,2,0,LOW,,,,133,75,-36,,text_processing,en,False,4,53.2,39.4,46.2,21.7,19.2,57.1,596.1,transactional,['informational']
+transfer function bandpass filter,140,12,0,LOW,,,,200,80,-18,transfer function of bandpass filter,text_processing,en,False,4,154.7,114.5,140.9,60.6,54.7,99.9,480.6,informational,
+bandpass optical filter,140,4,0.58,MEDIUM,3.87,1.1,2.97,-18,-18,-77,bandpass filter optics,text_processing,en,False,3,32.5,23.1,30.6,7.1,7,69.6,370.1,transactional,
+bandpass rc filter,140,12,0,LOW,,,,191,540,129,rc bandpass filter,text_processing,en,False,3,81.6,58.6,68.8,33.6,31.3,102.3,583.5,transactional,
+rc bandpass filter,140,14,0,LOW,,,,191,540,129,,text_processing,en,False,3,110.3,83.1,95.1,35.9,33.7,106.2,625,transactional,
+transfer function of bandpass filter,140,0,0,LOW,,,,200,80,-18,,text_processing,en,False,5,14.4,13.5,14.4,3.1,2.9,47.7,489.8,informational,
+optical filter bandpass,140,5,0.58,MEDIUM,3.87,1.1,2.97,-18,-18,-77,bandpass filter optics,text_processing,en,False,3,29.1,20.3,25.7,12.6,11.3,90.4,402,informational,['transactional']
+bandpass filter optical,140,4,0.58,MEDIUM,3.87,1.1,2.97,-18,-18,-77,bandpass filter optics,text_processing,en,False,3,34.2,18.7,31.8,5.9,5.7,57.3,373.8,informational,
+bandpass filter rc,140,10,0,LOW,,,,191,540,129,rc bandpass filter,text_processing,en,False,3,63.3,46.9,57.2,31.1,28.8,92.1,585,transactional,
+bandpass filter rf,110,2,0.48,MEDIUM,4.12,1.57,5.52,55,143,89,rf bandpass filter,text_processing,en,False,3,68.6,54.1,60.5,26.2,23.8,80.6,408.7,transactional,
+bandpass filter calculation,110,13,0.01,LOW,,,,75,0,,bandpass filter calculator,text_processing,en,False,3,209.2,111.2,164.7,78.9,70.6,120.4,443.2,informational,
+bandpass filter using op amp,110,0,0,LOW,,,,175,120,-21,,text_processing,nl,True,5,9.3,5.7,7.1,4.5,4,25.3,618.8,transactional,
+low pass filter high pass filter and bandpass filter,110,0,0.04,LOW,,,,120,120,22,,text_processing,en,False,9,12.4,7.3,7.7,2.1,1.7,47,434.8,informational,
+rf bandpass filter,110,2,0.48,MEDIUM,4.12,1.57,5.52,55,143,89,,text_processing,en,False,3,51.6,40,47.3,24.7,22.9,72.1,435.7,transactional,
+bandpass filter with op amp,110,0,0,LOW,,,,-20,0,-43,op amp bandpass filter,text_processing,en,False,5,7.5,4.9,6.3,3.7,3.4,19.1,624.1,transactional,
+high pass low pass bandpass filter,110,7,0.04,LOW,,,,120,120,22,low pass high pass bandpass filter,text_processing,en,False,6,88.1,65.4,75.6,35.3,31.6,88.8,514,transactional,
+low pass high pass bandpass filter,110,9,0.04,LOW,,,,120,120,22,,text_processing,en,False,6,155.6,108.5,135.3,62.7,56.1,104.3,451,commercial,
+op amp bandpass filter,110,0,0,LOW,,,,175,120,-21,,text_processing,nl,True,4,7.5,4.9,6.3,3.7,3.4,19.1,602.5,transactional,
+op-amp bandpass filter,110,0,0,LOW,,,,175,120,-21,op amp bandpass filter,text_processing,en,False,3,10.6,7.7,9.4,6.5,4.5,33.7,568.1,transactional,
+ir bandpass filter,90,1,0.76,HIGH,5.96,1.38,4.96,75,0,0,,text_processing,en,False,3,93.2,54.7,79.8,44.4,41.2,75.7,364.5,transactional,
+l c bandpass filter,90,0,0.05,LOW,,,,-29,-44,-29,,text_processing,en,False,4,27,20.1,24,9.8,9.1,48.6,523.3,transactional,
+sallen key bandpass filter,90,0,0.01,LOW,,,,80,80,0,,text_processing,en,False,4,40.1,34.1,39.1,8.5,8.3,33.3,542.5,transactional,
+infrared bandpass filter,90,0,0.76,HIGH,5.96,1.38,4.96,75,0,0,,text_processing,en,False,3,4.7,3,3.3,2,2,29.8,361.9,transactional,
+bandpass lc filter,90,0,0.02,LOW,,,,40,0,0,lc bandpass filter,text_processing,en,False,3,27,20.1,24,9.8,9.1,48.6,467,transactional,['informational']
+bandpass filter ir,90,1,0.76,HIGH,5.96,1.38,4.96,75,0,0,ir bandpass filter,text_processing,en,False,3,1.3,1.3,1.3,0.3,0.3,12.9,386.6,transactional,['informational']
+edmund optics bandpass filter,90,17,0.34,MEDIUM,1.71,1.22,2.57,-50,-50,-33,,text_processing,en,False,4,2.6,1.3,1.3,1.3,1.3,11.6,443.7,navigational,
+bandpass filter thorlabs,90,0,0.34,MEDIUM,2.03,1.04,2.53,0,0,-18,thorlabs bandpass filter,text_processing,en,False,3,0.4,0.4,0.4,0.3,0.3,32.5,373.5,navigational,['transactional']
+uv bandpass filter,90,0,0.88,HIGH,2.81,0.91,2.65,40,40,-73,uv bandpass filters,text_processing,en,False,3,10.7,7.1,8.5,4.1,4.1,51.1,409.4,transactional,
+bandpass filter lc,90,1,0.02,LOW,,,,40,0,0,lc bandpass filter,text_processing,en,False,3,27.1,20.4,24.1,9.7,8.9,59.2,511.1,transactional,"['informational', 'navigational']"
+calculate bandpass filter,90,12,0.01,LOW,0.06,,,0,75,-36,bandpass filter calculator,text_processing,en,False,3,66.5,47.9,55.3,14.6,13.9,111.9,496.5,informational,
+bandpass filter calculator,90,11,0.01,LOW,0.06,,,0,75,-36,,text_processing,en,False,3,31.9,23.5,29.6,11.5,10.8,126.3,317.7,informational,
+lc bandpass filter,90,0,0.02,LOW,,,,40,0,0,,text_processing,en,False,3,27,20.1,24,9.8,9.1,48.6,544.1,transactional,
+sallen-key bandpass filter,90,0,0.01,LOW,,,,80,80,0,sallen key bandpass filter,text_processing,en,False,3,40.1,34.1,39.1,8.5,8.3,33.3,669.2,transactional,
+bandpass filter sallen key,90,1,0.01,LOW,,,,80,80,0,sallen key bandpass filter,text_processing,en,False,4,65.9,51.3,63.9,15.3,14.6,55.9,540.7,transactional,['informational']
+thorlabs bandpass filter,90,0,0.34,MEDIUM,2.03,1.04,2.53,0,0,-18,,text_processing,en,False,3,0.5,0.5,0.5,0.4,0.4,34.5,386.5,transactional,
+lc filter bandpass,90,2,0.02,LOW,,,,40,0,0,lc bandpass filter,text_processing,en,False,3,29.2,22.2,26.2,10.1,9.4,59.5,555.1,informational,"['transactional', 'navigational']"
+bandpass ir filter,90,1,0.87,HIGH,3.19,1.54,4.95,-43,0,-56,ir bandpass filter,text_processing,en,False,3,1.5,1,1.1,0.9,0.7,19.4,354.9,informational,
+bandpass filter formula,70,1,0,LOW,,,,0,0,-43,band pass filter formula,text_processing,en,False,3,21.7,16.7,19.9,7.6,7.1,69.6,453.3,informational,
+bandpass filter ham radio,70,0,0.49,MEDIUM,0.85,0.21,0.53,0,-43,-43,,text_processing,en,False,4,54.9,22.8,23.1,2.4,2.2,51.5,530.6,informational,['transactional']
+tunable bandpass filter,70,0,0.78,HIGH,4.49,2,12.58,-29,-29,-76,,text_processing,en,False,3,0.2,0.2,0.2,0.2,0.2,0.8,551.3,transactional,
+what does a bandpass filter do,70,0,0.02,LOW,1.69,,,200,125,29,,text_processing,en,False,6,49.7,37.6,45.4,25.5,23.7,48,505.5,informational,
+second order bandpass filter,70,9,0,LOW,,,,100,0,0,second-order bandpass filter,text_processing,en,False,4,68.4,51.5,61.6,32.4,30.4,79.1,654.7,informational,['transactional']
+ham radio bandpass filter,70,0,0.71,HIGH,0.85,0.26,1.09,-43,-56,0,bandpass filter ham radio,text_processing,en,False,4,58.1,20.9,23,3.8,3.6,29.9,370.3,informational,['transactional']
+2nd order bandpass filter,70,0,0,LOW,,,,100,0,0,,text_processing,en,False,4,56.6,38.7,50.1,27.7,25.7,52.1,525,transactional,['informational']
+second-order bandpass filter,70,1,0,LOW,,,,50,200,0,,text_processing,en,False,3,55.2,41,49.7,27.4,25.6,48.8,616.2,transactional,
+multiple feedback bandpass filter,50,0,0,LOW,,,,0,33,-20,,text_processing,en,False,4,6.7,3.9,6.5,3.8,3.3,24.9,439.8,informational,
+bandpass filter in python,50,0,0,LOW,,,,50,50,-40,bandpass filter python,text_processing,en,False,4,28.444444444444443,17.444444444444443,24.11111111111111,14.88888888888889,12.333333333333334,63.111111111111114,529,informational,
+bandpass filter transfer function,50,0,0,LOW,,,,100,100,-71,transfer function of bandpass filter,text_processing,en,False,4,0.5,0.5,0.5,0.5,0.3,15.4,451.8,informational,
+bandpass chebyshev filter,50,0,0.02,LOW,,,,300,33,100,chebyshev bandpass filter,text_processing,en,False,3,30.4,24,27.3,12.3,10.5,33.4,470,informational,
+mini circuits bandpass filter,50,0,0.68,HIGH,1.73,1.12,4.19,0,-40,-40,,text_processing,de,True,4,0.4,0.3,0.4,0.4,0.4,16.6,549.5,transactional,
+bandpass filter design,50,0,0.02,LOW,,,,150,67,-29,,text_processing,en,False,3,60.3,44.6,53.5,29.6,27.4,73.2,457.7,transactional,
+bandpass filter meaning,50,0,0,LOW,,,,33,100,-43,,text_processing,en,False,3,58.6,43.4,51.8,28,26.1,63.8,466.3,informational,
+chebyshev bandpass filter,50,0,0.02,LOW,,,,300,33,100,,text_processing,en,False,3,28.8,22.4,25.7,11.5,9.9,24.2,515.2,informational,
+915mhz bandpass filter,50,0,1,HIGH,1.49,0.49,2,-33,0,-33,915 mhz bandpass filter,text_processing,en,False,3,1.2,1.1,1.2,0.6,0.5,31.8,602.2,transactional,
+multi feedback bandpass filter,50,0,0,LOW,,,,0,33,-20,,,en,False,4,6.7,3.9,6.5,3.8,3.3,24.9,421.7,informational,
+915 mhz bandpass filter,50,0,1,HIGH,1.94,0.28,3.52,50,0,-25,,text_processing,en,False,4,1.3,0,0.7,0.7,0.7,19.2,518.8,transactional,
+define bandpass filter,50,0,0,LOW,,,,50,0,0,,,en,False,3,58.1,42.9,51.3,27.6,25.7,56.8,519.8,informational,
+bandpass filter bode plot,50,0,0,LOW,,,,300,300,33,bode plot bandpass filter,text_processing,en,False,4,10.9,7.8,9.2,4.4,3.9,38.7,486.7,informational,['transactional']
+bandpass filter python,40,0,0,LOW,,,,33,100,-43,,text_processing,en,False,3,0.125,0.125,0.125,0.125,0.125,0.25,455.125,informational,['transactional']
+cavity bandpass filter,40,0,0.92,HIGH,6.3,1.27,7.32,-25,-25,0,bandpass cavity filter,text_processing,en,False,3,3.4,3.3,3.4,1.5,1.4,26.2,453,transactional,
+python bandpass filter,40,2,0,LOW,,,,33,100,-43,bandpass filter python,text_processing,en,False,3,22.4,14.5,20.4,12.3,10.1,51.7,622.2,informational,
+audio bandpass filter,40,0,0.12,LOW,,,,25,-55,67,audio band-pass filter,text_processing,en,False,3,66.1,47.7,57.7,28.8,26.4,57.2,515.2,transactional,
+850 nm bandpass filter,40,0,1,HIGH,2.48,1.26,3.12,0,-33,-33,850nm bandpass filter,text_processing,en,False,4,,,,,,,,informational,['navigational']
+narrowband bandpass filter,40,0,0.37,MEDIUM,5.14,,,0,0,-50,,text_processing,en,False,3,62.2,48,54.5,25,22.9,32.8,432.7,transactional,
+bandpass filter audio,40,0,0.12,LOW,,,,25,-55,67,audio band-pass filter,text_processing,en,False,3,65.1,47.4,56.7,28,25.9,51.1,501.3,transactional,['informational']
+frequency response bandpass filter,40,0,0,LOW,,,,0,100,-33,bandpass filter frequency response,text_processing,en,False,4,58.5,43.3,51.7,27.8,25.9,60.1,542.4,informational,
+bandpass filter hf,40,0,1,HIGH,1.45,0.76,2.26,-25,-25,0,hf bandpass filters,text_processing,en,False,3,51,18.8,19.2,1.7,1.5,26.7,412.9,informational,['transactional']
+frequency response of a bandpass filter,40,0,0,LOW,,,,0,100,-33,,text_processing,en,False,6,58.5,43.3,51.7,27.8,25.9,60.1,466.7,informational,
+design a bandpass filter,40,0,0.05,LOW,3.61,,,-50,-67,-75,bandpass filter design,text_processing,en,False,4,12.5,9.4,10.8,6.1,5.4,55.8,516.4,transactional,['informational']
+what is bandpass filter,40,0,0,LOW,,,,100,33,0,what is a bandpass filter,text_processing,en,False,4,58.1,40.2,50.5,27.7,25.8,56.4,500.6,informational,
+narrow band bandpass filter,40,3,0.05,LOW,,,,0,0,-33,,text_processing,en,False,4,58.7,42.2,51.6,25.8,24.1,66.9,517.9,transactional,
+bandpass filter frequency response,40,0,0,LOW,,,,0,100,-33,,text_processing,en,False,4,58,40.1,50.4,27.6,25.7,51.5,505.5,informational,
+bandpass audio filter,40,0,0.12,LOW,,,,25,-55,67,audio band-pass filter,text_processing,en,False,3,0.2,0.2,0.2,0.1,0.1,10.8,424.8,transactional,
+bandpass cavity filter,40,0,0.92,HIGH,6.3,1.27,7.32,-25,-25,0,,text_processing,en,False,3,1.7,1.5,1.6,1.1,0.8,21,378.5,transactional,
+design bandpass filter,40,0,0.01,LOW,1.66,,,200,50,-40,bandpass filter design,text_processing,en,False,3,34.4,25.6,30.6,13.1,12,80,505,transactional,
+hf bandpass filter,40,0,0.55,MEDIUM,,,,-33,-50,-82,hf bandpass filters,text_processing,en,False,3,51,18.8,19.2,1.7,1.5,26.7,443.9,transactional,['informational']
+q factor bandpass filter,30,11,0,LOW,,,,0,-50,0,bandpass filter q factor,text_processing,en,False,4,271.5,176.4,199.8,67.2,61.2,97.3,565.6,transactional,
+gain bandpass filter,30,5,0,LOW,,,,100,100,-50,band pass filter gain,text_processing,en,False,3,57.8,42.3,51.5,28,26.2,64.7,625.5,transactional,
+q factor of bandpass filter,30,11,0,LOW,,,,0,-50,0,bandpass filter q factor,text_processing,en,False,5,271.5,176.4,199.8,67.2,61.2,97.3,583.1,informational,['transactional']
+bandpass filter graph,30,6,0,LOW,,,,100,100,0,band pass filter graph,text_processing,en,False,3,60.3,44.7,53.4,28.6,26.6,75.9,563.9,informational,
+bandpass filter uhf,30,0,0.83,HIGH,4.3,1.19,5.2,0,0,-50,,text_processing,en,False,3,0.1,0.1,0.1,0.1,0.1,16.4,286.9,transactional,['informational']
+bandpass filter cutoff frequency,30,7,0,LOW,,,,100,100,-33,,text_processing,en,False,4,65.1,48.1,58.3,31,29,86.7,514.1,informational,
+how does a bandpass filter work,30,0,0,LOW,,,,33,300,33,,text_processing,en,False,6,60,44.3,53.2,29.3,27.1,66.8,389,informational,
+850nm bandpass filter,30,0,1,HIGH,3.03,1.61,5.32,0,0,-86,,text_processing,en,False,3,5.5,4.1,4.4,1.8,1.5,40.2,402.5,transactional,
+quality factor of bandpass filter,30,3,0,LOW,,,,0,-50,0,bandpass filter quality factor,text_processing,en,False,5,60.2,44.8,54.1,29.6,27.7,63.2,581.9,informational,
+bandpass filter center frequency,30,4,0,LOW,,,,0,0,-50,,text_processing,en,False,4,64.8,47,58,31.5,29.2,70.1,553.5,informational,
+multiple bandpass filter,30,0,0.82,HIGH,,,,0,0,-67,,,en,False,3,3.5,1.7,1.7,1.5,1.4,14,547.5,transactional,['informational']
+how to make bandpass filter,30,0,0,LOW,,,,0,100,0,,text_processing,en,False,5,10.5,7.4,8.8,5.7,5,44.1,518,informational,
+quality factor bandpass filter,30,3,0,LOW,,,,0,-50,0,bandpass filter quality factor,text_processing,en,False,4,58.9,40.2,51.7,28.3,26.5,63.2,579.4,informational,
+bandpass filter op amp,30,0,0.07,LOW,,,,0,0,0,op amp bandpass filter,text_processing,nl,True,4,7.6,4.8,6.5,3.8,3.5,19.1,538.8,transactional,
+first-order bandpass filter,30,1,0,LOW,,,,0,-50,-50,,text_processing,en,False,3,146.1,102.4,130,61.3,55,58.2,530.8,informational,['transactional']
+bandpass filter equations,30,4,0,LOW,,,,100,100,-50,bandpass filter equation,text_processing,en,False,3,15.8,11,14,7.6,6.8,69,548.5,informational,
+2m bandpass filter,30,0,0.79,HIGH,1.97,0.3,2,0,0,-25,,text_processing,en,False,3,10.8,6.6,9.5,3.3,2.8,37.3,483.6,transactional,
+narrow bandpass filter,30,0,0.75,HIGH,22.28,1.4,11.94,300,33,-64,,text_processing,en,False,3,10.5,7.6,7.6,1.9,1.8,28.3,451.6,transactional,
+vhf bandpass filter,30,0,0.89,HIGH,2.13,0.42,4.94,-33,-33,0,,text_processing,en,False,3,22.2,14.1,15.6,4,3.9,22.5,414.7,transactional,
+bandpass filter op-amp,30,0,0,LOW,,,,300,300,0,op amp bandpass filter,text_processing,en,False,3,7.6,4.8,6.5,3.8,3.5,19.1,538.8,transactional,
+fir bandpass filter,30,0,0.1,LOW,,,,100,100,0,bandpass fir filter,text_processing,en,False,3,89,55.7,72.6,33.6,31.4,40.1,590.4,transactional,
+uhf bandpass filter,30,0,0.83,HIGH,4.3,1.19,5.2,0,0,-50,,text_processing,en,False,3,0.1,0.1,0.1,0.1,0.1,9.6,513.7,transactional,['informational']
+notch filter vs bandpass,30,0,0,LOW,,,,0,200,-40,,text_processing,en,False,4,30.3,22.4,27.4,14.6,13.7,56.7,551.8,informational,['transactional']
+center frequency bandpass filter,30,7,0,LOW,,,,0,0,-50,bandpass filter center frequency,text_processing,en,False,4,65.3,47.3,58.5,31.9,29.6,80.2,581.3,transactional,['informational']
+series rlc bandpass filter,30,1,0,LOW,,,,-50,0,-50,,text_processing,en,False,4,74.9,39,60.3,30.4,26.5,56,557.8,informational,
+fir filter bandpass,30,0,0.1,LOW,,,,100,100,0,bandpass fir filter,text_processing,en,False,3,89,55.7,72.6,33.6,31.4,40.1,590.4,transactional,
+bandpass filter q factor,30,10,0,LOW,,,,0,-50,0,,text_processing,en,False,4,264,171.7,193.5,63.6,57.9,94.9,554.9,transactional,['informational']
+bandpass filter digital,30,0,0.03,LOW,,,,200,50,0,digital bandpass filter,text_processing,en,False,3,51.3,38.9,46.5,25.2,23.7,42.4,570.8,transactional,
+cutoff frequency for bandpass filter,30,6,0,LOW,,,,100,100,-33,bandpass filter cutoff frequency,text_processing,en,False,5,43.5,30.5,36.6,19.7,16.6,84.2,508.2,informational,
+cutoff frequency of bandpass filter,30,6,0,LOW,,,,100,100,-33,bandpass filter cutoff frequency,text_processing,en,False,5,43.5,30.5,36.6,19.7,16.6,84.2,508.4,informational,
+bandpass filter vhf,30,0,0.89,HIGH,2.13,0.42,4.94,-33,-33,0,vhf bandpass filter,text_processing,en,False,3,0.8,0.7,0.7,0.4,0.3,18,278.6,transactional,['informational']
+bandpass filter symbol,30,0,0,LOW,,,,0,50,0,,text_processing,en,False,3,58.3,43.1,52.4,28.6,26.8,48.8,466.3,informational,
+cutoff frequency bandpass filter,30,12,0,LOW,,,,100,100,-33,bandpass filter cutoff frequency,text_processing,en,False,4,184.7,129.4,162.7,77.4,68.4,107.3,540.7,informational,['transactional']
+bandpass filter types,30,0,0.01,LOW,,,,50,50,0,types of bandpass filter,text_processing,en,False,3,54,41,49.1,27.6,25.8,68.6,416.3,informational,
+bandpass filter bandwidth,30,1,0.01,LOW,,,,100,100,0,,text_processing,en,False,3,59.8,44.7,53.2,29,27.1,64.4,489.1,informational,
+types of bandpass filter,30,5,0.01,LOW,,,,50,50,0,,text_processing,en,False,4,63.7,47,56,31.6,29.2,84.1,463.4,informational,
+bandpass fir filter,30,0,0.1,LOW,,,,100,100,0,,text_processing,en,False,3,92.8,56.7,74.2,34.6,32.4,40.1,671.7,transactional,
+rlc series bandpass filter,30,0,0,LOW,,,,100,100,100,series rlc bandpass filter,text_processing,en,False,4,70.7,35.2,56,28.6,24.7,60.6,460.6,informational,"['transactional', 'navigational']"
+bandpass filter equation,30,2,0,LOW,,,,100,100,-50,,text_processing,en,False,3,11,7.9,9.3,6,5.3,51.4,617.5,informational,
+bandpass filter schematic,30,7,0,LOW,,,,150,400,150,,text_processing,en,False,3,61.7,46.1,55.1,30.7,28.5,73.8,627,transactional,"['informational', 'navigational']"
+how to make a bandpass filter,30,0,0,LOW,,,,50,50,0,how to make bandpass filter,text_processing,en,False,6,11,7.9,9.3,6,5.3,52.1,566.8,informational,
+bandwidth bandpass filter,30,4,0.03,LOW,,,,0,0,0,bandpass filter bandwidth,text_processing,en,False,3,60.3,45.2,53.7,29.3,27.4,72.4,509.5,informational,['transactional']
+how does bandpass filter work,30,0,0,LOW,,,,33,300,33,how does a bandpass filter work,text_processing,en,False,5,51.8,38.7,46.7,25.7,23.9,43.8,443.2,informational,
+center frequency of bandpass filter,30,3,0,LOW,,,,0,0,-50,bandpass filter center frequency,text_processing,en,False,5,64.8,47,58,31.5,29.2,70.1,516.9,informational,
+bandwidth of bandpass filter,30,4,0.01,LOW,,,,100,100,0,bandpass filter bandwidth,text_processing,en,False,4,60.3,45,53.7,29.4,27.5,74.5,514.4,informational,
+digital bandpass filter,30,0,0.03,LOW,,,,200,50,0,,text_processing,en,False,3,50.9,38.5,46.1,25,23.5,34.5,522.6,transactional,
+uhf filter bandpass,30,0,0.83,HIGH,4.3,1.19,5.2,0,0,-50,,text_processing,en,False,3,0.1,0.1,0.1,0.1,0.1,9.4,403.2,informational,
+bandpass filter quality factor,30,3,0,LOW,,,,0,-50,0,,text_processing,en,False,4,60,44.7,54,29.5,27.6,66.8,546.5,informational,
+multi bandpass filter,30,0,0.82,HIGH,,,,0,0,-67,multi bandpass filters,text_processing,en,False,3,3.3,1.8,1.8,1.6,1.5,16.6,358.2,transactional,
+bandpass digital filter,30,0,0.03,LOW,,,,200,50,0,digital bandpass filter,text_processing,en,False,3,50.8,38.4,46,24.9,23.4,34.4,497.4,transactional,
+nir bandpass filter,20,0,0.07,LOW,,,,0,0,-71,,text_processing,en,False,3,2.4,1.8,2.2,1.6,1.4,25.5,355.7,transactional,['informational']
+scipy bandpass filter,20,4,0,LOW,,,,0,0,-67,,text_processing,en,False,3,153.5,102.4,117.7,40,34.2,80,454.7,informational,
+hf bandpass filter kit,20,,1,HIGH,0.53,,,0,-50,0,,text_processing,en,False,4,,,,,,,,transactional,
+passive bandpass filter circuit,20,,0,LOW,,,,100,-43,300,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass butterworth filter matlab,20,0,0,LOW,,,,100,100,0,butterworth bandpass filter matlab,text_processing,en,False,4,8.1,4.1,7.3,4.5,4.3,20.1,595.2,informational,['transactional']
+matlab butterworth bandpass filter,20,0,0,LOW,,,,100,100,0,butterworth bandpass filter matlab,text_processing,en,False,4,5.3,2.9,4.9,2.6,2.4,12.9,608.2,informational,['transactional']
+l c bandpass filter calculator,20,8,0.02,LOW,0.18,,,100,100,-50,,text_processing,en,False,5,29.4,22.1,27.2,10.4,9.8,107.9,374.1,informational,
+ceramic bandpass filter,20,0,0.16,LOW,2.71,1.34,3.69,33,0,-64,,text_processing,en,False,3,1.7,1.6,1.6,1,0.8,31.2,439.8,transactional,
+tunable rf bandpass filter,20,0,1,HIGH,5.54,2,9.44,0,0,0,,text_processing,en,False,4,0.4,0.4,0.4,0.4,0.1,4.2,374.4,transactional,
+audacity bandpass filter,20,0,0,LOW,,,,0,0,-50,bandpass filter audacity,text_processing,en,False,3,10.8,7.7,9.7,3.9,3.3,48.3,564.9,transactional,
+2 meter bandpass filter,20,18,0.67,HIGH,1.83,,,0,-50,-67,,text_processing,en,False,4,5.2,4.3,5.1,2.9,2.6,33.1,531.7,transactional,
+bandpass saw filter,20,0,0.56,MEDIUM,2.12,1.35,3.4,100,100,100,,text_processing,en,False,3,1.7,1.5,1.5,1,0.9,5.8,465.2,transactional,
+microstrip bandpass filter,20,0,0.14,LOW,,,,300,300,100,,text_processing,en,False,3,8.6,8,8.6,1.6,1.5,15.4,493.8,transactional,
+butterworth filter bandpass matlab,20,0,0,LOW,,,,100,100,0,butterworth bandpass filter matlab,text_processing,en,False,4,7.2,3.4,6.4,3.8,3.6,12.1,595.2,informational,
+coupled line bandpass filter,20,43,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+applications of bandpass filter,20,40,0,LOW,,,,0,0,0,,text_processing,en,False,4,63.4,30.4,42.2,29,25.1,120.7,335,informational,
+bandpass filter kit,20,0,0.93,HIGH,1.67,,,0,0,-94,,text_processing,en,False,3,2.7,2.7,2.7,0.9,0.8,20.1,376.3,transactional,
+parallel bandpass filter,20,,0,LOW,,,,0,0,-50,,,en,False,3,,,,,,,,transactional,
+bandpass filter definition,20,4,0,LOW,,,,0,0,0,band pass filter definition,text_processing,en,False,3,66.4,50.7,58.3,28.6,26,58.6,448.4,informational,
+bandpass filter audacity,20,0,0,LOW,,,,0,0,-50,,text_processing,en,False,3,5.4,3.5,4.8,2.1,1.7,28.2,611.2,transactional,
+bandpass notch filter,20,3,0.01,LOW,,,,0,0,-89,,text_processing,en,False,3,40.2,28.6,35.4,17.1,16.2,66.1,532.8,transactional,
+bandpass and bandstop filter,20,0,0.01,LOW,,,,0,-50,0,band pass and band stop filter,text_processing,en,False,4,,,,,,,,informational,
+matlab bandpass filter butterworth,20,0,0,LOW,,,,100,100,0,butterworth bandpass filter matlab,text_processing,en,False,4,5.3,2.9,4.9,2.6,2.4,12.9,591.9,informational,['transactional']
+bandpass filter diagram,20,52,0,LOW,,,,0,0,0,,text_processing,en,False,3,225.6,159.5,194.9,68.7,83,151.7,475.5,informational,
+20 meter bandpass filter,20,43,0.5,MEDIUM,1.05,0.37,2,200,0,50,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass vs notch filter,20,0,0,LOW,,,,100,100,100,notch filter vs bandpass,text_processing,en,False,4,,,,,,,,informational,"['transactional', 'commercial']"
+lc bandpass filter calculator,20,8,0.02,LOW,0.18,,,100,100,-50,,text_processing,en,False,4,28.5,22,26.5,10.1,9.5,103.5,394.1,informational,
+bandpass vs low pass filter,20,,0,LOW,,,,200,200,50,,text_processing,en,False,5,,,,,,,,informational,['commercial']
+application of bandpass filter,20,40,0,LOW,,,,0,0,0,applications of bandpass filter,text_processing,en,False,4,41.3,25.8,37.2,25.2,23.9,103.9,319.6,informational,['transactional']
+meshtastic bandpass filter,20,0,0.4,MEDIUM,,,,0,0,-50,,,en,False,3,,,,,,,,informational,
+bandpass filter arduino,20,19,0,LOW,,,,0,0,-50,arduino bandpass filter,text_processing,en,False,3,,,,,,,,transactional,
+active bandpass filter circuit,20,0,0,LOW,,,,100,100,-33,,text_processing,en,False,4,8,5.1,6.8,4.1,3.8,35,441.8,informational,['transactional']
+mfb bandpass filter,20,,0,LOW,,,,200,200,50,,,en,False,3,,,,,,,,transactional,
+matlab bandpass butterworth filter,20,0,0,LOW,,,,0,-50,-50,butterworth bandpass filter matlab,text_processing,en,False,4,6.3,3.5,5.9,3.5,3.2,24.6,591.9,informational,['transactional']
+bandpass and band reject filter,20,0,0.01,LOW,,,,0,0,-89,bandpass and band reject filters,text_processing,en,False,5,42.6,28.5,35.3,17.7,16.5,54.2,443.7,informational,
+resonant bandpass filter,20,0,0,LOW,,,,0,0,-50,,text_processing,en,False,3,12.4,6,9.1,5.9,5.2,31.5,579.4,transactional,
+saw filter bandpass,20,0,0.67,HIGH,1.74,,,-50,0,0,bandpass saw filter,text_processing,en,False,3,2.8,2.4,2.4,1.8,1.4,28.8,426.6,transactional,['informational']
+blue bandpass filter,20,0,1,HIGH,2.18,,,0,0,-89,,text_processing,en,False,3,8.8,6.1,6.2,2.6,2.6,28.9,386.3,transactional,
+bandpass filter circuit diagram,20,40,0,LOW,,,,0,0,-50,,text_processing,en,False,4,31.1,19.5,27.1,17.8,16.5,130.7,425.5,informational,
+arduino bandpass filter,20,19,0,LOW,,,,400,400,25,,text_processing,en,False,3,,,,,,,,transactional,
+dual bandpass filter,20,0,0.4,MEDIUM,,1.4,5.27,0,100,-71,,text_processing,en,False,3,1.4,0.8,0.8,0.4,0.4,20,390.2,transactional,
+notch vs bandpass filter,20,0,0,LOW,,,,-50,0,0,notch filter vs bandpass,text_processing,en,False,4,,,,,,,,informational,['transactional']
+bandpass and band-reject filter,20,0,0.01,LOW,,,,0,0,-89,bandpass and band reject filters,text_processing,en,False,4,39.1,26.7,32,15.8,14.5,39.7,460.3,informational,
+butterworth bandpass filter matlab,20,0,0,LOW,,,,100,100,0,,text_processing,en,False,4,7.2,3.4,6.4,3.8,3.6,12.1,595.2,informational,['transactional']
+bandpass vs bandstop filter,20,0,0,LOW,,,,0,0,0,,text_processing,en,False,4,4.7,1.4,1.7,1.7,1.1,19.4,551.5,informational,
+bandpass lc filter calculator,20,15,0.05,LOW,0.65,,,0,0,-67,lc bandpass filter calculator,text_processing,en,False,4,80.2,59,68.4,17.8,17.1,134,414,informational,
+bandpass microstrip filter,20,0,0.14,LOW,,,,300,300,100,microstrip bandpass filter,text_processing,en,False,3,,,,,,,,informational,
+saw bandpass filter,20,0,0.56,MEDIUM,2.12,1.35,3.4,100,100,100,bandpass saw filter,text_processing,en,False,3,5,4.3,4.8,2.8,2.7,18.6,495.3,transactional,
+swir bandpass filter,20,,1,HIGH,5.9,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+lc bandpass filter design calculator,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+uv bandpass filter film,10,40,,,,,,0,-100,-100,,,en,False,4,,,,,,,,transactional,
+third order bandpass filter,10,,,,,,,-100,-100,-100,third-order bandpass filter,text_processing,en,False,4,,,,,,,,informational,['transactional']
+bandpass filter characteristics,10,,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,informational,
+lc bandpass filter equation,10,,,,,,,-100,0,-100,,,en,False,4,,,,,,,,informational,
+bandpass filter octave,10,,,,,,,0,0,-100,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+uvc bandpass filter,10,43,1,HIGH,0.66,,,,,0,,text_processing,en,False,3,,,,,,,,transactional,
+900 mhz bandpass filter,10,,0.8,HIGH,0.48,,,0,0,0,900mhz bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter magnitude response,10,,,,,,,0,-100,-100,magnitude response of bandpass filter,text_processing,en,False,4,,,,,,,,informational,
+active bandpass filter design,10,,0,LOW,,,,0,0,-50,,text_processing,en,False,4,,,,,,,,transactional,['informational']
+oci 2 meter bandpass filter,10,,,,,,,0,-100,0,oci 2-meter bandpass filter,text_processing,en,False,5,,,,,,,,transactional,
+ltcc bandpass filter,10,,0.63,MEDIUM,5.01,,,,0,,,text_processing,en,False,3,,,,,,,,informational,['transactional']
+tunable bandpass filter design,10,45,0.32,LOW,11.69,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+bandpass filter pole-zero plot,10,48,0,LOW,,,,,0,0,,text_processing,en,False,4,,,,,,,,informational,
+tv bandpass filter,10,43,0.43,MEDIUM,,,,,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+narrow bandpass filter circuit,10,,0.07,LOW,,,,,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+high power bandpass filter,10,,1,HIGH,13.06,,,0,0,,,text_processing,en,False,4,,,,,,,,transactional,
+gaussian bandpass filter,10,45,0.04,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+combline bandpass filter,10,,0,LOW,,,,,0,0,,,en,False,3,,,,,,,,transactional,
+rlc bandpass filter bandwidth,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,informational,
+l-band bandpass filter,10,,0.86,HIGH,1.98,0.84,2.8,0,0,-50,l band bandpass filter,text_processing,en,False,3,,,,,,,,transactional,
+sma bandpass filter,10,14,0.76,HIGH,3.15,0.3,4.97,-50,0,0,bandpass filter sma,text_processing,en,False,3,18.6,11.2,15.8,5.3,4.8,28,469.1,transactional,
+butter bandpass filter matlab,10,,0,LOW,,,,,,0,matlab bandpass filter butter,text_processing,en,False,4,,,,,,,,transactional,['informational']
+rc bandpass filter transfer function,10,,0,LOW,,,,0,0,-50,,text_processing,en,False,5,,,,,,,,informational,
+sallen key bandpass filter transfer function,10,,0,LOW,,,,,0,,sallen-key bandpass filter transfer function,text_processing,en,False,6,,,,,,,,informational,
+best bandpass filter,10,,,,,,,-100,-100,0,,text_processing,en,False,3,,,,,,,,commercial,
+bandpass filter applications,10,40,0.05,LOW,,,,0,0,0,applications of bandpass filter,text_processing,en,False,3,139.9,99.2,124.7,72,61.7,128,365.5,informational,
+cascaded bandpass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+semrock bandpass filter,10,1,0.36,MEDIUM,2.85,1.4,3.94,0,-50,0,,text_processing,en,False,3,107.8,83.6,96.7,29.8,27,82.2,290.9,transactional,"['navigational', 'informational']"
+emg bandpass filter,10,,0,LOW,,,,0,0,,,,en,False,3,,,,,,,,transactional,
+bandpass filter tutorial,10,,0,LOW,,,,,,0,,text_processing,en,False,3,,,,,,,,informational,
+10.7mhz bandpass filter,10,,,,,,,0,-100,-100,,text_processing,en,False,3,,,,,,,,transactional,
+hairpin bandpass filter,10,,0.06,LOW,,,,-50,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+4th order bandpass filter calculator,10,,0,LOW,,,,,,0,,,en,False,5,,,,,,,,informational,
+2nd order sallen key bandpass filter,10,48,0,LOW,,,,0,0,0,2nd order sallen-key bandpass filter,text_processing,en,False,6,,,,,,,,transactional,
+flow cytometry bandpass filter,10,0,0.01,LOW,,,,100,100,0,,text_processing,en,False,4,252.1,15.5,15.8,11.9,8.3,61.7,427.1,transactional,['informational']
+sallen-key bandpass filter calculator,10,32,0,LOW,,,,0,0,0,,text_processing,en,False,4,69.8,47.5,66.9,20,17.7,103.7,467.2,informational,
+labview bandpass filter,10,,,,,,,0,-100,-100,,text_processing,en,False,3,,,,,,,,informational,"['navigational', 'transactional']"
+multi hf bandpass filter,10,13,,,,,,-100,0,0,,,en,False,4,,,,,,,,transactional,
+fm broadcast bandpass filter,10,,0.68,HIGH,0.43,,,0,,0,,,en,False,4,,,,,,,,informational,
+order of bandpass filter,10,39,0.01,LOW,,,,0,0,0,bandpass filter order,text_processing,en,False,4,93.6,33.5,88.7,32.8,30.1,138.1999969482422,564.9,informational,
+qrp bandpass filter,10,,0.83,HIGH,0.1,,,-50,0,0,,,en,False,3,,,,,,,,transactional,['informational']
+optical bandpass filter manufacturers,10,,0,LOW,,,,,,0,,,en,False,4,,,,,,,,navigational,['informational']
+optical narrow bandpass filter,10,,0.8,HIGH,,,,0,0,-91,narrow bandpass optical filters,text_processing,en,False,4,,,,,,,,transactional,
+firwin bandpass filter,10,,,,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+gyrator bandpass filter,10,,,,,,,-100,-100,-100,,,en,False,3,,,,,,,,informational,"['transactional', 'commercial']"
+lorch microwave bandpass filter,10,,,,,,,0,-100,0,,,en,False,4,,,,,,,,transactional,
+homebrew bandpass filter,10,19,,,,,,0,-100,0,,,en,False,3,23.2,15.3,20.8,6.8,6.3,59.20000076293945,378.8,transactional,
+5.8 ghz bandpass filter,10,,1,HIGH,,,,-50,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+resonant frequency bandpass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,['informational']
+ku band bandpass filter,10,,,,,,,0,-100,0,,,en,False,4,,,,,,,,transactional,
+5b4agn bandpass filter kit,10,,,,,,,-100,-100,-100,,,en,False,4,,,,,,,,transactional,
+custom bandpass filter,10,,0.88,HIGH,6.18,2.66,7.76,-50,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+ir narrow bandpass filter,10,0,1,HIGH,3.39,,,0,0,-86,,text_processing,en,False,4,4,3.1,3.3,1.7,1.5,19.9,401.8,transactional,
+best uv bandpass filter,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,commercial,['transactional']
+narrow bandpass filter design,10,,,,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,"['commercial', 'transactional']"
+ir bandpass filter for sale,10,,,,,,,-100,0,0,,,en,False,5,,,,,,,,transactional,
+how to build a bandpass filter,10,45,0,LOW,,,,0,0,0,,,en,False,6,,,,,,,,informational,
+chroma bandpass filter,10,,0.36,MEDIUM,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+rtl-sdr bandpass filter,10,,0.29,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,
+impulse response of ideal bandpass filter,10,0,0,LOW,,,,0,0,0,ideal bandpass filter impulse response,text_processing,en,False,6,127.5,2.2,123,6.2,3.9,16.9,550.3,informational,
+bandpass filter amplifier,10,,0.04,LOW,,,,100,100,100,,text_processing,en,False,3,,,,,,,,transactional,
+surface mount bandpass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+fft bandpass filter imagej,10,0,0,LOW,,,,0,0,0,imagej fft bandpass filter,text_processing,en,False,4,,,,,,,,informational,
+difference between bandpass and bandstop filter,10,,0,LOW,,,,,,0,,text_processing,en,False,6,,,,,,,,informational,
+matlab bandpass filter without toolbox,10,,,,,,,0,-100,0,,,en,False,5,,,,,,,,informational,
+ultra-narrow bandpass filter,10,1,0.6,MEDIUM,2.65,,,0,0,0,,text_processing,en,False,3,1.4,1.4,1.4,0.5,0.3,17,374.8,transactional,
+hairpin bandpass filter calculator,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,informational,
+5.8ghz bandpass filter,10,,1,HIGH,,,,-50,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+bandpass iir filter,10,0,0.01,LOW,,,,0,0,0,iir bandpass filter,text_processing,en,False,3,,,,,,,,informational,
+bandpass filter chip,10,,0,LOW,,,,0,0,,,text_processing,en,False,3,,,,,,,,transactional,
+bandpass interference filter,10,,0.43,MEDIUM,1.52,,,0,0,-50,,text_processing,en,False,3,,,,,,,,transactional,
+bandpass filter time domain,10,,0,LOW,,,,,,0,,text_processing,en,False,4,,,,,,,,informational,
+centre frequency of bandpass filter,10,26,,,,,,0,0,0,,,en,False,5,77.2,53.5,71.6,24.7,41.9,90.7,533.3,informational,
+phase response of bandpass filter,10,44,0,LOW,,,,0,0,0,bandpass filter phase response,text_processing,en,False,5,40.2,25.7,35.7,24,22.3,100.9,443.9,informational,
+how to calculate cutoff frequency bandpass filter,10,,,,,,,0,0,-100,how to calculate cutoff frequency of bandpass filter,text_processing,en,False,7,,,,,,,,informational,
+difference between bandpass and band reject filter,10,,,,,,,0,0,-100,,text_processing,en,False,7,,,,,,,,informational,
+1090 bandpass filter,10,,0.83,HIGH,0.44,,,-50,0,0,,keyword_metrics,en,False,3,,,,,,,,transactional,
+tunable bandpass filter ic,10,44,,,,,,-100,-100,-100,,,en,False,4,,,,,,,,transactional,
+chebyshev bandpass filter calculator,10,68,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+air band bandpass filter,10,,0.71,HIGH,0.11,,,0,0,0,airband bandpass filter,text_processing,en,False,4,,,,,,,,transactional,"['informational', 'navigational']"
+bandpass filter design tool,10,,0.29,LOW,0.31,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+iir bandpass filter,10,0,0.01,LOW,,,,0,0,0,,text_processing,en,False,3,24.4,17.4,22.3,8.8,6.8,45.2,383.6,informational,['transactional']
+vhf bandpass cavity filter,10,0,1,HIGH,,2,5.3,0,0,-89,,,en,False,4,20,16.2,16.2,1.8,0.9,20.2,245.2,transactional,
+narrow bandpass filter calculator,10,,,,,,,0,-100,-100,,text_processing,en,False,4,,,,,,,,informational,
+imagej fft bandpass filter,10,0,0,LOW,,,,0,0,0,,text_processing,en,False,4,0.9,0.5,0.7,0.6,0.6,21.4,534.5,transactional,['informational']
+buy bandpass filter,10,,,,,,,-100,-100,-100,bandpass filter buy,text_processing,en,False,3,,,,,,,,transactional,
+bandpass filter vs low pass filter,10,63,0,LOW,,,,0,0,0,bandpass vs low pass filter,text_processing,en,False,6,,,,,,,,informational,
+deliyannis bandpass filter,10,,,,,,,0,0,0,,,en,False,3,,,,,,,,transactional,['navigational']
+quantum theory of a bandpass purcell filter for qubit readout,10,,0,LOW,,,,0,0,0,,,en,False,10,,,,,,,,commercial,
+bandpass filter c code,10,,,,,,,0,-100,-100,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+ideal bandpass filter transfer function,10,0,,,,,,0,0,-100,,text_processing,en,False,5,140.1,8.2,133.2,12.3,9.6,40.6,424.6,informational,
+bandpass filter transfer function derivation,10,,,,,,,0,0,0,,text_processing,en,False,5,,,,,,,,informational,
+what is a bandpass filter used for,10,,0,LOW,,,,-86,0,0,,text_processing,en,False,7,,,,,,,,informational,
+simulink bandpass filter,10,45,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+speech bandpass filter circuit,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,transactional,['informational']
+bandpass filter microstrip,10,,,,,,,0,-100,-100,,,en,False,3,,,,,,,,transactional,
+how to apply bandpass filter in matlab,10,,,,,,,-100,0,-100,,text_processing,en,False,7,,,,,,,,informational,
+chebyshev bandpass filter transfer function,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+labview: bandpass filter,10,,,,,,,0,-100,-100,labview bandpass filter,text_processing,en,False,3,,,,,,,,informational,['navigational']
+lm741 bandpass filter,10,,,,,,,-100,-100,0,,,en,False,3,,,,,,,,transactional,
+midopt bandpass filter,10,,1,HIGH,0.08,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+80m bandpass filter,10,,0.46,MEDIUM,0.39,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+fm bandpass filter design,10,,,,,,,-100,0,0,,,en,False,4,,,,,,,,informational,
+ir bandpass filter 940nm,10,0,,,,,,0,-100,-100,,,lv,True,4,0.9,0.4,0.6,0.5,0.5,2.8,458.4,transactional,
+center frequency of bandpass filter formula,10,,,,,,,0,0,0,,,en,False,6,,,,,,,,informational,
+4th order bandpass filter,10,48,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+voltage controlled bandpass filter,10,44,,,,,,-100,-100,-100,,,en,False,4,,,,,,,,transactional,
+red bandpass filter,10,,1,HIGH,8.88,,,0,0,-86,,text_processing,en,False,3,,,,,,,,transactional,
+sallen key bandpass filter design,10,,0,LOW,,,,0,0,,sallen-key bandpass filter design,text_processing,en,False,5,,,,,,,,informational,
+raspberry pi bandpass filter,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+ir bandpass filter material,10,0,,,,,,0,0,0,,,en,False,4,14.5,12.4,14.1,1.7,1.5,30.1,299.5,transactional,['informational']
+eurorack bandpass filter,10,,1,HIGH,1.58,,,0,0,0,,,en,False,3,,,,,,,,transactional,['navigational']
+simple bandpass filter,10,44,0.05,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+tunable bandpass optical filter,10,34,1,HIGH,,2.96,3.99,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+how to calculate the cutoff frequency of a bandpass filter,10,,,,,,,0,0,-100,how to calculate cutoff frequency of bandpass filter,text_processing,en,False,10,,,,,,,,informational,
+imagej bandpass filter,10,12,0,LOW,,,,0,0,0,,text_processing,en,False,3,2.4,0.7,2.3,1.8,1.1,15.600000381469727,511.3,transactional,
+bandpass filter eeg,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,['transactional']
+butterworth bandpass filter matlab code,10,,,,,,,0,0,-100,,text_processing,en,False,5,,,,,,,,informational,['transactional']
+square wave bandpass filter,10,,,,,,,0,0,0,bandpass filter square wave,text_processing,en,False,4,,,,,,,,transactional,
+2nd order active bandpass filter,10,,0,LOW,,,,0,,0,,text_processing,en,False,5,,,,,,,,transactional,
+am bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+10mhz bandpass filter,10,45,0.62,MEDIUM,1,,,0,0,-50,,text_processing,en,False,3,,,,,,,,transactional,
+lm358 bandpass filter,10,,,,,,,-100,0,-100,,,en,False,3,,,,,,,,transactional,
+coupled line bandpass filter design calculator,10,,,,,,,0,0,0,,,en,False,6,,,,,,,,informational,
+fir bandpass filter matlab code,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,transactional,['informational']
+optical bandpass filter wiki,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,informational,['navigational']
+audio bandpass filter ic,10,,,,,,,0,-100,0,,text_processing,en,False,4,,,,,,,,transactional,['informational']
+bandpass filter frequency range,10,,0,LOW,,,,,,0,band pass filter frequency range,text_processing,en,False,4,,,,,,,,informational,
+bandpass filter ic,10,23,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+rlc bandpass filter calculator,10,8,0,LOW,,,,0,0,-50,,text_processing,en,False,4,56.9,26.9,49.8,18.9,15.7,100,451.1,informational,
+high q bandpass filter,10,0,0.16,LOW,3.14,,,0,0,-50,,text_processing,en,False,4,73.6,53.3,64.8,32.8,29.9,53.6,515.6,transactional,
+uv bandpass filter glass,10,44,0,LOW,,,,,0,0,,,en,False,4,,,,,,,,transactional,
+bandpass filter excel,10,,,,,,,0,-100,-100,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+librosa bandpass filter,10,,0,LOW,,,,,,,,,en,False,3,,,,,,,,transactional,
+microphone bandpass filter,10,,0.14,LOW,,,,,0,0,microphone band pass filter,text_processing,en,False,3,,,,,,,,transactional,
+650 nm bandpass filter,10,,1,HIGH,0.97,0.9,2.73,0,0,0,,keyword_metrics,en,False,4,,,,,,,,commercial,['informational']
+biquad bandpass filter,10,,0.05,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+second order sallen-key bandpass filter,10,,,,,,,-100,0,0,,,en,False,5,,,,,,,,informational,['transactional']
+alluxa bandpass filter,10,34,0.14,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+triple bandpass filter,10,44,0.02,LOW,,,,0,-50,-80,,text_processing,en,False,3,,,,,,,,transactional,
+bandpass filter square wave,10,,,,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+digital bandpass filter calculator,10,,0,LOW,,,,0,,,,,en,False,4,,,,,,,,transactional,['informational']
+88-108 mhz bandpass filter,10,47,,,,,,-100,-100,-100,,text_processing,en,False,4,,,,,,,,commercial,
+mid ir bandpass filter,10,,,,,,,-100,0,-100,,,en,False,4,,,,,,,,transactional,
+microwave bandpass filter,10,0,0.41,MEDIUM,3.42,1.55,5.07,100,100,100,,text_processing,en,False,3,15.5,4.4,14.7,11.5,11.4,39.1,384.5,transactional,
+microstrip interdigital bandpass filter,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+dichroic bandpass filter,10,,0.81,HIGH,3.61,0.52,2.31,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+nanovna bandpass filter,10,,,,,,,-100,0,0,,,en,False,3,,,,,,,,transactional,
+bandpass filter frequency,10,,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,informational,
+bandpass filter python scipy,10,,,,,,,0,-100,-100,python bandpass filter scipy,text_processing,en,False,4,,,,,,,,informational,
+how to make a bandpass filter in matlab,10,,0,LOW,,,,,0,0,,,en,False,8,,,,,,,,informational,
+rlc bandpass filter circuit,10,,0,LOW,,,,,0,,,text_processing,en,False,4,,,,,,,,informational,"['transactional', 'navigational']"
+coaxial bandpass filter,10,,0.75,HIGH,1.75,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+microstrip bandpass filter calculator,10,,0,LOW,,,,0,,0,,,en,False,4,,,,,,,,informational,
+bandpass filter circuit design,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+ideal bandpass filter,10,28,0,LOW,,,,0,0,0,,text_processing,en,False,3,117.2,86.2,106,64,52.6,93.4,621.3,transactional,
+band stop vs bandpass filter,10,49,0,LOW,,,,,0,0,,text_processing,en,False,5,95.625,61.5,85.875,46.125,36.375,192,475.125,informational,
+bandpass filter block diagram,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+bandpass filter java,10,,,,,,,0,0,0,java bandpass filter,text_processing,en,False,3,,,,,,,,transactional,['informational']
+software bandpass filter,10,49,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+bandpass filter transfer function matlab,10,,0,LOW,,,,,,0,,text_processing,en,False,5,,,,,,,,informational,
+parallel coupled line bandpass filter,10,,0,LOW,,,,0,,0,,,en,False,5,,,,,,,,transactional,
+bessel bandpass filter,10,,0.03,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+programmable rf bandpass filter,10,,1,HIGH,6.46,,,0,,0,,,en,False,4,,,,,,,,transactional,
+dunestar bandpass filter,10,,0.12,LOW,3.01,,,0,0,,,text_processing,en,False,3,,,,,,,,commercial,['informational']
+resonant frequency of bandpass filter,10,49,0,LOW,,,,0,0,0,resonant frequency bandpass filter,text_processing,en,False,5,,,,,,,,informational,
+bandpass filter pedal,10,,1,HIGH,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+bandpass filter datasheet,10,,,,,,,0,-100,-100,,text_processing,en,False,3,,,,,,,,informational,['navigational']
+matlab code for bandpass filter,10,23,0,LOW,,,,0,0,0,bandpass filter matlab code,text_processing,en,False,5,60.7,11.7,59.1,13.8,11.8,79.0999984741211,587.1,informational,
+convert low pass filter to bandpass,10,,0,LOW,,,,0,0,-50,,,en,False,6,,,,,,,,informational,['transactional']
+lowpass to bandpass filter transformation,10,49,0,LOW,,,,0,0,0,low pass filter to bandpass filter transformation,text_processing,en,False,5,,,,,,,,informational,
+how to calculate bandpass filter,10,,,,,,,0,0,-100,,,en,False,5,,,,,,,,informational,
+fm bandpass filter,10,0,0.77,HIGH,1.92,,,0,0,-80,,text_processing,en,False,3,1.3,0.3,1.2,1.2,1.2,8.5,303.9,informational,['transactional']
+characteristics of bandpass filter,10,,,,,,,0,0,-100,bandpass filter characteristics,text_processing,en,False,4,,,,,,,,informational,
+dci bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+rlc bandpass filter equations,10,,0,LOW,,,,,,0,,,en,False,4,,,,,,,,informational,
+how to find center frequency of bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,8,,,,,,,,informational,
+band-stop vs bandpass filter,10,49,0,LOW,,,,,0,0,band stop vs bandpass filter,text_processing,en,False,4,,,,,,,,informational,
+matlab fir bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,transactional,['informational']
+bandpass filter price,10,,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,commercial,
+microstrip bandpass filter design calculator,10,,0.04,LOW,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+single bandpass filter,10,,,,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+lc bandpass filter design,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+helium bandpass filter,10,,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+design bandpass filter matlab,10,32,0,LOW,,,,0,0,0,bandpass filter design matlab,text_processing,en,False,4,,,,,,,,transactional,['informational']
+active bandpass filter design calculator,10,,0,LOW,,,,,0,0,,,en,False,5,,,,,,,,informational,
+differential active bandpass filter,10,,,,,,,0,0,-100,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass fir filter design,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,commercial,['informational']
+s-band bandpass filter,10,,1,HIGH,1.43,1.12,3.76,0,0,0,,text_processing,en,False,3,,,,,,,,informational,
+530 30 bandpass filter,10,,,,,,,0,-100,0,,,en,False,4,,,,,,,,transactional,
+reactel bandpass filter,10,,1,HIGH,0.94,,,0,0,0,,,en,False,3,,,,,,,,informational,
+fluorescence bandpass filter,10,50,0.36,MEDIUM,,,,0,0,0,bandpass filter fluorescence,text_processing,en,False,3,,,,,,,,transactional,['informational']
+440 mhz bandpass filter,10,,0.43,MEDIUM,5.78,,,0,0,-50,,text_processing,en,False,4,,,,,,,,transactional,
+saw filter vs bandpass filter,10,,0.06,LOW,,,,100,100,100,,,en,False,5,,,,,,,,informational,
+active vs passive bandpass filter,10,,,,,,,0,-100,-100,,,en,False,5,,,,,,,,informational,
+butter bandpass filter python,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,transactional,['informational']
+low bandpass filter,10,53,0.02,LOW,,,,100,100,100,,text_processing,en,False,3,419.4,259.7,352.5,170.8,153.7,185.2,538,transactional,
+tte bandpass filter,10,,,,,,,-100,-100,-100,,text_processing,en,False,3,,,,,,,,transactional,
+active bandpass filter transfer function,10,47,0,LOW,,,,0,,0,,text_processing,en,False,5,,,,,,,,informational,
+40m bandpass filter,10,,0.06,LOW,,,,0,0,0,40m band pass filter,text_processing,en,False,3,,,,,,,,transactional,
+high frequency bandpass filter,10,,1,HIGH,4.07,,,,,,high frequency band pass filter,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter design software,10,,,,,,,-100,0,0,,,en,False,4,,,,,,,,transactional,['commercial']
+sallen-key bandpass filter design,10,,0,LOW,,,,0,0,,,text_processing,en,False,4,,,,,,,,informational,
+vhf bandpass filter design,10,48,,,,,,0,-100,-100,,,en,False,4,,,,,,,,informational,
+bandpass filter flow cytometry,10,0,0.01,LOW,,,,100,100,0,flow cytometry bandpass filter,text_processing,en,False,4,81.3,69.8,79.4,35,42.8,60.8,503.7,informational,
+butter bandpass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,['navigational']
+audio bandpass filter calculator,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,informational,
+bandpass filter fir,10,0,0,LOW,,,,,,,bandpass fir filter,text_processing,en,False,3,,,,,,,,transactional,
+cutoff frequency formula bandpass filter,10,,,,,,,0,0,0,bandpass filter cutoff frequency formula,text_processing,en,False,5,,,,,,,,informational,
+tunable uhf bandpass filter,10,44,0.29,LOW,,,,0,0,,,text_processing,en,False,4,,,,,,,,transactional,
+tunable hf bandpass filter,10,42,0.52,MEDIUM,2.99,,,0,0,,,,en,False,4,,,,,,,,transactional,
+bandpass filter wiki,10,,0,LOW,,,,,0,0,,,en,False,3,,,,,,,,informational,
+difference between bandpass and band stop filter,10,,,,,,,-100,0,-100,difference between bandpass and bandstop filter,text_processing,en,False,7,,,,,,,,informational,
+bandpass filter theory,10,60,,,,,,0,-100,-100,,text_processing,en,False,3,,,,,,,,informational,
+what is center frequency in bandpass filter,10,,,,,,,0,-100,-100,,,en,False,7,,,,,,,,informational,
+6th order bandpass filter,10,,,,,,,0,-100,-100,,,en,False,4,,,,,,,,transactional,['informational']
+brüel & kjaer bandpass filter,10,,,,,,,-100,0,0,,,en,False,5,,,,,,,,informational,
+elliptic bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,['informational']
+preselector vs bandpass filter,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,transactional,['informational']
+c-band bandpass filter,10,,1,HIGH,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+wideband bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,informational,['transactional']
+bandpass filter calculator op amp,10,52,0,LOW,,,,0,0,0,op-amp bandpass filter calculator,text_processing,en,False,5,,,,,,,,informational,
+l band bandpass filter,10,,0.86,HIGH,1.98,0.84,2.8,0,0,-50,,text_processing,en,False,4,,,,,,,,transactional,
+fiber optic bandpass filter,10,,1,HIGH,2.84,,,0,-50,0,fiber-optic bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+complex bandpass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+tunable bandpass filter rf,10,0,0.76,HIGH,1.41,,,0,0,-86,,text_processing,en,False,4,0.6,0.6,0.6,0.6,0.3,5,402.9,transactional,
+chebyshev bandpass filter matlab,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,informational,
+tubular bandpass filter,10,40,0.36,MEDIUM,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+if bandpass filter,10,0,0.1,LOW,,,,0,0,0,,,en,False,3,10.1,5.8,8.4,5.4,4.6,26.2,445.5,transactional,['informational']
+gain of active bandpass filter,10,,,,,,,0,0,-100,active bandpass filter gain,text_processing,en,False,5,,,,,,,,transactional,
+rf bandpass filter design,10,23,0.22,LOW,,,,100,100,100,,text_processing,en,False,4,212.7,163,201.5,30.9,27.2,71.6,589.8,informational,['transactional']
+coaxial bandpass filter design,10,,0,LOW,,,,,,,,,en,False,4,,,,,,,,transactional,['informational']
+active bandpass filter bode plot,10,,,,,,,0,-100,-100,,,en,False,5,,,,,,,,informational,
+bandpass filter example,10,12,0,LOW,,,,0,0,0,band pass filter example,text_processing,en,False,3,53.3,22.6,49.3,32,29.3,134.3,407.1,informational,
+bandpass filter response,10,62,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,
+non inverting bandpass filter,10,47,0,LOW,,,,0,0,0,non inverting band pass filter,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter matlab example,10,,0,LOW,,,,0,0,0,matlab bandpass filter example,text_processing,en,False,4,,,,,,,,informational,
+k&l bandpass filter,10,,1,HIGH,4.67,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+gm c bandpass filter,10,,0,LOW,,,,0,,0,gm-c bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+visible bandpass filter,10,40,0.41,MEDIUM,5.04,1.5,6.21,100,100,100,,text_processing,en,False,3,,,,,,,,transactional,
+sallen key bandpass filter calculator,10,32,0.01,LOW,,,,100,100,100,sallen-key bandpass filter calculator,text_processing,en,False,5,73.6,51.6,69.7,21.8,19.4,95.3,464.3,informational,
+fir1 bandpass filter matlab,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,transactional,['informational']
+rl bandpass filter,10,,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+gm c bandpass filter design,10,45,0,LOW,,,,,,,gm-c bandpass filter design,text_processing,en,False,5,,,,,,,,commercial,['informational']
+simple bandpass filter in matlab,10,,,,,,,0,-100,-100,simple bandpass filter matlab,text_processing,en,False,5,,,,,,,,informational,
+r bandpass filter,10,,,,,,,-100,-100,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+2.4 ghz bandpass filter,10,,0.91,HIGH,2.5,,,-50,0,-50,2.4ghz bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+murata bandpass filter,10,,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+70 mhz bandpass filter,10,,0.64,MEDIUM,0.61,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+narrow bandpass optical filter,10,,0.8,HIGH,,,,0,0,-91,narrow bandpass optical filters,text_processing,en,False,4,,,,,,,,transactional,
+4th order butterworth bandpass filter,10,,0,LOW,,,,0,0,-50,,,en,False,5,,,,,,,,informational,
+uaf42 bandpass filter,10,45,,,,,,0,0,0,,,en,False,3,,,,,,,,informational,['transactional']
+uhf tv bandpass filter,10,42,,,,,,0,0,-100,,,en,False,4,,,,,,,,transactional,
+bandpass filter coefficients,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,informational,
+dielectric bandpass filter,10,,1,HIGH,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+numpy bandpass filter,10,,0,LOW,,,,,0,0,,,en,False,3,,,,,,,,informational,
+88 108 mhz bandpass filter,10,47,,,,,,-100,-100,-100,88-108 mhz bandpass filter,text_processing,en,False,5,,,,,,,,transactional,
+bandpass filter ghz,10,,,,,,,0,-100,-100,,,en,False,3,,,,,,,,transactional,['informational']
+60 hz bandpass filter,10,,0,LOW,,,,0,0,0,60hz bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+analog bandpass filter design,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+how to design bandpass filter in matlab,10,,,,,,,0,-100,-100,how to design a bandpass filter in matlab,text_processing,en,False,7,,,,,,,,informational,
+image bandpass filter,10,23,0,LOW,,,,0,0,0,bandpass filter image,text_processing,en,False,3,0.8,0.5,0.6,0.4,0.4,3.2,572.8,informational,
+helical bandpass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+6m bandpass filter,10,,0.36,MEDIUM,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+butterworth bandpass filter formula,10,,0,LOW,,,,,0,,,,en,False,4,,,,,,,,informational,
+bandpass filter icon,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,informational,
+coax bandpass filter,10,,0.75,HIGH,1.75,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+tv antenna bandpass filter,10,42,0.86,HIGH,,,,,,0,,,en,False,4,,,,,,,,transactional,
+microwave bandpass filter design,10,,,,,,,0,-100,-100,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+digital bandpass filter arduino,10,,,,,,,0,0,-100,,,en,False,4,,,,,,,,transactional,
+bandpass active filter calculator,10,14,0,LOW,,,,0,0,-50,active bandpass filter calculator,text_processing,en,False,4,144.4,117.2,136.6,24.1,22.9,149.9,401.7,informational,['commercial']
+audio bandpass filter design,10,,,,,,,0,-100,0,,,en,False,4,,,,,,,,informational,['transactional']
+simple bandpass filter matlab,10,,,,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+bandpass filter ecg,10,47,0,LOW,,,,0,0,0,bandpass filter for ecg,text_processing,en,False,3,,,,,,,,informational,
+1 mhz bandpass filter,10,,,,,,,-100,-100,-100,,text_processing,en,False,4,,,,,,,,transactional,
+newport bandpass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,navigational,
+state variable bandpass filter,10,,1,HIGH,,,,,,,,,en,False,4,,,,,,,,informational,"['transactional', 'navigational']"
+940nm bandpass filter,10,,0.9,HIGH,1.53,0.45,2,0,0,0,,keyword_metrics,en,False,3,,,,,,,,transactional,
+elliptic bandpass filter matlab,10,,,,,,,0,0,-100,,,en,False,4,,,,,,,,informational,['transactional']
+polarizing bandpass filter,10,,,,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+quality factor of bandpass filter formula,10,,0,LOW,,,,0,,0,,,en,False,6,,,,,,,,informational,
+octave bandpass filter,10,,,,,,,-100,-100,0,bandpass filter octave,text_processing,en,False,3,,,,,,,,transactional,
+bandpass filter pdf,10,,,,,,,0,-100,-100,band-pass filter pdf,text_processing,en,False,3,,,,,,,,informational,
+sengpielaudio.com bandpass filter,10,,0,LOW,,,,,0,,,text_processing,en,False,3,,,,,,,,navigational,
+how to design a bandpass filter,10,48,0.03,LOW,,,,0,0,0,,text_processing,en,False,6,49.6,29.4,44.9,26.2,25.1,113.0999984741211,466.6,informational,
+50 mhz bandpass filter,10,,0.29,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+adjustable bandpass filter,10,45,0.63,MEDIUM,,,,,0,-89,,text_processing,en,False,3,,,,,,,,transactional,
+impulse response bandpass filter,10,3,0,LOW,,,,0,0,0,,text_processing,en,False,4,111,65.8,87.1,36.6,34.3,63.8,572.8,informational,['transactional']
+bandpass filter simulation,10,,,,,,,0,-100,-100,,text_processing,en,False,3,,,,,,,,informational,
+opposite of bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,informational,
+fft bandpass filter matlab,10,,,,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+sengpielaudio com bandpass filter,10,,0,LOW,,,,,0,,sengpielaudio.com bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+scipy bandpass filter example,10,,,,,,,-100,0,-100,,,en,False,4,,,,,,,,informational,
+bandwidth of bandpass filter formula,10,,,,,,,0,0,0,,text_processing,en,False,5,,,,,,,,informational,
+chebyshev bandpass filter design,10,,0,LOW,,,,0,0,,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+5 ghz bandpass filter,10,,0.76,HIGH,,,,0,0,,,,en,False,4,,,,,,,,transactional,
+custom optical bandpass filter,10,,0.43,MEDIUM,,,,0,,0,custom optical bandpass filters,text_processing,en,False,4,,,,,,,,transactional,
+vhf uhf bandpass filter,10,42,,,,,,-100,-100,-100,,text_processing,en,False,4,,,,,,,,transactional,['informational']
+python bandpass filter scipy,10,,0,LOW,,,,,,,,text_processing,en,False,4,,,,,,,,informational,
+helical bandpass filter calculator,10,,,,,,,-100,0,-100,,,en,False,4,,,,,,,,informational,
+2m bandpass filter circuit,10,,0,LOW,,,,0,,,,,en,False,4,,,,,,,,transactional,
+k&l microwave bandpass filter,10,,0.19,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+what is q in bandpass filter,10,,0,LOW,,,,,,0,,,en,False,6,,,,,,,,informational,
+how to find bandwidth of bandpass filter,10,,,,,,,0,0,-100,,,en,False,7,,,,,,,,informational,
+rf bandpass filter calculator,10,54,0.36,MEDIUM,6.52,,,0,0,0,,text_processing,en,False,4,340.3,281.7,328.8,48.3,44.1,178.6999969482422,415,informational,
+crystal bandpass filter,10,,0.28,LOW,3.97,,,100,100,100,,text_processing,en,False,3,,,,,,,,transactional,
+140 mhz bandpass filter,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+sallen-key filter bandpass,10,0,0,LOW,,,,,,0,sallen key bandpass filter,text_processing,en,False,3,,,,,,,,informational,['transactional']
+10 mhz bandpass filter,10,45,0.99,HIGH,1.88,0.89,2.83,100,100,100,,text_processing,en,False,4,,,,,,,,transactional,
+central frequency of bandpass filter,10,32,,,,,,0,0,-100,,,en,False,5,188.8,65.9,171.6,26.4,38.8,96,597.7,informational,
+tunable optical bandpass filter,10,34,1,HIGH,,2.96,3.99,0,0,0,tunable bandpass optical filter,text_processing,en,False,4,42.2,35.7,39.5,14.1,12.8,100.3,339.9,transactional,
+ultraviolet bandpass transmission lens filter,10,44,,,,,,-100,-100,-100,,,en,False,5,,,,,,,,transactional,
+use of bandpass filter,10,49,0,LOW,,,,0,0,0,bandpass filter uses,text_processing,en,False,4,,,,,,,,informational,
+bandpass filter sma,10,,0.76,HIGH,3.15,0.3,4.97,-50,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+bandpass filter ableton,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+high q bandpass filter calculator,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+ecg bandpass filter matlab,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,informational,
+matlab bandpass filter image,10,48,,,,,,-100,0,-100,matlab image bandpass filter,text_processing,en,False,4,,,,,,,,informational,
+bandpass filter image matlab,10,48,,,,,,-100,0,0,matlab image bandpass filter,text_processing,en,False,4,,,,,,,,informational,
+ais bandpass filter,10,,0.4,MEDIUM,2.92,2,3.28,0,0,0,,,en,False,3,,,,,,,,transactional,
+low pass filter to bandpass filter transformation,10,49,0,LOW,,,,0,0,0,,text_processing,en,False,7,,,,,,,,informational,
+series bandpass filter,10,,0,LOW,,,,0,0,0,series band pass filter,text_processing,en,False,3,,,,,,,,informational,['transactional']
+matlab bandpass filter design,10,32,0,LOW,,,,0,0,0,bandpass filter design matlab,text_processing,en,False,4,31.2,8.4,26.5,11.8,11.2,72.4,609.3,transactional,['informational']
+2nd order bandpass filter calculator,10,,0,LOW,,,,,,,2nd order band pass filter calculator,text_processing,en,False,5,,,,,,,,informational,
+uv transmitting bandpass filter,10,49,0,LOW,,,,,,0,,,en,False,4,,,,,,,,transactional,
+dx engineering bandpass filter,10,,0,LOW,,,,0,,0,,,en,False,4,,,,,,,,informational,"['navigational', 'transactional']"
+20m bandpass filter,10,43,0.77,HIGH,0.52,,,-50,0,0,20m band pass filter,text_processing,en,False,3,,,,,,,,transactional,
+third-order bandpass filter,10,,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+800 mhz bandpass filter,10,,0.5,MEDIUM,,,,0,,0,,text_processing,en,False,4,,,,,,,,transactional,
+uv bandpass filter 365nm,10,,,,,,,0,-100,-100,,,en,False,4,,,,,,,,transactional,
+microstrip bandpass filter design pdf,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+ceramic rf bandpass filter,10,,0.86,HIGH,,,,0,,0,,,en,False,4,,,,,,,,transactional,
+868mhz bandpass filter,10,,1,HIGH,,,,,,0,,text_processing,en,False,3,,,,,,,,transactional,
+bandpass filter output,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+imagej fft/bandpass filter,10,0,0,LOW,,,,0,0,0,imagej fft bandpass filter,text_processing,en,False,3,1.4,0.2,1.4,1.1,1.1,3.1,511.2,transactional,['informational']
+bandpass filter scipy,10,4,0,LOW,,,,0,0,0,scipy bandpass filter,text_processing,en,False,3,,,,,,,,informational,
+1420 mhz bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+microstrip bandpass filter design,10,,0.04,LOW,,,,0,,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+butterworth bandpass filter circuit,10,,0,LOW,,,,,0,0,,,en,False,4,,,,,,,,navigational,['informational']
+coax stub bandpass filter,10,,0,LOW,,,,,0,0,,,en,False,4,,,,,,,,transactional,
+fir bandpass filter design,10,50,0,LOW,,,,0,0,0,bandpass fir filter design,text_processing,en,False,4,,,,,,,,transactional,
+matlab design bandpass filter,10,32,0,LOW,,,,0,0,0,bandpass filter design matlab,text_processing,en,False,4,26,8.1,23.6,10.8,10.2,64.6,592.5,transactional,['informational']
+bandpass filter buy,10,,1,HIGH,,,,,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+sallen-key bandpass filter transfer function,10,,0,LOW,,,,,0,,,text_processing,en,False,5,,,,,,,,informational,
+how bandpass filter works,10,,,,,,,0,0,-100,how bandpass filters work,text_processing,en,False,4,,,,,,,,informational,
+bandpass filter light,10,,0.34,MEDIUM,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+butterworth bandpass filter python,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+uv bandpass filter photography,10,45,1,HIGH,1.29,0.78,1.75,0,0,0,,,en,False,4,,,,,,,,transactional,
+digikey bandpass filter,10,,1,HIGH,,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,['commercial']
+first order bandpass filter transfer function,10,,,,,,,0,0,-100,,text_processing,en,False,6,,,,,,,,informational,
+multiple feedback bandpass filter theory,10,,0,LOW,,,,,,,,,en,False,5,,,,,,,,informational,
+fft bandpass filter,10,49,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+3rd order bandpass filter,10,,0,LOW,,,,,0,0,,text_processing,en,False,4,,,,,,,,transactional,['informational']
+tunable bandpass filter schematic,10,,,,,,,0,0,-100,,,en,False,4,,,,,,,,transactional,['informational']
+gps bandpass filter,10,,0.71,HIGH,0.35,,,0,0,-50,,,en,False,3,,,,,,,,transactional,
+bandpass filter ltspice,10,45,0,LOW,,,,0,0,0,ltspice bandpass filter,text_processing,en,False,3,,,,,,,,informational,"['navigational', 'transactional']"
+bandpass filter cutoff frequency formula,10,,0,LOW,,,,0,0,0,,text_processing,en,False,5,,,,,,,,informational,
+optical bandpass filter design,10,,,,,,,-100,0,-100,,,en,False,4,,,,,,,,transactional,['informational']
+optical tunable bandpass filter,10,34,1,HIGH,,2.96,3.99,0,0,0,tunable bandpass optical filter,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter wikipedia,10,,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,informational,
+apply bandpass filter matlab,10,,0,LOW,,,,,0,,,,en,False,4,,,,,,,,informational,['transactional']
+900mhz bandpass filter,10,,0.8,HIGH,0.48,,,0,0,0,900 mhz band pass filter,text_processing,en,False,3,,,,,,,,transactional,
+x-band bandpass filter,10,45,0.76,HIGH,5.38,2.8,6.5,0,0,0,x band bandpass filter,text_processing,en,False,3,,,,,,,,transactional,
+parallel rlc bandpass filter,10,0,,,,,,-100,-100,-100,,text_processing,en,False,4,10.1,4.7,7.8,7.2,5.2,30.5,594,transactional,
+edmund bandpass filter,10,,0.57,MEDIUM,1.11,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,"['transactional', 'navigational']"
+bandpass filter seismic,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,informational,
+diy 2m bandpass filter,10,,,,,,,-100,-100,-100,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter plot,10,,0,LOW,,,,0,0,,band pass filter plot,text_processing,en,False,3,,,,,,,,informational,
+23cm bandpass filter,10,44,,,,,,0,-100,-100,,,en,False,3,,,,,,,,transactional,
+difference between low pass filter and bandpass filter,10,,,,,,,0,0,0,,,en,False,8,,,,,,,,informational,
+bandpass filter design matlab,10,32,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,['informational']
+2d bandpass filter matlab,10,,0,LOW,,,,,,,bandpass filter matlab 2d,text_processing,en,False,4,,,,,,,,transactional,['informational']
+transfer function of active bandpass filter,10,,0,LOW,,,,0,,0,,text_processing,en,False,6,,,,,,,,informational,
+dsp bandpass filter,10,,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+a bandpass filter attenuates,10,,,,,,,-100,0,0,,,en,False,4,,,,,,,,transactional,['informational']
+wide bandpass filter,10,38,0.29,LOW,,,,,0,0,,text_processing,en,False,3,55.9,28,51.5,33.7,30.4,126.1,367.5,transactional,
+interdigital bandpass filter design,10,0,0,LOW,,,,,0,0,,,en,False,4,3.6,2.7,3.4,1.4,1.3,17.1,362.3,informational,['transactional']
+discrete bandpass filter,10,,0.86,HIGH,,,,,0,0,,,en,False,3,,,,,,,,transactional,
+matlab image bandpass filter,10,48,,,,,,-100,0,-100,,text_processing,en,False,4,,,,,,,,informational,
+bandpass filter hs code,10,,,,,,,-100,-100,0,,,en,False,4,,,,,,,,informational,
+butterworth filter calculator bandpass,10,43,0,LOW,,,,0,0,0,,text_processing,en,False,4,230.9,185.7,223.8,42.7,38.6,149.6999969482422,358,informational,
+bandpass filter circuit op-amp,10,,0,LOW,,,,,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+multiple feedback bandpass filter design,10,,0,LOW,,,,0,,,,,en,False,5,,,,,,,,informational,
+antenna bandpass filter,10,,,,,,,0,-100,-100,,text_processing,en,False,3,,,,,,,,transactional,
+ka-band bandpass filter,10,,,,,,,0,-100,0,,text_processing,en,False,3,,,,,,,,transactional,
+bandpass filter imagej,10,12,0,LOW,,,,0,0,0,imagej bandpass filter,text_processing,en,False,3,,,,,,,,informational,
+siw bandpass filter design,10,,,,,,,0,0,-100,,,en,False,4,,,,,,,,informational,
+bandpass filter signal processing,10,,,,,,,-100,-100,-100,,text_processing,en,False,4,,,,,,,,informational,
+rf bandpass filter circuit,10,,0,LOW,,,,0,,0,,,en,False,4,,,,,,,,transactional,['informational']
+java bandpass filter,10,,,,,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,['transactional']
+432 mhz bandpass filter,10,,0,LOW,,,,0,,0,,,en,False,4,,,,,,,,transactional,
+bandpass filter algorithm,10,,,,,,,-100,-100,-100,,text_processing,en,False,3,,,,,,,,informational,
+airband bandpass filter,10,,0.67,HIGH,1.49,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,['transactional']
+gnuradio bandpass filter,10,,,,,,,0,-100,0,,text_processing,en,False,3,,,,,,,,informational,['transactional']
+digitally tunable rf bandpass filter,10,,,,,,,0,0,-100,,,en,False,5,,,,,,,,transactional,
+multiple feedback bandpass filter transfer function,10,,0,LOW,,,,,0,,,text_processing,en,False,6,,,,,,,,informational,
+python butterworth bandpass filter example,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+4th order active bandpass filter,10,,0,LOW,,,,,,,,,en,False,5,,,,,,,,transactional,['informational']
+switched-capacitor bandpass filter ic,10,,,,,,,0,0,-100,,text_processing,en,False,4,,,,,,,,transactional,['informational']
+bandpass filter designer,10,0,0.09,LOW,,,,0,0,0,bandpass filter design,text_processing,en,False,3,,,,,,,,transactional,
+flightaware 1090 mhz ads-b bandpass sma filter,10,,0.04,LOW,,,,0,,0,flightaware 1090 mhz ads b bandpass sma filter,text_processing,en,False,7,,,,,,,,transactional,
+multiple feedback bandpass filter calculator,10,,0,LOW,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+matlab bandpass filter frequency domain,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+1khz bandpass filter,10,,0,LOW,,,,,,,,,en,False,3,,,,,,,,transactional,
+stub bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+yig tuned bandpass filter,10,39,,,,,,0,0,-100,,,en,False,4,,,,,,,,transactional,
+differential bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+variable bandpass filter circuit,10,44,0,LOW,,,,,0,0,,,en,False,4,,,,,,,,transactional,
+5g bandpass filter,10,,0.21,LOW,,,,0,-50,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+ideal bandpass filter matlab,10,0,,,,,,0,0,0,,text_processing,en,False,4,139.4,9.1,129,10.1,3.5,34.2,671.4,informational,
+40 meter bandpass filter,10,,0.32,LOW,0.79,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter signal,10,,0,LOW,,,,,0,,,,en,False,3,,,,,,,,informational,
+bandpass filter manufacturers,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,navigational,['informational']
+multiple feedback bandpass filter formula,10,,0,LOW,,,,0,0,,,,en,False,5,,,,,,,,informational,
+bandpass filter in image processing,10,14,0,LOW,,,,,,0,bandpass filter image processing,text_processing,en,False,5,,,,,,,,informational,
+bandpass filter fourier transform,10,,0,LOW,,,,,,0,,text_processing,en,False,4,,,,,,,,informational,
+interference bandpass filter,10,0,0.43,MEDIUM,1.52,,,0,0,-50,,text_processing,en,False,3,14.7,6.2,13.4,5,4.4,35,431.6,transactional,
+bandpass filter in frequency domain,10,,0,LOW,,,,,0,0,,,en,False,5,,,,,,,,informational,
+adjustable bandpass filter circuit,10,,,,,,,-100,0,0,,,en,False,4,,,,,,,,transactional,['informational']
+bandpass filter online,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,navigational,"['informational', 'transactional']"
+bandpass filter simulink,10,45,0,LOW,,,,0,0,0,simulink bandpass filter,text_processing,en,False,3,,,,,,,,transactional,['informational']
+diy rf bandpass filter,10,,,,,,,-100,-100,-100,,,en,False,4,,,,,,,,informational,
+pcb bandpass filter,10,,0.81,HIGH,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+uhf bandpass filter design,10,45,,,,,,-100,-100,-100,,,en,False,4,,,,,,,,informational,
+mfb bandpass filter calculator,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+iir bandpass filter matlab,10,0,,,,,,0,0,0,,text_processing,en,False,4,133.1,4.6,127.2,9.5,4.3,16.8,601.7,informational,
+speaker bandpass filter calculator,10,,,,,,,-100,0,-100,,,en,False,4,,,,,,,,informational,
+bandpass filter order,10,39,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,
+digital bandpass filter matlab,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,transactional,['informational']
+mne bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+rtl sdr bandpass filter,10,,0.18,LOW,,,,0,0,0,rtl-sdr bandpass filter,text_processing,en,False,4,,,,,,,,informational,['transactional']
+70 cm bandpass filter,10,44,0,LOW,,,,0,,,,text_processing,en,False,4,,,,,,,,transactional,
+oci 2-meter bandpass filter,10,,,,,,,-100,0,-100,,text_processing,en,False,4,,,,,,,,transactional,
+python bandpass filter example,10,,0,LOW,,,,,0,0,,,en,False,4,,,,,,,,informational,
+rf venue bandpass filter,10,42,1,HIGH,,,,0,0,0,rf venue band-pass filter,text_processing,en,False,4,0.2,0.2,0.2,0.1,0.1,16.8,405.7,informational,"['navigational', 'transactional']"
+80 meter bandpass filter,10,,0.46,MEDIUM,0.39,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter circuit op amp,10,,,,,,,-100,-100,-100,bandpass filter circuit op-amp,text_processing,en,False,5,,,,,,,,transactional,
+op amp bandpass filter design,10,,0,LOW,,,,,,,,,en,False,5,,,,,,,,transactional,
+ecg bandpass filter,10,47,0,LOW,,,,0,0,0,bandpass filter for ecg,text_processing,en,False,3,,,,,,,,transactional,['informational']
+low pass filter vs bandpass filter,10,63,0,LOW,,,,0,0,0,bandpass vs low pass filter,text_processing,en,False,6,,,,,,,,informational,
+532 nm bandpass filter,10,,1,HIGH,3.79,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+arduino audio bandpass filter,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+vcvs bandpass filter,10,47,,,,,,-100,0,-100,,,en,False,3,,,,,,,,transactional,['informational']
+bandpass filter impulse response,10,3,0,LOW,,,,0,0,0,impulse response bandpass filter,text_processing,en,False,4,6.5,3.4,5.5,2.9,2.8,30.5,540.5,informational,
+fir bandpass filter matlab,10,49,0,LOW,,,,0,0,0,bandpass fir filter matlab,text_processing,en,False,4,26,6.1,23.4,9.1,7.3,87.0999984741211,592.4,transactional,['informational']
+s band bandpass filter,10,,1,HIGH,1.43,1.12,3.76,0,0,0,s-band bandpass filter,text_processing,en,False,4,,,,,,,,transactional,['informational']
+coupled line bandpass filter design,10,,,,,,,-100,-100,0,,,en,False,5,,,,,,,,informational,
+frequency response of bandpass filter,10,0,0,LOW,,,,0,0,0,bandpass filter frequency response,text_processing,en,False,5,168.1,127.5,154,58.8,69.2,108.2,436.8,informational,
+bandpass filter code,10,,0,LOW,,,,,,0,band pass filter code,text_processing,en,False,3,,,,,,,,informational,
+bandpass filter resonant frequency,10,,,,,,,0,-100,-100,resonant frequency bandpass filter,text_processing,en,False,4,,,,,,,,informational,
+100 mhz bandpass filter,10,,0.86,HIGH,5.79,,,0,0,,,,en,False,4,,,,,,,,transactional,
+k&l microwave tunable bandpass filter,10,,,,,,,-100,-100,-100,,text_processing,en,False,5,,,,,,,,commercial,
+digitally tunable bandpass filter,10,0,1,HIGH,18.97,,,0,0,-91,,text_processing,en,False,4,,,,,,,,transactional,
+lumped element bandpass filter design,10,,,,,,,0,-100,0,,,en,False,5,,,,,,,,informational,
+analog bandpass filter,10,22,0.1,LOW,,,,-50,-50,-50,,text_processing,en,False,3,,,,,,,,transactional,
+145 mhz bandpass filter,10,,0.43,MEDIUM,7.48,,,,,0,,,en,False,4,,,,,,,,transactional,
+high bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+impulse response of bandpass filter,10,3,0,LOW,,,,0,0,0,impulse response bandpass filter,text_processing,en,False,5,4.8,2.9,4.8,2.3,2.2,23,560.6,informational,
+w3nqn bandpass filter kit,10,,,,,,,0,-100,0,,,en,False,4,,,,,,,,transactional,
+ultra wideband bandpass filter,10,,,,,,,-100,0,-100,,,en,False,4,,,,,,,,informational,['commercial']
+butterworth bandpass filter transfer function,10,,,,,,,-100,-100,-100,,,en,False,5,,,,,,,,informational,
+dual-band bandpass filter,10,,0.2,LOW,2.63,,,100,100,100,,text_processing,en,False,3,,,,,,,,transactional,
+matlab bandpass filter butter,10,,,,,,,0,-100,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+gm-c bandpass filter,10,,0,LOW,,,,0,,0,,text_processing,en,False,3,,,,,,,,informational,
+gm-c bandpass filter design,10,45,0,LOW,,,,,,,,text_processing,en,False,4,,,,,,,,commercial,
+sallen key filter bandpass,10,0,0,LOW,,,,,,0,sallen key bandpass filter,text_processing,en,False,4,,,,,,,,transactional,['informational']
+digital bandpass filter design,10,,,,,,,-100,-100,-100,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter plugin,10,,0,LOW,,,,0,,0,,text_processing,en,False,3,,,,,,,,transactional,
+how to design bandpass filter,10,48,0.03,LOW,,,,0,0,0,how to design a bandpass filter,text_processing,en,False,5,56,30.7,50.4,28.7,26.4,132,479.1,informational,
+bandpass filter 2.4ghz,10,,0.91,HIGH,2.5,,,-50,0,-50,2.4ghz bandpass filter,text_processing,en,False,3,,,,,,,,transactional,
+bandpass filter transfer function equation,10,,,,,,,-100,0,0,,,en,False,5,,,,,,,,informational,
+bandpass filter uses,10,49,0,LOW,,,,,0,,,text_processing,en,False,3,,,,,,,,informational,
+cavity bandpass filter design,10,,0,LOW,,,,,0,0,bandpass cavity filter design,text_processing,en,False,4,,,,,,,,transactional,['informational']
+active bandpass filter design tool,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+obspy filter bandpass,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+bandpass filter image processing,10,,0,LOW,,,,0,0,,,text_processing,en,False,4,,,,,,,,informational,
+multiple feedback bandpass filter equations,10,,0,LOW,,,,,0,0,,,en,False,5,,,,,,,,informational,
+bandpass filter helium,10,,0,LOW,,,,,,,helium bandpass filter,text_processing,en,False,3,,,,,,,,transactional,
+switched capacitor bandpass filter,10,,0,LOW,,,,0,,0,switched-capacitor bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+5g interference rejection bandpass filter,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+bandpass filter application,10,40,0,LOW,,,,0,0,0,applications of bandpass filter,text_processing,en,False,3,39.8,22.4,34.2,22.6,21.3,97.7,316.7,informational,['navigational']
+flightaware 1090 mhz ads b bandpass sma filter,10,,0.05,LOW,,,,,0,0,,text_processing,en,False,8,,,,,,,,transactional,
+switched-capacitor bandpass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+twin t bandpass filter,10,42,,,,,,0,-100,-100,twin-t bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter multisim,10,,,,,,,0,0,0,multisim bandpass filter,text_processing,en,False,3,,,,,,,,informational,
+bandpass filter fft,10,49,,,,,,0,0,0,fft bandpass filter,text_processing,en,False,3,,,,,,,,transactional,
+1296 mhz bandpass filter,10,,0.14,LOW,,,,0,,0,,,en,False,4,,,,,,,,transactional,
+low frequency bandpass filter,10,,0,LOW,,,,0,,0,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter bode,10,,,,,,,-100,-100,0,,text_processing,en,False,3,,,,,,,,transactional,
+what does bandpass filter do,10,2,0,LOW,,,,100,100,100,what does band pass filter do,text_processing,en,False,5,,,,,,,,informational,
+ideal bandpass filter impulse response,10,0,0,LOW,,,,0,0,0,,text_processing,en,False,5,127.5,2.2,123,6.2,3.9,16.9,548.3,informational,
+k&l tunable bandpass filter,10,,1,HIGH,0.21,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+tunable bandpass filter circuit,10,47,,,,,,0,-100,-100,,,en,False,4,,,,,,,,transactional,
+matlab fft bandpass filter,10,,,,,,,0,0,0,fft bandpass filter matlab,text_processing,en,False,4,,,,,,,,transactional,['informational']
+bandpass filter low pass high pass,10,9,,,,,,-100,0,-100,low pass high pass bandpass filter,text_processing,en,False,6,,,,,,,,informational,['transactional']
+passive bandpass filter calculator,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+70cm bandpass filter,10,44,0.55,MEDIUM,2.2,,,0,0,-50,,text_processing,en,False,3,,,,,,,,transactional,
+scipy signal bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,informational,['navigational']
+passband gain of bandpass filter,10,,,,,,,-100,0,-100,,,en,False,5,,,,,,,,transactional,['informational']
+bandpass filter calculator online,10,,0.05,LOW,,,,0,,,,,en,False,4,,,,,,,,informational,
+active butterworth bandpass filter calculator,10,,0,LOW,,,,0,,,,,en,False,5,,,,,,,,informational,
+near infrared bandpass filter,10,,0.86,HIGH,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+excel bandpass filter,10,,,,,,,0,0,0,bandpass filter excel,text_processing,en,False,3,,,,,,,,informational,['transactional']
+rlc bandpass filter cutoff frequency,10,,,,,,,0,-100,-100,,text_processing,en,False,5,,,,,,,,informational,
+eeg bandpass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+python butterworth bandpass filter,10,,,,,,,0,-100,-100,butterworth bandpass filter python,text_processing,en,False,4,,,,,,,,informational,
+spatial bandpass filter,10,,,,,,,-100,0,0,,,en,False,3,,,,,,,,transactional,
+active bandpass filter schematic,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,informational,['transactional']
+switched capacitor bandpass filter ic,10,,0.43,MEDIUM,,,,,,,switched-capacitor bandpass filter ic,text_processing,en,False,5,,,,,,,,transactional,['informational']
+interdigital bandpass filter,10,0,0.26,LOW,,,,-50,0,0,,text_processing,en,False,3,3.6,2.7,3.4,1.4,1.3,17.1,287.2,transactional,
+dual band bandpass filter,10,,0.2,LOW,2.63,,,100,100,100,dual-band bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter phase response,10,44,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+passive bandpass filter design,10,,0,LOW,,,,,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter rlc circuit,10,17,,,,,,-100,-100,0,rlc bandpass filter circuit,text_processing,en,False,4,,,,,,,,navigational,['informational']
+bandpass filter fm,10,0,0.77,HIGH,1.92,,,0,0,-80,fm bandpass filter,text_processing,en,False,3,,,,,,,,transactional,['informational']
+2nd order bandpass filter transfer function,10,,,,,,,-100,-100,-100,,text_processing,en,False,6,,,,,,,,informational,
+obspy bandpass filter,10,,0,LOW,,,,0,0,0,obspy filter bandpass,text_processing,en,False,3,,,,,,,,transactional,
+hf bandpass filter design,10,,,,,,,0,0,0,hf bandpass filters design,text_processing,en,False,4,,,,,,,,informational,['transactional']
+28 ghz bandpass filter,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+how to calculate center frequency of bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,8,,,,,,,,informational,
+optical fiber bandpass filter,10,,1,HIGH,3.01,,,-50,0,0,fiber-optic bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+how to find cutoff frequency of bandpass filter,10,,0,LOW,,,,0,,,,,en,False,8,,,,,,,,informational,
+multisim bandpass filter,10,,,,,,,-100,0,-100,,text_processing,en,False,3,,,,,,,,informational,
+bandpass filter image,10,23,0,LOW,,,,0,0,0,,text_processing,en,False,3,15.7,12.2,13.8,9.4,8.6,61.7,638.5,informational,
+bandpass filter bank,10,,,,,,,0,0,-100,,,en,False,3,,,,,,,,navigational,['informational']
+waveguide bandpass filter design,10,47,0,LOW,,,,,-50,0,,,en,False,4,,,,,,,,informational,
+programmable bandpass filter,10,0,0.47,MEDIUM,,,,0,0,-91,,text_processing,en,False,3,0,0,0,0,0,4.2,435.7,transactional,
+design a bandpass filter in matlab,10,32,0,LOW,,,,0,0,0,bandpass filter design matlab,text_processing,en,False,6,,,,,,,,informational,
+passive bandpass filter transfer function,10,,0,LOW,,,,,,0,,text_processing,en,False,5,,,,,,,,informational,
+2d bandpass filter,10,,,,,,,0,-100,-100,,,en,False,3,,,,,,,,transactional,
+matlab bandpass filter example,10,,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+fiber bandpass filter,10,,0.44,MEDIUM,2.05,,,0,-50,0,,text_processing,en,False,3,,,,,,,,transactional,
+active bandpass filter gain,10,,0,LOW,,,,,,,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter phase shift,10,49,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+bandpass filter parameters,10,,,,,,,-100,0,-100,,text_processing,en,False,3,,,,,,,,informational,
+second order bandpass filter transfer function,10,48,0,LOW,,,,0,0,0,second-order bandpass filter transfer function,text_processing,en,False,6,,,,,,,,informational,
+linear variable bandpass filter,10,44,0.63,MEDIUM,4.15,1.32,3.2,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+second order active bandpass filter,10,,0,LOW,,,,0,,0,,text_processing,en,False,5,,,,,,,,transactional,['informational']
+2.4ghz bandpass filter,10,,0.91,HIGH,2.5,,,-50,0,-50,,text_processing,en,False,3,,,,,,,,transactional,
+q bandpass filter,10,44,0,LOW,,,,0,0,0,bandpass filter q,text_processing,en,False,3,,,,,,,,transactional,
+bandpass fir filter matlab,10,49,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+audio bandpass filter circuit,10,,0,LOW,,,,,0,0,,text_processing,en,False,4,,,,,,,,transactional,['informational']
+bandpass filter calculator rc,10,7,0,LOW,,,,0,0,0,rc bandpass filter calculator,text_processing,en,False,4,,,,,,,,informational,
+programmable bandpass filter ic,10,,0.5,MEDIUM,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+op amp bandpass filter calculator,10,50,0,LOW,,,,0,0,-50,op-amp bandpass filter calculator,text_processing,en,False,5,,,,,,,,informational,['commercial']
+coupled resonator bandpass filter design,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+yig bandpass filter,10,40,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+butterworth bandpass filter calculator,10,43,0,LOW,,,,0,0,0,butterworth filter calculator bandpass,text_processing,en,False,4,221.3,180.1,213.4,35.9,31.9,141.60000610351562,396.7,informational,
+transfer function of bandpass filter in s domain,10,,,,,,,0,0,0,,,en,False,8,,,,,,,,informational,
+inverting bandpass filter circuit,10,43,,,,,,0,0,0,inverting band pass filter circuit,text_processing,en,False,4,10.2,3.8,9,6.1,5.8,22.5,526.9,transactional,
+gaussian bandpass filter matlab,10,,,,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,['informational']
+butterworth bandpass filter design,10,44,0,LOW,,,,0,0,0,,text_processing,en,False,4,57.5,20.3,54.7,26.4,22.5,127.19999694824219,539.2,informational,['navigational']
+bandpass filter eq,10,,0,LOW,,,,0,0,0,band-pass filter eq,text_processing,ca,True,3,,,,,,,,commercial,['informational']
+second order butterworth bandpass filter,10,52,0,LOW,,,,,0,,,text_processing,en,False,5,,,,,,,,informational,['transactional']
+chebyshev bandpass filter design example,10,,0,LOW,,,,0,,0,,,en,False,5,,,,,,,,informational,
+stepped impedance bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,transactional,['informational']
+137 mhz bandpass filter,10,,0.79,HIGH,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+ads bandpass filter,10,,,,,,,0,0,0,bandpass filter ads,text_processing,en,False,3,,,,,,,,transactional,
+365 nm bandpass filter,10,,1,HIGH,0.96,0.62,2.35,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+2nd order sallen-key bandpass filter,10,48,0,LOW,,,,0,0,0,,text_processing,en,False,5,,,,,,,,informational,['transactional']
+bandpass filter matlab code,10,23,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+magnitude response of bandpass filter,10,,0,LOW,,,,,,,,text_processing,en,False,5,,,,,,,,informational,
+2m bandpass filter kit,10,42,1,HIGH,1.9,,,,0,0,,,en,False,4,,,,,,,,transactional,
+matlab bandpass filter code,10,23,0,LOW,,,,0,0,0,bandpass filter matlab code,text_processing,en,False,4,,,,,,,,informational,
+bandpass filter function,10,59,0,LOW,,,,,0,0,,text_processing,en,False,3,,,,,,,,informational,
+firpm bandpass filter,10,,,,,,,0,0,0,,,en,False,3,,,,,,,,transactional,['informational']
+8th order bandpass filter,10,,,,,,,0,-100,-100,,,en,False,4,,,,,,,,informational,['transactional']
+bandpass filter vst,10,,0,LOW,,,,0,,0,,text_processing,de,True,3,,,,,,,,transactional,
+quality factor for bandpass filter,10,3,,,,,,0,0,-100,bandpass filter quality factor,text_processing,en,False,5,,,,,,,,informational,
+bandpass filter q,10,44,0,LOW,,,,0,0,0,,text_processing,en,False,3,127.66666666666667,90.22222222222223,116.11111111111111,70.33333333333333,58.22222222222222,183.55555725097656,485.55555555555554,transactional,
+bandpass filter specifications,10,,0,LOW,,,,0,,0,,,en,False,3,,,,,,,,informational,
+bandpass filter pole zero plot,10,48,0,LOW,,,,,0,0,bandpass filter pole-zero plot,text_processing,en,False,5,,,,,,,,informational,
+lc bandpass filter circuit,10,,,,,,,0,-100,-100,,,en,False,4,,,,,,,,informational,"['transactional', 'navigational']"
+bandpass filter explained,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,
+bandpass filter fluorescence,10,50,0.36,MEDIUM,,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,['transactional']
+bandpass filter insertion loss,10,,0.02,LOW,,,,,,,,,en,False,4,,,,,,,,informational,['navigational']
+flightaware bandpass filter,10,,0.2,LOW,,,,0,0,0,,,en,False,3,,,,,,,,informational,['navigational']
+bandpass filter matlab simulink,10,,,,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+bandpass filter labview,10,,,,,,,-100,-100,-100,labview bandpass filter,text_processing,en,False,3,,,,,,,,informational,['navigational']
+144mhz bandpass filter,10,,1,HIGH,,,,0,0,0,bandpass filter 144mhz,text_processing,en,False,3,,,,,,,,transactional,
+lark engineering bandpass filter,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,navigational,['informational']
+rf bandpass filter manufacturers,10,,,,,,,-100,0,0,,,en,False,4,,,,,,,,informational,['navigational']
+zwb2 uv bandpass filter,10,48,1,HIGH,0.37,,,0,0,,,,en,False,4,,,,,,,,transactional,
+ir bandpass filter 850nm,10,0,0,LOW,,,,0,0,0,,,lv,True,4,3.2,1.8,2.2,1.6,1.6,14.5,374,transactional,
+ltspice bandpass filter,10,45,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,informational,"['transactional', 'navigational']"
+rlc bandpass filter design,10,,,,,,,0,0,-100,,text_processing,en,False,4,,,,,,,,informational,
+bandpass filter gain,10,0,0,LOW,,,,0,,0,band pass filter gain,text_processing,en,False,3,109,74.3,99.5,60.7,53,99.8,531.9,informational,"['transactional', 'navigational']"
+x band bandpass filter,10,,1,HIGH,5.6,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+how to design a bandpass filter in matlab,10,,,,,,,0,0,0,,text_processing,en,False,8,,,,,,,,informational,
+ice 419b bandpass filter,10,0,0,LOW,,,,0,,0,,,en,False,4,6,3.1,3.4,1.3,1.1,10.5,311.2,transactional,
+fiber-optic bandpass filter,10,,1,HIGH,3.01,,,-50,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+433mhz bandpass filter,10,,0.26,LOW,0.65,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+bandpass filter in c,10,,,,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+active bandpass filter calculator,10,14,0,LOW,,,,0,0,-50,,text_processing,en,False,4,146,115.2,138.9,26.7,25.1,127.2,349.1,informational,
+multiple feedback bandpass filter analysis,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+144 mhz bandpass filter,10,,0.2,LOW,3.09,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+parallel lc bandpass filter,10,,0,LOW,,,,,,0,,,en,False,4,,,,,,,,transactional,
+hf bandpass filter pcb,10,,,,,,,0,0,-100,,,en,False,4,,,,,,,,transactional,
+bandpass voice filter,10,,,,,,,0,0,-100,,,en,False,3,,,,,,,,transactional,['informational']
+bandpass filter design calculator,10,,0.05,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+ultra narrow bandpass filter,10,1,1,HIGH,2.35,1.83,5.67,0,0,0,ultra-narrow bandpass filter,text_processing,en,False,4,1.4,1.4,1.4,0.5,0.3,17,349,transactional,
+w3nqn bandpass filter,10,39,0.86,HIGH,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+bandpass lowpass highpass filter,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,transactional,['informational']
+433 mhz bandpass filter,10,,0.26,LOW,0.65,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter op amp calculator,10,,0,LOW,,,,0,0,0,op-amp bandpass filter calculator,text_processing,en,False,5,,,,,,,,informational,
+gnuradio bandpass filter example,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,informational,
+iir bandpass filter matlab code,10,0,,,,,,0,0,0,,,en,False,5,131.6,3.3,127.1,8.9,4.8,13.1,617.5,informational,
+741 bandpass filter,10,,,,,,,0,0,0,,,en,False,3,,,,,,,,transactional,['informational']
+infinite gain multiple feedback bandpass filter,10,0,0,LOW,,,,,0,,,,en,False,6,18.7,7,17.3,10.6,8.6,39.6,581.6,informational,
+6 meter bandpass filter,10,,0.36,MEDIUM,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+diy bandpass filter,10,33,0,LOW,,,,0,0,0,,text_processing,en,False,3,20.1,13,18.9,10.6,10,97.80000305175781,387.7,transactional,
+op amp bandpass filter transfer function,10,,0,LOW,,,,,,0,,,en,False,6,,,,,,,,informational,['navigational']
+matlab bandpass filter example code,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+hairpin bandpass filter design,10,,0,LOW,,,,,0,0,,text_processing,en,False,4,,,,,,,,informational,['transactional']
+scipy butterworth bandpass filter,10,,,,,,,0,0,0,scipy butterworth filter bandpass,text_processing,en,False,4,,,,,,,,informational,['navigational']
+1090 mhz bandpass filter,10,,0.43,MEDIUM,0.5,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+uhf tunable bandpass filter,10,44,0.29,LOW,,,,0,0,,tunable uhf bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+bandpass filter r,10,,,,,,,0,0,-100,r bandpass filter,text_processing,en,False,3,,,,,,,,informational,['transactional']
+ka band bandpass filter,10,,,,,,,0,-100,0,ka-band bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+arduino bandpass filter code,10,,,,,,,0,0,-100,,,en,False,4,,,,,,,,informational,['transactional']
+tensorflow bandpass filter,10,,,,,,,0,0,0,,,en,False,3,,,,,,,,informational,
+variable bandpass filter,10,13,0.33,LOW,2.84,,,100,100,100,,text_processing,en,False,3,10,6.1,8.3,5.2,5,51.6,403.1,transactional,
+2nd order butterworth bandpass filter,10,,0,LOW,,,,,0,0,,,en,False,5,,,,,,,,transactional,['informational']
+sdr bandpass filter,10,,0.49,MEDIUM,1.07,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,['informational']
+waveguide bandpass filter,10,42,1,HIGH,10.14,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+unity gain bandpass filter,10,47,,,,,,0,0,-100,,,en,False,4,,,,,,,,transactional,['navigational']
+5b4agn bandpass filter,10,,,,,,,-100,0,0,,,en,False,3,,,,,,,,transactional,
+bandpass filter pspice,10,,,,,,,0,0,-100,,,en,False,3,,,,,,,,informational,['transactional']
+rc bandpass filter calculator,10,7,0,LOW,,,,0,0,0,,text_processing,en,False,4,36,19.4,31.8,14.6,13.4,103.7,374.6,informational,
+how to calculate cutoff frequency of bandpass filter,10,,,,,,,0,0,-100,,text_processing,en,False,8,,,,,,,,informational,
+bandpass filter microwave,10,0,0.93,HIGH,28.41,2,31.48,0,0,-67,microwave bandpass filter,text_processing,en,False,3,,,,,,,,informational,['transactional']
+10 ghz bandpass filter,10,,1,HIGH,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+edge coupled bandpass filter,10,,0,LOW,,,,0,,0,,,en,False,4,,,,,,,,transactional,['informational']
+kolari uv bandpass filter,10,,0.78,HIGH,,,,0,-50,,,,en,False,4,,,,,,,,informational,
+60hz bandpass filter,10,,0.12,LOW,2.72,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+second order bandpass filter calculator,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+wifi bandpass filter,10,47,0,LOW,,,,,0,0,,,en,False,3,,,,,,,,transactional,
+second-order bandpass filter transfer function,10,,0,LOW,,,,0,0,0,,text_processing,en,False,5,,,,,,,,informational,
+bandpass filter for ecg,10,47,0,LOW,,,,0,0,0,,text_processing,en,False,4,,,,,,,,transactional,['informational']
+long pass vs bandpass filter,10,,0,LOW,,,,0,0,0,,,en,False,5,,,,,,,,informational,
+custom rf bandpass filter,10,,1,HIGH,4.84,,,,0,0,,text_processing,en,False,4,,,,,,,,transactional,
+op-amp bandpass filter calculator,10,,0,LOW,,,,0,0,-50,,text_processing,en,False,4,,,,,,,,informational,
+smd bandpass filter,10,,,,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+hf bandpass filter calculator,10,,,,,,,0,0,0,,text_processing,en,False,4,,,,,,,,informational,
+high order bandpass filter,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,commercial,
+low pass filter and bandpass filter,10,,,,,,,0,0,0,low pass filter and band pass filter,text_processing,en,False,6,,,,,,,,informational,['transactional']
+bandpass butterworth filter design,10,44,0,LOW,,,,0,0,0,butterworth bandpass filter design,text_processing,en,False,4,,,,,,,,commercial,
+2 4ghz bandpass filter,10,,0.91,HIGH,2.5,,,-50,0,-50,2.4ghz bandpass filter,text_processing,en,False,4,,,,,,,,transactional,
+bandpass butterworth filter calculator,10,43,0,LOW,,,,0,0,0,butterworth filter calculator bandpass,text_processing,en,False,4,,,,,,,,informational,
+rlc bandpass filter transfer function,10,,,,,,,-100,-100,-100,,text_processing,en,False,5,,,,,,,,informational,
+twin-t bandpass filter,10,,0,LOW,,,,,,0,,text_processing,en,False,3,,,,,,,,transactional,
+rf tunable bandpass filter,10,0,0.76,HIGH,1.41,,,0,0,-86,tunable bandpass filter rf,text_processing,en,False,4,0,0,0,0,0,4.2,380.9,transactional,
+fir bandpass filter python,10,,,,,,,-100,-100,-100,bandpass fir filter python,text_processing,en,False,4,,,,,,,,transactional,['informational']
+bandpass filter 144mhz,10,,0.95,HIGH,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+lora bandpass filter,10,,1,HIGH,0.59,,,0,0,-50,,,en,False,3,,,,,,,,informational,['commercial']
+function of bandpass filter,10,59,0,LOW,,,,,0,0,bandpass filter function,text_processing,en,False,4,52.1,35.2,46.9,32.8,30.9,147.60000610351562,461.5,informational,
+square wave through bandpass filter,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,informational,['transactional']
+laser bandpass filter,10,,0,LOW,,,,0,0,0,,text_processing,en,False,3,,,,,,,,transactional,
+multiband bandpass filter,10,,0.75,HIGH,,,,,0,,,,en,False,3,,,,,,,,transactional,

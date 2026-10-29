@@ -1,0 +1,5 @@
+﻿keyword,search_volume,keyword_difficulty,competition,competition_level,cpc,low_top_of_page_bid,high_top_of_page_bid,search_volume_trend_monthly,search_volume_trend_quarterly,search_volume_trend_yearly,core_keyword,synonym_clustering_algorithm,detected_language,is_another_language,words_count,backlinks,dofollow,referring_pages,referring_domains,referring_main_domains,rank,main_domain_rank,main_intent,foreign_intent
+antenna test equipment,70,0,0.32,LOW,,1.84,4.51,200,200,-82,antenna testing equipment,text_processing,en,False,3,23.4,21.6,22.9,7.4,4.7,86.8,451.1,transactional,
+rf antenna test equipment,10,42,0.86,HIGH,5.13,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+antenna sweep test equipment,10,,,,,,,-100,0,-100,,,en,False,4,,,,,,,,transactional,
+gps antenna test equipment,10,,,,,,,-100,0,0,,,en,False,4,,,,,,,,transactional,

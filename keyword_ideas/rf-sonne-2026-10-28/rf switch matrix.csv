@@ -1,0 +1,8 @@
+﻿keyword,search_volume,keyword_difficulty,competition,competition_level,cpc,low_top_of_page_bid,high_top_of_page_bid,search_volume_trend_monthly,search_volume_trend_quarterly,search_volume_trend_yearly,core_keyword,synonym_clustering_algorithm,detected_language,is_another_language,words_count,backlinks,dofollow,referring_pages,referring_domains,referring_main_domains,rank,main_domain_rank,main_intent,foreign_intent
+rf matrix switch,170,0,0.54,MEDIUM,6.99,2.3,6,0,0,-35,rf switch matrix,text_processing,en,False,3,10.9,9.8,9.9,2.3,1.5,50.1,568.4,transactional,
+rf switch matrix,170,0,0.52,MEDIUM,8.65,2.89,7.05,0,-21,-21,,text_processing,en,False,3,6.9,6.1,6.2,1.6,1,26.4,518.9,transactional,
+matrix rf switch,170,0,0.54,MEDIUM,6.99,2.3,6,0,0,-35,rf switch matrix,text_processing,en,False,3,25.2,20.3,20.8,3.3,3.1,88.9,413.9,transactional,
+rf switch matrix manufacturers,10,,,,,,,-100,0,0,,,en,False,4,,,,,,,,navigational,
+rf switch matrix design,10,,0.33,MEDIUM,7.44,,,0,,,,,en,False,4,,,,,,,,informational,
+solid state rf switch matrix,10,,0.07,LOW,,,,0,,,,,en,False,5,,,,,,,,transactional,
+keysight rf switch matrix,10,,0.48,MEDIUM,,2.21,8.26,0,0,-50,,text_processing,en,False,4,,,,,,,,navigational,['transactional']

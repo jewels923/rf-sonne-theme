@@ -1,0 +1,23 @@
+﻿keyword,search_volume,keyword_difficulty,competition,competition_level,cpc,low_top_of_page_bid,high_top_of_page_bid,search_volume_trend_monthly,search_volume_trend_quarterly,search_volume_trend_yearly,core_keyword,synonym_clustering_algorithm,detected_language,is_another_language,words_count,backlinks,dofollow,referring_pages,referring_domains,referring_main_domains,rank,main_domain_rank,main_intent,foreign_intent
+low pim,20,0,0.37,MEDIUM,,1.23,4.03,50,200,0,,,hu,True,2,5.2,3.4,4.1,2.9,2.6,27.5,414.4,informational,
+low pim definition,10,,,,,,,0,0,-100,,,en,False,3,,,,,,,,informational,
+low pim attenuators,10,,,,,,,-100,-100,-100,low pim attenuator,text_processing,fr,True,3,,,,,,,,transactional,
+low pim cable,10,22,0.81,HIGH,6.09,2.69,4.28,0,0,-50,low pim cables,text_processing,es,True,3,,,,,,,,transactional,
+low pim termination,10,,0.62,MEDIUM,,,,0,0,0,,,en,False,3,,,,,,,,informational,
+low pim attenuator,10,,,,,,,-100,-100,-100,,text_processing,fr,True,3,,,,,,,,transactional,
+pim van vliet high returns from low risk,10,,,,,,,0,0,0,,text_processing,nl,True,8,,,,,,,,commercial,['informational']
+pim van vliet low volatility,10,,,,,,,0,-100,-100,,text_processing,nl,True,5,,,,,,,,informational,
+low pim switch,10,,,,,,,-100,-100,0,,,en,False,3,,,,,,,,transactional,
+low pim connector,10,,0.5,MEDIUM,,,,0,0,-50,,text_processing,en,False,3,,,,,,,,transactional,
+low pim cables,10,22,0.54,MEDIUM,5.81,,,0,0,-50,,text_processing,es,True,3,16.3,13.1,13.8,2.6,2,70.1,377.2,transactional,
+low pim load,10,,0.06,LOW,,,,0,0,0,,,zh-TW,True,3,,,,,,,,informational,['transactional']
+low-pim adapters,10,,0.62,MEDIUM,,,,0,0,0,,text_processing,en,False,2,,,,,,,,commercial,
+low pim connectors,10,,0.5,MEDIUM,,,,0,0,-50,low pim connector,text_processing,en,False,3,,,,,,,,transactional,
+low pim cable assemblies,10,,0.36,MEDIUM,5.86,,,0,,0,,,en,False,4,,,,,,,,transactional,['commercial']
+high returns from low risk pim van vliet,10,,,,,,,0,0,0,pim van vliet high returns from low risk,text_processing,nl,True,8,,,,,,,,commercial,['informational']
+what is low pim,10,42,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,informational,
+low pim antenna,10,,0.14,LOW,,,,0,0,0,,,en,False,3,,,,,,,,transactional,
+pim van vliet low-volatility,10,,,,,,,-100,-100,0,pim van vliet low volatility,text_processing,nl,True,4,,,,,,,,informational,
+low pim meaning,10,,0,LOW,,,,0,0,0,,,en,False,3,,,,,,,,informational,
+low pim rf connectors,10,,0.67,HIGH,,,,0,,0,,,en,False,4,,,,,,,,commercial,
+low pim adapter,10,,0.62,MEDIUM,,,,0,0,0,low-pim adapters,text_processing,en,False,3,,,,,,,,transactional,

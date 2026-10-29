@@ -1,0 +1,161 @@
+﻿keyword,search_volume,keyword_difficulty,competition,competition_level,cpc,low_top_of_page_bid,high_top_of_page_bid,search_volume_trend_monthly,search_volume_trend_quarterly,search_volume_trend_yearly,core_keyword,synonym_clustering_algorithm,detected_language,is_another_language,words_count,backlinks,dofollow,referring_pages,referring_domains,referring_main_domains,rank,main_domain_rank,main_intent,foreign_intent
+precision sheet metal,1300,0,0.22,LOW,5.84,1.76,7.09,0,22,-18,,text_processing,es,True,3,20,10.5,15.7,11,9.9,69.2,196.8,navigational,
+pinnacle precision sheet metal,880,0,0.02,LOW,,1.51,7.47,-18,-18,-18,,keyword_metrics,es,True,4,5.8,2.9,3,1.6,1.5,24.2,660.9,navigational,['transactional']
+precision sheet metal fabrication,480,0,0.15,LOW,7.5,2.08,7.18,0,0,-63,precision sheet metal fabricator,text_processing,en,False,4,5.8,2.8,5.5,4.7,4,21.3,334.3,commercial,
+precision sheet metal fab,480,0,0.15,LOW,7.5,2.08,7.18,0,0,-63,precision sheet metal fabrication,keyword_metrics,en,False,4,449.6,147.5,218.7,27.5,25.3,107.1,135.2,navigational,['transactional']
+all fab precision sheet metal,320,0,0.02,LOW,,,,0,0,-33,,text_processing,en,False,5,3.5,1.5,3,2,1.9,29.9,606.3,transactional,['navigational']
+cortec precision sheet metal,320,0,0.03,LOW,4.99,2.82,17.99,23,50,129,,text_processing,es,True,4,4.9,3.5,4.9,4.7,4.2,9.3,529.5,transactional,['navigational']
+us precision sheet metal inc,170,0,0.05,LOW,1.8,0.83,3.16,21,0,-19,,,en,False,5,10.9,6.5,9.4,6.7,6.3,49.7,542.5,navigational,
+us precision sheet metal,170,0,0.05,LOW,1.8,0.83,3.16,21,0,-19,,,en,False,4,9.9,5.8,8.4,6.1,5.7,21.5,536,navigational,
+nevada precision sheet metal,170,0,0.03,LOW,,,,21,0,0,,,en,False,4,0.7,0.2,0.7,0.6,0.5,10.9,696,navigational,['commercial']
+sbs precision sheet metal,140,0,0.01,LOW,,,,-33,-46,27,,,en,False,4,11.4,5.9,11.4,5.6,5,8.8,493.5,navigational,
+precision sheet metal shop inc,140,0,0.03,LOW,,,,-35,0,22,,,en,False,5,6.8,3.4,6.8,5.6,5,31.7,388.6,navigational,
+anoroc precision sheet metal,90,9,0.03,LOW,,,,-22,-22,0,,,gl,True,4,27.5,15.8,19.8,11.9,11.1,115,345.2,transactional,['navigational']
+anoroc precision sheet metal inc,90,10,0.03,LOW,,,,-22,-22,0,,,en,False,5,38.8,21.6,31.1,20.9,19.2,119.4,343.6,navigational,
+precision sheet metal inc,90,7,0.04,LOW,,,,-18,0,-18,,,en,False,4,51.3,35.3,45.4,14.2,13.2,96.5,449,navigational,
+acu precision sheet metal,90,23,0.05,LOW,45.94,,,22,22,57,,,es,True,4,1389.2,691.7,703.7,11.3,10.3,166,455.7,navigational,['transactional']
+encore industries precision sheet metal,70,0,0.02,LOW,,,,-36,0,125,,,en,False,5,8.3,5.4,8.1,6.6,6.4,23.5,584.4,navigational,
+element 13 precision sheet metal,50,0,0.03,LOW,,,,-29,-44,0,,,en,False,5,142.3,88.5,102.9,17.4,16.3,79.5,473,navigational,['transactional']
+fabtech precision sheet metal llc,50,0,0.02,LOW,,,,40,40,40,,,en,False,5,6.6,4.6,6.6,4.7,4.6,20.5,598.1,navigational,
+precision sheet metal manufacturer,50,0,0.19,LOW,23.26,3.2,5.62,0,0,0,precision sheet metal manufacturing,text_processing,en,False,4,0.3,0.1,0.3,0.3,0.3,1.5,465.8,navigational,
+precision sheet metal company,50,0,0.02,LOW,,,,75,40,40,,,en,False,4,15.5,9.4,15,12.8,11.6,69.3,148.1,navigational,
+precision sheet metal llc,50,0,0.05,LOW,,,,0,40,0,,,en,False,4,12.3,8.4,12.3,11,9.8,14.5,317.2,navigational,
+sixnel precision sheet metal inc,50,0,0.03,LOW,1.09,,,-36,133,250,,,en,False,5,79.8,69.6,79.1,72.7,70.4,54,301.6,navigational,
+precision sheet metal manufacturing,50,2,0.19,LOW,23.26,3.2,5.62,0,0,0,,text_processing,en,False,4,33.8,19.4,30.6,21.4,19.5,72.9,198.9,commercial,
+amerson precision sheet metal,50,0,0.04,LOW,,,,29,29,29,,,es,True,4,3.3,1.2,2.8,1.5,1.3,14.9,653.9,navigational,['transactional']
+jpb precision sheet metal,50,0,0.02,LOW,,,,25,25,0,,,en,False,4,7.3,5.2,7.1,6.3,5.7,5.8,545.2,navigational,
+precision sheet metal supply,50,0,0.06,LOW,,,,67,67,67,,,en,False,4,8.1,4.4,7.7,6.7,5.9,23.5,373.9,transactional,['navigational']
+ramar precision sheet metal,40,0,0.02,LOW,,,,33,0,0,,,en,False,4,1.1,0.5,1,0.6,0.6,28.2,504.3,navigational,['transactional']
+precision sheet metal products,40,2,0.24,LOW,6.43,2.17,6.08,-20,0,0,,keyword_metrics,en,False,4,71.3,50.2,64.5,47.7,46.3,93.2,255.2,navigational,['transactional']
+precision sheet metal fabrication near me,40,0,0.44,MEDIUM,4.49,2.86,9.15,67,25,-84,,text_processing,en,False,6,2.9,0.9,2.5,1.5,1.5,16.1,245.5,commercial,"['navigational', 'transactional']"
+ranco precision sheet metal,40,0,0,LOW,,,,100,-20,100,,,en,False,4,0.1,0.1,0.1,0.1,0.1,3.2,528.3,navigational,['transactional']
+precision sheet metal shop,30,0,0.1,LOW,,,,-50,-33,0,,text_processing,en,False,4,8.7,5.1,6.7,2.9,2.9,27.4,511.4,navigational,
+tedco precision sheet metal,30,0,0.27,LOW,31.23,2.51,19.32,-33,100,-33,,,it,True,4,0.4,0.3,0.4,0.3,0.2,16.6,372.6,navigational,['transactional']
+precision sheet metal shops,30,0,0.1,LOW,,,,-50,-33,0,precision sheet metal shop,text_processing,en,False,4,20.5,18.1,20.4,19.7,19.3,11.5,343.3,navigational,
+precision sheet metal near me,30,0,0.25,LOW,,,,-33,0,-50,,,en,False,5,1.4,0.7,1.4,0.8,0.8,7,354.4,transactional,['navigational']
+precision sheet metal fabrication llc,30,0,0.16,LOW,7.1,,,-50,-33,-60,,keyword_metrics,en,False,5,91.9,65.6,81.8,7.3,6.5,32.7,393.9,navigational,
+eagle precision sheet metal,30,0,0,LOW,,,,-50,-67,-50,,,en,False,4,170.4,162.3,170.1,11.2,9.9,62.1,446.1,navigational,['transactional']
+howell precision sheet metal,20,,0,LOW,,,,100,0,-60,,,en,False,4,,,,,,,,navigational,
+pinnacle precision sheet metal photos,20,0,0,LOW,,,,-50,-67,0,,,en,False,5,5.9,2.6,2.7,1.3,1.2,21.2,559.8,navigational,
+riverside precision sheet metal,20,0,0.05,LOW,,,,50,0,50,,,en,False,4,6,3.2,4.9,4,3.8,12,479.8,navigational,
+precision machining sheet metal,20,0,0.12,LOW,4.05,2.07,6.47,0,50,200,,,en,False,4,61.2,28,49,21.3,19.8,72.6,369.9,commercial,
+precision sheet metal forming,20,0,0.37,MEDIUM,10.12,,,0,0,-50,,,en,False,4,2,2,2,0.5,0.5,14.1,345.5,commercial,['transactional']
+custom precision sheet metal,20,30,0.3,LOW,19.8,,,0,0,0,,text_processing,en,False,4,963.1,518.8,557.8,39.8,39,135.2,247.9,transactional,['commercial']
+fabtech precision sheet metal,20,,0.14,LOW,,,,-75,0,0,,,en,False,4,,,,,,,,navigational,
+cortec precision sheet metal inc,20,0,0.05,LOW,30.53,,,100,100,0,,,es,True,5,3.5,1.8,3.4,3,3,12.2,561.7,navigational,
+precision sheet metal fab seattle,20,0,0.45,MEDIUM,6.55,1.73,6.49,100,0,-94,,keyword_metrics,en,False,5,22.6,19.9,22.3,21.1,20.6,16.1,373.8,navigational,
+precision sheet metal fabricators seattle,20,0,0.45,MEDIUM,6.55,1.73,6.49,100,0,-94,,keyword_metrics,en,False,5,43.5,29.8,40.5,27.2,25.8,61.1,406.1,navigational,['commercial']
+arizona precision sheet metal,20,13,0.08,LOW,4.13,,,-75,-67,-50,,text_processing,en,False,4,1.4,0.3,0.3,0.3,0.3,0.8,472.9,navigational,"['commercial', 'transactional']"
+all fab precision sheet metal inc,20,,0.15,LOW,13.11,,,0,0,100,,text_processing,en,False,6,,,,,,,,navigational,
+cortec precision sheet metal jobs,10,,,,,,,0,0,0,,,es,True,5,,,,,,,,navigational,
+pkd precision sheet metal ltd,10,,0,LOW,,,,0,,,,,en,False,5,,,,,,,,navigational,
+pinnacle precision sheet metal anaheim ca,10,,,,,,,0,-100,-100,,,en,False,6,,,,,,,,navigational,
+precision sheet metal pa,10,,0.32,LOW,,,,0,0,,,,en,False,4,,,,,,,,navigational,
+sentry precision sheet metal,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+precision sheet metal works pvt ltd unit 2,10,,,,,,,0,-100,0,,,en,False,8,,,,,,,,navigational,
+precision custom sheet metal,10,30,,,,,,-100,-100,-100,custom precision sheet metal,text_processing,en,False,4,,,,,,,,transactional,['navigational']
+l & t precision sheet metal,10,0,0,LOW,,,,0,0,0,,,uk,True,6,7.4,5.5,6.9,4.8,4.7,57.5,502.3,navigational,
+nevada precision sheet metal inc,10,,0,LOW,,,,0,0,,,,en,False,5,,,,,,,,navigational,
+precision sheet metal stamping,10,,0.17,LOW,,,,0,0,0,,,en,False,4,,,,,,,,commercial,
+platinum precision sheet metal,10,,0,LOW,,,,,0,0,,,en,False,4,,,,,,,,transactional,
+kmf precision sheet metal ltd,10,,,,,,,-100,0,0,,,en,False,5,,,,,,,,navigational,
+precision sheet metal rockwall,10,48,0.23,LOW,,1.74,6.63,0,0,0,,,es,True,4,,,,,,,,transactional,
+precision sheet metal products rockwall tx,10,,0.07,LOW,,,,0,0,0,,,en,False,6,,,,,,,,navigational,
+kmf precision sheet metal,10,,0.18,LOW,3.83,,,0,0,0,,,en,False,4,,,,,,,,navigational,
+jmj precision sheet metal ltd,10,,0,LOW,,,,0,0,,,,es,True,5,,,,,,,,navigational,
+sheet metal precision,10,0,0.18,LOW,,,,0,0,0,precision sheet metal,text_processing,es,True,3,,,,,,,,transactional,"['navigational', 'commercial']"
+campbell precision sheet metal,10,,,,,,,-100,0,0,,,en,False,4,,,,,,,,navigational,
+precision sheet metal jobs,10,0,0,LOW,,,,0,0,0,,,en,False,4,0.5,0.3,0.3,0.3,0.2,12.8,498.4,navigational,
+precision sheet metal fabrication jobs,10,0,0,LOW,,,,0,0,-94,,,en,False,5,0.1,0.1,0.1,0.1,0.1,1.4,622.8,navigational,['commercial']
+precision sheet metal fabricator near me,10,0,,,,,,0,-100,-100,precision sheet metal fabrication near me,text_processing,en,False,6,,,,,,,,navigational,"['commercial', 'transactional']"
+precision sheet metal inc greenville sc,10,,0,LOW,,,,0,0,,,,en,False,6,,,,,,,,navigational,
+precision sheet metal belle plaine ia,10,,,,,,,0,0,-100,,,en,False,6,,,,,,,,navigational,
+precision sheet metal gloversville ny,10,,0,LOW,,,,0,,,,,en,False,5,,,,,,,,navigational,['transactional']
+precision machining sheet metal tucson az,10,,0.11,LOW,,,,0,0,0,,,hu,True,6,,,,,,,,commercial,
+2000 precision sheet metal,10,,0,LOW,,,,100,100,100,,,es,True,4,,,,,,,,transactional,
+atlantic precision sheet metal,10,,0,LOW,,,,,0,0,,,en,False,4,,,,,,,,navigational,['transactional']
+atlas precision sheet metal,10,,,,,,,-100,-100,-100,,,es,True,4,,,,,,,,navigational,['transactional']
+harris precision sheet metal,10,0,0,LOW,,,,0,,,,,en,False,4,,,,,,,,navigational,
+precision sheet metal components,10,,0,LOW,,,,0,0,-91,,,en,False,4,,,,,,,,navigational,['transactional']
+press brake technology a guide to precision sheet metal bending,10,,,,,,,-100,-100,-100,,,en,False,10,,,,,,,,informational,
+precision sheet-metal greenville sc,10,,0.26,LOW,4.75,1.45,5.4,0,0,0,,text_processing,en,False,4,,,,,,,,navigational,
+precision sheet metal san jose,10,42,,,,,,-100,-100,0,,,es,True,5,,,,,,,,navigational,['commercial']
+sbs precision sheet metal melbourne fl,10,,,,,,,-100,0,-100,,,en,False,6,,,,,,,,navigational,
+all precision sheet metal works,10,0,0.02,LOW,,,,0,0,0,,,en,False,5,11.1,9.5,11.1,3.5,3.4,26.5,619.6,navigational,
+cortec precision sheet metal san jose ca,10,,0,LOW,,,,0,0,0,,,es,True,7,,,,,,,,commercial,
+aero precision sheet metal,10,,0,LOW,,,,0,0,0,,,es,True,4,,,,,,,,transactional,['navigational']
+precision sheet metal rockwall tx,10,,0.24,LOW,4.67,,,0,0,0,,,es,True,5,,,,,,,,transactional,"['navigational', 'commercial']"
+sheet metal precision limited,10,,0,LOW,,,,,0,0,,,en,False,4,,,,,,,,navigational,
+ros precision sheet metal ltd,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,navigational,
+precision sheet metal work,10,40,0,LOW,,,,,0,0,,text_processing,en,False,4,,,,,,,,commercial,
+kmf precision sheet metal sro,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,navigational,
+d&b precision sheet metal,10,14,0.06,LOW,,,,0,-50,0,,text_processing,uk,True,4,15.7,7.7,8.3,1.4,1.2,22.3,525.1,navigational,
+precision sheet metal fabrication manufacturer,10,2,0.14,LOW,,,,0,0,-97,,,en,False,5,904,699.6,709.5,27.4,26.5,95.4,240,commercial,['navigational']
+precision sheet metal stamping parts,10,,,,,,,-100,-100,-100,,,en,False,5,,,,,,,,navigational,"['transactional', 'commercial']"
+teparay precision sheet metal ltd,10,,,,,,,-100,0,0,,,en,False,5,,,,,,,,navigational,
+precision sheet metal calhoun ga,10,45,0.14,LOW,,,,0,0,0,,keyword_metrics,en,False,5,,,,,,,,commercial,['navigational']
+precision sheet metal engineering,10,,,,,,,-100,0,0,precise sheet metal engineering,text_processing,en,False,4,,,,,,,,navigational,
+rapier precision sheet metal ltd,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,navigational,
+valley precision sheet metal,10,,0.2,LOW,,,,-50,-50,,,,en,False,4,,,,,,,,navigational,
+kmf precision sheet metal limited,10,,,,,,,0,-100,-100,,,en,False,5,,,,,,,,navigational,
+all precision sheet metal works inc,10,,,,,,,-100,-100,0,,,en,False,6,,,,,,,,navigational,
+cortec precision sheet metal san jose,10,,,,,,,-100,-100,-100,,,es,True,6,,,,,,,,commercial,"['navigational', 'transactional']"
+precision sheet metal components manufacturers,10,,0,LOW,,,,0,0,0,,,en,False,5,,,,,,,,commercial,
+all precision sheet metal,10,0,0,LOW,,,,0,0,0,,,en,False,4,8.9,6.9,8.5,2.1,2,30.4,677.7,transactional,['commercial']
+gws precision sheet metal ltd,10,,,,,,,0,0,0,,,en,False,5,,,,,,,,navigational,
+precision sheet metal fabrication texas,10,,0.86,HIGH,,,,0,,-94,,,en,False,5,,,,,,,,commercial,
+american precision sheet metal,10,,0.2,LOW,,,,0,0,0,,,en,False,4,,,,,,,,navigational,['transactional']
+precision sheet metal seattle,10,16,0.43,MEDIUM,15.48,2.59,10.35,0,0,0,,,en,False,4,1.7,0.2,1.4,0.8,0.8,25.8,433.7,navigational,
+tri precision sheet metal,10,0,0.23,LOW,,,,0,0,0,,text_processing,es,True,4,5.5,3.4,5.5,4.7,4.4,19.7,599.3,transactional,['navigational']
+precision sheet metal cutting,10,,0.49,MEDIUM,,,,-50,0,0,,text_processing,en,False,4,,,,,,,,commercial,
+ros precision sheet metal,10,,,,,,,0,-100,0,,,es,True,4,,,,,,,,navigational,['transactional']
+atlas precision sheet metal solutions,10,,0.07,LOW,,,,0,0,-50,,,en,False,5,,,,,,,,navigational,
+pinnacle precision sheet metal corp,10,,0,LOW,,,,0,0,-50,,,en,False,5,,,,,,,,navigational,
+precision sheet metal bending,10,,0.33,MEDIUM,2.77,,,0,-50,-91,,,en,False,4,,,,,,,,commercial,['informational']
+precision sheet metal san diego,10,,,,,,,-100,0,-100,,,es,True,5,,,,,,,,navigational,['commercial']
+boers & co precision sheet metal,10,,0,LOW,,,,,0,,,,en,False,6,,,,,,,,navigational,
+arizona precision sheet metal inc,10,,0.11,LOW,,,,0,0,0,,,en,False,5,,,,,,,,navigational,
+smb precision sheet metal,10,,,,,,,0,0,0,,,az,True,4,,,,,,,,navigational,
+anaheim precision sheet metal mfg,10,,0,LOW,,,,0,,,,,de,True,5,,,,,,,,navigational,
+precision sheet metal works p ltd,10,,,,,,,0,0,0,,,en,False,6,,,,,,,,navigational,
+precision sheet metal fabrication parts,10,,,,,,,-100,0,-100,,,en,False,5,,,,,,,,navigational,"['commercial', 'transactional']"
+sentry precision sheet metal ltd,10,,0,LOW,,,,0,0,0,,,en,False,5,,,,,,,,navigational,
+precision sheet metal norfolk va,10,,0,LOW,,,,-50,0,0,,keyword_metrics,ca,True,5,,,,,,,,navigational,
+precision sheet metal enclosures,10,,,,,,,0,-100,-100,,,en,False,4,,,,,,,,transactional,['navigational']
+precision sheet metal portland oregon,10,,0.8,HIGH,20.56,,,,0,,,text_processing,en,False,5,,,,,,,,commercial,
+precision sheet metal solutions,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,navigational,
+asl precision sheet metal,10,,0.71,HIGH,,,,0,,,,,en,False,4,,,,,,,,navigational,['transactional']
+precision sheet metal herndon va,10,,0.43,MEDIUM,6.71,,,,0,0,,,ca,True,5,,,,,,,,navigational,
+foshan bo jun precision sheet metal co ltd,10,,0.86,HIGH,,,,0,0,,,,en,False,8,,,,,,,,navigational,
+precision sheet metal de mexico,10,,0.18,LOW,,,,0,0,0,,,fr,True,5,,,,,,,,transactional,"['commercial', 'navigational']"
+precision sheet metal works pvt ltd,10,,,,,,,0,-100,0,,,en,False,6,,,,,,,,navigational,
+precision sheet metal uk,10,,,,,,,0,0,0,,,en,False,4,,,,,,,,navigational,
+precision sheet metal works,10,40,0.11,LOW,,,,,,0,precision sheet metal work,text_processing,en,False,4,,,,,,,,navigational,['transactional']
+precision sheet metal louisville ky,10,45,0.19,LOW,,,,0,-50,0,,,en,False,5,,,,,,,,navigational,"['commercial', 'transactional']"
+precision sheet metal greenville sc,10,,0,LOW,,,,0,0,0,precision sheet-metal greenville sc,text_processing,en,False,5,,,,,,,,commercial,['navigational']
+superior precision sheet metal corp,10,,0.01,LOW,,,,0,0,0,,,es,True,5,,,,,,,,navigational,
+precision sheet metal industries,10,,0,LOW,,,,0,0,0,,,en,False,4,,,,,,,,navigational,
+asl precision sheet metal ltd,10,,0,LOW,,,,0,0,0,,,en,False,5,,,,,,,,navigational,
+precision sheet metal edwardsburg mi,10,,0.57,MEDIUM,,,,0,,0,,,es,True,5,,,,,,,,navigational,"['commercial', 'transactional']"
+mass precision sheet metal,10,,0.01,LOW,,,,0,0,0,,,en,False,4,,,,,,,,transactional,
+a&j precision sheet metal,10,48,0.29,LOW,,,,0,0,0,,,es,True,4,,,,,,,,navigational,
+enterprise uk precision sheet metal ltd,10,,,,,,,-100,0,0,,,en,False,6,,,,,,,,navigational,
+custom precision sheet metal inc,10,,0.14,LOW,,,,,0,0,,,en,False,5,,,,,,,,navigational,
+arben precision sheet metal,10,,0,LOW,,,,0,,,,,es,True,4,,,,,,,,navigational,['informational']
+oem precision sheet metal,10,,0.06,LOW,,,,0,0,0,,,en,False,4,,,,,,,,transactional,['navigational']
+precision sheet metal workers,10,,,,,,,-100,0,-100,,,en,False,4,,,,,,,,commercial,['transactional']
+teparay precision sheet metal,10,,0,LOW,,,,,0,,,,es,True,4,,,,,,,,navigational,
+precision sheet metal colorado,10,,0,LOW,,,,100,,,,text_processing,en,False,4,,,,,,,,transactional,"['navigational', 'commercial']"
+jl precision sheet metal,10,,0.12,LOW,,,,0,0,0,,keyword_metrics,en,False,4,,,,,,,,navigational,['transactional']
+precision sheet metal parts,10,45,0.04,LOW,,,,0,0,0,,keyword_metrics,en,False,4,,,,,,,,transactional,
+all precision sheet metal works photos,10,,0,LOW,,,,0,0,0,,,en,False,6,,,,,,,,navigational,['informational']
+precision sheet metal fab seattle wa,10,,,,,,,0,-100,0,,,en,False,6,,,,,,,,navigational,['commercial']
+gp precision sheet metal fabrication inc,10,,,,,,,0,0,-100,,,en,False,6,,,,,,,,navigational,
+precision sheet metal products inc,10,23,0.33,MEDIUM,,,,0,0,0,,,en,False,5,83,11.1,50.8,12.6,11.5,88.6,317.5,navigational,
+nevada precision sheet metal las vegas nv,10,,0,LOW,,,,0,,,,,es,True,7,,,,,,,,navigational,
+precision sheet metal mexicali,10,,0,LOW,,,,0,0,,,,es,True,4,,,,,,,,commercial,"['navigational', 'transactional']"
+camberley precision sheet metal,10,,,,,,,0,0,0,,,es,True,4,,,,,,,,navigational,
+cortec precision sheet metal austin texas,10,,,,,,,0,0,0,,,es,True,6,,,,,,,,commercial,
+amerson precision sheet metal inc,10,,0,LOW,,,,0,0,0,,,en,False,5,,,,,,,,navigational,
+tad precision sheet metal engineers ltd,10,,0,LOW,,,,,,,,,en,False,6,,,,,,,,navigational,
+just precision sheet metal ltd,10,,0,LOW,,,,,0,,,,en,False,5,,,,,,,,navigational,

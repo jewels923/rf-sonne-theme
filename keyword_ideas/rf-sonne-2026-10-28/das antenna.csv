@@ -1,0 +1,25 @@
+﻿keyword,search_volume,keyword_difficulty,competition,competition_level,cpc,low_top_of_page_bid,high_top_of_page_bid,search_volume_trend_monthly,search_volume_trend_quarterly,search_volume_trend_yearly,core_keyword,synonym_clustering_algorithm,detected_language,is_another_language,words_count,backlinks,dofollow,referring_pages,referring_domains,referring_main_domains,rank,main_domain_rank,main_intent,foreign_intent
+das antenna,2900,18,0.48,MEDIUM,16.29,5.94,12.73,0,0,-17,,text_processing,de,True,2,186.5,179.8,184,77.7,76.5,136.5,530.2,informational,
+das antenna systems,2900,15,0.48,MEDIUM,16.29,5.94,12.73,0,0,-17,das antenna system,text_processing,en,False,3,49.8,37,41.2,19.2,17.2,76.4,379.2,informational,['transactional']
+das distributed antenna system,2400,15,0.53,MEDIUM,13.41,5.05,11.53,0,0,-45,distributed antenna system das,text_processing,en,False,4,98.4,86.3,92.4,51.5,49.3,124,400.6,informational,
+das system antenna,2400,15,0.53,MEDIUM,13.41,5.05,11.53,0,0,-45,das antenna system,text_processing,en,False,3,29.2,23.8,26,14.3,13.2,55,418.1,informational,
+das antenna system,2400,8,0.53,MEDIUM,13.41,5.05,11.53,0,0,-45,,text_processing,en,False,3,35.3,29,32.8,19,17.9,92.4,519.3,informational,
+distributed antenna system das,320,18,0.38,MEDIUM,16.32,5.74,15.73,0,-19,-76,,text_processing,en,False,4,186.5,179.8,184,77.7,76.5,136.4,527.8,informational,
+das distributed antenna,320,18,0.38,MEDIUM,16.32,5.74,15.73,0,-19,-76,distributed antenna system das,keyword_metrics,en,False,3,99.7,89.9,93.6,22,19.4,85.9,391.7,informational,['transactional']
+cellular das antenna,170,12,0.56,MEDIUM,17.51,5.5,18.68,0,-18,-64,das cellular system,keyword_metrics,en,False,3,92.9,82.3,87.2,48.1,45.8,108.1,415.9,informational,['transactional']
+das antenna manufacturers,110,3,0.52,MEDIUM,,,,-50,0,-80,,,en,False,3,155.7,154.6,155.6,60.6,60.4,95,291.1,navigational,
+public safety das antenna,90,0,0.3,LOW,44.51,4.65,30,-20,-43,-88,public safety das system,keyword_metrics,en,False,4,379.4,255.4,259.4,48.5,47.6,129.2,283.7,informational,['navigational']
+das antenna installation,70,11,0.48,MEDIUM,,4.95,14.85,100,-33,-60,,,en,False,3,182.4,170.6,172.5,75.2,75.1,132.9,279.8,transactional,['commercial']
+indoor das antenna,40,0,0.92,HIGH,,,,-33,-33,-33,,text_processing,de,True,3,25.1,19.9,21.8,10.9,10.4,25.6,401.5,navigational,['transactional']
+das antenna types,40,0,0.94,HIGH,,3.16,6.5,-50,0,0,,keyword_metrics,en,False,3,0.4,0.4,0.4,0.1,0.1,3.5,409.7,informational,
+distributed antenna systems das and small cell technologies distinguished,10,,,,,,,0,0,0,,,en,False,9,,,,,,,,informational,
+passive distributed antenna system das,10,,,,,,,-100,0,-100,,,en,False,5,,,,,,,,transactional,['informational']
+das distributed antenna system definition,10,,,,,,,-100,0,-100,,,en,False,5,,,,,,,,informational,
+das antenna meaning,10,,0.36,MEDIUM,,,,0,0,-50,,,en,False,3,,,,,,,,informational,
+outdoor das antenna,10,,0.83,HIGH,10.27,,,0,0,0,,keyword_metrics,en,False,3,,,,,,,,informational,"['transactional', 'navigational']"
+what is das antenna,10,,0.76,HIGH,9.06,5.91,10.65,0,0,0,,,en,False,4,,,,,,,,informational,
+das omni antenna,10,,1,HIGH,,,,0,0,0,,,la,True,3,,,,,,,,transactional,['informational']
+what is das distributed antenna system,10,,0.45,MEDIUM,59.21,3.24,10.28,0,0,0,,keyword_metrics,en,False,6,,,,,,,,informational,
+das donor antenna,10,,0.96,HIGH,6.42,2.53,8.88,0,0,0,,keyword_metrics,de,True,3,,,,,,,,informational,['transactional']
+das antenna cabling,10,,1,HIGH,9.78,6.5,16.79,-100,0,0,,keyword_metrics,en,False,3,,,,,,,,transactional,
+das digital antenna system,10,,0.57,MEDIUM,11.16,6.5,13.03,0,0,0,,,en,False,4,,,,,,,,informational,
