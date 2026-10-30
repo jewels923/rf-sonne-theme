@@ -1192,6 +1192,25 @@ class P3SharedChromeTests(unittest.TestCase):
         self.assertIn("array('child-theme-main-css')", self.functions)
         self.assertNotIn('whatsapp-widget.php', self.functions)
 
+    def test_fonts_are_self_hosted_without_a_google_fonts_import(self):
+        main_css = (ROOT / 'main.css').read_text(encoding='utf-8')
+        theme_header = (ROOT / 'header.php').read_text(encoding='utf-8')
+        self.assertNotIn('fonts.googleapis.com', main_css)
+        self.assertNotIn('fonts.googleapis.com', theme_header)
+        self.assertIn("assets/css/sonne-fonts.css", self.functions)
+        self.assertIn("'/assets/fonts/'", theme_header)
+        self.assertIn('archivo-latin-var.woff2', theme_header)
+
+    def test_nav_typography_is_owned_by_the_sonne_layer(self):
+        main_css = (ROOT / 'main.css').read_text(encoding='utf-8')
+        self.assertNotIn('.site-nav__link, .main-navigation a {', main_css)
+        legacy_family = css_declarations_for_selector(main_css, '.site-nav__link').get('font-family', '')
+        self.assertTrue(legacy_family.startswith('var(--'))
+        nav = css_declarations_for_selector(self.sonne_css, 'body .site-nav__link')
+        self.assertEqual(nav.get('font-size'), '0.76rem')
+        self.assertEqual(nav.get('font-weight'), '600')
+        self.assertEqual(nav.get('text-transform'), 'uppercase')
+
     def test_chrome_uses_confirmed_sonne_brand_contact_and_logo(self):
         self.assertRegex(self.contact, r"'brand_name'\s+=>\s+'SONNE'")
         self.assertRegex(self.contact, r"'company_name'\s+=>\s+'SONNE ELECTRONICS'")
