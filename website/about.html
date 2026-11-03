@@ -29,7 +29,14 @@
     .sn-about .sn-about__fact span { display: block; color: rgba(252, 254, 255, .7); font-size: .78rem; line-height: 1.55; }
     .sn-about .sn-about__products { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
     .sn-about .sn-about__product { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: var(--sn-border); background: var(--sn-white); }
-    .sn-about .sn-about__product img { width: 100%; aspect-ratio: 4 / 3; padding: 14px; background: var(--sn-light-gray); object-fit: contain; }
+    .sn-about .sn-about__product-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--sn-light-gray); }
+    /* Photos are shown whole; each frame's side bands reuse the colour sampled from that photo's edge. */
+    .sn-about .sn-about__product-media img { position: relative; width: 100%; height: 100%; object-fit: contain; }
+    .sn-about .sn-about__product-media--filters { background: linear-gradient(180deg, #f3f3f3 0%, #f3f3f3 12.5%, #efefee 87.5%, #efefee 100%); }
+    .sn-about .sn-about__product-media--waveguide { background: linear-gradient(180deg, #ececec 0%, #ececec 12.5%, #f5f6f4 87.5%, #f5f6f4 100%); }
+    .sn-about .sn-about__product-media--combiners { background: linear-gradient(180deg, #ecebf0 0%, #ecebf0 12.5%, #ecebef 87.5%, #ecebef 100%); }
+    .sn-about .sn-about__product-media--basestation { background: linear-gradient(180deg, #f2f3f4 0%, #f2f3f4 12.5%, #f3f4f5 87.5%, #f3f4f5 100%); }
+    .sn-about .sn-about__product-media--enclosures { background: linear-gradient(180deg, #8d9092 0%, #a8adae 20%, #c0c0c0 50%, #cccccc 70%, #a6abac 75%, #797d81 85%, #6e7275 90%, #707477 100%); }
     .sn-about .sn-about__product-body { display: flex; flex: 1; flex-direction: column; padding: 20px; }
     .sn-about .sn-about__product-body p { color: var(--sn-text-muted); font-size: .88rem; }
     .sn-about .sn-about__product-body .sn-about__text-link { margin-top: auto; font-size: .88rem; }
@@ -141,7 +148,7 @@
       </div>
       <div class="sn-about__products">
         <article class="sn-about__product">
-          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="lazy" decoding="async">
+          <div class="sn-about__product-media sn-about__product-media--filters"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="lazy" decoding="async"></div>
           <div class="sn-about__product-body">
             <h3>RF &amp; Microwave Filters</h3>
             <p>Define passband, rejection and power handling for a cavity, waveguide or custom filter structure.</p>
@@ -149,7 +156,7 @@
           </div>
         </article>
         <article class="sn-about__product">
-          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp" alt="Ortho-mode transducer" width="1024" height="571" loading="lazy" decoding="async">
+          <div class="sn-about__product-media sn-about__product-media--waveguide"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-omt-v2.webp" alt="Ortho-mode transducer" width="1024" height="571" loading="lazy" decoding="async"></div>
           <div class="sn-about__product-body">
             <h3>Waveguide &amp; Microwave</h3>
             <p>Connect a high-frequency path to a defined flange, polarization and mechanical interface.</p>
@@ -157,7 +164,7 @@
           </div>
         </article>
         <article class="sn-about__product">
-          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-combiner-v2.webp" alt="RF combiner" width="1024" height="571" loading="lazy" decoding="async">
+          <div class="sn-about__product-media sn-about__product-media--combiners"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-combiner-v2.webp" alt="RF combiner" width="1024" height="571" loading="lazy" decoding="async"></div>
           <div class="sn-about__product-body">
             <h3>Combiners &amp; Duplexers</h3>
             <p>Combine or separate frequency paths with explicit port logic, isolation and PIM targets.</p>
@@ -165,7 +172,7 @@
           </div>
         </article>
         <article class="sn-about__product">
-          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-n28-multiplexer.webp" alt="N28 multiplexer" width="1024" height="571" loading="lazy" decoding="async">
+          <div class="sn-about__product-media sn-about__product-media--basestation"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-n28-multiplexer.webp" alt="N28 multiplexer" width="1024" height="571" loading="lazy" decoding="async"></div>
           <div class="sn-about__product-body">
             <h3>Base Station RF</h3>
             <p>Evaluate passive RF hardware in its 4T4R or 8TR, N28 or N78 project context.</p>
@@ -173,7 +180,7 @@
           </div>
         </article>
         <article class="sn-about__product">
-          <img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-cabinet.webp" alt="Telecom enclosure cabinet" width="1024" height="1024" loading="lazy" decoding="async">
+          <div class="sn-about__product-media sn-about__product-media--enclosures"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-cabinet.webp" alt="Telecom enclosure cabinet" width="1024" height="1024" loading="lazy" decoding="async"></div>
           <div class="sn-about__product-body">
             <h3>Precision Enclosures</h3>
             <p>Turn equipment, thermal and shielding constraints into a buildable housing with defined tolerances.</p>
