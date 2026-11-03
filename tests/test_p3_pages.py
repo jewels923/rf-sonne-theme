@@ -1201,6 +1201,25 @@ class P3SharedChromeTests(unittest.TestCase):
         self.assertIn("'/assets/fonts/'", theme_header)
         self.assertIn('archivo-latin-var.woff2', theme_header)
 
+    def test_greek_glyphs_render_from_the_self_hosted_family(self):
+        fonts_css = (ROOT / 'assets' / 'css' / 'sonne-fonts.css').read_text(encoding='utf-8')
+        self.assertTrue((ROOT / 'assets' / 'fonts' / 'plex-sans-greek-var.woff2').is_file())
+        faces = re.findall(r'@font-face \{[^}]*plex-sans-greek-var\.woff2[^}]*\}', fonts_css)
+        families = {re.search(r"font-family: '([^']+)'", face).group(1) for face in faces}
+        self.assertEqual(families, {'IBM Plex Sans', 'IBM Plex Mono'})
+        covered = set()
+        for face in faces:
+            for token in re.search(r'unicode-range: ([^;]+);', face).group(1).split(','):
+                token = token.strip().lower().replace('u+', '')
+                start, _, end = token.partition('-')
+                covered.update(range(int(start, 16), int(end or start, 16) + 1))
+        greek = set()
+        sources = list((ROOT / 'website').glob('*.html')) + list((ROOT / 'content' / 'insights').glob('*.html'))
+        for path in sources:
+            greek.update(ch for ch in path.read_text(encoding='utf-8') if 0x0370 <= ord(ch) <= 0x03FF)
+        self.assertTrue(greek)
+        self.assertEqual(sorted(greek - {chr(cp) for cp in covered}), [])
+
     def test_nav_typography_is_owned_by_the_sonne_layer(self):
         main_css = (ROOT / 'main.css').read_text(encoding='utf-8')
         self.assertNotIn('.site-nav__link, .main-navigation a {', main_css)
