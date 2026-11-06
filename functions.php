@@ -238,6 +238,49 @@ if (!is_admin()) {
 }
 
 // ============================================================
+// 页头语言切换器（源码来自 TranslatePress 已发布语言）
+// ============================================================
+function sonne_language_switcher_items() {
+    static $items = null;
+    if ($items !== null) {
+        return $items;
+    }
+
+    $items = array('current' => '', 'current_name' => '', 'languages' => array());
+    if (!function_exists('trp_get_languages') || !class_exists('TRP_Translate_Press')) {
+        return $items;
+    }
+
+    $trp = TRP_Translate_Press::get_trp_instance();
+    $settings = $trp->get_component('settings')->get_settings();
+    $converter = $trp->get_component('url_converter');
+    $languages = $trp->get_component('languages')->get_language_names($settings['publish-languages'], 'native_name');
+    $current = !empty($GLOBALS['TRP_LANGUAGE']) ? $GLOBALS['TRP_LANGUAGE'] : $settings['default-language'];
+
+    foreach ($languages as $code => $name) {
+        $short = strtoupper(explode('_', $code)[0]);
+        $items['languages'][] = array(
+            'code' => $code,
+            'name' => $name,
+            'short' => $short,
+            'url' => str_replace('#TRPLINKPROCESSED', '', $converter->get_url_for_language($code, false)),
+            'is_current' => ($code === $current),
+        );
+        if ($code === $current) {
+            $items['current'] = $short;
+            $items['current_name'] = $name;
+        }
+    }
+
+    if ($items['current'] === '' && !empty($items['languages'])) {
+        $items['current'] = $items['languages'][0]['short'];
+        $items['current_name'] = $items['languages'][0]['name'];
+    }
+
+    return $items;
+}
+
+// ============================================================
 // 最新文章短代码 [latest_posts]
 // ============================================================
 function child_latest_posts_shortcode($atts) {

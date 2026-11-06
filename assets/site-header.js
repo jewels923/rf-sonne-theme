@@ -52,6 +52,57 @@
             });
         });
 
+        var langSwitchers = shell.querySelectorAll('[data-site-lang]');
+
+        function closeLangSwitchers(except) {
+            langSwitchers.forEach(function (item) {
+                if (item !== except) {
+                    item.open = false;
+                }
+            });
+        }
+
+        langSwitchers.forEach(function (item) {
+            item.addEventListener('toggle', function () {
+                if (item.open) {
+                    closeLangSwitchers(item);
+                }
+            });
+            item.addEventListener('click', function (event) {
+                if (event.target.closest('a')) {
+                    item.open = false;
+                }
+            });
+            item.addEventListener('focusout', function (event) {
+                if (event.relatedTarget && item.contains(event.relatedTarget)) {
+                    return;
+                }
+                item.open = false;
+            });
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('[data-site-lang]')) {
+                closeLangSwitchers();
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key !== 'Escape') {
+                return;
+            }
+            langSwitchers.forEach(function (item) {
+                if (!item.open) {
+                    return;
+                }
+                item.open = false;
+                var toggle = item.querySelector('summary');
+                if (toggle) {
+                    toggle.focus();
+                }
+            });
+        });
+
         var previewImg = document.getElementById('productPreviewImg');
         var megaMenu = document.querySelector('.site-nav__dropdown--mega');
         var defaultImgSrc = previewImg ? previewImg.getAttribute('src') : '';

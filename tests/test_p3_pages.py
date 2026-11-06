@@ -1266,6 +1266,18 @@ class P3SharedChromeTests(unittest.TestCase):
         self.assertIn("home_url('/request-a-quote/')", self.header)
         self.assertIn("home_url('/request-a-quote/')", self.footer)
 
+    def test_header_language_switcher_uses_translatepress_and_is_accessible(self):
+        self.assertIn('sonne_language_switcher_items', self.functions)
+        self.assertIn('trp_get_languages', self.functions)
+        self.assertIn('get_url_for_language', self.functions)
+        for marker in ('class="site-lang"', 'data-site-lang', 'site-lang__panel', 'hreflang='):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, self.header)
+        main_css = (ROOT / 'main.css').read_text(encoding='utf-8')
+        self.assertIn('.site-lang__panel', main_css)
+        self.assertIn('inset-inline-end', main_css)
+        self.assertIn('data-site-lang', self.header_script)
+
     def test_footer_has_no_cf7_modal_or_contact_link_interception(self):
         for removed in (
             'contact-form-7',

@@ -3,6 +3,12 @@ $contact = require __DIR__ . '/data/site-contact.php';
 $header_config = require __DIR__ . '/data/header-navigation.php';
 $mega_menu_defaults = $header_config['mega_menu_defaults'];
 $navigation = $header_config['navigation'];
+$language_switcher = function_exists('sonne_language_switcher_items')
+    ? sonne_language_switcher_items()
+    : array('current' => '', 'current_name' => '', 'languages' => array());
+$current_language_name = '' !== $language_switcher['current_name']
+    ? $language_switcher['current_name']
+    : $language_switcher['current'];
 ?>
 
 <div id="site-top" aria-hidden="true"></div>
@@ -125,6 +131,37 @@ $navigation = $header_config['navigation'];
             </nav>
 
             <div class="site-header__actions">
+                <?php if (!empty($language_switcher['languages'])) : ?>
+                    <details class="site-lang" data-site-lang data-no-translation>
+                        <summary class="site-lang__toggle" aria-label="<?php echo esc_attr('Language: ' . $current_language_name); ?>">
+                            <svg class="site-lang__globe" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+                                <path d="M3 12h18M12 3c2.6 2.5 4 5.7 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.7-4-9s1.4-6.5 4-9Z" stroke="currentColor" stroke-width="1.6"/>
+                            </svg>
+                            <span class="site-lang__current"><?php echo esc_html($language_switcher['current']); ?></span>
+                            <span class="site-lang__caret" aria-hidden="true"></span>
+                        </summary>
+                        <nav class="site-lang__panel" aria-label="Language">
+                            <ul class="site-lang__list">
+                                <?php foreach ($language_switcher['languages'] as $language) : ?>
+                                    <?php $language_tag = str_replace('_', '-', $language['code']); ?>
+                                    <li>
+                                        <a
+                                            class="site-lang__link<?php echo $language['is_current'] ? ' is-current' : ''; ?>"
+                                            href="<?php echo esc_url($language['url']); ?>"
+                                            lang="<?php echo esc_attr($language_tag); ?>"
+                                            hreflang="<?php echo esc_attr($language_tag); ?>"
+                                            <?php echo $language['is_current'] ? 'aria-current="true"' : ''; ?>
+                                        >
+                                            <span class="site-lang__name"><?php echo esc_html($language['name']); ?></span>
+                                            <span class="site-lang__code"><?php echo esc_html($language['short']); ?></span>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </nav>
+                    </details>
+                <?php endif; ?>
                 <a class="sn-btn sn-btn--primary" href="<?php echo esc_url(home_url('/request-a-quote/')); ?>">
                     Request a Quote
                 </a>
