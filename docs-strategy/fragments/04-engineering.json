@@ -154,7 +154,7 @@
           "设置需求复选框：19-inch、EMI shielding、thermal、GD&T/FAI、IP 目标、表面处理，便于分配到对应评审",
           "提交后预期写为工程需求澄清与下一步评估，不承诺固定报价或量产交期；也可链接 /resources/rfq-guide 先自查"
         ],
-        "image": "不配图；使用 2 栏 RFQ 面板，左侧为最小资料清单和文件上传，右侧为表单；底部放 /resources/rfq-guide 文本链接及当前询盘邮箱 info@zhide-tec.com",
+        "image": "不配图；使用 2 栏 RFQ 面板，左侧为最小资料清单和文件上传，右侧为表单；底部放 /resources/rfq-guide 文本链接及当前询盘邮箱 info@rf-sonne.com",
         "cta": "Send Mechanical Drawings"
       }
     ],
@@ -350,7 +350,7 @@
           "提交后第一步输出为资料完整性检查、关键问题和建议下一评审节点；完整 RFQ 通常约 24 小时获得初步工程反馈，但不是报价或交期保证",
           "提供 /resources/rfq-guide 与 /request-a-quote 两个后续入口，分别服务需补资料和资料已齐的买家"
         ],
-        "image": "不配图；使用 2 栏工程评审表单，左侧显示 G0 输入清单和初步反馈边界，右侧为字段与上传区；附 info@zhide-tec.com 作为备选询盘邮箱",
+        "image": "不配图；使用 2 栏工程评审表单，左侧显示 G0 输入清单和初步反馈边界，右侧为字段与上传区；附 info@rf-sonne.com 作为备选询盘邮箱",
         "cta": "Start Engineering Review"
       }
     ],
@@ -546,7 +546,7 @@
           "完整 RFQ 通常可在约 24 小时内获得初步工程反馈，页面明确这不是完整方案、报价或交期保证",
           "预期下一步为缺失资料清单、评审范围与建议 Gate；需要正式询价时转 /request-a-quote"
         ],
-        "image": "不配图；采用工程评估表单与输入清单双栏布局，底部显示 info@zhide-tec.com 和 /resources/rfq-guide 链接，避免放置与转化无关的图片",
+        "image": "不配图；采用工程评估表单与输入清单双栏布局，底部显示 info@rf-sonne.com 和 /resources/rfq-guide 链接，避免放置与转化无关的图片",
         "cta": "Start Engineering Review"
       }
     ],
@@ -756,7 +756,7 @@
           "期望输出为建议下一 Gate、缺失证据、需要参与的评审角色和验证事项，不直接承诺量产批准或交期",
           "提供 /engineering/testing-quality 与 /request-a-quote 后续入口，分别用于定义报告证据和提交完整项目资料"
         ],
-        "image": "不配图；使用 Current Stage→Missing Evidence→Next Gate 三栏转化面板，下方为表单与附件上传；附 info@zhide-tec.com 供项目资料询盘",
+        "image": "不配图；使用 Current Stage→Missing Evidence→Next Gate 三栏转化面板，下方为表单与附件上传；附 info@rf-sonne.com 供项目资料询盘",
         "cta": "Plan Your NPI Path"
       }
     ],
@@ -951,7 +951,7 @@
           "表单字段：产品类型、应用、关键参数、测试阶段、所需报告类型、Lot/Serial 追溯要求及项目阶段",
           "PIM 需求增加频段、功率、端口/连接和限值；VNA 增加 S 参数、频率范围和端口；可靠性需求写清试验条件与验收目标",
           "可选择 Sample Report 或 Project Test Review；样例仅用于说明证据形式，不代表买家产品实测结果或统一报告交付承诺",
-          "完整项目进入工程评审后确认测试覆盖、条件与记录范围；正式 RFQ 链接 /request-a-quote，询盘邮箱为 info@zhide-tec.com"
+          "完整项目进入工程评审后确认测试覆盖、条件与记录范围；正式 RFQ 链接 /request-a-quote，询盘邮箱为 info@rf-sonne.com"
         ],
         "image": "不配图；使用双路径转化面板，左侧 Sample Test Report 最小表单，右侧 Project Test Review 参数清单与上传入口，避免要求机密资料才能查看基本流程",
         "cta": "Request Sample Test Report"

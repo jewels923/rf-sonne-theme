@@ -138,7 +138,7 @@
           "提供短表单：工作邮箱、公司、产品线、型号或应用、所需文档和项目说明",
           "型号未知时允许上传现有规格或描述应用，不强迫买家先完成完整 RFQ",
           "需要完整工程评估时引导 /request-a-quote，并保留本页已填写的资料需求",
-          "给出备选邮箱 info@zhide-tec.com，不添加未确认的即时通讯账号"
+          "给出备选邮箱 info@rf-sonne.com，不添加未确认的即时通讯账号"
         ],
         "image": "不配图；使用双路径行动卡“Request a Specific Document / Start a Full RFQ”。",
         "cta": "Request Documents"
@@ -560,7 +560,7 @@
     "differentiators": [
       "工程优先的联系路径按产品线分流，让买家先描述应用和关键约束，再补充详细资料",
       "完整 RFQ 通常约 24 小时获得初步工程反馈，为买家提供清晰且不过度承诺的响应预期",
-      "同时提供表单和当前询盘邮箱 info@zhide-tec.com，保留低摩擦备选通道",
+      "同时提供表单和当前询盘邮箱 info@rf-sonne.com，保留低摩擦备选通道",
       "宁波慈溪制造基地与 Factory、RFQ Guide 互链，联系前即可核对工厂和资料准备要求"
     ],
     "conversion": "主：Send Your RFQ；次：WhatsApp 仅作 source 中的待确认选项，未确认前不上线，保留 Email Engineering Team 备选入口",
@@ -595,7 +595,7 @@
         "points": [
           "首屏按 RF/微波、波导、合路/基站、精密结构件和工厂访问设置联系主题",
           "明确完整 RFQ 通常可在约 24 小时内获得初步工程反馈，不等于完整报价、交期或技术方案保证",
-          "主按钮进入 Send Your RFQ，次按钮使用已确认邮箱 info@zhide-tec.com",
+          "主按钮进入 Send Your RFQ，次按钮使用已确认邮箱 info@rf-sonne.com",
           "不公开展示 WhatsApp 或 WeChat；电话是否对应这些渠道须内部确认后再决定"
         ],
         "image": "不配图；使用 1440×480 联系路径选择器，显示 Engineering Question、RFQ、Document Request、Factory Visit 四个入口。",
@@ -637,7 +637,7 @@
         "points": [
           "公开位置只使用已确认的浙江宁波慈溪制造基地；街道地址与地图为发布前内部确认栏位",
           "最终网站不得保留地址占位符：未确认时省略街道地址和地图，只保留基地口径与联系渠道",
-          "公开询盘邮箱固定为 info@zhide-tec.com；工厂访问通过表单申请并由团队确认安排",
+          "公开询盘邮箱固定为 info@rf-sonne.com；工厂访问通过表单申请并由团队确认安排",
           "LinkedIn 或 WhatsApp 仅在账号与公开属性核实后添加；本页策略不强制公开电话"
         ],
         "image": "不配图；使用文字位置卡和邮箱联系卡，避免未核实地图、地址别针或即时通讯二维码。",
@@ -665,7 +665,7 @@
         "points": [
           "提供短表单与完整 RFQ 两个入口，买家按资料完整度选择，不强制重复填写",
           "敏感图纸上传前先描述保密需求，具体保密安排按项目确认",
-          "显示邮箱备选 info@zhide-tec.com 和首封邮件六项提示，降低撰写成本",
+          "显示邮箱备选 info@rf-sonne.com 和首封邮件六项提示，降低撰写成本",
           "提交成功页说明保留确认邮件、后续由团队回复；不虚构工单编号或固定销售联系人"
         ],
         "image": "不配图；使用简洁行动区，左侧五项短表单入口，右侧 RFQ 清单和邮箱备选。",
@@ -687,7 +687,7 @@
       },
       {
         "question": "What email address should I use for an RF project?",
-        "answer": "Use info@zhide-tec.com for current RF, waveguide and enclosure inquiries. Include your company, application, product line and the main requirements in the subject or message. Attach available specifications or drawings when appropriate, and mention if confidentiality should be discussed before sensitive files are exchanged. The Contact form provides an alternative route.",
+        "answer": "Use info@rf-sonne.com for current RF, waveguide and enclosure inquiries. Include your company, application, product line and the main requirements in the subject or message. Attach available specifications or drawings when appropriate, and mention if confidentiality should be discussed before sensitive files are exchanged. The Contact form provides an alternative route.",
         "intent": "获取真实询盘邮箱并提高首封邮件有效性",
         "snippet": "目标是 40–55 词答案，邮箱置首句并给出邮件内容清单。"
       },
@@ -699,7 +699,7 @@
       },
       {
         "question": "Is WhatsApp available for contacting SONNE?",
-        "answer": "A public WhatsApp channel has not been confirmed for the website. Use the Contact form, email info@zhide-tec.com or call +86-0574-63615958 so your project details reach the team. Do not assume the published telephone number is a WhatsApp account.",
+        "answer": "A public WhatsApp channel has not been confirmed for the website. Use the Contact form, email info@rf-sonne.com or call +86-0574-63615958 so your project details reach the team. Do not assume the published telephone number is a WhatsApp account.",
         "intent": "确认即时通讯渠道并提供已公开的表单、邮箱与电话",
         "snippet": "目标是 40–55 词诚实答案，提供当前可用替代渠道。"
       }
@@ -848,7 +848,7 @@
           "主路径保留当前表单内容并提交已知信息，避免用户因查看指南而丢失输入",
           "次路径打开 RFQ Guide 和 Contact，分别服务想自行补全与想先问问题的买家",
           "最终按钮旁再次说明初步工程反馈的适用条件，不使用 Get Instant Quote 等误导文案",
-          "提供邮箱 info@zhide-tec.com 作为表单故障备选，不公开未确认 WhatsApp 或地址"
+          "提供邮箱 info@rf-sonne.com 作为表单故障备选，不公开未确认 WhatsApp 或地址"
         ],
         "image": "不配图；使用低干扰行动条，主按钮 Submit RFQ，次链接 Review the Checklist 和 Ask a Question First。",
         "cta": "Submit RFQ"

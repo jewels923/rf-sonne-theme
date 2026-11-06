@@ -1233,7 +1233,7 @@ class P3SharedChromeTests(unittest.TestCase):
     def test_chrome_uses_confirmed_sonne_brand_contact_and_logo(self):
         self.assertRegex(self.contact, r"'brand_name'\s+=>\s+'SONNE'")
         self.assertRegex(self.contact, r"'company_name'\s+=>\s+'SONNE ELECTRONICS'")
-        self.assertRegex(self.contact, r"'email'\s+=>\s+'info@zhide-tec\.com'")
+        self.assertRegex(self.contact, r"'email'\s+=>\s+'info@rf-sonne\.com'")
         self.assertIn(UPLOADS['logo-sonne-white.png']['url'], self.contact)
         self.assertIn('SONNE Electronics logo', self.contact)
         for marker in LEGACY_MARKERS + ('eyewear',):
@@ -2871,7 +2871,7 @@ class RequestAQuoteTests(unittest.TestCase):
             self.assertNotIn(marker, text.lower())
         for marker in RFQ_SENSITIVE_MARKERS:
             self.assertNotIn(marker, text)
-        self.assertIn('mailto:info@zhide-tec.com', text)
+        self.assertIn('mailto:info@rf-sonne.com', text)
 
     def test_seven_section_order_and_shortcode_placement(self):
         fragment = self.read_fragment()
@@ -3139,21 +3139,16 @@ class RequestAQuoteTests(unittest.TestCase):
 
     def test_mail_configuration_routes_and_file_links(self):
         mail_config = self.read_mail()
-        self.assertEqual({'mail', 'mail_2', 'messages'}, set(mail_config))
+        self.assertEqual({'mail', 'messages'}, set(mail_config))
         mail = mail_config['mail']
-        mail_2 = mail_config['mail_2']
         messages = mail_config['messages']
 
-        self.assertEqual('info@zhide-tec.com', mail['recipient'])
-        self.assertIs(True, mail_2['active'])
-        self.assertEqual('jason@riwick.com', mail_2['recipient'])
-        for message in (mail, mail_2):
-            with self.subTest(recipient=message['recipient']):
-                self.assertEqual('', message['attachments'])
-                self.assertIn('Reply-To: [your-email]', message['additional_headers'])
-                self.assertIn('wordpress@rf-sonne.com', message['sender'])
-                self.assertTrue(message['use_html'])
-                self.assertTrue(message['exclude_blank'])
+        self.assertEqual('info@rf-sonne.com', mail['recipient'])
+        self.assertEqual('', mail['attachments'])
+        self.assertIn('Reply-To: [your-email]', mail['additional_headers'])
+        self.assertIn('wordpress@rf-sonne.com', mail['sender'])
+        self.assertTrue(mail['use_html'])
+        self.assertTrue(mail['exclude_blank'])
 
         self.assertIn('RFQ', mail['subject'])
         self.assertIn('[product-line]', mail['subject'])
@@ -3187,12 +3182,6 @@ class RequestAQuoteTests(unittest.TestCase):
                 self.assertIn(required, mail['body'])
         self.assertIn('not attached', mail['body'].lower())
         self.assertIn('confidentiality', mail['body'].lower())
-
-        self.assertIn('[your-name]', mail_2['body'])
-        self.assertIn('[your-company]', mail_2['body'])
-        self.assertIn('[your-email]', mail_2['body'])
-        self.assertIn('[product-line]', mail_2['body'])
-        self.assertIn('[file-1]', mail_2['body'])
 
         self.assertIn('about 24 hours', messages['mail_sent_ok'])
         self.assertIn('not a formal quotation or delivery commitment', messages['mail_sent_ok'])
@@ -3279,7 +3268,7 @@ class RequestAQuoteTests(unittest.TestCase):
                     self.assertEqual('#rfq-form', href)
                     self.assertIn('id="rfq-form"', fragment)
                 elif href.startswith('mailto:'):
-                    self.assertIn('info@zhide-tec.com', href)
+                    self.assertIn('info@rf-sonne.com', href)
                     self.assertIn('subject=', href)
                 else:
                     route = normalize_route(href)

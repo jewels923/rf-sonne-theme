@@ -198,7 +198,7 @@
         "points": [
           "提供产品线选择、姓名/公司/邮箱、频率或应用、预计数量、需求说明和附件上传字段，允许尚无完整规格的买家先提交应用",
           "在提交按钮旁说明完整 RFQ 通常约 24 小时内获得初步工程反馈，不表述为报价或交期保证",
-          "显示询盘邮箱 info@zhide-tec.com 作为备用路径，不强制公开未确认的电话即时通讯属性",
+          "显示询盘邮箱 info@rf-sonne.com 作为备用路径，不强制公开未确认的电话即时通讯属性",
           "按钮分为主 Request a Quote 与次 Talk to an RF Engineer，并链接 /request-a-quote 和 /contact"
         ],
         "image": "不配图；左侧放三步提交说明，右侧放短表单，附件旁列出规格书、band plan、2D/3D 图纸示例，避免再使用大幅场景图分散行动。",
@@ -727,7 +727,7 @@
           "专用字段包括 filter type、passband/bandwidth、insertion loss、return loss、rejection、power、PIM、connector/flange、envelope、environment、quantity",
           "支持上传 datasheet、2D/3D 图纸、band plan 和测试要求；未知字段允许标记 TBD，但需说明应用与优先级",
           "提供 Download Datasheet 次入口链接 /resources/datasheets，并注明具体资料按型号与项目确认",
-          "提交预期写为完整 RFQ 通常约 24 小时初步工程反馈，备用邮箱 info@zhide-tec.com"
+          "提交预期写为完整 RFQ 通常约 24 小时初步工程反馈，备用邮箱 info@rf-sonne.com"
         ],
         "image": "不配图；使用两栏工程表单，左侧 RF 指标，右侧机械/数量/附件，底部显示缺失关键字段提示而不是强制买家虚构数值。",
         "cta": "Request Custom Filter Design"
@@ -1000,7 +1000,7 @@
         "points": [
           "短表单必填器件功能、目标频段、应用、数量、邮箱，法兰/极化/性能指标可填已知项并标记待确认",
           "附件接受 band plan、接口图、2D/3D 图纸与测试要求，提示不要为提交而猜测未知参数",
-          "主按钮 Request Waveguide Evaluation，次按钮 Send Band Plan；备用邮箱 info@zhide-tec.com",
+          "主按钮 Request Waveguide Evaluation，次按钮 Send Band Plan；备用邮箱 info@rf-sonne.com",
           "提交旁说明完整 RFQ 通常约 24 小时初步工程反馈，不写报价、打样或量产交期保证"
         ],
         "image": "不配图；使用左侧最小输入清单、右侧上传表单的低门槛布局，提交前显示“已提供/待确认”字段摘要。",
@@ -1272,7 +1272,7 @@
         "points": [
           "表单允许 device type 选择 unknown，并要求至少描述系统功能、端口关系和各频段，避免强制错误选型",
           "字段含联系人、公司、应用、数量、功率/PIM/隔离目标、机械限制、附件和验证要求",
-          "主按钮 Submit Band Plan for Quote，次按钮 Read Duplexer vs Diplexer；备用邮箱 info@zhide-tec.com",
+          "主按钮 Submit Band Plan for Quote，次按钮 Read Duplexer vs Diplexer；备用邮箱 info@rf-sonne.com",
           "说明完整 RFQ 通常约 24 小时初步工程反馈，具体方案、报价与交期均需项目评审"
         ],
         "image": "不配图；采用左侧系统/端口最小说明、右侧 band-plan 上传与联系字段的两栏表单，提交前提示缺失端口或频段。",

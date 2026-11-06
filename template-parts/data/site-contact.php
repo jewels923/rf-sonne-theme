@@ -9,7 +9,7 @@ return array(
     'logo_alt'         => 'SONNE Electronics logo',
     'company_name'     => 'SONNE ELECTRONICS',
     'founding_date'    => '2015',
-    'email'            => 'info@zhide-tec.com',
+    'email'            => 'info@rf-sonne.com',
     'phone'            => '+86-0574-63615958',
     'phone_href'       => '+8657463615958',
     'address'          => 'No. 87, 89, 91, Sanbei Middle Road, Xinze Village, Guanhaiwei Town, Cixi City, Ningbo City, Zhejiang Province, China',

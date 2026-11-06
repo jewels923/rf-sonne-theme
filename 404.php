@@ -365,7 +365,7 @@ get_template_part( 'template-parts/header' );
 					</a>
 				</li>
 			</ul>
-			<p class="sn-404__contact">Still stuck? Email <a href="mailto:info@zhide-tec.com">info@zhide-tec.com</a> and include the address you tried to open.</p>
+			<p class="sn-404__contact">Still stuck? Email <a href="mailto:info@rf-sonne.com">info@rf-sonne.com</a> and include the address you tried to open.</p>
 		</div>
 	</section>
 </main>

@@ -146,7 +146,7 @@
         "points": [
           "表单字段为应用类型、系统位置、频段、关键约束、目标数量、项目阶段与附件，未知值允许标 TBD",
           "提交前显示将获得的输出：应用分流、缺失参数清单与后续工程沟通建议，而非即时报价承诺",
-          "提供 info@zhide-tec.com 作为备用询盘入口，并链接 /request-a-quote 承载完整参数提交"
+          "提供 info@rf-sonne.com 作为备用询盘入口，并链接 /request-a-quote 承载完整参数提交"
         ],
         "image": "不配图；使用双栏转化卡，左侧为三项提交收益，右侧为短表单与隐私必要说明",
         "cta": "Describe Your Application"
@@ -905,7 +905,7 @@
           "提交后预期输出为缺项与冲突澄清、候选产品线/型号核对及验证范围讨论，不承诺即时全套报价",
           "完整 RFQ 通常约 24 小时获得初步工程反馈，MOQ、报价和交期按具体项目确认"
         ],
-        "image": "不配图；使用 BOM 上传卡、支持字段清单与 /request-a-quote 链接，备用入口为 info@zhide-tec.com",
+        "image": "不配图；使用 BOM 上传卡、支持字段清单与 /request-a-quote 链接，备用入口为 info@rf-sonne.com",
         "cta": "Send Project BOM"
       }
     ],

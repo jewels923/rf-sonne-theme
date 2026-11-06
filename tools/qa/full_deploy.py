@@ -293,11 +293,11 @@ def contact_properties():
     messages = {
         'mail_sent_ok': (
             'Thank you. Your message has been sent to the SONNE team. '
-            'A reply will come from info@zhide-tec.com.'
+            'A reply will come from info@rf-sonne.com.'
         ),
         'mail_sent_ng': (
             'The message could not be sent. Please try again, or email '
-            'info@zhide-tec.com directly.'
+            'info@rf-sonne.com directly.'
         ),
         'validation_error': (
             'Some fields need attention. Please review the highlighted '
@@ -305,7 +305,7 @@ def contact_properties():
         ),
         'spam': (
             'The submission was flagged as spam. Please try again, or email '
-            'info@zhide-tec.com.'
+            'info@rf-sonne.com.'
         ),
         'invalid_required': 'Please complete this required field.',
         'invalid_too_long': 'This field is too long.',
@@ -322,24 +322,8 @@ def contact_properties():
             'active': True,
             'subject': 'Contact · [contact-topic] · [your-company]',
             'sender': 'SONNE Contact <wordpress@rf-sonne.com>',
-            'recipient': 'info@zhide-tec.com',
+            'recipient': 'info@rf-sonne.com',
             'body': mail_body,
-            'additional_headers': 'Reply-To: [your-email]',
-            'attachments': '',
-            'use_html': True,
-            'exclude_blank': True,
-        },
-        'mail_2': {
-            'active': True,
-            'subject': 'Contact copy · [contact-topic] · [your-company]',
-            'sender': 'SONNE Contact <wordpress@rf-sonne.com>',
-            'recipient': 'jason@riwick.com',
-            'body': (
-                '<h2>Contact copy</h2>'
-                '<p>Name: [your-name]<br>Company: [your-company]<br>'
-                'Work email: [your-email]<br>Topic: [contact-topic]</p>'
-                '<p>Full details were sent to the SONNE inbox.</p>'
-            ),
             'additional_headers': 'Reply-To: [your-email]',
             'attachments': '',
             'use_html': True,
