@@ -190,9 +190,9 @@ summary:focus-visible {
   left: 12px;
   z-index: 10001;
   padding: 12px 18px;
-  background: var(--sn-ink-deep);
-  color: var(--sn-white);
-  font-family: var(--sn-font-mono);
+  background: var(--sn-ink-deep, #05101b);
+  color: var(--sn-white, #fcfeff);
+  font-family: var(--sn-font-mono, ui-monospace, monospace);
   font-size: 0.82rem;
   letter-spacing: 0.04em;
   text-decoration: none;

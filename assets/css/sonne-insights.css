@@ -439,16 +439,18 @@
 /* Site search */
 .sn-search-form { max-width: 720px; margin-top: 26px; }
 .sn-search-form__row { display: flex; gap: 10px; }
-.sn-search-form__input {
+/* input[type='search'] in main.css is more specific than a bare class. */
+input.sn-search-form__input {
   flex: 1 1 auto;
   min-height: 48px;
   padding: 12px 16px;
   border: 1px solid var(--sn-field-line);
+  border-radius: 0;
   background: var(--sn-white);
   color: var(--sn-text);
   font: inherit;
 }
-.sn-search-form__input::placeholder { color: var(--sn-text-muted); opacity: 1; }
+input.sn-search-form__input::placeholder { color: var(--sn-text-muted); opacity: 1; }
 .sn-search-form__button {
   min-height: 48px;
   padding: 12px 26px;
