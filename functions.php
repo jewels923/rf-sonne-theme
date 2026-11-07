@@ -26,6 +26,11 @@ if (file_exists($child_dir . '/inc/insights.php')) {
     require_once $child_dir . '/inc/insights.php';
 }
 
+// 悬浮 WhatsApp 对话框
+if (file_exists($child_dir . '/inc/whatsapp-chat.php')) {
+    require_once $child_dir . '/inc/whatsapp-chat.php';
+}
+
 // WPAI 模块（可选，没有就跳过）
 if (file_exists($child_dir . '/wpai/bootstrap.php')) {
     require_once $child_dir . '/wpai/bootstrap.php';
@@ -83,7 +88,7 @@ function child_theme_enqueue_assets() {
     }
 
     // SONNE Insights blog styles
-    if (is_home() || is_category() || is_archive() || is_singular('post') || is_page('resources')) {
+    if (is_home() || is_category() || is_archive() || is_singular('post') || is_page('resources') || is_search()) {
         if (file_exists(get_stylesheet_directory() . '/assets/css/sonne-insights.css')) {
             wp_enqueue_style(
                 'sonne-insights',
@@ -101,6 +106,17 @@ function child_theme_enqueue_assets() {
             get_stylesheet_directory_uri() . '/assets/site-header.js',
             array(),
             child_theme_asset_version('assets/site-header.js'),
+            true
+        );
+    }
+
+    // WhatsApp 浮动对话框脚本
+    if (file_exists(get_stylesheet_directory() . '/assets/whatsapp-chat.js')) {
+        wp_enqueue_script(
+            'child-theme-whatsapp-chat',
+            get_stylesheet_directory_uri() . '/assets/whatsapp-chat.js',
+            array(),
+            child_theme_asset_version('assets/whatsapp-chat.js'),
             true
         );
     }

@@ -1072,6 +1072,15 @@ class P3SharedChromeTests(unittest.TestCase):
         self.assertIn('prefers-reduced-motion', self.sonne_css)
         self.assertIn('@media (max-width: 768px)', self.sonne_css)
 
+    def test_hero_heading_keeps_leading_and_locale_fallback_stacks(self):
+        hero = css_declarations_for_selector(self.sonne_css, '.sn-hero h1')
+        self.assertEqual('1.06', hero.get('line-height'))
+        for locale in ('ru', 'ar', 'zh'):
+            block = css_declarations_for_selector(self.sonne_css, ':lang(%s)' % locale)
+            for token in ('--sn-font-heading', '--sn-font-body', '--sn-font-mono'):
+                with self.subTest(locale=locale, token=token):
+                    self.assertTrue(block.get(token, '').strip() != '')
+
     def test_table_regions_have_visible_keyboard_focus(self):
         declarations = css_declarations_for_selector(
             self.sonne_css,
@@ -1239,7 +1248,7 @@ class P3SharedChromeTests(unittest.TestCase):
         for marker in LEGACY_MARKERS + ('eyewear',):
             with self.subTest(marker=marker):
                 self.assertNotIn(marker, self.chrome.lower())
-        for unconfirmed in ('whatsapp', 'wechat', 'phone_display', 'social_links', 'street-address'):
+        for unconfirmed in ('wechat', 'phone_display', 'social_links', 'street-address'):
             with self.subTest(unconfirmed=unconfirmed):
                 self.assertNotIn(unconfirmed, self.chrome.lower())
 
@@ -1277,6 +1286,84 @@ class P3SharedChromeTests(unittest.TestCase):
         self.assertIn('.site-lang__panel', main_css)
         self.assertIn('inset-inline-end', main_css)
         self.assertIn('data-site-lang', self.header_script)
+
+    def test_header_exposes_email_link(self):
+        actions = self.header.index('site-header__actions')
+        email = self.header.index('site-header__email')
+        language = self.header.index('site-lang', actions)
+        self.assertLess(actions, email)
+        self.assertLess(email, language)
+        for marker in ('mailto:', "$contact['email']", 'site-header__email-text',
+                       'site-header__email-icon', 'data-no-translation'):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, self.header)
+        main_css = (ROOT / 'main.css').read_text(encoding='utf-8')
+        self.assertIn('.site-header__email-text', main_css)
+        self.assertIn('@media (max-width: 1279px)', main_css)
+        self.assertIn('@media (min-width: 1025px) and (max-width: 1399px)', main_css)
+        nav_start = main_css.index('.site-nav__item {')
+        nav_block = main_css[nav_start:main_css.index('}', nav_start)]
+        self.assertIn('padding: 0 0.7rem;', nav_block)
+        nav_list_start = main_css.index('.site-nav__list {')
+        nav_list_block = main_css[nav_list_start:main_css.index('}', nav_list_start)]
+        self.assertIn('margin-right: 0.75rem;', nav_list_block)
+
+    def test_footer_exposes_email_and_whatsapp_contact_rows(self):
+        details = self.footer.index('site-footer__contact-details')
+        email = self.footer.index('site-footer__contact-detail--email')
+        whatsapp = self.footer.index('site-footer__contact-detail--whatsapp')
+        address = self.footer.index('Manufacturing base')
+        self.assertLess(details, email)
+        self.assertLess(email, whatsapp)
+        self.assertLess(whatsapp, address)
+        for marker in (
+            'mailto:',
+            "$contact['email']",
+            'site-footer__contact-detail--email',
+            'site-footer__contact-detail--whatsapp',
+            "'https://wa.me/' . $contact['whatsapp_href']",
+            'Chat on WhatsApp',
+            'M17.472 14.382',
+            '>Email<',
+            '>WhatsApp<',
+        ):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, self.footer)
+        wa_start = self.footer.index('site-footer__contact-detail--whatsapp')
+        wa_block = self.footer[wa_start:self.footer.index('</a>', wa_start)]
+        self.assertIn('target="_blank"', wa_block)
+        self.assertIn('rel="noopener"', wa_block)
+
+        preview = (ROOT / 'preview_site.py').read_text(encoding='utf-8')
+        for marker in (
+            'site-footer__contact-detail--email',
+            'site-footer__contact-detail--whatsapp',
+            'mailto:',
+            "contact['whatsapp_href']",
+            'Chat on WhatsApp',
+        ):
+            with self.subTest(preview=marker):
+                self.assertIn(marker, preview)
+
+        main_css = (ROOT / 'main.css').read_text(encoding='utf-8')
+        whatsapp_value = css_declarations_for_selector(
+            main_css,
+            '.site-footer__contact-detail--whatsapp .site-footer__contact-value',
+        )
+        self.assertEqual('600', whatsapp_value.get('font-weight'))
+        hover_value = css_declarations_for_selector(
+            main_css,
+            'a.site-footer__contact-detail:hover .site-footer__contact-value',
+        )
+        self.assertEqual('var(--sn-accent-on-dark)', hover_value.get('color'))
+        arabic_label = css_declarations_for_selector(
+            main_css,
+            ':lang(ar) .site-footer__contact-label',
+        )
+        self.assertEqual('inherit', arabic_label.get('font-family'))
+        self.assertEqual('0', arabic_label.get('letter-spacing'))
+        label = css_declarations_for_selector(main_css, '.site-footer__contact-label')
+        self.assertEqual('var(--sn-font-mono)', label.get('font-family'))
 
     def test_footer_has_no_cf7_modal_or_contact_link_interception(self):
         for removed in (
@@ -3669,6 +3756,124 @@ class PreviewHarnessTests(unittest.TestCase):
             self.assertFalse(WEBSITE in path.parents)
 
 
+class WhatsAppChatWidgetTests(unittest.TestCase):
+    """Contract for the floating WhatsApp-only chat dialog."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.widget_path = ROOT / 'inc' / 'whatsapp-chat.php'
+        cls.widget = cls.widget_path.read_text(encoding='utf-8') if cls.widget_path.is_file() else ''
+        cls.script_path = ROOT / 'assets' / 'whatsapp-chat.js'
+        cls.script = cls.script_path.read_text(encoding='utf-8') if cls.script_path.is_file() else ''
+        cls.functions = (ROOT / 'functions.php').read_text(encoding='utf-8')
+        cls.main_css = (ROOT / 'main.css').read_text(encoding='utf-8')
+
+    def test_widget_file_is_shipped_and_loaded(self):
+        self.assertTrue(self.widget_path.is_file(), 'Missing inc/whatsapp-chat.php')
+        self.assertTrue(self.script_path.is_file(), 'Missing assets/whatsapp-chat.js')
+        self.assertIn("inc/whatsapp-chat.php", self.functions)
+        self.assertIn('whatsapp-chat.js', self.functions)
+
+    def test_widget_uses_the_confirmed_whatsapp_number(self):
+        contact = (ROOT / 'template-parts' / 'data' / 'site-contact.php').read_text(encoding='utf-8')
+        self.assertRegex(contact, r"'whatsapp_href'\s+=>\s+'8613979938294'")
+        self.assertRegex(contact, r"'whatsapp'\s+=>\s+'\+86 139 7993 8294'")
+        self.assertIn("$contact['whatsapp_href']", self.widget)
+        self.assertIn("$contact['whatsapp']", self.widget)
+        self.assertIn("$wa_url = 'https://wa.me/' . $config['number'];", self.widget)
+        self.assertIn('data-wa-number="<?php echo esc_attr($config[\'number\']); ?>"', self.widget)
+        self.assertIn('href="<?php echo esc_url($wa_url); ?>"', self.widget)
+        self.assertIn('action="<?php echo esc_url($wa_url); ?>"', self.widget)
+        for removed in ('8613450284642', '8613800138000'):
+            with self.subTest(removed=removed):
+                self.assertNotIn(removed, contact)
+
+    def test_widget_markup_is_accessible_and_translatable(self):
+        for marker in (
+            'data-wa-chat',
+            'data-wa-toggle',
+            'data-wa-panel',
+            'data-wa-form',
+            'data-wa-close',
+            'data-wa-input',
+            'aria-expanded="false"',
+            'aria-controls="wa-chat-panel"',
+            'role="dialog"',
+            'tabindex="-1"',
+            'aria-labelledby="wa-chat-title"',
+            'aria-describedby="wa-chat-desc"',
+            'aria-label="Chat on WhatsApp"',
+            'aria-label="Close chat"',
+            'aria-label="Send on WhatsApp"',
+            'maxlength="1000"',
+        ):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, self.widget)
+        self.assertNotIn('data-no-translation', self.widget)
+        self.assertNotIn('<header class="wa-chat__header"', self.widget)
+        self.assertNotIn('<h2', self.widget)
+        self.assertIn('esc_html', self.widget)
+        self.assertIn('esc_attr', self.widget)
+        self.assertIn('esc_url', self.widget)
+
+    def test_widget_toggle_works_without_javascript(self):
+        for marker in (
+            '<a class="wa-chat__toggle"',
+            'href="<?php echo esc_url($wa_url); ?>"',
+            'target="_blank"',
+            'rel="noopener"',
+        ):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, self.widget)
+
+    def test_widget_hooks_and_guards(self):
+        self.assertIn("add_action('wp_footer', 'sonne_render_whatsapp_chat', 30)", self.widget)
+        self.assertIn('is_admin()', self.widget)
+        self.assertIn("function_exists('sonne_render_whatsapp_chat')", self.widget)
+
+    def test_widget_script_opens_whatsapp_with_encoded_message(self):
+        for marker in (
+            "'https://wa.me/'",
+            'encodeURIComponent',
+            'document.createElement(\'a\')',
+            'noopener',
+            'Escape',
+            'aria-expanded',
+            "event.key !== 'Enter'",
+            'requestSubmit',
+            "'(hover: hover) and (pointer: fine)'",
+            'replace(/\\D/g',
+        ):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, self.script)
+        self.assertNotIn('jQuery', self.script)
+        self.assertNotIn('window.open', self.script)
+
+    def widget_css(self):
+        marker = 'WhatsApp chat dialog'
+        start = self.main_css.find(marker)
+        self.assertNotEqual(-1, start, 'Missing WhatsApp CSS block')
+        return self.main_css[start:]
+
+    def test_widget_css_is_rtl_aware_and_mobile_safe(self):
+        css = self.widget_css()
+        for selector in ('.wa-chat', '.wa-chat__toggle', '.wa-chat__panel', '.wa-chat__bubble', '.wa-chat .wa-chat__send'):
+            with self.subTest(selector=selector):
+                self.assertIn(selector, css)
+        self.assertIn('inset-inline-end', css)
+        self.assertIn('prefers-reduced-motion', css)
+        self.assertIn('padding-inline', css)
+        self.assertRegex(css, r'\.wa-chat__toggle\s*\{[^}]*width:\s*56px')
+        self.assertRegex(css, r'\.wa-chat \.wa-chat__send\s*\{[^}]*width:\s*44px')
+        self.assertRegex(css, r'\.wa-chat \.wa-chat__send\s*\{[^}]*min-height:\s*44px')
+        self.assertRegex(css, r'\.wa-chat__panel\[hidden\]\s*\{\s*display:\s*none')
+        self.assertRegex(css, r'\.wa-chat__body\s*\{[^}]*min-height:\s*0')
+        self.assertIn('max-height: min(70dvh, 520px)', css)
+        self.assertIn('env(safe-area-inset-bottom)', css)
+        self.assertIn('calc(1.5rem + 72px)', css)
+        self.assertIn('#128c7e', css)
+
+
 class WordPressTemplateTests(unittest.TestCase):
     def test_page_templates_wrap_content_in_main_landmark(self):
         for template in ('page.php', 'front-page.php'):
@@ -3680,6 +3885,45 @@ class WordPressTemplateTests(unittest.TestCase):
                 end = source.index('</main>')
                 self.assertIn('the_content()', source[start:end])
                 self.assertNotIn('<h1', source.lower())
+
+
+class P0SearchAndSkipLinkTests(unittest.TestCase):
+    def test_skip_link_is_first_focusable_in_branded_header(self):
+        header = (ROOT / 'template-parts/header.php').read_text(encoding='utf-8')
+        self.assertIn('class="skip-link"', header)
+        self.assertIn('href="#main-content"', header)
+        self.assertLess(header.index('class="skip-link"'), header.index('<header'))
+
+        preview = (ROOT / 'preview_site.py').read_text(encoding='utf-8')
+        self.assertIn('class="skip-link"', preview)
+        self.assertIn('href="#main-content"', preview)
+
+    def test_skip_link_style_reveals_on_focus(self):
+        css = SONNE_CSS.read_text(encoding='utf-8')
+        block = re.search(r'\.skip-link\s*\{(.*?)\}', css, re.S)
+        self.assertIsNotNone(block)
+        self.assertIn('position: fixed', block.group(1))
+        self.assertRegex(css, r'\.skip-link:focus[^{]*\{[^}]*transform:\s*translateY\(0\)')
+
+    def test_search_template_renders_results_and_empty_state(self):
+        source = (ROOT / 'search.php').read_text(encoding='utf-8')
+        self.assertIn('<main id="main-content"', source)
+        self.assertIn('have_posts()', source)
+        self.assertIn('the_title', source)
+        self.assertIn('get_permalink', source)
+        self.assertIn('get_search_query(false)', source)
+        self.assertIn('name="s"', source)
+        self.assertIn('paginate_links', source)
+        self.assertIn('sn-empty', source)
+        self.assertIn("get_template_part('template-parts/footer')", source)
+        self.assertNotIn('// get_template_part', source)
+
+    def test_search_page_loads_shared_result_styles(self):
+        functions = (ROOT / 'functions.php').read_text(encoding='utf-8')
+        self.assertIn('is_search()', functions)
+        css = (ROOT / 'assets/css/sonne-insights.css').read_text(encoding='utf-8')
+        self.assertIn('.sn-search-form', css)
+        self.assertIn('.sn-search-result', css)
 
 
 if __name__ == '__main__':

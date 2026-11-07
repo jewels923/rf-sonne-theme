@@ -11,6 +11,7 @@ $current_language_name = '' !== $language_switcher['current_name']
     : $language_switcher['current'];
 ?>
 
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div id="site-top" aria-hidden="true"></div>
 <header class="site-header-shell">
     <div class="site-utility-bar">
@@ -131,6 +132,18 @@ $current_language_name = '' !== $language_switcher['current_name']
             </nav>
 
             <div class="site-header__actions">
+                <a
+                    class="site-header__email"
+                    href="<?php echo esc_url('mailto:' . $contact['email']); ?>"
+                    data-no-translation
+                    aria-label="<?php echo esc_attr('Email ' . $contact['email']); ?>"
+                >
+                    <svg class="site-header__email-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <rect x="3" y="5.5" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                        <path d="m3.8 7 7.2 5.1a2 2 0 0 0 2 0L20.2 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    </svg>
+                    <span class="site-header__email-text"><?php echo esc_html($contact['email']); ?></span>
+                </a>
                 <?php if (!empty($language_switcher['languages'])) : ?>
                     <details class="site-lang" data-site-lang data-no-translation>
                         <summary class="site-lang__toggle" aria-label="<?php echo esc_attr('Language: ' . $current_language_name); ?>">

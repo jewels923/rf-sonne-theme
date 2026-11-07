@@ -12,6 +12,8 @@ return array(
     'email'            => 'info@rf-sonne.com',
     'phone'            => '+86-0574-63615958',
     'phone_href'       => '+8657463615958',
+    'whatsapp'         => '+86 139 7993 8294',
+    'whatsapp_href'    => '8613979938294',
     'address'          => 'No. 87, 89, 91, Sanbei Middle Road, Xinze Village, Guanhaiwei Town, Cixi City, Ningbo City, Zhejiang Province, China',
     'address_lines'    => array(
         'No. 87, 89, 91, Sanbei Middle Road,',
