@@ -13,6 +13,7 @@
   --sn-card: #FCFEFF;
   --sn-line: #D2DEE7;
   --sn-line-strong: #B7C7D2;
+  --sn-field-line: #7C8C99;
   --sn-text: #0E1A22;
   --sn-text-muted: #54646F;
   --sn-accent: #0B5CD5;
@@ -51,6 +52,28 @@
   --sn-transition: 180ms ease;
 }
 
+/* No self-hosted subset covers Cyrillic, Arabic or CJK, so those scripts fall back to
+   system faces. Pinning the fallback order per locale keeps one family per role on every
+   OS instead of whatever each platform substitutes (Courier New for Arabic mono, NSimSun
+   for CJK mono, Tahoma at heavy Arabic weights). */
+:lang(ru) {
+  --sn-font-heading: 'Archivo', 'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif;
+  --sn-font-body: 'IBM Plex Sans', 'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif;
+  --sn-font-mono: 'IBM Plex Mono', Consolas, Menlo, 'DejaVu Sans Mono', monospace;
+}
+
+:lang(ar) {
+  --sn-font-heading: 'Archivo', 'Segoe UI', 'Noto Sans Arabic', Tahoma, sans-serif;
+  --sn-font-body: 'IBM Plex Sans', 'Segoe UI', 'Noto Sans Arabic', Tahoma, sans-serif;
+  --sn-font-mono: 'IBM Plex Mono', 'Segoe UI', 'Noto Sans Arabic', monospace;
+}
+
+:lang(zh) {
+  --sn-font-heading: 'Archivo', 'Microsoft YaHei', 'PingFang SC', 'Noto Sans SC', sans-serif;
+  --sn-font-body: 'IBM Plex Sans', 'Microsoft YaHei', 'PingFang SC', 'Noto Sans SC', sans-serif;
+  --sn-font-mono: 'IBM Plex Mono', 'Microsoft YaHei', 'PingFang SC', monospace;
+}
+
 html {
   font-size: 110%;
 }
@@ -69,8 +92,8 @@ body {
 }
 
 ::selection {
-  background: rgba(11, 92, 213, 0.2);
-  color: var(--sn-ink);
+  background: var(--sn-accent);
+  color: var(--sn-white);
 }
 
 h1,
@@ -141,8 +164,47 @@ summary:focus-visible {
 
 .sn-hero :focus-visible,
 .site-header-shell :focus-visible,
-.site-footer :focus-visible {
+.site-footer :focus-visible,
+.sn-cta :focus-visible,
+.sn-sheet :focus-visible {
   outline-color: var(--sn-accent-on-dark);
+}
+
+/* The floating back-to-top sits over page content, not the footer. */
+.site-footer__back-top:focus-visible {
+  outline-color: var(--sn-ink-deep);
+  box-shadow: 0 0 0 6px var(--sn-card);
+}
+
+@media (max-width: 768px) {
+  .site-footer__back-top:focus-visible {
+    outline-color: var(--sn-accent-on-dark);
+    box-shadow: none;
+  }
+}
+
+/* Skip link: off-canvas until focused, then the first stop above the fixed header. */
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10001;
+  padding: 12px 18px;
+  background: var(--sn-ink-deep);
+  color: var(--sn-white);
+  font-family: var(--sn-font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 0.18s ease-out;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid var(--sn-accent-on-dark);
+  outline-offset: 2px;
 }
 
 .sn-container {
@@ -210,7 +272,7 @@ summary:focus-visible {
   color: var(--sn-white);
   font-size: clamp(2.5rem, 4.7vw, 4rem);
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.06;
   letter-spacing: -0.045em;
   text-wrap: balance;
 }
@@ -1021,6 +1083,11 @@ body.home-header-scrolled {
   --home-header-shell-shadow: 0 14px 40px rgba(5, 16, 27, 0.3);
 }
 
+/* search.php renders no hero, so the header needs its own dark surface. */
+body.search .site-header-shell {
+  background: var(--sn-ink-deep);
+}
+
 /* No backdrop-filter here: it would turn the fixed header into the containing
    block for the fixed-position mobile drawer, collapsing it to header height. */
 body .site-mobile-nav {
@@ -1170,7 +1237,7 @@ body .site-mobile-nav__contact a.sn-btn:focus-visible {
   max-width: var(--sn-container);
 }
 
-.site-footer a:hover {
+.site-footer a:not(.site-footer__back-top):hover {
   color: var(--sn-accent-on-dark);
 }
 
