@@ -3904,6 +3904,12 @@ class P0SearchAndSkipLinkTests(unittest.TestCase):
         self.assertIsNotNone(block)
         self.assertIn('position: fixed', block.group(1))
         self.assertRegex(css, r'\.skip-link:focus[^{]*\{[^}]*transform:\s*translateY\(0\)')
+        # GeneratePress emits a:hover, a:focus { color: var(--contrast) } (#222),
+        # which outranks the base .skip-link rule once the link is focused.
+        focus = re.search(r'\.skip-link:focus[^{]*\{(.*?)\}', css, re.S)
+        self.assertIsNotNone(focus)
+        self.assertIn('background-color: #05101b', focus.group(1))
+        self.assertIn('color: #fcfeff', focus.group(1))
 
     def test_search_template_renders_results_and_empty_state(self):
         source = (ROOT / 'search.php').read_text(encoding='utf-8')
