@@ -203,7 +203,10 @@ summary:focus-visible {
 .skip-link:focus,
 .skip-link:focus-visible {
   transform: translateY(0);
-  outline: 3px solid var(--sn-accent-on-dark);
+  /* Literal colors: delayed/critical CSS can load a focus rule before the token sheet resolves. */
+  background-color: #05101b;
+  color: #fcfeff;
+  outline: 3px solid var(--sn-accent-on-dark, #8cc4ff);
   outline-offset: 2px;
 }
 
