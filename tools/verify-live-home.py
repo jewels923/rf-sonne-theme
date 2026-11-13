@@ -15,7 +15,7 @@ from pathlib import Path
 import certifi
 
 ROOT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location('blog_setup', ROOT / 'bak' / 'qa' / 'blog_setup.py')
+spec = importlib.util.spec_from_file_location('blog_setup', ROOT / 'tools' / 'qa' / 'blog_setup.py')
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)
 
