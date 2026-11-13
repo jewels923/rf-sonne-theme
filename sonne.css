@@ -1073,6 +1073,512 @@ body [class*="__eyebrow "][class] {
   }
 }
 
+/* ==========================================================================
+   Chrome layout — first-paint critical (inline critical layer)
+   --------------------------------------------------------------------------
+   LAYOUT copied verbatim from main.css so the inline sonne layer reserves the
+   final header / nav / drawer geometry before the render-deferred main.min.css
+   arrives. Without it a cold cache paints an expanded in-flow header (~3103px,
+   dropdowns visible because visibility:hidden still occupies space) that
+   collapses to the 84px fixed bar when main.css lands, shifting the whole
+   viewport (CLS ~1.0). Colour and the 8 min-height/font rules where sonne
+   already wins the cascade stay in the chrome section below and are NOT
+   repeated here. z-index uses literals (20/30): sonne defines no --z-* tokens.
+   No body.refit-chrome rules — that class is never added to <body>.
+   ========================================================================== */
+.site-header-shell {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+body .site-header-shell {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+body .site-header {
+  position: relative !important;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 78px;
+  position: static;
+}
+
+.site-header .inside-header,
+.site-header .container-xl {
+  max-width: 1440px !important;
+  padding: 0 48px 0 24px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.site-content,
+.generate-sections-inside-container {
+  padding-top: 0 !important;
+}
+
+.top-bar,
+.site-utility-bar {
+  display: none !important;
+}
+
+.site-branding {
+  flex-shrink: 0;
+}
+
+.site-branding__link {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.site-branding__logo {
+  max-height: 43px;
+  width: auto;
+  display: block;
+}
+
+.site-nav {
+  margin-left: auto;
+}
+
+.site-nav__list,
+.site-nav__dropdown-list,
+.site-mobile-nav__list,
+.site-mobile-nav__submenu ul,
+.site-footer__menu-list,
+.site-footer__trust-list,
+.site-footer__contact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+  margin-right: 0.75rem;
+  justify-content: flex-end;
+  gap: 0;
+}
+
+.site-nav__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.7rem;
+}
+
+/* min-height stays 44px in the chrome section below (sonne wins over main). */
+.site-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  padding: 0;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.7;
+  white-space: nowrap;
+}
+
+.site-nav__caret {
+  display: inline-block;
+  width: 0.34rem;
+  height: 0.34rem;
+  margin-top: -0.1rem;
+}
+
+.site-nav__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  padding: 1.5rem;
+  visibility: hidden;
+  margin-top: -1px;
+}
+
+.site-nav__dropdown--mega {
+  left: 50%;
+  width: 95vw;
+  max-width: 900px;
+  padding: 2.5rem;
+}
+
+.site-nav__item:hover > .site-nav__dropdown,
+.site-nav__item:focus-within > .site-nav__dropdown {
+  visibility: visible;
+}
+
+.site-nav__mega-inner {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+}
+
+.site-nav__mega-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+}
+
+.site-nav__mega-preview {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  position: relative;
+}
+
+.site-nav__mega-preview img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+}
+
+.site-nav__mega-footer {
+  padding: 14px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem -2.5rem -2.5rem -2.5rem;
+}
+
+.site-nav__mega-footnote {
+  margin: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+.site-nav__mega-title {
+  font-size: 13px;
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
+  letter-spacing: 0;
+}
+
+.site-nav__dropdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.site-nav__dropdown-list a {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  margin-left: -12px;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-shrink: 0;
+  gap: 0.625rem;
+  margin-left: 0;
+}
+
+.site-header__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0 0.35rem;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  flex: none;
+}
+
+.site-header__email-icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.site-lang {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+.site-lang__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0 0.4rem;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  list-style: none;
+}
+
+.site-lang__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.site-lang__globe {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.site-lang__caret {
+  width: 0.32rem;
+  height: 0.32rem;
+  margin-top: -0.18rem;
+}
+
+.site-lang[open] .site-lang__caret {
+  margin-top: 0.1rem;
+}
+
+.site-lang__panel {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + 21px);
+  z-index: 120;
+  width: 216px;
+  max-height: min(70vh, 420px);
+  overflow-y: auto;
+  padding: 0.4rem;
+}
+
+.site-lang__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-lang__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 44px;
+  padding: 0.55rem 0.65rem;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.site-lang__code {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+/* min-width/min-height stay 44px in the chrome section below (sonne wins). */
+.site-menu-toggle {
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+  width: 48px;
+  padding: 0.8rem;
+}
+
+.site-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+}
+
+/* The drawer carries the hidden attribute until opened, so inset:0 is safe. */
+.site-mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+}
+
+.site-mobile-nav__panel {
+  margin-left: auto;
+  width: min(100%, 420px);
+  height: 100%;
+  padding: 1.2rem 1rem 1.5rem;
+  overflow-y: auto;
+}
+
+.site-mobile-nav__header,
+.site-mobile-nav__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-mobile-nav__header {
+  padding-bottom: 1rem;
+}
+
+.site-mobile-nav__subline {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* min-height stays 44px in the chrome section below (sonne wins over 38px). */
+.site-mobile-nav__close,
+.site-mobile-nav__toggle {
+  padding: 0.45rem 0.8rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.site-mobile-nav__body {
+  padding-top: 1rem;
+}
+
+.site-mobile-nav__list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.site-mobile-nav__item {
+  padding-bottom: 0.85rem;
+}
+
+.site-mobile-nav__link {
+  font-size: 1rem;
+}
+
+.site-mobile-nav__submenu {
+  padding-top: 0.9rem;
+}
+
+.site-mobile-nav__submenu-group + .site-mobile-nav__submenu-group {
+  margin-top: 1rem;
+}
+
+.site-mobile-nav__submenu ul {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.site-mobile-nav__submenu a {
+  font-size: 0.95rem;
+}
+
+.site-mobile-nav__contact {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.site-footer__menu-title,
+.site-mobile-nav__submenu-title,
+.site-mobile-nav__brand {
+  margin: 0 0 0.8rem;
+  font-size: 0.84rem;
+}
+
+.site-mobile-nav__submenu-title,
+.site-mobile-nav__brand {
+  letter-spacing: 0.08em;
+}
+
+.site-footer-modal-open .site-header,
+.site-footer-modal-open #masthead {
+  visibility: hidden;
+}
+
+body.home-header-scrolled .site-branding__logo {
+  max-height: 36px;
+}
+
+body.site-nav-open {
+  overflow: hidden;
+}
+
+@media (max-width: 1279px) {
+  .site-header__email {
+    padding: 0 0.2rem;
+  }
+
+  .site-header__email-text {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-nav--desktop,
+  .site-header__catalog {
+    display: none;
+  }
+
+  .site-menu-toggle {
+    display: grid;
+  }
+
+  .site-lang__panel {
+    top: calc(100% + 14px);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1399px) {
+  .site-nav__item {
+    padding: 0 0.45rem;
+  }
+
+  .site-nav__link {
+    font-size: 13px;
+  }
+
+  .site-nav__list {
+    margin-right: 0.6rem;
+  }
+
+  .site-lang__globe {
+    display: none;
+  }
+
+  .site-lang__toggle {
+    padding: 0 0.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-branding__tagline {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-lang__toggle {
+    padding: 0 0.25rem;
+    gap: 0.32rem;
+  }
+
+  .site-lang__globe {
+    width: 14px;
+    height: 14px;
+  }
+
+  .site-lang__panel {
+    width: 204px;
+  }
+}
+
 /* Dark SONNE chrome supports the verified white logo over .sn-hero heroes. */
 body {
   --home-header-text: var(--sn-paper);
