@@ -53,14 +53,24 @@ function child_theme_asset_version($relative_path) {
     return (string) filemtime($absolute_path);
 }
 
+// Serve the csso-minified twin when present; sources stay editable for tests/preview.
+function child_theme_css_path($relative_path) {
+    $min = preg_replace('/\.css$/', '.min.css', $relative_path);
+    if ($min !== $relative_path && file_exists(get_stylesheet_directory() . '/' . $min)) {
+        return $min;
+    }
+    return $relative_path;
+}
+
 function child_theme_enqueue_assets() {
     // 自托管字体（Archivo / IBM Plex Sans / IBM Plex Mono latin 子集）
-    if (file_exists(get_stylesheet_directory() . '/assets/css/sonne-fonts.css')) {
+    $fonts_css = child_theme_css_path('assets/css/sonne-fonts.css');
+    if (file_exists(get_stylesheet_directory() . '/' . $fonts_css)) {
         wp_enqueue_style(
             'child-theme-fonts',
-            get_stylesheet_directory_uri() . '/assets/css/sonne-fonts.css',
+            get_stylesheet_directory_uri() . '/' . $fonts_css,
             array(),
-            child_theme_asset_version('assets/css/sonne-fonts.css')
+            child_theme_asset_version($fonts_css)
         );
     }
 
@@ -68,33 +78,36 @@ function child_theme_enqueue_assets() {
     wp_enqueue_style('generate-style');
 
     // 主设计系统 main.css
-    if (file_exists(get_stylesheet_directory() . '/main.css')) {
+    $main_css = child_theme_css_path('main.css');
+    if (file_exists(get_stylesheet_directory() . '/' . $main_css)) {
         wp_enqueue_style(
             'child-theme-main-css',
-            get_stylesheet_directory_uri() . '/main.css',
+            get_stylesheet_directory_uri() . '/' . $main_css,
             array('generate-style'),
-            child_theme_asset_version('main.css')
+            child_theme_asset_version($main_css)
         );
     }
 
     // SONNE shared tokens and chrome, loaded after the legacy design system.
-    if (file_exists(get_stylesheet_directory() . '/sonne.css')) {
+    $sonne_css = child_theme_css_path('sonne.css');
+    if (file_exists(get_stylesheet_directory() . '/' . $sonne_css)) {
         wp_enqueue_style(
             'child-theme-sonne-css',
-            get_stylesheet_directory_uri() . '/sonne.css',
+            get_stylesheet_directory_uri() . '/' . $sonne_css,
             array('child-theme-main-css'),
-            child_theme_asset_version('sonne.css')
+            child_theme_asset_version($sonne_css)
         );
     }
 
     // SONNE Insights blog styles
     if (is_home() || is_category() || is_archive() || is_singular('post') || is_page('resources') || is_search()) {
-        if (file_exists(get_stylesheet_directory() . '/assets/css/sonne-insights.css')) {
+        $insights_css = child_theme_css_path('assets/css/sonne-insights.css');
+        if (file_exists(get_stylesheet_directory() . '/' . $insights_css)) {
             wp_enqueue_style(
                 'sonne-insights',
-                get_stylesheet_directory_uri() . '/assets/css/sonne-insights.css',
+                get_stylesheet_directory_uri() . '/' . $insights_css,
                 array('child-theme-sonne-css'),
-                child_theme_asset_version('assets/css/sonne-insights.css')
+                child_theme_asset_version($insights_css)
             );
         }
     }
@@ -142,9 +155,22 @@ function child_theme_prune_assets() {
         'wp-img-auto-sizes',
         'hostinger_main_styles',
         'generate-child',
+        // 页头语言切换器是主题自带的 details/summary，TranslatePress 的悬浮切换器资源用不上。
+        'trp-language-switcher-v2',
+        'trp-language-switcher',
+        'trp-frontend-language-switcher',
     ) as $handle) {
         wp_dequeue_style($handle);
         wp_deregister_style($handle);
+    }
+
+    foreach (array(
+        'trp-language-switcher-js-v2',
+        'trp-language-switcher-js',
+        'trp-frontend-language-switcher',
+    ) as $handle) {
+        wp_dequeue_script($handle);
+        wp_deregister_script($handle);
     }
 
     if (child_theme_is_form_page()) {
@@ -169,6 +195,19 @@ function child_theme_prune_assets() {
     wp_dequeue_style('cf7apps-honeypot-frontend');
 }
 add_action('wp_enqueue_scripts', 'child_theme_prune_assets', 100);
+
+// Hostinger 与 TranslatePress 在优先级 100 之后仍会登记资源；
+// 在打印前的最后一刻再摘一次，保证 Coming Soon 样式与 TP 切换器资源不出现在真实页面。
+function child_theme_prune_assets_late() {
+    foreach (array('hostinger_main_styles', 'trp-language-switcher-v2', 'trp-language-switcher') as $handle) {
+        wp_dequeue_style($handle);
+    }
+    foreach (array('trp-language-switcher-js-v2', 'trp-language-switcher-js') as $handle) {
+        wp_dequeue_script($handle);
+    }
+}
+add_action('wp_print_styles', 'child_theme_prune_assets_late', 0);
+add_action('wp_print_scripts', 'child_theme_prune_assets_late', 0);
 
 // Emoji 探测脚本与样式全站无用
 remove_action('wp_head', 'print_emoji_detection_script', 7);

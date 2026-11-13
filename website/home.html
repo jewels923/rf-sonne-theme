@@ -100,6 +100,10 @@
     .sn-home .sn-home__evidence-plates figure:not(:first-child) img { height: auto; aspect-ratio: 16 / 9; }
     .sn-home .sn-home__evidence-plates figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 9px 12px; background: rgba(5, 16, 27, .82); color: rgba(252, 254, 255, .8); font-family: var(--sn-font-mono); font-size: var(--home-label); line-height: 1.45; }
     .sn-home .sn-home__table-note { margin: 16px 0 0; color: var(--sn-text-muted); font-size: .85rem; }
+    /* In-prose links must be distinguishable without relying on color alone (WCAG 1.4.1).
+       !important is required: main.css sets a global `a { text-decoration: none !important }`. */
+    .sn-home .sn-home__table-note a { text-decoration: underline !important; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .sn-home .sn-home__rfq-panel p a { text-decoration: underline !important; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
     /* Fit review: the frequency boundary reads as an instrument, not a feature card. */
     .sn-home .sn-home__fit-grid { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(320px, .78fr); gap: clamp(32px, 5vw, 72px); align-items: start; margin-top: 40px; }
@@ -337,7 +341,7 @@
             <div class="sn-home__rail-track" data-rail-track>
               <article class="sn-home__plate">
                 <figure class="sn-home__plate-figure">
-                  <div class="sn-home__plate-media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" alt="RF bandpass filter" width="1024" height="571" loading="lazy" decoding="async"></div>
+                  <div class="sn-home__plate-media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp" srcset="https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2-300x167.webp 300w, https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2-768x428.webp 768w, https://rf-sonne.com/wp-content/uploads/2026/10/prod-bandpass-v2.webp 1024w" sizes="(max-width: 1023px) 78vw, 370px" alt="RF bandpass filter" width="1024" height="571" loading="lazy" decoding="async"></div>
                   <figcaption class="sn-home__plate-tag"><span>Plate 01</span><span>RF / filters</span></figcaption>
                 </figure>
                 <div class="sn-home__plate-body">
@@ -352,7 +356,7 @@
               </article>
               <article class="sn-home__plate">
                 <figure class="sn-home__plate-figure">
-                  <div class="sn-home__plate-media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave.webp" alt="Microwave and RF components" width="1024" height="1024" loading="lazy" decoding="async"></div>
+                  <div class="sn-home__plate-media"><img src="https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave.webp" srcset="https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave-300x300.webp 300w, https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave-768x768.webp 768w, https://rf-sonne.com/wp-content/uploads/2026/10/card-microwave.webp 1024w" sizes="(max-width: 1023px) 78vw, 370px" alt="Microwave and RF components" width="1024" height="1024" loading="lazy" decoding="async"></div>
                   <figcaption class="sn-home__plate-tag"><span>Plate 02</span><span>Waveguide</span></figcaption>
                 </figure>
                 <div class="sn-home__plate-body">
@@ -703,6 +707,7 @@
       var pinned = false;
       var frame = 0;
       var resizeTimer = 0;
+      var stickyTop = 85;
 
       function pad(value) {
         return (value < 10 ? '0' : '') + value;
@@ -729,6 +734,12 @@
         setProgress(0);
       }
 
+      function applyProgress(progress) {
+        progress = Math.max(0, Math.min(1, progress));
+        viewport.scrollLeft = progress * max;
+        setProgress(progress);
+      }
+
       function measure() {
         if (!wide.matches || !tall.matches || reduced.matches) {
           unpin();
@@ -736,24 +747,26 @@
         }
         rail.classList.add('is-pinned');
         rail.style.height = 'auto';
-        max = Math.max(0, track.scrollWidth - viewport.clientWidth);
-        if (max < 24) {
+        // Batch layout reads after the class/height writes, then do all writes,
+        // so the pin setup forces a single reflow instead of one per property.
+        var overflow = Math.max(0, track.scrollWidth - viewport.clientWidth);
+        if (overflow < 24) {
           unpin();
           return;
         }
+        max = overflow;
         pinned = true;
-        var stickyTop = parseFloat(window.getComputedStyle(stage).top) || 85;
-        rail.style.height = (stage.offsetHeight + max) + 'px';
-        update(stickyTop);
+        stickyTop = parseFloat(window.getComputedStyle(stage).top) || 85;
+        var stageHeight = stage.offsetHeight;
+        var railTop = rail.getBoundingClientRect().top;
+        rail.style.height = (stageHeight + max) + 'px';
+        applyProgress((stickyTop - railTop) / max);
       }
 
-      function update(stickyTop) {
+      function update() {
         if (!pinned) return;
-        var top = typeof stickyTop === 'number' ? stickyTop : (parseFloat(window.getComputedStyle(stage).top) || 85);
-        var progress = (top - rail.getBoundingClientRect().top) / max;
-        progress = Math.max(0, Math.min(1, progress));
-        viewport.scrollLeft = progress * max;
-        setProgress(progress);
+        var railTop = rail.getBoundingClientRect().top;
+        applyProgress((stickyTop - railTop) / max);
       }
 
       function onScroll() {
@@ -784,7 +797,7 @@
       if (document.fonts) {
         if (document.fonts.ready) document.fonts.ready.then(measure);
       }
-      measure();
+      window.requestAnimationFrame(measure);
     })();
   </script>
 

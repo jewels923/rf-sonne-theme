@@ -243,7 +243,7 @@ class ChromeTests(unittest.TestCase):
         self.assertIn("inc/insights.php", source)
         self.assertIn("'/inc/insights.php'", source)
         self.assertIn('sonne-insights', source)
-        self.assertIn("'/assets/css/sonne-insights.css'", source)
+        self.assertIn("child_theme_css_path('assets/css/sonne-insights.css')", source)
 
     def test_sitemap_cache_invalidated_on_publish(self):
         source = read(FUNCTIONS)

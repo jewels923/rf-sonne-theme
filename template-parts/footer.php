@@ -10,6 +10,8 @@ $footer_groups = require __DIR__ . '/data/footer-groups.php';
                 <a class="site-footer__brand-logo-link" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php echo esc_attr($contact['brand_name']); ?> home">
                     <img
                         src="<?php echo esc_url($contact['logo_url']); ?>"
+                        srcset="<?php echo esc_url($contact['logo_small_url']); ?> 300w, <?php echo esc_url($contact['logo_url']); ?> 381w"
+                        sizes="180px"
                         alt="<?php echo esc_attr($contact['logo_alt']); ?>"
                         class="site-footer__brand-logo"
                         width="381"

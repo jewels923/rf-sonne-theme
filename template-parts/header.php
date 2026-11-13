@@ -35,6 +35,8 @@ $current_language_name = '' !== $language_switcher['current_name']
                 <a class="site-branding__link" href="<?php echo esc_url(home_url('/')); ?>" aria-label="SONNE home">
                     <img
                         src="<?php echo esc_url($contact['logo_url']); ?>"
+                        srcset="<?php echo esc_url($contact['logo_small_url']); ?> 300w, <?php echo esc_url($contact['logo_url']); ?> 381w"
+                        sizes="150px"
                         alt="<?php echo esc_attr($contact['logo_alt']); ?>"
                         class="site-branding__logo"
                         width="381"
@@ -146,7 +148,7 @@ $current_language_name = '' !== $language_switcher['current_name']
                 </a>
                 <?php if (!empty($language_switcher['languages'])) : ?>
                     <details class="site-lang" data-site-lang data-no-translation>
-                        <summary class="site-lang__toggle" aria-label="<?php echo esc_attr('Language: ' . $current_language_name); ?>">
+                        <summary class="site-lang__toggle" aria-label="<?php echo esc_attr('Language: ' . $current_language_name . ' (' . $language_switcher['current'] . ')'); ?>">
                             <svg class="site-lang__globe" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                                 <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
                                 <path d="M3 12h18M12 3c2.6 2.5 4 5.7 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.7-4-9s1.4-6.5 4-9Z" stroke="currentColor" stroke-width="1.6"/>

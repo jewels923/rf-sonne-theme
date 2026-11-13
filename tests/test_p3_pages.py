@@ -1193,13 +1193,21 @@ class P3SharedChromeTests(unittest.TestCase):
         self.assertEqual('0.9375rem', eyebrow.get('font-size'))
 
     def test_sonne_stylesheet_loads_after_main_and_widget_is_bypassed(self):
-        main_version = "child_theme_asset_version('main.css')"
-        sonne_version = "child_theme_asset_version('sonne.css')"
-        self.assertIn(main_version, self.functions)
-        self.assertIn(sonne_version, self.functions)
-        self.assertLess(self.functions.index(main_version), self.functions.index(sonne_version))
+        main_enqueue = "child_theme_css_path('main.css')"
+        sonne_enqueue = "child_theme_css_path('sonne.css')"
+        self.assertIn(main_enqueue, self.functions)
+        self.assertIn(sonne_enqueue, self.functions)
+        self.assertLess(self.functions.index(main_enqueue), self.functions.index(sonne_enqueue))
         self.assertIn("array('child-theme-main-css')", self.functions)
         self.assertNotIn('whatsapp-widget.php', self.functions)
+
+    def test_css_enqueues_serve_minified_twins_with_source_fallback(self):
+        self.assertIn('function child_theme_css_path', self.functions)
+        self.assertIn("'.min.css'", self.functions)
+        for source in ('main.css', 'sonne.css', 'assets/css/sonne-fonts.css', 'assets/css/sonne-insights.css'):
+            self.assertIn("child_theme_css_path('%s')" % source, self.functions)
+        self.assertIn('child_theme_asset_version($main_css)', self.functions)
+        self.assertIn('child_theme_asset_version($sonne_css)', self.functions)
 
     def test_fonts_are_self_hosted_without_a_google_fonts_import(self):
         main_css = (ROOT / 'main.css').read_text(encoding='utf-8')
@@ -1209,6 +1217,23 @@ class P3SharedChromeTests(unittest.TestCase):
         self.assertIn("assets/css/sonne-fonts.css", self.functions)
         self.assertIn("'/assets/fonts/'", theme_header)
         self.assertIn('archivo-latin-var.woff2', theme_header)
+
+    def test_plex_mono_critical_weights_are_preloaded(self):
+        theme_header = (ROOT / 'header.php').read_text(encoding='utf-8')
+        fonts_css = (ROOT / 'assets' / 'css' / 'sonne-fonts.css').read_text(encoding='utf-8')
+        link_tags = re.findall(r'<link\b(?:\?>|[^>])*>', theme_header)
+        # PSI's critical chain on the homepage ends in the mono 400 (hero/plate labels)
+        # and 600 (ledger headers) latin faces; preload exactly those two weights.
+        for weight in ('400', '600'):
+            filename = 'plex-mono-latin-%s.woff2' % weight
+            self.assertTrue((ROOT / 'assets' / 'fonts' / filename).is_file(), filename + ' missing on disk')
+            self.assertIn(filename, fonts_css, filename + ' must have an @font-face')
+            preloads = [t for t in link_tags if 'rel="preload"' in t and filename in t]
+            self.assertTrue(preloads, filename + ' must be preloaded in header.php')
+            tag = preloads[0]
+            self.assertIn('as="font"', tag)
+            self.assertIn('type="font/woff2"', tag)
+            self.assertIn('crossorigin', tag)
 
     def test_greek_glyphs_render_from_the_self_hosted_family(self):
         fonts_css = (ROOT / 'assets' / 'css' / 'sonne-fonts.css').read_text(encoding='utf-8')

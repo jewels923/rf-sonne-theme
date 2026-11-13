@@ -6,6 +6,7 @@
 return array(
     'brand_name'       => 'SONNE',
     'logo_url'         => 'https://rf-sonne.com/wp-content/uploads/2026/10/logo-sonne-white.png',
+    'logo_small_url'   => 'https://rf-sonne.com/wp-content/uploads/2026/10/logo-sonne-white-300x80.png',
     'logo_alt'         => 'SONNE Electronics logo',
     'company_name'     => 'SONNE ELECTRONICS',
     'founding_date'    => '2015',
