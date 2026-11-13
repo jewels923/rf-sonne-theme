@@ -800,24 +800,35 @@ document.addEventListener('DOMContentLoaded', function () {{
 
   var footer = document.querySelector('.site-footer');
   var footerVisible = false;
+  var backTopVisible = null;
+  var backTopTicking = false;
 
-  function toggleBackTop() {{
+  function applyBackTop() {{
+    backTopTicking = false;
     var shouldShow = window.scrollY > 400;
     if (footerVisible) {{ shouldShow = false; }}
+    if (shouldShow === backTopVisible) {{ return; }}
+    backTopVisible = shouldShow;
     backTop.classList.toggle('is-visible', shouldShow);
+  }}
+
+  function requestBackTop() {{
+    if (backTopTicking) {{ return; }}
+    backTopTicking = true;
+    window.requestAnimationFrame(applyBackTop);
   }}
 
   if (footer) {{
     if ('IntersectionObserver' in window) {{
       new IntersectionObserver(function (entries) {{
         footerVisible = entries[0].isIntersecting;
-        toggleBackTop();
+        requestBackTop();
       }}, {{ threshold: 0 }}).observe(footer);
     }}
   }}
 
-  window.addEventListener('scroll', toggleBackTop, {{ passive: true }});
-  toggleBackTop();
+  window.addEventListener('scroll', requestBackTop, {{ passive: true }});
+  applyBackTop();
 
   backTop.addEventListener('click', function (event) {{
     event.preventDefault();

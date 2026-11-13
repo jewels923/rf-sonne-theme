@@ -62,22 +62,59 @@ function child_theme_css_path($relative_path) {
     return $relative_path;
 }
 
-function child_theme_enqueue_assets() {
-    // 自托管字体（Archivo / IBM Plex Sans / IBM Plex Mono latin 子集）
-    $fonts_css = child_theme_css_path('assets/css/sonne-fonts.css');
-    if (file_exists(get_stylesheet_directory() . '/' . $fonts_css)) {
-        wp_enqueue_style(
-            'child-theme-fonts',
-            get_stylesheet_directory_uri() . '/' . $fonts_css,
-            array(),
-            child_theme_asset_version($fonts_css)
-        );
+// Read a stylesheet for inlining into <head>. Relative url(./|../) tokens resolve
+// against the document root once inlined (not the CSS file's dir), so rebase them
+// onto the stylesheet's own directory URI — otherwise @font-face src '../fonts/x'
+// 404s at /fonts/x. Absolute, root-relative, data: and fragment URLs are left as-is.
+function child_theme_inline_css($relative_path) {
+    $absolute_path = get_stylesheet_directory() . '/' . $relative_path;
+    if (!file_exists($absolute_path)) {
+        return '';
     }
+    $css = file_get_contents($absolute_path);
+    $dir = str_replace('\\', '/', dirname($relative_path));
+    $base = trailingslashit(get_stylesheet_directory_uri() . ($dir === '.' ? '' : '/' . $dir));
+    return preg_replace_callback(
+        '/url\(\s*([\'"]?)(\.\.?\/[^\'")]+)\1\s*\)/i',
+        function ($m) use ($base) {
+            return 'url(' . $m[1] . $base . $m[2] . $m[1] . ')';
+        },
+        $css
+    );
+}
 
-    // 父主题样式
+// The mega-menu preview box stays hidden until hover and renders only ~380px, so
+// serving the full-size original downloads wasted bytes on every page load. Map the
+// URL to an already-generated square variant when that file exists on disk; fall back
+// to the original otherwise. Never creates new image files.
+function child_theme_preview_src($url) {
+    $url = (string) $url;
+    if ($url === '' || !preg_match('/\.webp$/i', $url)) {
+        return $url;
+    }
+    $upload = wp_get_upload_dir();
+    if (empty($upload['baseurl']) || empty($upload['basedir']) || strpos($url, $upload['baseurl']) !== 0) {
+        return $url;
+    }
+    $relative = substr($url, strlen($upload['baseurl']));
+    foreach (array('-768x768', '-300x300') as $suffix) {
+        $variant = preg_replace('/\.webp$/i', $suffix . '.webp', $relative);
+        if (file_exists($upload['basedir'] . $variant)) {
+            return $upload['baseurl'] . $variant;
+        }
+    }
+    return $url;
+}
+
+function child_theme_enqueue_assets() {
+    // 渲染阻塞优化：设计关键层（sonne-fonts + sonne，博客页加 sonne-insights）由
+    // header.php 内联进 <head>，首屏无需阻塞请求。这里只登记重的遗留层（GP 父主题 +
+    // main.css），再由 child_theme_async_style_tag 转为异步加载（保留外部缓存）。
+
+    // 父主题样式（异步）
     wp_enqueue_style('generate-style');
 
-    // 主设计系统 main.css
+    // 主设计系统 main.css（异步）
     $main_css = child_theme_css_path('main.css');
     if (file_exists(get_stylesheet_directory() . '/' . $main_css)) {
         wp_enqueue_style(
@@ -88,30 +125,6 @@ function child_theme_enqueue_assets() {
         );
     }
 
-    // SONNE shared tokens and chrome, loaded after the legacy design system.
-    $sonne_css = child_theme_css_path('sonne.css');
-    if (file_exists(get_stylesheet_directory() . '/' . $sonne_css)) {
-        wp_enqueue_style(
-            'child-theme-sonne-css',
-            get_stylesheet_directory_uri() . '/' . $sonne_css,
-            array('child-theme-main-css'),
-            child_theme_asset_version($sonne_css)
-        );
-    }
-
-    // SONNE Insights blog styles
-    if (is_home() || is_category() || is_archive() || is_singular('post') || is_page('resources') || is_search()) {
-        $insights_css = child_theme_css_path('assets/css/sonne-insights.css');
-        if (file_exists(get_stylesheet_directory() . '/' . $insights_css)) {
-            wp_enqueue_style(
-                'sonne-insights',
-                get_stylesheet_directory_uri() . '/' . $insights_css,
-                array('child-theme-sonne-css'),
-                child_theme_asset_version($insights_css)
-            );
-        }
-    }
-
     // 页头行为脚本（可选）
     if (file_exists(get_stylesheet_directory() . '/assets/site-header.js')) {
         wp_enqueue_script(
@@ -119,7 +132,7 @@ function child_theme_enqueue_assets() {
             get_stylesheet_directory_uri() . '/assets/site-header.js',
             array(),
             child_theme_asset_version('assets/site-header.js'),
-            true
+            false
         );
     }
 
@@ -130,11 +143,46 @@ function child_theme_enqueue_assets() {
             get_stylesheet_directory_uri() . '/assets/whatsapp-chat.js',
             array(),
             child_theme_asset_version('assets/whatsapp-chat.js'),
-            true
+            false
         );
     }
 }
 add_action('wp_enqueue_scripts', 'child_theme_enqueue_assets');
+
+// 关键请求链优化：页头 / WhatsApp / GP 导航三个行为脚本改为 <head> 内 defer。
+// 它们原先排在页脚且无 defer，预加载扫描器要到 HTML 流末尾才发现，形成
+// “文档 → 脚本” 的串行关键链（PSI 关键路径延迟 618ms）。defer 让扫描器在流开头
+// 即发现并以低优先级并行下载（链深降为 1），执行仍推迟到解析完成后，DOM 已就绪，
+// 行为不变（两个子主题脚本本就带 DOMContentLoaded 守卫）。
+function child_theme_defer_behavior_scripts($tag, $handle, $src) {
+    if (!in_array($handle, array('child-theme-site-header', 'child-theme-whatsapp-chat', 'generate-menu'), true)) {
+        return $tag;
+    }
+    if (strpos($tag, ' defer') !== false) {
+        return $tag;
+    }
+    return str_replace(' src=', ' defer src=', $tag);
+}
+add_filter('script_loader_tag', 'child_theme_defer_behavior_scripts', 10, 3);
+
+// GP 导航脚本默认排在页脚；移到 <head> 配合上面的 defer 以尽早被扫描器发现。
+function child_theme_head_behavior_scripts() {
+    wp_script_add_data('generate-menu', 'group', 0);
+}
+add_action('wp_enqueue_scripts', 'child_theme_head_behavior_scripts', 20);
+
+// 把重的遗留样式表（GP 父主题 + main.css）转为非阻塞：rel=preload as=style，
+// onload 后切换为 stylesheet，并提供 noscript 回退。设计关键层已内联，首屏不受
+// 这些请求阻塞；级联顺序由 DOM 位置保证（异步 link 在 wp_head 内，内联层在其后）。
+function child_theme_async_style_tag($html, $handle, $href, $media) {
+    if (!in_array($handle, array('generate-style', 'child-theme-main-css'), true)) {
+        return $html;
+    }
+    $preload = '<link rel="preload" as="style" href="' . esc_url($href) . '" onload="this.onload=null;this.rel=\'stylesheet\'">';
+    $fallback = '<noscript><link rel="stylesheet" href="' . esc_url($href) . '"></noscript>';
+    return $preload . "\n" . $fallback;
+}
+add_filter('style_loader_tag', 'child_theme_async_style_tag', 10, 4);
 
 // ============================================================
 // 资源裁剪

@@ -143,20 +143,32 @@
         }
 
         var ticking = false;
+        var headerThreshold = 80;
+        var lastScrolled = null;
+        var logo = shell.querySelector('.site-branding__logo');
 
-        function syncHomeHeaderState() {
-            var threshold = homeHero
+        // Measure the hero-derived threshold off the scroll path (init + resize
+        // only). Reading offsetHeight per scroll frame after a style write forces
+        // a synchronous layout; caching it keeps steady scrolling reflow-free.
+        function measureHeaderThreshold() {
+            headerThreshold = homeHero
                 ? Math.max(24, Math.min(homeHero.offsetHeight * 0.08, 120))
                 : 80;
-            var isScrolled = window.scrollY > threshold;
+        }
+
+        function syncHomeHeaderState() {
+            var isScrolled = window.scrollY > headerThreshold;
+            ticking = false;
+            if (isScrolled === lastScrolled) {
+                return;
+            }
+            lastScrolled = isScrolled;
             body.classList.toggle('home-header-scrolled', isScrolled);
-            var logo = shell.querySelector('.site-branding__logo');
             if (logo && logo.dataset.baseHeight) {
                 var h = isScrolled ? (logo.dataset.scrollHeight || '35px') : logo.dataset.baseHeight;
                 logo.style.maxHeight = h;
                 logo.style.height = h;
             }
-            ticking = false;
         }
 
         function requestHeaderSync() {
@@ -168,9 +180,14 @@
             window.requestAnimationFrame(syncHomeHeaderState);
         }
 
+        measureHeaderThreshold();
         syncHomeHeaderState();
         window.addEventListener('scroll', requestHeaderSync, { passive: true });
-        window.addEventListener('resize', requestHeaderSync);
+        window.addEventListener('resize', function () {
+            measureHeaderThreshold();
+            lastScrolled = null;
+            requestHeaderSync();
+        });
     }
 
     if (document.readyState === 'loading') {

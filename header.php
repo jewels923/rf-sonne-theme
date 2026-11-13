@@ -30,6 +30,22 @@
         $sonne_head
     );
     echo $sonne_head;
+    // 内联设计关键层：字体 @font-face + SONNE tokens/chrome/base（博客页再加 Insights）。
+    // 放在 wp_head 输出之后，使 sonne 在等特异性规则上覆盖异步加载的 main.css，
+    // 首屏无需任何渲染阻塞样式表。读取 .min.css 孪生体（child_theme_css_path）。
+    $sonne_inline_files = array(
+        child_theme_css_path('assets/css/sonne-fonts.css'),
+        child_theme_css_path('sonne.css'),
+    );
+    if (is_home() || is_category() || is_archive() || is_singular('post') || is_page('resources') || is_search()) {
+        $sonne_inline_files[] = child_theme_css_path('assets/css/sonne-insights.css');
+    }
+    foreach ($sonne_inline_files as $sonne_inline_rel) {
+        $sonne_inline_css = child_theme_inline_css($sonne_inline_rel);
+        if ($sonne_inline_css !== '') {
+            echo '<style id="sonne-inline-' . esc_attr(sanitize_key(basename($sonne_inline_rel, '.css'))) . '">' . $sonne_inline_css . '</style>' . "\n";
+        }
+    }
     if (!preg_match('/<link[^>]+rel=["\']canonical["\']/i', $sonne_head)) {
         $sonne_canonical = function_exists('sonne_current_canonical_url') ? sonne_current_canonical_url() : '';
         if ($sonne_canonical) {

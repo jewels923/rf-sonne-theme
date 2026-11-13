@@ -1193,28 +1193,30 @@ class P3SharedChromeTests(unittest.TestCase):
         self.assertEqual('0.9375rem', eyebrow.get('font-size'))
 
     def test_sonne_stylesheet_loads_after_main_and_widget_is_bypassed(self):
-        main_enqueue = "child_theme_css_path('main.css')"
-        sonne_enqueue = "child_theme_css_path('sonne.css')"
-        self.assertIn(main_enqueue, self.functions)
-        self.assertIn(sonne_enqueue, self.functions)
-        self.assertLess(self.functions.index(main_enqueue), self.functions.index(sonne_enqueue))
-        self.assertIn("array('child-theme-main-css')", self.functions)
+        # main.css stays an external (async) stylesheet; the SONNE layer is inlined
+        # in the document head AFTER wp_head, so it overrides main on equal specificity.
+        head = (ROOT / 'header.php').read_text(encoding='utf-8')
+        self.assertIn("child_theme_css_path('main.css')", self.functions)
+        self.assertIn("child_theme_css_path('sonne.css')", head)
+        self.assertLess(head.index('echo $sonne_head'), head.index("child_theme_css_path('sonne.css')"))
         self.assertNotIn('whatsapp-widget.php', self.functions)
 
     def test_css_enqueues_serve_minified_twins_with_source_fallback(self):
+        head = (ROOT / 'header.php').read_text(encoding='utf-8')
         self.assertIn('function child_theme_css_path', self.functions)
         self.assertIn("'.min.css'", self.functions)
-        for source in ('main.css', 'sonne.css', 'assets/css/sonne-fonts.css', 'assets/css/sonne-insights.css'):
-            self.assertIn("child_theme_css_path('%s')" % source, self.functions)
+        # main.css enqueued (async); design layer inlined — all via the min-twin helper.
+        self.assertIn("child_theme_css_path('main.css')", self.functions)
         self.assertIn('child_theme_asset_version($main_css)', self.functions)
-        self.assertIn('child_theme_asset_version($sonne_css)', self.functions)
+        for source in ('sonne.css', 'assets/css/sonne-fonts.css', 'assets/css/sonne-insights.css'):
+            self.assertIn("child_theme_css_path('%s')" % source, head)
 
     def test_fonts_are_self_hosted_without_a_google_fonts_import(self):
         main_css = (ROOT / 'main.css').read_text(encoding='utf-8')
         theme_header = (ROOT / 'header.php').read_text(encoding='utf-8')
         self.assertNotIn('fonts.googleapis.com', main_css)
         self.assertNotIn('fonts.googleapis.com', theme_header)
-        self.assertIn("assets/css/sonne-fonts.css", self.functions)
+        self.assertIn("assets/css/sonne-fonts.css", theme_header)
         self.assertIn("'/assets/fonts/'", theme_header)
         self.assertIn('archivo-latin-var.woff2', theme_header)
 
@@ -3950,8 +3952,8 @@ class P0SearchAndSkipLinkTests(unittest.TestCase):
         self.assertNotIn('// get_template_part', source)
 
     def test_search_page_loads_shared_result_styles(self):
-        functions = (ROOT / 'functions.php').read_text(encoding='utf-8')
-        self.assertIn('is_search()', functions)
+        head = (ROOT / 'header.php').read_text(encoding='utf-8')
+        self.assertIn('is_search()', head)
         css = (ROOT / 'assets/css/sonne-insights.css').read_text(encoding='utf-8')
         self.assertIn('.sn-search-form', css)
         self.assertIn('.sn-search-result', css)

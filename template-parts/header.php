@@ -76,7 +76,7 @@ $current_language_name = '' !== $language_switcher['current_name']
                                                                 <a
                                                                     href="<?php echo esc_url($link['url']); ?>"
                                                                     class="mega-item hover-trigger"
-                                                                    data-img="<?php echo esc_url(!empty($link['preview_image']) ? $link['preview_image'] : $mega_menu_defaults['default_preview_image']); ?>"
+                                                                    data-img="<?php echo esc_url(child_theme_preview_src(!empty($link['preview_image']) ? $link['preview_image'] : $mega_menu_defaults['default_preview_image'])); ?>"
                                                                     data-alt="<?php echo esc_attr($link['label']); ?>"
                                                                 >
                                                                     <?php echo esc_html($link['label']); ?>
@@ -89,11 +89,13 @@ $current_language_name = '' !== $language_switcher['current_name']
                                         </div>
                                         <div class="site-nav__mega-preview">
                                             <img
-                                                src="<?php echo esc_url(!empty($item['default_preview_image']) ? $item['default_preview_image'] : $mega_menu_defaults['default_preview_image']); ?>"
+                                                src="<?php echo esc_url(child_theme_preview_src(!empty($item['default_preview_image']) ? $item['default_preview_image'] : $mega_menu_defaults['default_preview_image'])); ?>"
                                                 id="productPreviewImg"
                                                 alt="<?php echo esc_attr(!empty($item['default_preview_alt']) ? $item['default_preview_alt'] : $mega_menu_defaults['default_preview_alt']); ?>"
                                                 width="1024"
                                                 height="1024"
+                                                loading="lazy"
+                                                decoding="async"
                                             >
                                         </div>
                                     </div>
