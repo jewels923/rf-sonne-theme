@@ -415,7 +415,6 @@ video {
 a {
   color: var(--color-heading);
   text-decoration: none !important;
-  transition: color var(--transition-fast);
 }
 
 a:hover {
@@ -817,7 +816,7 @@ small {
   color: var(--color-primary);
   font-size: 1rem;
   font-weight: 700;
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  transition: transform var(--transition-fast);
 }
 
 .link-card:hover .arrow-link {
@@ -2380,7 +2379,7 @@ p {
 .site-utility-bar__links a {
   color: rgba(255, 255, 255, 0.86);
   display: inline-block;
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  transition: transform var(--transition-fast);
 }
 
 .site-utility-bar__links a:hover {
@@ -2415,7 +2414,7 @@ body .site-header {
   -webkit-backdrop-filter: none;
   box-shadow: none;
   border-bottom: 1px solid var(--home-header-border);
-  transition: border-color var(--transition-base), background-color var(--transition-base);
+  transition: background-color var(--transition-base);
 }
 
 body .site-header__inner {
@@ -2765,7 +2764,7 @@ body.home-header-scrolled .site-menu-toggle span {
   text-decoration: none;
   font-size: 14px;
   margin-bottom: 8px;
-  transition: 0.2s;
+  transition: transform 0.2s;
   font-weight: 500;
   padding: 8px 12px;
   margin-left: -12px;
@@ -2808,7 +2807,6 @@ body.home-header-scrolled .site-menu-toggle span {
   letter-spacing: 0.01em;
   white-space: nowrap;
   flex: none;
-  transition: color var(--transition-fast);
 }
 
 .site-header__email:hover,
@@ -2862,7 +2860,6 @@ body.home-header-scrolled .site-menu-toggle span {
   line-height: 1;
   cursor: pointer;
   list-style: none;
-  transition: color var(--transition-fast);
 }
 
 .site-lang__toggle::-webkit-details-marker {
@@ -2899,7 +2896,7 @@ body.home-header-scrolled .site-menu-toggle span {
   border-right: 1.5px solid currentColor;
   border-bottom: 1.5px solid currentColor;
   transform: rotate(45deg);
-  transition: transform var(--transition-fast), margin-top var(--transition-fast);
+  transition: transform var(--transition-fast);
 }
 
 .site-lang[open] .site-lang__caret {
@@ -2942,7 +2939,6 @@ body.home-header-scrolled .site-menu-toggle span {
   font-size: 13px;
   line-height: 1.4;
   text-decoration: none;
-  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .site-lang__link:hover,
@@ -3310,7 +3306,7 @@ body.site-nav-open {
 .site-footer__menu-list a {
   font-size: 13px;
   display: inline-block;
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  transition: transform var(--transition-fast);
 }
 
 .site-footer__menu-list a:hover {
@@ -3328,7 +3324,7 @@ body.site-nav-open {
 
 .site-footer__contact-list a {
   display: inline-block;
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  transition: transform var(--transition-fast);
 }
 
 .site-footer__contact-list a:hover {
@@ -3459,7 +3455,7 @@ a.site-footer__contact-detail:hover .site-footer__contact-value {
 
 .site-footer__bottom-links a {
   display: inline-block;
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  transition: transform var(--transition-fast);
 }
 
 .site-footer__bottom-links a:hover {
@@ -3482,7 +3478,7 @@ a.site-footer__contact-detail:hover .site-footer__contact-value {
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
-  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
 }
 
 .site-footer__back-top.is-visible {
@@ -3527,7 +3523,7 @@ a.site-footer__contact-detail:hover .site-footer__contact-value {
   color: #0b1324;
   flex: 0 0 38px;
   box-shadow: 0 6px 20px rgba(17, 17, 20, 0.16);
-  transition: transform var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+  transition: transform var(--transition-fast);
 }
 
 .site-footer__back-top-icon::before,
@@ -4650,7 +4646,7 @@ body.refit-chrome .site-header {
     -webkit-backdrop-filter: none;
     border-bottom: 1px solid var(--home-header-border);
     box-shadow: none;
-    transition: border-color 0.35s ease, background-color 0.35s ease;
+    transition: background-color 0.35s ease;
 }
 body.refit-chrome.home-header-scrolled .site-header-shell {
     background: rgba(10, 10, 12, 0.93) !important;
