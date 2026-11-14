@@ -605,6 +605,12 @@ function sonne_rank_math_organization_schema($contact) {
             'addressLocality' => $contact['address_locality'],
             'addressRegion' => $contact['address_region'],
             'addressCountry' => $contact['address_country'],
+            'postalCode' => $contact['address_postal_code'],
+        ),
+        'geo' => array(
+            '@type' => 'GeoCoordinates',
+            'latitude' => $contact['geo_latitude'],
+            'longitude' => $contact['geo_longitude'],
         ),
         'logo' => array(
             '@type' => 'ImageObject',

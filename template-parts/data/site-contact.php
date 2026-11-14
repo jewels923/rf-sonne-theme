@@ -25,6 +25,9 @@ return array(
     'address_locality' => 'Cixi City, Ningbo City',
     'address_region'   => 'Zhejiang Province',
     'address_country'  => 'CN',
+    'address_postal_code' => '315300',
+    'geo_latitude'     => '30.1816285',
+    'geo_longitude'    => '121.2673597',
     'quote_subject'    => 'Custom RF or Enclosure Quote Request',
     'default_og_image' => array(
         'url'    => 'https://rf-sonne.com/wp-content/uploads/2026/10/hero-satellite-earth-station-wide.webp',
